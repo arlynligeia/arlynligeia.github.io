@@ -1,41 +1,59 @@
-/* Fondo completo de la página */
 body {
-  background-image: url('assets/fondo-principal.png'); /* reemplaza con el nombre real si es distinto */
+  background-image: url('assets/fondo%20oficial%202.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center center;
   background-attachment: fixed;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
   margin: 0;
   padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: white;
 }
 
-/* Estilos del título y contenido */
+/* Encabezado superior */
 header {
+  background-color: rgba(0, 0, 50, 0.6);
+  padding: 20px;
   text-align: center;
-  padding: 40px 20px 10px;
-  background: rgba(0, 0, 0, 0.4); /* un fondo negro transparente detrás del texto */
 }
 
 header h1 {
-  font-size: 48px;
-  color: #f0f;
-  letter-spacing: 4px;
-  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  margin: 0;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffccff;
 }
 
+/* Menú de navegación */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ff99ff;
+}
+
+/* Sección principal */
 main {
-  padding: 40px 20px;
+  padding: 100px 20px;
   text-align: center;
 }
 
-.intro h2 {
-  font-size: 32px;
-  color: #0ff;
+main h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffccff;
 }
 
-.intro p {
-  font-size: 20px;
-  color: #fff;
+main p {
+  font-size: 18px;
 }
