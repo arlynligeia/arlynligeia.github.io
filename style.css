@@ -8,16 +8,17 @@ body, html {
   height: 100%;
   font-family: 'Orbitron', sans-serif;
   overflow-x: hidden;
+  background: linear-gradient(to bottom, #ffb6e9, #ff00ff, #8000ff, #00008b);
 }
 
 .background {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #ffb6e9, #ff00ff, #8000ff, #00008b);
   position: relative;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 150px; /* espacio para las líneas */
+  overflow: hidden;
 }
 
 .content {
@@ -27,19 +28,17 @@ body, html {
   padding: 20px;
 }
 
-.vaporwave-lines {
+.vaporwave-grid {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: 200px;
   background-image: 
-    repeating-linear-gradient(
-      60deg,
-      #ff00ff 0px,
-      #ff00ff 2px,
-      transparent 2px,
-      transparent 20px
-    );
-  opacity: 0.8;
+    linear-gradient(to right, rgba(255,0,255,0.8) 1px, transparent 1px),
+    linear-gradient(to top, rgba(255,0,255,0.6) 1px, transparent 1px);
+  background-size: 40px 40px;
+  transform: perspective(400px) rotateX(60deg);
+  transform-origin: bottom;
+  opacity: 0.7;
   z-index: 1;
 }
