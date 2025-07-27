@@ -1,150 +1,61 @@
 body {
   margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: black;
+  color: white;
+}
+
+header {
+  background: #111;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: fuchsia;
+}
+
+.menu {
+  list-style: none;
   padding: 0;
-  background: radial-gradient(ellipse at bottom, #0d0221 0%, #190031 100%);
-  color: #fff;
-  font-family: 'Orbitron', sans-serif;
-  overflow-x: hidden;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.menu > li {
   position: relative;
 }
 
-.welcome {
-  text-align: center;
-  padding-top: 3rem;
+.menu a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
-.welcome-text {
-  font-size: 3rem;
-  color: #f0f;
-  text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
-}
-
-/* Platillo volador */
-.ufo {
+.submenu {
+  display: none;
   position: absolute;
-  top: 10vh;
-  left: 40vw;
-  width: 120px;
-  height: 60px;
-  background: radial-gradient(circle, #999, #333);
-  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
-  box-shadow: 0 0 30px #0f0;
-  animation: float 3s ease-in-out infinite;
+  top: 100%;
+  left: 0;
+  background: #222;
+  padding: 0.5rem;
+  list-style: none;
 }
 
-/* Rayo verde (parte del UFO) */
-.ufo::after {
-  content: "";
-  position: absolute;
-  top: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 100px;
-  background: rgba(0, 255, 0, 0.3);
-  box-shadow: 0 0 15px #0f0;
-  border-radius: 10px;
+.menu li:hover .submenu {
+  display: block;
 }
 
-/* Elementos decorativos */
-.moon {
-  position: absolute;
-  top: 5vh;
-  right: 5vw;
-  width: 100px;
-  height: 100px;
-  background: radial-gradient(circle, #ccc, #888);
-  border-radius: 50%;
-  box-shadow: 0 0 40px #ddd;
+.submenu li {
+  margin-bottom: 0.5rem;
 }
 
-.art-frame {
-  position: absolute;
-  bottom: 10vh;
-  left: 10vw;
-  width: 120px;
-  height: 160px;
-  background: linear-gradient(135deg, #800080, #ff00ff);
-  border: 4px double #fff;
-  box-shadow: 0 0 15px #ff0;
-}
-
-.pyramid {
-  position: absolute;
-  bottom: 20vh;
-  right: 15vw;
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 60px solid #fc0;
-  box-shadow: 0 0 10px #fc0;
-}
-
-.mannequin {
-  position: absolute;
-  top: 50vh;
-  left: 5vw;
-  width: 40px;
-  height: 100px;
-  background: #e91e63;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #e91e63;
-}
-
-.icon {
-  position: absolute;
-  width: 60px;
-  height: 40px;
-  background: #333;
-  box-shadow: 0 0 10px #999;
-}
-
-.vhs {
-  bottom: 5vh;
-  left: 30vw;
-}
-
-.cd {
-  bottom: 5vh;
-  left: 40vw;
-  border-radius: 50%;
-  background: radial-gradient(circle, #ccc, #444);
-}
-
-.note, .kisses {
-  position: absolute;
-  font-size: 2rem;
-  animation: float 5s ease-in-out infinite;
-  top: 60%;
-  left: 50%;
-}
-
-/* Animación flotante */
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
-}
-
-/* Secciones horizontales */
-.horizontal-sections {
-  display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin-top: 4rem;
-}
-
-.section {
-  flex: 0 0 auto;
-  width: 300px;
-  height: 200px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid #fff;
-  margin: 0 1rem;
-  padding: 1rem;
-  border-radius: 15px;
-  text-align: center;
-  font-size: 1.2rem;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px #0ff;
+section {
+  padding: 4rem 2rem;
+  min-height: 100vh;
 }
