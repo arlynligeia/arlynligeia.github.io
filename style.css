@@ -1,44 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Arlyn Ligeia Universe</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <h1 class="welcome-text">Welcome to Arlyn Ligeia's Universe</h1>
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(ellipse at bottom, #0d0221 0%, #190031 100%);
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+}
 
-  <!-- Elementos visuales -->
+.welcome-text {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 2rem;
+  color: #f0f;
+  text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
+}
 
-  <!-- Platillo volador -->
-  <div class="ufo"></div>
+/* Platillo volador */
+.ufo {
+  position: absolute;
+  top: 10vh;
+  left: 40vw;
+  width: 120px;
+  height: 60px;
+  background: radial-gradient(circle, #999, #333);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  box-shadow: 0 0 30px #0f0;
+  animation: float 3s ease-in-out infinite;
+}
 
-  <!-- Luna -->
-  <div class="moon"></div>
+/* Rayo verde */
+.ufo::after {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 100px;
+  background: rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 15px #0f0;
+  border-radius: 10px;
+}
 
-  <!-- Marco artístico con Edgar Allan Poe -->
-  <div class="art-frame"></div>
+/* Luna */
+.moon {
+  position: absolute;
+  top: 5vh;
+  right: 5vw;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, #ccc, #888);
+  border-radius: 50%;
+  box-shadow: 0 0 40px #ddd;
+}
 
-  <!-- Pirámide illuminati -->
-  <div class="pyramid"></div>
+/* Edgar Allan Poe - marco artístico */
+.art-frame {
+  position: absolute;
+  bottom: 10vh;
+  left: 10vw;
+  width: 120px;
+  height: 160px;
+  background: linear-gradient(135deg, #800080, #ff00ff);
+  border: 4px double #fff;
+  box-shadow: 0 0 15px #ff0;
+}
 
-  <!-- Maniquí de costura -->
-  <div class="mannequin"></div>
+/* Pirámide illuminati */
+.pyramid {
+  position: absolute;
+  bottom: 20vh;
+  right: 15vw;
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 60px solid #fc0;
+  box-shadow: 0 0 10px #fc0;
+}
 
-  <!-- VHS y CD -->
-  <div class="icon vhs"></div>
-  <div class="icon cd"></div>
+/* Maniquí */
+.mannequin {
+  position: absolute;
+  top: 50vh;
+  left: 5vw;
+  width: 40px;
+  height: 100px;
+  background: #e91e63;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #e91e63;
+}
 
-  <!-- Notas musicales flotantes -->
-  <div class="note" style="top: 20vh; left: 30vw;">🎵</div>
-  <div class="note" style="top: 40vh; left: 50vw;">🎶</div>
-  <div class="note" style="top: 60vh; left: 70vw;">🎵</div>
+/* VHS y CD */
+.icon {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  background: #333;
+  box-shadow: 0 0 10px #999;
+}
 
-  <!-- Besos flotantes -->
-  <div class="kisses" style="top: 30vh; left: 20vw;">💋</div>
-  <div class="kisses" style="top: 50vh; left: 60vw;">💋</div>
-  <div class="kisses" style="top: 70vh; left: 40vw;">💋</div>
-</body>
-</html>
+.vhs {
+  bottom: 5vh;
+  left: 30vw;
+}
+
+.cd {
+  bottom: 5vh;
+  left: 40vw;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ccc, #444);
+}
+
+/* Notas musicales y besos */
+.note, .kisses {
+  position: absolute;
+  font-size: 2rem;
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
