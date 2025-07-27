@@ -8,10 +8,13 @@ body {
   position: relative;
 }
 
+.welcome {
+  text-align: center;
+  padding-top: 3rem;
+}
+
 .welcome-text {
   font-size: 3rem;
-  text-align: center;
-  margin-top: 2rem;
   color: #f0f;
   text-shadow: 0 0 15px #0ff, 0 0 30px #0ff;
 }
@@ -29,7 +32,7 @@ body {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Rayo verde */
+/* Rayo verde (parte del UFO) */
 .ufo::after {
   content: "";
   position: absolute;
@@ -43,7 +46,7 @@ body {
   border-radius: 10px;
 }
 
-/* Luna */
+/* Elementos decorativos */
 .moon {
   position: absolute;
   top: 5vh;
@@ -55,7 +58,6 @@ body {
   box-shadow: 0 0 40px #ddd;
 }
 
-/* Edgar Allan Poe - marco artístico */
 .art-frame {
   position: absolute;
   bottom: 10vh;
@@ -67,7 +69,6 @@ body {
   box-shadow: 0 0 15px #ff0;
 }
 
-/* Pirámide illuminati */
 .pyramid {
   position: absolute;
   bottom: 20vh;
@@ -80,7 +81,6 @@ body {
   box-shadow: 0 0 10px #fc0;
 }
 
-/* Maniquí */
 .mannequin {
   position: absolute;
   top: 50vh;
@@ -92,7 +92,6 @@ body {
   box-shadow: 0 0 10px #e91e63;
 }
 
-/* VHS y CD */
 .icon {
   position: absolute;
   width: 60px;
@@ -113,14 +112,39 @@ body {
   background: radial-gradient(circle, #ccc, #444);
 }
 
-/* Notas musicales y besos */
 .note, .kisses {
   position: absolute;
   font-size: 2rem;
   animation: float 5s ease-in-out infinite;
+  top: 60%;
+  left: 50%;
 }
 
+/* Animación flotante */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+/* Secciones horizontales */
+.horizontal-sections {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-top: 4rem;
+}
+
+.section {
+  flex: 0 0 auto;
+  width: 300px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px #0ff;
 }
