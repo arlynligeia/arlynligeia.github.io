@@ -1,50 +1,74 @@
-body {
+/* FUENTE RETRO GALÁCTICA */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+* {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: black;
-  color: white;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ENCABEZADO GALÁCTICO */
 header {
-  background: #111;
+  background: rgba(0, 0, 0, 0.8);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  box-shadow: 0 0 15px fuchsia;
 }
 
 .logo {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: fuchsia;
+  text-shadow: 0 0 10px hotpink;
+}
+
+/* MENÚ NAVEGACIÓN */
+nav {
+  margin-top: 1rem;
 }
 
 .menu {
   list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.menu > li {
+.menu li {
   position: relative;
 }
 
 .menu a {
   text-decoration: none;
-  color: white;
+  color: #00ffe7;
   font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s;
+}
+
+.menu a:hover {
+  background: fuchsia;
+  color: black;
+  border-radius: 8px;
 }
 
 .submenu {
   display: none;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid fuchsia;
+  padding: 0.5rem;
   top: 100%;
   left: 0;
-  background: #222;
-  padding: 0.5rem;
-  list-style: none;
+  z-index: 999;
 }
 
 .menu li:hover .submenu {
@@ -52,10 +76,16 @@ header {
 }
 
 .submenu li {
-  margin-bottom: 0.5rem;
+  margin: 0.2rem 0;
 }
 
 section {
-  padding: 4rem 2rem;
-  min-height: 100vh;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #ff99ff;
+  text-shadow: 0 0 8px #ff66cc;
 }
