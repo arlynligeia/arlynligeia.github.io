@@ -1,4 +1,4 @@
-/* Estilo general del body */
+/* FUENTE Y BODY */
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +9,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Fondo animado tipo glitch/galáctico */
+/* EFECTO GLITCH GALÁCTICO */
 body::before {
   content: '';
   position: fixed;
@@ -25,21 +25,55 @@ body::before {
   opacity: 0.2;
 }
 
-/* Efecto de movimiento glitch */
 @keyframes glitchMove {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(1px, -1px);
-  }
-  50% {
-    transform: translate(-1px, 1px);
-  }
-  75% {
-    transform: translate(1px, 1px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 1px); }
+  75% { transform: translate(1px, 1px); }
+  100% { transform: translate(0, 0); }
 }
+
+/* NAV BAR */
+header {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 10px 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff00ff;
+}
+
+/* SECCIONES */
+section {
+  padding: 80px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #ffccff;
+}
+
