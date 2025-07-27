@@ -1,67 +1,70 @@
-/* Fondo galáctico con tu imagen */
+/* Fondo de pantalla */
 body {
   margin: 0;
   padding: 0;
-  background-image: url('assets/fondo%20oficial%202.png');
+  background-image: url('assets/fondo-principal.png');
   background-size: cover;
-  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  color: #fff;
+  background-attachment: fixed;
+  background-position: center;
   font-family: 'Arial', sans-serif;
+  color: white;
 }
 
-/* Encabezado y nombre */
+/* Encabezado y menú */
 header {
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.6);
   padding: 20px;
   text-align: center;
 }
 
-header h1 {
-  font-size: 3rem;
-  color: #f0f;
+h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff66cc;
   margin: 0;
-  letter-spacing: 3px;
 }
 
-/* Menú superior */
 nav ul {
   list-style: none;
   padding: 0;
-  margin: 20px 0 0;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav li {
+  margin: 10px;
 }
 
-nav ul li a {
-  color: #0ff;
+nav a {
   text-decoration: none;
+  color: white;
   font-weight: bold;
-  font-size: 1.1rem;
-  transition: color 0.3s;
+  padding: 8px 12px;
+  background-color: rgba(255, 105, 180, 0.3);
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #ff0;
+nav a:hover {
+  background-color: rgba(255, 105, 180, 0.6);
 }
 
 /* Sección principal */
 main {
-  padding: 50px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-section#home h2 {
+h2 {
   font-size: 2rem;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
-  display: inline-block;
-  padding: 15px 25px;
-  border-radius: 12px;
+  color: #ff99ff;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #ffffff;
 }
