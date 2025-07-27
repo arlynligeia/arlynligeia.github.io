@@ -1,85 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Welcome to Arlyn Ligeia's Universe</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>ARLYN LIGEIA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="background">
-    <canvas id="vaporwaveGrid"></canvas>
-  </div>
-  
-  <header>
-    <h1 class="site-title">Arlyn Ligeia</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#film">Film</a></li>
-        <li><a href="#music">Music</a></li>
-        <li><a href="#fashion">Fashion</a></li>
-        <li><a href="#art">Art</a></li>
-        <li><a href="#science">Science</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#donations">Donations</a></li>
-        <li><a href="#store">Store</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section id="home"><h2>Welcome to My Universe</h2></section>
-  <section id="about"><h2>About Me</h2></section>
-  <section id="film"><h2>Film</h2></section>
-  <section id="music"><h2>Music</h2></section>
-  <section id="fashion"><h2>Fashion</h2></section>
-  <section id="art"><h2>Art</h2></section>
-  <section id="science"><h2>Science</h2></section>
-  <section id="contact"><h2>Contact</h2></section>
-  <section id="donations"><h2>Donations</h2></section>
-  <section id="store"><h2>Store</h2></section>
+  <div class="site-title">ARLYN LIGEIA</div>
 
-  <script>
-    // Vaporwave Grid Background (Canvas)
-    const canvas = document.getElementById('vaporwaveGrid');
-    const ctx = canvas.getContext('2d');
-    
-    function resizeCanvas() {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-    
-    function drawGrid() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      const spacing = 40;
-      ctx.strokeStyle = '#ff00ff88'; // Fuchsia glow
-      ctx.lineWidth = 1;
+  <!-- Menú de navegación -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#film">Film</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#fashion">Fashion</a></li>
+      <li><a href="#art">Art</a></li>
+      <li><a href="#science">Science</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#donations">Donations</a></li>
+      <li><a href="#store">Store</a></li>
+    </ul>
+  </nav>
 
-      // Draw perspective grid
-      const horizon = canvas.height * 0.75;
-      for (let i = 0; i < canvas.height; i += spacing) {
-        ctx.beginPath();
-        ctx.moveTo(0, horizon + i);
-        ctx.lineTo(canvas.width, horizon + i);
-        ctx.stroke();
-      }
+  <section id="home" class="section welcome">Welcome to my Galactic World</section>
+  <section id="about" class="section">About Me</section>
+  <section id="film" class="section">Film</section>
+  <section id="music" class="section">Music</section>
+  <section id="fashion" class="section">Fashion</section>
+  <section id="art" class="section">Art</section>
+  <section id="science" class="section">Science</section>
+  <section id="contact" class="section">Contact</section>
+  <section id="donations" class="section">Donations</section>
+  <section id="store" class="section">Store</section>
 
-      for (let i = 0; i < canvas.width; i += spacing) {
-        ctx.beginPath();
-        ctx.moveTo(i, horizon);
-        ctx.lineTo(canvas.width / 2, canvas.height);
-        ctx.stroke();
-      }
-    }
+  <div class="vaporwave-lines"></div>
 
-    window.addEventListener('resize', () => {
-      resizeCanvas();
-      drawGrid();
-    });
-
-    resizeCanvas();
-    drawGrid();
-  </script>
 </body>
 </html>
+
