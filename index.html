@@ -7,12 +7,17 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="navbar">
-    <h1 class="logo">Arlyn Ligeia</h1>
+  <div class="background">
+    <canvas id="vaporwaveGrid"></canvas>
+  </div>
+  
+  <header>
+    <h1 class="site-title">Arlyn Ligeia</h1>
     <nav>
       <ul>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About Me</a></li>
-        <li><a href="#films">Film</a></li>
+        <li><a href="#film">Film</a></li>
         <li><a href="#music">Music</a></li>
         <li><a href="#fashion">Fashion</a></li>
         <li><a href="#art">Art</a></li>
@@ -24,19 +29,57 @@
     </nav>
   </header>
 
-  <section class="welcome">
-    <div class="ufo-ray"></div>
-    <h1 class="welcome-text">Welcome to Arlyn Ligeia's universe</h1>
-  </section>
+  <section id="home"><h2>Welcome to My Universe</h2></section>
+  <section id="about"><h2>About Me</h2></section>
+  <section id="film"><h2>Film</h2></section>
+  <section id="music"><h2>Music</h2></section>
+  <section id="fashion"><h2>Fashion</h2></section>
+  <section id="art"><h2>Art</h2></section>
+  <section id="science"><h2>Science</h2></section>
+  <section id="contact"><h2>Contact</h2></section>
+  <section id="donations"><h2>Donations</h2></section>
+  <section id="store"><h2>Store</h2></section>
 
-  <section class="section" id="about">About Me</section>
-  <section class="section" id="films">Film</section>
-  <section class="section" id="music">Music</section>
-  <section class="section" id="fashion">Fashion</section>
-  <section class="section" id="art">Art</section>
-  <section class="section" id="science">Science</section>
-  <section class="section" id="contact">Contact</section>
-  <section class="section" id="donations">Donations</section>
-  <section class="section" id="store">Store</section>
+  <script>
+    // Vaporwave Grid Background (Canvas)
+    const canvas = document.getElementById('vaporwaveGrid');
+    const ctx = canvas.getContext('2d');
+    
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    
+    function drawGrid() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const spacing = 40;
+      ctx.strokeStyle = '#ff00ff88'; // Fuchsia glow
+      ctx.lineWidth = 1;
+
+      // Draw perspective grid
+      const horizon = canvas.height * 0.75;
+      for (let i = 0; i < canvas.height; i += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(0, horizon + i);
+        ctx.lineTo(canvas.width, horizon + i);
+        ctx.stroke();
+      }
+
+      for (let i = 0; i < canvas.width; i += spacing) {
+        ctx.beginPath();
+        ctx.moveTo(i, horizon);
+        ctx.lineTo(canvas.width / 2, canvas.height);
+        ctx.stroke();
+      }
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      drawGrid();
+    });
+
+    resizeCanvas();
+    drawGrid();
+  </script>
 </body>
 </html>
