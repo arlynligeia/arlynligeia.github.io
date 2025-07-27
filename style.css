@@ -1,46 +1,79 @@
-/* Barra de navegación */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  z-index: 1000;
-  backdrop-filter: blur(8px);
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar .logo {
+html, body {
+  height: 100%;
   font-family: 'Orbitron', sans-serif;
-  color: #ff00ff;
-  font-size: 1.5rem;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-.navbar nav ul {
+/* Fondo degradado vertical */
+body {
+  background: linear-gradient(to bottom, #ffc0cb, #ff00ff, #800080, #000033);
+  color: white;
+  position: relative;
+}
+
+/* Canvas con líneas vaporwave */
+canvas#vaporwaveGrid {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Cabecera */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 2rem;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.site-title {
+  font-size: 2rem;
+  color: #ff99ff;
+  text-shadow: 0 0 10px #ff00ff;
+  margin-bottom: 1rem;
+}
+
+/* Menú */
+nav ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
-  margin: 0;
-  padding: 0;
+  gap: 1rem;
 }
 
-.navbar nav a {
-  color: #ffffff;
+nav a {
   text-decoration: none;
+  color: #ffffff;
   font-weight: bold;
-  font-size: 0.95rem;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ff00ff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background-color: #00000088;
 }
 
-.navbar nav a:hover {
-  color: #ff00ff;
+nav a:hover {
+  background-color: #ff00ff;
+  color: black;
 }
 
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
+/* Secciones */
+section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  z-index: 5;
+  position: relative;
 }
 
