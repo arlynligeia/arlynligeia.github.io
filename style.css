@@ -1,48 +1,45 @@
-/* Fondo degradado vertical */
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
   height: 100%;
-  background: linear-gradient(to bottom, #ffb6e9, #ff00ff, #8000ff, #000033);
   font-family: 'Orbitron', sans-serif;
-  color: white;
   overflow-x: hidden;
-  scroll-behavior: smooth;
 }
 
-/* Secciones verticales */
-.section {
+.background {
   min-height: 100vh;
+  background: linear-gradient(to bottom, #ffb6e9, #ff00ff, #8000ff, #00008b);
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
-  padding: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 150px; /* espacio para las líneas */
 }
 
-/* Título de bienvenida */
-.welcome {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.content {
+  color: white;
   text-align: center;
+  z-index: 2;
+  padding: 20px;
 }
 
-/* Líneas vaporwave en la parte inferior */
 .vaporwave-lines {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 150px;
-  background: repeating-linear-gradient(
-    to top,
-    #ff00ff 0px,
-    #ff00ff 2px,
-    transparent 2px,
-    transparent 10px
-  );
-  opacity: 0.7;
-  pointer-events: none;
+  background-image: 
+    repeating-linear-gradient(
+      60deg,
+      #ff00ff 0px,
+      #ff00ff 2px,
+      transparent 2px,
+      transparent 20px
+    );
+  opacity: 0.8;
+  z-index: 1;
 }
