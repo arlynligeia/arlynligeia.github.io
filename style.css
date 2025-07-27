@@ -1,59 +1,56 @@
+/* Fondo general */
 body {
-  background-image: url('assets/fondo%20oficial%202.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
   margin: 0;
   padding: 0;
+  background-image: url('assec/fondo%20oficial%202.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Arial', sans-serif;
   color: white;
 }
 
-/* Encabezado superior */
+/* Encabezado con tu nombre */
 header {
-  background-color: rgba(0, 0, 50, 0.6);
+  background-color: rgba(0, 0, 128, 0.7); /* Azul con transparencia */
+  color: white;
   padding: 20px;
   text-align: center;
-}
-
-header h1 {
-  margin: 0;
   font-size: 36px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ffccff;
+  font-weight: bold;
+  text-shadow: 2px 2px 10px fuchsia;
 }
 
-/* Menú de navegación */
+/* Menú superior */
 nav {
-  margin-top: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 15px;
 }
 
 nav a {
-  margin: 0 15px;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+  font-size: 18px;
+  padding: 8px 15px;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: background-color 0.3s;
 }
 
 nav a:hover {
-  color: #ff99ff;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Sección principal */
-main {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-main h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #ffccff;
-}
-
-main p {
-  font-size: 18px;
+/* Sección central */
+section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  backdrop-filter: blur(5px);
 }
