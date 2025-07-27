@@ -1,44 +1,82 @@
-* {
+/* Degradado de fondo */
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
   height: 100%;
   font-family: 'Orbitron', sans-serif;
-  overflow-x: hidden;
-  background: linear-gradient(to bottom, #ffb6e9, #ff00ff, #8000ff, #00008b);
+  color: white;
+  scroll-behavior: smooth;
 }
 
 .background {
-  position: relative;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffc0cb, #ff1493, #800080, #00008b);
+  z-index: -2;
   overflow: hidden;
 }
 
-.content {
-  color: white;
-  text-align: center;
-  z-index: 2;
-  padding: 20px;
-}
-
+/* Rejilla vaporwave tipo camino */
 .vaporwave-grid {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 200px;
-  background-image: 
-    linear-gradient(to right, rgba(255,0,255,0.8) 1px, transparent 1px),
-    linear-gradient(to top, rgba(255,0,255,0.6) 1px, transparent 1px);
-  background-size: 40px 40px;
-  transform: perspective(400px) rotateX(60deg);
-  transform-origin: bottom;
-  opacity: 0.7;
-  z-index: 1;
+  height: 300px;
+  background: repeating-linear-gradient(
+    to right,
+    #ff00ff 0px,
+    #ff00ff 1px,
+    transparent 1px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    to top,
+    #ff00ff 0px,
+    #ff00ff 1px,
+    transparent 1px,
+    transparent 40px
+  );
+  transform: perspective(800px) rotateX(60deg);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+/* Texto central */
+.welcome {
+  text-align: center;
+  margin-top: 100px;
+}
+.welcome-text {
+  font-size: 3em;
+  color: white;
+  text-shadow: 0 0 10px #ff00ff;
+}
+
+/* Menú superior */
+.top-menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  text-align: center;
+  z-index: 10;
+}
+.top-menu a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.top-menu a:hover {
+  color: #ff00ff;
+}
+
+/* Secciones */
+section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
