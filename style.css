@@ -1,4 +1,4 @@
-/* Fondo degradado desde rosado a azul oscuro */
+/* Fondo degradado vertical */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,50 +11,6 @@ html, body {
   background-attachment: fixed;
 }
 
-/* Título ARLYN LIGEIA */
-.site-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #ff00ff;
-  padding: 1rem;
-  text-align: center;
-  letter-spacing: 4px;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-/* Menú de navegación fijo arriba */
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  padding: 1rem;
-  text-align: center;
-}
-
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navbar li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-
-.navbar a:hover {
-  color: #ff00ff;
-}
-
 /* Secciones verticales */
 .section {
   min-height: 100vh;
@@ -64,18 +20,17 @@ html, body {
   font-size: 2rem;
   padding: 2rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
 }
 
 /* Bienvenida */
 .welcome {
-  text-align: center;
-  text-transform: uppercase;
   font-size: 3rem;
   font-weight: bold;
-  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-/* Líneas vaporwave en la parte inferior */
+/* Líneas vaporwave en la parte baja */
 .vaporwave-lines {
   position: fixed;
   bottom: 0;
@@ -92,4 +47,42 @@ html, body {
   opacity: 0.8;
   pointer-events: none;
   z-index: 10;
+}
+
+/* Nombre grande arriba */
+.site-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff00ff;
+  padding: 1rem;
+  text-align: center;
+  letter-spacing: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar li {
+  margin: 0.5rem 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar a:hover {
+  color: #ff00ff;
 }
