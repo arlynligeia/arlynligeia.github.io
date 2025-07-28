@@ -5,197 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARLYN LIGEIA</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Tipografía futurista -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- TÍTULO PRINCIPAL -->
   <header>
     <h1 class="site-title">ARLYN LIGEIA</h1>
-
-    <!-- MENÚ CENTRADO -->
     <nav>
-      <ul class="main-menu">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#bio">Biography</a></li>
-
-        <li class="has-submenu">
-          <a href="#film">Film</a>
+      <div class="menu-toggle" id="menu-toggle">☰</div>
+      <ul class="menu" id="menu">
+        <li>
+          <button>Home</button>
           <ul class="submenu">
-            <li><a href="#feature">Feature Film</a></li>
-            <li><a href="#short">Short Film</a></li>
-            <li><a href="#mvfilm">Music Video</a></li>
+            <li><button>Social Media Feed</button></li>
           </ul>
         </li>
-
-        <li class="has-submenu">
-          <a href="#music">Music</a>
+        <li><button>Biography</button></li>
+        <li>
+          <button>Film</button>
           <ul class="submenu">
-            <li><a href="#album">Album</a></li>
-            <li><a href="#soundtrack">Soundtrack</a></li>
-            <li><a href="#mvmusic">Music Video</a></li>
+            <li><button>Feature Film</button></li>
+            <li><button>Short Film</button></li>
+            <li><button>Music Video</button></li>
+            <li><button>Behind the Scenes</button></li>
           </ul>
         </li>
-
-        <li class="has-submenu">
-          <a href="#fashion">Fashion</a>
+        <li>
+          <button>Music</button>
           <ul class="submenu">
-            <li><a href="#ss">SS Collection</a></li>
-            <li><a href="#fw">FW Collection</a></li>
-            <li><a href="#capsule">Capsule Collection</a></li>
-            <li><a href="#resort">Resort Collection</a></li>
-            <li><a href="#filmfashion">Inspired by Film</a></li>
+            <li><button>Album</button></li>
+            <li><button>Soundtrack</button></li>
+            <li><button>Music Video</button></li>
           </ul>
         </li>
-
-        <li class="has-submenu">
-          <a href="#art">Art</a>
+        <li>
+          <button>Fashion</button>
           <ul class="submenu">
-            <li><a href="#painting">Painting</a></li>
-            <li><a href="#poetry">Poetry</a></li>
+            <li><button>SS Collection</button></li>
+            <li><button>FW Collection</button></li>
+            <li><button>Capsule Collection</button></li>
+            <li><button>Resort Collection</button></li>
+            <li><button>Inspired by Film</button></li>
           </ul>
         </li>
-
-        <li class="has-submenu">
-          <a href="#science">Science</a>
+        <li>
+          <button>Art</button>
           <ul class="submenu">
-            <li><a href="#article">Academic Article</a></li>
-            <li><a href="#project">Project</a></li>
+            <li><button>Painting</button></li>
+            <li><button>Poetry</button></li>
           </ul>
         </li>
-
-        <li class="has-submenu">
-          <a href="#contact">Contact</a>
+        <li>
+          <button>Science</button>
           <ul class="submenu">
-            <li><a href="#fan">Fan Message</a></li>
-            <li><a href="#work">Work Message</a></li>
+            <li><button>Article</button></li>
+            <li><button>Project</button></li>
           </ul>
         </li>
-
-        <li><a href="#support">Support Me</a></li>
-        <li><a href="#store">Store</a></li>
+        <li>
+          <button>Contact</button>
+          <ul class="submenu">
+            <li><button>Fan Message</button></li>
+            <li><button>Work Message</button></li>
+          </ul>
+        </li>
+        <li><button>Be My Patron</button></li>
+        <li><button>Store</button></li>
       </ul>
     </nav>
   </header>
 
-  <!-- SECCIONES CON TÍTULOS A LA IZQUIERDA (sin contenido aún) -->
+  <!-- SECTION TITLES A LA IZQUIERDA -->
+  <section id="biography">
+    <h2 class="section-title">Biography</h2>
+  </section>
+  <section id="feature">
+    <h2 class="section-title">Feature Film</h2>
+  </section>
+  <section id="short">
+    <h2 class="section-title">Short Film</h2>
+  </section>
+  <section id="music-video">
+    <h2 class="section-title">Music Video</h2>
+  </section>
+  <section id="behind">
+    <h2 class="section-title">Behind the Scenes</h2>
+  </section>
+  <section id="album">
+    <h2 class="section-title">Album</h2>
+  </section>
+  <section id="soundtrack">
+    <h2 class="section-title">Soundtrack</h2>
+  </section>
+  <section id="ss">
+    <h2 class="section-title">SS Collection</h2>
+  </section>
+  <section id="fw">
+    <h2 class="section-title">FW Collection</h2>
+  </section>
+  <section id="capsule">
+    <h2 class="section-title">Capsule Collection</h2>
+  </section>
+  <section id="resort">
+    <h2 class="section-title">Resort Collection</h2>
+  </section>
+  <section id="film-inspired">
+    <h2 class="section-title">Inspired by Film</h2>
+  </section>
+  <section id="painting">
+    <h2 class="section-title">Painting</h2>
+  </section>
+  <section id="poetry">
+    <h2 class="section-title">Poetry</h2>
+  </section>
+  <section id="article">
+    <h2 class="section-title">Article</h2>
+  </section>
+  <section id="project">
+    <h2 class="section-title">Project</h2>
+  </section>
+  <section id="fan">
+    <h2 class="section-title">Fan Message</h2>
+  </section>
+  <section id="work">
+    <h2 class="section-title">Work Message</h2>
+  </section>
+  <section id="support">
+    <h2 class="section-title">Be My Patron</h2>
+  </section>
+  <section id="store">
+    <h2 class="section-title">Store</h2>
+  </section>
 
-<section id="biography">
-  <h2 class="section-title">Biography</h2>
-  <div class="video-box">
-    <div class="bio-container">
-      <div class="bio-text">
-        <p>
-          Ligeia, also known as Arlyn Ligeia, is a multidisciplinary and independent Peruvian artist
-          focused on film, music, fashion, art, and science. Her creative universe merges psychology,
-          physics, art, and eroticism, wrapped in a gothic-cosmic-futuristic aesthetic, taking science fiction
-          to a symbolic and visceral level.<br><br>
-
-          With a solid academic background, she holds a B.S. in Psychology and is currently studying
-          Physics, challenging the prejudices that try to separate art from scientific thought. As
-          complementary education, she also has training in Fashion Design and Management.<br><br>
-
-          In 2021, she directed her first music video through a video call, during the pandemic and
-          COVID-19 lockdown. In 2024, despite going through a severe economic crisis, she improvised
-          with what she had at hand and managed to create her first short film: she wrote, directed,
-          shot, starred in, and edited it herself.<br><br>
-
-          After completing a music video and a short film, she is now in the production stage of her first
-          feature film, entirely written, directed, shot, starred in, and edited by her. At the same time,
-          she is working on her debut music album and her first fashion collection.<br><br>
-
-          Ligeia draws inspiration from gothic aesthetics, film noir, vaporwave, and cyberpunk. She defines
-          her art as authentic and visceral, a space where she freely explores female sexual desire. She
-          admires the archetype of the femme fatale, which appears recurrently in her work. She refuses to
-          be boxed in and opposes all bias, believing that true art arises from the fusion of diverse stimuli.
-          She firmly believes that emotion and reason can coexist in complete harmony.
-        </p>
-      </div>
-      <div class="bio-image">
-        <img src="arlynligeia.jpg" alt="Arlyn Ligeia Portrait">
-      </div>
-    </div>
-  </div>
-</section>
-  <section id="feature"><h2 class="section-title">Feature Film</h2></section>
- <section id="short">
-  <h2 class="section-title">Short Film</h2>
-
-  <div class="video-box">
-    <h3 class="video-title">EL INFIERNO DE OZUL</h3>
-
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/uddI7i7jZl0" 
-        title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; 
-        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
-<section id="mvfilm">
-  <h2 class="section-title">Music Video</h2>
-
-  <div class="video-box">
-    <h3 class="video-title">BLUE - DESPERTAR</h3>
-
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/CZNLsezuRGw"
-        title="YouTube video player" allow="accelerometer; autoplay; clipboard-write;
-        encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
-  <section id="album"><h2 class="section-title">Album</h2></section>
-  <section id="soundtrack"><h2 class="section-title">Soundtrack</h2></section>
-  <section id="mvmusic"><h2 class="section-title">Music Video</h2></section>
-
-  <section id="ss"><h2 class="section-title">SS Collection</h2></section>
-  <section id="fw"><h2 class="section-title">FW Collection</h2></section>
-  <section id="capsule"><h2 class="section-title">Capsule Collection</h2></section>
-  <section id="resort"><h2 class="section-title">Resort Collection</h2></section>
-  <section id="filmfashion"><h2 class="section-title">Inspired by Film</h2></section>
-
-  <section id="painting"><h2 class="section-title">Painting</h2></section>
-  <section id="poetry"><h2 class="section-title">Poetry</h2></section>
-
-<section id="article">
-  <h2 class="section-title">Academic Article</h2>
-
-  <div class="video-box">
-    <h3 class="article-title">EXPERIENCIAS DE LO FRATERNO EN HERMANOS DE PADRE O HERMANOS DE MADRE (CASOS EN FAMILIAS PERUANAS)</h3>
-    <div class="video-container">
-      <a href="https://www.controversiasonline.org.ar/articulos_revista/experiencias-de-lo-fraterno-en-hermanos-de-padre-o-hermanos-de-madre-casos-en-familias-peruanas/" target="_blank" class="article-link">Ver artículo</a>
-    </div>
-  </div>
-
-  <div class="video-box">
-    <h3 class="article-title">REMONTANDO LA POBREZA: UN ESTUDIO SOBRE LAS HISTORIAS DE VIDA DE QUIENES SALIERON DE LA POBREZA</h3>
-    <div class="video-container">
-      <a href="https://www.academia.edu/92300060/Remontando_la_pobreza_Un_estudio_sobre_las_historias_de_vida_de_quienes_salieron_de_la_pobreza" target="_blank" class="article-link">Ver artículo</a>
-    </div>
-  </div>
-
-  <div class="video-box">
-    <h3 class="article-title">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</h3>
-    <div class="video-container">
-      <a href="https://magisterimed.weebly.com/uploads/1/2/1/2/121283803/msj.02.01.6.alcp.83-95.pdf" target="_blank" class="article-link">Ver artículo</a>
-    </div>
-  </div>
-
-  <div class="video-box">
-    <h3 class="article-title">PROBLEMAS EMOCIONALES EN JÓVENES DE 20 A 30 AÑOS DE LA UNIVERSIDAD JOSÉ CARLOS MARIÁTEGUI, MOQUEGUA (2014)</h3>
-    <div class="video-container">
-      <a href="https://www.academia.edu/15633627/Problemas_emocionales_en_j%C3%B3venes_de_20_a_30_a%C3%B1os_de_la_Universidad_Jos%C3%A9_Carlos_Mari%C3%A1tegui_Moquegua_2014" target="_blank" class="article-link">Ver artículo</a>
-    </div>
-  </div>
-</section>
-  <section id="project"><h2 class="section-title">Project</h2></section>
-
-  <section id="fan"><h2 class="section-title">Fan Message</h2></section>
-  <section id="work"><h2 class="section-title">Work Message</h2></section>
-
-  <section id="support"><h2 class="section-title">Support Me</h2></section>
-  <section id="store"><h2 class="section-title">Store</h2></section>
+  <script>
+    document.getElementById("menu-toggle").onclick = function () {
+      document.getElementById("menu").classList.toggle("active");
+    };
+  </script>
 </body>
 </html>
