@@ -1,140 +1,121 @@
-/* FUENTES FUTURISTAS */
+/* Fondo galáctico con degradado rosa a azul */
 body {
   margin: 0;
   font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(to bottom, #ff69b4, #c84ec8, #800080, #00008b, #000010);
+  background-image: linear-gradient(
+      rgba(255, 182, 193, 0.5),
+      rgba(186, 85, 211, 0.5),
+      rgba(72, 61, 139, 0.5),
+      rgba(25, 25, 112, 0.5)
+    ),
+    url('Fondo galactico.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: white;
 }
 
+/* Título principal */
 .site-title {
   font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
   text-align: center;
-  font-size: 3em;
-  margin: 20px 0;
+  margin-top: 40px;
   color: white;
+  letter-spacing: 2px;
 }
 
-/* MENÚ GENERAL */
+/* Menú general */
 nav {
-  text-align: center;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
   display: flex;
   justify-content: center;
+  margin: 20px 0;
+}
+
+/* Botones en horizontal (PC) */
+.menu {
+  display: flex;
   flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
 }
 
 .menu li {
   position: relative;
-  margin: 5px 15px;
 }
 
-.menu > li > button {
-  font-family: 'Orbitron', sans-serif;
-  background: transparent;
-  border: 2px solid white;
+.menu button {
+  font-family: 'Rajdhani', sans-serif;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid #fff;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  border-radius: 10px;
-}
-
-.submenu {
-  display: none;
-  position: absolute;
-  background: rgba(0, 0, 20, 0.9);
-  list-style: none;
-  padding: 10px;
-  border: 1px solid white;
-  top: 100%;
-  left: 0;
-  z-index: 100;
-  min-width: 180px;
-}
-
-.submenu li {
-  margin: 5px 0;
-}
-
-.submenu button {
-  width: 100%;
-  background: transparent;
-  border: none;
-  color: white;
-  text-align: left;
-  padding: 5px 10px;
-  font-size: 0.9em;
-  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
   white-space: nowrap;
 }
 
+/* Submenú */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .menu li:hover .submenu {
-  display: block;
+  display: flex;
 }
 
-/* TÍTULOS DE SECCIÓN */
-.section-title {
-  text-align: left;
-  margin: 50px 20px 20px 40px;
-  font-size: 2em;
-  font-family: 'Orbitron', sans-serif;
+.submenu button {
+  font-size: 0.9rem;
+  padding: 8px 15px;
 }
 
-/* MENÚ PARA MÓVIL */
+/* Menú en móvil */
 .menu-toggle {
   display: none;
-  font-size: 2em;
-  color: white;
-  padding: 10px;
   cursor: pointer;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
   .menu {
     display: none;
     flex-direction: column;
-    align-items: center;
-    background: rgba(0, 0, 20, 0.95);
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    z-index: 1000;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    text-align: left;
-    margin-left: 20px;
-  }
-
-  nav {
-    text-align: left;
-  }
-
-  .menu > li > button {
-    width: 90%;
-    text-align: center;
-    margin-bottom: 5px;
-  }
-
   .submenu {
-    position: static;
-    width: 100%;
-    border: none;
+    position: relative;
   }
+}
 
-  .submenu button {
-    text-align: center;
-  }
+/* Títulos de secciones a la izquierda */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  margin: 60px 30px 20px;
+  text-align: left;
+  color: white;
 }
