@@ -166,3 +166,34 @@ nav {
   text-transform: uppercase;
   color: #ffccff;
 }
+.bio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.bio-text {
+  flex: 1;
+  color: #f8e8ff;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  text-align: left;
+  min-width: 300px;
+}
+
+.bio-image {
+  flex: 1;
+  text-align: right;
+  min-width: 250px;
+}
+
+.bio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
