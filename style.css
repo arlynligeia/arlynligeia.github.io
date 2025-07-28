@@ -1,23 +1,22 @@
-/* FONDO: Degradado vertical correcto */
+/* FONDO CON DEGRADADO CORRECTO */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
   background: linear-gradient(to bottom, #ff00aa, #9900cc, #0000cc, #000011);
-  color: #fff;
+  color: #ffffff;
   scroll-behavior: smooth;
 }
 
-/* TÍTULO ARLYN LIGEIA */
+/* TÍTULO PRINCIPAL */
 .site-title {
   text-align: center;
   font-size: 3rem;
   margin-top: 2rem;
   color: #ffffff;
   letter-spacing: 0.15em;
-  font-family: 'Orbitron', sans-serif;
 }
 
-/* MENÚ CENTRADO DEBAJO DEL TÍTULO */
+/* MENÚ CENTRADO */
 nav {
   text-align: center;
   margin-top: 1.5rem;
@@ -54,7 +53,7 @@ nav {
   color: #ffffff;
 }
 
-/* SUBMENÚS desplegables */
+/* SUBMENÚS */
 .submenu {
   display: none;
   position: absolute;
@@ -87,4 +86,14 @@ nav {
 .submenu a:hover {
   background-color: #33004d;
   color: #ffffff;
+}
+
+/* TÍTULOS DE SECCIÓN ALINEADOS A LA IZQUIERDA */
+.section-title {
+  text-align: left;
+  font-size: 2rem;
+  margin: 4rem 2rem 1rem 2rem;
+  color: #ffffff;
+  border-left: 4px solid #ff00aa;
+  padding-left: 1rem;
 }
