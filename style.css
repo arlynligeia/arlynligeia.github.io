@@ -1,5 +1,5 @@
 /* --- FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap');
 
 /* --- ESTILOS GENERALES --- */
 body {
@@ -142,13 +142,13 @@ nav {
   color: white;
 }
 
-/* --- BLOQUE DE BIENVENIDA (INTRO) --- */
+/* --- BLOQUE DE BIENVENIDA --- */
 .intro-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  padding: 40px 10% 60px;
+  padding: 60px 10% 40px;
   flex-wrap: wrap;
 }
 
@@ -159,31 +159,42 @@ nav {
 
 .welcome-title {
   font-family: 'Freckle Face', cursive;
-  font-size: 90px;
-  color: white;
-  line-height: 1;
+  font-size: 80px;
+  font-weight: normal;
+  line-height: 1.1;
   transform: rotate(-5deg);
-  display: block;
-  white-space: pre-line;
-  text-shadow:
-    2px 2px 5px #000000,
-    -2px -2px 5px #000000;
+  display: inline-block;
+  background: linear-gradient(90deg, #39ff14, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #00ff9988;
+  margin-bottom: 30px;
 }
 
-.welcome-title::after {
-  content: "WELCOME\n   TO MY\n      UNIVERSE";
-  white-space: pre-line;
+.welcome-title span {
+  display: block;
+}
+
+.welcome-title .line1 {
+  margin-left: 0;
+}
+.welcome-title .line2 {
+  margin-left: 40px;
+}
+.welcome-title .line3 {
+  margin-left: 80px;
 }
 
 .welcome-subtitle {
   font-family: 'Share Tech Mono', monospace;
   font-size: 18px;
-  color: #ffffff;
-  margin-top: 20px;
+  color: white;
   line-height: 1.6;
-  text-shadow: 1px 1px 5px #000000aa;
+  text-shadow: 1px 1px 6px #00000080;
+  max-width: 500px;
 }
 
+/* --- IMAGEN DE BIENVENIDA --- */
 .intro-image {
   flex: 1;
   text-align: center;
@@ -197,21 +208,24 @@ nav {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* --- RESPONSIVE PARA MÓVILES --- */
+/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
     text-align: center;
+    padding: 30px 5% 20px;
   }
 
   .welcome-title {
-    font-size: 56px;
-    white-space: normal;
+    font-size: 48px;
+    text-align: center;
+    transform: rotate(0deg);
   }
 
-  .welcome-title::after {
-    content: "WELCOME TO\nMY UNIVERSE";
-    white-space: pre-line;
+  .welcome-title .line1,
+  .welcome-title .line2,
+  .welcome-title .line3 {
+    margin-left: 0;
   }
 
   .welcome-subtitle {
@@ -223,3 +237,4 @@ nav {
     margin-top: 30px;
   }
 }
+
