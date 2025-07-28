@@ -211,3 +211,59 @@ nav {
     margin-top: 30px;
   }
 }
+/* Estilos para la sección de bienvenida */
+#welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 5%;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.welcome-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.welcome-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.welcome-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px #ff69b4;
+}
+
+.welcome-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  color: #ffffffcc;
+  margin-top: 10px;
+  line-height: 1.5;
+  max-width: 500px;
+}
+
+.welcome-image {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.welcome-image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #ff66cc88;
+}
