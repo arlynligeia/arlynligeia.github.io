@@ -1,115 +1,136 @@
-/* FUENTES Y RESETEO */
-body, h1, h2, h3, ul, li, button {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&display=swap');
+
+/* --- ESTILOS GENERALES --- */
 body {
+  margin: 0;
   font-family: 'Rajdhani', sans-serif;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('assets/Fondo galactico.png') no-repeat center center fixed;
+  background: 
+    linear-gradient(to bottom, rgba(255,0,255,0.2), rgba(128,0,128,0.4), rgba(0,0,255,0.4), rgba(0,0,64,0.6)),
+    url('assets/Fondo galactico.png') no-repeat center center fixed;
   background-size: cover;
-  color: #fff;
+  color: white;
 }
 
-/* TÍTULO PRINCIPAL */
+/* --- TÍTULO PRINCIPAL --- */
 .site-title {
-  text-align: center;
   font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem;
-  color: #fff;
-  margin: 40px 0 20px;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 20px;
 }
 
-/* MENÚ */
+/* --- MENÚ NAV --- */
 nav {
   text-align: center;
+  margin-top: 10px;
 }
+
 .menu {
   list-style: none;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  padding: 10px 20px;
+  gap: 10px;
 }
+
 .menu li {
   position: relative;
 }
-.menu button {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 1rem;
-  padding: 10px 16px;
-  background-color: rgba(255, 255, 255, 0.15);
-  border: none;
-  border-radius: 6px;
-  color: #fff;
+
+.menu > li > button {
+  font-family: 'Orbitron', sans-serif;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.menu button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-/* SUBMENÚ */
+.menu > li > button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- SUBMENÚ --- */
 .submenu {
   display: none;
   position: absolute;
-  top: 45px;
+  top: 40px;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
-  text-align: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  z-index: 1000;
 }
+
+.submenu li button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
 .menu li:hover .submenu {
   display: block;
 }
-.submenu li {
-  padding: 8px 14px;
-  white-space: nowrap;
-}
-.submenu button {
-  background: none;
-  border: none;
-  font-size: 0.95rem;
-  padding: 6px 10px;
-  color: #fff;
-  font-family: 'Rajdhani', sans-serif;
-}
-.submenu button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
 
-/* SECCIONES */
-section {
-  padding: 40px 20px;
-}
-.section-title {
-  text-align: left;
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-family: 'Orbitron', sans-serif;
-}
-
-/* MENÚ RESPONSIVE PARA CELULAR */
+/* --- MENÚ RESPONSIVO --- */
 .menu-toggle {
   display: none;
   font-size: 2rem;
+  color: white;
   cursor: pointer;
-  margin: 10px;
+  text-align: left;
+  margin-left: 20px;
 }
-@media screen and (max-width: 768px) {
+
+@media (max-width: 768px) {
   .menu {
     display: none;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    padding-left: 20px;
   }
+
   .menu.active {
     display: flex;
   }
+
   .menu-toggle {
     display: block;
-    text-align: left;
-    padding-left: 20px;
   }
+
+  .submenu {
+    position: static;
+    border: none;
+    background: none;
+  }
+
+  .submenu li button {
+    padding-left: 30px;
+  }
+}
+
+/* --- TÍTULOS DE SECCIONES --- */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin: 60px 0 20px 40px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
 }
