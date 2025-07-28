@@ -133,13 +133,13 @@ main section h2 {
 }
 .bio-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
   align-items: flex-start;
   gap: 2rem;
   max-width: 1200px;
   margin: auto;
   padding: 2rem;
+  justify-content: flex-start;
 }
 
 .bio-image img {
@@ -155,7 +155,9 @@ main section h2 {
   line-height: 1.8;
   color: #f2f2f2;
   text-align: justify;
+  max-width: 600px;
 }
+
 #short {
   padding: 4rem 2rem;
   max-width: 900px;
