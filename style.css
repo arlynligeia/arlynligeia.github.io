@@ -132,3 +132,17 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+/* Posición del botón de menú en móviles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+
+  .site-title {
+    margin-top: 60px; /* para que el título baje un poco y no choque con el botón */
+    text-align: center;
+  }
+}
