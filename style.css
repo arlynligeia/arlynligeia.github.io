@@ -111,3 +111,36 @@ nav {
   justify-content: center;
   margin: 1rem auto 3rem auto;
 }
+/* RECUADRO SEMI-TRANSPARENTE PARA CADA BLOQUE DE VIDEO */
+.video-box {
+  background-color: rgba(0, 0, 0, 0.5); /* negro transparente */
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 0, 170, 0.3); /* sombra fucsia suave */
+}
+
+/* TÍTULO DE VIDEO DENTRO DEL RECUADRO */
+.video-box .video-title {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #ffccff;
+}
+
+/* VIDEO ADAPTADO A PANTALLAS GRANDES */
+.video-box .video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.video-box iframe {
+  width: 100%;
+  max-width: 960px;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 12px;
+}
