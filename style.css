@@ -146,3 +146,68 @@ nav {
     text-align: center;
   }
 }
+/* Sección de bienvenida */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 10%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 600px;
+}
+
+.welcome-title {
+  font-family: 'Pacifico', cursive; /* Fuente manuscrita */
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px #00000080;
+}
+
+.welcome-subtitle {
+  font-family: 'Orbitron', sans-serif; /* Futurista */
+  font-size: 18px;
+  color: #ddd;
+  line-height: 1.5;
+  text-shadow: 1px 1px 6px #00000080;
+}
+
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .welcome-title {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .welcome-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .intro-image {
+    margin-top: 30px;
+  }
+}
