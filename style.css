@@ -146,13 +146,13 @@ nav {
     text-align: center;
   }
 }
-/* Sección de bienvenida */
+/* Sección de bienvenida ajustada */
 .intro-section {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 80px 10%;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 100px 10%;
   flex-wrap: wrap;
 }
 
@@ -162,19 +162,19 @@ nav {
 }
 
 .welcome-title {
-  font-family: 'Pacifico', cursive; /* Fuente manuscrita */
-  font-size: 48px;
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
   font-weight: bold;
   color: #fff;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 8px #00000080;
+  text-shadow: 2px 2px 10px #000000a0;
 }
 
 .welcome-subtitle {
-  font-family: 'Orbitron', sans-serif; /* Futurista */
+  font-family: 'Orbitron', sans-serif;
   font-size: 18px;
-  color: #ddd;
-  line-height: 1.5;
+  color: #ccc;
+  line-height: 1.6;
   text-shadow: 1px 1px 6px #00000080;
 }
 
@@ -184,30 +184,30 @@ nav {
 }
 
 .intro-image img {
-  max-width: 100%;
+  width: 100%;
+  max-width: 400px;
   height: auto;
-  border-radius: 12px;
+  border-radius: 10px;
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive ajustes para pantallas pequeñas */
+/* Responsive para celular */
 @media (max-width: 768px) {
   .intro-section {
     flex-direction: column;
-    padding: 40px 5%;
+    text-align: center;
   }
 
   .welcome-title {
-    font-size: 36px;
-    text-align: center;
+    font-size: 42px;
   }
 
   .welcome-subtitle {
     font-size: 16px;
-    text-align: center;
   }
 
-  .intro-image {
+  .intro-image img {
+    max-width: 300px;
     margin-top: 30px;
   }
 }
