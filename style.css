@@ -16,24 +16,31 @@ body {
 }
 
 nav {
-  text-align: center;
-  margin-bottom: 2rem;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 100;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  height: calc(100% - 100px);
+  overflow-y: auto;
 }
 
 .main-menu {
   list-style: none;
   padding: 0;
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.2rem;
+  display: block;
 }
 
 .main-menu > li {
+  margin-bottom: 1rem;
   position: relative;
 }
 
 .main-menu a {
+  display: block;
   text-decoration: none;
   font-family: 'Orbitron', sans-serif;
   color: #ffccff;
@@ -48,8 +55,18 @@ nav {
   color: #fff;
 }
 
+.submenu {
+  display: none;
+  list-style: none;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
 .has-submenu:hover .submenu {
   display: block;
+}
+main {
+  margin-left: 220px;
 }
 
 .submenu {
