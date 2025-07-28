@@ -1,70 +1,95 @@
-/* Fondo de pantalla */
 body {
   margin: 0;
-  padding: 0;
-  background-image: url('assets/fondo-principal.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: 'Arial', sans-serif;
-  color: white;
+  font-family: 'Libre Baskerville', serif;
+  background: linear-gradient(to bottom, #ff99cc, #cc66cc, #663399, #0d0033);
+  color: #fff;
+  scroll-behavior: smooth;
 }
 
-/* Encabezado y menú */
-header {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 20px;
+.site-title {
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
+  font-size: 3em;
+  margin-top: 1rem;
+  color: #fff;
+  letter-spacing: 0.05em;
 }
 
-h1 {
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: #ff66cc;
+nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.main-menu {
+  list-style: none;
+  padding: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.main-menu > li {
+  position: relative;
+}
+
+.main-menu a {
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffccff;
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.main-menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.has-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #1a0033;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  z-index: 100;
+  min-width: 180px;
+}
+
+.submenu li {
   margin: 0;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.submenu a {
+  display: block;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  color: #ffccff;
 }
 
-nav li {
-  margin: 10px;
+.submenu a:hover {
+  background-color: #33004d;
+  color: #fff;
 }
 
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 8px 12px;
-  background-color: rgba(255, 105, 180, 0.3);
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-nav a:hover {
-  background-color: rgba(255, 105, 180, 0.6);
-}
-
-/* Sección principal */
-main {
-  padding: 60px 20px;
+main section {
+  padding: 4rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: auto;
   text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
-  color: #ff99ff;
-}
-
-p {
-  font-size: 1.2rem;
-  color: #ffffff;
+main section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+  margin-bottom: 1rem;
 }
