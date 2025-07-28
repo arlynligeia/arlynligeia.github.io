@@ -1,116 +1,115 @@
-/* Fondo galáctico con degradado rosa a azul */
-body {
+/* FUENTES Y RESETEO */
+body, h1, h2, h3, ul, li, button {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Rajdhani', sans-serif;
-  background-image: background-image: linear-gradient(rgba(255, 0, 153, 0.3), rgba(0, 0, 100, 0.6)), url('assets/Fondo galactico.png');
-;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0,0,0,0.6)), url('assets/Fondo galactico.png') no-repeat center center fixed;
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  color: white;
+  color: #fff;
 }
 
-/* Título principal */
+/* TÍTULO PRINCIPAL */
 .site-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 4rem;
   text-align: center;
-  margin-top: 40px;
-  color: white;
-  letter-spacing: 2px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  color: #fff;
+  margin: 40px 0 20px;
 }
 
-/* Menú general */
+/* MENÚ */
 nav {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  text-align: center;
 }
-
-/* Botones en horizontal (PC) */
 .menu {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  gap: 10px;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 20px;
 }
-
 .menu li {
   position: relative;
 }
-
 .menu button {
   font-family: 'Rajdhani', sans-serif;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid #fff;
-  color: white;
-  padding: 10px 20px;
-  cursor: pointer;
   font-size: 1rem;
-  white-space: nowrap;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.menu button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Submenú */
+/* SUBMENÚ */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 45px;
   left: 0;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  text-align: left;
 }
-
 .menu li:hover .submenu {
-  display: flex;
+  display: block;
 }
-
+.submenu li {
+  padding: 8px 14px;
+  white-space: nowrap;
+}
 .submenu button {
-  font-size: 0.9rem;
-  padding: 8px 15px;
+  background: none;
+  border: none;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  color: #fff;
+  font-family: 'Rajdhani', sans-serif;
+}
+.submenu button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Menú en móvil */
+/* SECCIONES */
+section {
+  padding: 40px 20px;
+}
+.section-title {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* MENÚ RESPONSIVE PARA CELULAR */
 .menu-toggle {
   display: none;
-  cursor: pointer;
   font-size: 2rem;
-  color: white;
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  cursor: pointer;
+  margin: 10px;
 }
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
+@media screen and (max-width: 768px) {
   .menu {
     display: none;
     flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
-
   .menu.active {
     display: flex;
   }
-
-  .submenu {
-    position: relative;
+  .menu-toggle {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
   }
-}
-
-/* Títulos de secciones a la izquierda */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  margin: 60px 30px 20px;
-  text-align: left;
-  color: white;
 }
