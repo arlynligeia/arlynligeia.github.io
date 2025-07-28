@@ -159,30 +159,26 @@ nav {
 
 .welcome-title {
   font-family: 'Freckle Face', cursive;
-  font-size: 80px;
-  font-weight: normal;
-  color: #ffffff;
+  font-size: 90px;
+  color: #39ff14; /* Verde fosforescente */
   margin: 0;
   line-height: 1.1;
   transform: rotate(-5deg);
   display: inline-block;
   text-shadow:
-    3px 3px 10px #ff00ff80,
-    -2px -2px 5px #00000088;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg, #ff6ec4, #7873f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    3px 3px 20px #39ff14,
+    -2px -2px 10px #00000088;
+  letter-spacing: 3px;
 }
 
 .welcome-subtitle {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 18px;
-  color: #ccc;
-  line-height: 1.6;
-  text-shadow: 1px 1px 6px #00000080;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 1.8;
+  text-shadow: 1px 1px 8px #00000080;
+  text-transform: none;
+  letter-spacing: 1px;
 }
 
 .intro-image {
