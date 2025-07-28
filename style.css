@@ -114,3 +114,28 @@ main section h2 {
   margin-bottom: 1.5rem;
   color: #ffccff;
 }
+.bio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.bio-image img {
+  max-width: 320px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.bio-text {
+  flex: 1;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #f2f2f2;
+  text-align: justify;
+}
