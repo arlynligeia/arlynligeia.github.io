@@ -132,16 +132,6 @@ nav {
   }
 }
 
-/* --- TÍTULOS DE SECCIONES --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin: 60px 0 20px 40px;
-  text-align: left;
-  text-transform: uppercase;
-  color: white;
-}
-
 /* --- BLOQUE DE BIENVENIDA --- */
 .intro-section {
   height: calc(100vh - 160px);
@@ -149,8 +139,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   padding: 0 8%;
-  gap: 50px;
-  flex-wrap: wrap;
   box-sizing: border-box;
   margin-top: 80px;
 }
@@ -163,7 +151,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-bottom: 30px;
+  margin-left: auto;
+  padding-top: 50px; /* espacio ideal superior */
+  padding-bottom: 50px; /* espacio ideal inferior */
+  margin-right: 40px; /* espacio lateral izquierdo igual al margen derecho de la imagen */
 }
 
 .welcome-title {
@@ -172,10 +163,9 @@ nav {
   font-weight: normal;
   line-height: 1.1;
   transform: rotate(-5deg);
-  display: inline-block;
   color: #39ff14;
   text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
-  margin-bottom: 20px;
+  margin: 0;
   text-align: left;
 }
 
@@ -188,6 +178,7 @@ nav {
 }
 .welcome-title .line2 {
   margin-left: 40px;
+  margin-bottom: 50px; /* espacio entre “MY UNIVERSE” y subtítulo */
 }
 
 .welcome-subtitle {
@@ -197,7 +188,7 @@ nav {
   line-height: 1.6;
   text-shadow: 1px 1px 6px #00000080;
   max-width: 500px;
-  margin-top: 10px;
+  margin: 0;
 }
 
 /* --- IMAGEN DE BIENVENIDA --- */
@@ -206,7 +197,10 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
+  margin-right: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 40px; /* espacio igual al margen izquierdo del texto */
 }
 
 .intro-image img {
@@ -227,18 +221,16 @@ nav {
     margin-top: 40px;
   }
 
+  .intro-text {
+    align-items: center;
+    margin: 0;
+    padding: 30px 0;
+  }
+
   .welcome-title {
     font-size: 52px;
     transform: rotate(0deg);
     text-align: center;
-  }
-
-  .welcome-title .line1::after {
-    content: " TO";
-  }
-
-  .welcome-title .line2::after {
-    content: " MY UNIVERSE";
   }
 
   .welcome-title .line1,
@@ -248,14 +240,16 @@ nav {
 
   .welcome-subtitle {
     font-size: 16px;
+    margin-top: 30px;
   }
 
   .intro-image {
-    padding-top: 20px;
+    padding: 20px 0;
+    margin: 0;
   }
 
   .intro-image img {
     max-width: 300px;
-    margin-top: 20px;
   }
 }
+
