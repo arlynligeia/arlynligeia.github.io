@@ -9,6 +9,7 @@ body {
   background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
               url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 /* --- TÍTULO PRINCIPAL --- */
@@ -132,15 +133,25 @@ nav {
   }
 }
 
+/* --- TÍTULOS DE SECCIONES --- */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin: 60px 0 20px 40px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+
 /* --- BLOQUE DE BIENVENIDA --- */
 .intro-section {
-  height: calc(100vh - 160px);
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 8%;
+  gap: 60px;
   box-sizing: border-box;
-  margin-top: 80px;
 }
 
 /* --- TEXTO DE BIENVENIDA --- */
@@ -151,10 +162,9 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-left: auto;
-  padding-top: 50px; /* espacio ideal superior */
-  padding-bottom: 50px; /* espacio ideal inferior */
-  margin-right: 40px; /* espacio lateral izquierdo igual al margen derecho de la imagen */
 }
 
 .welcome-title {
@@ -163,9 +173,10 @@ nav {
   font-weight: normal;
   line-height: 1.1;
   transform: rotate(-5deg);
+  display: inline-block;
   color: #39ff14;
   text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
-  margin: 0;
+  margin-bottom: 30px;
   text-align: left;
 }
 
@@ -176,9 +187,9 @@ nav {
 .welcome-title .line1 {
   margin-left: 0;
 }
+
 .welcome-title .line2 {
   margin-left: 40px;
-  margin-bottom: 50px; /* espacio entre “MY UNIVERSE” y subtítulo */
 }
 
 .welcome-subtitle {
@@ -188,7 +199,7 @@ nav {
   line-height: 1.6;
   text-shadow: 1px 1px 6px #00000080;
   max-width: 500px;
-  margin: 0;
+  margin-top: 30px;
 }
 
 /* --- IMAGEN DE BIENVENIDA --- */
@@ -197,10 +208,9 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
   margin-right: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-left: 40px; /* espacio igual al margen izquierdo del texto */
 }
 
 .intro-image img {
@@ -221,16 +231,22 @@ nav {
     margin-top: 40px;
   }
 
-  .intro-text {
-    align-items: center;
-    margin: 0;
-    padding: 30px 0;
-  }
-
   .welcome-title {
     font-size: 52px;
     transform: rotate(0deg);
     text-align: center;
+  }
+
+  .welcome-title span {
+    display: block;
+  }
+
+  .welcome-title .line1::after {
+    content: "";
+  }
+
+  .welcome-title .line2::after {
+    content: "";
   }
 
   .welcome-title .line1,
@@ -240,16 +256,15 @@ nav {
 
   .welcome-subtitle {
     font-size: 16px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .intro-image {
-    padding: 20px 0;
-    margin: 0;
+    padding-top: 20px;
   }
 
   .intro-image img {
     max-width: 300px;
+    margin-top: 20px;
   }
 }
-
