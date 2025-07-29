@@ -147,11 +147,11 @@ nav {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
   padding: 0 8%;
+  gap: 50px;
   flex-wrap: wrap;
-  position: relative;
+  box-sizing: border-box;
 }
 
 .intro-text {
@@ -160,7 +160,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 40px;
+  padding-bottom: 30px;
 }
 
 .welcome-title {
@@ -194,8 +194,7 @@ nav {
   line-height: 1.6;
   text-shadow: 1px 1px 6px #00000080;
   max-width: 500px;
-  margin-top: 30px;
-  text-align: left;
+  margin-top: 10px;
 }
 
 /* --- IMAGEN DE BIENVENIDA --- */
@@ -204,7 +203,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 40px;
+  padding-top: 30px;
 }
 
 .intro-image img {
@@ -245,11 +244,14 @@ nav {
 
   .welcome-subtitle {
     font-size: 16px;
-    text-align: center;
+  }
+
+  .intro-image {
+    padding-top: 20px;
   }
 
   .intro-image img {
     max-width: 300px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 }
