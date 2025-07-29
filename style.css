@@ -150,7 +150,8 @@ nav {
   gap: 50px;
   padding: 20px 8% 20px;
   flex-wrap: wrap;
-  min-height: 65vh;
+  min-height: 60vh;
+  margin-top: 0;
 }
 
 .intro-text {
@@ -166,10 +167,7 @@ nav {
   transform: rotate(-5deg);
   display: inline-block;
   color: #39ff14;
-  text-shadow:
-    0 0 5px #39ff14,
-    0 0 15px #39ff14,
-    0 0 25px #39ff14;
+  text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
   margin-bottom: 20px;
 }
 
@@ -194,6 +192,7 @@ nav {
   line-height: 1.6;
   text-shadow: 1px 1px 6px #00000080;
   max-width: 500px;
+  margin-top: 10px;
 }
 
 /* --- IMAGEN DE BIENVENIDA --- */
@@ -219,9 +218,15 @@ nav {
   }
 
   .welcome-title {
-    font-size: 50px;
+    font-size: 52px;
     text-align: center;
     transform: rotate(0deg);
+  }
+
+  .welcome-title .line1,
+  .welcome-title .line2,
+  .welcome-title .line3 {
+    margin-left: 0;
   }
 
   .welcome-title .line1::after {
@@ -230,11 +235,6 @@ nav {
 
   .welcome-title .line2::after {
     content: " MY UNIVERSE";
-  }
-
-  .welcome-title .line1,
-  .welcome-title .line2 {
-    margin-left: 0;
   }
 
   .welcome-title .line3 {
