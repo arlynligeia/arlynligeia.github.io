@@ -144,14 +144,15 @@ nav {
 
 /* --- BLOQUE DE BIENVENIDA --- */
 .intro-section {
-  height: 100vh;
+  height: calc(100vh - 160px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 0 8%;
   gap: 50px;
   flex-wrap: wrap;
   box-sizing: border-box;
+  margin-top: 80px;
 }
 
 /* --- TEXTO DE BIENVENIDA --- */
@@ -161,6 +162,8 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 30px;
 }
 
 .welcome-title {
@@ -183,7 +186,6 @@ nav {
 .welcome-title .line1 {
   margin-left: 0;
 }
-
 .welcome-title .line2 {
   margin-left: 40px;
 }
@@ -204,6 +206,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 .intro-image img {
@@ -220,7 +223,8 @@ nav {
     flex-direction: column;
     text-align: center;
     height: auto;
-    padding: 40px 5% 20px;
+    padding: 30px 5% 20px;
+    margin-top: 40px;
   }
 
   .welcome-title {
