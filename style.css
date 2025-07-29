@@ -160,15 +160,16 @@ nav {
 
 .welcome-title {
   font-family: 'Freckle Face', cursive;
-  font-size: 90px;
+  font-size: 100px;
   font-weight: normal;
   line-height: 1.1;
   transform: rotate(-5deg);
   display: inline-block;
-  background: linear-gradient(90deg, #39ff14, #66ffcc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px #00ff88aa;
+  color: #39ff14;
+  text-shadow:
+    0 0 5px #39ff14,
+    0 0 15px #39ff14,
+    0 0 25px #39ff14;
   margin-bottom: 20px;
 }
 
@@ -223,18 +224,17 @@ nav {
     transform: rotate(0deg);
   }
 
-  .welcome-title .line1,
-  .welcome-title .line2,
-  .welcome-title .line3 {
-    margin-left: 0;
-  }
-
   .welcome-title .line1::after {
     content: " TO";
   }
 
   .welcome-title .line2::after {
     content: " MY UNIVERSE";
+  }
+
+  .welcome-title .line1,
+  .welcome-title .line2 {
+    margin-left: 0;
   }
 
   .welcome-title .line3 {
