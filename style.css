@@ -147,20 +147,20 @@ nav {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 0 8%;
   gap: 50px;
   flex-wrap: wrap;
   box-sizing: border-box;
 }
 
+/* --- TEXTO DE BIENVENIDA --- */
 .intro-text {
   flex: 1;
   max-width: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 30px;
 }
 
 .welcome-title {
@@ -183,6 +183,7 @@ nav {
 .welcome-title .line1 {
   margin-left: 0;
 }
+
 .welcome-title .line2 {
   margin-left: 40px;
 }
@@ -203,7 +204,6 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 30px;
 }
 
 .intro-image img {
