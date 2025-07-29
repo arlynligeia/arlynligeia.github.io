@@ -1,270 +1,183 @@
-/* --- FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap');
-
-/* --- ESTILOS GENERALES --- */
-body {
+/* ===== GENERAL RESET ===== */
+* {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
-  background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
-              url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
-  background-size: cover;
-  overflow-x: hidden;
-}
-
-/* --- TÍTULO PRINCIPAL --- */
-.site-title {
-  text-align: center;
-  font-size: 4.5em;
-  margin: 30px 0 10px 0;
-}
-
-/* --- MENÚ NAV --- */
-nav {
-  text-align: center;
-  margin-top: 0;
-}
-
-.menu {
-  list-style: none;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== FUENTES BASE ===== */
+body {
+  font-family: 'Share Tech Mono', monospace;
+  background-image: url('assets/assets/Fondo galactico.png');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 0;
+}
+
+/* ===== DEGRADADO SUPERIOR ===== */
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom,
+    rgba(255, 105, 180, 0.2),   /* Rosa Barbie */
+    rgba(255, 0, 255, 0.2),     /* Fucsia */
+    rgba(200, 162, 200, 0.2),   /* Lila */
+    rgba(128, 0, 128, 0.2),     /* Morado */
+    rgba(64, 224, 208, 0.2),    /* Turquesa */
+    rgba(0, 0, 255, 0.2)        /* Azul */
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ===== TÍTULO PRINCIPAL ===== */
+.site-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.5rem;
+  text-align: center;
+  margin-top: 60px;
+  letter-spacing: 2px;
+}
+
+/* ===== MENÚ PRINCIPAL ===== */
+.main-menu {
+  margin-top: 40px; /* Proporción con el título */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-menu ul {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  gap: 16px;
 }
 
-.menu li {
-  position: relative;
-}
-
-.menu > li > button {
-  font-family: 'Orbitron', sans-serif;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 8px 14px;
-  cursor: pointer;
+.menu-item {
+  font-family: 'Audiowide', sans-serif;
   font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.menu > li > button:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* --- SUBMENÚ --- */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid white;
-  z-index: 1000;
-}
-
-.submenu li button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Rajdhani', sans-serif;
-  text-transform: capitalize;
-  white-space: nowrap;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-/* --- MENÚ RESPONSIVO --- */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  color: white;
+  position: relative;
   cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
 }
 
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+/* ===== SUBMENÚS ===== */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  padding: 8px 0;
+  min-width: 180px;
+  font-family: 'Exo', sans-serif;
+}
+
+.menu-item:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  padding: 8px 16px;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  transition: background 0.2s ease;
+}
+
+.submenu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ===== MENÚ HAMBURGUESA (CELULAR) ===== */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 6px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  color: white;
+}
+
+/* ===== RESPONSIVE PARA CELULARES ===== */
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
+  .site-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 60px;
+    line-height: 1.2;
   }
 
-  .menu.active {
+  .site-title::before {
+    content: "ARLYN";
+    display: block;
+  }
+
+  .site-title::after {
+    content: "LIGEIA";
+    display: block;
+  }
+
+  .main-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .main-menu.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-
-  .site-title {
-    margin-top: 60px;
+  .menu-item {
+    width: 100%;
     text-align: center;
   }
 
   .submenu {
-    position: static;
-    border: none;
-    background: none;
-  }
-
-  .submenu li button {
-    padding-left: 30px;
-  }
-}
-
-/* --- TÍTULOS DE SECCIONES --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin: 60px 0 20px 40px;
-  text-align: left;
-  text-transform: uppercase;
-  color: white;
-}
-
-/* --- BLOQUE DE BIENVENIDA --- */
-.intro-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 8%;
-  gap: 60px;
-  box-sizing: border-box;
-}
-
-/* --- TEXTO DE BIENVENIDA --- */
-.intro-text {
-  flex: 1;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-left: auto;
-}
-
-.welcome-title {
-  font-family: 'Freckle Face', cursive;
-  font-size: 100px;
-  font-weight: normal;
-  line-height: 1.1;
-  transform: rotate(-5deg);
-  display: inline-block;
-  color: #39ff14;
-  text-shadow: 0 0 15px #39ff14, 0 0 25px #39ff14, 0 0 35px #39ff14;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.welcome-title span {
-  display: block;
-}
-
-.welcome-title .line1 {
-  margin-left: 0;
-}
-
-.welcome-title .line2 {
-  margin-left: 40px;
-}
-
-.welcome-subtitle {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 18px;
-  color: white;
-  line-height: 1.6;
-  text-shadow: 1px 1px 6px #00000080;
-  max-width: 500px;
-  margin-top: 30px;
-}
-
-/* --- IMAGEN DE BIENVENIDA --- */
-.intro-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-right: auto;
-}
-
-.intro-image img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-}
-
-/* --- RESPONSIVE MÓVIL --- */
-@media (max-width: 768px) {
-  .intro-section {
-    flex-direction: column;
-    text-align: center;
-    height: auto;
-    padding: 30px 5% 20px;
-    margin-top: 40px;
-  }
-
-  .welcome-title {
-    font-size: 52px;
-    transform: rotate(0deg);
-    text-align: center;
-  }
-
-  .welcome-title span {
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+    margin-top: 5px;
     display: block;
+    padding: 0;
   }
 
-  .welcome-title .line1::after {
-    content: "";
-  }
-
-  .welcome-title .line2::after {
-    content: "";
-  }
-
-  .welcome-title .line1,
-  .welcome-title .line2 {
-    margin-left: 0;
-  }
-
-  .welcome-subtitle {
-    font-size: 16px;
-    margin-top: 20px;
-  }
-
-  .intro-image {
-    padding-top: 20px;
-  }
-
-  .intro-image img {
-    max-width: 300px;
-    margin-top: 20px;
+  .submenu li {
+    font-size: 0.85rem;
+    padding: 6px 10px;
   }
 }
