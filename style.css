@@ -1,3 +1,163 @@
+/* --- FUENTES --- */
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+/* --- ESTILOS GENERALES --- */
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
+              url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* --- TÍTULO PRINCIPAL --- */
+.site-title {
+  text-align: center;
+  font-size: 4.5em;
+  margin: 30px 0 10px 0;
+}
+
+/* --- MENÚ NAV --- */
+nav {
+  text-align: center;
+  margin-top: 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu > li > button {
+  font-family: 'Orbitron', sans-serif;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.menu > li > button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- SUBMENÚ --- */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  z-index: 1000;
+}
+
+.submenu li button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-family: 'Rajdhani', sans-serif;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* --- MENÚ RESPONSIVO --- */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+  }
+
+  .site-title {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .submenu {
+    position: static;
+    border: none;
+    background: none;
+  }
+
+  .submenu li button {
+    padding-left: 30px;
+  }
+}
+
+/* --- TÍTULOS DE SECCIONES --- */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin: 60px 0 20px 40px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+
+/* --- BLOQUE DE BIENVENIDA --- */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px 8% 20px;
+  flex-wrap: wrap;
+  min-height: 65vh;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 600px;
+}
+
 .welcome-title {
   font-family: 'Freckle Face', cursive;
   font-size: 90px;
@@ -5,9 +165,11 @@
   line-height: 1.1;
   transform: rotate(-5deg);
   display: inline-block;
-  color: #39ff14; /* verde neón sólido */
-  text-shadow: 0 0 20px #39ff1499, 0 0 10px #39ff14;
-  margin-bottom: 30px;
+  background: linear-gradient(90deg, #39ff14, #66ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #00ff88aa;
+  margin-bottom: 20px;
 }
 
 .welcome-title span {
@@ -18,8 +180,73 @@
   margin-left: 0;
 }
 .welcome-title .line2 {
-  margin-left: 60px;
+  margin-left: 40px;
 }
 .welcome-title .line3 {
-  margin-left: 120px;
+  margin-left: 100px;
+}
+
+.welcome-subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 18px;
+  color: white;
+  line-height: 1.6;
+  text-shadow: 1px 1px 6px #00000080;
+  max-width: 500px;
+}
+
+/* --- IMAGEN DE BIENVENIDA --- */
+.intro-image {
+  flex: 1;
+  text-align: center;
+}
+
+.intro-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+/* --- RESPONSIVE MÓVIL --- */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 5% 20px;
+  }
+
+  .welcome-title {
+    font-size: 50px;
+    text-align: center;
+    transform: rotate(0deg);
+  }
+
+  .welcome-title .line1,
+  .welcome-title .line2,
+  .welcome-title .line3 {
+    margin-left: 0;
+  }
+
+  .welcome-title .line1::after {
+    content: " TO";
+  }
+
+  .welcome-title .line2::after {
+    content: " MY UNIVERSE";
+  }
+
+  .welcome-title .line3 {
+    display: none;
+  }
+
+  .welcome-subtitle {
+    font-size: 16px;
+  }
+
+  .intro-image img {
+    max-width: 300px;
+    margin-top: 30px;
+  }
 }
