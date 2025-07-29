@@ -2,121 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARLYN LIGEIA</title>
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Orbitron:wght@700&family=Rajdhani:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Freckle+Face&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <!-- TIPOGRAFÍAS FUTURISTAS DESDE GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Audiowide&family=Exo:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- ARCHIVO DE ESTILOS EXTERNO -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+  <!-- FONDO GALÁCTICO + DEGRADADO -->
+  <div class="background-overlay"></div>
+
+  <!-- BOTÓN DE MENÚ HAMBURGUESA (solo visible en celular) -->
+  <div class="hamburger" id="hamburger">
+    &#9776;
+  </div>
+
+  <!-- CONTENEDOR PRINCIPAL -->
   <header>
     <h1 class="site-title">ARLYN LIGEIA</h1>
-    <nav>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
-      <ul class="menu" id="menu">
-        <li>
-          <button>Home</button>
+
+    <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
+    <nav class="main-menu">
+      <ul>
+        <li class="menu-item">
+          HOME
           <ul class="submenu">
-            <li><button>Social Media Content</button></li>
+            <li>Content</li>
           </ul>
         </li>
-        <li><button>Biography</button></li>
-        <li>
-          <button>Film</button>
+        <li class="menu-item">BIO</li>
+        <li class="menu-item">
+          FILM
           <ul class="submenu">
-            <li><button>Feature Film</button></li>
-            <li><button>Short Film</button></li>
-            <li><button>Music Video</button></li>
-            <li><button>Behind the Scenes</button></li>
+            <li>Feature Film</li>
+            <li>Short Film</li>
+            <li>Music Video</li>
+            <li>Behind the Scenes</li>
           </ul>
         </li>
-        <li>
-          <button>Music</button>
+        <li class="menu-item">
+          MUSIC
           <ul class="submenu">
-            <li><button>Album</button></li>
-            <li><button>Soundtrack</button></li>
-            <li><button>Music Video</button></li>
+            <li>Album</li>
+            <li>Soundtrack</li>
+            <li>Music Video</li>
           </ul>
         </li>
-        <li>
-          <button>Fashion</button>
+        <li class="menu-item">
+          FASHION
           <ul class="submenu">
-            <li><button>SS Collection</button></li>
-            <li><button>FW Collection</button></li>
-            <li><button>Capsule Collection</button></li>
-            <li><button>Resort Collection</button></li>
-            <li><button>Inspired by Film</button></li>
+            <li>SS Collection</li>
+            <li>FW Collection</li>
+            <li>Capsule Collection</li>
+            <li>Resort Collection</li>
+            <li>Film-Inspired Collection</li>
           </ul>
         </li>
-        <li>
-          <button>Art</button>
+        <li class="menu-item">
+          ART
           <ul class="submenu">
-            <li><button>Painting</button></li>
-            <li><button>Poetry</button></li>
+            <li>Painting</li>
+            <li>Poetry</li>
           </ul>
         </li>
-        <li>
-          <button>Science</button>
+        <li class="menu-item">
+          SCIENCE
           <ul class="submenu">
-            <li><button>Academic Article</button></li>
-            <li><button>Project</button></li>
+            <li>Research Article</li>
+            <li>Research Project</li>
           </ul>
         </li>
-        <li>
-          <button>Contact</button>
+        <li class="menu-item">
+          CONTACT
           <ul class="submenu">
-            <li><button>Fan Message</button></li>
-            <li><button>Work Message</button></li>
+            <li>Fan Message</li>
+            <li>Business Inquiry</li>
           </ul>
         </li>
-        <li><button>Be My Patron</button></li>
-        <li><button>Store</button></li>
+        <li class="menu-item">
+          BE MY PATRON
+          <ul class="submenu">
+            <li>Support My Work</li>
+            <li>Support My Study</li>
+            <li>Gift</li>
+          </ul>
+        </li>
+        <li class="menu-item">SHOP</li>
       </ul>
     </nav>
   </header>
-
-  <!-- BLOQUE DE BIENVENIDA AJUSTADO -->
-  <section id="intro" class="intro-section">
-    <div class="intro-text">
-      <h2 class="welcome-title">WELCOME TO MY UNIVERSE</h2>
-      <p class="welcome-subtitle">I want a crab fishing boat and a patron to fund my delirium...</p>
-    </div>
-    <div class="intro-image">
-      <img src="assets/assets/AL inicio.jpg" alt="Arlyn Ligeia Portrait" />
-    </div>
-  </section>
-
-  <!-- SECCIÓN HOME -->
-  <section id="home">
-    <h2 class="section-title">Social Media Content</h2>
-  </section>
-
-  <!-- SECCIONES RESTANTES -->
-  <section id="biography"><h2 class="section-title">Biography</h2></section>
-  <section id="feature"><h2 class="section-title">Feature Film</h2></section>
-  <section id="short"><h2 class="section-title">Short Film</h2></section>
-  <section id="music-video"><h2 class="section-title">Music Video</h2></section>
-  <section id="behind"><h2 class="section-title">Behind the Scenes</h2></section>
-  <section id="album"><h2 class="section-title">Album</h2></section>
-  <section id="soundtrack"><h2 class="section-title">Soundtrack</h2></section>
-  <section id="ss"><h2 class="section-title">SS Collection</h2></section>
-  <section id="fw"><h2 class="section-title">FW Collection</h2></section>
-  <section id="capsule"><h2 class="section-title">Capsule Collection</h2></section>
-  <section id="resort"><h2 class="section-title">Resort Collection</h2></section>
-  <section id="film-inspired"><h2 class="section-title">Inspired by Film</h2></section>
-  <section id="painting"><h2 class="section-title">Painting</h2></section>
-  <section id="poetry"><h2 class="section-title">Poetry</h2></section>
-  <section id="article"><h2 class="section-title">Academic Article</h2></section>
-  <section id="project"><h2 class="section-title">Project</h2></section>
-  <section id="fan"><h2 class="section-title">Fan Message</h2></section>
-  <section id="work"><h2 class="section-title">Work Message</h2></section>
-  <section id="support"><h2 class="section-title">Be My Patron</h2></section>
-  <section id="store"><h2 class="section-title">Store</h2></section>
-
-  <script>
-    document.getElementById("menu-toggle").onclick = function () {
-      document.getElementById("menu").classList.toggle("active");
-    };
-  </script>
 </body>
 </html>
