@@ -5,28 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ARLYN LIGEIA</title>
 
-  <!-- TIPOGRAFÍAS FUTURISTAS DESDE GOOGLE FONTS -->
+  <!-- FUENTES GALÁCTICAS -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Audiowide&family=Exo:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 
-  <!-- ARCHIVO DE ESTILOS EXTERNO -->
+  <!-- ARCHIVO DE ESTILOS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <!-- FONDO GALÁCTICO + DEGRADADO -->
+  <!-- DEGRADADO GALÁCTICO -->
   <div class="background-overlay"></div>
 
-  <!-- BOTÓN DE MENÚ HAMBURGUESA (solo visible en celular) -->
-  <div class="hamburger" id="hamburger">
-    &#9776;
-  </div>
+  <!-- MENÚ HAMBURGUESA SOLO EN CELULAR -->
+  <div class="hamburger" id="hamburger">&#9776;</div>
 
-  <!-- CONTENEDOR PRINCIPAL -->
+  <!-- ENCABEZADO PRINCIPAL -->
   <header>
     <h1 class="site-title">ARLYN LIGEIA</h1>
 
-    <!-- MENÚ DE NAVEGACIÓN PRINCIPAL -->
-    <nav class="main-menu">
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="main-menu" id="mainMenu">
       <ul>
         <li class="menu-item">
           HOME
@@ -95,5 +93,14 @@
       </ul>
     </nav>
   </header>
+
+  <!-- SCRIPT PARA BOTÓN HAMBURGUESA -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("mainMenu");
+    hamburger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
