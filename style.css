@@ -9,34 +9,6 @@ body {
   background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
               url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
   background-size: cover;
-  position: relative;
-  overflow-x: hidden;
-  z-index: 0;
-}
-
-/* --- NEBULOSA FLOTANTE --- */
-body::before {
-  content: "";
-  position: fixed;
-  top: -20%;
-  left: -20%;
-  width: 140%;
-  height: 140%;
-  background: radial-gradient(circle at 30% 30%, #6c00ff40 0%, transparent 50%),
-              radial-gradient(circle at 70% 60%, #00f0ff30 0%, transparent 50%),
-              radial-gradient(circle at 50% 80%, #6c00ff20 0%, transparent 60%);
-  pointer-events: none;
-  z-index: -1; /* << CAMBIO IMPORTANTE para que no tape el texto */
-  animation: nebulosaMove 30s ease-in-out infinite alternate;
-}
-
-@keyframes nebulosaMove {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  100% {
-    transform: translate(-30px, -20px) scale(1.05);
-  }
 }
 
 /* --- TÍTULO PRINCIPAL --- */
@@ -44,16 +16,12 @@ body::before {
   text-align: center;
   font-size: 4.5em;
   margin: 30px 0;
-  position: relative;
-  z-index: 1;
 }
 
 /* --- MENÚ NAV --- */
 nav {
   text-align: center;
   margin-top: 10px;
-  position: relative;
-  z-index: 1;
 }
 
 .menu {
@@ -118,29 +86,6 @@ nav {
   display: block;
 }
 
-/* --- EFECTO TURQUESA EN SUBMENÚS --- */
-.submenu li {
-  position: relative;
-  overflow: hidden;
-}
-
-.submenu li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: turquoise;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.submenu li:hover::before {
-  transform: scaleX(1);
-}
-
 /* --- MENÚ RESPONSIVO --- */
 .menu-toggle {
   display: none;
@@ -148,10 +93,7 @@ nav {
   color: white;
   cursor: pointer;
   text-align: left;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 9999; /* << CAMBIO IMPORTANTE para estar encima de todo */
+  margin-left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -168,6 +110,10 @@ nav {
 
   .menu-toggle {
     display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
   }
 
   .site-title {
@@ -194,4 +140,26 @@ nav {
   text-align: left;
   text-transform: uppercase;
   color: white;
+}
+/* --- EFECTO TURQUESA EN SUBMENÚS --- */
+.submenu li {
+  position: relative;
+  overflow: hidden;
+}
+
+.submenu li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: turquoise;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.submenu li:hover::before {
+  transform: scaleX(1);
 }
