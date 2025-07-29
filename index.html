@@ -8,66 +8,135 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Capa de color degradado encima del fondo -->
   <div class="background-overlay"></div>
 
+  <!-- Menú hamburguesa solo en móvil -->
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+  <!-- Encabezado con título -->
   <header>
     <h1 class="main-title">ARLYN LIGEIA</h1>
 
-    <nav class="navbar">
-      <ul class="nav-buttons">
+    <!-- Menú principal en PC -->
+    <nav class="main-nav">
+      <ul class="menu">
         <li><a href="#">HOME</a>
-          <ul class="dropdown">
-            <li><a href="#">Content of Social Media</a></li>
+          <ul class="submenu">
+            <li><a href="#">SOCIAL MEDIA CONTENT</a></li>
           </ul>
         </li>
         <li><a href="#">BIOGRAPHY</a></li>
         <li><a href="#">CINEMA</a>
-          <ul class="dropdown">
-            <li><a href="#">Feature Film</a></li>
-            <li><a href="#">Short Film</a></li>
-            <li><a href="#">Music Video</a></li>
-            <li><a href="#">Behind the Scenes</a></li>
+          <ul class="submenu">
+            <li><a href="#">FEATURE FILM</a></li>
+            <li><a href="#">SHORT FILM</a></li>
+            <li><a href="#">MUSIC VIDEO</a></li>
+            <li><a href="#">BEHIND THE SCENES</a></li>
           </ul>
         </li>
         <li><a href="#">MUSIC</a>
-          <ul class="dropdown">
-            <li><a href="#">Album</a></li>
-            <li><a href="#">Soundtrack</a></li>
-            <li><a href="#">Music Video</a></li>
+          <ul class="submenu">
+            <li><a href="#">ALBUM</a></li>
+            <li><a href="#">SOUNDTRACK</a></li>
+            <li><a href="#">MUSIC VIDEO</a></li>
           </ul>
         </li>
         <li><a href="#">FASHION</a>
-          <ul class="dropdown">
-            <li><a href="#">SS Collection</a></li>
-            <li><a href="#">FW Collection</a></li>
-            <li><a href="#">Capsule Collection</a></li>
-            <li><a href="#">Resort Collection</a></li>
-            <li><a href="#">Film-Inspired Collection</a></li>
+          <ul class="submenu">
+            <li><a href="#">SS COLLECTION</a></li>
+            <li><a href="#">FW COLLECTION</a></li>
+            <li><a href="#">CAPSULE COLLECTION</a></li>
+            <li><a href="#">RESORT COLLECTION</a></li>
+            <li><a href="#">FILM-INSPIRED COLLECTION</a></li>
           </ul>
         </li>
         <li><a href="#">ART</a>
-          <ul class="dropdown">
-            <li><a href="#">Painting</a></li>
-            <li><a href="#">Poetry</a></li>
+          <ul class="submenu">
+            <li><a href="#">PAINTING</a></li>
+            <li><a href="#">POETRY</a></li>
           </ul>
         </li>
         <li><a href="#">SCIENCE</a>
-          <ul class="dropdown">
-            <li><a href="#">Research Article</a></li>
-            <li><a href="#">Research Project</a></li>
+          <ul class="submenu">
+            <li><a href="#">RESEARCH ARTICLE</a></li>
+            <li><a href="#">RESEARCH PROJECT</a></li>
           </ul>
         </li>
         <li><a href="#">CONTACT</a>
-          <ul class="dropdown">
-            <li><a href="#">Fan Message</a></li>
-            <li><a href="#">Work Message</a></li>
+          <ul class="submenu">
+            <li><a href="#">FAN MESSAGE</a></li>
+            <li><a href="#">WORK MESSAGE</a></li>
           </ul>
         </li>
         <li><a href="#">BE MY PATRON</a>
-          <ul class="dropdown">
-            <li><a href="#">Support My Work</a></li>
-            <li><a href="#">Support My Studies</a></li>
-            <li><a href="#">Gifts</a></li>
+          <ul class="submenu">
+            <li><a href="#">SUPPORT MY WORK</a></li>
+            <li><a href="#">SUPPORT MY STUDIES</a></li>
+            <li><a href="#">GIFTS</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SHOP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menú móvil desplegable -->
+    <nav class="mobile-nav" id="mobileMenu">
+      <ul>
+        <li><a href="#">HOME</a>
+          <ul>
+            <li><a href="#">SOCIAL MEDIA CONTENT</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BIOGRAPHY</a></li>
+        <li><a href="#">CINEMA</a>
+          <ul>
+            <li><a href="#">FEATURE FILM</a></li>
+            <li><a href="#">SHORT FILM</a></li>
+            <li><a href="#">MUSIC VIDEO</a></li>
+            <li><a href="#">BEHIND THE SCENES</a></li>
+          </ul>
+        </li>
+        <li><a href="#">MUSIC</a>
+          <ul>
+            <li><a href="#">ALBUM</a></li>
+            <li><a href="#">SOUNDTRACK</a></li>
+            <li><a href="#">MUSIC VIDEO</a></li>
+          </ul>
+        </li>
+        <li><a href="#">FASHION</a>
+          <ul>
+            <li><a href="#">SS COLLECTION</a></li>
+            <li><a href="#">FW COLLECTION</a></li>
+            <li><a href="#">CAPSULE COLLECTION</a></li>
+            <li><a href="#">RESORT COLLECTION</a></li>
+            <li><a href="#">FILM-INSPIRED COLLECTION</a></li>
+          </ul>
+        </li>
+        <li><a href="#">ART</a>
+          <ul>
+            <li><a href="#">PAINTING</a></li>
+            <li><a href="#">POETRY</a></li>
+          </ul>
+        </li>
+        <li><a href="#">SCIENCE</a>
+          <ul>
+            <li><a href="#">RESEARCH ARTICLE</a></li>
+            <li><a href="#">RESEARCH PROJECT</a></li>
+          </ul>
+        </li>
+        <li><a href="#">CONTACT</a>
+          <ul>
+            <li><a href="#">FAN MESSAGE</a></li>
+            <li><a href="#">WORK MESSAGE</a></li>
+          </ul>
+        </li>
+        <li><a href="#">BE MY PATRON</a>
+          <ul>
+            <li><a href="#">SUPPORT MY WORK</a></li>
+            <li><a href="#">SUPPORT MY STUDIES</a></li>
+            <li><a href="#">GIFTS</a></li>
           </ul>
         </li>
         <li><a href="#">SHOP</a></li>
@@ -76,5 +145,13 @@
   </header>
 
   <main class="spacer"></main>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
 </body>
 </html>
