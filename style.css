@@ -1,182 +1,53 @@
-/* RESET */
-* {
+/* Fondo galáctico */
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* FONDO GALÁCTICO */
-body {
-  font-family: 'Share Tech Mono', monospace;
+  min-height: 200vh; /* Para permitir scroll aunque no haya contenido */
   background-image: url('assets/assets/Fondo galactico.png');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
-  color: white;
-  min-height: 100vh;
+  background-attachment: fixed;
+  font-family: 'Orbitron', sans-serif;
   position: relative;
-  z-index: 0;
+  overflow-x: hidden;
 }
 
-/* DEGRADADO EN SCROLL */
+/* Capa degradada semitransparente */
 .background-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 300%;
-  background: linear-gradient(to bottom,
-    rgba(255, 105, 180, 0.25),   /* Rosa Barbie */
-    rgba(255, 0, 255, 0.25),     /* Fucsia */
-    rgba(200, 162, 200, 0.25),   /* Lila */
-    rgba(128, 0, 128, 0.25),     /* Morado */
-    rgba(64, 224, 208, 0.25),    /* Turquesa */
-    rgba(0, 0, 255, 0.25)        /* Azul */
-  );
-  z-index: -1;
+  height: 200%;
+  z-index: 0;
   pointer-events: none;
+  background: linear-gradient(to bottom, 
+    rgba(255, 105, 180, 0.25),  /* rosa barbie */
+    rgba(255, 0, 255, 0.25),    /* fucsia */
+    rgba(200, 162, 200, 0.25),  /* lila */
+    rgba(128, 0, 128, 0.25),    /* morado */
+    rgba(64, 224, 208, 0.25),   /* turquesa */
+    rgba(0, 0, 255, 0.25)       /* azul */
+  );
 }
 
-/* TÍTULO PRINCIPAL */
-.site-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3.5rem;
-  text-align: center;
-  margin-top: 60px;
-  letter-spacing: 2px;
-}
-
-/* MENÚ PRINCIPAL */
-.main-menu {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.main-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.menu-item {
-  font-family: 'Audiowide', sans-serif;
-  font-size: 1rem;
+/* Título principal centrado */
+header {
   position: relative;
-  cursor: pointer;
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(4px);
-  white-space: nowrap;
+  z-index: 1;
+  text-align: center;
+  padding-top: 60px;
 }
 
-.menu-item:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-}
-
-/* SUBMENÚS */
-.submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 4px;
-  padding: 8px 0;
-  min-width: 180px;
-  font-family: 'Exo', sans-serif;
-  z-index: 10;
-}
-
-.menu-item:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  padding: 8px 16px;
-  white-space: nowrap;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  transition: background 0.2s ease;
-  text-align: left;
-}
-
-.submenu li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* HAMBURGUESA */
-.hamburger {
-  display: none;
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 28px;
-  z-index: 1000;
-  cursor: pointer;
-  padding: 6px 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 4px;
+.main-title {
   color: white;
+  font-size: 4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
-/* RESPONSIVE PARA CELULAR */
-@media (max-width: 768px) {
-  .site-title {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 60px;
-    line-height: 1.2;
-  }
-
-  .site-title::before {
-    content: "ARLYN";
-    display: block;
-  }
-
-  .site-title::after {
-    content: "LIGEIA";
-    display: block;
-  }
-
-  .main-menu {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .main-menu.active {
-    display: flex;
-  }
-
-  .menu-item {
-    width: 100%;
-    text-align: center;
-  }
-
-  .submenu {
-    position: relative;
-    background-color: transparent;
-    display: block;
-    padding: 0;
-  }
-
-  .submenu li {
-    font-size: 0.85rem;
-    padding: 6px 10px;
-  }
+/* Espaciador para hacer scroll */
+.spacer {
+  height: 150vh;
 }
