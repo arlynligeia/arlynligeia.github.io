@@ -141,3 +141,25 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+/* --- EFECTO TURQUESA EN SUBMENÚS --- */
+.submenu li {
+  position: relative;
+  overflow: hidden;
+}
+
+.submenu li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: turquoise;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.submenu li:hover::before {
+  transform: scaleX(1);
+}
