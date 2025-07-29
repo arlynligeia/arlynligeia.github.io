@@ -144,23 +144,26 @@ nav {
 
 /* --- BLOQUE DE BIENVENIDA --- */
 .intro-section {
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 50px;
   padding: 0 8%;
   flex-wrap: wrap;
-  min-height: 70vh;
 }
 
 .intro-text {
   flex: 1;
   max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .welcome-title {
   font-family: 'Freckle Face', cursive;
-  font-size: 95px;
+  font-size: 100px;
   font-weight: normal;
   line-height: 1.1;
   transform: rotate(-5deg);
@@ -195,7 +198,9 @@ nav {
 /* --- IMAGEN DE BIENVENIDA --- */
 .intro-image {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .intro-image img {
@@ -211,13 +216,14 @@ nav {
   .intro-section {
     flex-direction: column;
     text-align: center;
-    padding: 20px 5% 20px;
+    height: auto;
+    padding: 40px 5% 20px;
   }
 
   .welcome-title {
     font-size: 52px;
-    text-align: center;
     transform: rotate(0deg);
+    text-align: center;
   }
 
   .welcome-title .line1::after {
@@ -228,6 +234,7 @@ nav {
     content: " MY UNIVERSE";
   }
 
+  .welcome-title .line1,
   .welcome-title .line2 {
     margin-left: 0;
   }
