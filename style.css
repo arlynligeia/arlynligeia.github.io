@@ -121,36 +121,23 @@ nav {
 }
 /* --- CARRUSEL --- */
 #carousel-container {
-  max-width: 900px; /* un poco más ancho que 800 */
-  margin: 40px auto; /* 40px para mantener espacio vertical */
-  position: relative;
-  padding: 0 10px; /* un poco de padding lateral */
-}
-
-.carousel {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255, 0, 150, 0.7);
-}
-
-.carousel-track-container {
-  overflow: hidden;
+  width: 600px;           /* ancho más pequeño */
+  height: 375px;          /* altura proporcional */
+  margin: 40px 40px 40px auto; /* margen arriba, derecha, abajo, izquierda para alinearlo a la derecha */
+  overflow: hidden;       /* oculta las partes de imágenes fuera del contenedor */
   position: relative;
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  height: 100%;
 }
 
 .carousel-slide {
-  min-width: 800px;
-  height: 500px;
-  margin-right: 20px; /* espacio entre slides */
+  min-width: 600px;       /* ancho igual al contenedor para que solo se vea una imagen */
+  height: 375px;
+  margin-right: 20px;     /* espacio entre imágenes */
   flex-shrink: 0;
 }
 
@@ -158,8 +145,6 @@ nav {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-  border-radius: 10px;
 }
 
 /* Botones */
