@@ -1,205 +1,165 @@
-/* --- FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
+/* GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* --- ESTILOS GENERALES --- */
 body {
-  margin: 0;
   font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(180deg, #0f001a, #1a0033, #33004d);
   color: white;
-  background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
-              url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
-  background-size: cover;
+  min-height: 100vh;
 }
 
-/* --- TÍTULO PRINCIPAL --- */
-.site-title {
-  text-align: center;
-  font-size: 4.5em;
-  margin: 30px 0;
-}
-
-/* --- MENÚ NAV --- */
-nav {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.menu {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.menu li {
+/* ENCABEZADO */
+header {
   position: relative;
+  padding: 1rem;
+  text-align: center;
 }
 
-.menu > li > button {
-  font-family: 'Orbitron', sans-serif;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+/* TÍTULO PRINCIPAL */
+.site-title {
+  font-family: 'Freckle Face', cursive;
+  font-size: 3rem;
+  color: fuchsia;
+  margin-top: 0.5rem;
 }
 
-.menu > li > button:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* --- SUBMENÚ --- */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid white;
-  z-index: 1000;
-}
-
-.submenu li button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Rajdhani', sans-serif;
-  text-transform: capitalize;
-  white-space: nowrap;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-/* --- MENÚ RESPONSIVO --- */
+/* MENÚ HAMBURGUESA */
 .menu-toggle {
   display: none;
   font-size: 2rem;
-  color: white;
   cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+  color: white;
 }
 
-@media (max-width: 768px) {
-  body {
-    background: fuchsia;
-  }
+/* MENÚ GENERAL */
+nav .menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 1rem;
+  gap: 1rem;
+}
 
+/* BOTONES PRINCIPALES */
+nav .menu li button {
+  background: none;
+  border: 2px solid fuchsia;
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+nav .menu li button:hover {
+  background: fuchsia;
+  color: black;
+}
+
+/* SUBMENÚS SOLO EN PC */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.desktop-only li:hover > .submenu {
+  display: block;
+}
+
+.submenu li {
+  list-style: none;
+  margin: 0.3rem 0;
+}
+
+.submenu li button {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.submenu li button:hover {
+  color: fuchsia;
+}
+
+/* SOLO SE VE EN PC */
+.desktop-only {
+  display: flex;
+}
+
+/* SECCIONES */
+.section-title {
+  font-size: 2rem;
+  margin: 3rem 1rem 1rem;
+  text-align: center;
+}
+
+/* RESPONSIVO: VERSIÓN MÓVIL */
+@media screen and (max-width: 768px) {
   .menu-toggle {
     display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 2000;
   }
 
   .site-title {
-    margin-top: 60px;
-    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 3rem;
   }
 
-  .menu {
+  /* OCULTA MENÚ DESKTOP */
+  .desktop-only {
+    display: none;
+  }
+
+  /* MENÚ MÓVIL */
+  nav .menu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: fuchsia;
-    padding: 100px 30px 30px 30px;
     z-index: 1000;
-    overflow-y: auto;
+    padding-top: 5rem;
   }
 
-  .menu.active {
+  nav .menu.active {
     display: flex;
   }
 
-  .menu > li {
-    margin-bottom: 20px;
+  nav .menu li {
+    margin: 1rem 0;
   }
 
-  .menu > li > button {
-    font-size: 2rem;
-    background: none;
+  nav .menu li button {
+    font-size: 1.8rem;
+    color: black;
     border: none;
+    background: none;
+  }
+
+  nav .menu li button:hover {
     color: white;
-    text-transform: uppercase;
-    padding: 0;
-    text-align: left;
   }
 
   .submenu {
-    display: none;
-    flex-direction: column;
-    background: none;
-    position: static;
-    margin-top: 10px;
-    border: none;
+    display: none !important;
   }
-
-  .submenu li button {
-    font-size: 1.5rem;
-    padding-left: 20px;
-    background: none;
-    border: none;
-    color: white;
-    text-transform: capitalize;
-    text-align: left;
-  }
-
-  .menu li.show-submenu .submenu {
-    display: flex;
-  }
-}
-
-/* --- TÍTULOS DE SECCIONES --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin: 60px 0 20px 40px;
-  text-align: left;
-  text-transform: uppercase;
-  color: white;
-}
-
-/* --- EFECTO TURQUESA EN SUBMENÚS --- */
-.submenu li {
-  position: relative;
-  overflow: hidden;
-}
-
-.submenu li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: turquoise;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.submenu li:hover::before {
-  transform: scaleX(1);
 }
