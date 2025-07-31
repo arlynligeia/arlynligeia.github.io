@@ -119,6 +119,18 @@
   <section id="work"><h2 class="section-title">Work Message</h2></section>
   <section id="support"><h2 class="section-title">Be My Patron</h2></section>
   <section id="store"><h2 class="section-title">Store</h2></section>
+<script>
+  const images = document.querySelectorAll('.carousel-image');
+  let current = 0;
+
+  function showNextImage() {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }
+
+  setInterval(showNextImage, 3000); // Cambia cada 3 segundos
+</script>
 
      </body>
 </html>
