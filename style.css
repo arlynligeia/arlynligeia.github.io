@@ -86,49 +86,65 @@ nav {
   display: block;
 }
 
-/* --- MENÚ RESPONSIVO --- */
+/* --- MENÚ HAMBURGUESA --- */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  z-index: 2001;
+  background: none;
 }
 
+/* --- RESPONSIVO PARA MÓVIL --- */
 @media (max-width: 768px) {
   .menu {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff00aa;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    z-index: 2000;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-
-  .site-title {
-    margin-top: 60px;
+  .menu li {
+    width: 100%;
     text-align: center;
   }
 
-  .submenu {
-    position: static;
-    border: none;
-    background: none;
+  .menu li button {
+    all: unset;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
   }
 
-  .submenu li button {
-    padding-left: 30px;
+  .submenu {
+    display: none !important;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-title {
+    margin-top: 100px;
   }
 }
 
@@ -141,6 +157,7 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+
 /* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
@@ -162,4 +179,4 @@ nav {
 
 .submenu li:hover::before {
   transform: scaleX(1);
-} 
+}
