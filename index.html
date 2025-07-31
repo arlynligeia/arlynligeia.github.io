@@ -16,69 +16,15 @@
     
     <nav>
       <ul class="menu" id="menu">
-        <li>
-          <button class="main-btn">Home</button>
-          <ul class="submenu">
-            <li><button>Social Media Content</button></li>
-          </ul>
-        </li>
+        <li><button class="main-btn">Home</button></li>
         <li><button class="main-btn">Biography</button></li>
-        <li>
-          <button class="main-btn">Film</button>
-          <ul class="submenu">
-            <li><button>Feature Film</button></li>
-            <li><button>Short Film</button></li>
-            <li><button>Music Video</button></li>
-            <li><button>Behind the Scenes</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Music</button>
-          <ul class="submenu">
-            <li><button>Album</button></li>
-            <li><button>Soundtrack</button></li>
-            <li><button>Music Video</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Fashion</button>
-          <ul class="submenu">
-            <li><button>SS Collection</button></li>
-            <li><button>FW Collection</button></li>
-            <li><button>Capsule Collection</button></li>
-            <li><button>Resort Collection</button></li>
-            <li><button>Inspired by Film</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Art</button>
-          <ul class="submenu">
-            <li><button>Painting</button></li>
-            <li><button>Poetry</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Science</button>
-          <ul class="submenu">
-            <li><button>Research Article</button></li>
-            <li><button>Research Project</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Contact</button>
-          <ul class="submenu">
-            <li><button>Fan Message</button></li>
-            <li><button>Work Message</button></li>
-          </ul>
-        </li>
-        <li>
-          <button class="main-btn">Be My Patron</button>
-          <ul class="submenu">
-            <li><button>Support my Work</button></li>
-            <li><button>Support my Studies</button></li>
-            <li><button>Gifts</button></li>
-          </ul>
-        </li>
+        <li><button class="main-btn">Film</button></li>
+        <li><button class="main-btn">Music</button></li>
+        <li><button class="main-btn">Fashion</button></li>
+        <li><button class="main-btn">Art</button></li>
+        <li><button class="main-btn">Science</button></li>
+        <li><button class="main-btn">Contact</button></li>
+        <li><button class="main-btn">Be My Patron</button></li>
         <li><button class="main-btn">Store</button></li>
       </ul>
     </nav>
@@ -112,23 +58,12 @@
   <section id="store"><h2 class="section-title">Store</h2></section>
 
   <script>
-    // Mostrar/Ocultar menú principal
+    // Mostrar/Ocultar menú en móviles
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
-    const submenuButtons = document.querySelectorAll(".main-btn");
 
     menuToggle.addEventListener("click", () => {
       menu.classList.toggle("active");
-    });
-
-    // Mostrar/Ocultar submenús al presionar botón principal
-    submenuButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        const submenu = button.nextElementSibling;
-        if (submenu && submenu.classList.contains("submenu")) {
-          submenu.classList.toggle("visible");
-        }
-      });
     });
   </script>
 </body>
