@@ -1,7 +1,5 @@
-/* --- FUENTES --- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
 
-/* --- ESTILOS GENERALES --- */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -17,7 +15,6 @@ body {
   margin: 30px 0;
 }
 
-/* --- MENÚ NAV VERSIÓN PC --- */
 nav {
   text-align: center;
   margin-top: 10px;
@@ -53,7 +50,6 @@ nav {
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* --- SUBMENÚ --- */
 .submenu {
   display: none;
   position: absolute;
@@ -85,7 +81,15 @@ nav {
   display: block;
 }
 
-/* --- EFECTO TURQUESA SUBMENÚ --- */
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin: 60px 0 20px 40px;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+}
+
 .submenu li {
   position: relative;
   overflow: hidden;
@@ -106,94 +110,4 @@ nav {
 
 .submenu li:hover::before {
   transform: scaleX(1);
-}
-
-/* --- SECCIONES --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin: 60px 0 20px 40px;
-  text-align: left;
-  text-transform: uppercase;
-  color: white;
-}
-
-/* --- MENÚ RESPONSIVO MOVIL --- */
-.menu-toggle {
-  display: none;
-}
-
-/* --- MEDIA QUERY SOLO PARA MOVIL --- */
-@media (max-width: 768px) {
-
-  /* --- HAMBURGUER --- */
-  .menu-toggle {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    font-size: 2rem;
-    color: white;
-    z-index: 2000;
-    cursor: pointer;
-  }
-
-  /* --- OCULTAR MENÚ EN MÓVIL INICIALMENTE --- */
-  .menu {
-    display: none;
-  }
-
-  .menu.active {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    padding: 100px 30px 60px 30px;
-    background-color: #ff1493; /* FUCSIA */
-    z-index: 1500;
-    gap: 20px;
-  }
-
-  .menu li {
-    width: 100%;
-  }
-
-  .menu > li > button {
-    width: 100%;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 1.3rem;
-    text-align: left;
-    padding: 10px 0;
-    border-bottom: 1px solid white;
-  }
-
-  .submenu {
-    display: none !important;
-  }
-
-  .site-title {
-    font-size: 2.5em;
-    margin-top: 80px;
-  }
-
-  /* --- ICONOS REDES SOCIALES --- */
-  .social-icons {
-    margin-top: auto;
-    display: flex;
-    gap: 20px;
-    padding-top: 30px;
-  }
-
-  .social-icons img {
-    width: 30px;
-    height: 30px;
-  }
 }
