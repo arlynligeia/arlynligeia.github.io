@@ -92,7 +92,7 @@ nav {
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
-  margin: 60px 0 20px 40px;
+  margin: 120px 0 20px 40px;
   text-align: left;
   text-transform: uppercase;
   color: white;
@@ -120,21 +120,25 @@ nav {
   transform: scaleX(1);
 }
 /* ==== CARRUSEL DE IMÁGENES ==== */
+/* --- CARRUSEL AJUSTADO --- */
 #carousel-container {
-  width: 40vw;              /* Máximo 40% del ancho de la pantalla */
-  max-height: 60vh;         /* Máximo 60% de la altura de la pantalla */
-  float: right;             /* Lo empuja al lado derecho */
-  margin: 30px 40px;        /* Espacios alrededor (ajusta si necesitas) */
-  border-radius: 20px;      /* ESQUINAS REDONDEADAS */
+  width: 45vw;
+  height: auto;
+  max-height: 60vh;
+  margin: 50px 40px 60px auto; /* arriba - derecha - abajo - izquierda */
+  position: relative;
+  float: right;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Un poco de sombra suave */
+  box-sizing: border-box;
 }
 
 .carousel {
   position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 20px; /* También en el contenedor interior */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .carousel-track-container {
@@ -145,40 +149,41 @@ nav {
 
 .carousel-track {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .carousel-slide {
   min-width: 100%;
+  flex-shrink: 0;
 }
 
 .carousel-slide img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
   border-radius: 20px;
 }
 
-/* Botones del carrusel */
+/* Botones */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
+  color: black;
   font-size: 2rem;
   cursor: pointer;
-  padding: 6px 12px;
-  border-radius: 50%;
-  color: black;
+  padding: 5px 10px;
   z-index: 10;
+  border-radius: 50%;
 }
 
 .carousel-btn.prev {
-  left: 10px;
+  left: 5px;
 }
 
 .carousel-btn.next {
-  right: 10px;
+  right: 5px;
 }
+
