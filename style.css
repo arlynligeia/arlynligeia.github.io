@@ -162,3 +162,51 @@ nav {
 .submenu li:hover::before {
   transform: scaleX(1);
 }
+@media (max-width: 768px) {
+  #mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ff00aa;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 20px;
+  }
+
+  #mobile-menu-overlay.show {
+    display: flex;
+  }
+
+  .mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .mobile-menu li {
+    font-size: 1.6rem;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .mobile-socials {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+}
