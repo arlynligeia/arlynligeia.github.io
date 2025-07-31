@@ -87,49 +87,6 @@ nav {
 }
 
 /* --- MENÚ RESPONSIVO --- */
-.menu-toggle {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-  }
-
-  .menu.active {
-    display: flex;
-  }
-
- .menu-toggle {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 0;
-  z-index: 1000;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-  .site-title {
-    margin-top: 60px;
-    text-align: center;
-  }
-
-  .submenu {
-    position: static;
-    border: none;
-    background: none;
-  }
-
-  .submenu li button {
-    padding-left: 30px;
-  }
-}
 
 /* --- TÍTULOS DE SECCIONES --- */
 .section-title {
