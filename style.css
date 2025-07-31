@@ -86,49 +86,81 @@ nav {
   display: block;
 }
 
-/* --- MENÚ RESPONSIVO --- */
+/* --- MENÚ RESPONSIVO MÓVIL --- */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  z-index: 1001;
 }
 
 @media (max-width: 768px) {
+  .site-title {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  nav {
+    position: relative;
+  }
+
   .menu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff00aa;
+    z-index: 1000;
+    overflow-y: hidden;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+  .menu li {
+    margin: 10px 0;
   }
 
-  .site-title {
-    margin-top: 60px;
-    text-align: center;
+  .menu > li > button {
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
   }
 
   .submenu {
-    position: static;
-    border: none;
-    background: none;
+    display: none !important;
   }
 
-  .submenu li button {
-    padding-left: 30px;
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu::after {
+    content: '';
+    flex-grow: 1;
+  }
+
+  .menu::before {
+    content: '';
+    height: 40px;
+  }
+
+  .menu li:last-child {
+    margin-bottom: 50px; /* Espacio para redes sociales */
   }
 }
 
@@ -141,6 +173,7 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+
 /* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
@@ -163,5 +196,3 @@ nav {
 .submenu li:hover::before {
   transform: scaleX(1);
 }
-
-
