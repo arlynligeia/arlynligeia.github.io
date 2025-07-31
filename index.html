@@ -9,10 +9,24 @@
 </head>
 <body>
   <header>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
     <h1 class="site-title">ARLYN LIGEIA</h1>
     <nav>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
       <ul class="menu" id="menu">
+        <li><button>Home</button></li>
+        <li><button>Biography</button></li>
+        <li><button>Film</button></li>
+        <li><button>Music</button></li>
+        <li><button>Fashion</button></li>
+        <li><button>Art</button></li>
+        <li><button>Science</button></li>
+        <li><button>Contact</button></li>
+        <li><button>Be My Patron</button></li>
+        <li><button>Store</button></li>
+      </ul>
+
+      <!-- MENÚ COMPLETO CON SUBMENÚS PARA VERSIÓN PC -->
+      <ul class="menu desktop-only">
         <li>
           <button>Home</button>
           <ul class="submenu">
@@ -109,8 +123,11 @@
   <section id="store"><h2 class="section-title">Store</h2></section>
 
   <script>
-    document.getElementById("menu-toggle").onclick = function () {
-      document.getElementById("menu").classList.toggle("active");
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    toggle.onclick = function () {
+      menu.classList.toggle("active");
     };
   </script>
 </body>
