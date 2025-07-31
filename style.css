@@ -9,6 +9,33 @@ body {
   background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
               url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
   background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- NEBULOSA FLOTANTE --- */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background: radial-gradient(circle at 30% 30%, #6c00ff40 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, #00f0ff30 0%, transparent 50%),
+              radial-gradient(circle at 50% 80%, #6c00ff20 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+  animation: nebulosaMove 30s ease-in-out infinite alternate;
+}
+
+@keyframes nebulosaMove {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  100% {
+    transform: translate(-30px, -20px) scale(1.05);
+  }
 }
 
 /* --- TÍTULO PRINCIPAL --- */
@@ -16,6 +43,8 @@ body {
   text-align: center;
   font-size: 4.5em;
   margin: 30px 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* --- MENÚ NAV --- */
@@ -23,7 +52,7 @@ nav {
   text-align: center;
   margin-top: 10px;
   position: relative;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .menu {
@@ -111,59 +140,34 @@ nav {
   transform: scaleX(1);
 }
 
-/* --- BOTÓN HAMBURGUESA --- */
+/* --- MENÚ RESPONSIVO --- */
 .menu-toggle {
   display: none;
   font-size: 2rem;
   color: white;
   cursor: pointer;
   text-align: left;
-  position: absolute;
-  top: 8px; /* más arriba */
-  left: 8px; /* más al extremo */
-  z-index: 3000;
+  margin-left: 20px;
 }
 
-/* --- RESPONSIVE --- */
 @media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
   .menu {
     display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: #ff1493; /* Fucsia sólido */
     flex-direction: column;
     align-items: flex-start;
-    padding: 80px 20px 20px 20px;
-    z-index: 2000;
-    overflow-y: auto;
+    padding-left: 20px;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu > li {
-    width: 100%;
-  }
-
-  .menu > li > button {
-    width: 100%;
-    text-align: left;
-    border: none;
-    font-size: 1.2rem;
-    padding: 14px 10px;
-  }
-
-  /* ✅ Ocultamos todos los submenús en móvil */
-  .submenu {
-    display: none !important;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
   }
 
   .site-title {
@@ -171,15 +175,14 @@ nav {
     text-align: center;
   }
 
-  .menu li:hover .submenu {
-    display: none !important;
+  .submenu {
+    position: static;
+    border: none;
+    background: none;
   }
 
-  .submenu {
-    display: none !important;
-    pointer-events: none;
-    opacity: 0;
-    height: 0;
+  .submenu li button {
+    padding-left: 30px;
   }
 }
 
