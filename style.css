@@ -97,15 +97,8 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-  }
-
-  .menu.active {
-    display: flex;
+  body {
+    background: fuchsia;
   }
 
   .menu-toggle {
@@ -113,7 +106,7 @@ nav {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 1000;
+    z-index: 2000;
   }
 
   .site-title {
@@ -121,14 +114,60 @@ nav {
     text-align: center;
   }
 
-  .submenu {
-    position: static;
-    border: none;
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: fuchsia;
+    padding: 100px 30px 30px 30px;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu > li {
+    margin-bottom: 20px;
+  }
+
+  .menu > li > button {
+    font-size: 2rem;
     background: none;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+  }
+
+  .submenu {
+    display: none;
+    flex-direction: column;
+    background: none;
+    position: static;
+    margin-top: 10px;
+    border: none;
   }
 
   .submenu li button {
-    padding-left: 30px;
+    font-size: 1.5rem;
+    padding-left: 20px;
+    background: none;
+    border: none;
+    color: white;
+    text-transform: capitalize;
+    text-align: left;
+  }
+
+  .menu li.show-submenu .submenu {
+    display: flex;
   }
 }
 
@@ -141,6 +180,7 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+
 /* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
@@ -162,4 +202,4 @@ nav {
 
 .submenu li:hover::before {
   transform: scaleX(1);
-} 
+}
