@@ -1,5 +1,7 @@
+/* --- FUENTES --- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
 
+/* --- ESTILOS GENERALES --- */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -9,12 +11,14 @@ body {
   background-size: cover;
 }
 
+/* --- TÍTULO PRINCIPAL --- */
 .site-title {
   text-align: center;
   font-size: 4.5em;
   margin: 30px 0;
 }
 
+/* --- MENÚ NAV --- */
 nav {
   text-align: center;
   margin-top: 10px;
@@ -50,6 +54,7 @@ nav {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* --- SUBMENÚ --- */
 .submenu {
   display: none;
   position: absolute;
@@ -81,6 +86,52 @@ nav {
   display: block;
 }
 
+/* --- MENÚ RESPONSIVO --- */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+ .menu-toggle {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1000;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+  .site-title {
+    margin-top: 60px;
+    text-align: center;
+  }
+
+  .submenu {
+    position: static;
+    border: none;
+    background: none;
+  }
+
+  .submenu li button {
+    padding-left: 30px;
+  }
+}
+
+/* --- TÍTULOS DE SECCIONES --- */
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
@@ -89,7 +140,7 @@ nav {
   text-transform: uppercase;
   color: white;
 }
-
+/* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
   overflow: hidden;
