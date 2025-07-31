@@ -79,24 +79,6 @@
         <li><button>Store</button></li>
       </ul>
     </nav>
-    <div id="mobile-menu-overlay">
-  <ul class="mobile-menu">
-    <li>Home</li>
-    <li>Biography</li>
-    <li>Film</li>
-    <li>Music</li>
-    <li>Fashion</li>
-    <li>Art</li>
-    <li>Science</li>
-    <li>Contact</li>
-    <li>Be My Patron</li>
-    <li>Store</li>
-  </ul>
-  <div class="mobile-socials">
-    <!-- Aquí puedes poner los íconos reales más adelante -->
-    <span>IG</span> <span>YT</span> <span>X</span>
-  </div>
-</div>
   </header>
 
   <!-- SECCIÓN HOME -->
@@ -127,12 +109,9 @@
   <section id="store"><h2 class="section-title">Store</h2></section>
 
   <script>
-  const toggle = document.getElementById("menu-toggle");
-  const overlay = document.getElementById("mobile-menu-overlay");
-
-  toggle.onclick = function () {
-    overlay.classList.toggle("show");
-  };
-</script>
+    document.getElementById("menu-toggle").onclick = function () {
+      document.getElementById("menu").classList.toggle("active");
+    };
+  </script>
 </body>
 </html> 
