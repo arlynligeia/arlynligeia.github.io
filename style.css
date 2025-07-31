@@ -101,12 +101,21 @@ nav {
 
 @media (max-width: 768px) {
   .site-title {
-    margin-top: 100px;
+    margin-top: 80px;
     text-align: center;
   }
 
-  nav {
-    position: relative;
+  .menu-toggle {
+    display: block;
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    margin: 0;
+    padding: 10px;
   }
 
   .menu {
@@ -114,15 +123,16 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 80px;
+    gap: 10px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100vw;
-    background-color: #ff00aa;
+    height: 100vh;
+    background-color: #ff00aa; /* fucsia */
+    padding-top: 60px;
     z-index: 1000;
-    overflow-y: hidden;
+    overflow: hidden;
   }
 
   .menu.active {
@@ -130,20 +140,21 @@ nav {
   }
 
   .menu li {
-    margin: 10px 0;
+    margin: 5px 0;
   }
 
   .menu > li > button {
-    font-size: 1.2rem;
+    font-size: 1rem;
     background: none;
     border: none;
     color: white;
-    padding: 10px 20px;
+    text-transform: uppercase;
   }
 
   .submenu {
     display: none !important;
   }
+}
 
   .menu-toggle {
     display: block;
