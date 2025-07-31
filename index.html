@@ -124,6 +124,43 @@
   <section id="support"><h2 class="section-title">Be My Patron</h2></section>
   <section id="store"><h2 class="section-title">Store</h2></section>
 
-  <script>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const nextButton = document.querySelector('.carousel-btn.next');
+  const prevButton = document.querySelector('.carousel-btn.prev');
+  const slideWidth = slides[0].getBoundingClientRect().width + 20; // ancho + margin
+
+  // Posicionar las diapositivas una al lado de la otra
+  slides.forEach((slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+  });
+
+  let currentIndex = 0;
+
+  function moveToSlide(track, currentSlide, targetSlide) {
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+  }
+
+  nextButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let nextSlide = currentSlide.nextElementSibling;
+    if (!nextSlide) {
+      nextSlide = slides[0]; // loop a la primera slide
+    }
+    moveToSlide(track, currentSlide, nextSlide);
+  });
+
+  prevButton.addEventListener('click', e => {
+    const currentSlide = track.querySelector('.current-slide');
+    let prevSlide = currentSlide.previousElementSibling;
+    if (!prevSlide) {
+      prevSlide = slides[slides.length - 1]; // loop a la última slide
+    }
+    moveToSlide(track, currentSlide, prevSlide);
+  });
+</script>
     </body>
 </html>
