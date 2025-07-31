@@ -9,19 +9,22 @@
 </head>
 <body>
   <header>
+    <!-- Ícono de menú en la esquina superior izquierda -->
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+
     <h1 class="site-title">ARLYN LIGEIA</h1>
+    
     <nav>
-      <div class="menu-toggle" id="menu-toggle">☰</div>
       <ul class="menu" id="menu">
         <li>
-          <button>Home</button>
+          <button class="main-btn">Home</button>
           <ul class="submenu">
             <li><button>Social Media Content</button></li>
           </ul>
         </li>
-        <li><button>Biography</button></li>
+        <li><button class="main-btn">Biography</button></li>
         <li>
-          <button>Film</button>
+          <button class="main-btn">Film</button>
           <ul class="submenu">
             <li><button>Feature Film</button></li>
             <li><button>Short Film</button></li>
@@ -30,7 +33,7 @@
           </ul>
         </li>
         <li>
-          <button>Music</button>
+          <button class="main-btn">Music</button>
           <ul class="submenu">
             <li><button>Album</button></li>
             <li><button>Soundtrack</button></li>
@@ -38,7 +41,7 @@
           </ul>
         </li>
         <li>
-          <button>Fashion</button>
+          <button class="main-btn">Fashion</button>
           <ul class="submenu">
             <li><button>SS Collection</button></li>
             <li><button>FW Collection</button></li>
@@ -48,35 +51,35 @@
           </ul>
         </li>
         <li>
-          <button>Art</button>
+          <button class="main-btn">Art</button>
           <ul class="submenu">
             <li><button>Painting</button></li>
             <li><button>Poetry</button></li>
           </ul>
         </li>
         <li>
-          <button>Science</button>
+          <button class="main-btn">Science</button>
           <ul class="submenu">
             <li><button>Research Article</button></li>
             <li><button>Research Project</button></li>
           </ul>
         </li>
         <li>
-          <button>Contact</button>
+          <button class="main-btn">Contact</button>
           <ul class="submenu">
             <li><button>Fan Message</button></li>
             <li><button>Work Message</button></li>
           </ul>
         </li>
         <li>
-          <button>Be My Patron</button>
+          <button class="main-btn">Be My Patron</button>
           <ul class="submenu">
             <li><button>Support my Work</button></li>
             <li><button>Support my Studies</button></li>
             <li><button>Gifts</button></li>
           </ul>
         </li>
-        <li><button>Store</button></li>
+        <li><button class="main-btn">Store</button></li>
       </ul>
     </nav>
   </header>
@@ -109,9 +112,24 @@
   <section id="store"><h2 class="section-title">Store</h2></section>
 
   <script>
-    document.getElementById("menu-toggle").onclick = function () {
-      document.getElementById("menu").classList.toggle("active");
-    };
+    // Mostrar/Ocultar menú principal
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+    const submenuButtons = document.querySelectorAll(".main-btn");
+
+    menuToggle.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+
+    // Mostrar/Ocultar submenús al presionar botón principal
+    submenuButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const submenu = button.nextElementSibling;
+        if (submenu && submenu.classList.contains("submenu")) {
+          submenu.classList.toggle("visible");
+        }
+      });
+    });
   </script>
 </body>
 </html>
