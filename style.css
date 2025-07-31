@@ -9,6 +9,7 @@ body {
   background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
               url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 /* --- TÍTULO PRINCIPAL --- */
@@ -86,49 +87,64 @@ nav {
   display: block;
 }
 
-/* --- MENÚ RESPONSIVO --- */
+/* --- MENÚ RESPONSIVO MÓVIL --- */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: white;
   cursor: pointer;
-  text-align: left;
-  margin-left: 20px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
 }
 
 @media (max-width: 768px) {
+  .site-title {
+    margin-top: 80px;
+    text-align: center;
+  }
+
+  nav {
+    position: relative;
+  }
+
   .menu {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ff00aa; /* Fucsia fuerte */
+    z-index: 1000;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
+  .menu li {
+    margin: 15px 0;
   }
 
-  .site-title {
-    margin-top: 60px;
-    text-align: center;
+  .menu > li > button {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
   }
 
   .submenu {
-    position: static;
-    border: none;
-    background: none;
+    display: none !important;
   }
 
-  .submenu li button {
-    padding-left: 30px;
+  .menu-toggle {
+    display: block;
   }
 }
 
@@ -141,6 +157,7 @@ nav {
   text-transform: uppercase;
   color: white;
 }
+
 /* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
@@ -162,4 +179,4 @@ nav {
 
 .submenu li:hover::before {
   transform: scaleX(1);
-}  
+}
