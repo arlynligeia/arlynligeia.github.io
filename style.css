@@ -86,92 +86,49 @@ nav {
   display: block;
 }
 
-/* --- MENÚ RESPONSIVO MÓVIL --- */
+/* --- MENÚ RESPONSIVO --- */
 .menu-toggle {
   display: none;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 10px;
-  z-index: 1001;
+  text-align: left;
+  margin-left: 20px;
 }
 
 @media (max-width: 768px) {
-  .site-title {
-    margin-top: 80px;
-    text-align: center;
-  }
-
-  .menu-toggle {
-    display: block;
-    font-size: 2.5rem;
-    color: white;
-    cursor: pointer;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-    margin: 0;
-    padding: 10px;
-  }
-
   .menu {
     display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #ff00aa; /* fucsia */
-    padding-top: 60px;
-    z-index: 1000;
-    overflow: hidden;
+    align-items: flex-start;
+    padding-left: 20px;
   }
 
   .menu.active {
     display: flex;
   }
 
-  .menu li {
-    margin: 5px 0;
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
   }
 
-  .menu > li > button {
-    font-size: 1rem;
-    background: none;
-    border: none;
-    color: white;
-    text-transform: uppercase;
+  .site-title {
+    margin-top: 60px;
+    text-align: center;
   }
 
   .submenu {
-    display: none !important;
-  }
-}
-
-  .menu-toggle {
-    display: block;
+    position: static;
+    border: none;
+    background: none;
   }
 
-  .menu::after {
-    content: '';
-    flex-grow: 1;
-  }
-
-  .menu::before {
-    content: '';
-    height: 40px;
-  }
-
-  .menu li:last-child {
-    margin-bottom: 50px; /* Espacio para redes sociales */
+  .submenu li button {
+    padding-left: 30px;
   }
 }
 
@@ -184,7 +141,6 @@ nav {
   text-transform: uppercase;
   color: white;
 }
-
 /* --- EFECTO TURQUESA EN SUBMENÚS --- */
 .submenu li {
   position: relative;
@@ -206,4 +162,4 @@ nav {
 
 .submenu li:hover::before {
   transform: scaleX(1);
-}
+} 
