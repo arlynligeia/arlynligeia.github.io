@@ -152,3 +152,35 @@ nav {
   white-space: nowrap;
   text-decoration: none;
 }
+/* --- CARRUSEL DE INICIO --- */
+.carousel-container {
+  position: relative;
+  height: calc(100vh - 220px); /* altura ajustada según el espacio debajo de los botones */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 60px; /* misma distancia entre título y botones */
+  padding-right: 60px; /* espacio del lado derecho */
+}
+
+.carousel {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 12px;
+  position: relative;
+}
+
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+  opacity: 1;
+}
