@@ -281,7 +281,7 @@ align-items: flex-start;
   vertical-align: middle;
 }
 #biography {
-  padding: 2rem 1rem;
+  padding: 0 1rem; /* quitamos espacio superior */
 }
 
 .biography-container {
@@ -289,10 +289,13 @@ align-items: flex-start;
   gap: 2rem;
   background-color: rgba(0, 255, 255, 0.1);
   padding: 2rem;
-  margin-top: 1rem;
+  margin-top: 0;
   border-radius: 10px;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .bio-text {
