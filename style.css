@@ -301,9 +301,12 @@ margin-top: 30px;
 .bio-text {
   flex: 1 1 60%;
   color: white;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.15rem; /* ← Texto un poco más grande */
+  line-height: 1.8;
   font-family: 'Share Tech Mono', monospace;
+  text-align: justify; /* ← Justificado */
+  display: flex;
+  align-items: flex-start; /* ← Alinea con la parte superior de la imagen */
 }
 
 .bio-image {
