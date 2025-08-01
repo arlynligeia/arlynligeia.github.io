@@ -280,50 +280,58 @@ align-items: flex-start;
   font-size: 1.2rem;
   vertical-align: middle;
 }
+
+
 #biography {
-  padding: 0 1rem; /* quitamos espacio superior */
+  padding: 0 1rem;
 }
 
-.biography-container {
-  display: flex;
-  gap: 2rem;
-  background-color: rgba(0, 0, 139, 0.3); /* azul oscuro semitransparente */
-  padding: 2rem 2rem 1rem 2rem; /* top right bottom left */
-  margin-top: 0px;
-  border-radius: 10px;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bio-text {
-  flex: 1 1 60%;
+/* CONTENEDOR AZUL DE BIOGRAFÍA */
+.section-box.biography {
+  background-color: rgba(0, 0, 139, 0.3); /* Color azul semitransparente */
   color: white;
-  font-size: 1.15rem; /* ← Texto un poco más grande */
-  line-height: 1.8;
+  font-size: 1.15rem;
   font-family: 'Share Tech Mono', monospace;
-  text-align: justify; /* ← Justificado */
+  line-height: 1.8;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  max-width: 1000px;
   display: flex;
-  align-items: flex-start; /* ← Alinea con la parte superior de la imagen */
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
 }
-.bio-text p {
-  margin-top: 0;
+
+/* BLOQUE DE TEXTO */
+.section-box.biography .bio-text {
+  flex: 1 1 60%;
+  display: flex;
+  align-items: flex-start;
 }
-.bio-image {
+
+.section-box.biography .bio-text p {
+  margin: 0;
+}
+
+/* BLOQUE DE IMAGEN */
+.section-box.biography .bio-image {
   flex: 1 1 35%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-.bio-image img {
+.section-box.biography .bio-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
+
+
 #feature {
   padding: 0 1rem;
 }
