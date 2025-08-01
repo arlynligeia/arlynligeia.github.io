@@ -421,28 +421,40 @@ align-items: flex-start;
 }
 
 
-.shortfilm-box {
-  background-color: rgba(0, 0, 139, 0.3); /* mismo azul que social-box */
-  border-radius: 20px;
- padding: 1rem 2rem 1rem 2rem; /* Igual que biografía */
-  max-width: 800px;
-  margin: 30px auto;
-  font-family: 'Share Tech Mono', monospace;
-  text-align: center;
+#short {
+  padding: 0 1rem;
 }
 
-.shortfilm-title {
+/* CONTENEDOR AZUL DE SHORT FILM */
+.section-box.shortfilm {
+  background-color: rgba(0, 0, 139, 0.3);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 800px; /* Contenedor más pequeño */
+  margin: 30px auto;
+  font-family: 'Share Tech Mono', monospace;
   color: white;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  text-align: justify;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* TÍTULO DEL CORTO */
+.section-box.shortfilm .shortfilm-title {
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1.5rem;
   font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  color: white;
 }
 
-.video-wrapper-small {
+/* VIDEO */
+.section-box.shortfilm .video-wrapper-small {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%;
@@ -451,21 +463,18 @@ align-items: flex-start;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-.video-wrapper-small iframe {
+.section-box.shortfilm .video-wrapper-small iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.shortfilm-description {
-  color: white;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.15rem;  /* ← Igual que biografía */
-  line-height: 1.8;    /* ← Igual que biografía */
-  text-align: justify;
+
+/* TEXTO DESCRIPTIVO */
+.section-box.shortfilm .shortfilm-description {
   margin-top: 2rem;
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
-} 
+}
