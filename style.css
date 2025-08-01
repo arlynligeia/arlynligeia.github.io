@@ -273,3 +273,10 @@ align-items: flex-start;
   font-size: 1.4rem;
   font-weight: bold;
 }
+.red-dot::before {
+  content: "●";
+  color: red;
+  margin-right: 8px;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
