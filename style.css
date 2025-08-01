@@ -284,18 +284,16 @@ align-items: flex-start;
   padding: 0 1rem; /* quitamos espacio superior */
 }
 
-.biography-container {
+.section-box {
+  background-color: rgba(0, 0, 139, 0.3);
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
   display: flex;
   gap: 2rem;
-  background-color: rgba(0, 0, 139, 0.3); /* azul oscuro semitransparente */
-  padding: 2rem 2rem 1rem 2rem; /* top right bottom left */
-  margin-top: 0px;
-  border-radius: 10px;
+  flex-wrap: wrap;
   align-items: flex-start;
-  flex-wrap: nowrap;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .bio-text {
