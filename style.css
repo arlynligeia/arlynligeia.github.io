@@ -427,32 +427,31 @@ align-items: flex-start;
 
 /* CONTENEDOR AZUL DE SHORT FILM */
 .section-box.shortfilm {
-  background-color: rgba(0, 0, 139, 0.3);
-  border-radius: 20px;
-  padding: 1.5rem 2rem 2rem 2rem; /* ← Menos padding arriba */
-  max-width: 800px;
-  margin: 30px auto;
-  font-family: 'Share Tech Mono', monospace;
+  background-color: rgba(0, 0, 139, 0.3); /* Azul semitransparente */
   color: white;
   font-size: 1.15rem;
+  font-family: 'Share Tech Mono', monospace;
   line-height: 1.8;
   text-align: justify;
+  padding: 2rem;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  max-width: 800px; /* ÚNICA DIFERENCIA */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-/* TÍTULO DEL CORTO */
-.section-box.shortfilm .shortfilm-title {
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 0;         /* ← Elimina espacio arriba */
-  margin-bottom: 1.5rem;
-  font-family: 'Orbitron', sans-serif;
-  text-align: center;
-  color: white;
+/* BLOQUE DE VIDEO */
+.section-box.shortfilm .shortfilm-video {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* VIDEO */
 .section-box.shortfilm .video-wrapper-small {
   position: relative;
   padding-bottom: 56.25%;
@@ -462,6 +461,7 @@ align-items: flex-start;
   background: black;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  width: 100%;
 }
 
 .section-box.shortfilm .video-wrapper-small iframe {
@@ -472,10 +472,19 @@ align-items: flex-start;
   height: 100%;
 }
 
-/* TEXTO DESCRIPTIVO */
+/* BLOQUE DE TEXTO */
+.section-box.shortfilm .shortfilm-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: white;
+  text-align: justify;
+}
+
 .section-box.shortfilm .shortfilm-description {
-  margin-top: 2rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
 }
