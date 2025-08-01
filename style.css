@@ -259,14 +259,14 @@ align-items: flex-start;
   color: #ff69b4; /* Igual que .pink-text */
 }
 
-.link-text:hover {
-  text-decoration: underline;
-}
-.link-text {
+.link-text,
+.link-text:visited,
+.link-text:active {
   text-decoration: none;
-  color: #ff69b4; /* Igual que .pink-text */
+  color: #ff69b4; /* Rosado Barbie */
 }
 
 .link-text:hover {
   text-decoration: underline;
+  color: #ff69b4;
 }
