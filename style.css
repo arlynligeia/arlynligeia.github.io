@@ -280,3 +280,39 @@ align-items: flex-start;
   font-size: 1.2rem;
   vertical-align: middle;
 }
+#biography {
+  padding: 2rem 1rem;
+}
+
+.biography-container {
+  display: flex;
+  gap: 2rem;
+  background-color: rgba(0, 255, 255, 0.1);
+  padding: 2rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.bio-text {
+  flex: 1 1 60%;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.bio-image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
