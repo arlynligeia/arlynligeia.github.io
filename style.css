@@ -425,9 +425,8 @@ align-items: flex-start;
   padding: 0 1rem;
 }
 
-/* CONTENEDOR AZUL DE SHORT FILM */
 .section-box.shortfilm {
-  background-color: rgba(0, 0, 139, 0.3); /* Azul semitransparente */
+  background-color: rgba(0, 0, 139, 0.3);
   color: white;
   font-size: 1.15rem;
   font-family: 'Share Tech Mono', monospace;
@@ -437,54 +436,42 @@ align-items: flex-start;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   margin: 30px auto;
-  max-width: 800px; /* ÚNICA DIFERENCIA */
+  max-width: 800px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
 }
 
-/* BLOQUE DE VIDEO */
-.section-box.shortfilm .shortfilm-video {
-  flex: 1 1 45%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.shortfilm-text {
+  width: 100%;
 }
 
-.section-box.shortfilm .video-wrapper-small {
+.shortfilm-description {
+  margin: 0;
+}
+
+.shortfilm-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.video-wrapper-small {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
-  max-width: 100%;
+  width: 100%;
   background: black;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  width: 100%;
 }
 
-.section-box.shortfilm .video-wrapper-small iframe {
+.video-wrapper-small iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-/* BLOQUE DE TEXTO */
-.section-box.shortfilm .shortfilm-text {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.15rem;
-  line-height: 1.8;
-  color: white;
-  text-align: justify;
-}
-
-.section-box.shortfilm .shortfilm-description {
-  margin: 0;
 }
