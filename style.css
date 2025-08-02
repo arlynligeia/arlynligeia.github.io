@@ -565,3 +565,49 @@ align-items: flex-start;
   width: 100%;
   height: 100%;
 }
+
+
+#research-article {
+  padding: 0 1rem;
+}
+
+.section-box.research-article {
+  background-color: rgba(0, 0, 139, 0.3);
+  color: white;
+  font-size: 1.15rem;
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.research-article-text.text-1 {
+  width: 100%;
+  text-align: center;
+}
+
+.research-article-text.text-1 p {
+  margin: 0;
+}
+
+.research-article-text.text-1 .article-link {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.research-article-text.text-1 .article-link:hover {
+  color: #87CEFA;
+  text-decoration: underline;
+}
