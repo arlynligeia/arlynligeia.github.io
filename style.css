@@ -693,26 +693,25 @@ align-items: flex-start;
 }
 
 
-/* CONTENEDOR VERDE NEÓN SEMITRANSPARENTE */
-.support-box {
-  max-width: 800px;
-  margin: 2rem auto;
+/* CONTENEDOR: Support My Work */
+.section-box.support-box {
+  background-color: #39FF14; /* verde neón sólido */
+  color: #000080; /* azul marino oscuro */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
   padding: 2rem;
-  background-color: rgba(57, 255, 20, 0.5); /* verde neón con transparencia */
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(57, 255, 20, 0.6);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
-  backdrop-filter: blur(4px); /* efecto vidrio */
+  max-width: 800px;
+  margin: 30px auto;
+  text-align: justify;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
 /* TEXTO AZUL OSCURO */
 .support-text {
   font-size: 1.2rem;
-  color: #001f4d; /* azul oscuro */
+  color: #000080; /* azul marino oscuro */
   font-family: 'Share Tech Mono', monospace;
   line-height: 1.8;
 }
