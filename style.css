@@ -443,14 +443,31 @@ align-items: flex-start;
   align-items: flex-start;
 }
 
-.shortfilm-text {
+/* BLOQUES DE TEXTO SEPARADOS */
+.shortfilm-text.text-1 {
+  width: 100%;
+  text-align: center;
+}
+
+.shortfilm-text.text-1 p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.shortfilm-text.text-2 {
   width: 100%;
 }
 
-.shortfilm-description {
+.shortfilm-text.text-2 p {
+  font-size: 1.15rem;
   margin: 0;
+  color: white;
+  text-align: justify;
 }
 
+/* VIDEO */
 .shortfilm-video {
   width: 100%;
   display: flex;
