@@ -492,3 +492,76 @@ align-items: flex-start;
   width: 100%;
   height: 100%;
 }
+
+
+#musicvideo {
+  padding: 0 1rem;
+}
+
+.section-box.musicvideo {
+  background-color: rgba(0, 0, 139, 0.3);
+  color: white;
+  font-size: 1.15rem;
+  font-family: 'Share Tech Mono', monospace;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  margin: 30px auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* BLOQUES DE TEXTO SEPARADOS */
+.musicvideo-text.text-1 {
+  width: 100%;
+  text-align: center;
+}
+
+.musicvideo-text.text-1 p {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.musicvideo-text.text-2 {
+  width: 100%;
+}
+
+.musicvideo-text.text-2 p {
+  font-size: 1.15rem;
+  margin: 0;
+  color: white;
+  text-align: justify;
+}
+
+/* VIDEO */
+.musicvideo-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.musicvideo-video .video-wrapper-small {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.musicvideo-video .video-wrapper-small iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
