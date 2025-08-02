@@ -422,51 +422,38 @@ align-items: flex-start;
 }
 
 
-
-#short {
+/* SECCIÓN SHORT FILM */
+#shortfilm {
   padding: 0 1rem;
 }
 
+/* CONTENEDOR AZUL */
 .section-box.shortfilm {
   background-color: rgba(0, 0, 139, 0.3);
-  color: white;
-  font-size: 1.15rem;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.8;
-  text-align: justify;
-  padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin: 30px auto;
   max-width: 800px;
+  margin: 30px auto;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-/* BLOQUES DE TEXTO SEPARADOS */
+/* TEXTO 1: TÍTULO DEL CORTO */
 .shortfilm-text.text-1 {
   width: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 .shortfilm-text.text-1 p {
-  font-size: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 0;
+  text-transform: uppercase;
   color: white;
-}
-
-.shortfilm-text.text-2 {
-  width: 100%;
-}
-
-.shortfilm-text.text-2 p {
-  font-size: 1.15rem;
   margin: 0;
-  color: white;
-  text-align: justify;
 }
 
 /* VIDEO */
@@ -494,6 +481,22 @@ align-items: flex-start;
   width: 100%;
   height: 100%;
 }
+
+/* TEXTO 2: DESCRIPCIÓN */
+.shortfilm-text.text-2 {
+  width: 100%;
+}
+
+.shortfilm-text.text-2 p {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: white;
+  text-align: justify;
+  margin: 0;
+}
+
+
 
 
 #musicvideo {
