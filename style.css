@@ -333,94 +333,94 @@ align-items: flex-start;
 }
 
 
-
-#feature {
+/* FEATURE FILM SECCIÓN */
+#featurefilm {
   padding: 0 1rem;
 }
 
-/* CONTENEDOR AZUL DE FEATURE FILM */
+/* CONTENEDOR PRINCIPAL */
 .section-box.feature {
   background-color: rgba(0, 0, 139, 0.3);
-  color: white;
-  font-size: 1.15rem;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.8;
-  text-align: justify;
-  padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin: 30px auto;
   max-width: 1000px;
+  margin: 30px auto;
+  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 /* BLOQUE DE IMAGEN */
-.section-box.feature .feature-image {
+.feature-image {
   flex: 1 1 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.section-box.feature .feature-image img {
+.feature-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-/* BLOQUE DE TEXTO PRINCIPAL */
-.section-box.feature .feature-text {
+/* BLOQUE DE TEXTO PRINCIPAL (AL LADO DE LA IMAGEN) */
+.feature-text {
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
-  font-family: 'Orbitron', sans-serif;
   text-align: left;
 }
 
-.section-box.feature .feature-heading {
+.feature-heading {
+  font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 1rem;
   line-height: 1.2;
+  color: white;
 }
 
-.section-box.feature .feature-description {
+.feature-description {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.15rem;
+  font-size: 1.25rem; /* igual que biografía */
   line-height: 1.8;
+  color: white;
 }
 
-/* TEXTO EXTRA AL FINAL */
-.section-box.feature .feature-extra-text {
-  margin-top: -2rem;
-  text-align: center;
+/* BLOQUE DE TEXTO EXTRA (DEBAJO) */
+.feature-extra-text {
   width: 100%;
+  text-align: center;
+  margin-top: -2rem; /* se mantiene si lo deseas así */
 }
 
-.section-box.feature .status-label {
-  font-size: 1.4rem;
+/* TEXTO 3: CURRENTLY IN PRODUCTION */
+.status-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
   font-weight: bold;
+  text-transform: uppercase;
   margin-bottom: 1rem;
   color: white;
-  text-transform: uppercase;
 }
 
-.section-box.feature .long-description {
-  font-size: 1.15rem;
+/* TEXTO 4: PÁRRAFO LARGO */
+.long-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
   line-height: 1.8;
   color: white;
-  font-family: 'Share Tech Mono', monospace;
   max-width: 800px;
   margin: 0 auto;
   text-align: justify;
 }
+
 
 
 #short {
