@@ -577,8 +577,8 @@ align-items: flex-start;
   padding: 0 1rem;
 }
 
-/* CONTENEDORES UNIFICADOS */
-.section-box.research-article {
+/* CONTENEDOR 1 */
+.section-box.research-article-1 {
   background-color: #ff1493; /* fucsia */
   color: white;
   padding: 2rem;
@@ -592,16 +592,14 @@ align-items: flex-start;
   align-items: flex-start;
 }
 
-/* TEXTO INTERNO */
-.research-article-text {
+.research-article-text-1 {
   width: 100%;
   text-align: justify;
 }
 
-/* ENLACES */
-.article-link {
+.article-link-1 {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.75rem; /* más pequeño que UPCOMING */
+  font-size: 1.75rem;
   font-weight: bold;
   text-transform: uppercase;
   color: white;
@@ -609,7 +607,77 @@ align-items: flex-start;
   transition: color 0.3s ease;
 }
 
-.article-link:hover {
+.article-link-1:hover {
+  color: #87CEFA;
+  text-decoration: underline;
+}
+
+/* CONTENEDOR 2 */
+.section-box.research-article-2 {
+  background-color: #ff1493;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.research-article-text-2 {
+  width: 100%;
+  text-align: justify;
+}
+
+.article-link-2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-link-2:hover {
+  color: #87CEFA;
+  text-decoration: underline;
+}
+
+/* CONTENEDOR 3 */
+.section-box.research-article-3 {
+  background-color: #ff1493;
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.research-article-text-3 {
+  width: 100%;
+  text-align: justify;
+}
+
+.article-link-3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.article-link-3:hover {
   color: #87CEFA;
   text-decoration: underline;
 }
