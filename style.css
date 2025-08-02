@@ -572,133 +572,60 @@ align-items: flex-start;
 }
 
 
-
-
-
-/* PRIMER ARTÍCULO */
-#research-article-1 {
-  padding: 0 1rem;
-}
-
-.section-box.research-article-1 {
-  background-color: rgba(0, 0, 139, 0.3);
-  color: white;
-  font-size: 1.15rem;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.8;
-  text-align: justify;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin: 30px auto;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.research-article-text-1 {
-  width: 100%;
-  text-align: justify;
-}
-
-.article-link-1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.article-link-1:hover {
-  color: #87CEFA;
-  text-decoration: underline;
-}
-
-/* SEGUNDO ARTÍCULO */
-#research-article-2 {
-  padding: 0 1rem;
-}
-
-.section-box.research-article-2 {
-  background-color: rgba(0, 0, 139, 0.3);
-  color: white;
-  font-size: 1.15rem;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.8;
-  text-align: justify;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin: 30px auto;
-  max-width: 1000px;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
-.research-article-text-2 {
-  width: 100%;
-  text-align: justify;
-}
-
-.article-link-2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  text-transform: uppercase;
-  transition: color 0.3s ease;
-}
-
-.article-link-2:hover {
-  color: #87CEFA;
-  text-decoration: underline;
-}
-/* TERCER ARTÍCULO */
+/* SECCIÓN RESEARCH ARTICLE */
+#researcharticle,
+#research-article-1,
+#research-article-2,
 #research-article-3 {
   padding: 0 1rem;
 }
 
+/* CONTENEDORES COMUNES PARA TODOS LOS ARTÍCULOS */
+.section-box.research-article-1,
+.section-box.research-article-2,
 .section-box.research-article-3 {
-  background-color: rgba(0, 0, 139, 0.3);
+  background-color: #ff1493; /* fucsia puro */
   color: white;
-  font-size: 1.15rem;
-  font-family: 'Share Tech Mono', monospace;
-  line-height: 1.8;
-  text-align: justify;
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  margin: 30px auto;
   max-width: 1000px;
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: flex-start;
 }
 
+/* TEXTOS CENTRALES */
+.research-article-text-1,
+.research-article-text-2,
 .research-article-text-3 {
   width: 100%;
   text-align: justify;
 }
 
+/* ENLACES DE ARTÍCULOS */
+.article-link-1,
+.article-link-2,
 .article-link-3 {
-  font-size: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.75rem; /* más pequeño que upcoming */
   font-weight: bold;
+  text-transform: uppercase;
   color: white;
   text-decoration: none;
-  text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
+.article-link-1:hover,
+.article-link-2:hover,
 .article-link-3:hover {
   color: #87CEFA;
   text-decoration: underline;
 }
+
+
 
 
 /* CONTENEDOR: Support My Work */
