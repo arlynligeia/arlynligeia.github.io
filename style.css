@@ -173,7 +173,6 @@ nav {
 
 /* --------------------------------------
    CONTENEDORES GENERALES DE TODAS LAS SECCIONES
-   (Social Media, Biography, etc.)
 ----------------------------------------- */
 .content-container {
   width: 800px;
@@ -181,7 +180,7 @@ nav {
   padding: 30px;
   box-sizing: border-box;
   border-radius: 20px;
-  background-color: #00CED1; /* Cambiar individualmente en cada sección si se desea */
+  background-color: #00CED1; /* color por defecto, cambiar individualmente */
 }
 
 /* --------------------------------------
@@ -197,7 +196,7 @@ nav {
 }
 
 /* --------------------------------------
-   SOCIAL MEDIA Y OTRAS SECCIONES CON COLUMNAS
+   FILAS DE COLUMNAS GENERALES
 ----------------------------------------- */
 .column-row {
   display: flex;
@@ -206,6 +205,14 @@ nav {
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
+/* SOLO APLICAR ESPACIADO ENTRE FILAS DESPUÉS DE LA PRIMERA */
+.social-media .column-row:not(:first-of-type),
+.biography .column-row:not(:first-of-type) {
+  margin-top: 30px;
+}
+/* --------------------------------------
+   COLUMNAS DE TEXTOS
+----------------------------------------- */
 .column-header {
   flex: 1;
   text-align: center;
@@ -232,6 +239,7 @@ nav {
   text-decoration: underline;
   color: #004080;
 }
+
 /* --------------------------------------
    SECCIÓN DE LIVE / EN VIVO
 ----------------------------------------- */
@@ -255,32 +263,25 @@ nav {
 }
 
 /* --------------------------------------
-   SECCIÓN BIOGRAPHY
+   BIOGRAPHY (MODIFICACIONES ESPECÍFICAS)
 ----------------------------------------- */
 .content-container.biography {
-  background-color: #ff1493; /* Color fucsia solo para esta sección */
+  background-color: #ff1493; /* fucsia */
 }
-.bio-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 0; /* <-- Importante */
-}
-.bio-text {
+.biography .bio-text {
   flex: 1;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   text-align: justify;
   color: white;
 }
-.bio-image {
+.biography .bio-image {
   flex: 1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
 }
-.bio-image img {
+.biography .bio-image img {
   max-width: 100%;
   border-radius: 15px;
 }
