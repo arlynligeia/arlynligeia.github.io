@@ -683,34 +683,40 @@ align-items: flex-start;
 }
 
 
-
-
-/* CONTENEDOR: Support My Work */
+/* SECCIÓN BY MY PATRON */
+/* CONTENEDOR VERDE NEÓN */
 .section-box.support-box {
-  background-color: #39FF14; /* verde neón sólido */
+  background-color: #39FF14;
   border-radius: 20px;
   max-width: 800px;
   margin: 30px auto;
   padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
 }
 
-/* TEXTO AZUL MARINO */
+/* TEXTO AZUL MARINO (idéntico a biografía) */
 .support-text {
-  color: #000080; /* azul marino oscuro */
+  color: #000080;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.2rem;
   line-height: 1.8;
   text-align: justify;
+  max-width: 800px;
+  margin: -2rem auto 30px auto; /* compensa el padding del contenedor */
+  padding-top: 2rem;
+}
+
+/* BOTÓN CENTRADO */
+.support-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 /* BOTÓN FUCSIA */
 .donate-button {
   padding: 0.75rem 2rem;
-  background-color: #ff1493; /* fucsia */
+  background-color: #ff1493;
   color: white;
   font-size: 1rem;
   font-weight: bold;
@@ -718,7 +724,6 @@ align-items: flex-start;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
   transition: background-color 0.3s, transform 0.2s;
-  margin-top: 1.5rem;
 }
 
 .donate-button:hover {
