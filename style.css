@@ -219,7 +219,7 @@ align-items: flex-start;
 .social-box {
   background-color: #00ced1; /* celeste agua */
   border-radius: 20px;
-  padding-top: 10px; /* Menos separación arriba */
+  padding-top: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
   padding-left: 30px;
@@ -248,38 +248,64 @@ align-items: flex-start;
 .justified-text {
   text-align: justify;
 }
-.aqua-text {
-  color: #7fdbff; /* celeste agua */
+/* Etiquetas: Account, Days, Time */
+.header-label {
+  color: white;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
-.pink-text {
-  color: #ff69b4;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-}
-.azul marino oscuro-text {
+/* Contenido como TIKTOK, YOUTUBE, etc. */
+.navy-text {
   color: #000080; /* azul marino oscuro */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
+/* Días (centrado si pocos, justificado si muchos) */
+.days-long {
+  text-align: left;
+  color: #000080;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+.days-short {
+  text-align: center;
+  color: #000080;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+/* Hora */
+.time-text {
+  color: #000080;
+  font-size: 1.25rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+/* Estilo del enlace */
 .link-text,
 .link-text:link,
 .link-text:visited,
 .link-text:active {
-  color: #ff69b4 !important;
+  color: #000080 !important;
   text-decoration: none !important;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
 }
 .link-text:hover {
   text-decoration: underline !important;
 }
+/* Título secundario como "Live Streams" */
 .white-title {
   color: white;
   font-size: 1.25rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
+  text-align: left;
 }
 .red-dot::before {
   content: "●";
@@ -288,13 +314,15 @@ align-items: flex-start;
   font-size: 2rem;
   vertical-align: middle;
 }
+/* Live Streams section heading */
 .live-stream-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.7rem;        /* Puedes ajustar este tamaño si deseas más pequeño o más grande */
-  color: white;             /* Texto blanco */
+  font-size: 1.7rem;
+  color: white;
   margin-top: 25px;
   text-align: left;
 }
+
 
 
 
