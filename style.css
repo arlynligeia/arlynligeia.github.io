@@ -218,23 +218,42 @@ align-items: flex-start;
 /* --- SOCIAL MEDIA SECTION --- */
 .social-box {
   background-color: #00ced1;
-  border-radius: 20px;           /* Esquinas más redondeadas */
-  padding-top: 5px;              /* Espacio superior reducido */
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
+  border-radius: 20px;
+  padding: 30px;
   max-width: 800px;
   margin: 30px auto;
   font-family: 'Share Tech Mono', monospace;
 }
+
 /* Título principal */
 .section-title {
   color: white;
   font-size: 2.5rem;
+  margin-top: 0;
   margin-bottom: 25px;
   font-family: 'Orbitron', sans-serif;
-  text-align: left;             /* Alineado a la izquierda */
+  text-align: left;
 }
+
+/* Texto: LIVE STREAMS (NO es título) */
+.live-text {
+  color: white;
+  font-size: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 25px;
+}
+
+/* Punto rojo antes del texto */
+.red-dot::before {
+  content: "●";
+  color: red;
+  margin-right: 8px;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
 /* Estructura de columnas */
 .row {
   display: flex;
@@ -244,34 +263,30 @@ align-items: flex-start;
 .column {
   flex: 1;
   padding: 5px 10px;
-  text-align: center;           /* Todo el contenido centrado excepto títulos */
+  text-align: center;
 }
-/* Título LIVE STREAMS */
-.live-stream-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;              /* Tamaño mayor */
-  color: white;
-  margin-top: 25px;
-  text-align: left;             /* Alineado a la izquierda */
-}
+
 /* Encabezado columnas: ACCOUNT, DAYS, TIME */
 .header-label {
-  color: #d1007d;               /* Fucsia oscuro */
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-/* Contenido de columnas */
-.account-text,
-.days-text,
-.time-text {
-  color: #000080;               /* Azul marino oscuro */
+  color: #d1007d;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-/* Estilo para enlaces */
+
+/* Contenido columnas */
+.account-text,
+.days-text,
+.time-text {
+  color: #000080;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* Enlaces */
 .link-text,
 .link-text:link,
 .link-text:visited,
@@ -285,22 +300,6 @@ align-items: flex-start;
 }
 .link-text:hover {
   text-decoration: underline !important;
-}
-/* Subtítulo blanco */
-.white-title {
-  color: white;
-  font-size: 1.25rem;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  text-align: left;
-}
-/* Punto rojo decorativo */
-.red-dot::before {
-  content: "●";
-  color: red;
-  margin-right: 8px;
-  font-size: 2rem;
-  vertical-align: middle;
 }
 
 
