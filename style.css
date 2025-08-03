@@ -299,42 +299,48 @@ align-items: flex-start;
 #biography {
   padding: 0 1rem;
 }
-/* CONTENEDOR BIOGRAFÍA */
+/* CONTENEDOR */
 .section-box.biography {
   background-color: #ff1493; /* fucsia */
   border-radius: 20px;
+  padding: 30px;
   max-width: 1000px;
   margin: 30px auto;
-  padding: 30px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   font-family: 'Share Tech Mono', monospace;
 }
-/* TÍTULO DENTRO DEL CONTENEDOR */
+/* TÍTULO PRINCIPAL */
 .section-box.biography .section-title {
   color: white;
   font-size: 2.5rem;
+  margin-top: 0;
   margin-bottom: 25px;
-  width: 100%;
   font-family: 'Orbitron', sans-serif;
   text-align: left;
+  width: 100%;
+}
+/* ESTRUCTURA DE FILAS Y COLUMNAS */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.column {
+  flex: 1;
+  padding: 5px 10px;
+  text-align: center;
 }
 /* BLOQUE DE TEXTO */
 .bio-text {
   flex: 1 1 60%;
-  display: flex;
-  align-items: flex-start;
+  text-align: justify;
 }
 .bio-text p {
   margin: 0;
   font-size: 1.25rem;
-  font-family: 'Share Tech Mono', monospace;
   line-height: 1.8;
   color: white;
-  text-align: justify;
+  font-family: 'Share Tech Mono', monospace;
 }
 /* BLOQUE DE IMAGEN */
 .bio-image {
