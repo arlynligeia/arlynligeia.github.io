@@ -295,44 +295,47 @@ align-items: flex-start;
   text-decoration: underline !important;
 }
 
-
-
-
-/* MÁRGENES UNIVERSALES DE SECCIÓN */
+/* --- BIOGRAPHY SECTION --- */
 #biography {
   padding: 0 1rem;
 }
-
-/* CONTENEDOR DE BIOGRAFÍA */
+/* CONTENEDOR BIOGRAFÍA */
 .section-box.biography {
-  background-color: rgba(0, 0, 139, 0.3); /* azul semitransparente */
+  background-color: #ff1493; /* fucsia */
   border-radius: 20px;
   max-width: 1000px;
-  margin: 30px auto; /* margen superior e inferior uniforme */
-  padding: 2rem;
+  margin: 30px auto;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: flex-start;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  font-family: 'Share Tech Mono', monospace;
 }
-
+/* TÍTULO DENTRO DEL CONTENEDOR */
+.section-box.biography .section-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left;
+}
 /* BLOQUE DE TEXTO */
 .bio-text {
   flex: 1 1 60%;
   display: flex;
   align-items: flex-start;
 }
-
 .bio-text p {
   margin: 0;
-  font-size: 1.25rem; /* Tamaño de texto específico y unificado */
+  font-size: 1.25rem;
   font-family: 'Share Tech Mono', monospace;
   line-height: 1.8;
   color: white;
   text-align: justify;
 }
-
 /* BLOQUE DE IMAGEN */
 .bio-image {
   flex: 1 1 35%;
@@ -340,13 +343,16 @@ align-items: flex-start;
   justify-content: center;
   align-items: flex-start;
 }
-
 .bio-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
+
+
+
+
 
 
 /* FEATURE FILM SECCIÓN */
