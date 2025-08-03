@@ -216,84 +216,72 @@ align-items: flex-start;
 
 
 /* --- SOCIAL MEDIA SECTION --- */
-.social-box {
-  background-color: #00ced1;
-  border-radius: 20px;
+/* CONTENEDOR PRINCIPAL */
+.content-container {
+  width: 800px;
+  margin: 40px auto;
   padding: 30px;
-  max-width: 800px;
-  margin: 30px auto;
-  font-family: 'Share Tech Mono', monospace;
+  background-color: #00CED1;
+  box-sizing: border-box;
 }
-/* Título principal */
+/* TÍTULO DE SECCIÓN */
 .section-title {
-  color: white;
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 25px;
-  font-family: 'Orbitron', sans-serif;
-  text-align: left;
-}
-/* Texto: LIVE STREAMS (NO es título) */
-.live-text {
   color: white;
-  font-size: 2rem;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: bold;
-  text-align: left;
-  margin-top: 25px;
+  text-align: center;
+  margin: 10px 0 30px 0;
 }
-/* Punto rojo antes del texto */
-.red-dot::before {
-  content: "●";
-  color: red;
-  margin-right: 8px;
-  font-size: 2rem;
-  vertical-align: middle;
-}
-/* Estructura de columnas */
-.row {
+/* FILA FLEX DE COLUMNAS */
+.column-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
-.column {
+/* ENCABEZADOS DE COLUMNA */
+.column-header {
   flex: 1;
-  padding: 5px 10px;
   text-align: center;
-}
-/* Encabezado columnas: ACCOUNT, DAYS, TIME */
-.header-label {
-  color: #d1007d;
   font-size: 1.25rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
+  color: #8B008B; /* fuccia oscuro */
+  font-family: 'Share Tech Mono', monospace;
 }
-/* Contenido columnas */
-.account-text,
-.days-text,
-.time-text {
-  color: #000080;
+/* TEXTO DE COLUMNA */
+.column-text {
+  flex: 1;
+  text-align: center;
   font-size: 1.25rem;
-  font-weight: bold;
+  color: #001f3f; /* azul marino oscuro */
+  font-family: 'Share Tech Mono', monospace;
+}
+.column-text a {
+  color: #001f3f;
+  text-decoration: none;
+}
+.column-text div {
+  margin: 3px 0;
+}
+/* BLOQUE DE LIVE */
+.live-row {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
+}
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.live-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
   text-transform: uppercase;
-  text-align: center;
+  text-align: left;
 }
-/* Enlaces */
-.link-text,
-.link-text:link,
-.link-text:visited,
-.link-text:active {
-  color: #000080 !important;
-  text-decoration: none !important;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-align: center;
-}
-.link-text:hover {
-  text-decoration: underline !important;
-}
+
 
 /* --- BIOGRAPHY SECTION --- */
 #biography {
