@@ -218,23 +218,24 @@ align-items: flex-start;
 /* --- SOCIAL MEDIA SECTION --- */
 .social-box {
   background-color: #00ced1;
-  border-radius: 5px;
-  padding-top: 5px;     /* superior */
-  padding-right: 30px;   /* derecha */
-  padding-bottom: 30px;  /* inferior */
-  padding-left: 30px;    /* izquierda */
+  border-radius: 20px;           /* Esquinas más redondeadas */
+  padding-top: 5px;              /* Espacio superior reducido */
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
   max-width: 800px;
   margin: 30px auto;
   font-family: 'Share Tech Mono', monospace;
 }
+/* Título principal */
 .section-title {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 25px;
   font-family: 'Orbitron', sans-serif;
-  text-align: left;
+  text-align: left;             /* Alineado a la izquierda */
 }
-/* Columnas */
+/* Estructura de columnas */
 .row {
   display: flex;
   justify-content: space-between;
@@ -243,46 +244,34 @@ align-items: flex-start;
 .column {
   flex: 1;
   padding: 5px 10px;
+  text-align: center;           /* Todo el contenido centrado excepto títulos */
 }
-/* Live Streams Título */
+/* Título LIVE STREAMS */
 .live-stream-title {
   font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
+  font-size: 2rem;              /* Tamaño mayor */
   color: white;
   margin-top: 25px;
-  text-align: left;
+  text-align: left;             /* Alineado a la izquierda */
 }
-/* Etiquetas columna: ACCOUNT, DAYS, TIME */
+/* Encabezado columnas: ACCOUNT, DAYS, TIME */
 .header-label {
-  color: #d1007d; /* fucsia oscuro */
+  color: #d1007d;               /* Fucsia oscuro */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
-  text-align: center;
 }
-/* Contenidos */
-.account-text {
-  color: #000080;
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-}
-.days-text {
-  color: #000080;
-  font-size: 1.25rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: left;
-}
+/* Contenido de columnas */
+.account-text,
+.days-text,
 .time-text {
-  color: #000080;
+  color: #000080;               /* Azul marino oscuro */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-/* Links */
+/* Estilo para enlaces */
 .link-text,
 .link-text:link,
 .link-text:visited,
@@ -305,7 +294,7 @@ align-items: flex-start;
   font-weight: bold;
   text-align: left;
 }
-/* Punto rojo */
+/* Punto rojo decorativo */
 .red-dot::before {
   content: "●";
   color: red;
