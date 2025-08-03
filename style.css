@@ -299,74 +299,47 @@ nav {
 /* --------------------------------------
    FEATURE FILM SECTION
 ----------------------------------------- */
-.content-container#featurefilm {
+.content-container.feature-film {
   background-color: #c531ff; /* Lila neón vibrante */
 }
-/* Fila principal: imagen izquierda + textos derecha */
-.album-row {
+.feature-row {
   display: flex;
   justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
 }
-/* Imagen columna izquierda */
-.album-image {
+.feature-image {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
-.album-image img {
+.feature-image img {
   max-width: 100%;
   border-radius: 15px;
 }
-/* Textos columna derecha */
-.album-text-right {
+.feature-text {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centrado vertical con respecto a la imagen */
+  align-items: center;     /* Centrado horizontal */
+  text-align: center;
 }
-/* Texto Orbitron (UPCOMING FEATURE FILM) */
-.album-title-orbitron {
+.feature-title-orbitron {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
-  text-align: center;
   text-transform: uppercase;
   color: white;
   margin-bottom: 20px;
 }
-/* Subtexto autoría */
-.album-subtext {
+.feature-subtext {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  text-align: center;
   color: white;
   line-height: 1.5;
 }
-/* Texto central (CURRENTLY IN PRODUCTION) */
-.album-center-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin: 40px 0 20px;
-}
-/* Descripción larga */
-.album-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  text-align: justify;
-  line-height: 1.6;
-  padding: 0 10px;
-  margin-bottom: 30px;
-}
-.album-description p {
-  margin: 10px 0;
-}
+
 
 
 
