@@ -293,7 +293,7 @@ align-items: flex-start;
 }
 
 /* --- SOCIAL BIOGRAPHY--- */
-/* CONTENEDOR BIOGRAPHY */
+/* --- BIOGRAPHY SECTION --- */
 .biography-container {
   width: 1000px;
   margin: 40px auto;
@@ -302,7 +302,7 @@ align-items: flex-start;
   box-sizing: border-box;
   border-radius: 20px;
 }
-/* TÍTULO DE BIOGRAPHY */
+/* TÍTULO */
 .biography-container .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
@@ -313,8 +313,11 @@ align-items: flex-start;
 /* FILA DE DOS COLUMNAS */
 .bio-row {
   display: flex;
+  justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
+  margin-bottom: 20px; /* Igual que .column-row */
+  margin-top: 0;        /* Elimina espacio extra arriba */
 }
 /* COLUMNA DE TEXTO */
 .bio-text {
@@ -329,6 +332,9 @@ align-items: flex-start;
 .bio-text p {
   margin-bottom: 15px;
 }
+.bio-text p:first-child {
+  margin-top: 0; /* Previene espacio no deseado al inicio */
+}
 /* COLUMNA DE IMAGEN */
 .bio-image {
   flex: 1;
@@ -340,8 +346,6 @@ align-items: flex-start;
   max-width: 100%;
   border-radius: 15px;
 }
-
-
 
 
 
