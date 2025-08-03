@@ -292,6 +292,51 @@ align-items: flex-start;
   text-align: left;
 }
 
+/* --- BIOGRAPHY SECTION --- */
+.biography-container {
+  width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ff1493;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+/* TÍTULO */
+.biography-container .section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-align: left;
+  margin: 10px 0 30px 10px;
+}
+/* FILA DE DOS COLUMNAS */
+.bio-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+/* COLUMNA DE TEXTO */
+.bio-text {
+  flex: 1;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-align: justify;
+}
+/* COLUMNA DE IMAGEN */
+.bio-image {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.bio-image img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
 
 
 
