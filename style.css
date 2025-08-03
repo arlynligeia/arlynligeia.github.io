@@ -727,3 +727,47 @@ align-items: flex-start;
   background-color: #ff69b4;
   transform: scale(1.05);
 }
+
+/* CONTENEDOR: Support My Studies */
+.section-box.studies-box {
+  background-color: #39FF14; /* verde neón sólido */
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 30px auto; /* mismo margen que biography */
+  padding: 2rem; /* espacio interior uniforme */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+  gap: 2rem; /* separación entre texto y botón */
+}
+
+/* TEXTO SEPARADO */
+.studies-text {
+  width: 100%;
+  color: #000080; /* azul marino oscuro */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.15rem; /* mismo tamaño que biography */
+  line-height: 1.8;
+  text-align: justify;
+  margin: 0;
+}
+
+/* BOTÓN UNIFICADO */
+.donate-button {
+  align-self: center;
+  padding: 0.75rem 2rem;
+  background-color: #ff1493; /* fucsia */
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.donate-button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
