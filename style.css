@@ -213,13 +213,23 @@ align-items: flex-start;
   max-width: 400px; /* Opcional: controla el ancho del texto */
   margin-left: 40px;
 }
+
+
+/* --- SOCIAL MEDIA SECTION --- */
 .social-box {
- background-color: rgba(0, 0, 139, 0.3); /* azul oscuro semitransparente */
+  background-color: #00ced1; /* celeste agua */
   border-radius: 20px;
   padding: 30px;
   max-width: 800px;
   margin: 30px auto;
   font-family: 'Share Tech Mono', monospace;
+}
+
+.social-box .section-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .row {
@@ -237,48 +247,60 @@ align-items: flex-start;
   text-align: center;
 }
 
+.justified-text {
+  text-align: justify;
+}
+
 .aqua-text {
   color: #7fdbff; /* celeste agua */
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 
 .pink-text {
-  color: #ff69b4; /* Rosado Barbie */
-  font-size: 1rem;
+  color: #ff69b4;
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 
 .fuchsia-text {
-  color: #ff00ff; /* Fucsia */
-  font-size: 1rem;
+  color: #ff00ff;
+  font-size: 1.25rem;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
-/* Estilo del enlace rosado */
 .link-text,
 .link-text:link,
 .link-text:visited,
 .link-text:active {
-  color: #ff69b4 !important;  /* Fuerza rosado Barbie */
+  color: #ff69b4 !important;
   text-decoration: none !important;
 }
 
 .link-text:hover {
-  color: #ff69b4 !important;
   text-decoration: underline !important;
 }
+
 .white-title {
   color: white;
-  font-size: 1.4rem;
+  font-size: 1.25rem;
+  font-family: 'Orbitron', sans-serif;
   font-weight: bold;
 }
+
 .red-dot::before {
   content: "●";
   color: red;
   margin-right: 8px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   vertical-align: middle;
+}
+
+.live-stream-title {
+  margin-top: 25px;
+  text-align: left;
 }
 
 
