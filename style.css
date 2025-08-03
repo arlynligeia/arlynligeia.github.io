@@ -1,7 +1,9 @@
 /* --- FUENTES --- */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
 
-/* --- ESTILOS GENERALES --- */
+/* --------------------------------------
+   ESTILOS GENERALES DEL BODY Y BACKGROUND
+----------------------------------------- */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
@@ -11,19 +13,22 @@ body {
   background-size: cover;
 }
 
-/* --- TÍTULO PRINCIPAL --- */
+/* --------------------------------------
+   TÍTULO PRINCIPAL DEL SITIO (TOP)
+----------------------------------------- */
 .site-title {
   text-align: center;
   font-size: 4.5em;
   margin: 20px 0;
 }
 
-/* --- MENÚ NAV --- */
+/* --------------------------------------
+   MENÚ DE NAVEGACIÓN (NAV Y SUBMENÚ)
+----------------------------------------- */
 nav {
   text-align: center;
   margin-top: 10px;
 }
-
 .menu {
   list-style: none;
   padding: 0;
@@ -32,94 +37,10 @@ nav {
   justify-content: center;
   gap: 10px;
 }
-
 .menu li {
   position: relative;
 }
-
-.menu > li > button {
-  font-family: 'Orbitron', sans-serif;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 8px 14px;
-  cursor: pointer;
-  font-size: 1rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  transition: background 0.3s ease;
-}
-
-.menu > li > button:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/* --- SUBMENÚ --- */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid white;
-  z-index: 1000;
-}
-
-.submenu li button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: transparent;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  font-size: 0.9rem;
-  font-family: 'Rajdhani', sans-serif;
-  text-transform: capitalize;
-  white-space: nowrap;
-}
-
-.menu li:hover .submenu {
-  display: block;
-}
-
-/* --- MENÚ RESPONSIVO --- */
-
-/* --- TÍTULOS DE SECCIONES --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.8rem;
-  margin: 60px 0 30px 40px;
-  text-align: left;
-  text-transform: uppercase;
-  color: white;
-}
-/* --- EFECTO TURQUESA EN SUBMENÚS --- */
-.submenu li {
-  position: relative;
-  overflow: hidden;
-}
-
-.submenu li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 100%;
-  background-color: turquoise;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.submenu li:hover::before {
-  transform: scaleX(1);
-} 
-/* Enlaces que se ven como botones */
+.menu > li > button,
 .menu-button {
   font-family: 'Orbitron', sans-serif;
   background: transparent;
@@ -134,10 +55,24 @@ nav {
   text-decoration: none;
   display: inline-block;
 }
-
+.menu > li > button:hover,
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+/* Submenús desplegables */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
+  z-index: 1000;
+}
+.submenu li button,
 .submenu li a {
   display: block;
   width: 100%;
@@ -152,17 +87,42 @@ nav {
   white-space: nowrap;
   text-decoration: none;
 }
-/* --- CARRUSEL DE INICIO --- */
+.menu li:hover .submenu {
+  display: block;
+}
+/* Efecto turquesa al pasar el mouse por submenú */
+.submenu li {
+  position: relative;
+  overflow: hidden;
+}
+.submenu li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: turquoise;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.submenu li:hover::before {
+  transform: scaleX(1);
+}
+
+/* --------------------------------------
+   CARRUSEL DE INICIO Y TEXTO LATERAL
+----------------------------------------- */
 .carousel-container {
   position: relative;
   height: calc(100vh - 220px);
   display: flex;
   justify-content: flex-end;
-align-items: flex-start;
-  margin-top: 30px; /* antes estaba en 60px */
+  align-items: flex-start;
+  margin-top: 30px;
   padding-right: 50px;
 }
-
 .carousel {
   width: 60%;
   height: 100%;
@@ -171,7 +131,6 @@ align-items: flex-start;
   border-radius: 12px;
   position: relative;
 }
-
 .carousel-image {
   position: absolute;
   width: 100%;
@@ -180,60 +139,66 @@ align-items: flex-start;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 .carousel-image.active {
   opacity: 1;
 }
-/* --- TEXTO AL LADO DEL CARRUSEL --- */
 .carousel-text {
   flex: 1;
   padding-left: 110px;
   margin-top: -10px;
   text-align: left;
 }
-
+/* Texto grande con efecto neón */
 .neon-text {
- font-family: 'Rampart One', cursive;
+  font-family: 'Rampart One', cursive;
   font-size: 4rem;
-  color: #39ff14; /* Verde neón */
+  color: #39ff14;
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14;
   line-height: 1.2;
 }
 .line-middle {
   display: inline-block;
-  margin-left: 30px; /* Cambia este número para mover el texto más o menos */
+  margin-left: 30px;
 }
-/* --- SUBTÍTULO BAJO EL TEXTO PRINCIPAL --- */
+/* Subtítulo del carrusel */
 .subtitle-text {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1rem; /* Tamaño estándar para textos secundarios */
+  font-size: 1rem;
   color: #ffffff;
   margin-top: 0px;
   line-height: 1.5;
-  max-width: 400px; /* Opcional: controla el ancho del texto */
+  max-width: 400px;
   margin-left: 40px;
 }
 
-
-/* --- SOCIAL MEDIA SECTION --- */
-/* === CONTENEDOR PRINCIPAL GENERAL === */
+/* --------------------------------------
+   CONTENEDORES GENERALES DE TODAS LAS SECCIONES
+   (Social Media, Biography, etc.)
+----------------------------------------- */
 .content-container {
   width: 800px;
-  margin: 40px auto;
+  margin: 60px auto;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 20px;
-  background-color: #00CED1; /* Personalizable por sección */
+  background-color: #00CED1; /* Cambiar individualmente en cada sección si se desea */
 }
-/* === TÍTULO DE SECCIÓN === */
+
+/* --------------------------------------
+   TÍTULOS DE TODAS LAS SECCIONES
+----------------------------------------- */
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
-  color: white;
   text-align: left;
+  text-transform: uppercase;
+  color: white;
   margin: 0 0 30px 0;
 }
-/* === FILAS FLEX DE COLUMNAS === */
+
+/* --------------------------------------
+   SOCIAL MEDIA Y OTRAS SECCIONES CON COLUMNAS
+----------------------------------------- */
 .column-row {
   display: flex;
   justify-content: space-between;
@@ -241,7 +206,6 @@ align-items: flex-start;
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
-/* === ENCABEZADOS === */
 .column-header {
   flex: 1;
   text-align: center;
@@ -249,7 +213,6 @@ align-items: flex-start;
   color: #8B008B;
   font-family: 'Share Tech Mono', monospace;
 }
-/* === TEXTO DE COLUMNAS === */
 .column-text {
   flex: 1;
   text-align: center;
@@ -260,7 +223,6 @@ align-items: flex-start;
 .column-text div {
   margin: 3px 0;
 }
-/* === ENLACES === */
 .column-text a {
   color: #001f3f;
   text-decoration: none;
@@ -270,7 +232,9 @@ align-items: flex-start;
   text-decoration: underline;
   color: #004080;
 }
-/* === LIVE SECTION === */
+/* --------------------------------------
+   SECCIÓN DE LIVE / EN VIVO
+----------------------------------------- */
 .live-row {
   display: flex;
   align-items: center;
@@ -290,18 +254,27 @@ align-items: flex-start;
   text-transform: uppercase;
 }
 
-
-/* === CONTENEDOR PERSONALIZADO PARA BIOGRAPHY === */
+/* --------------------------------------
+   SECCIÓN BIOGRAPHY
+----------------------------------------- */
 .content-container.biography {
-  background-color: #ff1493; /* Fucsia */
+  background-color: #ff1493; /* Color fucsia solo para esta sección */
 }
-/* === TEXTO JUSTIFICADO PARA BIO === */
+.bio-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 .bio-text {
+  flex: 1;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
   text-align: justify;
   color: white;
 }
-/* === IMAGEN DE BIO === */
 .bio-image {
+  flex: 1;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -310,6 +283,7 @@ align-items: flex-start;
   max-width: 100%;
   border-radius: 15px;
 }
+
 
 
 
