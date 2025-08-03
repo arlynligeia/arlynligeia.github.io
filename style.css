@@ -219,58 +219,52 @@ align-items: flex-start;
 .social-box {
   background-color: #00ced1; /* celeste agua */
   border-radius: 20px;
-  padding: 30px;
+  padding-top: 15px; /* Menos separación arriba */
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
   max-width: 800px;
   margin: 30px auto;
   font-family: 'Share Tech Mono', monospace;
 }
-
 .social-box .section-title {
   color: white;
   font-size: 2.5rem;
   margin-bottom: 25px;
   font-family: 'Orbitron', sans-serif;
 }
-
 .row {
   display: flex;
   justify-content: space-between;
   margin-bottom: 15px;
 }
-
 .column {
   flex: 1;
   padding: 5px 10px;
 }
-
 .center-text {
   text-align: center;
 }
-
 .justified-text {
   text-align: justify;
 }
-
 .aqua-text {
   color: #7fdbff; /* celeste agua */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .pink-text {
   color: #ff69b4;
   font-size: 1.25rem;
   text-transform: uppercase;
 }
-
 .fuchsia-text {
   color: #ff00ff;
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
 }
-
 .link-text,
 .link-text:link,
 .link-text:visited,
@@ -278,18 +272,15 @@ align-items: flex-start;
   color: #ff69b4 !important;
   text-decoration: none !important;
 }
-
 .link-text:hover {
   text-decoration: underline !important;
 }
-
 .white-title {
   color: white;
   font-size: 1.25rem;
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
 }
-
 .red-dot::before {
   content: "●";
   color: red;
@@ -297,7 +288,6 @@ align-items: flex-start;
   font-size: 2rem;
   vertical-align: middle;
 }
-
 .live-stream-title {
   margin-top: 25px;
   text-align: left;
