@@ -216,71 +216,30 @@ align-items: flex-start;
 
 
 /* --- SOCIAL MEDIA SECTION --- */
-/* CONTENEDOR PRINCIPAL */
 .content-container {
   width: 800px;
   margin: 40px auto;
   padding: 30px;
   background-color: #00CED1;
   box-sizing: border-box;
+  border-radius: 20px; /* NUEVO: esquinas redondeadas */
 }
-/* TÍTULO DE SECCIÓN */
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  text-align: center;
-  margin: 10px 0 30px 0;
-}
-/* FILA FLEX DE COLUMNAS */
-.column-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-/* ENCABEZADOS DE COLUMNA */
-.column-header {
-  flex: 1;
-  text-align: center;
-  font-size: 1.25rem;
-  color: #8B008B; /* fuccia oscuro */
-  font-family: 'Share Tech Mono', monospace;
-}
-/* TEXTO DE COLUMNA */
-.column-text {
-  flex: 1;
-  text-align: center;
-  font-size: 1.25rem;
-  color: #001f3f; /* azul marino oscuro */
-  font-family: 'Share Tech Mono', monospace;
+  text-align: left;       /* NUEVO: alineado a la izquierda */
+  margin: 10px 0 30px 10px; /* NUEVO: margen izquierdo leve */
 }
 .column-text a {
   color: #001f3f;
   text-decoration: none;
 }
-.column-text div {
-  margin: 3px 0;
+.column-text a:hover {
+  text-decoration: underline; /* NUEVO: efecto hover */
 }
-/* BLOQUE DE LIVE */
-.live-row {
-  display: flex;
-  align-items: center;
-  margin: 40px 0 20px 0;
-}
-.live-indicator {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.live-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
-}
+
+
 
 
 /* --- BIOGRAPHY SECTION --- */
