@@ -216,91 +216,80 @@ align-items: flex-start;
 
 
 /* --- SOCIAL MEDIA SECTION --- */
+/* CONTENEDOR PRINCIPAL */
 .content-container {
   width: 800px;
   margin: 40px auto;
   padding: 30px;
   background-color: #00CED1;
   box-sizing: border-box;
-  border-radius: 20px; /* NUEVO: esquinas redondeadas */
+  border-radius: 20px; /* Esquinas redondeadas */
 }
+/* TÍTULO DE SECCIÓN */
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  text-align: left;       /* NUEVO: alineado a la izquierda */
-  margin: 10px 0 30px 10px; /* NUEVO: margen izquierdo leve */
+  text-align: left; /* Alineado a la izquierda */
+  margin: 10px 0 30px 10px; /* Margen inferior + margen izquierdo leve */
 }
+/* FILA DE COLUMNAS (FLEX) */
+.column-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+/* ENCABEZADOS DE COLUMNA */
+.column-header {
+  flex: 1;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #8B008B; /* Fucsia oscuro */
+  font-family: 'Share Tech Mono', monospace;
+}
+/* TEXTO DE COLUMNA */
+.column-text {
+  flex: 1;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #001f3f; /* Azul marino oscuro */
+  font-family: 'Share Tech Mono', monospace;
+}
+/* TEXTOS DENTRO DE LAS CAJAS DE TEXTO */
+.column-text div {
+  margin: 3px 0;
+}
+/* ENLACES DE TEXTO */
 .column-text a {
   color: #001f3f;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
 }
 .column-text a:hover {
-  text-decoration: underline; /* NUEVO: efecto hover */
+  text-decoration: underline;
+  color: #004080; /* Azul más claro al pasar el mouse */
 }
-
-
-
-
-/* --- BIOGRAPHY SECTION --- */
-#biography {
-  padding: 0 1rem;
+/* BLOQUE DE LIVE (una columna con punto rojo + texto) */
+.live-row {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
 }
-/* CONTENEDOR */
-.section-box.biography {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 20px;
-  padding: 30px;
-  max-width: 1000px;
-  margin: 30px auto;
-  font-family: 'Share Tech Mono', monospace;
+/* PUNTO ROJO */
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-/* TÍTULO PRINCIPAL */
-.section-box.biography .section-title {
-  color: white;
-  font-size: 2.5rem;
-  margin-top: 0;
-  margin-bottom: 25px;
+/* TEXTO DE "LIVE STREAMS" */
+.live-text {
   font-family: 'Orbitron', sans-serif;
-  text-align: left;
-  width: 100%;
-}
-/* ESTRUCTURA DE FILAS Y COLUMNAS */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-.column {
-  flex: 1;
-  padding: 5px 10px;
-  text-align: center;
-}
-/* BLOQUE DE TEXTO */
-.bio-text {
-  flex: 1 1 60%;
-  text-align: justify;
-}
-.bio-text p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 2rem;
   color: white;
-  font-family: 'Share Tech Mono', monospace;
-}
-/* BLOQUE DE IMAGEN */
-.bio-image {
-  flex: 1 1 35%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.bio-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  text-transform: uppercase;
+  text-align: left;
 }
 
 
