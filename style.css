@@ -360,51 +360,45 @@ align-items: flex-start;
 #featurefilm {
   padding: 0 1rem;
 }
-/* CONTENEDOR PRINCIPAL */
-.section-box.feature {
-  background-color: #800080; /* morado puro */
+/* USAMOS LA MISMA BASE QUE .social-box */
+.social-box.feature {
+  background-color: #800080; /* morado */
   border-radius: 20px;
-  padding: 30px; /* MISMO que social-box */
-  max-width: 800px; /* MISMO que social-box */
-  margin: 30px auto; /* MISMO que social-box */
+  padding: 30px;
+  max-width: 800px;
+  margin: 30px auto;
   font-family: 'Share Tech Mono', monospace;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: flex-start;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 /* TÍTULO */
-.section-box.feature .section-title {
+.social-box.feature .section-title {
   color: white;
   font-size: 2.5rem;
   margin-top: 0;
-  margin-bottom: 25px; /* MISMO que social-box */
+  margin-bottom: 25px;
   font-family: 'Orbitron', sans-serif;
   text-align: left;
-  width: 100%;
 }
-/* BLOQUE DE IMAGEN */
-.feature-image {
-  flex: 1 1 45%;
+/* ROW GENERAL PARA IMAGEN + TEXTO */
+.feature-row {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
+/* COLUMNAS IGUAL A SOCIAL MEDIA */
+.feature-image,
+.feature-text {
+  flex: 1 1 48%;
+  padding: 5px 10px;
+}
+/* IMAGEN */
 .feature-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
-/* BLOQUE DE TEXTO PRINCIPAL (AL LADO DE LA IMAGEN) */
-.feature-text {
-  flex: 1 1 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-}
+/* TEXTO AL LADO DE LA IMAGEN */
 .feature-heading {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -414,19 +408,19 @@ align-items: flex-start;
   line-height: 1.2;
   color: white;
 }
+
 .feature-description {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem; /* igual que biografía */
+  font-size: 1.25rem;
   line-height: 1.8;
   color: white;
 }
-/* BLOQUE DE TEXTO EXTRA (DEBAJO) */
+/* BLOQUE DE TEXTO EXTRA */
 .feature-extra-text {
-  width: 100%;
   text-align: center;
-  margin-top: 0; /* CORREGIDO para que no cree separación extra */
+  margin-top: 25px; /* igual al espacio entre bloques en social-box */
 }
-/* TEXTO 3: CURRENTLY IN PRODUCTION */
+/* TEXTO 3 */
 .status-label {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -435,7 +429,7 @@ align-items: flex-start;
   margin-bottom: 1rem;
   color: white;
 }
-/* TEXTO 4: PÁRRAFO LARGO */
+/* TEXTO 4 */
 .long-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
