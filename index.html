@@ -503,5 +503,18 @@
     <a href="#privacy-policy" class="footer-link">Privacy Policy</a>
   </p>
 </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const link = document.querySelector(".footer-link");
+    const section = document.getElementById("privacy-policy");
+
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // evitar scroll automático
+      section.style.display = "block";
+      section.scrollIntoView({ behavior: "smooth" });
+    });
+  });
+</script>
+
      </body>
 </html>
