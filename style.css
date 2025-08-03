@@ -356,30 +356,34 @@ align-items: flex-start;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
-
-
-
-
-
-/* FEATURE FILM SECCIÓN */
+/* --- FEATURE FILM SECTION --- */
 #featurefilm {
   padding: 0 1rem;
 }
-
 /* CONTENEDOR PRINCIPAL */
 .section-box.feature {
-  background-color: rgba(0, 0, 139, 0.3);
+  background-color: #800080; /* morado puro */
   border-radius: 20px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 30px auto;
-  padding: 2rem;
+  padding: 30px;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  align-items: center;
+  align-items: flex-start;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  font-family: 'Share Tech Mono', monospace;
 }
-
+/* TÍTULO */
+.section-box.feature .section-title {
+  color: white;
+  font-size: 2.5rem;
+  margin-top: 0;
+  margin-bottom: 25px;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left;
+}
 /* BLOQUE DE IMAGEN */
 .feature-image {
   flex: 1 1 45%;
@@ -387,15 +391,13 @@ align-items: flex-start;
   justify-content: center;
   align-items: center;
 }
-
 .feature-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
-
-/* BLOQUE DE TEXTO PRINCIPAL (AL LADO DE LA IMAGEN) */
+/* BLOQUE DE TEXTO PRINCIPAL */
 .feature-text {
   flex: 1 1 50%;
   display: flex;
@@ -403,7 +405,6 @@ align-items: flex-start;
   justify-content: center;
   text-align: left;
 }
-
 .feature-heading {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -413,21 +414,17 @@ align-items: flex-start;
   line-height: 1.2;
   color: white;
 }
-
 .feature-description {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem; /* igual que biografía */
+  font-size: 1.25rem;
   line-height: 1.8;
   color: white;
 }
-
 /* BLOQUE DE TEXTO EXTRA (DEBAJO) */
 .feature-extra-text {
   width: 100%;
   text-align: center;
-  margin-top: -2rem; /* se mantiene si lo deseas así */
 }
-
 /* TEXTO 3: CURRENTLY IN PRODUCTION */
 .status-label {
   font-family: 'Orbitron', sans-serif;
@@ -437,7 +434,6 @@ align-items: flex-start;
   margin-bottom: 1rem;
   color: white;
 }
-
 /* TEXTO 4: PÁRRAFO LARGO */
 .long-description {
   font-family: 'Share Tech Mono', monospace;
@@ -448,6 +444,11 @@ align-items: flex-start;
   margin: 0 auto;
   text-align: justify;
 }
+
+
+
+
+
 
 
 /* SECCIÓN SHORT FILM */
