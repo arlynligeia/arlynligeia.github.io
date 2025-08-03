@@ -233,6 +233,7 @@ align-items: flex-start;
   margin-bottom: 25px;
   font-family: 'Orbitron', sans-serif;
 }
+/* Estructura de columnas */
 .row {
   display: flex;
   justify-content: space-between;
@@ -242,49 +243,47 @@ align-items: flex-start;
   flex: 1;
   padding: 5px 10px;
 }
-.center-text {
-  text-align: center;
-}
-.justified-text {
-  text-align: justify;
-}
-/* Etiquetas: Account, Days, Time */
-.header-label {
+/* Título "Live Streams" */
+.live-stream-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.7rem;
   color: white;
+  margin-top: 25px;
+  text-align: left;
+}
+/* Etiquetas de columna: "Account", "Days", "Time" */
+.header-label {
+  color: #d1007d; /* fucsia oscuro */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-/* Contenido como TIKTOK, YOUTUBE, etc. */
-.navy-text {
+/* Texto contenido: TikTok, YouTube, Twitch */
+.account-text {
   color: #000080; /* azul marino oscuro */
   font-size: 1.25rem;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-/* Días (centrado si pocos, justificado si muchos) */
-.days-long {
+/* Texto contenido: días */
+.days-text {
+  color: #000080;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
   text-align: left;
-  color: #000080;
-  font-size: 1.25rem;
-  text-transform: uppercase;
 }
-.days-short {
-  text-align: center;
-  color: #000080;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-}
-/* Hora */
+/* Texto contenido: hora */
 .time-text {
   color: #000080;
   font-size: 1.25rem;
-  text-align: center;
+  font-weight: bold;
   text-transform: uppercase;
+  text-align: center;
 }
-/* Estilo del enlace */
+/* Link estilo general */
 .link-text,
 .link-text:link,
 .link-text:visited,
@@ -299,7 +298,7 @@ align-items: flex-start;
 .link-text:hover {
   text-decoration: underline !important;
 }
-/* Título secundario como "Live Streams" */
+/* Título blanco pequeño */
 .white-title {
   color: white;
   font-size: 1.25rem;
@@ -307,20 +306,13 @@ align-items: flex-start;
   font-weight: bold;
   text-align: left;
 }
+/* Punto rojo de Live */
 .red-dot::before {
   content: "●";
   color: red;
   margin-right: 8px;
   font-size: 2rem;
   vertical-align: middle;
-}
-/* Live Streams section heading */
-.live-stream-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.7rem;
-  color: white;
-  margin-top: 25px;
-  text-align: left;
 }
 
 
