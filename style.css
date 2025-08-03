@@ -360,7 +360,7 @@ align-items: flex-start;
 #featurefilm {
   padding: 0 1rem;
 }
-/* USAMOS LA MISMA BASE QUE .social-box */
+/* CONTENEDOR PRINCIPAL IGUAL A .social-box */
 .social-box.feature {
   background-color: #800080; /* morado */
   border-radius: 20px;
@@ -378,18 +378,18 @@ align-items: flex-start;
   font-family: 'Orbitron', sans-serif;
   text-align: left;
 }
-/* ROW GENERAL PARA IMAGEN + TEXTO */
+/* ROW DE IMAGEN + TEXTO */
 .feature-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 25px;
 }
-/* COLUMNAS IGUAL A SOCIAL MEDIA */
-.feature-image,
-.feature-text {
-  flex: 1 1 48%;
+/* COLUMNAS EXACTAMENTE IGUAL A SOCIAL MEDIA Y BIOGRAPHY */
+.column {
+  flex: 1;
   padding: 5px 10px;
+  text-align: center;
 }
 /* IMAGEN */
 .feature-image img {
@@ -398,7 +398,7 @@ align-items: flex-start;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
 }
-/* TEXTO AL LADO DE LA IMAGEN */
+/* TEXTO JUNTO A LA IMAGEN */
 .feature-heading {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -408,19 +408,17 @@ align-items: flex-start;
   line-height: 1.2;
   color: white;
 }
-
 .feature-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.8;
   color: white;
 }
-/* BLOQUE DE TEXTO EXTRA */
+/* TEXTO EXTRA DEBAJO */
 .feature-extra-text {
   text-align: center;
-  margin-top: 25px; /* igual al espacio entre bloques en social-box */
+  margin-top: 25px;
 }
-/* TEXTO 3 */
 .status-label {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -429,7 +427,6 @@ align-items: flex-start;
   margin-bottom: 1rem;
   color: white;
 }
-/* TEXTO 4 */
 .long-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
