@@ -366,92 +366,45 @@ background-color: #c531ff; /* Lila neón vibrante */
   margin: 10px 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* SECCIÓN SHORT FILM */
-#shortfilm {
-  padding: 0 1rem;
+/* --------------------------------------
+   SHORT FILM SECTION
+----------------------------------------- */
+.content-container.short-film {
+  background-color: #c531ff; /* Lila neón vibrante */
 }
-
-/* CONTENEDOR AZUL */
-.section-box.shortfilm {
-  background-color: rgba(0, 0, 139, 0.3);
-  border-radius: 20px;
-  max-width: 800px;
-  margin: 30px auto;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: flex-start;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-/* TEXTO 1: TÍTULO DEL CORTO */
-.shortfilm-text.text-1 {
-  width: 100%;
-  text-align: left;
-}
-
-.shortfilm-text.text-1 p {
+.short-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
   color: white;
-  margin: 0;
+  text-align: center;
+  margin: 30px 0 20px;
 }
-
-/* VIDEO */
-.shortfilm-video {
-  width: 100%;
+.short-video-container {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
-
-.video-wrapper-small {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  width: 100%;
-  background: black;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-.video-wrapper-small iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* TEXTO 2: DESCRIPCIÓN */
-.shortfilm-text.text-2 {
-  width: 100%;
-}
-
-.shortfilm-text.text-2 p {
+.short-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.8;
   color: white;
   text-align: justify;
-  margin: 0;
+  padding: 0 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* SECCIÓN MUSIC VIDEO DIRECTION */
