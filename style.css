@@ -296,78 +296,40 @@ nav {
   margin-bottom: 10px;
 }
 
+
 /* --------------------------------------
    FEATURE FILM SECTION
 ----------------------------------------- */
 .content-container.feature-film {
-background-color: #c531ff; /* Lila neón vibrante */
+  background-color: #c531ff; /* Lila neón vibrante */
 }
-/* Fila principal con imagen + texto */
-.feature-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+.feature-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: 30px 0 20px;
 }
-/* Imagen */
-.feature-image {
-  flex: 1;
+.feature-image-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  margin-bottom: 30px;
 }
-.feature-image img {
+.feature-image-container img {
   max-width: 100%;
   border-radius: 15px;
 }
-/* Columna de texto al lado derecho de la imagen */
-.feature-text-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* Texto Orbitron grande (Upcoming Feature Film) */
-.feature-title-orbitron {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 20px;
-}
-/* Subtexto (autoría) */
-.feature-subtext {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  text-align: center;
-  color: white;
-  line-height: 1.5;
-}
-/* Texto central */
-.feature-center-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin: 40px 0 20px;
-}
-/* Texto descriptivo largo (ajustado como en short-film y music-video) */
 .feature-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
   text-align: justify;
-  line-height: 1.6;
   padding: 0 10px;
-  margin-bottom: 30px;
+  line-height: 1.6;
 }
 .feature-description p {
   margin: 10px 0;
 }
-
 /* --------------------------------------
    SHORT FILM SECTION
 ----------------------------------------- */
@@ -424,73 +386,37 @@ background-color: #c531ff; /* Lila neón vibrante */
    ALBUM SECTION
 ----------------------------------------- */
 .content-container.album-section {
- background-color: #c531ff; /* Lila neón vibrante */
+  background-color: #c531ff; /* Lila neón vibrante */
 }
-/* Fila con imagen + textos */
-.album-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+.album-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin: 30px 0 20px;
 }
-/* Imagen del álbum */
-.album-image {
-  flex: 1;
+.album-image-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  margin-bottom: 30px;
 }
-.album-image img {
+.album-image-container img {
   max-width: 100%;
   border-radius: 15px;
 }
-/* Columna de texto a la derecha */
-.album-text-right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-/* Texto Orbitron grande (UPCOMING MUSIC ALBUM) */
-.album-title-orbitron {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 20px;
-}
-/* Subtexto (autoría) */
-.album-subtext {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  text-align: center;
-  color: white;
-  line-height: 1.5;
-}
-/* Texto central (CURRENTLY IN DEVELOPMENT) */
-.album-center-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-  color: white;
-  margin: 40px 0 20px;
-}
-/* Texto descriptivo largo */
 .album-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
   text-align: justify;
-  line-height: 1.6;
   padding: 0 10px;
-  margin-bottom: 30px;
+  line-height: 1.6;
 }
 .album-description p {
   margin: 10px 0;
 }
+
+  
 
 
 
