@@ -291,50 +291,16 @@ align-items: flex-start;
 }
 
 
-/* --- CONTENEDOR GENERAL REUTILIZABLE PARA TODAS LAS SECCIONES --- */
-.content-container {
-  width: 800px;
-  margin: 40px auto;
-  padding: 30px;
-  background-color: #00CED1; /* Color por defecto (social media) */
-  box-sizing: border-box;
-  border-radius: 20px;
-}
-
-/* CONTENEDOR PERSONALIZADO PARA CADA SECCIÓN (color distinto) */
+/* === CONTENEDOR PERSONALIZADO PARA BIOGRAPHY === */
 .content-container.biography {
   background-color: #ff1493; /* Fucsia */
 }
-/* --- TÍTULOS DE SECCIÓN --- */
-.section-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-align: left;
-  margin: 10px 0 30px 10px;
-}
-/* --- FILAS DE COLUMNAS (FLEX CON ESPACIADO) --- */
-.column-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-/* --- CONTENIDO DE LAS COLUMNAS (REUTILIZABLE) --- */
-.column-text {
-  flex: 1;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: #001f3f;
-  text-align: center;
-}
-/* --- TEXTO JUSTIFICADO SOLO PARA BIOGRAFÍA --- */
+/* === TEXTO JUSTIFICADO PARA BIO === */
 .bio-text {
   text-align: justify;
   color: white;
 }
-/* --- IMAGEN EN COLUMNA DE BIO --- */
+/* === IMAGEN DE BIO === */
 .bio-image {
   display: flex;
   align-items: flex-start;
@@ -343,48 +309,6 @@ align-items: flex-start;
 .bio-image img {
   max-width: 100%;
   border-radius: 15px;
-}
-/* --- ENCABEZADOS DE COLUMNA (OPCIONAL PARA SOCIAL MEDIA) --- */
-.column-header {
-  flex: 1;
-  text-align: center;
-  font-size: 1.25rem;
-  color: #8B008B;
-  font-family: 'Share Tech Mono', monospace;
-}
-/* --- TEXTOS EN COLUMNAS DE SOCIAL MEDIA --- */
-.column-text div {
-  margin: 3px 0;
-}
-/* --- ENLACES EN COLUMNAS --- */
-.column-text a {
-  color: #001f3f;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-}
-.column-text a:hover {
-  text-decoration: underline;
-  color: #004080;
-}
-/* --- FILA LIVE (SOCIAL MEDIA) --- */
-.live-row {
-  display: flex;
-  align-items: center;
-  margin: 40px 0 20px 0;
-}
-.live-indicator {
-  width: 10px;
-  height: 10px;
-  background-color: red;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.live-text {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  text-transform: uppercase;
-  text-align: left;
 }
 
 
