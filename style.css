@@ -300,13 +300,22 @@ nav {
    FEATURE FILM SECTION
 ----------------------------------------- */
 .content-container.feature-film {
-  background-color: #c531ff; /* Lila neón vibrante */
+  background-color: #c531ff; /* lila neón */
 }
 .feature-row {
   display: flex;
-  justify-content: space-between;
   gap: 40px;
   flex-wrap: wrap;
+}
+.feature-text {
+  flex: 1;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  text-align: justify;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .feature-image {
   flex: 1;
@@ -318,28 +327,21 @@ nav {
   max-width: 100%;
   border-radius: 15px;
 }
-.feature-text {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centrado vertical con respecto a la imagen */
-  align-items: center;     /* Centrado horizontal */
-  text-align: center;
-}
 .feature-title-orbitron {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   text-transform: uppercase;
-  color: white;
   margin-bottom: 20px;
+  color: white;
+  text-align: left;
 }
 .feature-subtext {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
   line-height: 1.5;
+  text-align: left;
 }
-
 
 
 
