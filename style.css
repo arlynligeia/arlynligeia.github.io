@@ -656,9 +656,73 @@ nav {
   text-decoration: underline;
 }
 
-
-
-
+/* ========================
+   CONTACT SECTION
+======================== */
+.contact-container {
+  max-width: 800px;
+  margin: 60px auto; /* separación del bloque anterior */
+  background-color: #ff1493;
+  padding: 30px;
+  border-radius: 12px;
+  font-family: 'Orbitron', sans-serif;
+}
+.contact-title {
+  font-size: 2.5rem;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.contact-title a {
+  color: white;
+  text-decoration: none;
+}
+.contact-title {
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+}
+.contact-label {
+  display: block;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 8px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+}
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+}
+.contact-input {
+  height: 40px;
+}
+.contact-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contact-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #39ff14; /* verde neón */
+  color: #ff1493;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contact-button:hover {
+  transform: scale(1.05);
+  background-color: #2de80e;
+}
 
 /* ======================================
    BY MY PATRON
