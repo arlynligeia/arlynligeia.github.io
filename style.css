@@ -171,8 +171,10 @@ nav {
   margin-left: 40px;
 }
 
+
+
 /* --------------------------------------
-   CONTENEDORES GENERALES DE TODAS LAS SECCIONES
+   CONTENEDORES UNIFICADOS PARA SECCIONES
 ----------------------------------------- */
 .content-container {
   width: 800px;
@@ -180,11 +182,68 @@ nav {
   padding: 30px;
   box-sizing: border-box;
   border-radius: 20px;
-  background-color: #00CED1; /* color por defecto, cambiar individualmente */
+  background-color: #00CED1; /* color por defecto (personalizable en cada sección) */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
-
 /* --------------------------------------
-   TÍTULOS DE TODAS LAS SECCIONES
+   ESTRUCTURA DE FILAS Y COLUMNAS
+----------------------------------------- */
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.flex-col {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* --------------------------------------
+   TEXTO GENERAL
+----------------------------------------- */
+.text-block {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.6;
+  text-align: justify;
+}
+.text-block.center {
+  text-align: center;
+}
+.text-block.left {
+  text-align: left;
+}
+.text-block.right {
+  text-align: right;
+}
+/* --------------------------------------
+   IMÁGENES
+----------------------------------------- */
+.image-block img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+/* --------------------------------------
+   ENLACES GENERALES
+----------------------------------------- */
+a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  text-decoration: underline;
+}
+/* --------------------------------------
+   TÍTULOS Y SUBTÍTULOS
 ----------------------------------------- */
 .section-title {
   font-family: 'Orbitron', sans-serif;
@@ -192,19 +251,22 @@ nav {
   text-align: left;
   text-transform: uppercase;
   color: white;
-  margin: 0 0 30px 0;
+  margin: 0 0 10px;
+}
+.subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-/* --------------------------------------
-   FILAS DE COLUMNAS GENERALES
------------------------------------------ */
-.column-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
+
+
+
+
+
+
 /* SOLO APLICAR ESPACIADO ENTRE FILAS DESPUÉS DE LA PRIMERA */
 .social-media .column-row:not(:first-of-type),
 .biography .column-row:not(:first-of-type) {
