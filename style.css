@@ -270,8 +270,6 @@ nav {
   width: 33.33%;
 }
 
-/* ======================================
-   💖 BIOGRAPHY SECTION
 ====================================== */
 /* 💖 BIOGRAPHY SECTION */
 .biography-container {
@@ -312,6 +310,10 @@ nav {
   font-size: 1.25rem;
   line-height: 1.5;     /* editable */
   text-align: justify;
+  margin-top: 0;         /* ✅ Quita cualquier espacio encima */
+  padding-top: 0;        /* ✅ Asegura que no haya padding arriba */
+}
+
 }
 .biography-text p {
   margin-bottom: 16px; /* editable */
