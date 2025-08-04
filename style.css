@@ -424,29 +424,25 @@ nav {
 /* ======================================
    * 💿 ALBUM SECTION *
 ====================================== */
-.album-section {
-  display: flex;
-  justify-content: center;
-  padding: 40px 0;
-}
 .album-container {
   width: 800px;
   background-color: #c531ff; /* Lila neón vibrante */
-  padding: 30px;
   border-radius: 16px;
-  box-sizing: border-box;
+  margin: 40px auto;
+  padding-top: 30px;    /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px;   /* editable margen izquierdo */
+  padding-right: 30px;  /* editable margen derecho */
 }
 /* Título ALBUM */
 .album-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  line-height: 1.6;
-  margin-bottom: 16px;
-  text-align: center;
-}
-.album-title a {
-  color: white;
+  display: block;
+  text-align: left;
+  margin-bottom: 16px; /* editable */
+  line-height: 1.6;    /* editable */
   text-decoration: none;
 }
 /* Columnas: Imagen + Texto */
