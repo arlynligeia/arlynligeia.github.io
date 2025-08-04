@@ -802,3 +802,56 @@ a:hover {
 #privacy-policy {
   display: none;
 }
+
+
+
+
+/* GRID DE 3 COLUMNAS */
+.grid-3-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* ENCABEZADOS Y TEXTOS */
+.column-header,
+.column-text {
+  text-align: center;
+  font-size: 1.25rem;
+  font-family: var(--body-font);
+  color: var(--text-dark);
+}
+
+.column-text a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.column-text a:hover {
+  text-decoration: underline;
+  color: var(--accent);
+}
+
+/* LIVE SECTION */
+.live-row {
+  display: flex;
+  align-items: center;
+  margin: 40px 0 20px 0;
+}
+
+.live-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.live-text {
+  font-family: var(--title-font);
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+}
