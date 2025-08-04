@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
 
 /* --------------------------------------
-   ESTILOS GENERALES DEL BODY Y BACKGROUND
+   BODY Y BACKGROUND GENERAL
 ----------------------------------------- */
 body {
   margin: 0;
-  font-family: 'Orbitron', sans-serif;
+  padding: 0;
+  font-family: 'Share Tech Mono', monospace;
   color: white;
   background: linear-gradient(to bottom, rgba(255, 0, 150, 0.3), rgba(0, 0, 255, 0.3)),
               url('assets/assets/Fondo%20galactico.png') no-repeat center center fixed;
@@ -169,4 +170,112 @@ nav {
   line-height: 1.5;
   max-width: 400px;
   margin-left: 40px;
+}
+
+/* ================================
+   🎨 CONTENEDOR BASE
+=================================== */
+.contenedor {
+  width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white; /* Modificable */
+  color: black;
+  box-sizing: border-box;
+}
+
+/* ================================
+   📌 TIPOGRAFÍAS Y TEXTOS
+=================================== */
+.titulo-seccion {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.texto-base {
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+.texto-normal {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+.texto-orbitron2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.texto-orbitron1-7 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+/* Alineaciones */
+.alinear-centro    { text-align: center; }
+.alinear-derecha   { text-align: right; }
+.alinear-izquierda { text-align: left; }
+.justificar        { text-align: justify; }
+
+/* Colores y tamaños opcionales */
+.color-rojo   { color: red; }
+.color-negro  { color: black; }
+.color-blanco { color: white; }
+
+.tam-pequeno  { font-size: 1rem; }
+.tam-mediano  { font-size: 1.25rem; }
+.tam-grande   { font-size: 1.5rem; }
+
+/* ================================
+   🔗 ENLACES
+=================================== */
+.enlace a {
+  text-decoration: none;
+  color: inherit;
+}
+.enlace a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   🖼️ IMÁGENES Y 🎥 VIDEOS
+=================================== */
+.imagen img,
+.video video {
+  max-width: 100%;
+  display: block;
+}
+.imagen,
+.video {
+  text-align: left;
+}
+.alinear-centro  { text-align: center; }
+.alinear-derecha { text-align: right; }
+
+/* ================================
+   📦 BOX INTERNO
+=================================== */
+.box {
+  padding: 16px;
+  margin: 10px 0;
+  background-color: #eee; /* Modificable */
+  color: black;
+}
+
+/* ================================
+   🧩 COLUMNAS (Flexbox)
+=================================== */
+.columnas {
+  display: flex;
+  gap: 20px; /* Espacio entre columnas */
+}
+.columna {
+  flex: 1;
+  box-sizing: border-box;
 }
