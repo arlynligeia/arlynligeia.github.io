@@ -804,19 +804,21 @@ nav {
 .donate-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #39ff14; /* Verde neón */
-  color: white;
+  background-color: #39ff14 !important;  /* Verde neón con !important para que sí se aplique */
+  color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
   border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .donate-button:hover {
   transform: scale(1.05);
-  background-color: #39ff14; /* Verde neón */
+  background-color: #2ecc0f;
   cursor: pointer;
 }
+
 
 /* ======================================
    SUPPORT MY STUDIES
