@@ -108,6 +108,17 @@
       <img src="assets/assets/ALCP 4.jpg" class="carousel-image" />
     </div>
   </div>
+  
+<script>
+const images = document.querySelectorAll(‘.carousel-image’);
+let current = 0;
+function showNextImage() {
+images[current].classList.remove(‘active’);
+current = (current + 1) % images.length;
+images[current].classList.add(‘active’);
+  }
 
-     </body>
+setInterval(showNextImage, 3000); // Cambia cada 10 segundos
+</script>
+</body>
 </html>
