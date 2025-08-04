@@ -248,6 +248,27 @@ nav {
 .enlace-hover:hover {
   text-decoration: underline;
 }
+/* 🔲 FILAS Y CELDAS EN FORMATO DE TABLA */
+.fila-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  line-height: 1.5; /* editable */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: #001f3f;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.fila-social.header .celda-social {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #d400d4;
+}
+.celda-social {
+  width: 33.33%;
+}
 
 
 
