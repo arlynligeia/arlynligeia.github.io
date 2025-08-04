@@ -660,6 +660,7 @@ nav {
 
 
 
+
 /* ======================================
    BY MY PATRON
 ====================================== */
@@ -678,7 +679,7 @@ nav {
   font-size: 2.5rem;
   margin-bottom: 16px;
   line-height: 1.6;
-  text-align: center;
+  text-align: left; /* Corregido */
 }
 .bymypatron-title a,
 .bymypatron-subtitle a {
@@ -705,6 +706,12 @@ nav {
   color: black;
   text-align: justify;
 }
+/* Botón centrado con wrapper */
+.donate-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
 .donate-button {
   display: inline-block;
   padding: 10px 20px;
@@ -715,11 +722,10 @@ nav {
   text-decoration: none;
   border-radius: 6px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease-in-out;
 }
 .donate-button:hover {
-  text-decoration: underline;
-  background-color: #e01380;
+  transform: scale(1.05); /* Animación tipo empuje */
   cursor: pointer;
 }
 
