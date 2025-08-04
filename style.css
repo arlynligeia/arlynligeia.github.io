@@ -420,29 +420,33 @@ nav {
   margin-bottom: 16px;  /* editable */
 }
 
-
 /* ======================================
-   * 💿 ALBUM SECTION *
+   💿 ALBUM SECTION
 ====================================== */
 .album-container {
   width: 800px;
   background-color: #c531ff; /* Lila neón vibrante */
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;    /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px;   /* editable margen izquierdo */
-  padding-right: 30px;  /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-/* Título ALBUM */
+/* 🔠 TÍTULO PRINCIPAL */
 .album-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
   text-align: left;
-  margin-bottom: 16px; /* editable */
-  line-height: 1.6;    /* editable */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.album-title a {
+  color: white;
   text-decoration: none;
 }
 /* Columnas: Imagen + Texto */
@@ -502,7 +506,6 @@ nav {
   color: white;
   text-align: justify;
 }
-
 
 
 
