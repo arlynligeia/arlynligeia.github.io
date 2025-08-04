@@ -422,14 +422,19 @@ nav {
 
 
 /* ======================================
-   /* 💿 ALBUM SECTION */
+   * 💿 ALBUM SECTION *
 ====================================== */
+.album-section {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
 .album-container {
   width: 800px;
-  margin: 40px auto;
+  background-color: #c531ff; /* Lila neón vibrante */
   padding: 30px;
-  background-color: #BF00FF; /* Lila más fuerte */
   border-radius: 16px;
+  box-sizing: border-box;
 }
 /* Título ALBUM */
 .album-title {
@@ -438,7 +443,7 @@ nav {
   color: white;
   line-height: 1.6;
   margin-bottom: 16px;
-  text-decoration: none;
+  text-align: center;
 }
 .album-title a {
   color: white;
