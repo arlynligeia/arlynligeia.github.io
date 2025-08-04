@@ -702,6 +702,11 @@ nav {
 .contact-input {
   height: 40px;
 }
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
 .contact-textarea {
   resize: vertical;
   min-height: 150px;
