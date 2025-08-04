@@ -489,7 +489,7 @@ nav {
   margin-bottom: 40px; /* No toca el borde final */
 }
 .footer-nombre {
-  font-size: 1.2rem; /* Tamaño editable */
+  font-size: 1.5rem; /* Tamaño editable */
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 10px;
@@ -498,6 +498,16 @@ nav {
   font-size: 0.9rem; /* Más pequeño que el nombre */
   text-transform: none;
   margin: 4px 0;
+}
+.footer-texto a {
+  color: white;                /* Mantiene color blanco */
+  text-decoration: none;       /* Sin subrayado por defecto */
+}
+.footer-texto a:hover,
+.footer-texto a:visited,
+.footer-texto a:focus {
+  color: white;                /* Blanco en todos los estados */
+  text-decoration: underline;  /* Subrayado opcional al pasar el mouse */
 }
 /* Espacio visual entre nombre y los textos */
 .footer-espacio {
