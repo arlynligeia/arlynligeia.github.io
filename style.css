@@ -345,6 +345,7 @@ nav {
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   color: white;
   text-align: justify;
 }
@@ -366,10 +367,10 @@ nav {
   background-color: #BF00FF; /* Lila más fuerte */
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
 /* 🔠 TÍTULO PRINCIPAL */
 .featurefilm-title {
