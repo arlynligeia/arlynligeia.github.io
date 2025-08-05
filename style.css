@@ -142,6 +142,66 @@ nav {
 .carousel-image.active {
   opacity: 1;
 }
+/* --------------------------------------
+   CONTENEDOR NUEVO A LA IZQUIERDA DEL CARRUSEL
+----------------------------------------- */
+.side-info-box {
+  width: 300px;
+  height: 100%;
+  background-color: rgba(0, 255, 255, 0.3); /* Celeste transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.side-info-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.side-info-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  line-height: 1.2;
+  margin: 0 0 20px;
+}
+.side-info-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
 
 /* ======================================
    🔵 SOCIAL MEDIA CONTENT SECTION
