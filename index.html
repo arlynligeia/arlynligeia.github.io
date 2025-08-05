@@ -515,15 +515,25 @@
 
   setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
-  
+
+<script>
+  // Enlace al hacer clic en la imagen activa
+  document.getElementById("carousel-image-1").addEventListener("click", function () {
+    if (this.classList.contains("active")) {
+      window.location.href = "#featurefilm";
+    }
+  });
+</script>
+
 <!-- FOOTER -->
 <footer class="footer-custom">
   <div class="footer-nombre">ARLYN LIGEIA</div>
   <div class="footer-espacio"></div>
   <div class="footer-texto">© 2025 Arlyn Ligeia. All rights reserved.</div>
-<div class="footer-texto">
-  <a href="#privacypolicy" class="enlace-footer">Privacy Policy</a>
-</div>
+  <div class="footer-texto">
+    <a href="#privacypolicy" class="enlace-footer">Privacy Policy</a>
+  </div>
 </footer>
-     </body>
+</body>
 </html>
+
