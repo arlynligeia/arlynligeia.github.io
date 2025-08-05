@@ -756,54 +756,35 @@ nav {
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========================
-   CONTACT SECTION
-======================== */
-.contact-container {
-  max-width: 800px;
-  margin: 40px auto; /* separación del bloque anterior */
-  background-color: #39ff14; /* Verde neón */
-  padding: 30px;
-  border-radius: 12px;
-  font-family: 'Orbitron', sans-serif;
+/* ======================================
+   CONTACT FOR WORK SECTION
+====================================== */
+.contactforwork-container {
+  width: 800px;
+  background-color: #001F99;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
-.contact-title {
+/* 🔠 TÍTULO PRINCIPAL */
+.contactforwork-title {
+  font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  line-height: 1.6;
-  margin-bottom: 16px;
+  display: block;
   text-align: left;
-}
-.contact-title a {
-  color: white;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
   text-decoration: none;
 }
-.contact-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+/* Si decides usar un <a> dentro del título */
+.contactforwork-title a {
+  color: white;
+  text-decoration: none;
 }
 .contact-label {
   display: block;
@@ -850,8 +831,31 @@ nav {
 }
 .contact-button:hover {
   transform: scale(1.05);
-  background-color: #2de80e;
-}
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    BY MY PATRON
