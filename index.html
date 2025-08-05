@@ -508,23 +508,26 @@
 <script>
   const images = document.querySelectorAll('.carousel-image');
   let current = 0;
+
   function showNextImage() {
     images[current].classList.remove('active');
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }
-  // ENLACES:
-  // Imagen 1 → sección #featurefilm
-  images[0].addEventListener('click', function () {
-    window.location.href = '#featurefilm';
-  });
-  // Imagen 2 → sección #album
-  images[1].addEventListener('click', function () {
-    window.location.href = '#album';
-  });
-  // (Imagen 3 no tiene acción todavía)
-  setInterval(showNextImage, 10000); // Cambia cada 10 segundos
+
+  // Enlazar imágenes a secciones
+  images[0].onclick = () => {
+    document.querySelector('#featurefilm')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  images[1].onclick = () => {
+    document.querySelector('#album')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  // Imagen 3 no tiene acción
+  setInterval(showNextImage, 10000);
 </script>
+
 
   
 <!-- FOOTER -->
