@@ -1009,65 +1009,43 @@ nav {
   cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   SUPPORT MY STUDIES
+   SUPPORT MY STUDIES SECTION
 ====================================== */
 .supportmystudies-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ff1493; /* Fucsia */
-  margin: 40px auto 0 auto; /* Agrega espacio arriba */
-  padding: 30px;
-  border-radius: 12px;
-  font-family: 'Share Tech Mono', monospace;
+  width: 800px;
+  background-color: #39FF14;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
+/* 🔠 TÍTULO PRINCIPAL */
 .supportmystudies-title {
   font-family: 'Orbitron', sans-serif;
-  color: white;
   font-size: 2.5rem;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  color: white;
+  display: block;
   text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
 }
+/* Si decides usar un <a> dentro del título */
 .supportmystudies-title a {
   color: white;
   text-decoration: none;
 }
-.supportmystudies-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-}
-.supportmystudies-text {
+.supportmystudies-description {
+  font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 16px;
   color: white;
   text-align: justify;
-  font-family: 'Share Tech Mono', monospace;
 }
 .donate-button-wrapper {
   text-align: center;
@@ -1076,53 +1054,56 @@ nav {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff1493; /* Fucsia */
-  color: white;
+  color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
   border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .donate-button:hover {
   transform: scale(1.05);
-  background-color: #e01380;
   cursor: pointer;
 }
 
 /* ======================================
-   GIFTS
+   GIFTS SECTION
 ====================================== */
 .gifts-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ff1493; /* Fucsia */
-  margin: 40px auto 0 auto; /* Agrega espacio arriba */
-  padding: 30px;
-  border-radius: 12px;
-  font-family: 'Share Tech Mono', monospace;
+  width: 800px;
+  background-color: #39FF14;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
+/* 🔠 TÍTULO PRINCIPAL */
 .gifts-title {
   font-family: 'Orbitron', sans-serif;
-  color: white;
   font-size: 2.5rem;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  color: white;
+  display: block;
   text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
 }
+/* Si decides usar un <a> dentro del título */
 .gifts-title a {
   color: white;
   text-decoration: none;
 }
-.gifts-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-}
-.gifts-text {
+.gifts-description {
+  font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 16px;
   color: white;
   text-align: justify;
-  font-family: 'Share Tech Mono', monospace;
 }
 .donate-button-wrapper {
   text-align: center;
@@ -1131,18 +1112,43 @@ nav {
   display: inline-block;
   padding: 10px 20px;
   background-color: #ff1493; /* Fucsia */
-  color: white;
+  color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
   border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .donate-button:hover {
   transform: scale(1.05);
-  background-color: #e01380;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
