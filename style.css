@@ -90,6 +90,24 @@ nav {
 .menu li:hover .submenu {
   display: block;
 }
+/* Ícono de canasta */
+.cart-icon-image {
+  width: 32px; /* Ajusta el tamaño a tu gusto */
+  height: 32px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.cart-button {
+  display: inline-block;
+  padding: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cart-button:hover {
+  transform: scale(1.1);
+}
+
 /* Efecto turquesa al pasar el mouse por submenú */
 .submenu li {
   position: relative;
@@ -142,6 +160,7 @@ nav {
 .carousel-image.active {
   opacity: 1;
 }
+
 /* --------------------------------------
    CONTENEDOR NUEVO A LA IZQUIERDA DEL CARRUSEL
 ----------------------------------------- */
