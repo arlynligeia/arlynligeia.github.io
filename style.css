@@ -757,6 +757,83 @@ nav {
 }
 
 /* ======================================
+   CONTACT FOR FANS SECTION
+====================================== */
+.contactforfans-container {
+  width: 800px;
+  background-color: #39FF14;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* 🔠 TÍTULO PRINCIPAL */
+.contactforfans-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.contactforfans-title a {
+  color: white;
+  text-decoration: none;
+}
+.contactforfans-label {
+  display: block;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 8px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+}
+.contactforfans-input,
+.contactforfans-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+}
+.contactforfans-input {
+  height: 40px;
+}
+.contactforfans-input,
+.contactforfans-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.contactforfans-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contactforfans-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #ff1493; /* Fucsia */
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contactforfans-button:hover {
+  transform: scale(1.05);
+ }
+
+/* ======================================
    CONTACT FOR WORK SECTION
 ====================================== */
 .contactforwork-container {
@@ -786,7 +863,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-.contact-label {
+.contactforwork-label {
   display: block;
   font-size: 1.25rem;
   color: white;
@@ -794,8 +871,8 @@ nav {
   text-align: left;
   font-family: 'Orbitron', sans-serif;
 }
-.contact-input,
-.contact-textarea {
+.contactforwork-input,
+.contactforwork-textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
@@ -804,19 +881,19 @@ nav {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
 }
-.contact-input {
+.contactforwork-input {
   height: 40px;
 }
-.contact-input,
-.contact-textarea {
+.contactforwork-input,
+.contactforwork-textarea {
   width: 100%;
   box-sizing: border-box;
 }
-.contact-textarea {
+.contactforwork-textarea {
   resize: vertical;
   min-height: 150px;
 }
-.contact-button {
+.contactforwork-button {
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
@@ -829,7 +906,7 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.contact-button:hover {
+.contactforwork-button:hover {
   transform: scale(1.05);
  }
 
