@@ -196,14 +196,6 @@ nav {
   transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
 /* ======================================
    🔵 SOCIAL MEDIA CONTENT SECTION
 ====================================== */
@@ -304,57 +296,65 @@ nav {
 }
 
 /* ======================================
-   💖 BIOGRAPHY SECTION
+   BIOGRAPHY SECTION
 ====================================== */
 .biography-container {
   width: 800px;
   background-color: #ff1493;
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;    /* editable margen superior */
+  padding-top: 30px; /* editable margen superior */
   padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px;   /* editable margen izquierdo */
-  padding-right: 30px;  /* editable margen derecho */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO DE BIOGRAFÍA */
+/* 🔠 TÍTULO PRINCIPAL */
 .biography-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
   text-align: left;
-  margin-bottom: 16px; /* editable */
-  line-height: 1.6;    /* editable */
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
   text-decoration: none;
 }
-/* 🧍‍♀️ TEXTO + IMAGEN EN COLUMNAS */
-.biography-content {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
+/* Si decides usar un <a> dentro del título */
+.biography-title a {
+  color: white;
+  text-decoration: none;
 }
-/* 📝 COLUMNA DE TEXTO */
-.biography-text {
+/* Columnas: Imagen + Texto */
+.biography-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+/* Columna de texto */
+.biography-text-side {
   flex: 1;
   min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.biography-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;     /* editable */
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: white;
   text-align: justify;
 }
-.biography-text p {
-  margin-bottom: 16px; /* editable */
-}
-/* 🖼️ COLUMNA DE IMAGEN */
+/* Imagen */
 .biography-image {
   flex: 1;
   min-width: 300px;
-  display: flex;
-  align-items: flex-start;
 }
 .biography-image img {
-  max-width: 100%;
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -379,11 +379,9 @@ nav {
   display: block;
   text-align: left;
   margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   line-height: 1.6;
   text-decoration: none;
-}
-.featurefilm-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
 }
 /* Si decides usar un <a> dentro del título */
 .featurefilm-title a {
