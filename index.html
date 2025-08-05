@@ -24,7 +24,7 @@
 </li>
           
 <!-- Otras secciones del menú principal -->
-     <li><a href="#biography" class="menu-button">Biography</a></li>
+    <li><a href="#" id="biography-btn" class="menu-button">Biography</a></li>
 
         <li>
           <button>Film</button>
@@ -200,7 +200,7 @@
 </div>
 
 <!-- BIOGRAPHY SECTION-->
-<section id="biography" class="biography-section">
+<section id="biography" class="biography-section hidden">
   <div class="biography-container">
   <h2 class="biography-title"><a href="#biography">BIOGRAPHY</a></h2>
     <div class="biography-columns">
@@ -503,7 +503,21 @@
   }
   setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
-
+  
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const bioBtn = document.getElementById('biography-btn');
+    const bioSection = document.getElementById('biography');
+    if (bioBtn && bioSection) {
+      bioSection.style.display = 'none';
+      bioBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        bioSection.style.display = 'block';
+        bioSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  });
+</script>
 
 
 
