@@ -120,15 +120,10 @@
     </div>
   </div>
 <div class="carousel">
-  <a href="#featurefilm">
-    <img src="assets/assets/ALCP 2.jpg" class="carousel-image active" />
-  </a>
-  <a href="#album">
-    <img src="assets/assets/ALCP 3.jpg" class="carousel-image" />
-  </a>
-  <img src="assets/assets/ALCP 4.jpg" class="carousel-image" />
+  <img src="assets/assets/ALCP 2.jpg" class="carousel-image active" id="img1" />
+  <img src="assets/assets/ALCP 3.jpg" class="carousel-image" id="img2" />
+  <img src="assets/assets/ALCP 4.jpg" class="carousel-image" id="img3" />
 </div>
-
 </div>
 <!-- CARRUSEL FIN -->
 
@@ -512,31 +507,26 @@
   
 <script>
   const images = document.querySelectorAll('.carousel-image');
-  const links = [
-    document.getElementById('link0'),
-    document.getElementById('link1'),
-    document.getElementById('link2')
-  ];
-
   let current = 0;
 
   function showNextImage() {
-    // Oculta la actual
     images[current].classList.remove('active');
-    links[current].style.zIndex = '0';
-
-    // Muestra la siguiente
     current = (current + 1) % images.length;
     images[current].classList.add('active');
-    links[current].style.zIndex = '1';
   }
 
-  // Asegura que solo el link visible sea clickeable
-  links.forEach(link => link.style.zIndex = '0');
-  links[0].style.zIndex = '1'; // el primero activo al inicio
+  // Enlazar imágenes a secciones usando ID
+  document.getElementById('img1').addEventListener('click', () => {
+    document.querySelector('#featurefilm')?.scrollIntoView({ behavior: 'smooth' });
+  });
 
-  setInterval(showNextImage, 10000);
+  document.getElementById('img2').addEventListener('click', () => {
+    document.querySelector('#album')?.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  setInterval(showNextImage, 10000); // Cambia cada 10 segundos
 </script>
+
 
 
   
