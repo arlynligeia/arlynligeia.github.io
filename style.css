@@ -550,17 +550,17 @@ nav {
 }
 
 /* ======================================
-   💿 ALBUM SECTION
+   ALBUM SECTION
 ====================================== */
 .album-container {
   width: 800px;
   background-color: #BF00FF; /* Lila más fuerte */
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
 /* 🔠 TÍTULO PRINCIPAL */
 .album-title {
@@ -570,11 +570,9 @@ nav {
   display: block;
   text-align: left;
   margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   line-height: 1.6;
   text-decoration: none;
-}
-.album-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
 }
 /* Si decides usar un <a> dentro del título */
 .album-title a {
@@ -647,10 +645,10 @@ nav {
   background-color: #BF00FF; /* Lila más fuerte */
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
 /* 🔠 TÍTULO PRINCIPAL */
 .fwcollection-title {
@@ -660,11 +658,9 @@ nav {
   display: block;
   text-align: left;
   margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   line-height: 1.6;
   text-decoration: none;
-}
-.fwcollection-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
 }
 /* Si decides usar un <a> dentro del título */
 .fwcollection-title a {
@@ -697,50 +693,39 @@ nav {
   text-align: justify;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   📘 RESEARCH ARTICLE SECTION
+   RESEARCH ARTICLE SECTION
 ====================================== */
 .researcharticle-container {
   width: 800px;
-  background-color: #0033cc;
+  background-color: #BF00FF; /* Lila más fuerte */
   border-radius: 16px;
   margin: 40px auto;
-  padding: 30px;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
 /* 🔠 TÍTULO PRINCIPAL */
 .researcharticle-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  display: block;
   text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
 }
+/* Si decides usar un <a> dentro del título */
 .researcharticle-title a {
   color: white;
   text-decoration: none;
 }
-.researcharticle-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-}
 /* 📦 CUADROS DE ARTÍCULOS */
 .research-box {
-  width: 700px;
+  width: 750px;
   background-color: #ff1493; /* Fucsia */
   border-radius: 12px;
   margin: 0 auto 20px auto; /* centrado + margen inferior */
@@ -762,6 +747,14 @@ nav {
 .research-link:hover {
   text-decoration: underline;
 }
+
+
+
+
+
+
+
+
 
 /* ========================
    CONTACT SECTION
