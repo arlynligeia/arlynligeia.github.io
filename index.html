@@ -508,23 +508,21 @@
 <script>
   const images = document.querySelectorAll('.carousel-image');
   let current = 0;
-
   function showNextImage() {
     images[current].classList.remove('active');
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }
-
-  // Enlazar imágenes a secciones usando ID
-  document.getElementById('img1').addEventListener('click', () => {
-    document.querySelector('#featurefilm')?.scrollIntoView({ behavior: 'smooth' });
+  // Enlazar imágenes a secciones
+  document.getElementById('img1')?.addEventListener('click', () => {
+    document.getElementById('featurefilm')?.scrollIntoView({ behavior: 'smooth' });
   });
-
-  document.getElementById('img2').addEventListener('click', () => {
-    document.querySelector('#album')?.scrollIntoView({ behavior: 'smooth' });
+  document.getElementById('img2')?.addEventListener('click', () => {
+    document.getElementById('album')?.scrollIntoView({ behavior: 'smooth' });
   });
-
-  setInterval(showNextImage, 10000); // Cambia cada 10 segundos
+  // Imagen 3 no enlaza a nada todavía
+  // Activar carrusel automático
+  setInterval(showNextImage, 10000);
 </script>
 
 
