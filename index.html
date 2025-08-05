@@ -513,17 +513,9 @@
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }
-  // Enlazar imágenes a secciones
-  document.getElementById('img1')?.addEventListener('click', () => {
-    document.getElementById('featurefilm')?.scrollIntoView({ behavior: 'smooth' });
-  });
-  document.getElementById('img2')?.addEventListener('click', () => {
-    document.getElementById('album')?.scrollIntoView({ behavior: 'smooth' });
-  });
-  // Imagen 3 no enlaza a nada todavía
-  // Activar carrusel automático
-  setInterval(showNextImage, 10000);
+  setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
+
 
 
 
