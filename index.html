@@ -513,8 +513,19 @@
     current = (current + 1) % images.length;
     images[current].classList.add('active');
   }
-  setInterval(showNextImage, 3000); // Cambia cada 10 segundos
+  // ENLACES:
+  // Imagen 1 → sección #featurefilm
+  images[0].addEventListener('click', function () {
+    window.location.href = '#featurefilm';
+  });
+  // Imagen 2 → sección #album
+  images[1].addEventListener('click', function () {
+    window.location.href = '#album';
+  });
+  // (Imagen 3 no tiene acción todavía)
+  setInterval(showNextImage, 10000); // Cambia cada 10 segundos
 </script>
+
   
 <!-- FOOTER -->
 <footer class="footer-custom">
