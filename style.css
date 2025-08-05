@@ -910,57 +910,38 @@ nav {
   transform: scale(1.05);
  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   BY MY PATRON
+   BY MY PATRON SECTION
 ====================================== */
 .bymypatron-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ff1493; /* Fucsia */
-  padding: 30px;
-  border-radius: 12px;
-  font-family: 'Share Tech Mono', monospace;
+  width: 800px;
+  background-color: #39FF14;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
+/* 🔠 TÍTULO PRINCIPAL */
 .bymypatron-title {
   font-family: 'Orbitron', sans-serif;
-  color: white;
   font-size: 2.5rem;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  color: white;
+  display: block;
   text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
 }
+/* Si decides usar un <a> dentro del título */
 .bymypatron-title a {
   color: white;
   text-decoration: none;
 }
-.bymypatron-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-}
-.bymypatron-text {
+.bymypatron-description {
+  font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 16px;
@@ -969,39 +950,42 @@ nav {
 }
 
 /* ======================================
-   SUPPORT MY WORK
+   SUPPORT MY WORK SECTION
 ====================================== */
 .supportmywork-container {
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: #ff1493; /* Fucsia */
-  margin: 40px auto 0 auto; /* Agrega espacio arriba */
-  padding: 30px;
-  border-radius: 12px;
-  font-family: 'Share Tech Mono', monospace;
+  width: 800px;
+  background-color: #39FF14;
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
+/* 🔠 TÍTULO PRINCIPAL */
 .supportmywork-title {
   font-family: 'Orbitron', sans-serif;
-  color: white;
   font-size: 2.5rem;
-  margin-bottom: 16px;
-  line-height: 1.6;
+  color: white;
+  display: block;
   text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
 }
+/* Si decides usar un <a> dentro del título */
 .supportmywork-title a {
   color: white;
   text-decoration: none;
 }
-.supportmywork-title {
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-}
-.supportmywork-text {
+.supportmywork-description {
+  font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.5;
   margin-bottom: 16px;
   color: white;
   text-align: justify;
-  font-family: 'Share Tech Mono', monospace;
 }
 .donate-button-wrapper {
   text-align: center;
@@ -1023,6 +1007,30 @@ nav {
   background-color: #2ecc0f;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
