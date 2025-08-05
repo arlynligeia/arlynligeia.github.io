@@ -120,10 +120,16 @@
     </div>
   </div>
 <div class="carousel">
-  <img src="assets/assets/ALCP 2.jpg" class="carousel-image active" />
-  <img src="assets/assets/ALCP 3.jpg" class="carousel-image" />
-  <img src="assets/assets/ALCP 4.jpg" class="carousel-image" />
-  </div>
+  <a id="link0" href="#featurefilm">
+    <img src="assets/assets/ALCP 2.jpg" class="carousel-image active" />
+  </a>
+  <a id="link1" href="#album">
+    <img src="assets/assets/ALCP 3.jpg" class="carousel-image" />
+  </a>
+  <a id="link2" href="javascript:void(0);">
+    <img src="assets/assets/ALCP 4.jpg" class="carousel-image" />
+  </a>
+</div>
 </div>
 <!-- CARRUSEL FIN -->
 
@@ -507,24 +513,29 @@
   
 <script>
   const images = document.querySelectorAll('.carousel-image');
+  const links = [
+    document.getElementById('link0'),
+    document.getElementById('link1'),
+    document.getElementById('link2')
+  ];
+
   let current = 0;
 
   function showNextImage() {
+    // Oculta la actual
     images[current].classList.remove('active');
+    links[current].style.zIndex = '0';
+
+    // Muestra la siguiente
     current = (current + 1) % images.length;
     images[current].classList.add('active');
+    links[current].style.zIndex = '1';
   }
 
-  // Enlazar imágenes a secciones
-  images[0].onclick = () => {
-    document.querySelector('#featurefilm')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // Asegura que solo el link visible sea clickeable
+  links.forEach(link => link.style.zIndex = '0');
+  links[0].style.zIndex = '1'; // el primero activo al inicio
 
-  images[1].onclick = () => {
-    document.querySelector('#album')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  // Imagen 3 no tiene acción
   setInterval(showNextImage, 10000);
 </script>
 
