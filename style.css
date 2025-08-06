@@ -1244,7 +1244,97 @@ nav {
   cursor: pointer;
 }
 
-
+/* ======================================
+   YOUR CART SECTION
+====================================== */
+/* Oculta el carrito por defecto */
+.yourcart-section {
+  display: none;
+}
+.jewelry-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* 🔠 TÍTULO PRINCIPAL */
+.jewelry-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
+}
+/* Corrección: el enlace ahora sí es blanco */
+.jewelry-title a {
+  color: white;
+  text-decoration: none;
+}
+/* Columnas */
+.yourcart-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+/* Columna individual */
+.yourcart-column {
+  flex: 1 1 30%;
+  text-align: center;
+}
+/* Imagen pequeña */
+.cart-image img {
+  width: 100px;
+  border-radius: 8px;
+}
+/* Precio en recuadro blanco */
+.cart-price-box {
+  background-color: white;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  padding: 10px 20px;
+  border-radius: 6px;
+}
+/* TOTAL */
+.cart-total {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 10px;
+}
+/* Botón centrado al final del carrito */
+.checkout-button-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+.checkout-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #9900CC;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-transform: uppercase;
+}
+.checkout-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 
 
