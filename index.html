@@ -82,9 +82,9 @@
 <li>
  <a href="#" class="menu-button menu-link" data-section="bemypatron">Be my Patron</a>
  <ul class="submenu">
-  <li><a href="#supportmywork" class="menu-button" data-section="supportmywork">Support my Work</a></li>
+  <li><a href="#supportmywork" class="menu-button">Support my Work</a></li>
   <li><a href="#supportmystudies" class="menu-button">Support my Studies</a></li>
-  <li><a href="#gifts" class="menu-button">gifts</a></li>
+  <li><a href="#gifts" class="menu-button">Gifts</a></li>
  </ul>
 </li>
       
@@ -673,7 +673,7 @@ We may update this policy from time to time. Changes will be posted on this page
   });
 </script>
 
-  <!-- Script para los submenús como Support my Work -->
+<!-- Script para los submenús como Support my Work -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const submenuLinks = document.querySelectorAll(".menu-button");
@@ -684,22 +684,37 @@ We may update this policy from time to time. Changes will be posted on this page
         const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
         const targetElement = document.getElementById(targetId);
 
-        // Lista de secciones internas de "bemypatron"
-        const patronSubsections = ["supportmywork", "supportmystudies", "gifts"];
+        // Grupos de sub-secciones por sección madre
+        const subsectionGroups = {
+          home: ["socialmediacontent"],
+          film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+          music: ["singles", "album", "videomusic"],
+          fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+          science: ["researcharticle", "researchproject"],
+          bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+          contact: ["contactforfans", "contactforwork"],
+          store: ["jewelry"]
+        };
 
-        if (patronSubsections.includes(targetId) && targetElement) {
+        // Buscar la sección madre del target
+        let parentSectionId = null;
+        for (const [parent, subsections] of Object.entries(subsectionGroups)) {
+          if (subsections.includes(targetId)) {
+            parentSectionId = parent;
+            break;
+          }
+        }
+
+        // Si se encuentra la sección madre y el elemento destino existe
+        if (parentSectionId && targetElement) {
           e.preventDefault();
 
-          // Mostrar la madre y ocultar todas las demás
+          // Oculta todas las secciones y muestra solo la madre
           sections.forEach(section => {
-            if (section.id === "bemypatron") {
-              section.style.display = "block";
-            } else {
-              section.style.display = "none";
-            }
+            section.style.display = section.id === parentSectionId ? "block" : "none";
           });
 
-          // Hacer scroll directo a la subsección
+          // Scroll hacia la subsección deseada
           setTimeout(() => {
             targetElement.scrollIntoView({ behavior: "smooth" });
           }, 50);
@@ -708,6 +723,7 @@ We may update this policy from time to time. Changes will be posted on this page
     });
   });
 </script>
+
 
   
   <!-- Script para mostrar Privacy Policy desde el footer -->
