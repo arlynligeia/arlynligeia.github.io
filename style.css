@@ -1274,46 +1274,51 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Columnas */
+/* Columnas generales */
 .yourcart-columns {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
 }
-/* Columna individual */
+
+/* Cada columna ocupa un tercio */
 .yourcart-column {
-  flex: 1 1 30%;
+  flex: 1;
   text-align: center;
 }
+
 /* Imagen pequeña */
 .cart-image img {
   width: 100px;
   border-radius: 8px;
 }
-/* Precio en recuadro blanco */
+
+/* Precio dentro de recuadro blanco pequeño */
 .cart-price-box {
   background-color: white;
-  color: white;
+  color: white; /* Puedes cambiar a fucsia si quieres contraste */
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
-  padding: 10px 20px;
+  padding: 8px 16px;
   border-radius: 6px;
+  display: inline-block;
 }
-/* TOTAL */
+
+/* Total debajo del nombre */
 .cart-total {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   color: white;
   margin-top: 10px;
 }
-/* Botón centrado al final del carrito */
+
+/* Botón centrado */
 .checkout-button-wrapper {
   text-align: center;
   margin-top: 30px;
 }
+
 .checkout-button {
   display: inline-block;
   padding: 12px 24px;
@@ -1327,6 +1332,7 @@ nav {
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-transform: uppercase;
 }
+
 .checkout-button:hover {
   transform: scale(1.05);
   cursor: pointer;
