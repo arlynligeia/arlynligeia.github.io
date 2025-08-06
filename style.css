@@ -1348,10 +1348,16 @@ nav {
 
 
 
-/* Oculta todas las secciones excepto home */
-section:not(#home) {
+/* Oculta todas las secciones por defecto */
+section {
   display: none;
 }
+
+/* Muestra solo la sección Home al cargar */
+#home {
+  display: block;
+}
+
 
 
 
