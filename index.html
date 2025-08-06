@@ -667,6 +667,7 @@ We may update this policy from time to time. Changes will be posted on this page
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
           targetSection.scrollIntoView({ behavior: "smooth" });
+          history.pushState(null, "", "#" + targetId);
         }
       });
     });
@@ -717,6 +718,7 @@ We may update this policy from time to time. Changes will be posted on this page
           // Scroll hacia la subsección deseada
           setTimeout(() => {
             targetElement.scrollIntoView({ behavior: "smooth" });
+            history.pushState(null, "", "#" + targetId);
           }, 50);
         }
       });
