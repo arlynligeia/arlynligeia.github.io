@@ -1148,7 +1148,97 @@ nav {
   cursor: pointer;
 }
 
-
+/* ======================================
+   JEWELRY SECTION
+====================================== */
+.jewelry-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* 🔠 TÍTULO PRINCIPAL */
+.jewelry-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  text-align: left;
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.jewelry-title a {
+  jewelry: white;
+  text-decoration: none;
+}
+/* Columnas */
+.jewelry-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.jewelry-column {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Imagen */
+.jewelry-image {
+  width: 100%;
+}
+.jewelry-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+/* Texto */
+.jewelry-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+.jewelry-price {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 12px;
+}
+/* Botón */
+.addtocart-button-wrapper {
+  text-align: center;
+}
+.addtocart-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #00CED1;
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.addtocart-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 
 
