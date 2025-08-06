@@ -683,6 +683,32 @@
   });
 </script>
 
+  <!-- Script para mostrar Privacy Policy desde el footer -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const privacyLink = document.getElementById("show-privacy-policy");
+    const allSections = document.querySelectorAll("section");
+
+    if (privacyLink) {
+      privacyLink.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        // Oculta todas las secciones
+        allSections.forEach(section => {
+          section.style.display = "none";
+        });
+
+        // Muestra la sección de Privacy Policy
+        const privacySection = document.getElementById("privacy-policy");
+        if (privacySection) {
+          privacySection.style.display = "block";
+          privacySection.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
+  });
+</script>
+
 
 
 
@@ -694,7 +720,7 @@
   <div class="footer-espacio"></div>
   <div class="footer-texto">© 2025 Arlyn Ligeia. All rights reserved.</div>
 <div class="footer-texto">
-  <a href="#privacypolicy" class="enlace-footer">Privacy Policy</a>
+  <p><a href="#" id="show-privacy-policy">Privacy Policy</a></p>
 </div>
 </footer>
      </body>
