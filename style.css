@@ -1274,18 +1274,26 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Columnas del carrito */
+.yourcart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .yourcart-columns {
   display: flex;
   justify-content: space-between;
   gap: 30px;
   margin-bottom: 30px;
 }
-.yourcart-column {
-  flex: 1 1 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Ajuste por columna */
+.image-column {
+  flex: 0 0 20%;  /* Más angosta */
+}
+.name-column {
+  flex: 1 1 60%;  /* Más ancha */
+}
+.price-column {
+  flex: 0 0 20%;  /* Más angosta */
 }
 /* Subtítulos de columnas */
 .yourcart-subtitle {
