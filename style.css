@@ -1305,72 +1305,43 @@ nav {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   🔒 PRIVACY POLICY SECTION
+   POLICY PRIVACY SECTION
 ====================================== */
-.privacy-container {
+.policyprivacy-container {
   width: 800px;
-  background-color: #0033cc;
+  background-color: #001F99;
   border-radius: 16px;
   margin: 40px auto;
-  padding-top: 30px;    /* editable margen superior */
+  padding-top: 30px; /* editable margen superior */
   padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px;   /* editable margen izquierdo */
-  padding-right: 30px;  /* editable margen derecho */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO DE SECCIÓN */
-.privacy-title {
+/* 🔠 TÍTULO PRINCIPAL */
+.policyprivacy-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
   text-align: left;
-  margin-bottom: 16px; /* editable */
-  line-height: 1.6;    /* editable */
+  margin-bottom: 16px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  line-height: 1.6;
   text-decoration: none;
 }
-/* 📝 TEXTO DE POLÍTICA */
-.privacy-text {
+/* Si decides usar un <a> dentro del título */
+.policyprivacy-title a {
+  color: white;
+  text-decoration: none;
+}
+.policyprivacy-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;     /* editable */
-  text-align: justify;
-}
-.privacy-text p {
-  margin-bottom: 16px; /* editable */
-}
-.privacy-text a {
+  line-height: 1.5;
+  margin-bottom: 16px;
   color: white;
-  text-decoration: underline;
+  text-align: justify;
 }
 
 /* ================================
