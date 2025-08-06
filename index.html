@@ -82,7 +82,7 @@
 <li>
  <a href="#" class="menu-button menu-link" data-section="bemypatron">Be my Patron</a>
  <ul class="submenu">
-  <li><a href="#supportmywork" class="menu-button">Support my Work</a></li>
+  <li><a href="#supportmywork" class="menu-button" data-section="supportmywork">Support my Work</a></li>
   <li><a href="#supportmystudies" class="menu-button">Support my Studies</a></li>
   <li><a href="#gifts" class="menu-button">gifts</a></li>
  </ul>
@@ -216,25 +216,25 @@
 
 <!-- SECCIÓN BIOGRAPHY-->
 <section id="biography" class="biography-section main-section">
-  <div class="biography-container">
-  <h2 class="biography-title"><a href="#biography">BIOGRAPHY</a></h2>
-    <div class="biography-columns">
-       <!-- 📄 Textos  -->
-       <div class="biography-text-side">  
-       <p class="biography-description">
-       Ligeia, also known as Arlyn Ligeia, is a multidisciplinary and independent Peruvian artist focused on film, music, fashion, art, and science. Her creative universe merges psychology, physics, art, and eroticism, wrapped in a gothic-cosmic-futuristic aesthetic.<br><br>
-       With a solid academic background, she holds a B.S. in Psychology and as complementary education, she also has training in Fashion Design and Management.<br><br>
-       In 2021, she directed her first music video through a video call, during the pandemic and COVID-19 lockdown. In 2024, despite going through a severe economic crisis, she improvised with what she had at hand and managed to create her first short film. She wrote, directed, shot, starred in, and edited it herself.<br><br>
-       After completing a music video and a short film, she is now in the production stage of her first feature film, entirely written, directed, shot, starred in and edited by her. At the same time, she is working on her debut music album and her first fashion collection.<br><br>
-       Ligeia is inspired by film noir and gothic cinema, as well as vaporwave and cyberpunk aesthetics. She defines her art as authentic and visceral, a space where she freely explores female sexual desire. She admires the archetype of the femme fatale, a recurring theme in her work. She refuses to be pigeonholed and opposes any prejudice, convinced that true art emerges from the fusion of diverse stimuli. She firmly believes that emotion and reason can coexist in complete harmony.
-       </p>
-       </div>
-       <!-- 📀 Imagen del álbum -->
-       <div class="biography-image">
-       <img src="assets/assets/arlynligeia.jpg" alt="arlynligeia">
-       </div>
-    </div>
-  </div>
+<div class="biography-container">
+<h2 class="biography-title"><a href="#biography">BIOGRAPHY</a></h2>
+<div class="biography-columns">
+<!-- 📄 Textos  -->
+<div class="biography-text-side">  
+<p class="biography-description">
+Ligeia, also known as Arlyn Ligeia, is a multidisciplinary and independent Peruvian artist focused on film, music, fashion, art, and science. Her creative universe merges psychology, physics, art, and eroticism, wrapped in a gothic-cosmic-futuristic aesthetic.<br><br>
+With a solid academic background, she holds a B.S. in Psychology and as complementary education, she also has training in Fashion Design and Management.<br><br>
+In 2021, she directed her first music video through a video call, during the pandemic and COVID-19 lockdown. In 2024, despite going through a severe economic crisis, she improvised with what she had at hand and managed to create her first short film. She wrote, directed, shot, starred in, and edited it herself.<br><br>
+After completing a music video and a short film, she is now in the production stage of her first feature film, entirely written, directed, shot, starred in and edited by her. At the same time, she is working on her debut music album and her first fashion collection.<br><br>
+Ligeia is inspired by film noir and gothic cinema, as well as vaporwave and cyberpunk aesthetics. She defines her art as authentic and visceral, a space where she freely explores female sexual desire. She admires the archetype of the femme fatale, a recurring theme in her work. She refuses to be pigeonholed and opposes any prejudice, convinced that true art emerges from the fusion of diverse stimuli. She firmly believes that emotion and reason can coexist in complete harmony.
+</p>
+</div>
+<!-- 📀 Imagen del álbum -->
+<div class="biography-image">
+<img src="assets/assets/arlynligeia.jpg" alt="arlynligeia">
+</div>
+</div>
+</div>
 </section>
 
 <!-- SECCIÓN FILM-->
@@ -298,7 +298,7 @@
 <!-- MUSIC VIDEO DIRECTION-->
 <div <section id="musicvideodirection" class="musicvideodirection-section">
   <div class="musicvideodirection-container">
-  <h2 class="musicvideodirection-title"><a href="#musicvideodirection">SHORT FILM</a></h2>
+  <h2 class="musicvideodirection-title"><a href="#musicvideodirection">MUSIC VIDEO DIRECTION</a></h2>
   <div class="musicvideodirection-subtitle">BLUE - DESPERTAR</div>
   <div class="musicvideodirection-video">
     <iframe
@@ -673,6 +673,43 @@ We may update this policy from time to time. Changes will be posted on this page
   });
 </script>
 
+  <!-- Script para los submenús como Support my Work -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const submenuLinks = document.querySelectorAll(".menu-button");
+    const sections = document.querySelectorAll("section");
+
+    submenuLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
+        const targetElement = document.getElementById(targetId);
+
+        // Lista de secciones internas de "bemypatron"
+        const patronSubsections = ["supportmywork", "supportmystudies", "gifts"];
+
+        if (patronSubsections.includes(targetId) && targetElement) {
+          e.preventDefault();
+
+          // Mostrar la madre y ocultar todas las demás
+          sections.forEach(section => {
+            if (section.id === "bemypatron") {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
+          });
+
+          // Hacer scroll directo a la subsección
+          setTimeout(() => {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+          }, 50);
+        }
+      });
+    });
+  });
+</script>
+
+  
   <!-- Script para mostrar Privacy Policy desde el footer -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
