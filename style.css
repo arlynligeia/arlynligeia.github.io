@@ -435,7 +435,38 @@ nav {
   display: inline-block;
   margin-right: 10px;
 }
-
+.socialmediacontent-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socialmediacontent-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 30px;
+}
+/* Ajuste por columna */
+.account-column {
+  flex: 0 0 25%;  /* Más angosta */
+}
+.days-column {
+  flex: 1 1 45%;  /* Más ancha */
+}
+.time-column {
+  flex: 0 0 30%;  /* Más angosta */
+}
+/* Subtítulos de columnas */
+.socialmediacontent-subtitle {
+  font-family: Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: #ff1493; /* fucsia */
+  text-transform: uppercase;
+  margin-top: 8px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 8px;
+  text-align: center;
+}
 
 
 
