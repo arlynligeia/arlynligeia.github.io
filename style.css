@@ -1156,7 +1156,7 @@ nav {
   border-radius: 16px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
+  padding-bottom: 10px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
@@ -1482,6 +1482,11 @@ nav {
 .share-button:hover {
   transform: scale(1.05);
   cursor: pointer;
+}
+#necklace,
+#necklace2,
+#necklace3 {
+  display: none; /* Ocultos por defecto */
 }
 
 
