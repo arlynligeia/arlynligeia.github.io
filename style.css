@@ -218,6 +218,82 @@ nav {
   transform: scale(1.1);
 }
 
+
+
+
+
+
+/* ======================================
+   SOCIAL MEDIA CONTENT
+====================================== */
+.socialmedia-container {
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua */
+  border-radius: 16px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* TÍTULO PRINCIPAL */
+.socialmedia-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  text-align: left;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-decoration: none;
+}
+/* Corrección: el enlace ahora sí es blanco */
+.socialmedia-title a {
+  color: white;
+  text-decoration: none;
+}
+.socialmedia-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socialmedia-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 30px;
+}
+/* Ajuste por columna */
+.account-column {
+  flex: 0 0 20%;  /* Más angosta */
+}
+.days-column {
+  flex: 1 1 60%;  /* Más ancha */
+}
+.time-column {
+  flex: 0 0 20%;  /* Más angosta */
+}
+/* Subtítulos de columnas */
+.yourcart-subtitle {
+  font-family: Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 8px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
 /* ======================================
    🔵 SOCIAL MEDIA CONTENT SECTION
 ====================================== */
