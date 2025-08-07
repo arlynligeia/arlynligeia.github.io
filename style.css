@@ -1274,7 +1274,6 @@ nav {
   text-decoration: none;
 }
 /* Imagen */
-/* Imagen */
 .necklace-image {
   width: 100%;
   text-align: center; /* Centra la imagen horizontalmente */
@@ -1287,7 +1286,6 @@ nav {
   display: inline-block; /* Centrado con text-align */
   border-radius: 12px;
 }
-
 
 /* Texto inferior */
 .necklace-development-title {
@@ -1324,7 +1322,25 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
 }
-
+.share-button-wrapper {
+  text-align: center;
+}
+.share-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:#444; /* Más sobrio para diferenciar de 'Add to cart' */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.share-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 
 
