@@ -373,6 +373,50 @@ nav {
   margin-bottom: 30px;  /* margen exterior abajo */
   text-align: center;
 }
+.tiktok3-button {
+  background-color: #ff1493; /* fucsia */
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  /* MÁRGENES EXTERIORES (separación respecto a otros elementos) */
+  margin-top: 20px;     /* margen exterior arriba */
+  margin-bottom: 20px;  /* margen exterior abajo */
+  margin-left: auto;    /* centra horizontalmente */
+  margin-right: auto;
+  /* PADDING (espaciado interior del texto) */
+  padding-top: 10px;    /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px;   /* margen interior izquierdo */
+  padding-right: 24px;  /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.tiktok3-button:hover {
+  transform: scale(1.05);
+}
+.days3-row {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: #000080; /* Azul marino oscuro */
+  margin-top: 30px; /* Espacio entre el subtítulo y el texto */
+  margin-bottom: 30px;  /* margen exterior abajo */
+  text-align: center;
+}
+.time3-row {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: #000080; /* Azul marino oscuro */
+  margin-top: 30px; /* Espacio entre el subtítulo y el texto */
+  margin-bottom: 30px;  /* margen exterior abajo */
+  text-align: center;
+}
 
 
 
