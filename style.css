@@ -1277,17 +1277,17 @@ nav {
 /* Imagen */
 .necklace-image {
   width: 100%;
-  max-width: 100%;
-  margin: 0 auto; /* Centrar el contenedor */
+  text-align: center; /* Centra la imagen horizontalmente */
+  margin-bottom: 20px;
 }
+
 .necklace-image img {
-  width: 100%;
-  max-width: 100%;
-  height: auto; /* Mantener proporción */
-  display: block; /* Evita espacios debajo de la imagen */
+  width: 360px; /* Igual que jewelry */
+  height: auto;
+  display: inline-block; /* Centrado con text-align */
   border-radius: 12px;
-  margin: 0 auto; /* Centrar la imagen */
 }
+
 
 /* Texto inferior */
 .necklace-development-title {
