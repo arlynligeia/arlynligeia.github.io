@@ -1274,14 +1274,21 @@ nav {
   text-decoration: none;
 }
 /* Imagen */
+/* Imagen */
 .necklace-image {
-  flex: 1;
-  min-width: 300px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto; /* Centrar el contenedor */
 }
 .necklace-image img {
   width: 100%;
+  max-width: 100%;
+  height: auto; /* Mantener proporción */
+  display: block; /* Evita espacios debajo de la imagen */
   border-radius: 12px;
+  margin: 0 auto; /* Centrar la imagen */
 }
+
 /* Texto inferior */
 .necklace-development-title {
   font-family: 'Orbitron', sans-serif;
