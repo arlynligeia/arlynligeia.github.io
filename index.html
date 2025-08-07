@@ -99,9 +99,6 @@
 <a href="#" class="menu-button menu-link" data-section="store">Store</a>
 <ul class="submenu">
 <li><a href="#jewelry" class="menu-button">jewelry</a></li>
-<a href="#" class="viewtheproduct-button" onclick="showProduct('necklace')">VIEW THE PRODUCT</a>
-<a href="#" class="viewtheproduct-button" onclick="showProduct('necklace2')">VIEW THE PRODUCT</a>
-<a href="#" class="viewtheproduct-button" onclick="showProduct('necklace3')">VIEW THE PRODUCT</a>
 </ul>
 </li>
       
@@ -851,20 +848,20 @@ We may update this policy from time to time. Changes will be posted on this page
 
       <script>
 function showProduct(productId) {
-  // Ocultar la galería completa
-document.getElementById('store').style.display = 'none';
+  // Ocultar galería principal
   document.getElementById('jewelry').style.display = 'none';
 
-  // Ocultar todos los contenedores de productos
+  // Ocultar todos los productos individuales
   document.getElementById('necklace').style.display = 'none';
   document.getElementById('necklace2').style.display = 'none';
   document.getElementById('necklace3').style.display = 'none';
 
-  // Mostrar solo el que corresponde
-  document.getElementById(productId).style.display = 'block';
-
-  // Scroll automático hacia el producto si lo necesitas
-  document.getElementById(productId).scrollIntoView({ behavior: 'smooth' });
+  // Mostrar el producto solicitado
+  const target = document.getElementById(productId);
+  if (target) {
+    target.style.display = 'block';
+    target.scrollIntoView({ behavior: 'smooth' });
+  }
 }
 </script>
 
