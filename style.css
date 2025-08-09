@@ -524,7 +524,7 @@ nav {
 ====================================== */
 .biography-container {
   width: 800px;
-  background-color:  #9900CC; /* purpura neon */
+  background-color: #ff1493; /* Fucsia */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -577,6 +577,8 @@ nav {
  .biography-image {
   flex: 1;
   min-width: 300px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
 }
 .biography-image img {
   width: 100%;
@@ -626,7 +628,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 /* Imagen */
 .featurefilm-image {
@@ -659,7 +661,7 @@ nav {
   font-size: 1.25rem;
   color: white;  
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   line-height: 1.5;
 }
 /* Texto inferior */
@@ -695,7 +697,7 @@ nav {
 ====================================== */
 .shortfilm-container {
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
