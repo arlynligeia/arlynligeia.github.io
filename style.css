@@ -975,39 +975,37 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* CUADROS DE ARTÍCULOS */
-.research-box {
-  width: 770px;
-  background-color: #ff1493; /* Fucsia */
-  border-radius: 15px;
-  padding: 20px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
-  box-sizing: border-box;
-  text-align: justify;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-/* Efecto botón al pasar el mouse */
-.research-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-/* 🔗 TEXTO DENTRO DEL BOX */
-.research-link {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.4;
+.researcharticle-button {
   display: block;
-  text-transform: uppercase;
-  margin-bottom: 12px;
+  background-color: #ff1493; /* Fucsia */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: white;
+  padding-top: 20px; /* editable margen superior */
+  padding-bottom: 20px; /* editable margen inferior */
+  padding-left: 0px; /* editable margen izquierdo */
+  padding-right: 0px; /* editable margen derecho *
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
+  margin-bottom: 16px; /* editable margen inferior */
+  margin-left: 16px; /* editable margen izquierdo */
+  margin-right: 16px; /* editable margen derecho */
   text-align: justify;
-}
-.research-link:hover {
   text-decoration: none;
-}
+  border-radius: 15px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+ } 
+ .researcharticle-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+
+
+
+
+
+
+
+
 
 
 
