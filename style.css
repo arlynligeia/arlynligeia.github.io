@@ -589,16 +589,21 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL */
 .featurefilm-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
   line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.featurefilm-title a {
+  color: white;
   text-decoration: none;
 }
 /* Si decides usar un <a> dentro del título */
@@ -645,43 +650,29 @@ nav {
 .featurefilm-text-info {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
+  color: white;  
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
-  color: white;
+  line-height: 1.5;
 }
 /* Texto inferior */
 .featurefilm-development-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  text-align: center;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
+  text-align: center;
 }
 .featurefilm-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   line-height: 1.5;
   text-align: justify;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    🎬 SHORT FILM SECTION
@@ -696,16 +687,16 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL */
 .shortfilm-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
 }
 /* Si decides usar un <a> dentro del título */
@@ -717,20 +708,23 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  line-height: 1.3;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
+  line-height: 1.3;
   text-align: center;
 }
-/* 📺 VIDEO */
+/* VIDEO */
 .shortfilm-video {
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 30px; /* editable */
 }
 .shortfilm-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
   color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
   text-align: justify;
 }
 
@@ -739,24 +733,24 @@ nav {
 ====================================== */
 .musicvideodirection-container {
   width: 800px;
-  background-color: #9900CC; /* Lila más fuerte */
-  border-radius: 16px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
-  padding-bottom: 2px; /* editable margen inferior */
+  padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL */
 .musicvideodirection-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
-  margin-bottom: 16px;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
 }
 /* Si decides usar un <a> dentro del título */
@@ -768,32 +762,25 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  line-height: 1.3;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
+  line-height: 1.3;
   text-align: center;
 }
-/* 📺 VIDEO */
+/* VIDEO */
 .musicvideodirection-video {
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 30px; /* editable */
 }
 .musicvideodirection-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
   color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
   text-align: justify;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    ALBUM SECTION
@@ -808,16 +795,16 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL */
 .album-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
 }
 /* Si decides usar un <a> dentro del título */
@@ -883,7 +870,7 @@ nav {
   font-size: 1.25rem;
   color: white;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
+  margin-bottom: 0px;
   line-height: 1.5;
   text-align: justify;
 }
