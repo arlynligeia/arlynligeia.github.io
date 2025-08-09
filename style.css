@@ -512,34 +512,16 @@ nav {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   BIOGRAPHY SECTION
+   BIOGRAPHY
 ====================================== */
 .biography-container {
   width: 800px;
-  background-color: #ff1493;
-  border-radius: 16px;
+  background-color:  #9900CC; /* purpura neon */
+  border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
-  padding-bottom: 2px; /* editable margen inferior */
+  padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
@@ -550,8 +532,8 @@ nav {
   color: white;
   display: block;
   text-align: left;
-  margin-bottom: 16px;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
   line-height: 1.6;
   text-decoration: none;
 }
@@ -565,7 +547,8 @@ nav {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-bottom: 30px;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
 }
 /* Columna de texto */
 .biography-text-side {
@@ -578,21 +561,31 @@ nav {
 .biography-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
   text-align: justify;
 }
-/* Imagen */
-.biography-image {
+ .biography-image {
   flex: 1;
   min-width: 300px;
 }
 .biography-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FEATURE FILM SECTION
