@@ -590,7 +590,7 @@ nav {
 ====================================== */
 .featurefilm-container {
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -615,11 +615,6 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
-.featurefilm-title a {
-  color: white;
-  text-decoration: none;
-}
 /* Columnas: Imagen + Texto */
 .featurefilm-columns {
   display: flex;
@@ -634,6 +629,8 @@ nav {
 .featurefilm-image {
   flex: 1;
   min-width: 300px;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
 }
 .featurefilm-image img {
   width: 100%;
@@ -683,15 +680,6 @@ nav {
   text-align: justify;
 }
 
-
-
-
-
-
-
-
-
-
 /* ======================================
    🎬 SHORT FILM SECTION
 ====================================== */
@@ -712,7 +700,7 @@ nav {
   color: white;
   display: block;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 0px;
+  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
@@ -727,14 +715,14 @@ nav {
   font-size: 2rem;
   color: white;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 0px;
+  margin-bottom: 16px;
   line-height: 1.3;
   text-align: center;
 }
 /* VIDEO */
 .shortfilm-video {
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 0px; /* editable */
+  margin-bottom: 16px; /* editable */
 }
 .shortfilm-description {
   font-family: 'Share Tech Mono', monospace;
@@ -746,25 +734,12 @@ nav {
   text-align: justify;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MUSIC VIDEO DIRECTION SECTION
 ====================================== */
 .musicvideodirection-container {
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -801,7 +776,7 @@ nav {
 /* VIDEO */
 .musicvideodirection-video {
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 30px; /* editable */
+  margin-bottom: 16px; /* editable */
 }
 .musicvideodirection-description {
   font-family: 'Share Tech Mono', monospace;
@@ -818,7 +793,7 @@ nav {
 ====================================== */
 .album-container {
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -851,12 +826,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 /* Imagen */
 .album-image {
   flex: 1;
   min-width: 300px;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
 }
 .album-image img {
   width: 100%;
@@ -882,19 +859,19 @@ nav {
 .album-text-info {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
+  color: white;  
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
-  color: white;
+  margin-bottom: 0px;
+  line-height: 1.5;
 }
 /* Texto inferior */
 .album-development-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  text-align: center;
   margin-top: 0px;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
+  text-align: center;
 }
 .album-description {
   font-family: 'Share Tech Mono', monospace;
@@ -906,35 +883,29 @@ nav {
   text-align: justify;
 }
 
-
-
-
-
-
-
 /* ======================================
    FW COLLECTION SECTION
 ====================================== */
 .fwcollection-container {
   width: 800px;
-  background-color: #9900CC; /* Lila más fuerte */
-  border-radius: 16px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
   padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+/* TÍTULO PRINCIPAL */
 .fwcollection-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
-  margin-bottom: 16px;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
 }
 /* Si decides usar un <a> dentro del título */
@@ -946,27 +917,42 @@ nav {
 .fwcollection-image {
   flex: 1;
   min-width: 300px;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
 }
 .fwcollection-image img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 15px;
 }
 /* Texto inferior */
 .fwcollection-development-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  text-align: center;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
+  line-height: 1.3;
+  text-align: center;
 }
 .fwcollection-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
   color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
   text-align: justify;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    RESEARCH ARTICLE SECTION
