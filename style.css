@@ -950,7 +950,7 @@ nav {
 ====================================== */
 .researcharticle-container {
   width: 800px;
-  background-color: #001F99; /* azul electrico */
+  background-color: #00CED1; /* Celeste agua */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -979,30 +979,7 @@ nav {
   display: block;
   background-color: #ff1493; /* Fucsia */
   font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  color: white;
-  padding-top: 20px; /* editable margen superior */
-  padding-bottom: 20px; /* editable margen inferior */
-  padding-left: 20px; /* editable margen izquierdo */
-  padding-right: 20px; /* editable margen derecho */
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
-  margin-bottom: 30px; /* editable margen inferior */
-  margin-left: 0px; /* editable margen izquierdo */
-  margin-right: 0px; /* editable margen derecho */
-  text-align: justify;
-  text-decoration: none;
-  border-radius: 15px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
- } 
- .researcharticle1-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
- }
-.researcharticle2-button {
-  display: block;
-  background-color: #ff1493; /* Fucsia */
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: white;
   padding-top: 20px; /* editable margen superior */
   padding-bottom: 20px; /* editable margen inferior */
@@ -1014,7 +991,30 @@ nav {
   margin-right: 0px; /* editable margen derecho */
   text-align: center;
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+ } 
+ .researcharticle1-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+.researcharticle2-button {
+  display: block;
+  background-color: #ff1493; /* Fucsia */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  padding-top: 20px; /* editable margen superior */
+  padding-bottom: 20px; /* editable margen inferior */
+  padding-left: 20px; /* editable margen izquierdo */
+  padding-right: 20px; /* editable margen derecho */
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
+  margin-bottom: 30px; /* editable margen inferior */
+  margin-left: 0px; /* editable margen izquierdo */
+  margin-right: 0px; /* editable margen derecho */
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
  } 
  .researcharticle2-button:hover {
@@ -1025,7 +1025,7 @@ nav {
   display: block;
   background-color: #ff1493; /* Fucsia */
   font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: white;
   padding-top: 20px; /* editable margen superior */
   padding-bottom: 20px; /* editable margen inferior */
@@ -1037,13 +1037,230 @@ nav {
   margin-right: 0px; /* editable margen derecho */
   text-align: center;
   text-decoration: none;
-  border-radius: 15px;
+  border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
  } 
  .researcharticle3-button:hover {
   transform: scale(1.05);
   cursor: pointer;
  }
+
+/* ======================================
+   BE MY PATRON SECTION
+====================================== */
+.bemypatron-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* TÍTULO PRINCIPAL */
+.bemypatron-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.bemypatron-title a {
+  color: white;
+  text-decoration: none;
+}
+.bemypatron-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* ======================================
+   SUPPORT MY WORK SECTION
+====================================== */
+.supportmywork-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* TÍTULO PRINCIPAL */
+.supportmywork-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.supportmywork-title a {
+  color: white;
+  text-decoration: none;
+}
+.supportmywork-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9900CC; /* purpura neon */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ======================================
+   SUPPORT MY STUDIES SECTION
+====================================== */
+.supportmystudies-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* TÍTULO PRINCIPAL */
+.supportmystudies-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.supportmystudies-title a {
+  color: white;
+  text-decoration: none;
+}
+.supportmystudies-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9900CC; /* purpura neon */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ======================================
+   GIFTS SECTION
+====================================== */
+.gifts-container {
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* TÍTULO PRINCIPAL */
+.gifts-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+/* Si decides usar un <a> dentro del título */
+.gifts-title a {
+  color: white;
+  text-decoration: none;
+}
+.gifts-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9900CC; /* purpura neon */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
 
 
 
@@ -1219,218 +1436,6 @@ nav {
   cursor: pointer;
  }
 
-/* ======================================
-   BE MY PATRON SECTION
-====================================== */
-.bemypatron-container {
-  width: 800px;
-  background-color: #00CED1;
-  border-radius: 16px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* 🔠 TÍTULO PRINCIPAL */
-.bemypatron-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  text-align: left;
-  margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  line-height: 1.6;
-  text-decoration: none;
-}
-/* Si decides usar un <a> dentro del título */
-.bemypatron-title a {
-  color: white;
-  text-decoration: none;
-}
-.bemypatron-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-
-/* ======================================
-   SUPPORT MY WORK SECTION
-====================================== */
-.supportmywork-container {
-  width: 800px;
-  background-color: #00CED1;
-  border-radius: 16px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* 🔠 TÍTULO PRINCIPAL */
-.supportmywork-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  text-align: left;
-  margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  line-height: 1.6;
-  text-decoration: none;
-}
-/* Si decides usar un <a> dentro del título */
-.supportmywork-title a {
-  color: white;
-  text-decoration: none;
-}
-.supportmywork-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-.donate-button-wrapper {
-  text-align: center;
-}
-.donate-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white !important;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
-  border-radius: 6px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.donate-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* ======================================
-   SUPPORT MY STUDIES SECTION
-====================================== */
-.supportmystudies-container {
-  width: 800px;
-  background-color: #00CED1;
-  border-radius: 16px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* 🔠 TÍTULO PRINCIPAL */
-.supportmystudies-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  text-align: left;
-  margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  line-height: 1.6;
-  text-decoration: none;
-}
-/* Si decides usar un <a> dentro del título */
-.supportmystudies-title a {
-  color: white;
-  text-decoration: none;
-}
-.supportmystudies-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-.donate-button-wrapper {
-  text-align: center;
-}
-.donate-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white !important;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
-  border-radius: 6px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.donate-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
-
-/* ======================================
-   GIFTS SECTION
-====================================== */
-.gifts-container {
-  width: 800px;
-  background-color: #00CED1;
-  border-radius: 16px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* 🔠 TÍTULO PRINCIPAL */
-.gifts-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  text-align: left;
-  margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  line-height: 1.6;
-  text-decoration: none;
-}
-/* Si decides usar un <a> dentro del título */
-.gifts-title a {
-  color: white;
-  text-decoration: none;
-}
-.gifts-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-.donate-button-wrapper {
-  text-align: center;
-}
-.donate-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white !important;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
-  border-radius: 6px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.donate-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
 
 /* ======================================
    JEWELRY SECTION
