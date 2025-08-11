@@ -1027,8 +1027,9 @@ nav {
    RESEARCH ARTICLE
 ====================================== */
 .researcharticle-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #00CED1; /* Celeste agua */
+  background-color: #001F99;; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1036,22 +1037,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.researcharticle-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .researcharticle-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .researcharticle-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .researcharticle1-button {
   display: block;
@@ -1122,6 +1134,21 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    BE MY PATRON SECTION
