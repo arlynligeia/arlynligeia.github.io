@@ -1137,25 +1137,13 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    BE MY PATRON SECTION
 ====================================== */
 .bemypatron-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1163,22 +1151,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.bemypatron-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #00B8BA; /* Turquesa ligeramente más oscuro */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .bemypatron-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .bemypatron-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .bemypatron-description {
   font-family: 'Share Tech Mono', monospace;
@@ -1194,8 +1193,9 @@ nav {
    SUPPORT MY WORK SECTION
 ====================================== */
 .supportmywork-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1203,22 +1203,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.supportmywork-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #00B8BA; /* Turquesa ligeramente más oscuro */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .supportmywork-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .supportmywork-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .supportmywork-description {
   font-family: 'Share Tech Mono', monospace;
@@ -1235,7 +1246,7 @@ nav {
 .donate-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #ff1493; /* Fucsia */
   color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
@@ -1253,8 +1264,9 @@ nav {
    SUPPORT MY STUDIES SECTION
 ====================================== */
 .supportmystudies-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1262,22 +1274,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.supportmystudies-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #00B8BA; /* Turquesa ligeramente más oscuro */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .supportmystudies-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .supportmystudies-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .supportmystudies-description {
   font-family: 'Share Tech Mono', monospace;
@@ -1294,7 +1317,7 @@ nav {
 .donate-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #ff1493; /* Fucsia */
   color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
@@ -1312,8 +1335,9 @@ nav {
    GIFTS SECTION
 ====================================== */
 .gifts-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1321,22 +1345,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.gifts-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #00B8BA; /* Turquesa ligeramente más oscuro */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .gifts-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .gifts-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .gifts-description {
   font-family: 'Share Tech Mono', monospace;
@@ -1353,7 +1388,7 @@ nav {
 .donate-button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #ff1493; /* Fucsia */
   color: white !important;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
@@ -1366,6 +1401,15 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    CONTACT FOR FANS
@@ -1444,6 +1488,14 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
  }
+
+
+
+
+
+
+
+
 
 /* ======================================
    CONTACT FOR WORK SECTION
