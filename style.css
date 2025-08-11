@@ -533,25 +533,19 @@ nav {
   padding-right: 30px; /* editable margen derecho */
 }
 .biography-title {
-  background-color: #e60f81; /* un tono más oscuro que el fucsia */
-  border-radius: 20px 20px 0 0; /* solo arriba redondeado */
-  padding: 0 30px; /* mismo padding lateral del contenedor */
-  margin: -30px -30px 16px -30px; /* cubrir borde a borde, dejando abajo tus 16px */
-  
+  position: relative;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
+  margin-top: 0;  /* Respeta margen superior actual */
+  margin-bottom: 16px; /* Respeta margen inferior actual */
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
-}
-
-.biography-title a {
-  color: white;
-  text-decoration: none;
-}
-
+  background-color: #e60f81; /* Franja oscura */
+  border-radius: 20px 20px 0 0; /* Solo arriba redondeado */
+  padding: 10px 0; /* Un poco de aire interno vertical
 
 
 /* Columnas: Imagen + Texto */
