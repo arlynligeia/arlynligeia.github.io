@@ -540,7 +540,7 @@ nav {
   left: 0;
   width: 100%;
   height: 90px; /* grosor de la franja */
-  background-color: #cc0066; /* fucsia oscuro */
+  background-color: #e60073; /* fucsia intenso */
   border-radius: 20px 20px 0 0;
   z-index: 1; /* franja encima del fondo */
 }
@@ -620,7 +620,7 @@ nav {
   left: 0;
   width: 100%;
   height: 90px; /* grosor de la franja */
-  background-color: #660099; /* purpura profundo */
+  background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
   z-index: 1; /* franja encima del fondo */
 }
@@ -706,17 +706,11 @@ nav {
   text-align: justify;
 }
 
-
-
-
-
-
-
-
 /* ======================================
    SHORT FILM
 ====================================== */
 .shortfilm-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -726,22 +720,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.shortfilm-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .shortfilm-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .shortfilm-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .shortfilm-subtitle {
   font-family: 'Orbitron', sans-serif;
@@ -771,6 +776,7 @@ nav {
    MUSIC VIDEO DIRECTION
 ====================================== */
 .musicvideodirection-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -780,22 +786,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.musicvideodirection-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .musicvideodirection-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .musicvideodirection-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .musicvideodirection-subtitle {
   font-family: 'Orbitron', sans-serif;
@@ -821,10 +838,13 @@ nav {
   text-align: justify;
 }
 
+
+
 /* ======================================
    ALBUM
 ====================================== */
 .album-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -834,22 +854,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.album-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .album-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .album-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 /* Columnas: Imagen + Texto */
 .album-columns {
@@ -916,10 +947,13 @@ nav {
   text-align: justify;
 }
 
+
+
 /* ======================================
    FW COLLECTION
 ====================================== */
 .fwcollection-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -929,22 +963,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.fwcollection-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .fwcollection-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .fwcollection-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 /* Imagen */
 .fwcollection-image {
