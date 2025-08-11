@@ -523,6 +523,7 @@ nav {
    BIOGRAPHY
 ====================================== */
 .biography-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #ff1493; /* Fucsia */
   border-radius: 20px;
@@ -538,8 +539,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 80px;
-  background-color: #b30059;
+  height: 80px; /* grosor de la franja */
+  background-color: #b30059; /* fucsia oscuro */
   border-radius: 20px 20px 0 0;
   z-index: 1; /* franja encima del fondo */
 }
@@ -547,26 +548,16 @@ nav {
 .biography-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
-}
-
-
-.biography-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
-.biography-title a {
-  color: white;
-  text-decoration: none;
-}
-
 
 
 /* Columnas: Imagen + Texto */
