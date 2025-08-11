@@ -1023,6 +1023,7 @@ nav {
 }
 
 
+
 /* ======================================
    RESEARCH ARTICLE
 ====================================== */
@@ -1404,105 +1405,13 @@ nav {
 
 
 
-
-
-
-
-
-
-
 /* ======================================
-   CONTACT FOR FANS
-====================================== */
-.contactforfans-container {
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* TÍTULO PRINCIPAL */
-.contactforfans-title {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
-  text-decoration: none;
-}
-/* Si decides usar un <a> dentro del título */
-.contactforfans-title a {
-  color: white;
-  text-decoration: none;
-}
-.contactforfans-label {
-  display: block;
-  font-size: 1.25rem;
-  color: white;
-  margin-bottom: 8px;
-  text-align: left;
-  font-family: 'Orbitron', sans-serif;
-}
-.contactforfans-input,
-.contactforfans-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 6px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-}
-.contactforfans-input {
-  height: 40px;
-}
-.contactforfans-input,
-.contactforfans-textarea {
-  width: 100%;
-  box-sizing: border-box;
-}
-.contactforfans-textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-.contactforfans-button {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-.contactforfans-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
- }
-
-
-
-
-
-
-
-
-
-/* ======================================
-   CONTACT FOR WORK SECTION
+   CONTACT FOR WORK
 ====================================== */
 .contactforwork-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #ff1493; /* Fucsia */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -1510,22 +1419,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.contactforwork-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #e60073; /* fucsia intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .contactforwork-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .contactforwork-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 .contactforwork-label {
   display: block;
@@ -1561,7 +1481,7 @@ nav {
   display: block;
   margin: 0 auto;
   padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #9900CC; /* purpura neon */
   color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
@@ -1574,6 +1494,105 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
  }
+
+/* ======================================
+   CONTACT FOR FANS
+====================================== */
+.contactforfans-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+.contactforfans-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #e60073; /* fucsia intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
+.contactforfans-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+.contactforfans-title a {
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
+}
+.contactforfans-label {
+  display: block;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 8px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+}
+.contactforfans-input,
+.contactforfans-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+}
+.contactforfans-input {
+  height: 40px;
+}
+.contactforfans-input,
+.contactforfans-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.contactforfans-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.contactforfans-button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #9900CC; /* purpura neon */
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contactforfans-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+
+
+
+
+
+
+
+
+
 
 
 
