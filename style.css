@@ -532,24 +532,23 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* Franja completa detrás del título */
-.section-header {
-  background-color: #e60f81;   /* tono más oscuro que #ff1493 */
-  padding: 10px 16px;          /* espacio interior de la franja */
-  border-radius: 12px;         /* redondeo que complementa el contenedor */
-  margin-bottom: 16px;         /* separa la franja del contenido siguiente */
-  box-shadow: 0 3px 0 rgba(0,0,0,0.08);
+/* Franja oscura detrás del título */
+.biography-title {
+  background-color: #e60f81; /* un tono más oscuro que #ff1493 */
+  border-radius: 20px 20px 0 0; /* solo redondeado arriba */
+  padding: 10px 30px; /* coincide con el padding izquierdo/derecho del contenedor */
+  margin: -30px -30px 16px -30px; /* sobresale para cubrir de borde a borde */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  line-height: 1.6;
 }
 
-/* Resetea estilos del h2 dentro de la franja (para que no tenga su propio fondo) */
-.section-header .biography-title {
-  background: none;
-  padding: 0;
-  margin: 0;
-  display: block;
-  color: #fff;
+.biography-title a {
+  color: white;
+  text-decoration: none;
 }
-.section-header .biography-title a { color: #fff; text-decoration: none; }
+
 
 
 
