@@ -532,24 +532,23 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
+/* TÍTULO PRINCIPAL */
 .biography-title {
-  position: relative;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Respeta margen superior actual */
-  margin-bottom: 16px; /* Respeta margen inferior actual */
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
-  background-color: #e60f81; /* Franja oscura */
-  border-radius: 20px 20px 0 0; /* Solo arriba redondeado */
-  padding: 10px 0; /* Un poco de aire interno vertical */
-} /* <<--- ESTA LLAVE FALTABA */
-
-
-
+}
+/* Si decides usar un <a> dentro del título */
+.biography-title a {
+  color: white;
+  text-decoration: none;
+}
 /* Columnas: Imagen + Texto */
 .biography-columns {
   display: flex;
