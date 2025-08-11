@@ -532,6 +532,27 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
+/* Franja completa detrás del título */
+.section-header {
+  background-color: #e60f81;   /* tono más oscuro que #ff1493 */
+  padding: 10px 16px;          /* espacio interior de la franja */
+  border-radius: 12px;         /* redondeo que complementa el contenedor */
+  margin-bottom: 16px;         /* separa la franja del contenido siguiente */
+  box-shadow: 0 3px 0 rgba(0,0,0,0.08);
+}
+
+/* Resetea estilos del h2 dentro de la franja (para que no tenga su propio fondo) */
+.section-header .biography-title {
+  background: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: #fff;
+}
+.section-header .biography-title a { color: #fff; text-decoration: none; }
+
+
+
 /* 🔠 TÍTULO PRINCIPAL */
 .biography-title {
   font-family: 'Orbitron', sans-serif;
@@ -584,6 +605,24 @@ nav {
   width: 100%;
   border-radius: 15px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FEATURE FILM
