@@ -1782,7 +1782,7 @@ nav {
   font-size: 1.25rem;
   /* MÁRGENES EXTERIORES */
   margin-top: 0px; /* margen exterior arriba */
-  margin-bottom: 0px; /* margen exterior abajo */
+  margin-bottom: 10px; /* margen exterior abajo */
   margin-left: auto; /* centra horizontalmente */
   margin-right: auto; /* centra horizontalmente */
   /* MÁRGENES INTERIORES */
@@ -1803,8 +1803,35 @@ nav {
 .addtocart-button:hover {
   transform: scale(1.05);
 }
-
-
+/* Botón 2 */
+.share-button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  /* MÁRGENES EXTERIORES */
+  margin-top: 0px; /* margen exterior arriba */
+  margin-bottom: 0px; /* margen exterior abajo */
+  margin-left: auto; /* centra horizontalmente */
+  margin-right: auto; /* centra horizontalmente */
+  /* MÁRGENES INTERIORES */
+  padding-top: 10px; /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px; /* margen interior izquierdo */
+  padding-right: 24px; /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.share-button:hover {
+  transform: scale(1.05);
+}
 
 
 
