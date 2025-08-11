@@ -532,6 +532,22 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
+/* Franja superior como parte del contenedor */
+.biography-container {
+  position: relative; /* Necesario para que la franja se posicione dentro */
+}
+
+.biography-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* ocupa todo el ancho del contenedor */
+  height: 40px; /* ← grosor de la franja (puedes cambiarlo a tu gusto) */
+  background-color: #e60f81; /* color de la franja */
+  border-radius: 20px 20px 0 0; /* bordes redondeados solo arriba */
+}
+
 .biography-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
