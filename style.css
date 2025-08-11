@@ -532,48 +532,22 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* ---- Francha detrás del título: mantener estructura existente, solo override ---- */
-.biography-title {
-  display: inline-block;           /* <-- hace que la franja tenga el ancho del texto */
-  background-color: #e60f81;       /* tono más oscuro que #ff1493 (ajusta si quieres) */
-  border-radius: 20px 20px 0 0;    /* solo esquinas superiores redondeadas */
-  padding: 6px 10px;               /* espacio interior: 6px arriba/abajo, 10px izquierda/derecha */
-  margin-top: 0;                   /* conserva tu configuración */
-  margin-bottom: 16px;             /* conserva tu configuración */
-  line-height: 1.6;                /* no cambia tu line-height actual */
-}
-
-/* Asegúrate que el link dentro del título siga blanco */
-.biography-title a {
-  color: white;
-  text-decoration: none;
-}
-
-
-
-
-
-
-
-
-
-/* TÍTULO PRINCIPAL */
 .biography-title {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  display: inline-block;         /* ← cambia block por inline-block */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
+
+  background-color: #e60f81;     /* franja detrás del título */
+  border-radius: 20px 20px 0 0;  /* esquinas superiores redondeadas */
+  padding: 6px 14px;             /* aire interno de la franja */
 }
-/* Si decides usar un <a> dentro del título */
-.biography-title a {
-  color: white;
-  text-decoration: none;
-}
+
 /* Columnas: Imagen + Texto */
 .biography-columns {
   display: flex;
