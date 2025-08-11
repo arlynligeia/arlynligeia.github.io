@@ -1796,7 +1796,7 @@ nav {
   border: none;
   border-radius: 6px;
   text-decoration: none;
-  display: block;
+  display: inline-block; /* <- importante */
   text-align: center;
   cursor: pointer;
   /* ANIMACIÓN */
@@ -1825,7 +1825,7 @@ nav {
   border: none;
   border-radius: 6px;
   text-decoration: none;
-  display: block;
+  display: inline-block; /* <- importante */
   text-align: center;
   cursor: pointer;
   /* ANIMACIÓN */
@@ -1834,6 +1834,16 @@ nav {
 .share-button:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE 2
