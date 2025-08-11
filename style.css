@@ -1717,6 +1717,8 @@ nav {
 
 
 
+
+
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE
 ====================================== */
@@ -1833,198 +1835,237 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   NECKLACE 2
+   SECCIÓN INDEPENDIENTE NECKLACE 2
 ====================================== */
+/* Contenedor */
 .necklace2-container {
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  margin: 40px auto; /* margen exterior */
+  padding-top: 30px; /* margen interno superior */
+  padding-bottom: 30px; /* margen interno inferior */
+  padding-left: 30px; /* margen interno izquierdo */
+  padding-right: 30px; /* margen interno derecho */
 }
 /* Imagen */
 .necklace2-image {
   width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
   text-align: center; /* Centra la imagen horizontalmente */
-  margin-bottom: 20px;
 }
 .necklace2-image img {
   width: 360px; /* Igual que jewelry */
   height: auto;
-  display: inline-block; /* Centrado con text-align */
-  border-radius: 12px;
+  border-radius: 15px;
+  display: inline-block; /* Centrado con text-align */  
 }
-/* Texto inferior */
-.necklace2-development-title {
+/* Texto del producto */
+.necklace2-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 10px;
+  line-height: 1.3;
   text-align: center;
-  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.necklace2-price {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 10px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
 }
 .necklace2-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
   color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
   text-align: justify;
 }
-.addtocart-button-wrapper {
-  text-align: center;
-}
-.addtocart-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white !important;
+/* Botón */
+.addtocart2-button {
+  background-color: #ff1493; /* fucsia */
+  color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
+  /* MÁRGENES EXTERIORES */
+  margin-top: 0px; /* margen exterior arriba */
+  margin-bottom: 10px; /* margen exterior abajo */
+  margin-left: auto; /* centra horizontalmente */
+  margin-right: auto; /* centra horizontalmente */
+  /* MÁRGENES INTERIORES */
+  padding-top: 10px; /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px; /* margen interior izquierdo */
+  padding-right: 24px; /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
   border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.addtocart-button:hover {
+.addtocart2-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
-.share-button-wrapper {
-  text-align: center;
-}
-.share-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px; /* 👈 Esto separa el botón de arriba */
-  background-color: #00CED1;
-  color: white !important;
+/* Botón 2 */
+.share2-button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
+  /* MÁRGENES EXTERIORES */
+  margin-top: 0px; /* margen exterior arriba */
+  margin-bottom: 0px; /* margen exterior abajo */
+  margin-left: auto; /* centra horizontalmente */
+  margin-right: auto; /* centra horizontalmente */
+  /* MÁRGENES INTERIORES */
+  padding-top: 10px; /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px; /* margen interior izquierdo */
+  padding-right: 24px; /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
   border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.share-button:hover {
+.share2-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 /* ======================================
-   NECKLACE 3
+   SECCIÓN INDEPENDIENTE NECKLACE 3
 ====================================== */
+/* Contenedor */
 .necklace3-container {
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  margin: 40px auto; /* margen exterior */
+  padding-top: 30px; /* margen interno superior */
+  padding-bottom: 30px; /* margen interno inferior */
+  padding-left: 30px; /* margen interno izquierdo */
+  padding-right: 30px; /* margen interno derecho */
 }
 /* Imagen */
 .necklace3-image {
   width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
   text-align: center; /* Centra la imagen horizontalmente */
-  margin-bottom: 20px;
 }
 .necklace3-image img {
   width: 360px; /* Igual que jewelry */
   height: auto;
-  display: inline-block; /* Centrado con text-align */
-  border-radius: 12px;
+  border-radius: 15px;
+  display: inline-block; /* Centrado con text-align */  
 }
-/* Texto inferior */
-.necklace3-development-title {
+/* Texto del producto */
+.necklace3-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
   color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 10px;
+  line-height: 1.3;
   text-align: center;
-  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.necklace3-price {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 10px;
+  line-height: 1.3;
+  text-align: center;
+  text-transform: uppercase;
 }
 .necklace3-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
   color: white;
+  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
   text-align: justify;
 }
-.addtocart-button-wrapper {
-  text-align: center;
-}
-.addtocart-button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff1493; /* Fucsia */
-  color: white !important;
+/* Botón */
+.addtocart3-button {
+  background-color: #ff1493; /* fucsia */
+  color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.25rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
+  /* MÁRGENES EXTERIORES */
+  margin-top: 0px; /* margen exterior arriba */
+  margin-bottom: 10px; /* margen exterior abajo */
+  margin-left: auto; /* centra horizontalmente */
+  margin-right: auto; /* centra horizontalmente */
+  /* MÁRGENES INTERIORES */
+  padding-top: 10px; /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px; /* margen interior izquierdo */
+  padding-right: 24px; /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
   border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.addtocart-button:hover {
+.addtocart3-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
-.share-button-wrapper {
-  text-align: center;
-}
-.share-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 20px; /* 👈 Esto separa el botón de arriba */
-  background-color: #00CED1;
-  color: white !important;
+/* Botón 3 */
+.share3-button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  color: white;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
-  text-decoration: none;
-  border: none !important; /* Elimina el borde blanco que se ve */
+  /* MÁRGENES EXTERIORES */
+  margin-top: 0px; /* margen exterior arriba */
+  margin-bottom: 0px; /* margen exterior abajo */
+  margin-left: auto; /* centra horizontalmente */
+  margin-right: auto; /* centra horizontalmente */
+  /* MÁRGENES INTERIORES */
+  padding-top: 10px; /* margen interior arriba */
+  padding-bottom: 10px; /* margen interior abajo */
+  padding-left: 24px; /* margen interior izquierdo */
+  padding-right: 24px; /* margen interior derecho */
+  /* ESTILO GENERAL */
+  border: none;
   border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  /* ANIMACIÓN */
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.share-button:hover {
+.share3-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
+
 #necklace,
 #necklace2,
 #necklace3 {
