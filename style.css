@@ -544,7 +544,6 @@ nav {
   border-radius: 20px 20px 0 0;
   z-index: 1; /* franja encima del fondo */
 }
-
 .biography-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
@@ -562,8 +561,6 @@ nav {
   color: white;           /* mantiene el texto blanco */
   text-decoration: none;  /* quita el subrayado */
 }
-
-
 /* Columnas: Imagen + Texto */
 .biography-columns {
   display: flex;
@@ -602,26 +599,11 @@ nav {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FEATURE FILM
 ====================================== */
 .featurefilm-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -631,22 +613,33 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* TÍTULO PRINCIPAL */
+.featurefilm-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .featurefilm-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
   text-decoration: none;
 }
-/* Si decides usar un <a> dentro del título */
 .featurefilm-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 /* Columnas: Imagen + Texto */
 .featurefilm-columns {
@@ -712,6 +705,13 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
+
+
+
+
+
+
+
 
 /* ======================================
    SHORT FILM
