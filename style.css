@@ -2148,12 +2148,13 @@ nav {
   table-layout: fixed;
 }
 
-/* Cabecera de la tabla */
+/* Subtítulos */
 .cart-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   text-transform: uppercase;
   padding: 10px;
+  text-align: center; /* Centrado para subtítulos */
   border-bottom: 2px solid white;
 }
 
@@ -2165,49 +2166,52 @@ nav {
   vertical-align: middle;
 }
 
-/* Alineaciones */
+/* Columnas */
 .image-col {
-  text-align: center;
   width: 120px;
+  text-align: center;
 }
 .name-col {
-  text-align: left;
+  width: 50%;
 }
 .price-col {
+  width: 25%;
   text-align: right;
 }
 
-/* Imagen de producto */
+/* Imagen producto */
 .product-image {
   max-width: 80px;
   height: auto;
   border-radius: 6px;
 }
 
-/* Recuadros blancos para Name y Price */
+/* Recuadros blancos */
 .white-cell {
   background-color: white;
   color: black;
   border-radius: 6px;
   padding: 6px 10px;
-  display: inline-block;
-  min-width: 60px;
+  display: block;     /* Ocupa todo el ancho de su celda */
+  width: 100%;        /* Igual ancho siempre */
+  box-sizing: border-box;
+}
+
+/* Alineaciones dentro de recuadros */
+.cell-left {
+  text-align: left;
+}
+.cell-right {
   text-align: right;
 }
 
-/* Footer de la tabla (shipping y total) */
+/* Footer */
 .cart-table tfoot {
   border-top: 2px solid white;
 }
 .cart-table tfoot td {
   padding-top: 10px;
 }
-
-/* Ajuste del recuadro de texto a la izquierda para Name */
-.name-col .white-cell {
-  text-align: left;
-}
-
 
 
 
