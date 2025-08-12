@@ -2096,36 +2096,45 @@ nav {
   color: white;
   text-decoration: none;
 }
-.yourcart-column {
-  display: flex;
-  flex-direction: column;
+
+/* Fila de columnas */
+.yourcart-columns {
+  display: grid;
+  grid-template-columns: 150px 1fr 120px; /* imagen | nombre | precio */
+  gap: 20px;
   align-items: center;
 }
-.yourcart-columns {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-/* Ajuste por columna */
-.image-column {
-  flex: 0 0 20%;  /* Más angosta */
-}
-.name-column {
-  flex: 1 1 60%;  /* Más ancha */
-}
-.price-column {
-  flex: 0 0 20%;  /* Más angosta */
-}
-/* Subtítulos de columnas */
+
+/* Encabezados de columnas */
 .yourcart-subtitle {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: white;
   text-transform: uppercase;
-  margin-bottom: 8px;
   text-align: center;
 }
+
+/* Estilos para cuando pongas productos */
+.yourcart-column img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+#yourcart {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+
+
+
+
+
+
 
 
 
