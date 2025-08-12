@@ -651,23 +651,37 @@ Your cart is empty
 <div id="yourcart" class="yourcart-section">
 <div class="yourcart-container">
 <h2 class="yourcart-title"><a href="#yourcart">YOUR CART</a></h2>
-<div class="yourcart-columns">  
-<!-- Columna imagen -->
-<div class="yourcart-column image-column">
-<div class="yourcart-subtitle">IMAGE</div>
+ <table class="cart-table">
+    <thead>
+      <tr>
+        <th>IMAGE</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+      </tr>
+    </thead>
+    <tbody id="cart-items">
+      <!-- Ejemplo de producto -->
+      <tr>
+        <td><img src="assets/jewelry-example.jpg" alt="Product" class="cart-image"></td>
+        <td class="white-cell">Example Necklace</td>
+        <td class="white-cell">$50.00</td>
+      </tr>
+      <!-- Aquí se añadirán más filas dinámicamente -->
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td class="white-cell">Shipping</td>
+        <td class="white-cell" id="shipping-cost">$50.00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td class="white-cell">Total</td>
+        <td class="white-cell" id="total-cost">$100.00</td>
+      </tr>
+    </tfoot>
+  </table>
 </div>
-<!-- Columna nombre -->
-<div class="yourcart-column name-column">
-<div class="yourcart-subtitle">PRODUCT NAME</div>
-</div>
-<!-- Columna precio -->
-<div class="yourcart-column price-column">
-<div class="yourcart-subtitle">PRICE</div>
-</div>
-</div>
-</div>
-</div>
-<!-- FIN YOUR CART -->
 </section>
 
 
