@@ -2128,12 +2128,12 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
+  text-decoration: none;
   margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
-  text-decoration: none;
+  display: block;
 }
 .yourcart-title a {
   color: white;           /* mantiene el texto blanco */
@@ -2147,7 +2147,7 @@ nav {
   border-collapse: collapse;
   table-layout: fixed;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
 
 /* Subtítulos */
@@ -2217,12 +2217,39 @@ nav {
   text-align: right;
 }
 
+/* Texto Shipping */
+.label-shipping {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
+  padding-left: 0px; /* editable margen izquierdo */
+  padding-right: 10px; /* espacio antes del recuadro */
+  line-height: 1.6;
+  text-align: right; /* alinea a la derecha */
+}
+
+/* Texto Total */
+.label-total {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
+  padding-left: 0px; /* editable margen izquierdo */
+  padding-right: 10px; /* espacio antes del recuadro */
+  line-height: 1.6;
+  text-align: right; /* alinea a la derecha */
+}
+
 /* Footer */
 .cart-table tfoot {
   border-top: 2px solid white;
 }
 .cart-table tfoot td {
-  padding-top: 10px;
+  padding-top: 8px; /* editable margen superior */
+  padding-bottom: 8px; /* editable margen inferior *
 }
 
 
