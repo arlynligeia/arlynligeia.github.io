@@ -652,7 +652,7 @@ Your cart is empty
 <div class="yourcart-container">
 <h2 class="yourcart-title"><a href="#yourcart">YOUR CART</a></h2>
 <table class="cart-table">
-<!-- Fila 1: Subtítulos -->
+<!-- Subtítulos -->
 <thead>
 <tr>
 <th class="image-col">IMAGE</th>
@@ -661,11 +661,12 @@ Your cart is empty
 </tr>
 </thead>
 
-<!-- Filas de productos -->
-<tbody>
+<!-- Productos -->
+<tbody class="table-body">
+<tr class="table-divider"><td colspan="3"></td></tr> <!-- Línea separadora -->
 <tr>
-<td class="collar3-image">
-<img src="assets/assets/Collar 3.jpg" alt="Collar 3" class="collar3-image">
+<td class="image-col">
+<img src="assets/product-example.jpg" class="collar3-image" alt="Product Image">
 </td>
 <td class="name-col">
 <div class="white-cell cell-left">Sample Necklace</div>
@@ -677,7 +678,7 @@ Your cart is empty
 <!-- Aquí más productos -->
 </tbody>
 
-<!-- Fila de shipping -->
+<!-- Totales -->
 <tfoot>
 <tr>
 <td></td>
@@ -686,7 +687,6 @@ Your cart is empty
 <div class="white-cell cell-right">$4.99</div>
 </td>
 </tr>
-<!-- Fila de total -->
 <tr>
 <td></td>
 <td class="name-col label-total">Total</td>
