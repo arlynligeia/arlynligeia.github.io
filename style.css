@@ -2160,14 +2160,7 @@ nav {
   line-height: 1.6;
   text-align: center; /* Centrado para subtítulos */
   text-transform: uppercase;
-}
-/* Footer */
-.cart-table tfoot {
-  border-top: 2px solid white;
-}
-.cart-table tfoot td {
-  padding-top: 10px; /* editable margen superior */
-  padding-bottom: 10px; /* editable margen inferior */
+  border-bottom: 2px solid white; /* ← esta es la línea */
 }
 /* Celdas */
 .cart-table td {
@@ -2185,7 +2178,7 @@ nav {
   text-align: center;
 }
 .name-col {
-  width: 65%;
+  width: 70%;
   text-align: center;
 }
 .price-col {
