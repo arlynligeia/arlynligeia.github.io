@@ -2140,52 +2140,92 @@ nav {
   text-decoration: none;  /* quita el subrayado */
 }
 
-/* Tabla del carrito */
-.yourcart-table {
+/* Contenedor del carrito */
+.yourcart-container {
   width: 100%;
-  border-collapse: collapse; /* Une bordes */
-  margin-top: 20px;
-  font-family: 'Orbitron', sans-serif;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #9900CC; /* púrpura neón */
+  border-radius: 20px;
   color: white;
 }
 
-/* Encabezados */
-.yourcart-table th {
-  text-align: left;
+/* Título */
+.yourcart-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Tabla */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Cabecera de la tabla */
+.cart-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
   padding: 10px;
-  border-bottom: 2px solid white; /* Línea debajo de títulos */
+  border-bottom: 2px solid white;
 }
 
 /* Celdas */
-.yourcart-table td {
+.cart-table td {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
   padding: 10px;
   vertical-align: middle;
 }
 
-/* Recuadros blancos en Name y Price */
-.white-cell {
-  background-color: white;
-  color: black;
-  border-radius: 6px;
-  padding: 8px;
+/* Alineaciones */
+.image-col {
+  text-align: center;
+  width: 120px;
+}
+.name-col {
+  text-align: left;
+}
+.price-col {
+  text-align: right;
 }
 
 /* Imagen de producto */
-.yourcart-image {
-  width: 80px;
+.product-image {
+  max-width: 80px;
   height: auto;
   border-radius: 6px;
 }
 
-/* Línea antes de Shipping */
-.yourcart-table tfoot {
-  border-top: 2px solid white; /* Línea arriba del total y shipping */
+/* Recuadros blancos para Name y Price */
+.white-cell {
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  padding: 6px 10px;
+  display: inline-block;
+  min-width: 60px;
+  text-align: right;
 }
 
-/* Filas de Shipping y Total */
-.yourcart-table tfoot td {
-  font-weight: bold;
+/* Footer de la tabla (shipping y total) */
+.cart-table tfoot {
+  border-top: 2px solid white;
 }
+.cart-table tfoot td {
+  padding-top: 10px;
+}
+
+/* Ajuste del recuadro de texto a la izquierda para Name */
+.name-col .white-cell {
+  text-align: left;
+}
+
 
 
 
