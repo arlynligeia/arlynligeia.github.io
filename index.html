@@ -700,103 +700,95 @@ We may update this policy from time to time. Changes will be posted on this page
 
 
 
-  
+<!-- Script para el carrusel --> 
 <script>
-  const images = document.querySelectorAll('.carousel-image');
-  let current = 0;
-  function showNextImage() {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }
-  setInterval(showNextImage, 3000); // Cambia cada 10 segundos
+const images = document.querySelectorAll('.carousel-image');
+let current = 0;
+function showNextImage() {
+images[current].classList.remove('active');
+current = (current + 1) % images.length;
+images[current].classList.add('active');
+}
+setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
 
 
-  <!-- Script para cambiar secciones con el menú -->
+<!-- Script para cambiar secciones con el menú -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuLinks = document.querySelectorAll(".menu-link");
-    const sections = document.querySelectorAll("section");
-
-    menuLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const targetId = this.dataset.section;
-
-        // Oculta todas las secciones
-        sections.forEach(section => {
-          if (section.id === targetId) {
-            section.style.display = "block";
-          } else {
-            section.style.display = "none";
-          }
-        });
-
-        // Scroll al inicio de la sección activada
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth" });
-          history.pushState(null, "", "#" + targetId);
-        }
-      });
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll("section");
+menuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+e.preventDefault();
+const targetId = this.dataset.section;
+// Oculta todas las secciones
+sections.forEach(section => {
+if (section.id === targetId) {
+section.style.display = "block";
+} else {
+section.style.display = "none";
+}
+});
+// Scroll al inicio de la sección activada
+const targetSection = document.getElementById(targetId);
+if (targetSection) {
+targetSection.scrollIntoView({ behavior: "smooth" });
+history.pushState(null, "", "#" + targetId);
+}
+});
+});
+});
 </script>
 
 <!-- Script para los submenús como Support my Work -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const submenuLinks = document.querySelectorAll(".menu-button");
-    const sections = document.querySelectorAll("section");
-
-    submenuLinks.forEach(link => {
-      link.addEventListener("click", function (e) {
-        const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
-        const targetElement = document.getElementById(targetId);
-
-        // Grupos de sub-secciones por sección madre
-        const subsectionGroups = {
-          home: ["socialmediacontent"],
-          film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-          music: ["singles", "album", "videomusic"],
-          fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
-          science: ["researcharticle", "researchproject"],
-          bemypatron: ["supportmywork", "supportmystudies", "gifts"],
-          contact: ["contactforfans", "contactforwork"],
-          store: ["jewelry"]
-        };
-
-        // Buscar la sección madre del target
-        let parentSectionId = null;
-        for (const [parent, subsections] of Object.entries(subsectionGroups)) {
-          if (subsections.includes(targetId)) {
-            parentSectionId = parent;
-            break;
-          }
-        }
-
-        // Si se encuentra la sección madre y el elemento destino existe
-        if (parentSectionId && targetElement) {
-          e.preventDefault();
-
-          // Oculta todas las secciones y muestra solo la madre
-          sections.forEach(section => {
-            section.style.display = section.id === parentSectionId ? "block" : "none";
-          });
-
-          // Scroll hacia la subsección deseada
-          setTimeout(() => {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-            history.pushState(null, "", "#" + targetId);
-          }, 50);
-        }
-      });
-    });
-  });
+document.addEventListener("DOMContentLoaded", function () {
+const submenuLinks = document.querySelectorAll(".menu-button");
+const sections = document.querySelectorAll("section");
+submenuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
+const targetElement = document.getElementById(targetId);
+// Grupos de sub-secciones por sección madre
+const subsectionGroups = {
+home: ["socialmediacontent"],
+film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+music: ["singles", "album", "videomusic"],
+fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+science: ["researcharticle", "researchproject"],
+bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+contact: ["contactforfans", "contactforwork"],
+store: ["jewelry"]
+};
+// Buscar la sección madre del target
+let parentSectionId = null;
+for (const [parent, subsections] of Object.entries(subsectionGroups)) {
+if (subsections.includes(targetId)) {
+parentSectionId = parent;
+break;
+}
+}
+// Si se encuentra la sección madre y el elemento destino existe
+if (parentSectionId && targetElement) {
+e.preventDefault();
+// Oculta todas las secciones y muestra solo la madre
+sections.forEach(section => {
+section.style.display = section.id === parentSectionId ? "block" : "none";
+});
+// Scroll hacia la subsección deseada
+setTimeout(() => {
+targetElement.scrollIntoView({ behavior: "smooth" });
+history.pushState(null, "", "#" + targetId);
+}, 50);
+}
+});
+});
+});
 </script>
 
+
+      
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const allSections = document.querySelectorAll("section");
