@@ -652,36 +652,44 @@ Your cart is empty
 <div class="yourcart-container">
 <h2 class="yourcart-title"><a href="#yourcart">YOUR CART</a></h2>
  <table class="cart-table">
-    <thead>
-      <tr>
-        <th>IMAGE</th>
-        <th>NAME</th>
-        <th>PRICE</th>
-      </tr>
-    </thead>
-    <tbody id="cart-items">
-      <!-- Ejemplo de producto -->
-      <tr>
-        <td><img src="assets/jewelry-example.jpg" alt="Product" class="cart-image"></td>
-        <td class="white-cell">Example Necklace</td>
-        <td class="white-cell">$50.00</td>
-      </tr>
-      <!-- Aquí se añadirán más filas dinámicamente -->
-    </tbody>
-    <tfoot>
-      <tr>
-        <td></td>
-        <td class="white-cell">Shipping</td>
-        <td class="white-cell" id="shipping-cost">$50.00</td>
-      </tr>
-      <tr>
-        <td></td>
-        <td class="white-cell">Total</td>
-        <td class="white-cell" id="total-cost">$100.00</td>
-      </tr>
-    </tfoot>
-  </table>
+      <thead>
+        <tr>
+          <th class="image-col">IMAGE</th>
+          <th class="name-col">PRODUCT NAME</th>
+          <th class="price-col">PRICE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Ejemplo de un producto -->
+        <tr>
+          <td class="image-col">
+            <img src="assets/product-example.jpg" alt="Product Image" class="product-image">
+          </td>
+          <td class="name-col">
+            <div class="white-cell">Sample Necklace</div>
+          </td>
+          <td class="price-col">
+            <div class="white-cell">$19.99</div>
+          </td>
+        </tr>
+        <!-- Más productos se agregarán aquí -->
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td class="name-col">Shipping</td>
+          <td class="price-col"><div class="white-cell">$4.99</div></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="name-col">Total</td>
+          <td class="price-col"><div class="white-cell">$24.98</div></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </div>
+<!-- FIN YOUR CART -->
 </section>
 
 
