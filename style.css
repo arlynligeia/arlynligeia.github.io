@@ -2160,7 +2160,14 @@ nav {
   line-height: 1.6;
   text-align: center; /* Centrado para subtítulos */
   text-transform: uppercase;
-  border-bottom: 2px solid white;
+}
+/* Footer */
+.cart-table tfoot {
+  border-top: 2px solid white;
+}
+.cart-table tfoot td {
+  padding-top: 10px; /* editable margen superior */
+  padding-bottom: 10px; /* editable margen inferior */
 }
 /* Celdas */
 .cart-table td {
@@ -2190,6 +2197,8 @@ nav {
   max-width: 80px;
   height: auto;
   border-radius: 6px;
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
 }
 /* Recuadros blancos */
 .white-cell {
@@ -2202,8 +2211,8 @@ nav {
   margin-bottom: 0px;
   padding-top: 5px; /* editable margen superior */
   padding-bottom: 5px; /* editable margen inferior */
-  padding-left: 3px; /* editable margen izquierdo */
-  padding-right: 3px; /* editable margen derecho */
+  padding-left: 5px; /* editable margen izquierdo */
+  padding-right: 5px; /* editable margen derecho */
   line-height: 1.6;
   display: block; /* Ocupa todo el ancho de su celda */
   width: 100%; /* Igual ancho siempre */
@@ -2248,8 +2257,8 @@ nav {
   border-top: 2px solid white;
 }
 .cart-table tfoot td {
-  padding-top: 8px; /* editable margen superior */
-  padding-bottom: 8px; /* editable margen inferior */
+  padding-top: 10px; /* editable margen superior */
+  padding-bottom: 10px; /* editable margen inferior */
 }
 
 
