@@ -2117,9 +2117,9 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px; /* grosor de la franja */
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
+  height: 90px; /* grosor de la franja */
   z-index: 1; /* franja encima del fondo */
 }
 .yourcart-title {
@@ -2146,57 +2146,67 @@ nav {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 /* Subtítulos */
 .cart-table th {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
-  padding: 10px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
+  line-height: 1.6;
   text-align: center; /* Centrado para subtítulos */
+  text-transform: uppercase;
   border-bottom: 2px solid white;
 }
-
 /* Celdas */
 .cart-table td {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  padding: 10px;
+  color: white;
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
+  line-height: 1.6;
   vertical-align: middle;
 }
-
 /* Columnas */
 .image-col {
   width: 120px;
   text-align: center;
 }
 .name-col {
-  width: 50%;
+  width: 60%;
+  text-align: center;
 }
 .price-col {
-  width: 25%;
-  text-align: right;
+  width: 20%;
+  text-align: center;
 }
-
 /* Imagen producto */
 .product-image {
   max-width: 80px;
   height: auto;
   border-radius: 6px;
 }
-
 /* Recuadros blancos */
 .white-cell {
   background-color: white;
-  color: black;
   border-radius: 6px;
-  padding: 6px 10px;
-  display: block;     /* Ocupa todo el ancho de su celda */
-  width: 100%;        /* Igual ancho siempre */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 0px;
+  padding-top: 10px; /* editable margen superior */
+  padding-bottom: 10px; /* editable margen inferior */
+  line-height: 1.6;
+  display: block; /* Ocupa todo el ancho de su celda */
+  width: 100%; /* Igual ancho siempre */
   box-sizing: border-box;
 }
-
 /* Alineaciones dentro de recuadros */
 .cell-left {
   text-align: left;
