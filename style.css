@@ -89,28 +89,7 @@ nav {
 .menu li:hover .submenu {
   display: block;
 }
-/* Botón de canasta con estilo de los demás botones */
-.menu-button.cart-button {
-  padding: 8px 14px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.menu-button.cart-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-/* Imagen del ícono de canasta */
-.cart-icon-image {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  vertical-align: middle;
-}
+
 /* Efecto turquesa al pasar el mouse por submenú */
 .submenu li {
   position: relative;
