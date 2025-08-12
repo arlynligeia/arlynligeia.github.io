@@ -2070,31 +2070,43 @@ nav {
    YOUR CART SECTION
 ====================================== */
 .yourcart-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #ff1493; /* Fucsia */
-  border-radius: 16px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
   padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-/* 🔠 TÍTULO PRINCIPAL */
+.yourcart-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
 .yourcart-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   display: block;
-  text-align: left;
+  margin-top: 0;
   margin-bottom: 16px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
   line-height: 1.6;
+  text-align: left;
   text-decoration: none;
 }
-/* Corrección: el enlace ahora sí es blanco */
 .yourcart-title a {
-  color: white;
-  text-decoration: none;
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
 }
 
 /* Fila de columnas */
@@ -2110,10 +2122,12 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   color: white;
-  text-transform: uppercase;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px; 
+  line-height: 1.5;
   text-align: center;
+  text-transform: uppercase;
 }
-
 /* Estilos para cuando pongas productos */
 .yourcart-column img {
   width: 100%;
