@@ -2160,8 +2160,13 @@ nav {
   line-height: 1.6;
   text-align: center; /* Centrado para subtítulos */
   text-transform: uppercase;
-  border-bottom: 2px solid white; /* ← esta es la línea */
-}
+ }
+.table-divider td {
+  border-top: 2px solid white;
+  padding-top: 10px; /* editable margen superior */
+  padding-bottom: 10px; /* editable margen inferior */
+ }
+
 /* Celdas */
 .cart-table td {
   font-family: 'Share Tech Mono', monospace;
