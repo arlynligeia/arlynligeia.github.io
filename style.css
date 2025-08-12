@@ -2069,7 +2069,7 @@ nav {
 /* ======================================
    YOUR CART SECTION
 ====================================== */
-.yourcart-container {
+.cart-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -2080,7 +2080,7 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
-.yourcart-container::before {
+.cart-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -2091,7 +2091,7 @@ nav {
   border-radius: 20px 20px 0 0;
   z-index: 1; /* franja encima del fondo */
 }
-.yourcart-title {
+.cart-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
   font-family: 'Orbitron', sans-serif;
@@ -2104,13 +2104,13 @@ nav {
   text-align: left;
   text-decoration: none;
 }
-.yourcart-title a {
+.cart-title a {
   color: white;           /* mantiene el texto blanco */
   text-decoration: none;  /* quita el subrayado */
 }
 
 /* Fila de columnas */
-.yourcart-columns {
+.cart-columns {
   display: grid;
   grid-template-columns: 150px 1fr 120px; /* imagen | nombre | precio */
   gap: 20px;
@@ -2118,7 +2118,7 @@ nav {
 }
 
 /* Encabezados de columnas */
-.yourcart-subtitle {
+.cart-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
   color: white;
@@ -2129,7 +2129,7 @@ nav {
   text-transform: uppercase;
 }
 /* Estilos para cuando pongas productos */
-.yourcart-column img {
+.cart-column img {
   width: 100%;
   max-width: 120px;
   border-radius: 10px;
