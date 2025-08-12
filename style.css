@@ -2137,10 +2137,13 @@ nav {
   margin: 0 auto;
 }
 
+
+
 #yourcart {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  display: none; /* Oculto por defecto */
+}
+#yourcart.active {
+  display: block; /* Visible cuando tiene la clase .active */
 }
 
 
