@@ -111,6 +111,21 @@ nav {
   transform: scaleX(1);
 }
 
+
+
+
+/* Submenús dentro de submenús (segundo nivel) */
+.submenu .submenu {
+  top: 0; /* alinea con el padre */
+  left: 100%; /* aparece a la derecha del padre */
+  border: 1px solid white;
+}
+
+/* Mostrar submenús de segundo nivel */
+.submenu li:hover > .submenu {
+  display: block;
+}
+
 /* --------------------------------------
    CARRUSEL DE INICIO Y TEXTO LATERAL
 ----------------------------------------- */
