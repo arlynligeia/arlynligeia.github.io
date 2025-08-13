@@ -328,11 +328,30 @@ nav {
   cursor: pointer;
 }
 /* DAYS Y TIME */
-/* Recuadro blanco para Days y Time */
-.socialmediacontent-white-cell {
+/* Recuadro blanco para DAYS */
+.socialmediacontent-white-cell-days {
   background-color: white;
   border-radius: 6px;
-  width: 95%; 
+  width: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 1.6;
+  text-align: center;
+  display: block; 
+  box-sizing: border-box;
+}
+/* Recuadro blanco para TIME */
+.socialmediacontent-white-cell-time {
+  background-color: white;
+  border-radius: 6px;
+  width: 95%; /* puedes ajustar este ancho solo para TIME */
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
