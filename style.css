@@ -272,6 +272,12 @@ nav {
 .socialmediacontent-time-col {
   width: 30%; /* editable: columna de hora */
 }
+/* Fila en general para que todo esté alineado verticalmente */
+.socialmediacontent-table td {
+  vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
+  padding-top: 20px;
+  padding-bottom: 20px; 
+}
 /* Subtítulos */
 .socialmediacontent-table th {
   font-family: 'Orbitron', sans-serif;
@@ -304,7 +310,7 @@ nav {
   color: white !important;
   text-decoration: none;
   margin-top: 0px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -326,17 +332,19 @@ nav {
 .socialmediacontent-white-cell {
   background-color: white;
   border-radius: 6px;
+  width: 95%; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
   line-height: 1.6;
   text-align: center;
   display: block; 
-  width: 100%; 
   box-sizing: border-box;
 }
 /* Texto*/
