@@ -212,10 +212,11 @@ nav {
 /* ======================================
    SOCIAL MEDIA CONTENT
 ====================================== */
+/* Contenedor */
 .socialmediacontent-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px; /* editable margen superior */
@@ -223,6 +224,7 @@ nav {
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
 }
+/* Franja superior decorativa */
 .socialmediacontent-container::before {
   content: "";
   position: absolute;
@@ -234,6 +236,7 @@ nav {
   height: 90px; /* grosor de la franja */
   z-index: 1; /* franja encima del fondo */
 }
+/* Título */
 .socialmediacontent-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
@@ -248,100 +251,106 @@ nav {
   display: block;
 }
 .socialmediacontent-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white; /* mantiene el texto blanco */
+  text-decoration: none; /* quita el subrayado */
 }
-/* ======================================
-   SOCIAL MEDIA - TABLAS
-====================================== */
+/* Tabla 1 */
 .socialmediacontent-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin: 0 auto 24px auto; /* centrado + separación entre tablas */
+  margin-top: 0;
+  margin-bottom: 0px;
 }
-
+/* Ancho de columnas */
+.socialmediacontent-account-col {
+  width: 20%; /* editable: columna de botones */
+}
+.socialmediacontent-days-col {
+  width: 55%; /* editable: columna de días */
+}
+.socialmediacontent-time-col {
+  width: 25%; /* editable: columna de hora */
+}
 /* Subtítulos */
 .socialmediacontent-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  color: white;
+  color: #e60073; /* fucsia intenso */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
-  padding: 0;
-}
-
-/* Línea editable bajo subtítulos */
-.socialmediacontent-divider td {
-  border-top: 2px solid white;   /* ← grosor/color de la raya */
-  padding-top: 10px;              /* ← espacio arriba de la línea */
-  padding-bottom: 10px;           /* ← espacio abajo de la línea */
-}
-
-/* Celdas */
-.socialmediacontent-table td {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
+ }
+/* Linea separadora */
+.socialmediacontent-tabledivider td {
+  border-top: 2px solid white;
+  padding-top: 10px; /* editable margen superior */
+  padding-bottom: 10px; /* editable margen inferior */
+ }
+/* Columnas */
+/* ACCOUNT */
+.tiktok-button-wrapper,
+.youtube-button-wrapper {
   text-align: center;
-  vertical-align: middle;
-  padding: 10px 8px;
 }
-
-/* Anchos de columna (conserva proporciones 25/45/30) */
-.socialmediacontent-account-col { width: 25%; }
-.socialmediacontent-days-col    { width: 45%; }
-.socialmendiacontent-time-col    { width: 30%; }
-
-/* Recuadro tipo "YOUR CART" para texto de días/horarios */
-.socialmediacontent-white-cell {
-  background-color: white;
-  color: black;
+.tiktok-button,
+.youtube-button {
+  background-color: #ff1493; /* Fucsia */
   border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  color: white !important;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-block;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.tiktok-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+.youtube-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+/* DAYS */
+/* Texto*/
+.label-days,
+.label-time {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  line-height: 1.4;
-  padding: 6px 8px;
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
+  color: #001A80; /* azul noche intenso */
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 0px; /* editable margen inferior */
+  padding-left: 0px; /* editable margen izquierdo */
+  padding-right: 10px; /* espacio antes del recuadro */
+  line-height: 1.6;
+  text-align: center;
 }
 
-/* Ajuste de márgenes de los botones dentro de la tabla (todo centrado) */
-.socialmediacontent-table .tiktok-button,
-.socialmediacontent-table .tiktok2-button,
-.socialmediacontent-table .youtube-button,
-.socialmediacontent-table .twitch-button {
-  display: block;
-  margin: 10px auto; /* reduce altura de fila y centra */
-}
 
-/* Dos botones apilados en la misma celda (tabla 2) */
-.socialmediacontent-button-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: center;
-}
 
-/* LIVE STREAM (izquierda, Orbitron tamaño 2, con punto rojo) */
-.socialmediacontent-livestream {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start; /* a la izquierda */
-  gap: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  margin: 8px 0 16px 0;
-}
-.socialmediacontent-red-dot {
-  width: 12px;
-  height: 12px;
-  background-color: red;
-  border-radius: 50%;
-  display: inline-block;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
