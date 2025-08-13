@@ -1674,9 +1674,9 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
-
 /* Tarjetas de productos */
 .product-card {
   position: relative;
@@ -1686,14 +1686,12 @@ nav {
   text-decoration: none;
   color: white;
 }
-
 .product-card img {
   width: 100%;
   height: 250px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
-
 .product-card span {
   position: absolute;
   top: 50%;
@@ -1709,13 +1707,6 @@ nav {
 .product-card:hover img {
   transform: scale(1.1);
 }
-
-
-
-
-
-
-
 
 /* ======================================
    JEWELRY
@@ -1841,6 +1832,9 @@ nav {
   transform: scale(1.05);
 }
 
+#jewelry {
+  display: none; /* Ocultos por defecto */
+}
 
 
 
