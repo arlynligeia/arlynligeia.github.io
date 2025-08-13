@@ -395,11 +395,6 @@ nav {
   flex-shrink: 0;
   animation: blink 1s infinite;
 }
-/* Efecto parpadeo */
-@keyframes blink {
-  0%, 50%, 100% { opacity: 1; box-shadow: 0 0 8px red; }
-  25%, 75% { opacity: 0.4; box-shadow: 0 0 2px red; }
-}
 .socialmediacontent-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
