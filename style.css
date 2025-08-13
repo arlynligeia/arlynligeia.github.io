@@ -114,17 +114,25 @@ nav {
 
 
 
-/* Submenús dentro de submenús (segundo nivel) */
+
+/* Submenús dentro de submenús */
 .submenu .submenu {
-  top: 0; /* alinea con el padre */
-  left: 100%; /* aparece a la derecha del padre */
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: rgba(0, 0, 0, 0.7);
   border: 1px solid white;
+  padding: 0;
+  margin: 0;
 }
 
-/* Mostrar submenús de segundo nivel */
+/* Mostrar submenús anidados */
 .submenu li:hover > .submenu {
   display: block;
 }
+
+
 
 /* --------------------------------------
    CARRUSEL DE INICIO Y TEXTO LATERAL
