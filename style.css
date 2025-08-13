@@ -306,6 +306,8 @@ nav {
 .youtube-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px;
+  display: block; /* ocupa todo el ancho disponible */ 
+  width: 100%; /* mismo ancho que recuadros */
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white !important;
@@ -313,8 +315,6 @@ nav {
   margin: 0 auto; /* centra el botón */
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 95%; /* mismo ancho que recuadros */
-  display: block; /* ocupa todo el ancho disponible */
   box-sizing: border-box; /* incluye el padding en el ancho */
   border: none !important; /* Elimina el borde blanco que se ve */
   transition: transform 0.3s ease, background-color 0.3s ease;  
@@ -332,7 +332,8 @@ nav {
 .socialmediacontent-white-cell-days {
   background-color: white;
   border-radius: 6px;
-  width: 100%;
+  display: block;
+  width: 95%;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
@@ -344,14 +345,14 @@ nav {
   padding-right: 5px;
   line-height: 1.6;
   text-align: center;
-  display: block; 
   box-sizing: border-box;
 }
 /* Recuadro blanco para TIME */
 .socialmediacontent-white-cell-time {
   background-color: white;
   border-radius: 6px;
-  width: 98%; /* puedes ajustar este ancho solo para TIME */
+  display: block;  
+  width: 100%; /* puedes ajustar este ancho solo para TIME */
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
@@ -363,7 +364,6 @@ nav {
   padding-right: 5px;
   line-height: 1.6;
   text-align: center;
-  display: block; 
   box-sizing: border-box;
 }
 /* Texto*/
