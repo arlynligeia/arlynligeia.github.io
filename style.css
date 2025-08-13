@@ -283,7 +283,7 @@ nav {
 .socialmediacontent-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  color: #e60073; /* fucsia intenso */
+  color: #001A80;
   padding-top: 0px;
   padding-bottom: 0px;
   line-height: 1.5;
@@ -293,8 +293,8 @@ nav {
 /* Linea separadora */
 .socialmediacontent-tabledivider td {
   border-top: 3px solid #001A80;
-  padding-top: 10px; /* editable margen superior */
-  padding-bottom: 10px; /* editable margen inferior */
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 5px; /* editable margen inferior */
  }
 /* Columnas */
 /* ACCOUNT */
@@ -378,6 +378,14 @@ nav {
   text-align: center;
 }
 /* Subtítulo debajo de la tabla */
+/* Contenedor del subtítulo Live Stream */
+.socialmediacontent-livestream {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el punto y el texto */
+  margin-top: 0;
+  margin-bottom: 0px;
+}
 .socialmediacontent-red-dot {
   width: 14px;
   height: 14px;
