@@ -1582,25 +1582,64 @@ nav {
 /* ======================================
    WELCOME TO MY STORE
 ====================================== */
-.welcometomystore-container {
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+/* Contenedor general del carrusel */
+.welcometomystore-carousel-section {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
 }
-.welcometomystore-description {
+
+.welcometomystore-carousel-container {
+  position: relative;
+  width: 95%;
+  height: calc(100vh - 220px); /* mismo alto que tu carrusel de inicio */
+  overflow: hidden;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+/* Carrusel */
+.welcometomystore-carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.store-carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.store-carousel-image.active {
+  opacity: 1;
+}
+
+/* Texto centrado encima */
+.welcometomystore-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 0px;
-  line-height: 1.5;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
   text-align: center;
+  z-index: 2;
 }
+
+
+
+
+
+
+
+
+
 /* ======================================
    DIGITAL PRODUCTS
 ====================================== */
