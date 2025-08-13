@@ -321,17 +321,34 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
 }
-/* DAYS */
+/* DAYS Y TIME */
+/* Recuadro blanco para Days y Time */
+.socialmediacontent-white-cell {
+  background-color: white;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  line-height: 1.6;
+  text-align: center;
+  display: block; 
+  width: 100%; 
+  box-sizing: border-box;
+}
 /* Texto*/
 .label-days,
 .label-time {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  color: #001A80; /* azul noche intenso */ 
+  color: black;
   padding-top: 0px; /* editable margen superior */
   padding-bottom: 0px; /* editable margen inferior */
   padding-left: 0px; /* editable margen izquierdo */
-  padding-right: 10px; /* espacio antes del recuadro */
+  padding-right: 0px; /* espacio antes del recuadro */
   line-height: 1.6;
   text-align: center;
 }
