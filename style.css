@@ -254,7 +254,6 @@ nav {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 }
-
 /* Tabla 1 */
 .socialmediacontent-table {
   width: 100%;
@@ -405,32 +404,37 @@ nav {
   text-align: left;
 }
 
+
+
+
+
+
+
 /* Tabla 2 */
-.socialmediacontent-table {
+.socialmediacontent-table2 {
   width: 100%;
   table-layout: fixed;
   margin-top: 0;
   margin-bottom: 0px;
 }
-
 /* Ancho de columnas */
-.socialmediacontent-account-col {
+.socialmediacontent-account2-col {
   width: 20%; /* editable: columna de botones */
 }
-.socialmediacontent-days-col {
+.socialmediacontent-days2-col {
   width: 50%; /* editable: columna de días */
 }
-.socialmediacontent-time-col {
+.socialmediacontent-time2-col {
   width: 30%; /* editable: columna de hora */
 }
 /* Fila en general para que todo esté alineado verticalmente */
-.socialmediacontent-table td {
+.socialmediacontent-table2 td {
   vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
   padding-top: 10px;
   padding-bottom: 10px; 
 }
 /* Subtítulos */
-.socialmediacontent-table th {
+.socialmediacontent-table2 th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #ff1493; /* Fucsia */
@@ -441,7 +445,7 @@ nav {
   text-transform: uppercase;
  }
 /* Linea separadora */
-.socialmediacontent-tabledivider td {
+.socialmediacontent-tabledivider2 td {
   border-top: 3px solid #ff1493; /* Fucsia */
   padding-top: 0px; /* editable margen superior */
   padding-bottom: 5px; /* editable margen inferior */
@@ -449,18 +453,11 @@ nav {
 /* Columnas */
 /* ACCOUNT */
 /* Columna de botones en columna */
-.account-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centra verticalmente el conjunto de botones */
-  gap: 10px;
-  height: 100%;
-}
-.tiktok-button-wrapper,
+.tiktok2-button-wrapper,
 .twitch-button-wrapper {
   text-align: center;
 }
-.tiktok-button,
+.tiktok2-button,
 .twitch-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px;
@@ -477,7 +474,7 @@ nav {
   border: none !important; /* Elimina el borde blanco que se ve */
   transition: transform 0.3s ease, background-color 0.3s ease;  
 }
-.tiktok-button:hover {
+.tiktok2-button:hover {
   transform: scale(1.05);
   cursor: pointer;
 }
@@ -486,13 +483,8 @@ nav {
   cursor: pointer;
 }
 /* DAYS Y TIME */
-/* Forzar que DAYS y TIME ocupen el alto de la fila y se centren */
-.socialmediacontent-days-col,
-.socialmediacontent-time-col {
-  vertical-align: middle;
-}
 /* Recuadro blanco para DAYS */
-.socialmediacontent-white-cell-days {
+.socialmediacontent-white-cell-days2 {
   background-color: white;
   border-radius: 6px;
   display: block;
@@ -510,7 +502,7 @@ nav {
   box-sizing: border-box;
 }
 /* Recuadro blanco para TIME */
-.socialmediacontent-white-cell-time {
+.socialmediacontent-white-cell-time2 {
   background-color: white;
   border-radius: 6px;
   display: block;  
@@ -528,8 +520,8 @@ nav {
   box-sizing: border-box;
 }
 /* Texto*/
-.label-days,
-.label-time {
+.label-days2,
+.label-time2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
