@@ -401,7 +401,7 @@ nav {
   color: white;
   margin-top: 0;  /* Elimina el espacio adicional no deseado */
   margin-bottom: 16px;
-  line-height: 1; /* Alinea mejor con el punto */
+  line-height: 1.2; /* Alinea mejor con el punto */
   text-align: left;
 }
 
@@ -448,6 +448,14 @@ nav {
  }
 /* Columnas */
 /* ACCOUNT */
+/* Columna de botones en columna */
+.account-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente el conjunto de botones */
+  gap: 10px;
+  height: 100%;
+}
 .tiktok-button-wrapper,
 .twitch-button-wrapper {
   text-align: center;
@@ -478,6 +486,11 @@ nav {
   cursor: pointer;
 }
 /* DAYS Y TIME */
+/* Forzar que DAYS y TIME ocupen el alto de la fila y se centren */
+.socialmediacontent-days-col,
+.socialmediacontent-time-col {
+  vertical-align: middle;
+}
 /* Recuadro blanco para DAYS */
 .socialmediacontent-white-cell-days {
   background-color: white;
