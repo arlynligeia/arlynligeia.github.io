@@ -1582,29 +1582,25 @@ nav {
 /* ======================================
    WELCOME TO MY STORE
 ====================================== */
-/* Contenedor general del carrusel */
-.welcometomystore-carousel-section {
-  margin-top: 40px;
+/* Contenedor general */
+.store-carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
-
-.welcometomystore-carousel-container {
-  position: relative;
+/* Carrusel más ancho que el de inicio */
+.store-carousel {
   width: 95%;
-  height: calc(100vh - 220px); /* mismo alto que tu carrusel de inicio */
-  overflow: hidden;
-  border-radius: 20px;
-  border: 2px solid white;
-}
-
-/* Carrusel */
-.welcometomystore-carousel {
-  width: 100%;
   height: 100%;
+  overflow: hidden;
+  border: 2px solid white;
+  border-radius: 20px;
   position: relative;
 }
-
+/* Imágenes del carrusel */
 .store-carousel-image {
   position: absolute;
   width: 100%;
@@ -1613,13 +1609,11 @@ nav {
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-
 .store-carousel-image.active {
   opacity: 1;
 }
-
-/* Texto centrado encima */
-.welcometomystore-text {
+/* Texto fijo al centro */
+.store-carousel-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1631,6 +1625,7 @@ nav {
   text-align: center;
   z-index: 2;
 }
+
 
 
 
