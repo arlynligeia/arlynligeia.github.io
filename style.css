@@ -403,13 +403,6 @@ nav {
   line-height: 1.2; /* Alinea mejor con el punto */
   text-align: left;
 }
-
-
-
-
-
-
-
 /* Tabla 2 */
 .socialmediacontent-table2 {
   width: 100%;
@@ -453,8 +446,13 @@ nav {
 /* Columnas */
 /* ACCOUNT */
 /* Columna de botones en columna */
-.tiktok2-button-wrapper,
+.tiktok2-button-wrapper {
+  margin-top: 0px;
+  margin-bottom: 10px; /* espacio entre TikTok y Twitch */
+  text-align: center
 .twitch-button-wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
   text-align: center;
 }
 .tiktok2-button,
