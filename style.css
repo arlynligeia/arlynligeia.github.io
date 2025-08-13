@@ -1641,7 +1641,7 @@ nav {
 ====================================== */
 .physicalproducts-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
-  width: 800px;
+  width: 95%; /* igual que el carrusel ancho */
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
@@ -1679,6 +1679,54 @@ nav {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 } 
+/* GRID de 3 columnas */
+.physicalproducts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Tarjetas de productos */
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  z-index: 2;
+}
+
+/* Efecto zoom al pasar el mouse */
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
 /* ======================================
    JEWELRY
 ====================================== */
