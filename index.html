@@ -986,21 +986,25 @@ setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-const fashionLink = document.querySelector('.product-card[href="#jewelry"]'); 
-const jewelrySection = document.querySelector('#jewelry');
-const storeSection = document.querySelector('#store');
-// Ocultamos por defecto la sección jewelry
-jewelrySection.style.display = "none";
-fashionLink.addEventListener("click", (e) => {
-e.preventDefault();
-// Oculta toda la parte de store
-storeSection.style.display = "none";
-// Muestra la sección jewelry
-jewelrySection.style.display = "block";
-jewelrySection.scrollIntoView({ behavior: "smooth" });
-});
+  const fashionLink = document.querySelector('.product-card[href="#jewelry"]'); 
+  const jewelrySection = document.querySelector('#jewelry');
+  const storeSection = document.querySelector('#store');
+
+  fashionLink.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    // Ocultar Store
+    storeSection.style.display = "none";
+    
+    // Mostrar Jewelry
+    jewelrySection.style.display = "block";
+    
+    // Llevar la vista a Jewelry
+    jewelrySection.scrollIntoView({ behavior: "smooth" });
+  });
 });
 </script>
+
 
 
 
