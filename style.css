@@ -825,10 +825,10 @@ nav {
 }
 
 /* ======================================
-   YOUTUBE HIGHLIGHTS
+   YOUTUBE HIGHLIGHT
 ====================================== */
 /* Contenedor */
-.youtubehighlights-container {
+.youtubehighlight-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
@@ -840,7 +840,7 @@ nav {
   padding-right: 30px; /* editable margen derecho */
 }
 /* Franja superior decorativa */
-.youtubehighlights-container::before {
+.youtubehighlight-container::before {
   content: "";
   position: absolute;
   z-index: 1; /* franja encima del fondo */  
@@ -852,7 +852,7 @@ nav {
   height: 90px; /* grosor de la franja */
 }
 /* Contenedor para título + botón en la misma fila */
-.youtubehighlights-header {
+.youtubehighlight-header {
   position: relative; /* para que el título y el botón estén encima de la franja */
   z-index: 2; /* encima de la franja */
   display: flex;
@@ -861,7 +861,7 @@ nav {
   margin-bottom: 16px; /* separa del contenido siguiente */
 }
 /* Título */
-.youtubehighlights-title {
+.youtubehighlight-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
   display: block;
@@ -874,7 +874,7 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.youtubehighlights-title a {
+.youtubehighlight-title a {
   color: white;
   text-decoration: none;
 }
@@ -906,7 +906,7 @@ nav {
 }
 
 /* Contenedor de videos debajo del título */
-.youtubehighlights-videos {
+.youtubehighlight-videos {
   z-index: 2; /* encima de la franja si es necesario */
   display: flex; /* para que las columnas estén en fila */
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
@@ -934,7 +934,7 @@ nav {
 }
 
 /* Contenedor de videos debajo del título */
-.youtubehighlights2-videos {
+.youtubehighlight2-videos {
   z-index: 2; /* encima de la franja si es necesario */
   display: flex; /* para que las columnas estén en fila */
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
