@@ -579,30 +579,31 @@ nav {
 }
 /* Contenedor de columnas */
 .tiktokhighlights-columns {
-  display: flex; /* activa el diseño en columnas */
-  justify-content: space-between; /* separa las columnas uniformemente */
-  flex-wrap: wrap; /* permite que se ajusten en pantallas pequeñas */
-  gap: 20px; /* espacio entre columnas (editable) */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px; /* reduje espacio para versión compacta estilo Nicki Minaj */
   margin-top: 0;
   margin-bottom: 0px;
 }
-/* Cada columna individual */
-.tiktok-video-column {
-  flex: 1 1 30%; /* ancho aproximado del 30% cada una */
-  max-width: 305px; /* mismo ancho máximo que el embed */
-  min-width: 250px; /* mínimo para mantener proporción */
+.tiktokhighlights-video-column {
+  flex: 1 1 calc(33.33% - 10px); /* tres columnas iguales con gap */
+  max-width: 300px; /* ancho compacto para que quepan 3 fácilmente */
+  min-width: 180px;
   display: flex;
-  justify-content: center; /* centra el video horizontalmente */
-  align-items: center; /* centra verticalmente si hay espacio */
-  padding: 10px; /* control del margen interno (editable) */
-  border-radius: 15px; /* esquinas redondeadas */
+  justify-content: center;
+  align-items: center;
 }
-/* Ajustes del embed de TikTok */
-.tiktok-embed {
-  border-radius: 15px; /* bordes redondeados para el video */
-  overflow: hidden; /* oculta partes que sobresalgan */
+/* Oculta automáticamente el texto/título del embed y ajusta solo el video */
+.tiktokhighlights-embed > section + section {
+  display: none;
 }
 
+/* Ajusta altura/anchura del embed para que solo se vea el video */
+.tiktokhighlights-embed {
+  width: 100%;
+  height: auto !important;
+}
 
 
 
