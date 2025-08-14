@@ -532,6 +532,15 @@ nav {
   text-align: center;
 }
 
+
+
+
+
+
+
+
+
+
 /* ======================================
    TIKTOK HIGHLIGHTS
 ====================================== */
@@ -559,6 +568,20 @@ nav {
   height: 90px; /* grosor de la franja */
   z-index: 1; /* franja encima del fondo */
 }
+
+
+
+/* Contenedor para título + botón en la misma fila */
+.tiktokhighlights-header {
+  position: relative; /* para que el título y el botón estén encima de la franja */
+  z-index: 2; /* encima de la franja */
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between; /* título a la izquierda, botón a la derecha */
+  margin-bottom: 16px; /* separa del contenido siguiente */
+}
+
+
 /* Título */
 .tiktokhighlights-title {
   position: relative;
@@ -568,14 +591,42 @@ nav {
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
 .tiktokhighlights-title a {
-  color: white; /* mantiene el texto blanco */
-  text-decoration: none; /* quita el subrayado */
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
+/* Botón Follow */
+.tiktok-follow-button {
+  z-index: 2; /* encima de la franja */   
+  display: inline-block;
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+/* Hover del botón */
+.tiktok-follow-button:hover {
+  transform: scale(1.05);
 }
 
 
