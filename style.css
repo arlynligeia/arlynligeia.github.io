@@ -560,6 +560,8 @@ nav {
   z-index: 1; /* franja encima del fondo */
 }
 .tiktokhighlights-header {
+  position: absolute;  /* necesario para estar sobre la franja */
+  z-index: 2; /* título encima de la franja */ 
   display: flex;
   margin-top: 0;
   margin-bottom: 16px;
