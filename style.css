@@ -559,6 +559,13 @@ nav {
   height: 90px; /* grosor de la franja */
   z-index: 1; /* franja encima del fondo */
 }
+.tiktokhighlights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* título a la izquierda, botón a la derecha */
+  margin-top: 0;
+  margin-bottom: 16px;  
+}
 /* Título */
 .hightlights-title {
   position: relative;
@@ -594,8 +601,8 @@ nav {
   margin-bottom: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box; /* incluye el padding en el ancho */
   border: none !important; /* Elimina el borde blanco que se ve */
   transition: transform 0.3s ease, background-color 0.3s ease;  
