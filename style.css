@@ -546,8 +546,6 @@ nav {
   padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
-   align-items: center; /* AGREGADO: centra verticalmente */
-  justify-content: space-between; /* AGREGADO: título a la izquierda, botón a la derecha */
 }
 /* Franja superior decorativa */
 .tiktokhighlights-container::before {
@@ -562,7 +560,7 @@ nav {
   z-index: 1; /* franja encima del fondo */
 }
 /* Título */
-.tiktokhighlights-title {
+.hightlights-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
   display: block;
@@ -575,7 +573,7 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.tiktokhighlights-title a {
+.highlights-title a {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 }
