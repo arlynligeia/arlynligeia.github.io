@@ -1049,67 +1049,71 @@ nav {
 /* ======================================
    FEATURE FILM
 ====================================== */
+/* Contenedor */
 .featurefilm-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+/* Franja superior decorativa */
 .featurefilm-container::before {
   content: "";
   position: absolute;
+  z-index: 1; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px; /* grosor de la franja */
-  background-color: #8000A8; /* purpura intenso */
+  background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
-  z-index: 1; /* franja encima del fondo */
+  height: 90px;
 }
+/* Título */
 .featurefilm-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
+  text-decoration: none;
   margin-top: 0;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
-  text-decoration: none;
 }
 .featurefilm-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white; /* mantiene el texto blanco */
+  text-decoration: none; /* quita el subrayado */
 }
-/* Columnas: Imagen + Texto */
+
+/* Columnas */
 .featurefilm-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   align-items: center;
   justify-content: space-between;
-  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px; 
   margin-bottom: 16px;
 }
-/* Imagen */
+/* Columna 1 Imagen */
 .featurefilm-image {
   flex: 1;
   min-width: 300px;
-  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px; 
   margin-bottom: 0px;
 }
 .featurefilm-image img {
   width: 100%;
   border-radius: 15px;
 }
-/* Columna de texto */
+/* Columna 2 Texto */
 .featurefilm-text-side {
   flex: 1;
   min-width: 300px;
@@ -1122,7 +1126,7 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px;
   margin-bottom: 16px;
   line-height: 1.3;
 }
@@ -1130,12 +1134,12 @@ nav {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;  
-  margin-top: 0px;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px;
   margin-bottom: 0px;
   line-height: 1.5;
 }
-/* Texto inferior */
-.featurefilm-development-title {
+/* Texto debajo de las columnas */
+.featurefilm-production-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
@@ -1152,6 +1156,13 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
+
+
+
+
+
+
+
 
 /* ======================================
    SHORT FILM
