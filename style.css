@@ -532,15 +532,6 @@ nav {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
 /* ======================================
    TIKTOK HIGHLIGHTS
 ====================================== */
@@ -621,17 +612,18 @@ nav {
 .tiktok-follow-button:hover {
   transform: scale(1.05);
 }
-
-
-
 /* Contenedor de videos debajo del título */
 .tiktokhighlights-videos {
   z-index: 2; 
   display: flex; /* filas de columnas */
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
   gap: 10px; /* espacio entre columnas */
-  margin: 0; 
-  padding: 0;
+  margin-top: 0px; 
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
   justify-content: space-between; /* separa las columnas uniformemente */
 }
 
