@@ -584,23 +584,24 @@ nav {
 .tiktokhighlights-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0px; /* espacio entre columnas */
+  flex-wrap: nowrap; /* fuerza que las 3 columnas queden en la misma fila */
+  gap: 10px; /* espacio entre columnas, puedes ajustar */
 }
+
 /* Cada columna */
 .tiktokhighlights-video-column {
-  flex: 0 0 calc(33.33% - 20px); /* fuerza 3 columnas */
-  max-width: 260px; /* tamaño máximo */
+  flex: 1 1 0; /* hace que cada columna crezca igual y se ajuste al contenedor */
+  max-width: none; /* elimina límite que rompía la fila */
   border: 2px solid #00CED1;
   border-radius: 15px;
-  padding: 10px;
   background-color: black;
   box-shadow: 0px 0px 15px rgba(0, 206, 209, 0.6);
 }
+
 /* Ajuste del video */
 .tiktokhighlights-embed {
-  width: 90% !important;
-  height: 400px !important; /* puedes cambiarlo */
+  width: 100% !important; /* ocupa toda la columna */
+  height: 350px !important; /* puedes ajustar altura */
   overflow: hidden;
 }
 
@@ -608,6 +609,7 @@ nav {
 .tiktokhighlights-embed section:not(:first-child) {
   display: none !important;
 }
+
 
 
 
