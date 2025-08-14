@@ -560,11 +560,12 @@ nav {
   z-index: 1; /* franja encima del fondo */
 }
 .tiktokhighlights-header {
+  position: relative; 
   display: flex;
+  margin-top: 0;
+  margin-bottom: 16px;
   align-items: center;
   justify-content: space-between; /* título a la izquierda, botón a la derecha */
-  margin-top: 0;
-  margin-bottom: 16px;  
 }
 /* Título */
 .hightlights-title {
