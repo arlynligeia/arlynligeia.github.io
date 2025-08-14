@@ -536,7 +536,7 @@ nav {
    TIKTOK HIGHLIGHTS
 ====================================== */
 /* Contenedor */
-.tiktokhighlights-container {
+.socialmediacontent-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
@@ -548,19 +548,19 @@ nav {
   padding-right: 30px; /* editable margen derecho */
 }
 /* Franja superior decorativa */
-.tiktokhighlights-container::before {
+.socialmediacontent-container::before {
   content: "";
   position: absolute;
-  z-index: 1; /* franja encima del fondo */
   top: 0;
   left: 0;
   width: 100%;
   background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
   height: 90px; /* grosor de la franja */
+  z-index: 1; /* franja encima del fondo */
 }
 /* Título */
-.highlights-title {
+.socialmediacontent-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
   display: block;
@@ -573,37 +573,18 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.highlights-title a {
+.socialmediacontent-title a {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 }
-.tiktok-follow-button-wrapper {
-  text-align: center;
-}
-.tiktok-follow-button {
-  position: relative;
-  z-index: 2; /* título encima de la franja */
-  background-color: #ff1493; /* Fucsia */
-  border-radius: 6px;
-  width: auto; /* para que no ocupe todo el ancho y quede al lado derecho */
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important;
-  text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box; /* incluye el padding en el ancho */
-  border: none !important; /* Elimina el borde blanco que se ve */
-  transition: transform 0.3s ease, background-color 0.3s ease;  
-}
-.tiktok-follow-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
-}
+
+
+
+
+
+
+
+
 
 
 
