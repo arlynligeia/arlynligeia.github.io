@@ -630,12 +630,17 @@ nav {
   display: flex; /* para que las columnas estén en fila */
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
   gap: 2px; /* espacio entre columnas, editable */
-  margin-top: 16px; /* separación con el header */
+  margin-top: 0px; 
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 /* Cada columna de video */
 .tiktok-video-column {
-  flex: 1; /* se reparte el espacio disponible entre las columnas */
+  flex: 0 0 calc((100% - 32px) / 3); /* 32px = 16px gap × 2 entre columnas */
   min-width: 200px; /* ancho mínimo de columna, editable */
   max-width: 32%; /* ancho máximo de columna, ajustable */
   box-sizing: border-box;
