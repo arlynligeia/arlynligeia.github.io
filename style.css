@@ -582,29 +582,29 @@ nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px; /* reduje espacio para versión compacta estilo Nicki Minaj */
-  margin-top: 0;
-  margin-bottom: 0px;
+  gap: 20px; /* espacio entre columnas */
 }
-.tiktokhighlights-video-column {
-  flex: 1 1 calc(33.33% - 10px); /* tres columnas iguales con gap */
-  max-width: 300px; /* ancho compacto para que quepan 3 fácilmente */
-  min-width: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Cada columna */
+.tiktok-video-column {
+  flex: 0 0 calc(33.33% - 20px); /* fuerza 3 columnas */
+  max-width: 260px; /* tamaño máximo */
+  border: 2px solid #00CED1;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: black;
+  box-shadow: 0px 0px 15px rgba(0, 206, 209, 0.6);
 }
-/* Oculta automáticamente el texto/título del embed y ajusta solo el video */
-.tiktokhighlights-embed > section + section {
-  display: none;
-}
-
-/* Ajusta altura/anchura del embed para que solo se vea el video */
-.tiktokhighlights-embed {
-  width: 100%;
-  height: auto !important;
+/* Ajuste del video */
+.tiktok-embed {
+  width: 100% !important;
+  height: 460px !important; /* puedes cambiarlo */
+  overflow: hidden;
 }
 
+/* Ocultar texto debajo del video */
+.tiktok-embed section:not(:first-child) {
+  display: none !important;
+}
 
 
 
