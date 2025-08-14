@@ -532,8 +532,77 @@ nav {
   text-align: center;
 }
 
-
-
+/* ======================================
+   TIKTOK HIGHLIGHTS
+====================================== */
+/* Contenedor */
+.tiktokhighlights-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* Franja superior decorativa */
+.tiktokhighlights-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px; /* grosor de la franja */
+  z-index: 1; /* franja encima del fondo */
+}
+/* Título */
+.tiktokhighlights-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.tiktokhighlights-title a {
+  color: white; /* mantiene el texto blanco */
+  text-decoration: none; /* quita el subrayado */
+}
+/* Contenedor de columnas */
+.tiktokhighlights-columns {
+  display: flex; /* activa el diseño en columnas */
+  justify-content: space-between; /* separa las columnas uniformemente */
+  flex-wrap: wrap; /* permite que se ajusten en pantallas pequeñas */
+  gap: 20px; /* espacio entre columnas (editable) */
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+/* Cada columna individual */
+.tiktok-video-column {
+  flex: 1 1 30%; /* ancho aproximado del 30% cada una */
+  max-width: 305px; /* mismo ancho máximo que el embed */
+  min-width: 250px; /* mínimo para mantener proporción */
+  display: flex;
+  justify-content: center; /* centra el video horizontalmente */
+  align-items: center; /* centra verticalmente si hay espacio */
+  background-color: rgba(0, 0, 0, 0.2); /* leve fondo semitransparente opcional */
+  padding: 10px; /* control del margen interno (editable) */
+  border-radius: 15px; /* esquinas redondeadas */
+}
+/* Ajustes del embed de TikTok */
+.tiktok-embed {
+  border-radius: 15px; /* bordes redondeados para el video */
+  overflow: hidden; /* oculta partes que sobresalgan */
+}
 
 
 
