@@ -577,6 +577,9 @@ nav {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 }
+
+
+
 /* Contenedor de columnas */
 .tiktokhighlights-columns {
   display: flex;
@@ -585,7 +588,7 @@ nav {
   gap: 20px; /* espacio entre columnas */
 }
 /* Cada columna */
-.tiktok-video-column {
+.tiktokhighlights-video-column {
   flex: 0 0 calc(33.33% - 20px); /* fuerza 3 columnas */
   max-width: 260px; /* tamaño máximo */
   border: 2px solid #00CED1;
@@ -595,14 +598,14 @@ nav {
   box-shadow: 0px 0px 15px rgba(0, 206, 209, 0.6);
 }
 /* Ajuste del video */
-.tiktok-embed {
+.tiktokhighlights-embed {
   width: 100% !important;
   height: 460px !important; /* puedes cambiarlo */
   overflow: hidden;
 }
 
 /* Ocultar texto debajo del video */
-.tiktok-embed section:not(:first-child) {
+.tiktokhighlights-embed section:not(:first-child) {
   display: none !important;
 }
 
