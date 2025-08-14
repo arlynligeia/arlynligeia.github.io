@@ -584,15 +584,14 @@ nav {
 .tiktokhighlights-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* fuerza fila única */
+  flex-wrap: nowrap;
   gap: 10px; /* espacio entre videos */
 }
 
-/* Cada columna */
+/* Cada columna (video) */
 .tiktokhighlights-video-column {
-  flex: 0 0 auto; /* ancho fijo según data-width */
+  flex: 0 0 auto; /* ancho fijo según data-width del blockquote */
 }
-
 
 
 
