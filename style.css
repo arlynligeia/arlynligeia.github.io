@@ -584,27 +584,14 @@ nav {
 .tiktokhighlights-columns {
   display: flex;
   justify-content: space-between;
-  flex-wrap: nowrap; /* fuerza que las 3 columnas estén en una fila */
-  gap: 10px; /* espacio entre columnas */
+  flex-wrap: nowrap; /* fuerza fila única */
+  gap: 10px; /* espacio entre videos */
 }
 
 /* Cada columna */
 .tiktokhighlights-video-column {
-  flex: 1 1 0;
-  max-width: none;
-  border: 2px solid #00CED1;
-  border-radius: 15px;
-  background-color: black;
-  box-shadow: 0px 0px 15px rgba(0, 206, 209, 0.6);
+  flex: 0 0 auto; /* ancho fijo según data-width */
 }
-
-/* Ajuste del video */
-.tiktok-embed {
-  width: 100% !important;
-  height: 350px !important; /* puedes ajustar altura */
-  overflow: hidden;
-}
-
 
 
 
