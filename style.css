@@ -624,6 +624,34 @@ nav {
 
 
 
+/* Contenedor de videos debajo del título */
+.tiktokhighlights-videos {
+  z-index: 2; /* encima de la franja si es necesario */ 
+  display: flex; /* para que las columnas estén en fila */
+  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
+  gap: 16px; /* espacio entre columnas, editable */
+  margin-top: 16px; /* separación con el header */
+}
+
+/* Cada columna de video */
+.tiktok-video-column {
+  flex: 1; /* se reparte el espacio disponible entre las columnas */
+  min-width: 200px; /* ancho mínimo de columna, editable */
+  max-width: 32%; /* ancho máximo de columna, ajustable */
+  box-sizing: border-box;
+}
+
+/* Iframe de TikTok dentro de cada columna */
+.tiktok-video-column iframe {
+  display: block; 
+  width: 100%; /* ocupa todo el ancho de la columna */
+  height: 350px; /* altura del video, editable */
+  border: none; /* quita borde del iframe */
+  border-radius: 15px; /* opcional, redondea bordes del video */
+  overflow: hidden;  
+}
+
+
 
 
 
