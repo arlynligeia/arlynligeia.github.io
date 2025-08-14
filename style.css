@@ -551,21 +551,13 @@ nav {
 .tiktokhighlights-container::before {
   content: "";
   position: absolute;
+  z-index: 1; /* franja encima del fondo */
   top: 0;
   left: 0;
   width: 100%;
   background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
   height: 90px; /* grosor de la franja */
-  z-index: 1; /* franja encima del fondo */
-}
-.tiktokhighlights-header {
-  position: absolute;  /* necesario para estar sobre la franja */
-  z-index: 2; /* título encima de la franja */ 
-  display: flex;
-  margin-top: 0;
-  margin-bottom: 16px;
-  justify-content: space-between; /* título a la izquierda, botón a la derecha */
 }
 /* Título */
 .highlights-title {
