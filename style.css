@@ -912,7 +912,7 @@ nav {
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
   gap: 10px; /* espacio entre columnas */
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
@@ -933,7 +933,33 @@ nav {
   border: none;
 }
 
-
+/* Contenedor de videos debajo del título */
+.youtubehighlights2-videos {
+  z-index: 2; /* encima de la franja si es necesario */
+  display: flex; /* para que las columnas estén en fila */
+  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
+  gap: 10px; /* espacio entre columnas */
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* Cada columna de video */
+.youtube2-video-column {
+  flex: 1; /* cada columna ocupa el mismo ancho */
+  min-width: calc(50% - 5px); /* 50% menos la mitad del gap para que entren en fila */
+  box-sizing: border-box;
+}
+/* Iframe de YouTube dentro de cada columna */
+.youtube2-video-column iframe {
+  display: block;
+  width: 100%; /* ocupa todo el ancho de la columna */
+  height: 350px; /* altura del video, editable */
+  border-radius: 15px; /* opcional, redondea bordes del video */
+  border: none;
+}
 
 
 
