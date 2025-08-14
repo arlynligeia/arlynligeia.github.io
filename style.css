@@ -536,7 +536,7 @@ nav {
    TIKTOK HIGHLIGHTS
 ====================================== */
 /* Contenedor */
-.socialmediacontent-container {
+.tiktokhighlights-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
@@ -548,7 +548,7 @@ nav {
   padding-right: 30px; /* editable margen derecho */
 }
 /* Franja superior decorativa */
-.socialmediacontent-container::before {
+.tiktokhighlights-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -560,7 +560,7 @@ nav {
   z-index: 1; /* franja encima del fondo */
 }
 /* Título */
-.socialmediacontent-title {
+.tiktokhighlights-title {
   position: relative;
   z-index: 2; /* título encima de la franja */
   display: block;
@@ -573,7 +573,7 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.socialmediacontent-title a {
+.tiktokhighlights-title a {
   color: white; /* mantiene el texto blanco */
   text-decoration: none; /* quita el subrayado */
 }
