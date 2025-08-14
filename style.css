@@ -612,8 +612,6 @@ nav {
 .tiktok-follow-button:hover {
   transform: scale(1.05);
 }
-
-
 /* Contenedor de videos fila 1*/
 .tiktokhighlights-videos {
   z-index: 2; 
@@ -676,7 +674,9 @@ nav {
   object-fit: cover; /* rellena el contenedor sin deformar */
   cursor: pointer; /* indica que se puede hacer click */
 }
-
+#tiktokhighlights {
+    display: none;
+}
 
 
 
