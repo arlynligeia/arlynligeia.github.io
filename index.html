@@ -22,7 +22,8 @@
 <li>
 <a href="#" class="menu-button menu-link" data-section="home">Home</a>
 <ul class="submenu">
-<li><a href="#socialmediacontent" class="menu-button">Social Media Content</a></li> <!-- ✅ Dentro de <li> -->
+<li><a href="#socialmediacontent" class="menu-button">Social Media Content</a></li>
+<li><a href="#youtubehighlight" class="menu-button">Youtube Highlight</a></li>
 </ul>
 </li>
           
@@ -90,8 +91,8 @@
 <li>
 <a href="#" class="menu-button menu-link" data-section="contact">Contact</a>
 <ul class="submenu">
-<li><a href="#contactforfans" class="menu-button">Contact for Fans</a></li>
 <li><a href="#contactforwork" class="menu-button">Contact for Work</a></li>
+<li><a href="#contactforfans" class="menu-button">Contact for Fans</a></li>
 </ul>
 </li>
         
@@ -269,13 +270,13 @@ I want a crab fishing boat and a patron to fund my delirium…
 </div>
 </div>
 
-<!-- TIKTOK HIGHLIGHTS -->
+<!-- TIKTOK HIGHLIGHT -->
 <div id="tiktokhighlights" class="tiktokhighlights-section">
 <div class="tiktokhighlights-container">
 <!-- Header: título + botón en la misma fila -->
 <div class="tiktokhighlights-header">
 <h2 class="tiktokhighlights-title">
-<a href="#tiktokhighlights">TIKTOK HIGHLIGHTS</a>
+<a href="#tiktokhighlights">TIKTOK HIGHLIGHT</a>
 </h2>
 <!-- Botón Follow a TikTok -->
 <a href="https://www.tiktok.com/@arlynligeia" target="_blank" class="tiktok-follow-button">
@@ -339,13 +340,13 @@ FOLLOW
 </div>
 </div>
 
-<!-- DESTACADOS DE TIKTOK -->
+<!-- DESTACADO DE TIKTOK -->
 <div id="destacadosdetiktok" class="destacadosdetiktok-section">
 <div class="destacadosdetiktok-container">
 <!-- Header: título + botón en la misma fila -->
 <div class="destacadosdetiktok-header">
 <h2 class="destacadosdetiktok-title">
-<a href="#destacadosdetiktok">DESTACADOS DE TIKTOK</a>
+<a href="#destacadosdetiktok">DESTACADO DE TIKTOK</a>
 </h2>
 <!-- Botón Follow a TikTok -->
 <a href="https://www.tiktok.com/@arlynligeiacp" target="_blank" class="tiktok-follow-button">
@@ -409,13 +410,13 @@ FOLLOW
 </div>
 </div>
 
-<!-- YOUTUBE HIGHLIGHTS -->
-<div id="youtubehighlights" class="youtubehighlights-section">
-<div class="youtubehighlights-container">
+<!-- YOUTUBE HIGHLIGHT -->
+<div id="youtubehighlight" class="youtubehighlight-section">
+<div class="youtubehighlight-container">
 <!-- Header: título + botón en la misma fila -->
-<div class="youtubehighlights-header">
-<h2 class="youtubehighlights-title">
-<a href="#youtubehighlights">YOUTUBE HIGHLIGHTS</a>
+<div class="youtubehighlight-header">
+<h2 class="youtubehighlight-title">
+<a href="#youtubehighlight">YOUTUBE HIGHLIGHT</a>
 </h2>
 <!-- Botón Follow a Youtube -->
 <a href="https://www.youtube.com/@arlynligeia" target="_blank" class="youtube-follow-button">
@@ -423,7 +424,7 @@ FOLLOW
 </a>
 </div>
 <!-- Primera fila de videos -->
-<div class="youtubehighlights-videos">
+<div class="youtubehighlight-videos">
 <!-- Columna 1 -->
 <div class="youtube-video-column">
 <iframe width="100%" height="350" src="https://www.youtube.com/embed/pBzur0uy8tI" 
@@ -442,7 +443,7 @@ allowfullscreen>
 </div>
 </div>
 <!-- Segunda fila de videos -->
-<div class="youtubehighlights-videos">
+<div class="youtubehighlight-videos">
 <!-- Columna 1 -->
 <div class="youtube-video-column">
 <iframe width="100%" height="350" src="https://www.youtube.com/embed/VsOk9EXvP_A" 
@@ -461,7 +462,7 @@ allowfullscreen>
 </div>
 </div> 
 <!-- Tercera fila de videos -->
-<div class="youtubehighlights2-videos">
+<div class="youtubehighlight2-videos">
 <!-- Columna 1 -->
 <div class="youtube2-video-column">
 <iframe width="100%" height="350" src="https://www.youtube.com/embed/9YwYZ3-48S8" 
@@ -667,6 +668,10 @@ The collection is currently in the development phase, with finalized sketches an
 </div>
 </section>
 
+
+
+
+      
 <!-- SECCIÓN SCIENCE-->
 <section id="science" class="science-section main-section"> 
 <!-- RESEARCH ARTICLE -->
@@ -1151,11 +1156,6 @@ setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
 
 
-
-
-
-
-
       
 <!-- Script para cambiar secciones con el menú -->
 <script>
@@ -1185,6 +1185,8 @@ history.pushState(null, "", "#" + targetId);
 });
 </script>
 
+
+      
 <!-- Script para los submenús como Support my Work -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -1196,7 +1198,7 @@ const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
 const targetElement = document.getElementById(targetId);
 // Grupos de sub-secciones por sección madre
 const subsectionGroups = {
-home: ["socialmediacontent"],
+home: ["socialmediacontent", "tiktokhighlight", "destacadodetiktok", "youtubehighlight"],
 film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
 music: ["singles", "album", "videomusic"],
 fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
@@ -1230,6 +1232,9 @@ history.pushState(null, "", "#" + targetId);
 });
 });
 </script>
+
+
+
 
 
       
