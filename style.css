@@ -1411,57 +1411,55 @@ nav {
 
 
 
-
-
-
-
 /* ======================================
    FW COLLECTION
 ====================================== */
 .fwcollection-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+/* Franja superior decorativa */
 .fwcollection-container::before {
   content: "";
   position: absolute;
+  z-index: 1; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px; /* grosor de la franja */
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
-  z-index: 1; /* franja encima del fondo */
+  height: 90px;
 }
+/* Título */
 .fwcollection-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
-  margin-top: 0;
+  text-decoration: none;
+  margin-top: 0px;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
-  text-decoration: none;
 }
 .fwcollection-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white; /* mantiene el texto blanco */
+  text-decoration: none; /* quita el subrayado */
 }
 /* Imagen */
 .fwcollection-image {
   flex: 1;
   min-width: 300px;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px;
   margin-bottom: 16px;
 }
 .fwcollection-image img {
@@ -1469,11 +1467,11 @@ nav {
   border-radius: 15px;
 }
 /* Texto inferior */
-.fwcollection-development-title {
+.fwcollection-development-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px; 
   margin-bottom: 16px;
   line-height: 1.3;
   text-align: center;
@@ -1494,58 +1492,61 @@ nav {
    RESEARCH ARTICLE
 ====================================== */
 .researcharticle-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #001F99;; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+/* Franja superior decorativa */
 .researcharticle-container::before {
   content: "";
   position: absolute;
+  z-index: 1; 
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px; /* grosor de la franja */
   background-color: #001A80; /* azul noche intenso */
   border-radius: 20px 20px 0 0;
-  z-index: 1; /* franja encima del fondo */
+  height: 90px;
 }
+/* Título */
 .researcharticle-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
-  margin-top: 0;
+  text-decoration: none;
+  margin-top: 0px;
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
-  text-decoration: none;
 }
 .researcharticle-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white; /* mantiene el texto blanco */
+  text-decoration: none; /* quita el subrayado */
 }
+/* Botones */
 .researcharticle1-button {
   display: block;
   background-color: #ff1493; /* Fucsia */
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: white;
-  padding-top: 20px; /* editable margen superior */
-  padding-bottom: 20px; /* editable margen inferior */
-  padding-left: 20px; /* editable margen izquierdo */
-  padding-right: 20px; /* editable margen derecho */
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
-  margin-bottom: 30px; /* editable margen inferior */
-  margin-left: 0px; /* editable margen izquierdo */
-  margin-right: 0px; /* editable margen derecho */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px; 
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   text-decoration: none;
   border-radius: 6px;
@@ -1559,16 +1560,16 @@ nav {
   display: block;
   background-color: #ff1493; /* Fucsia */
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: white;
-  padding-top: 20px; /* editable margen superior */
-  padding-bottom: 20px; /* editable margen inferior */
-  padding-left: 20px; /* editable margen izquierdo */
-  padding-right: 20px; /* editable margen derecho */
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
-  margin-bottom: 30px; /* editable margen inferior */
-  margin-left: 0px; /* editable margen izquierdo */
-  margin-right: 0px; /* editable margen derecho */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   text-decoration: none;
   border-radius: 6px;
@@ -1582,16 +1583,16 @@ nav {
   display: block;
   background-color: #ff1493; /* Fucsia */
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: white;
-  padding-top: 20px; /* editable margen superior */
-  padding-bottom: 20px; /* editable margen inferior */
-  padding-left: 20px; /* editable margen izquierdo */
-  padding-right: 20px; /* editable margen derecho */
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */  
-  margin-bottom: 0px; /* editable margen inferior */
-  margin-left: 0px; /* editable margen izquierdo */
-  margin-right: 0px; /* editable margen derecho */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   text-align: center;
   text-decoration: none;
   border-radius: 6px;
@@ -1601,6 +1602,13 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
  }
+
+
+
+
+
+
+
 
 
 
