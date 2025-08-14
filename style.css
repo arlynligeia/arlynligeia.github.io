@@ -546,8 +546,7 @@ nav {
   padding-bottom: 30px; /* editable margen inferior */
   padding-left: 30px; /* editable margen izquierdo */
   padding-right: 30px; /* editable margen derecho */
-  display: flex; /* AGREGADO: fila para título + botón */
-  align-items: center; /* AGREGADO: centra verticalmente */
+   align-items: center; /* AGREGADO: centra verticalmente */
   justify-content: space-between; /* AGREGADO: título a la izquierda, botón a la derecha */
 }
 /* Franja superior decorativa */
@@ -638,6 +637,13 @@ nav {
   height: 90px; /* grosor de la franja */
   z-index: 1; /* franja encima del fondo */
 }
+.youtubehighlights-header {
+  display: flex;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  align-items: center;
+  justify-content: space-between;
+}
 /* Título */
 .youtubehighlights-title {
   position: relative;
@@ -682,13 +688,6 @@ nav {
 .youtube-follow-button:hover {
   transform: scale(1.05);
   cursor: pointer;
-}
-.youtubehighlights-header {
-  display: flex;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 0px;
-  align-items: center;
-  justify-content: space-between;
 }
 .youtube-subtitle {
   font-family: 'Orbitron', sans-serif;
