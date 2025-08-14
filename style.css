@@ -626,34 +626,30 @@ nav {
 
 /* Contenedor de videos debajo del título */
 .tiktokhighlights-videos {
-  z-index: 2; /* encima de la franja si es necesario */ 
-  display: flex; /* para que las columnas estén en fila */
+  z-index: 2; 
+  display: flex; /* filas de columnas */
   flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
-  gap: 2px; /* espacio entre columnas, editable */
-  margin-top: 0px; 
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  gap: 10px; /* espacio entre columnas */
+  margin: 0; 
+  padding: 0;
+  justify-content: space-between; /* separa las columnas uniformemente */
 }
 
 /* Cada columna de video */
 .tiktok-video-column {
-  flex: 1;
-  min-width: 0px; /* ancho mínimo de columna, editable */
+  flex: 1 1 32%; /* ocupa hasta 32% del ancho, se adapta al contenedor */
+  min-width: 250px; /* ancho mínimo de columna */
   box-sizing: border-box;
 }
 
-/* Iframe de TikTok dentro de cada columna */
-.tiktok-video-column iframe {
-  display: block; 
+/* Video dentro de cada columna */
+.tiktok-video-column video {
+  display: block;
   width: 100%; /* ocupa todo el ancho de la columna */
-  height: 350px; /* altura del video, editable */
-  aspect-ratio: 9/16; /* ajusta automáticamente la altura según el video vertical */ 
-  border: none; /* quita borde del iframe */
-  border-radius: 15px; /* opcional, redondea bordes del video */
-  overflow: hidden;  
+  height: auto; /* mantiene proporción original */
+  border-radius: 15px; /* bordes redondeados */
+  object-fit: cover; /* rellena el contenedor sin deformar */
+  cursor: pointer; /* indica que se puede hacer click */
 }
 
 
