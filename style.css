@@ -640,9 +640,8 @@ nav {
 
 /* Cada columna de video */
 .tiktok-video-column {
-  flex: 0 0 calc((100% - 32px) / 3); /* 32px = 16px gap × 2 entre columnas */
-  min-width: 200px; /* ancho mínimo de columna, editable */
-  max-width: 32%; /* ancho máximo de columna, ajustable */
+  flex: 1;
+  min-width: 0px; /* ancho mínimo de columna, editable */
   box-sizing: border-box;
 }
 
