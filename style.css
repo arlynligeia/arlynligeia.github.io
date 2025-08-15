@@ -2482,8 +2482,123 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
 }
-
-#necklace, {
+/* ======================================
+   SECCIÓN INDEPENDIENTE NECKLACE 2
+====================================== */
+/* Contenedor */
+.necklace2-container {
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+/* Imagen */
+.necklace2-image {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.necklace2-image img {
+  width: 360px;
+  height: auto;
+  border-radius: 15px;
+  display: inline-block;
+}
+/* Texto del producto */
+.necklace2-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.necklace2-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.necklace2-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* ======================================
+   SECCIÓN INDEPENDIENTE NECKLACE 3
+====================================== */
+/* Contenedor */
+.necklace3-container {
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+/* Imagen */
+.necklace3-image {
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.necklace3-image img {
+  width: 360px;
+  height: auto;
+  border-radius: 15px;
+  display: inline-block;
+}
+/* Texto del producto */
+.necklace3-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.necklace3-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.necklace3-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: justify;
+}
+#necklace,
+#necklace2,
+#necklace3 {
   display: none; /* Ocultos por defecto */
 }
 
