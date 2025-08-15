@@ -2696,7 +2696,46 @@ nav {
   color: white;
   text-decoration: none;
 }
-
+/* Tabla */
+.yourcart-table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+/* Ancho de columnas */
+.yourcart-image-col {
+  width: 20%; /* editable: columna de botones */
+}
+.yourcart-productname-col {
+  width: 50%; /* editable: columna de días */
+}
+.yourcart-price-col {
+  width: 30%; /* editable: columna de hora */
+}
+/* Fila en general para que todo esté alineado verticalmente */
+.yourcart-table td {
+  vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+/* Subtítulos */
+.yourcart-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+ }
+/* Linea separadora */
+.yourcart-tabledivider td {
+  border-top: 3px solid #ff1493; /* Fucsia */
+  padding-top: 0px; /* editable margen superior */
+  padding-bottom: 5px; /* editable margen inferior */
+ }
 
 
 
