@@ -802,7 +802,7 @@ DONATE WITH PAYPAL
       
 <!-- SECCIÓN STORE-->
 <section id="store" class="store-section main-section">
-<!-- CARRUSEL WELCOME TO MY STORE -->
+<!-- Carrusel -->
 <div class="store-carousel-container">
 <div class="store-carousel">
 <img src="assets/assets/Fondociudad.png" class="store-carousel-image active" />
@@ -814,12 +814,13 @@ DONATE WITH PAYPAL
 WELCOME TO MY STORE
 </div>
 </div>
-<!-- FIN CARRUSEL WELCOME TO MY STORE -->
+<!-- Fin de carrusel-->
+      
 <!-- PHYSICAL PRODUCTS -->
 <div id="physicalproducts" class="physicalproducts-section">
 <div class="physicalproducts-container">
 <h2 class="physicalproducts-title"><a href="#physicalproducts">PHYSICAL PRODUCTS</a></h2>
-<!-- Contenedor de columnas -->
+<!-- Columnas -->
 <div class="physicalproducts-grid">
 <a href="#jewelry" class="product-card">
 <img src="assets/assets/Nuevayork.png" alt="Jewelry">
@@ -842,7 +843,7 @@ WELCOME TO MY STORE
 <div id="digitalproducts" class="digitalproducts-section">
 <div class="digitalproducts-container">
 <h2 class="digitalproducts-title"><a href="#digitalproducts">DIGITAL PRODUCTS</a></h2>
-<!-- Contenedor de columnas -->
+<!-- Columnas -->
 <div class="digitalproducts-grid">
 <a href="#fashion" class="product-card">
 <img src="assets/assets/Nuevayork.png" alt="Jewelry">
@@ -860,6 +861,25 @@ WELCOME TO MY STORE
 </div>
 </div>
 <!-- FIN PHYSICAL PRODUCTS -->
+
+<!-- SELECTION PHYSICAL PRODUCTS -->
+<div id="selectionphysicalproducts" class="selectionphysicalproducts-section">
+<div class="selectionphysicalproducts-container">
+<!-- Columnas -->
+<div class="digitalproducts-grid">
+<a href="#jewelry" class="product-card">
+<img src="assets/assets/Nuevayork.png" alt="Jewelry">
+<span>JEWELRY</span>
+</a>
+<a href="#bags" class="product-card">
+<img src="assets/assets/Nuevayork.png" alt="Bags">
+<span>BAGS</span>
+</a>
+</div> <!-- Cierra .digitalproducts-grid -->
+</div> <!-- Cierra .selectionphysicalproducts-container -->
+</div> <!-- Cierra .selectionphysicalproducts-section -->
+
+      
 </section> <!-- 👈 AQUÍ cierro store -->
 
 
@@ -1285,6 +1305,17 @@ storeImages[storeCurrent].classList.add('active');
 setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 </script>
 
+
+
+
+
+
+
+
+
+
+
+      
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const fashionLink = document.querySelector('.product-card[href="#jewelry"]'); 
