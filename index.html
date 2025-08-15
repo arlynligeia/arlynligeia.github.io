@@ -1046,54 +1046,36 @@ Your cart is empty
 <tr class="yourcart-tabledivider">
 <td colspan="3"></td>
 </tr>
-<!-- Producto 1 -->
-<tr>
-<td class="yourcart-image-col">
-<img src="assets/assets/Collar 1.jpg" alt="Collar 1" style="max-width:80px; border-radius:6px;">
-</td>
-<td class="yourcart-productname-col productname-col label-productname">
-<span class="yourcart-white-cell-productname">Collar 1</span>
-</td>
-<td class="yourcart-price-col price-col label-price">
-<span class="yourcart-white-cell-price">$50.00</span>
-</td>
-</tr>
-<!-- Producto 2 -->
-<tr>
-<td class="yourcart-image-col">
-<img src="assets/assets/Collar 2.jpg" alt="Collar 2" style="max-width:80px; border-radius:6px;">
-</td>
-<td class="yourcart-productname-col">
-<span class="yourcart-white-cell-productname">Collar 2</span>
-</td>
-<td class="yourcart-price-col">
-<span class="yourcart-white-cell-price">$60.00</span>
-</td>
-</tr>
-<!-- Línea final debajo de productos -->
-<tr class="yourcart-tabledivider2">
-<td colspan="3"></td>
-</tr>     
-<!-- Fila de shipping -->
-<tr>
-<td class="yourcart-image-col"></td>
-<td class="yourcart-productname-col yourcart-shipping-label">
-Shipping
-</td>
-<td class="yourcart-price-col label-price">
-<span class="yourcart-white-cell-price">$5.00</span>
-</td>
-</tr>
-<!-- Fila de total -->
-<tr>
-<td class="yourcart-image-col"></td>
-<td class="yourcart-productname-col yourcart-total-label">
-Total
-</td>
-<td class="yourcart-price-col label-price">
-<span class="yourcart-white-cell-price">$5.00</span>
-</td>
-</tr>
+      
+<!-- 🔹 Aquí el script insertará automáticamente los productos -->
+  <tr id="cart-items-placeholder"></tr>
+
+  <!-- Línea final debajo de productos -->
+  <tr class="yourcart-tabledivider2">
+    <td colspan="3"></td>
+  </tr>
+
+  <!-- Fila de shipping -->
+  <tr>
+    <td class="yourcart-image-col"></td>
+    <td class="yourcart-productname-col yourcart-shipping-label">
+      Shipping
+    </td>
+    <td class="yourcart-price-col label-price">
+      <span class="yourcart-white-cell-price">$50.00</span>
+    </td>
+  </tr>
+
+  <!-- Fila de total -->
+  <tr>
+    <td class="yourcart-image-col"></td>
+    <td class="yourcart-productname-col yourcart-total-label">
+      Total
+    </td>
+    <td class="yourcart-price-col label-price">
+      <span class="yourcart-white-cell-price">$00.00</span>
+    </td>
+  </tr>
 </tbody>
 </table>
 
@@ -1398,6 +1380,68 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+
+
+
+
+      <script>
+// Espera a que el documento cargue
+document.addEventListener("DOMContentLoaded", function () {
+
+  // Escuchar clicks en todos los botones ADD TO CART
+  document.querySelectorAll(".addtocart-button").forEach(button => {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      // Obtener datos del producto desde los atributos
+      const name = this.getAttribute("data-name");
+      const price = parseFloat(this.getAttribute("data-price"));
+      const image = this.getAttribute("data-image");
+
+      // Crear nueva fila para el producto
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td class="yourcart-image-col">
+          <img src="${image}" alt="${name}" style="max-width:80px; border-radius:6px;">
+        </td>
+        <td class="yourcart-productname-col productname-col label-productname">
+          <span class="yourcart-white-cell-productname">${name}</span>
+        </td>
+        <td class="yourcart-price-col price-col label-price">
+          <span class="yourcart-white-cell-price">$${price.toFixed(2)}</span>
+        </td>
+      `;
+
+      // Insertar el producto ANTES de la línea final (tabledivider2)
+      const placeholder = document.getElementById("cart-items-placeholder");
+      placeholder.parentNode.insertBefore(newRow, placeholder.nextSibling);
+
+      // Actualizar total
+      actualizarTotal();
+    });
+  });
+
+  function actualizarTotal() {
+    let total = 0;
+
+    // Sumar todos los precios de los productos en el carrito
+    document.querySelectorAll(".yourcart-white-cell-price").forEach((priceEl, index) => {
+      if (index > 0) { // Ignorar el shipping y el total que están al final
+        const value = parseFloat(priceEl.textContent.replace("$", ""));
+        if (!isNaN(value)) total += value;
+      }
+    });
+
+    // Sumar shipping fijo de $50
+    total += 50;
+
+    // Mostrar total
+    document.querySelector(".yourcart-total-label")
+      .nextElementSibling.querySelector(".yourcart-white-cell-price").textContent = `$${total.toFixed(2)}`;
+  }
+
+});
+</script>
 
 
      
