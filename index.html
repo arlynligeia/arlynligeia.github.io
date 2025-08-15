@@ -845,7 +845,7 @@ WELCOME TO MY STORE
 
 
 
-<!-- SECCIÓN SELECTION FASHION -->
+<!-- SECCIÓN FASHION SELECTION -->
 <section id="fashionselection" class="fashionselection-section">
 <div class="fashionselection-container">
 <!-- Columnas -->
@@ -1288,6 +1288,29 @@ storeImages[storeCurrent].classList.add('active');
 setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Link de FASHION en Physical Products
+  const fashionCard = document.querySelector('.product-card[href="#fashionselection"]');
+  const fashionSelectionSection = document.querySelector('#fashionselection');
+  const storeSection = document.querySelector('#store');
+
+  if (fashionCard && fashionSelectionSection && storeSection) {
+    fashionCard.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Ocultar Store
+      storeSection.style.display = "none";
+
+      // Mostrar Fashion Selection
+      fashionSelectionSection.style.display = "block";
+
+      // Scroll suave hacia Fashion Selection
+      fashionSelectionSection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
+});
+</script>
 
 
 
@@ -1301,24 +1324,27 @@ setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
       
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const fashionLink = document.querySelector('.product-card[href="#jewelry"]'); 
+  const jewelryLink = document.querySelector('#fashionselection .fashionselection-card[href="#jewelry"]');
   const jewelrySection = document.querySelector('#jewelry');
-  const storeSection = document.querySelector('#store');
+  const fashionSelectionSection = document.querySelector('#fashionselection');
 
-  fashionLink.addEventListener("click", (e) => {
-    e.preventDefault();
-    
-    // Ocultar Store
-    storeSection.style.display = "none";
-    
-    // Mostrar Jewelry
-    jewelrySection.style.display = "block";
-    
-    // Llevar la vista a Jewelry
-    jewelrySection.scrollIntoView({ behavior: "smooth" });
-  });
+  if (jewelryLink && jewelrySection && fashionSelectionSection) {
+    jewelryLink.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // Ocultar Fashion Selection
+      fashionSelectionSection.style.display = "none";
+
+      // Mostrar Jewelry
+      jewelrySection.style.display = "block";
+
+      // Scroll hacia Jewelry
+      jewelrySection.scrollIntoView({ behavior: "smooth" });
+    });
+  }
 });
 </script>
+
 
 
 
