@@ -2814,17 +2814,15 @@ nav {
   padding-bottom: 5px;
  }
 /* Texto para la fila de Shipping (sin recuadro) */
-.yourcart-shipping-label {
+td.yourcart-productname-col.yourcart-shipping-label {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  color: white; /* o negro, según tu diseño */
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
+  color: white !important; /* fuerza el color */
+  padding: 0;
   line-height: 1.6;
-  text-align: right;
+  text-align: right !important; /* fuerza alineación */
 }
+
 
 
 
