@@ -2309,7 +2309,7 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-/* Tarjetas de productos */
+/* Tarjeta que ocupa toda la columna */
 .selectionphysicalproducts-card {
   position: relative;
   overflow: hidden;
@@ -2317,12 +2317,15 @@ nav {
   text-decoration: none;
   color: white;
   display: block;
+  width: 100%; /* ocupa todo el ancho de su columna */
 }
 
-/* Imagen cuadrada */
+/* Imagen cuadrada ocupando todo el ancho */
 .selectionphysicalproducts-card img {
+  display: block;
   width: 100%;
   aspect-ratio: 1 / 1; /* mantiene formato cuadrado */
+  height: auto; /* asegura que se calcule por el ancho */
   object-fit: cover;
   transition: transform 0.3s ease;
   border-radius: 15px;
