@@ -2602,102 +2602,87 @@ nav {
   display: none; /* Ocultos por defecto */
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    CART EMPTY
 ====================================== */
 .cartempty-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .cartempty-container::before {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
-  height: 90px; /* grosor de la franja */
+  height: 90px;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
-  z-index: 1; /* franja encima del fondo */
 }
 .cartempty-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
-  margin-top: 0;
+  text-decoration: none;
+  margin-top: 0px;
   margin-bottom: 16px;
   line-height: 1.6;
-  text-align: left;
-  text-decoration: none;
+  text-align: left; 
 }
 .cartempty-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white;
+  text-decoration: none;
 }
 .cartempty-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 2rem;
   color: white;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-top: 0px;
   margin-bottom: 0px;
   line-height: 1.5;
   text-align: center;
 }
 
-
-
-
-
-
-
 /* ======================================
    YOUR CART
 ====================================== */
 .yourcart-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .yourcart-container::before {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
-  height: 90px; /* grosor de la franja */
-  z-index: 1; /* franja encima del fondo */
+  height: 90px; 
 }
 .yourcart-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
@@ -2706,126 +2691,177 @@ nav {
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
-  display: block;
 }
 .yourcart-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white;
+  text-decoration: none;
 }
+
+
 /* Tabla */
-.cart-table {
+.yourcart-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin-top: 0;
+  margin-top: 0px;
   margin-bottom: 0px;
 }
-/* Subtítulos */
-.cart-table th {
+/* Ancho de columnas */
+.yourcart-image-col {
+  width: 15%;
+  text-align: center; 
+}
+.yourcart-productname-col {
+  width: 70%;
+  text-align: center;
+}
+.yourcart-price-col {
+  width: 15%;
+  text-align: center;
+}
+/* Fila en general para que todo esté alineado verticalmente */
+.yourcart-table td {
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+* Subtítulos */
+.yourcart-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
+  padding-top: 0px;
+  padding-bottom: 0px;
   line-height: 1.6;
-  text-align: center; /* Centrado para subtítulos */
+  text-align: center;
   text-transform: uppercase;
  }
-.table-divider td {
-  border-top: 2px solid white;
-  padding-top: 10px; /* editable margen superior */
-  padding-bottom: 10px; /* editable margen inferior */
+/* Linea separadora */
+.yourcart-tabledivider td {
+  border-top: 3px solid white;
+  padding-top: 0px;
+  padding-bottom: 5px;
  }
 /* Celdas */
-.cart-table td {
+.yourcart-table td {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
+  padding-top: 0px;
+  padding-bottom: 0px;
   line-height: 1.6;
   vertical-align: middle;
-}
-/* Columnas */
-.image-col {
-  width: 120px;
-  text-align: center;
-}
-.name-col {
-  width: 90%;
-  text-align: center;
-}
-.price-col {
-  width: 15%;
-  text-align: center;
 }
 /* Imagen producto */
 .collar3-image {
   max-width: 80px;
   height: auto;
   border-radius: 6px;
-  margin: 0 auto; /* ← centra horizontalmente */
-  padding-top: 10px; /* editable margen superior */
-  padding-bottom: 10px; /* editable margen inferior */
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
   display: block;
 }
-/* Recuadros blancos */
-.white-cell {
+/* Recuadro blanco para Product name */
+.productname-white-cell {
   background-color: white;
   border-radius: 6px;
+  display: block;
+  width: 95%;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
-  margin-top: 0;
-  margin-bottom: 0px;
-  padding-top: 5px; /* editable margen superior */
-  padding-bottom: 5px; /* editable margen inferior */
-  padding-left: 5px; /* editable margen izquierdo */
-  padding-right: 5px; /* editable margen derecho */
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   line-height: 1.6;
-  display: block; /* Ocupa todo el ancho de su celda */
-  width: 100%; /* Igual ancho siempre */
+  text-align: center;
+  box-sizing: border-box;
+}
+/* Recuadro blanco para Price */
+.price-white-cell {
+  background-color: white;
+  border-radius: 6px;
+  display: block;  
+  width: 100%;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 1.6;
+  text-align: center;
   box-sizing: border-box;
 }
 /* Alineaciones dentro de recuadros */
-.cell-left {
+.productname-cell-left {
   text-align: left;
 }
-.cell-right {
+.price-cell-right {
   text-align: right;
 }
+/* Linea separadora */
+.yourcart2-tabledivider td {
+  border-top: 3px solid white;
+  padding-top: 0px; 
+  padding-bottom: 5px; 
+ }
 /* Texto Shipping */
 .label-shipping {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
-  padding-left: 0px; /* editable margen izquierdo */
-  padding-right: 10px; /* espacio antes del recuadro */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 10px;
   line-height: 1.6;
-  text-align: right; /* alinea a la derecha */
+  text-align: right;
 }
 /* Texto Total */
 .label-total {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
-  padding-left: 0px; /* editable margen izquierdo */
-  padding-right: 10px; /* espacio antes del recuadro */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 10px;
   line-height: 1.6;
-  text-align: right; /* alinea a la derecha */
+  text-align: right;
 }
 /* Footer */
 .cart-table tfoot {
-  border-top: 2px solid white;
+  border-top: 3px solid white;
 }
 .cart-table tfoot td {
-  padding-top: 10px; /* editable margen superior */
-  padding-bottom: 10px; /* editable margen inferior */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
