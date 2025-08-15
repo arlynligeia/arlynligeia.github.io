@@ -2698,152 +2698,89 @@ nav {
 }
 
 
-/* Tabla */
+
+
+/* Tabla general */
 .yourcart-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
-/* Ancho de columnas */
-.yourcart-image-col {
-  width: 15%;
-  text-align: center; 
-}
-.yourcart-productname-col {
-  width: 70%;
-  text-align: center;
-}
-.yourcart-price-col {
-  width: 15%;
-  text-align: center;
-}
-/* Fila en general para que todo esté alineado verticalmente */
-.yourcart-table td {
-  vertical-align: middle;
-  padding-top: 10px;
-  padding-bottom: 10px; 
-}
-/* Subtítulos */
+
+/* 1. Subtítulos */
 .yourcart-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
- }
-/* Linea separadora */
-.yourcart-tabledivider td {
+}
+
+/* 2. Línea separadora superior */
+.yourcart-top-divider td {
   border-top: 3px solid white;
-  padding-top: 0px;
-  padding-bottom: 5px;
- }
-/* Celdas */
-.yourcart-table td {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  line-height: 1.6;
-  vertical-align: middle;
 }
-/* Imagen producto */
-.collar3-image {
+
+/* 3. Imagen */
+.yourcart-product-image {
   max-width: 80px;
-  height: auto;
   border-radius: 6px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
   display: block;
+  margin: 10px auto;
 }
-/* Recuadro blanco para Product name */
-.productname-white-cell {
+
+/* 4. Recuadro Product Name */
+.yourcart-productname-box {
   background-color: white;
   border-radius: 6px;
-  display: block;
   width: 95%;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
+  padding: 5px;
   margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
   text-align: center;
-  box-sizing: border-box;
 }
-/* Recuadro blanco para Price */
-.price-white-cell {
+
+/* 5. Recuadro Price */
+.yourcart-price-box {
   background-color: white;
   border-radius: 6px;
-  display: block;  
   width: 100%;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
+  padding: 5px;
   text-align: center;
-  box-sizing: border-box;
-}
-/* Alineaciones dentro de recuadros */
-.productname-cell-left {
-  text-align: left;
-}
-.price-cell-right {
-  text-align: right;
-}
-/* Linea separadora */
-.yourcart2-tabledivider td {
-  border-top: 3px solid white;
-  padding-top: 0px; 
-  padding-bottom: 5px; 
- }
-/* Texto Shipping */
-.label-shipping {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 10px;
-  line-height: 1.6;
-  text-align: right;
-}
-/* Texto Total */
-.label-total {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 10px;
-  line-height: 1.6;
-  text-align: right;
-}
-/* Footer */
-.cart-table tfoot {
-  border-top: 3px solid white;
-}
-.cart-table tfoot td {
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
+/* 6. Línea separadora inferior */
+.yourcart-bottom-divider td {
+  border-top: 3px solid white;
+}
+
+/* 7. Shipping */
+.yourcart-shipping-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* 8. Total */
+.yourcart-total-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* Columnas */
+.yourcart-image-col { width: 15%; text-align: center; }
+.yourcart-productname-col { width: 70%; text-align: center; }
+.yourcart-price-col { width: 15%; text-align: center; }
 
 
 
