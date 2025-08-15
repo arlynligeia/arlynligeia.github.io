@@ -1042,21 +1042,81 @@ Your cart is empty
 <th class="yourcart-price-col">PRICE</th>
 </tr>
 </thead>
-      
 <tbody class="yourcart-body">
-        <!-- 🔹 Los productos se insertarán aquí con JavaScript -->
-      </tbody>
-    </table>
+<tr class="yourcart-tabledivider">
+<td colspan="3"></td>
+</tr>
+<!-- Producto 1 -->
+<tr>
+<td class="yourcart-image-col">
+<img src="assets/assets/Collar 1.jpg" alt="Collar 1" style="max-width:80px; border-radius:6px;">
+</td>
+<td class="yourcart-productname-col productname-col label-productname">
+<span class="yourcart-white-cell-productname">Collar 1</span>
+</td>
+<td class="yourcart-price-col price-col label-price">
+<span class="yourcart-white-cell-price">$50.00</span>
+</td>
+</tr>
+<!-- Producto 2 -->
+<tr>
+<td class="yourcart-image-col">
+<img src="assets/assets/Collar 2.jpg" alt="Collar 2" style="max-width:80px; border-radius:6px;">
+</td>
+<td class="yourcart-productname-col">
+<span class="yourcart-white-cell-productname">Collar 2</span>
+</td>
+<td class="yourcart-price-col">
+<span class="yourcart-white-cell-price">$60.00</span>
+</td>
+</tr>
+<!-- Línea final debajo de productos -->
+<tr class="yourcart-tabledivider2">
+<td colspan="3"></td>
+</tr>     
+<!-- Fila de shipping -->
+<tr>
+<td class="yourcart-image-col"></td>
+<td class="yourcart-productname-col yourcart-shipping-label">
+Shipping
+</td>
+<td class="yourcart-price-col label-price">
+<span class="yourcart-white-cell-price">$5.00</span>
+</td>
+</tr>
+<!-- Fila de total -->
+<tr>
+<td class="yourcart-image-col"></td>
+<td class="yourcart-productname-col yourcart-total-label">
+Total
+</td>
+<td class="yourcart-price-col label-price">
+<span class="yourcart-white-cell-price">$5.00</span>
+</td>
+</tr>
+</tbody>
+</table>
 
-    <!-- Contenedor de botones debajo de la tabla -->
-    <div class="yourcart-buttons">
-      <button id="btn-back">BACK</button>
-      <button id="btn-continue">CONTINUE SHOPPING</button>
-      <button id="btn-pay">PAY</button>
-    </div>
-  </div>
+<!-- Contenedor de botones debajo de la tabla -->
+<div class="yourcart-buttons">
+  <!-- Botón volver -->
+  <button id="btn-back">BACK</button>
+
+  <!-- Botón seguir comprando -->
+  <button id="btn-continue">CONTINUE SHOPPING</button>
+
+  <!-- Botón pagar -->
+  <button id="btn-pay">PAY</button>
+</div>
+
+      
+
+      
+
+</div>
 </div>
 <!-- FIN YOUR CART -->
+
 </section>
 
 
@@ -1340,41 +1400,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-      <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const cartBody = document.querySelector(".yourcart-body");
-    const addToCartButtons = document.querySelectorAll(".addtocart-button");
-
-    addToCartButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const name = this.getAttribute("data-name");
-        const price = this.getAttribute("data-price");
-        const image = this.getAttribute("data-image");
-
-        // Crear fila para el producto
-        const row = document.createElement("tr");
-
-        row.innerHTML = `
-          <td class="yourcart-image-col">
-            <img src="${image}" alt="${name}" style="max-width:80px; border-radius:6px;">
-          </td>
-          <td class="yourcart-productname-col">
-            <span class="yourcart-white-cell-productname">${name}</span>
-          </td>
-          <td class="yourcart-price-col">
-            <span class="yourcart-white-cell-price">$${price}</span>
-          </td>
-        `;
-
-        // Insertar la fila ANTES de la línea final (class yourcart-tabledivider2)
-        const divider2 = document.querySelector(".yourcart-tabledivider2");
-        cartBody.insertBefore(row, divider2);
-      });
-    });
-  });
-</script>
+     
 
 
   
