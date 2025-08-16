@@ -1043,55 +1043,51 @@ Your cart is empty
 <th class="yourcart-image-col">IMAGE</th>
 <th class="yourcart-productname-col">PRODUCT NAME</th>
 <th class="yourcart-price-col">PRICE</th>
+<th class="yourcart-remove-col">REMOVE</th>
 </tr>
 </thead>
 <tbody class="yourcart-body">
+<!-- Línea debajo de subtítulos -->      
 <tr class="yourcart-tabledivider">
+<td colspan="3"></td>
+</tr>    
+<!-- 🔹 Aquí el script insertará automáticamente los productos -->
+<tr id="cart-items-placeholder"></tr>
+<!-- Línea final debajo de productos -->
+<tr class="yourcart-tabledivider2">
 <td colspan="3"></td>
 </tr>
       
-<!-- 🔹 Aquí el script insertará automáticamente los productos -->
-  <tr id="cart-items-placeholder"></tr>
-
-  <!-- Línea final debajo de productos -->
-  <tr class="yourcart-tabledivider2">
-    <td colspan="3"></td>
-  </tr>
-
-  <!-- Fila de shipping -->
-  <tr>
-    <td class="yourcart-image-col"></td>
-    <td class="yourcart-productname-col yourcart-shipping-label">
-      Shipping
-    </td>
-    <td class="yourcart-price-col label-price">
-      <span class="yourcart-white-cell-price">$50.00</span>
-    </td>
-  </tr>
-
-  <!-- Fila de total -->
-  <tr>
-    <td class="yourcart-image-col"></td>
-    <td class="yourcart-productname-col yourcart-total-label">
-      Total
-    </td>
-    <td class="yourcart-price-col label-price">
-      <span class="yourcart-white-cell-price">$00.00</span>
-    </td>
-  </tr>
+<!-- Fila de shipping -->
+<tr>
+<td class="yourcart-image-col"></td>
+<td class="yourcart-productname-col yourcart-shipping-label">
+Shipping
+</td>
+<td class="yourcart-price-col label-price">
+<span class="yourcart-white-cell-price">$50.00</span>
+</td>
+</tr>
+<!-- Fila de total -->
+<tr>
+<td class="yourcart-image-col"></td>
+<td class="yourcart-productname-col yourcart-total-label">
+Total
+</td>
+<td class="yourcart-price-col label-price">
+<span class="yourcart-white-cell-price">$00.00</span>
+</td>
+</tr>
 </tbody>
 </table>
-
 <!-- Contenedor de botones debajo de la tabla -->
 <div class="yourcart-buttons">
-  <!-- Botón volver -->
-  <button id="btn-back">BACK</button>
-
-  <!-- Botón seguir comprando -->
-  <button id="btn-continue">CONTINUE SHOPPING</button>
-
-  <!-- Botón pagar -->
-  <button id="btn-pay">PAY</button>
+<!-- Botón volver -->
+<button id="btn-back">BACK</button>
+<!-- Botón seguir comprando -->
+<button id="btn-continue">CONTINUE SHOPPING</button>
+<!-- Botón pagar -->
+<button id="btn-pay">PAY</button>
 </div>
 
       
