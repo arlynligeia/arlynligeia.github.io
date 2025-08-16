@@ -2816,24 +2816,33 @@ nav {
   text-align: right;
 }
 
-/* Botón de eliminar (X) */
+
+
+
+/* Botón de REMOVE (X) */
 .remove-btn {
-  background-color: white;
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
-  border: none;
   width: 100%;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: red;
-  cursor: pointer;
-  padding: 5px 10px;
   display: inline-block;
-  transition: transform 0.2s ease;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.remove-btn:hover {
+  transform:  scale(1.05);
 }
 
-.remove-btn:hover {
-  transform: scale(1.1);
-}
+
+
+
 /* Linea separadora */
 .yourcart-tabledivider2 td {
   border-top: 3px solid #39ff14;
