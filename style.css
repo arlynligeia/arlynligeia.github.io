@@ -2987,6 +2987,7 @@ td.yourcart-productname-col.yourcart-total-label {
 .cart-table {
   width: 100%;
   table-layout: fixed;
+  border-collapse: collapse; /* 🔹 Hace que no haya espacio entre celdas */
   margin-top: 0;
   margin-bottom: 10px;
 }
