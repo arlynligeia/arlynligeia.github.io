@@ -949,7 +949,15 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
     </div>
   </div>
 </section>
-   
+
+
+
+
+
+
+
+
+      
 <!-- SECCIÓN INDEPENDIENTE NECKLACE 2 -->
 <section id="necklace2" class="necklace2-section" style="display: none;">
 <div class="necklace2-container">
@@ -1383,8 +1391,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-      <script>
-// Espera a que el documento cargue
+<script>
 document.addEventListener("DOMContentLoaded", function () {
 
   // Escuchar clicks en todos los botones ADD TO CART
@@ -1401,13 +1408,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const newRow = document.createElement("tr");
       newRow.innerHTML = `
         <td class="yourcart-image-col">
-          <img src="${image}" alt="${name}" style="max-width:80px; border-radius:6px;">
+          <img src="${image}" alt="${name}" class="yourcart-product-image">
         </td>
-        <td class="yourcart-productname-col productname-col label-productname">
+        <td class="yourcart-productname-col">
           <span class="yourcart-white-cell-productname">${name}</span>
         </td>
-        <td class="yourcart-price-col price-col label-price">
+        <td class="yourcart-price-col">
           <span class="yourcart-white-cell-price">$${price.toFixed(2)}</span>
+        </td>
+        <td class="yourcart-remove-col">
+          <button class="remove-btn">X</button>
         </td>
       `;
 
@@ -1420,15 +1430,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Eliminar producto con ❌ usando delegación
+  document.addEventListener("click", function(e) {
+    if (e.target.classList.contains("remove-btn")) {
+      e.target.closest("tr").remove();
+      actualizarTotal();
+    }
+  });
+
   function actualizarTotal() {
     let total = 0;
 
     // Sumar todos los precios de los productos en el carrito
-    document.querySelectorAll(".yourcart-white-cell-price").forEach((priceEl, index) => {
-      if (index > 0) { // Ignorar el shipping y el total que están al final
-        const value = parseFloat(priceEl.textContent.replace("$", ""));
-        if (!isNaN(value)) total += value;
-      }
+    document.querySelectorAll(".yourcart-price-col .yourcart-white-cell-price").forEach((priceEl, index) => {
+      const value = parseFloat(priceEl.textContent.replace("$", ""));
+      if (!isNaN(value)) total += value;
     });
 
     // Sumar shipping fijo de $50
