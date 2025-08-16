@@ -2983,7 +2983,46 @@ td.yourcart-productname-col.yourcart-total-label {
   color: white;
   text-decoration: none;
 }
-
+/* TABLA */
+.cart-table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+/* Ancho de columnas */
+.cart-image-col {
+  width: 10%;
+}
+.cart-productname-col {
+  width: 58%;
+}
+.cart-price-col {
+  width: 16%;
+}
+.cart-qty-col {
+  width: 8%;
+}
+.cart-remove-col {
+  width: 8%;
+}
+/* Fila en general para que todo esté alineado verticalmente */
+.cart-table td {
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+/* Subtítulos */
+.cart-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39ff14;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+ }
 
 
 
