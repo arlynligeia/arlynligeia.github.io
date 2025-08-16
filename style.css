@@ -2708,11 +2708,14 @@ nav {
   width: 10%;
 }
 .yourcart-productname-col {
-  width: 70%;
+  width: 65%;
 }
 .yourcart-price-col {
   width: 20%;
 }
+.yourcart-remove-col {
+  width: 5%;
+ }
 /* Fila en general para que todo esté alineado verticalmente */
 .yourcart-table td {
   vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
@@ -2806,6 +2809,24 @@ nav {
   padding-right: 0px;
   line-height: 1.6;
   text-align: right;
+}
+
+/* Botón de eliminar (X) */
+.remove-btn {
+  background-color: white;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: red;
+  cursor: pointer;
+  padding: 5px 10px;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
 }
 /* Linea separadora */
 .yourcart-tabledivider2 td {
