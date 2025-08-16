@@ -2991,6 +2991,11 @@ td.yourcart-productname-col.yourcart-total-label {
   margin-top: 0;
   margin-bottom: 10px;
 }
+.cart-table td,
+.cart-table th {
+  border: 1px solid #000; /* opcional, solo para que veas que están pegados */
+  padding: 0;             /* quita relleno interno si no quieres espacio */
+}
 /* Ancho de columnas */
 .cart-image-col {
   width: 10%;
