@@ -2713,10 +2713,13 @@ nav {
   width: 10%;
 }
 .yourcart-productname-col {
-  width: 67%;
+  width: 58%;
 }
 .yourcart-price-col {
-  width: 15%;
+  width: 16%;
+}
+.yourcart-qty-col {
+  width: 8%;
 }
 .yourcart-remove-col {
   width: 8%;
@@ -2791,6 +2794,24 @@ nav {
   text-align: right;
   box-sizing: border-box;
 }
+/* Recuadro blanco para QTY */
+.yourcart-white-cell-qty {
+  background-color: white;
+  border-radius: 6px;
+  display: block;  
+  width: 100%; /* puedes ajustar este ancho solo para TIME */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 1.6;
+  text-align: right;
+  box-sizing: border-box;
+}
 /* Texto PRODUCT NAME */
 .label-productname {
   font-family: 'Share Tech Mono', monospace;
@@ -2815,7 +2836,17 @@ nav {
   line-height: 1.6;
   text-align: right;
 }
-
+.label-qty {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  line-height: 1.6;
+  text-align: center;
+}
 
 
 
