@@ -1368,6 +1368,10 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 
 
 
+
+
+
+<!-- SCRIPT DEL CARRITO -->      
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 const cartBody = document.querySelector(".cart-body");
@@ -1406,12 +1410,7 @@ function showSectionFromHash() {
   }
 }
 
-
-
-
-
-
-      
+     
 // 👉 Escuchar cambios de hash
 window.addEventListener("hashchange", showSectionFromHash);
       
@@ -1484,19 +1483,19 @@ e.target.closest("tr").remove();
 updateCartTotals();
 }
 });
-// 👉 Guardar última sección antes de entrar a #cart
+// 👉 Guardar la última sección ANTES de entrar a #cart
 document.addEventListener("click", e => {
-const link = e.target.closest("[href^='#'], button[data-target]");
-if (!link) return;
-// Obtenemos el destino
-const targetId = link.getAttribute("href") || link.getAttribute("data-target");
-// Si va al carrito, guardamos la sección actual
-if (targetId === "#cart") {
-sessionStorage.setItem("lastSection", location.hash || "#store");
-} else {
-sessionStorage.setItem("lastSection", targetId);
-}
+  const link = e.target.closest("[href^='#'], button[data-target]");
+  if (!link) return;
+
+  const targetId = link.getAttribute("href") || link.getAttribute("data-target");
+
+  // Si vamos al carrito, guardamos la sección actual (hash actual)
+  if (targetId === "#cart") {
+    sessionStorage.setItem("lastSection", location.hash || "#home");
+  }
 });
+
 // 👉 Botones
 document.getElementById("btn-back").addEventListener("click", () => {
 const lastSection = sessionStorage.getItem("lastSection");
@@ -1516,6 +1515,16 @@ location.hash = "#store";
 
 
 
+
+
+
+
+
+
+
+
+      
+      
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 const allSections = document.querySelectorAll("section");
