@@ -1483,7 +1483,7 @@ e.target.closest("tr").remove();
 updateCartTotals();
 }
 });
-// 👉 Guardar última sección ANTES de entrar al carrito
+// 👉 Guardar la sección actual ANTES de ir al carrito
 document.addEventListener("click", e => {
   const link = e.target.closest("[href^='#'], button[data-target]");
   if (!link) return;
@@ -1491,26 +1491,20 @@ document.addEventListener("click", e => {
   const targetId = link.getAttribute("href") || link.getAttribute("data-target");
 
   if (targetId === "#cart") {
-    // Guardamos la sección actual (donde estoy ahora) antes de ir al carrito
+    // Guardamos la sección donde estoy parado actualmente
     sessionStorage.setItem("lastSection", location.hash || "#home");
   }
 });
 
 
+
 // 👉 Botones
-// 👉 Botón BACK mejorado
 document.getElementById("btn-back").addEventListener("click", () => {
   const lastSection = sessionStorage.getItem("lastSection");
-
-  if (lastSection && lastSection !== "#cart") {
-    // Forzamos a mostrar la sección correspondiente
-    location.hash = lastSection;
-    // Llamamos a showSectionFromHash manualmente por si el navegador no dispara hashchange
-    showSectionFromHash();
+  if (lastSection) {
+    location.hash = lastSection;  // volver a donde estaba
   } else {
-    // Si no hay historial guardado, volvemos al home
-    location.hash = "#home";
-    showSectionFromHash();
+    location.hash = "#home";      // si no hay nada, ir a home
   }
 });
 
