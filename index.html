@@ -1185,48 +1185,107 @@ setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 
 
       
-  <script>
-// Script único para manejar secciones y subsecciones por hash
-document.addEventListener("DOMContentLoaded", () => {
-  const allSections = document.querySelectorAll("section");
-
-  function showSectionFromHash() {
-    const hash = location.hash.replace("#", "");
-    if (!hash) {
-      // Si no hay hash, mostrar solo la home
-      allSections.forEach(section => {
-        section.style.display = section.id === "home" ? "block" : "none";
-      });
-      return;
-    }
-
-    // Si es hash combinado (ej: film-shortfilm)
-    if (hash.includes("-")) {
-      const [parent, child] = hash.split("-");
-      const parentSection = document.getElementById(parent);
-      const childElement = document.getElementById(child);
-
-      allSections.forEach(section => {
-        section.style.display = section.id === parent ? "block" : "none";
-      });
-
-      if (childElement) {
-        setTimeout(() => childElement.scrollIntoView({ behavior: "smooth" }), 50);
-      }
-      return;
-    }
-
-    // Hash normal (ej: #film o #music)
-    allSections.forEach(section => {
-      section.style.display = section.id === hash ? "block" : "none";
-    });
-  }
-
-  window.addEventListener("hashchange", showSectionFromHash);
-  showSectionFromHash();
+ <!-- Script para cambiar secciones con el menú -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll("section");
+menuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+e.preventDefault();
+const targetId = this.dataset.section;
+// Oculta todas las secciones
+sections.forEach(section => {
+if (section.id === targetId) {
+section.style.display = "block";
+} else {
+section.style.display = "none";
+}
+});
+// Scroll al inicio de la sección activada
+const targetSection = document.getElementById(targetId);
+if (targetSection) {
+targetSection.scrollIntoView({ behavior: "smooth" });
+history.pushState(null, "", "#" + targetId);
+}
+});
+});
 });
 </script>
-    
+
+
+      
+<!-- Script para los submenús como Support my Work -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const submenuLinks = document.querySelectorAll(".menu-button");
+const sections = document.querySelectorAll("section");
+submenuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
+const targetElement = document.getElementById(targetId);
+// Grupos de sub-secciones por sección madre
+const subsectionGroups = {
+home: ["socialmediacontent", "tiktokhighlight", "destacadodetiktok", "youtubehighlight"],
+film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+music: ["singles", "album", "videomusic"],
+fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+science: ["researcharticle", "researchproject"],
+bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+contact: ["contactforfans", "contactforwork"],
+store: ["digitalproducts", "physicalproducts"]
+};
+// Buscar la sección madre del target
+let parentSectionId = null;
+for (const [parent, subsections] of Object.entries(subsectionGroups)) {
+if (subsections.includes(targetId)) {
+parentSectionId = parent;
+break;
+}
+}
+// Si se encuentra la sección madre y el elemento destino existe
+if (parentSectionId && targetElement) {
+e.preventDefault();
+// Oculta todas las secciones y muestra solo la madre
+sections.forEach(section => {
+section.style.display = section.id === parentSectionId ? "block" : "none";
+});
+// Scroll hacia la subsección deseada
+setTimeout(() => {
+targetElement.scrollIntoView({ behavior: "smooth" });
+history.pushState(null, "", "#" + parentSectionId + "-" + targetId);
+}, 50);
+}
+});
+});
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const allSections = document.querySelectorAll("section");
+// Botones "VIEW THE PRODUCT"
+const productButtons = document.querySelectorAll(".viewtheproduct-button");
+productButtons.forEach(button => {
+button.addEventListener("click", function (e) {
+e.preventDefault();
+const productId = this.dataset.product;
+// Oculta todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Muestra la sección del producto seleccionado
+const productSection = document.getElementById(productId);
+if (productSection) {
+productSection.style.display = "block";
+productSection.scrollIntoView({ behavior: "smooth" });
+}
+});
+});
+});
+</script> 
+
 
 
 
