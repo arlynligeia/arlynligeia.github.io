@@ -927,29 +927,21 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 </p>
       
 <!-- 🔹 Botón con atributos para el script -->
-     <!-- Botón con atributos para el script -->
 <div class="addtocart-button-wrapper">
-  <a class="addtocart-button"
-     href="#"
-     data-name="Collar 1"
-     data-price="50.00"
-     data-image="assets/assets/Collar 1.jpg">
-    ADD TO CART
-  </a>
+<a class="addtocart-button"
+href="#"
+data-name="Collar 1"
+data-price="50.00"
+data-image="assets/assets/Collar 1.jpg">
+ADD TO CART
+</a>
 </div>
-<!-- Fin de botón -->
-
-      <!-- 🔹 Fin de botón -->
-
-      <div class="share-button-wrapper">
-        <a class="share-button" href="#">
-          SHARE
-        </a>
-      </div>
-    </div>
-  </div>
+<div class="share-button-wrapper">
+<a class="share-button" href="#">SHARE</a>
+</div>
+</div>
+</div>
 </section>
-
 
 
 
@@ -1070,103 +1062,51 @@ Your cart is empty
 <td colspan="5"></td>
 </tr>
       
-<!-- Producto de prueba -->
-<tr>
-<!-- Imagen -->
-<td class="cart-image-col">
-<img src="assets/assets/Collar 1.jpg" alt="Collar 1" class="cart-product-image">
-</td>
-<!-- PRODUCT NAME -->
-<td class="cart-productname-col">
-<span class="cart-white-cell text-left">Collar 1</span>
-</td>
-<!-- PRICE -->
-<td class="cart-price-col">
-<span class="cart-white-cell price-cell">
-<span class="currency">$</span>
-<span class="amount">50.00</span>
-</span>
-</td>
-<!-- QTY -->
-<td class="cart-qty-col">
-<span class="cart-white-cell text-center">1</span>
-</td>
-<!-- Botón RMV -->
-<td class="cart-remove-col">
-<button class="remove-btn">X</button>
-</td>
-</tr>
-<!-- Línea debajo de subtítulos -->
+<!-- 🚀 Aquí se agregarán dinámicamente los productos con JS -->
+<!-- Línea debajo de productos -->
 <tr class="cart-tabledivider2">
 <td colspan="5"></td>
 </tr>
 <!-- Fila Shipping -->
 <tr>
-<!-- Columna vacía para IMAGE -->
 <td class="cart-image-col"></td>
-<!-- PRODUCT NAME (Shipping, alineado a la derecha sin recuadro) -->
-<td class="cart-productname-col text-right">
-Shipping
-</td>
-<!-- PRICE (recuadro con símbolo $ fijo) -->
+<td class="cart-productname-col text-right">Shipping</td>
 <td class="cart-price-col">
 <span class="cart-white-cell price-cell">
 <span class="currency">$</span>
 </span>
 </td>
-<!-- QTY (recuadro blanco vacío) -->
 <td class="cart-qty-col">
 <span class="cart-white-cell"></span>
 </td>
-<!-- RMV (vacío en este caso) -->
 <td class="cart-remove-col"></td>
 </tr>
 <!-- Fila Total -->
 <tr>
-<!-- Columna vacía para IMAGE -->
 <td class="cart-image-col"></td>
-<!-- PRODUCT NAME (Total, alineado a la derecha sin recuadro) -->
-<td class="cart-productname-col text-right">
-Total
-</td>
-<!-- PRICE (recuadro con símbolo $ fijo) -->
+<td class="cart-productname-col text-right">Total</td>
 <td class="cart-price-col">
 <span class="cart-white-cell price-cell">
 <span class="currency">$</span>
 </span>
 </td>
-<!-- QTY (T en negrita, sin recuadro) -->
-<td class="cart-qty-col text-center">
-<strong>T</strong>
-</td>
-<!-- RMV (vacío en este caso) -->
+<td class="cart-qty-col text-center"><strong>T</strong></td>
 <td class="cart-remove-col"></td>
-</tr>    
+</tr>
 </tbody>
 </table>
-
-      <!-- Contenedor de botones debajo de la tabla -->
+<!-- Contenedor de botones debajo de la tabla -->
 <div class="yourcart-buttons">
-<!-- Botón volver -->
 <button id="btn-back">BACK</button>
-<!-- Botón seguir comprando -->
 <button id="btn-continue">CONTINUE SHOPPING</button>
-<!-- Botón pagar -->
 <button id="btn-pay">PAY</button>
 </div>
-
-
-      
 </div>
 </div>
 <!-- FIN CART -->
 
 
-
-
-
-
-      
+     
 </section>
 
 
@@ -1450,6 +1390,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const cartBody = document.querySelector(".cart-body");
+  const addToCartButtons = document.querySelectorAll(".addtocart-button");
+
+  addToCartButtons.forEach(button => {
+    button.addEventListener("click", e => {
+      e.preventDefault();
+
+      const name = button.getAttribute("data-name");
+      const price = button.getAttribute("data-price");
+      const image = button.getAttribute("data-image");
+
+      // Crear fila del producto
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+        <td class="cart-image-col">
+          <img src="${image}" alt="${name}" class="cart-product-image">
+        </td>
+        <td class="cart-productname-col">
+          <span class="cart-white-cell text-left">${name}</span>
+        </td>
+        <td class="cart-price-col">
+          <span class="cart-white-cell price-cell">
+            <span class="currency">$</span>
+            <span class="amount">${price}</span>
+          </span>
+        </td>
+        <td class="cart-qty-col">
+          <span class="cart-white-cell text-center">1</span>
+        </td>
+        <td class="cart-remove-col">
+          <button class="remove-btn">X</button>
+        </td>
+      `;
+
+      // Insertar antes de la fila de Shipping
+      const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
+      cartBody.insertBefore(newRow, shippingRow);
+    });
+  });
+});
+</script>
 
 
 
