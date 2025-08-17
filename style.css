@@ -3076,7 +3076,7 @@ td.yourcart-productname-col.yourcart-total-label {
 .price-cell {
   background-color: white;
   border-radius: 6px;
-  display: flex;              /* separa $ y número */
+  display: flex;         
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -3091,17 +3091,13 @@ td.yourcart-productname-col.yourcart-total-label {
   color: black;
   box-sizing: border-box;
 }
-
 .price-cell .currency {
   text-align: left;
 }
-
 .price-cell .amount {
   text-align: right;
   flex-grow: 1; /* empuja el número hacia la derecha */
 }
-
-
 /* Botón RMV */
 .remove-btn {
   background-color: #39ff14;
@@ -3122,7 +3118,13 @@ td.yourcart-productname-col.yourcart-total-label {
 .remove-btn:hover {
   transform: scale(1.05);
 }
-
+/* Linea separadora */
+.cart-tabledivider2 td {
+  border-top: 3px solid #39ff14;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: 0;
+ }
 
 
 
