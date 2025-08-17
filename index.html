@@ -1189,7 +1189,7 @@ setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 
 
       
- <!-- Script para cambiar secciones con el menú -->
+<!-- Script para cambiar secciones con el menú -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const menuLinks = document.querySelectorAll(".menu-link");
@@ -1310,6 +1310,8 @@ storeImages[storeCurrent].classList.add('active');
 setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 </script>
 
+
+      
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 // Link de FASHION en Physical Products
@@ -1394,14 +1396,46 @@ const addToCartButtons = document.querySelectorAll(".addtocart-button");
 const allSections = document.querySelectorAll("section");
 // 👉 Función para mostrar solo la sección activa
 function showSectionFromHash() {
-const hash = location.hash.replace("#", "");
-if (!hash) return;
-allSections.forEach(section => {
-section.style.display = section.id === hash ? "block" : "none";
-});
+  const raw = location.hash.replace("#", "");
+  if (!raw) return;
+
+  const allSections = document.querySelectorAll("section");
+
+  // Hash compuesto "madre-hijo"
+  if (raw.includes("-")) {
+    const [parentId, childId] = raw.split("-");
+
+    // Mostrar solo la sección madre
+    allSections.forEach(section => {
+      section.style.display = section.id === parentId ? "block" : "none";
+    });
+
+    // Hacer scroll al hijo
+    const childEl = document.getElementById(childId);
+    if (childEl) {
+      setTimeout(() => {
+        childEl.scrollIntoView({ behavior: "smooth" });
+      }, 50);
+    }
+  } else {
+    // Hash simple (home, film, biography, etc.)
+    allSections.forEach(section => {
+      section.style.display = section.id === raw ? "block" : "none";
+    });
+    const parentEl = document.getElementById(raw);
+    if (parentEl) parentEl.scrollIntoView({ behavior: "instant" });
+  }
 }
+
+
+
+
+
+
+      
 // 👉 Escuchar cambios de hash
 window.addEventListener("hashchange", showSectionFromHash);
+      
 // 👉 Mostrar la sección correcta al cargar
 showSectionFromHash();
 // 👉 Función para actualizar totales
