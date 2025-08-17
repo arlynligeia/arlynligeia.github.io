@@ -1426,9 +1426,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </td>
       `;
 
-      // Insertar antes de la fila de Shipping
-      const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
-      cartBody.insertBefore(newRow, shippingRow);
+      // Insertar antes de la segunda línea (cart-tabledivider2)
+const divider2 = cartBody.querySelector(".cart-tabledivider2");
+cartBody.insertBefore(newRow, divider2);
+
+          // ✅ Delegación de eventos para botones Remove
+  cartBody.addEventListener("click", e => {
+    if (e.target.classList.contains("remove-btn")) {
+      const row = e.target.closest("tr");
+      row.remove();
+    }
     });
   });
 });
