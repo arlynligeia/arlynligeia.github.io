@@ -1434,10 +1434,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // actualizar la columna QTY del Total
-    const totalQtyCell = totalRow.querySelector(".cart-qty-col strong");
-    if (totalQtyCell) {
-      totalQtyCell.textContent = totalQty;
-    }
+const totalQtyCell = totalRow.querySelector(".cart-qty-col .total-qty");
+if (totalQtyCell) {
+  totalQtyCell.textContent = totalQty;
+}
   }
 
   // 👉 Listener de los botones "Add to Cart"
