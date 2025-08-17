@@ -1178,120 +1178,64 @@ setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
 
 
-      
-<!-- Script para cambiar secciones con el menú -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const menuLinks = document.querySelectorAll(".menu-link");
-const sections = document.querySelectorAll("section");
-menuLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-e.preventDefault();
-const targetId = this.dataset.section;
-// Oculta todas las secciones
-sections.forEach(section => {
-if (section.id === targetId) {
-section.style.display = "block";
-} else {
-section.style.display = "none";
-}
-});
-// Scroll al inicio de la sección activada
-const targetSection = document.getElementById(targetId);
-if (targetSection) {
-targetSection.scrollIntoView({ behavior: "smooth" });
-history.pushState(null, "", "#" + targetId);
-}
-});
-});
-});
-</script>
 
-
-      
-<!-- Script para los submenús como Support my Work -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const submenuLinks = document.querySelectorAll(".menu-button");
-const sections = document.querySelectorAll("section");
-submenuLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
-const targetElement = document.getElementById(targetId);
-// Grupos de sub-secciones por sección madre
-const subsectionGroups = {
-home: ["socialmediacontent", "tiktokhighlight", "destacadodetiktok", "youtubehighlight"],
-film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-music: ["singles", "album", "videomusic"],
-fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
-science: ["researcharticle", "researchproject"],
-bemypatron: ["supportmywork", "supportmystudies", "gifts"],
-contact: ["contactforfans", "contactforwork"],
-store: ["digitalproducts", "physicalproducts"]
-};
-// Buscar la sección madre del target
-let parentSectionId = null;
-for (const [parent, subsections] of Object.entries(subsectionGroups)) {
-if (subsections.includes(targetId)) {
-parentSectionId = parent;
-break;
-}
-}
-// Si se encuentra la sección madre y el elemento destino existe
-if (parentSectionId && targetElement) {
-e.preventDefault();
-// Oculta todas las secciones y muestra solo la madre
-sections.forEach(section => {
-section.style.display = section.id === parentSectionId ? "block" : "none";
-});
-// Scroll hacia la subsección deseada
-setTimeout(() => {
-targetElement.scrollIntoView({ behavior: "smooth" });
-history.pushState(null, "", "#" + parentSectionId + "-" + targetId);
-}, 50);
-}
-});
-});
-});
-</script>
 
 
 
 
 
       
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const allSections = document.querySelectorAll("section");
+  <script>
+// Script único para manejar secciones y subsecciones por hash
+document.addEventListener("DOMContentLoaded", () => {
+  const allSections = document.querySelectorAll("section");
 
-    // Botones "VIEW THE PRODUCT"
-    const productButtons = document.querySelectorAll(".viewtheproduct-button");
-
-    productButtons.forEach(button => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        const productId = this.dataset.product;
-
-        // Oculta todas las secciones
-        allSections.forEach(section => {
-          section.style.display = "none";
-        });
-
-        // Muestra la sección del producto seleccionado
-        const productSection = document.getElementById(productId);
-        if (productSection) {
-          productSection.style.display = "block";
-          productSection.scrollIntoView({ behavior: "smooth" });
-        }
+  function showSectionFromHash() {
+    const hash = location.hash.replace("#", "");
+    if (!hash) {
+      // Si no hay hash, mostrar solo la home
+      allSections.forEach(section => {
+        section.style.display = section.id === "home" ? "block" : "none";
       });
+      return;
+    }
+
+    // Si es hash combinado (ej: film-shortfilm)
+    if (hash.includes("-")) {
+      const [parent, child] = hash.split("-");
+      const parentSection = document.getElementById(parent);
+      const childElement = document.getElementById(child);
+
+      allSections.forEach(section => {
+        section.style.display = section.id === parent ? "block" : "none";
+      });
+
+      if (childElement) {
+        setTimeout(() => childElement.scrollIntoView({ behavior: "smooth" }), 50);
+      }
+      return;
+    }
+
+    // Hash normal (ej: #film o #music)
+    allSections.forEach(section => {
+      section.style.display = section.id === hash ? "block" : "none";
     });
-  });
+  }
+
+  window.addEventListener("hashchange", showSectionFromHash);
+  showSectionFromHash();
+});
 </script>
+    
+
+
+
 
 
 
       
+
+    
 <script>
 const storeImages = document.querySelectorAll('.store-carousel-image');
 let storeCurrent = 0;
@@ -1305,25 +1249,21 @@ setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Link de FASHION en Physical Products
-  const fashionCard = document.querySelector('.product-card[href="#fashionselection"]');
-  const fashionSelectionSection = document.querySelector('#fashionselection');
-  const storeSection = document.querySelector('#store');
-
-  if (fashionCard && fashionSelectionSection && storeSection) {
-    fashionCard.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      // Ocultar Store
-      storeSection.style.display = "none";
-
-      // Mostrar Fashion Selection
-      fashionSelectionSection.style.display = "block";
-
-      // Scroll suave hacia Fashion Selection
-      fashionSelectionSection.scrollIntoView({ behavior: "smooth" });
-    });
-  }
+// Link de FASHION en Physical Products
+const fashionCard = document.querySelector('.product-card[href="#fashionselection"]');
+const fashionSelectionSection = document.querySelector('#fashionselection');
+const storeSection = document.querySelector('#store');
+if (fashionCard && fashionSelectionSection && storeSection) {
+fashionCard.addEventListener("click", (e) => {
+e.preventDefault();
+// Ocultar Store
+storeSection.style.display = "none";
+// Mostrar Fashion Selection
+fashionSelectionSection.style.display = "block";
+// Scroll suave hacia Fashion Selection
+fashionSelectionSection.scrollIntoView({ behavior: "smooth" });
+});
+}
 });
 </script>
 
@@ -1339,24 +1279,20 @@ document.addEventListener("DOMContentLoaded", () => {
       
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const jewelryLink = document.querySelector('#fashionselection .fashionselection-card[href="#jewelry"]');
-  const jewelrySection = document.querySelector('#jewelry');
-  const fashionSelectionSection = document.querySelector('#fashionselection');
-
-  if (jewelryLink && jewelrySection && fashionSelectionSection) {
-    jewelryLink.addEventListener("click", (e) => {
-      e.preventDefault();
-
-      // Ocultar Fashion Selection
-      fashionSelectionSection.style.display = "none";
-
-      // Mostrar Jewelry
-      jewelrySection.style.display = "block";
-
-      // Scroll hacia Jewelry
-      jewelrySection.scrollIntoView({ behavior: "smooth" });
-    });
-  }
+const jewelryLink = document.querySelector('#fashionselection .fashionselection-card[href="#jewelry"]');
+const jewelrySection = document.querySelector('#jewelry');
+const fashionSelectionSection = document.querySelector('#fashionselection');
+if (jewelryLink && jewelrySection && fashionSelectionSection) {
+jewelryLink.addEventListener("click", (e) => {
+e.preventDefault();
+// Ocultar Fashion Selection
+fashionSelectionSection.style.display = "none";
+// Mostrar Jewelry
+jewelrySection.style.display = "block";
+// Scroll hacia Jewelry
+jewelrySection.scrollIntoView({ behavior: "smooth" });
+});
+}
 });
 </script>
 
@@ -1375,15 +1311,14 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
       
-      <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-  const cartButton = document.querySelector(".cart-button");
-  const yourCartSection = document.getElementById("yourcart");
-
-  cartButton.addEventListener("click", function (event) {
-    event.preventDefault(); // Evita el salto de página
-    yourCartSection.classList.toggle("active"); // Muestra/oculta
-  });
+const cartButton = document.querySelector(".cart-button");
+const yourCartSection = document.getElementById("yourcart");
+cartButton.addEventListener("click", function (event) {
+event.preventDefault(); // Evita el salto de página
+yourCartSection.classList.toggle("active"); // Muestra/oculta
+});
 });
 </script>
 
@@ -1391,132 +1326,113 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cartBody = document.querySelector(".cart-body");
-  const addToCartButtons = document.querySelectorAll(".addtocart-button");
-  const allSections = document.querySelectorAll("section");
-
-  // 👉 Función para mostrar solo la sección activa
-  function showSectionFromHash() {
-    const hash = location.hash.replace("#", "");
-    if (!hash) return;
-
-    allSections.forEach(section => {
-      section.style.display = section.id === hash ? "block" : "none";
-    });
-  }
-
-  // 👉 Escuchar cambios de hash
-  window.addEventListener("hashchange", showSectionFromHash);
-
-  // 👉 Mostrar la sección correcta al cargar
-  showSectionFromHash();
-
-  // 👉 Función para actualizar totales
-  function updateCartTotals() {
-    let total = 0;
-    let totalQty = 0;
-
-    cartBody.querySelectorAll("tr").forEach(row => {
-      if (!row.querySelector(".remove-btn")) return;
-      const priceEl = row.querySelector(".cart-price-col .amount");
-      const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
-      const price = parseFloat(priceEl?.textContent || "0") || 0;
-      const qty   = parseInt(qtyEl?.textContent || "0") || 0;
-      total += price * qty;
-      totalQty += qty;
-    });
-
-    const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
-    let shipping = 0;
-    const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
-    if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
-
-    const totalRow = cartBody.querySelector("tr:last-child");
-    let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
-    if (!totalAmountEl) {
-      const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
-      priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
-      totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
-    }
-    totalAmountEl.textContent = (total + shipping).toFixed(2);
-
-    const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
-    if (totalQtyEl) totalQtyEl.textContent = totalQty;
-  }
-
-  // 👉 Add to cart
-  addToCartButtons.forEach(button => {
-    button.addEventListener("click", e => {
-      e.preventDefault();
-      const name = button.getAttribute("data-name");
-      const price = button.getAttribute("data-price");
-      const image = button.getAttribute("data-image");
-
-      let existingRow = null;
-      cartBody.querySelectorAll("tr").forEach(row => {
-        const nameCell = row.querySelector(".cart-productname-col span");
-        if (nameCell && nameCell.textContent === name) {
-          existingRow = row;
-        }
-      });
-
-      if (existingRow) {
-        const qtyEl = existingRow.querySelector(".cart-qty-col span");
-        qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
-      } else {
-        const newRow = document.createElement("tr");
-        newRow.innerHTML = `
-          <td class="cart-image-col"><img src="${image}" alt="${name}" class="cart-product-image"></td>
-          <td class="cart-productname-col"><span class="cart-white-cell text-left">${name}</span></td>
-          <td class="cart-price-col"><span class="cart-white-cell price-cell"><span class="currency">$</span><span class="amount">${price}</span></span></td>
-          <td class="cart-qty-col"><span class="cart-white-cell text-center">1</span></td>
-          <td class="cart-remove-col"><button class="remove-btn">X</button></td>
-        `;
-        const divider2 = cartBody.querySelector(".cart-tabledivider2");
-        cartBody.insertBefore(newRow, divider2);
-      }
-      updateCartTotals();
-    });
-  });
-
-  // 👉 Remove product
-  cartBody.addEventListener("click", e => {
-    if (e.target.classList.contains("remove-btn")) {
-      e.target.closest("tr").remove();
-      updateCartTotals();
-    }
-  });
-
- // 👉 Guardar última sección antes de entrar a #cart
-document.addEventListener("click", e => {
-  const link = e.target.closest("[href^='#'], button[data-target]");
-  if (!link) return;
-
-  // Obtenemos el destino
-  const targetId = link.getAttribute("href") || link.getAttribute("data-target");
-
-  // Si va al carrito, guardamos la sección actual
-  if (targetId === "#cart") {
-    sessionStorage.setItem("lastSection", location.hash || "#store");
-  } else {
-    sessionStorage.setItem("lastSection", targetId);
-  }
+const cartBody = document.querySelector(".cart-body");
+const addToCartButtons = document.querySelectorAll(".addtocart-button");
+const allSections = document.querySelectorAll("section");
+// 👉 Función para mostrar solo la sección activa
+function showSectionFromHash() {
+const hash = location.hash.replace("#", "");
+if (!hash) return;
+allSections.forEach(section => {
+section.style.display = section.id === hash ? "block" : "none";
 });
-
-
-  // 👉 Botones
-  document.getElementById("btn-back").addEventListener("click", () => {
-    const lastSection = sessionStorage.getItem("lastSection");
-    if (lastSection) {
-      location.hash = lastSection;
-    } else {
-      history.back();
-    }
-  });
-
-  document.getElementById("btn-continue").addEventListener("click", () => {
-    location.hash = "#store";
-  });
+}
+// 👉 Escuchar cambios de hash
+window.addEventListener("hashchange", showSectionFromHash);
+// 👉 Mostrar la sección correcta al cargar
+showSectionFromHash();
+// 👉 Función para actualizar totales
+function updateCartTotals() {
+let total = 0;
+let totalQty = 0;
+cartBody.querySelectorAll("tr").forEach(row => {
+if (!row.querySelector(".remove-btn")) return;
+const priceEl = row.querySelector(".cart-price-col .amount");
+const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
+const price = parseFloat(priceEl?.textContent || "0") || 0;
+const qty   = parseInt(qtyEl?.textContent || "0") || 0;
+total += price * qty;
+totalQty += qty;
+});
+const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
+let shipping = 0;
+const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
+if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
+const totalRow = cartBody.querySelector("tr:last-child");
+let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+if (!totalAmountEl) {
+const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
+priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
+totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+}
+totalAmountEl.textContent = (total + shipping).toFixed(2);
+const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
+if (totalQtyEl) totalQtyEl.textContent = totalQty;
+}
+// 👉 Add to cart
+addToCartButtons.forEach(button => {
+button.addEventListener("click", e => {
+e.preventDefault();
+const name = button.getAttribute("data-name");
+const price = button.getAttribute("data-price");
+const image = button.getAttribute("data-image");
+let existingRow = null;
+cartBody.querySelectorAll("tr").forEach(row => {
+const nameCell = row.querySelector(".cart-productname-col span");
+if (nameCell && nameCell.textContent === name) {
+existingRow = row;
+}
+});
+if (existingRow) {
+const qtyEl = existingRow.querySelector(".cart-qty-col span");
+qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
+} else {
+const newRow = document.createElement("tr");
+newRow.innerHTML = `
+<td class="cart-image-col"><img src="${image}" alt="${name}" class="cart-product-image"></td>
+<td class="cart-productname-col"><span class="cart-white-cell text-left">${name}</span></td>
+<td class="cart-price-col"><span class="cart-white-cell price-cell"><span class="currency">$</span><span class="amount">${price}</span></span></td>
+<td class="cart-qty-col"><span class="cart-white-cell text-center">1</span></td>
+<td class="cart-remove-col"><button class="remove-btn">X</button></td>
+`;
+const divider2 = cartBody.querySelector(".cart-tabledivider2");
+cartBody.insertBefore(newRow, divider2);
+}
+updateCartTotals();
+});
+});
+// 👉 Remove product
+cartBody.addEventListener("click", e => {
+if (e.target.classList.contains("remove-btn")) {
+e.target.closest("tr").remove();
+updateCartTotals();
+}
+});
+// 👉 Guardar última sección antes de entrar a #cart
+document.addEventListener("click", e => {
+const link = e.target.closest("[href^='#'], button[data-target]");
+if (!link) return;
+// Obtenemos el destino
+const targetId = link.getAttribute("href") || link.getAttribute("data-target");
+// Si va al carrito, guardamos la sección actual
+if (targetId === "#cart") {
+sessionStorage.setItem("lastSection", location.hash || "#store");
+} else {
+sessionStorage.setItem("lastSection", targetId);
+}
+});
+// 👉 Botones
+document.getElementById("btn-back").addEventListener("click", () => {
+const lastSection = sessionStorage.getItem("lastSection");
+if (lastSection) {
+location.hash = lastSection;
+} else {
+history.back();
+}
+});
+document.getElementById("btn-continue").addEventListener("click", () => {
+location.hash = "#store";
+});
 });
 </script>
 
@@ -1524,7 +1440,30 @@ document.addEventListener("click", e => {
 
 
 
-
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const allSections = document.querySelectorAll("section");
+const hash = location.hash.replace("#", "");
+if (hash) {
+const targetSection = document.getElementById(hash);
+if (targetSection) {
+// Ocultar todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Mostrar la que corresponde al hash
+targetSection.style.display = "block";
+// Llevar el scroll hacia esa sección
+targetSection.scrollIntoView({ behavior: "instant" });
+}
+} else {
+// Si no hay hash, mostrar solo la home (o la que quieras por defecto)
+allSections.forEach(section => {
+section.style.display = section.id === "home" ? "block" : "none";
+});
+}
+});
+</script>
      
 
 
@@ -1533,6 +1472,18 @@ document.addEventListener("click", e => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+      
        <!-- Script para mostrar Privacy Policy desde el footer -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -1563,34 +1514,7 @@ document.addEventListener("click", e => {
 
 
       
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const allSections = document.querySelectorAll("section");
-  const hash = location.hash.replace("#", "");
 
-  if (hash) {
-    const targetSection = document.getElementById(hash);
-
-    if (targetSection) {
-      // Ocultar todas las secciones
-      allSections.forEach(section => {
-        section.style.display = "none";
-      });
-
-      // Mostrar la que corresponde al hash
-      targetSection.style.display = "block";
-
-      // Llevar el scroll hacia esa sección
-      targetSection.scrollIntoView({ behavior: "instant" });
-    }
-  } else {
-    // Si no hay hash, mostrar solo la home (o la que quieras por defecto)
-    allSections.forEach(section => {
-      section.style.display = section.id === "home" ? "block" : "none";
-    });
-  }
-});
-</script>
 
 
 
