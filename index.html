@@ -1497,15 +1497,22 @@ document.addEventListener("click", e => {
 });
 
 // 👉 Botones
-// 👉 Botón BACK
+// 👉 Botón BACK mejorado
 document.getElementById("btn-back").addEventListener("click", () => {
   const lastSection = sessionStorage.getItem("lastSection");
+
   if (lastSection && lastSection !== "#cart") {
+    // Forzamos a mostrar la sección correspondiente
     location.hash = lastSection;
+    // Llamamos a showSectionFromHash manualmente por si el navegador no dispara hashchange
+    showSectionFromHash();
   } else {
-    history.back();
+    // Si no hay historial guardado, volvemos al home
+    location.hash = "#home";
+    showSectionFromHash();
   }
 });
+
 
 document.getElementById("btn-continue").addEventListener("click", () => {
 location.hash = "#store";
