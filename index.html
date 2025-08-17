@@ -1075,9 +1075,7 @@ Your cart is empty
 <span class="currency">$</span>
 </span>
 </td>
-<td class="cart-qty-col">
-<span class="cart-white-cell"></span>
-</td>
+<td class="cart-qty-col"></td> <!-- 🚫 sin recuadro -->
 <td class="cart-remove-col"></td>
 </tr>
 <!-- Fila Total -->
@@ -1089,7 +1087,9 @@ Your cart is empty
 <span class="currency">$</span>
 </span>
 </td>
-<td class="cart-qty-col text-center"><strong>T</strong></td>
+<td class="cart-qty-col text-center">
+<span class="cart-white-cell text-center total-qty">0</span> <!-- ✅ recuadro con total -->
+</td>
 <td class="cart-remove-col"></td>
 </tr>
 </tbody>
