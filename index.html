@@ -1393,36 +1393,46 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", () => {
   const cartBody = document.querySelector(".cart-body");
   const addToCartButtons = document.querySelectorAll(".addtocart-button");
+  const allSections = document.querySelectorAll("section");
+
+  // 👉 Función para mostrar solo la sección activa
+  function showSectionFromHash() {
+    const hash = location.hash.replace("#", "");
+    if (!hash) return;
+
+    allSections.forEach(section => {
+      section.style.display = section.id === hash ? "block" : "none";
+    });
+  }
+
+  // 👉 Escuchar cambios de hash
+  window.addEventListener("hashchange", showSectionFromHash);
+
+  // 👉 Mostrar la sección correcta al cargar
+  showSectionFromHash();
 
   // 👉 Función para actualizar totales
   function updateCartTotals() {
     let total = 0;
     let totalQty = 0;
 
-    // Solo productos (los que tienen botón remove)
     cartBody.querySelectorAll("tr").forEach(row => {
       if (!row.querySelector(".remove-btn")) return;
-
       const priceEl = row.querySelector(".cart-price-col .amount");
       const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
-
       const price = parseFloat(priceEl?.textContent || "0") || 0;
       const qty   = parseInt(qtyEl?.textContent || "0") || 0;
-
       total += price * qty;
       totalQty += qty;
     });
 
-    // Shipping
     const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
     let shipping = 0;
     const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
     if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
 
-    // Total row
     const totalRow = cartBody.querySelector("tr:last-child");
     let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
-
     if (!totalAmountEl) {
       const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
       priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
@@ -1430,7 +1440,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     totalAmountEl.textContent = (total + shipping).toFixed(2);
 
-    // QTY total
     const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
     if (totalQtyEl) totalQtyEl.textContent = totalQty;
   }
@@ -1439,7 +1448,6 @@ document.addEventListener("DOMContentLoaded", () => {
   addToCartButtons.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
-
       const name = button.getAttribute("data-name");
       const price = button.getAttribute("data-price");
       const image = button.getAttribute("data-image");
@@ -1458,29 +1466,15 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
-          <td class="cart-image-col">
-            <img src="${image}" alt="${name}" class="cart-product-image">
-          </td>
-          <td class="cart-productname-col">
-            <span class="cart-white-cell text-left">${name}</span>
-          </td>
-          <td class="cart-price-col">
-            <span class="cart-white-cell price-cell">
-              <span class="currency">$</span>
-              <span class="amount">${price}</span>
-            </span>
-          </td>
-          <td class="cart-qty-col">
-            <span class="cart-white-cell text-center">1</span>
-          </td>
-          <td class="cart-remove-col">
-            <button class="remove-btn">X</button>
-          </td>
+          <td class="cart-image-col"><img src="${image}" alt="${name}" class="cart-product-image"></td>
+          <td class="cart-productname-col"><span class="cart-white-cell text-left">${name}</span></td>
+          <td class="cart-price-col"><span class="cart-white-cell price-cell"><span class="currency">$</span><span class="amount">${price}</span></span></td>
+          <td class="cart-qty-col"><span class="cart-white-cell text-center">1</span></td>
+          <td class="cart-remove-col"><button class="remove-btn">X</button></td>
         `;
         const divider2 = cartBody.querySelector(".cart-tabledivider2");
         cartBody.insertBefore(newRow, divider2);
       }
-
       updateCartTotals();
     });
   });
@@ -1558,6 +1552,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+
+
+
+      
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const allSections = document.querySelectorAll("section");
