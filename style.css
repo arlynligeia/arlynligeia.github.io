@@ -3072,6 +3072,36 @@ td.yourcart-productname-col.yourcart-total-label {
 .text-center {
   text-align: center;
 }
+/* Recuadro de precio con $ fijo */
+.price-cell {
+  background-color: white;
+  border-radius: 6px;
+  display: flex;              /* separa $ y número */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  box-sizing: border-box;
+}
+
+.price-cell .currency {
+  text-align: left;
+}
+
+.price-cell .amount {
+  text-align: right;
+  flex-grow: 1; /* empuja el número hacia la derecha */
+}
+
+
 /* Botón RMV */
 .remove-btn {
   background-color: #39ff14;
