@@ -1040,77 +1040,11 @@ Your cart is empty
 </div>
 <!-- FIN CART EMPTY -->
       
-<!-- YOUR CART -->
-<div id="yourcart" class="yourcart-section">
-<div class="yourcart-container">
-<h2 class="yourcart-title"><a href="#yourcart">YOUR CART</a></h2>
-<!-- Tabla -->
-<table class="yourcart-table">
-<thead>
-<tr>
-<th class="yourcart-image-col">IMAGE</th>
-<th class="yourcart-productname-col">PRODUCT NAME</th>
-<th class="yourcart-price-col">PRICE</th>
-<th class="yourcart-qty-col">QTY</th>
-<th class="yourcart-remove-col">RMV</th>
-</tr>
-</thead>
-<tbody class="yourcart-body">
-<!-- Línea debajo de subtítulos -->      
-<tr class="yourcart-tabledivider">
-<td colspan="5"></td>
-</tr>    
-<!-- 🔹 Aquí el script insertará automáticamente los productos -->
-<tr id="cart-items-placeholder"></tr>
-<!-- Línea final debajo de productos -->
-<tr class="yourcart-tabledivider2">
-<td colspan="5"></td>
-</tr>
-      
-<!-- Fila de shipping -->
-<tr>
-  <td class="yourcart-image-col"></td>
-  <td class="yourcart-productname-col yourcart-shipping-label">Shipping</td>
-  <td class="yourcart-price-col label-price">
-    <span class="yourcart-white-cell-price">$50.00</span>
-  </td>
-  <td class="yourcart-qty-col label-qty">
-    <span id="shipping-qty-total" class="yourcart-white-cell-qty">0</span>
-  </td>
-  <td class="yourcart-remove-col"></td>
-</tr>
 
-<!-- Fila de total -->
-<tr>
-  <td class="yourcart-image-col"></td>
-  <td class="yourcart-productname-col yourcart-total-label">Total</td>
-  <td class="yourcart-price-col label-price">
-    <span class="yourcart-white-cell-price">$00.00</span>
-  </td>
-  <td class="yourcart-qty-col label-qty">
-    <span id="qty-total-label">T</span>
-  </td>
-  <td class="yourcart-remove-col"></td>
-</tr>
-
-</tbody>
-</table>
 
 
       
-<!-- Contenedor de botones debajo de la tabla -->
-<div class="yourcart-buttons">
-<!-- Botón volver -->
-<button id="btn-back">BACK</button>
-<!-- Botón seguir comprando -->
-<button id="btn-continue">CONTINUE SHOPPING</button>
-<!-- Botón pagar -->
-<button id="btn-pay">PAY</button>
-</div>
 
-</div>
-</div>
-<!-- FIN YOUR CART -->
 
 
 
@@ -1518,64 +1452,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-// Escuchar clicks en todos los botones ADD TO CART
-document.querySelectorAll(".addtocart-button").forEach(button => {
-button.addEventListener("click", function (event) {
-event.preventDefault();
-// Obtener datos del producto desde los atributos
-const name = this.getAttribute("data-name");
-const price = parseFloat(this.getAttribute("data-price"));
-const image = this.getAttribute("data-image");
-// Crear nueva fila para el producto
-const newRow = document.createElement("tr");
-newRow.innerHTML = `
-<td class="yourcart-image-col">
-<img src="${image}" alt="${name}" class="yourcart-product-image">
-</td>
-<td class="yourcart-productname-col">
-<span class="yourcart-white-cell-productname">${name}</span>
-</td>
-<td class="yourcart-price-col">
-<span class="yourcart-white-cell-price">$${price.toFixed(2)}</span>
-</td>
-<td class="yourcart-qty-col">
-<span class="yourcart-white-cell-qty">1</span>
-</td>
-<td class="yourcart-remove-col">
-<button class="remove-btn">X</button>
-</td>
-`;
-// Insertar el producto ANTES de la línea final (tabledivider2)
-const placeholder = document.getElementById("cart-items-placeholder");
-placeholder.parentNode.insertBefore(newRow, placeholder.nextSibling);
-// Actualizar total
-actualizarTotal();
-});
-});
-// Eliminar producto con ❌ usando delegación
-document.addEventListener("click", function(e) {
-if (e.target.classList.contains("remove-btn")) {
-e.target.closest("tr").remove();
-actualizarTotal();
-}
-});
-function actualizarTotal() {
-let total = 0;
-// Sumar todos los precios de los productos en el carrito
-document.querySelectorAll(".yourcart-price-col .yourcart-white-cell-price").forEach((priceEl, index) => {
-const value = parseFloat(priceEl.textContent.replace("$", ""));
-if (!isNaN(value)) total += value;
-});
-// Sumar shipping fijo de $50
-total += 50;
-// Mostrar total
-document.querySelector(".yourcart-total-label")
-.nextElementSibling.querySelector(".yourcart-white-cell-price").textContent = `$${total.toFixed(2)}`;
-}
-});
-</script>
+
 
 
      
