@@ -1483,21 +1483,19 @@ e.target.closest("tr").remove();
 updateCartTotals();
 }
 });
-// 👉 Guardar última sección antes de entrar a #cart
+// 👉 Guardar última sección ANTES de entrar al carrito
 document.addEventListener("click", e => {
   const link = e.target.closest("[href^='#'], button[data-target]");
   if (!link) return;
 
-  // Obtenemos el destino
   const targetId = link.getAttribute("href") || link.getAttribute("data-target");
 
-  // Si va al carrito, guardamos la sección actual
   if (targetId === "#cart") {
-    sessionStorage.setItem("lastSection", location.hash || "#store");
-  } else {
-    sessionStorage.setItem("lastSection", targetId);
+    // Guardamos la sección actual (donde estoy ahora) antes de ir al carrito
+    sessionStorage.setItem("lastSection", location.hash || "#home");
   }
 });
+
 
 // 👉 Botones
 // 👉 Botón BACK mejorado
