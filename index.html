@@ -1394,48 +1394,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartBody = document.querySelector(".cart-body");
   const addToCartButtons = document.querySelectorAll(".addtocart-button");
 
-  // 👉 Función para actualizar el total y las cantidades
- function updateCartTotals() {
-  let total = 0;
-  let totalQty = 0;
+  // 👉 Función para actualizar totales
+  function updateCartTotals() {
+    let total = 0;
+    let totalQty = 0;
 
-  // ✅ Solo filas de productos (las que tienen botón Remove)
-  cartBody.querySelectorAll("tr").forEach(row => {
-    if (!row.querySelector(".remove-btn")) return; // descarta Shipping y Total
+    // Solo productos (los que tienen botón remove)
+    cartBody.querySelectorAll("tr").forEach(row => {
+      if (!row.querySelector(".remove-btn")) return;
 
-    const priceEl = row.querySelector(".cart-price-col .amount");
-    const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
-    const price = parseFloat(priceEl?.textContent || "0") || 0;
-    const qty   = parseInt(qtyEl?.textContent || "0") || 0;
+      const priceEl = row.querySelector(".cart-price-col .amount");
+      const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
 
-    total += price * qty;
-    totalQty += qty;
-  });
+      const price = parseFloat(priceEl?.textContent || "0") || 0;
+      const qty   = parseInt(qtyEl?.textContent || "0") || 0;
 
-  // Shipping (si hay .amount en esa celda)
-  const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
-  let shipping = 0;
-  const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
-  if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
+      total += price * qty;
+      totalQty += qty;
+    });
 
-  // Fila Total (última)
-  const totalRow = cartBody.querySelector("tr:last-child");
+    // Shipping
+    const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
+    let shipping = 0;
+    const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
+    if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
 
-  // ✅ Actualiza TOTAL $
-  let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
-  if (!totalAmountEl) {
-    const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
-    priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
-    totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+    // Total row
+    const totalRow = cartBody.querySelector("tr:last-child");
+    let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+
+    if (!totalAmountEl) {
+      const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
+      priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
+      totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+    }
+    totalAmountEl.textContent = (total + shipping).toFixed(2);
+
+    // QTY total
+    const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
+    if (totalQtyEl) totalQtyEl.textContent = totalQty;
   }
-  totalAmountEl.textContent = (total + shipping).toFixed(2);
 
-  // ✅ Actualiza TOTAL QTY (en el recuadro de la columna QTY de la fila Total)
-  const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
-  if (totalQtyEl) totalQtyEl.textContent = totalQty;
-}
-
-  // 👉 Listener de los botones "Add to Cart"
+  // 👉 Add to cart
   addToCartButtons.forEach(button => {
     button.addEventListener("click", e => {
       e.preventDefault();
@@ -1444,7 +1444,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const price = button.getAttribute("data-price");
       const image = button.getAttribute("data-image");
 
-      // Buscar si ya existe ese producto en el carrito
       let existingRow = null;
       cartBody.querySelectorAll("tr").forEach(row => {
         const nameCell = row.querySelector(".cart-productname-col span");
@@ -1454,11 +1453,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       if (existingRow) {
-        // si existe, aumentar QTY
         const qtyEl = existingRow.querySelector(".cart-qty-col span");
         qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
       } else {
-        // Crear fila del producto
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
           <td class="cart-image-col">
@@ -1480,8 +1477,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="remove-btn">X</button>
           </td>
         `;
-
-        // Insertar antes de la segunda línea (cart-tabledivider2)
         const divider2 = cartBody.querySelector(".cart-tabledivider2");
         cartBody.insertBefore(newRow, divider2);
       }
@@ -1490,13 +1485,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 👉 Delegación de eventos para botones "Remove"
+  // 👉 Remove product
   cartBody.addEventListener("click", e => {
     if (e.target.classList.contains("remove-btn")) {
-      const row = e.target.closest("tr");
-      row.remove();
+      e.target.closest("tr").remove();
       updateCartTotals();
     }
+  });
+
+  // 👉 Guardar última sección antes de entrar a #cart
+  document.addEventListener("click", e => {
+    const link = e.target.closest("a[href^='#']");
+    if (!link) return;
+    const targetId = link.getAttribute("href");
+    if (targetId !== "#cart") {
+      sessionStorage.setItem("lastSection", targetId);
+    }
+  });
+
+  // 👉 Botones
+  document.getElementById("btn-back").addEventListener("click", () => {
+    const lastSection = sessionStorage.getItem("lastSection");
+    if (lastSection) {
+      location.hash = lastSection;
+    } else {
+      history.back();
+    }
+  });
+
+  document.getElementById("btn-continue").addEventListener("click", () => {
+    location.hash = "#store";
   });
 });
 </script>
