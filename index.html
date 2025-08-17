@@ -1558,6 +1558,34 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const allSections = document.querySelectorAll("section");
+  const hash = location.hash.replace("#", "");
+
+  if (hash) {
+    const targetSection = document.getElementById(hash);
+
+    if (targetSection) {
+      // Ocultar todas las secciones
+      allSections.forEach(section => {
+        section.style.display = "none";
+      });
+
+      // Mostrar la que corresponde al hash
+      targetSection.style.display = "block";
+
+      // Llevar el scroll hacia esa sección
+      targetSection.scrollIntoView({ behavior: "instant" });
+    }
+  } else {
+    // Si no hay hash, mostrar solo la home (o la que quieras por defecto)
+    allSections.forEach(section => {
+      section.style.display = section.id === "home" ? "block" : "none";
+    });
+  }
+});
+</script>
 
 
 
