@@ -1395,50 +1395,45 @@ document.addEventListener("DOMContentLoaded", () => {
   const addToCartButtons = document.querySelectorAll(".addtocart-button");
 
   // 👉 Función para actualizar el total y las cantidades
-  function updateCartTotals() {
-    let total = 0;
-    let totalQty = 0;
+ function updateCartTotals() {
+  let total = 0;
+  let totalQty = 0;
 
-    // recorrer todas las filas de productos (las que tienen .amount)
-    cartBody.querySelectorAll("tr").forEach(row => {
-      const priceEl = row.querySelector(".amount");
-      const qtyEl = row.querySelector(".cart-qty-col span");
-      if (priceEl && qtyEl) {
-        const price = parseFloat(priceEl.textContent) || 0;
-        const qty = parseInt(qtyEl.textContent) || 0;
-        total += price * qty;
-        totalQty += qty;
-      }
-    });
+  // ✅ Solo filas de productos (las que tienen botón Remove)
+  cartBody.querySelectorAll("tr").forEach(row => {
+    if (!row.querySelector(".remove-btn")) return; // descarta Shipping y Total
 
-    // shipping (si no hay, se queda en 0)
-    const shippingRow = cartBody.querySelector("tr:nth-last-child(2)"); 
-    let shipping = 0;
-    const shippingPriceEl = shippingRow.querySelector(".cart-price-col .amount");
-    if (shippingPriceEl) {
-      shipping = parseFloat(shippingPriceEl.textContent) || 0;
-    }
+    const priceEl = row.querySelector(".cart-price-col .amount");
+    const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
+    const price = parseFloat(priceEl?.textContent || "0") || 0;
+    const qty   = parseInt(qtyEl?.textContent || "0") || 0;
 
-    // actualizar total
-    const totalRow = cartBody.querySelector("tr:last-child");
-    const totalCell = totalRow.querySelector(".cart-price-col .amount");
-    if (totalCell) {
-      totalCell.textContent = (total + shipping).toFixed(2);
-    } else {
-      // si no existe amount en Total, lo creamos
-      const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
-      priceCell.innerHTML = `
-        <span class="currency">$</span>
-        <span class="amount">${(total + shipping).toFixed(2)}</span>
-      `;
-    }
+    total += price * qty;
+    totalQty += qty;
+  });
 
-    // actualizar la columna QTY del Total
-const totalQtyCell = totalRow.querySelector(".cart-qty-col .total-qty");
-if (totalQtyCell) {
-  totalQtyCell.textContent = totalQty;
-}
+  // Shipping (si hay .amount en esa celda)
+  const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
+  let shipping = 0;
+  const shippingAmountEl = shippingRow?.querySelector(".cart-price-col .amount");
+  if (shippingAmountEl) shipping = parseFloat(shippingAmountEl.textContent) || 0;
+
+  // Fila Total (última)
+  const totalRow = cartBody.querySelector("tr:last-child");
+
+  // ✅ Actualiza TOTAL $
+  let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+  if (!totalAmountEl) {
+    const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
+    priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
+    totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
   }
+  totalAmountEl.textContent = (total + shipping).toFixed(2);
+
+  // ✅ Actualiza TOTAL QTY (en el recuadro de la columna QTY de la fila Total)
+  const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
+  if (totalQtyEl) totalQtyEl.textContent = totalQty;
+}
 
   // 👉 Listener de los botones "Add to Cart"
   addToCartButtons.forEach(button => {
