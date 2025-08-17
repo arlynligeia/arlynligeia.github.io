@@ -1247,7 +1247,7 @@ section.style.display = section.id === parentSectionId ? "block" : "none";
 // Scroll hacia la subsección deseada
 setTimeout(() => {
 targetElement.scrollIntoView({ behavior: "smooth" });
-history.pushState(null, "", "#" + targetId);
+history.pushState(null, "", "#" + parentSectionId + "-" + targetId);
 }, 50);
 }
 });
