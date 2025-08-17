@@ -3104,13 +3104,13 @@ td.yourcart-productname-col.yourcart-total-label {
   border-radius: 6px;
   display: inline-block;
   width: 100%;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
@@ -3125,9 +3125,14 @@ td.yourcart-productname-col.yourcart-total-label {
   padding-bottom: 0px;
   height: 0;
  }
+
 .text-right {
-  text-align: right;
+  padding-left: 5px;
   padding-right: 5px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-align: right;
 }
 
 
