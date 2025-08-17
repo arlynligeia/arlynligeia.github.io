@@ -1487,15 +1487,22 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 👉 Guardar última sección antes de entrar a #cart
-  document.addEventListener("click", e => {
-    const link = e.target.closest("a[href^='#']");
-    if (!link) return;
-    const targetId = link.getAttribute("href");
-    if (targetId !== "#cart") {
-      sessionStorage.setItem("lastSection", targetId);
-    }
-  });
+ // 👉 Guardar última sección antes de entrar a #cart
+document.addEventListener("click", e => {
+  const link = e.target.closest("[href^='#'], button[data-target]");
+  if (!link) return;
+
+  // Obtenemos el destino
+  const targetId = link.getAttribute("href") || link.getAttribute("data-target");
+
+  // Si va al carrito, guardamos la sección actual
+  if (targetId === "#cart") {
+    sessionStorage.setItem("lastSection", location.hash || "#store");
+  } else {
+    sessionStorage.setItem("lastSection", targetId);
+  }
+});
+
 
   // 👉 Botones
   document.getElementById("btn-back").addEventListener("click", () => {
