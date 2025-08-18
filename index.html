@@ -936,7 +936,7 @@ WELCOME TO MY STORE
 </div>
 </div>
 </div>
-<!-- Botones (ya fuera del grid) -->
+<!-- Botones -->
 <div class="necklaces-buttons">
 <button id="btn-necklaces-back" onclick="location.href='#fashionselection'">BACK</button>
 <button id="btn-necklaces-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
@@ -944,54 +944,58 @@ WELCOME TO MY STORE
 </div> 
 </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-      
-      
-
-      
-
-      
+ 
 <!-- SECCIÓN INDEPENDIENTE NECKLACE -->
-<section id="necklace" class="necklace-section" style="display: none;">
-<div class="necklace-container">
-<!-- Imagen de necklace  -->
-<div class="necklace-image">
-<img src="assets/assets/Collar 1.jpg" alt="Collar 1">
+<section id="necklace1" class="necklace1-section" style="display: none;">
+<div class="necklace1-container">
+<h2 class="necklace1-title"><a href="#necklace1">NECKLACE 1</a></h2>      
+<!-- Dos columnas -->
+<div class="necklace1-grid">
+<!-- Columna 1: Imagen -->
+<div class="necklace1-image">
+<img src="assets/assets/Collar 1.jpg" alt="Necklace 1">
 </div>
-<!-- Textos debajo de la imagen -->
-<div class="necklace-bottom">
-<div class="necklace-subtitle">NECKLACE 1</div>
-<div class="necklace-price">$ 50.00</div>
-<p class="necklace-description">
-This necklace is handcrafted with black glass beads, polyester velvet ribbon, and a zinc alloy charm. Each piece is woven and sewn by hand.
-</p>
-      
-<!-- 🔹 Botón con atributos para el script -->
-<div class="addtocart-button-wrapper">
-<a class="addtocart-button"
-href="#"
-data-name="Collar 1"
+<!-- Columna 2: Información -->
+<div class="necklace1-info">
+<div class="necklace1-subtitle">NECKLACE 1</div>
+<div class="necklace1-price">$50.00</div>
+<p class="necklace1-shipping">Shipping PE: $5</p>
+<p class="necklace1-shipping">Shipping INTL: $50</p>
+</div>
+</div>
+<!-- Botones -->
+<div class="necklace1-buttons">
+<button class="addtocart-intl"
+data-name="Necklace 1"
 data-price="50.00"
-data-image="assets/assets/Collar 1.jpg">
-ADD TO CART
-</a>
-</div>
-<div class="share-button-wrapper">
-<a class="share-button" href="#">SHARE</a>
-</div>
+data-image="assets/assets/Collar 1.jpg"
+data-shipping="50">
+ADD TO CART (INTL)
+</button>
+<button class="addtocart-pe"
+data-name="Necklace 1"
+data-price="50.00"
+data-image="assets/assets/Collar 1.jpg"
+data-shipping="5">
+ADD TO CART (PE)
+</button>
+<button class="share-button">Share</button>
 </div>
 </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
