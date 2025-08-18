@@ -2455,6 +2455,30 @@ nav {
 .view-button:hover {
   transform: scale(1.05);
 }
+/* Botones */
+.necklaces-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.necklaces-buttons button {
+  background-color:  #ff1493; /* fucsia */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.necklaces-buttons button:hover {
+  transform: scale(1.05);
+}
 
 
 
