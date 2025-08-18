@@ -1577,66 +1577,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
      
 
-<script>
-// Actualiza la URL cuando se abre contenido dentro de #store
-(function(){
-  const store = document.getElementById('store');
-  if (!store) return;
-
-  // Comprueba si un elemento es visible (no display:none y ocupa espacio)
-  function isVisible(el){
-    if(!el) return false;
-    const style = window.getComputedStyle(el);
-    return style.display !== 'none' && (el.offsetWidth || el.offsetHeight || el.getClientRects().length);
-  }
-
-  // Devuelve el "mejor candidato" visible con id dentro de store (el más profundo)
-  function findDeepestVisibleWithId() {
-    const nodes = Array.from(store.querySelectorAll('[id]')).filter(n => n.id && n.id !== 'store');
-    let chosen = null;
-    const depthOf = (node) => {
-      let d = 0; let cur = node;
-      while (cur && cur !== store) { cur = cur.parentElement; d++; }
-      return d;
-    };
-    for (const n of nodes) {
-      if (!isVisible(n)) continue;
-      if (!chosen || depthOf(n) > depthOf(chosen)) chosen = n;
-    }
-    return chosen;
-  }
-
-  // Cuando haya clicks dentro de store, esperar un instante y actualizar hash si abrió algo
-  store.addEventListener('click', () => {
-    setTimeout(() => {
-      const chosen = findDeepestVisibleWithId();
-      if (!chosen) return;
-      // Construimos hash como "store-<id>" para seguir tu convención padre-hijo
-     let newHash = '#' + store.id; // por defecto: madre (#store)
-if (chosen && chosen.id !== 'physicalproducts') {
-  newHash = '#' + store.id + '-' + chosen.id; // solo hijos
-}
-if (location.hash !== newHash) {
-  location.hash = newHash;
-}
-
-    }, 80); // pequeño delay para que las animaciones/JS que abren contenedores terminen
-  }, true);
-
-  // También actualizar si abres algo mediante botones fuera de clicks directos (ej: JS)
-  // Observador de mutaciones: si cambia la visibilidad de elementos con id dentro de store, actualiza el hash
-  const observer = new MutationObserver(() => {
-    setTimeout(() => {
-      const chosen = findDeepestVisibleWithId();
-      if (!chosen) return;
-      const newHash = store.id + '-' + chosen.id;
-      if (location.hash !== '#' + newHash) location.hash = newHash;
-    }, 80);
-  });
-  observer.observe(store, { attributes: true, subtree: true, attributeFilter: ['style', 'class'] });
-
-})();
-</script>
 
   
  
