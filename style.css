@@ -2307,15 +2307,6 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
 /* ======================================
    SECCIÓN JEWELRY
 ====================================== */
@@ -2358,63 +2349,93 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Columnas */
-.jewelry-columns {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+/* ======================================
+   NECKLACES
+====================================== */
+.necklaces-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.necklaces-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.necklaces-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.necklaces-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID de 3 columnas */
+.necklaces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  grid-auto-rows: 250px;
+  margin: 0px;
+}
+/* Imagen */
+.necklaces-image {
+  width: 100%;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.jewelry-column {
-  flex: 1 1 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.product {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-/* Imagen */
-.jewelry-image {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px;
-}
-.jewelry-image img {
+.necklaces-image img {
   width: 100%;
   border-radius: 15px;
 }
 /* Texto */
-.jewelry-subtitle {
+.necklaces-subtitle {
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
 }
-.jewelry-price {
+.necklaces-price {
+  margin-top: 0px;
+  margin-bottom: 10px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
 }
  /* Botón */
-.viewtheproduct-button {
+.necklaces-button {
   background-color: #ff1493; /* fucsia */
-  color: white;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: auto;
@@ -2423,17 +2444,51 @@ nav {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none; 
   text-align: center;
+  border: none;  
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.viewtheproduct-button:hover {
+.necklaces-button:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE
