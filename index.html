@@ -1484,17 +1484,12 @@ updateCartTotals();
 }
 });
 // 👉 Guardar la sección actual ANTES de ir al carrito
-document.addEventListener("click", e => {
-  const link = e.target.closest("[href^='#'], button[data-target]");
-  if (!link) return;
-
-  const targetId = link.getAttribute("href") || link.getAttribute("data-target");
-
-  if (targetId === "#cart") {
-    // Guardamos la sección donde estoy parado actualmente
+document.querySelectorAll('a[href="#cart"]').forEach(cartLink => {
+  cartLink.addEventListener("click", e => {
     sessionStorage.setItem("lastSection", location.hash || "#home");
-  }
+  });
 });
+
 
 
 
