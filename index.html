@@ -1486,6 +1486,7 @@ updateCartTotals();
 // 👉 Guardar la sección actual ANTES de ir al carrito
 document.querySelectorAll('a[href="#cart"]').forEach(cartLink => {
   cartLink.addEventListener("click", e => {
+    console.log("ANTES de entrar al carrito, hash actual:", location.hash);
     sessionStorage.setItem("lastSection", location.hash || "#home");
   });
 });
