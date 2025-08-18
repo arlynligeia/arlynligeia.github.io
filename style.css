@@ -2114,6 +2114,10 @@ nav {
   text-align: center; 
 }
 
+
+
+
+
 /* ======================================
    PHYSICAL PRODUCTS
 ====================================== */
@@ -2137,19 +2141,18 @@ nav {
   width: 100%;
   height: 90px; 
   background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;  
-  height: 90px;  
+  border-radius: 20px 20px 0 0;   
 }
 .physicalproducts-title {
   position: relative;
   z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left; 
 }
@@ -2188,12 +2191,21 @@ nav {
   transform: translate(-50%, -50%);
   font-family: 'Orbitron', sans-serif;
   font-size: 1.5rem;
+  text-align: center;   /* 👈 esto centra el texto multi-línea */
+  white-space: nowrap;  /* 👈 evita que “Garage Sale” se corte en dos líneas */
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 /* Efecto zoom al pasar el mouse */
 .product-card:hover img {
   transform: scale(1.1);
 }
+
+
+
+
+
+
+
 
 /* ======================================
    FASHION SELECTION
