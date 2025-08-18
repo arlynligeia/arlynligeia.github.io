@@ -1283,7 +1283,12 @@ section.style.display = section.id === parentSectionId ? "block" : "none";
 // Scroll hacia la subsección deseada
 setTimeout(() => {
 targetElement.scrollIntoView({ behavior: "smooth" });
-history.pushState(null, "", "#" + parentSectionId + "-" + targetId);
+let newHash = "#" + parentSectionId;
+if (targetId !== "physicalproducts" && targetId !== "digitalproducts") {
+  newHash = "#" + parentSectionId + "-" + targetId;
+}
+history.pushState(null, "", newHash);
+
 }, 50);
 }
 });
@@ -1607,10 +1612,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const chosen = findDeepestVisibleWithId();
       if (!chosen) return;
       // Construimos hash como "store-<id>" para seguir tu convención padre-hijo
-      const newHash = store.id + '-' + chosen.id;
-      if (location.hash !== '#' + newHash) {
-        location.hash = newHash; // esto dispara hashchange y tu showSectionFromHash lo manejará
-      }
+     let newHash = '#' + store.id; // por defecto: madre (#store)
+if (chosen && chosen.id !== 'physicalproducts') {
+  newHash = '#' + store.id + '-' + chosen.id; // solo hijos
+}
+if (location.hash !== newHash) {
+  location.hash = newHash;
+}
+
     }, 80); // pequeño delay para que las animaciones/JS que abren contenedores terminen
   }, true);
 
