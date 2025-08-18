@@ -2164,7 +2164,8 @@ nav {
 .physicalproducts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px; 
+  gap: 20px;
+  grid-auto-rows: 250px;    /* 👈 asegura que todas las filas midan lo mismo */
   margin: 0;
 }
 /* Tarjetas de productos */
@@ -2178,7 +2179,7 @@ nav {
 }
 .product-card img {
   width: 100%;
-  height: 250px;  
+  height: 100%;             /* ocupa toda la celda */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
