@@ -3009,6 +3009,7 @@ nav {
 /* ======================================
    CART FULL
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .cartfull-container {
   position: relative;
   width: 800px;
@@ -3035,12 +3036,12 @@ nav {
   position: relative;
   z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
@@ -3226,6 +3227,7 @@ nav {
 /* ======================================
    SHIPPING INFORMATION
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .shippinginformation-container {
   position: relative;
   width: 800px;
@@ -3252,12 +3254,12 @@ nav {
   position: relative;
   z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
@@ -3265,30 +3267,34 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Texto y recuadros */
+/* TEXTOS Y RECUADROS */
 /* Labels */
 .shippinginformation-label {
   display: block;
-  font-size: 1.25rem;
+  margin-top: 0; 
+  margin-bottom: 5px;
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 1.2rem;
   color: white;
-  margin-bottom: 8px;
-  text-align: left;
-  font-family: 'Orbitron', sans-serif;
+  text-align: left;  
 }
-
 /* Inputs */
 .shippinginformation-input,
 .shippinginformation-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
+  background-color: #fff;
   border-radius: 6px;
-  border: 1px solid #fff; /* borde blanco para visibilidad */
+  border: 1px solid #fff; /* borde blanco para visibilidad */ 
+  width: 100%;
+  margin-top: 0;  
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px; 
   box-sizing: border-box;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  background-color: #fff;
-  color: #000;
+  color: black;
 }
 .shippinginformation-input {
   height: 40px;
@@ -3308,7 +3314,7 @@ nav {
   margin-bottom: 0px;
 }
 .shippinginformation-buttons button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -3324,6 +3330,17 @@ nav {
 .shippinginformation-buttons button:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
