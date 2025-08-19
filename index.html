@@ -1608,7 +1608,61 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 
+<!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const allSections = document.querySelectorAll('section');
+  const cartEmptySection = document.getElementById('cartempty');
+  const cartFullSection = document.getElementById('cartfull');
 
+  // Función que revisa si hay productos en el carrito
+  function cartHasItems() {
+    const cartBody = document.querySelector('.cartfull-body');
+    // Considera que hay productos si hay alguna fila agregada antes del divider2
+    return !!(cartBody && cartBody.querySelector('.cart-item'));
+  }
+
+  // Ocultar todas las secciones y mostrar solo una
+  function showOnly(sectionEl) {
+    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
+  }
+
+  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
+  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+        location.hash = '#cartfull';
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    });
+  });
+
+  // Si el usuario entra con hash directo
+  function checkHash() {
+    if (location.hash === '#cart') {
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+        location.hash = '#cartfull';
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    } else if (location.hash === '#cartfull') {
+      showOnly(cartFullSection);
+    } else if (location.hash === '#cartempty') {
+      showOnly(cartEmptySection);
+    }
+  }
+
+  // Revisar al cargar y en cambios de hash
+  checkHash();
+  window.addEventListener('hashchange', checkHash);
+});
+</script>
 
 
 
