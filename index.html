@@ -1610,6 +1610,7 @@ document.addEventListener("DOMContentLoaded", () => {
       
 
 <!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
+<!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const allSections = document.querySelectorAll('section');
@@ -1627,7 +1628,7 @@ document.addEventListener('DOMContentLoaded', function () {
     allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
   }
 
-  // Botón/enlace de menú que apunta a CART
+  // Botón/enlace de menú que apunta a #cart
   document.querySelectorAll('a[href="#cart"], button[data-target="#cart"]').forEach(el => {
     el.addEventListener('click', function (e) {
       e.preventDefault();
@@ -1641,19 +1642,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Si el usuario navega directamente con el hash
-  window.addEventListener('hashchange', function () {
-    if (location.hash === '#cartfull') {
+  // Si el usuario entra directamente con un hash en la URL
+  function checkHash() {
+    if (location.hash === '#cart') {
       if (cartHasItems()) {
         showOnly(cartFullSection);
+        location.hash = '#cartfull';
       } else {
         showOnly(cartEmptySection);
         location.hash = '#cartempty';
       }
+    } else if (location.hash === '#cartfull') {
+      showOnly(cartFullSection);
     } else if (location.hash === '#cartempty') {
       showOnly(cartEmptySection);
     }
-  });
+  }
+
+  // Revisar al cargar la página
+  checkHash();
+
+  // Revisar cuando cambia el hash
+  window.addEventListener('hashchange', checkHash);
 });
 </script>
 
