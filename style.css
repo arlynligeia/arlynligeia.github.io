@@ -2114,6 +2114,12 @@ nav {
   text-align: center; 
 }
 
+
+
+
+
+
+
 /* ======================================
    PHYSICAL PRODUCTS
 ====================================== */
@@ -2225,12 +2231,12 @@ nav {
   position: relative;
   z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
@@ -2331,13 +2337,13 @@ nav {
 .jewelry-title {
   position: relative;
   z-index: 2;
-  display: block; 
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;  
 }
@@ -2375,12 +2381,12 @@ nav {
   position: relative;
   z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
@@ -2576,7 +2582,7 @@ nav {
   color: white;
   text-decoration: none; 
   line-height: 1.6;
-  text-align: justify;  /* 🔹 justificado */
+  text-align: justify;
 }
 /* Botones */
 .necklace1-buttons {
@@ -2608,6 +2614,30 @@ nav {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;  
+}
+/* Botones */
+.necklace1-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.necklace1-buttons button {
+  background-color:  #ff1493; /* fucsia */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.necklace1-buttons button:hover {
+  transform: scale(1.05);
 }
 
 
