@@ -1451,6 +1451,9 @@ section.style.display = "none";
 const productSection = document.getElementById(productId);
 if (productSection) {
 productSection.style.display = "block";
+// 👉 Cambiar el hash en la URL
+window.location.hash = productId;
+// Scroll hacia el producto     
 productSection.scrollIntoView({ behavior: "smooth" });
 }
 });
