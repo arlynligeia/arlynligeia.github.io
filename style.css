@@ -3033,14 +3033,14 @@ nav {
   width: 100%;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
-  height: 90px; 
+  height: 90px;
 }
 .cartfull-title {
   position: relative;
   z-index: 2;
   display: block;
   margin-top: 0;
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
@@ -3056,13 +3056,10 @@ nav {
 .cartfull-table {
   width: 100%;
   table-layout: fixed;
-  border-collapse: separate;   /* importante: separar las celdas */
+  border-collapse: separate; /* importante: separar las celdas */
+  border-spacing: 10px 0;
   margin-top: 0;
-  margin-bottom: 10px;  
-}
-/* solo agrega espacio entre columnas */
-.cartfull-table td + td {
-  padding-left: 10px;
+  margin-bottom: 10px;
 }
 /* Ancho de columnas */
 .cartfull-image-col {
@@ -3084,7 +3081,7 @@ nav {
 .cartfull-table td {
   vertical-align: middle;
   padding-top: 10px;
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 /* Subtítulos */
 .cartfull-table th {
@@ -3096,53 +3093,19 @@ nav {
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
- }
+}
 /* Linea separadora */
 .cartfull-tabledivider td {
   border-top: 3px solid #39ff14;
   padding-top: 0px;
   padding-bottom: 0px;
   height: 0;
- }
-
-/* ======================================
-   GUIA DE RECUADROS PARA MEDIR MÁRGENES
-====================================== */
-
-/* Recuadro de imagen */
-.cartfull-product-image {
-  outline: 2px solid red; /* línea roja para ver la imagen */
 }
-
-/* Recuadro del nombre u otros campos blancos */
-.cartfull-white-cell {
-  outline: 2px solid blue; /* línea azul para ver el cuadro blanco */
-}
-
-/* Recuadro de precio */
-.price-cell {
-  outline: 2px solid green; /* línea verde para ver el recuadro de precio */
-}
-
-/* Recuadro del botón de eliminar */
-.remove-btn {
-  outline: 2px solid orange; /* línea naranja para el botón */
-}
-
-
-
-
-
-
-
-
-
-
 /* Imagen pequeña */
 .cartfull-product-image {
   max-width: 72px;
   border-radius: 6px;
-  display: block; 
+  display: block;
   height: auto;
   margin: 0 auto;
 }
@@ -3177,7 +3140,7 @@ nav {
 .price-cell {
   background-color: white;
   border-radius: 6px;
-  display: flex;         
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -3225,8 +3188,7 @@ nav {
   padding-top: 0px;
   padding-bottom: 0px;
   height: 0;
- }
-
+}
 .text-right {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
@@ -3247,15 +3209,15 @@ nav {
   margin-bottom: 0px;
 }
 .cartfull-buttons button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  color: white !important; 
+  color: white !important;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -3263,6 +3225,46 @@ nav {
 .cartfull-buttons button:hover {
   transform: scale(1.05);
 }
+
+/* ======================================
+   LINEAS PARA MARGENES DE COLUMNAS
+====================================== */
+.cartfull-image-col {
+  outline: 2px dashed red;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cartfull-productname-col {
+  outline: 2px dashed blue;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cartfull-price-col {
+  outline: 2px dashed green;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cartfull-qty-col {
+  outline: 2px dashed orange;
+  margin-left: 0;
+  margin-right: 0;
+}
+.cartfull-remove-col {
+  outline: 2px dashed purple;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SHIPPING INFORMATION
