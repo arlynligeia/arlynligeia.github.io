@@ -1195,15 +1195,17 @@ Your cart is empty
 <input type="text" id="apartment" name="apartment" class="shippinginformation-input" required>    
 <label for="mobilephone" class="shippinginformation-label">MOBILE PHONE</label>
 <input type="text" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
-<!-- BOTON PARA ENVIAR EL FORMULARIO -->
-<div class="shippinginformation-buttons">
-<button id="btn-shippinginformation-pay" disabled>PAY</button>
-</div>
 </form>
 <!-- BOTONES FUERA DEL FORULARIO-->
+<div class="shippinginformation-buttons-row">
 <div class="shippinginformation-buttons">
 <button type="button" id="btn-shippinginformation-back" onclick="location.href='#cartfull'">BACK</button>
 <button type="button" id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+<!-- BOTON PARA ENVIAR EL FORMULARIO -->
+<form action="https://formspree.io/f/xayrlvbb" method="POST">
+<button type="submit" id="btn-shippinginformation-pay" disabled>PAY</button>
+</form>
 </div>
 </div>
 </section>
