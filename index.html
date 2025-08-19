@@ -108,7 +108,7 @@
 
 
 <li>
-<a href="#" class="menu-button menu-link" data-section="cart">Cart</a>
+<a href="#cart" class="menu-button menu-link" data-section="cart">Cart</a>
 </li>
 
 
@@ -1462,7 +1462,7 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 <!-- SCRIPT DEL CARRITO -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cartBody = document.querySelector(".cart-body");
+  const cartBody = document.querySelector(".cartfull-body");
   const addToCartButtons = document.querySelectorAll(".addtocart-intl, .addtocart-pe");
   const allSections = document.querySelectorAll("section");
 
@@ -1584,14 +1584,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // 👉 Guardar sección anterior al ir a carrito
   let previousHash = "#home";
   window.addEventListener("hashchange", () => {
-    if (location.hash === "#cart") {
+    if (location.hash === "#cartfull") {
       sessionStorage.setItem("lastSection", previousHash);
     }
     previousHash = location.hash;
   });
 
   // 👉 Botón BACK
-  document.getElementById("btn-cart-back").addEventListener("click", () => {
+  document.getElementById("btn-cartfull-back").addEventListener("click", () => {
     const lastSection = sessionStorage.getItem("lastSection");
     if (lastSection) {
       location.hash = lastSection;
@@ -1601,7 +1601,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 👉 Botón CONTINUE
-  document.getElementById("btn-cart-continue").addEventListener("click", () => {
+  document.getElementById("btn-cartfull-continue").addEventListener("click", () => {
     location.hash = "#store";
   });
 });
@@ -1609,7 +1609,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       
 
-<!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
 <!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -1620,16 +1619,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // Función que revisa si hay productos en el carrito
   function cartHasItems() {
     const cartBody = document.querySelector('.cartfull-body');
-    return !!(cartBody && cartBody.querySelector('.remove-btn'));
+    // Considera que hay productos si hay alguna fila agregada antes del divider2
+    return !!(cartBody && cartBody.querySelector('.cart-item'));
   }
 
-  // Función que oculta todas las secciones y muestra solo una
+  // Ocultar todas las secciones y mostrar solo una
   function showOnly(sectionEl) {
     allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
   }
 
-  // Botón/enlace de menú que apunta a #cart
-  document.querySelectorAll('a[href="#cart"], button[data-target="#cart"]').forEach(el => {
+  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
+  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
     el.addEventListener('click', function (e) {
       e.preventDefault();
       if (cartHasItems()) {
@@ -1642,7 +1642,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Si el usuario entra directamente con un hash en la URL
+  // Si el usuario entra con hash directo
   function checkHash() {
     if (location.hash === '#cart') {
       if (cartHasItems()) {
@@ -1659,10 +1659,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // Revisar al cargar la página
+  // Revisar al cargar y en cambios de hash
   checkHash();
-
-  // Revisar cuando cambia el hash
   window.addEventListener('hashchange', checkHash);
 });
 </script>
