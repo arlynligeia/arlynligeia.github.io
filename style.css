@@ -3052,14 +3052,18 @@ nav {
   color: white;
   text-decoration: none;
 }
+
 /* TABLA */
 .cartfull-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate; /* importante: separar las celdas */
-  border-spacing: 10px 0;
   margin-top: 0;
   margin-bottom: 10px;
+}
+.cartfull-table td + td,
+.cartfull-table th + th {
+  border-left: 10px solid transparent; /* genera el espacio solo entre columnas */
 }
 /* Ancho de columnas */
 .cartfull-image-col {
