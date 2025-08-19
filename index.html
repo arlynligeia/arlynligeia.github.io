@@ -1146,59 +1146,59 @@ Your cart is empty
 <!-- FIN CART EMPTY -->
             
 <!--  SECCIÓN CART -->
-<section id="cart" class="cart-section main-section" style="display: none;">
-<div class="cart-container">
-<h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>
+<section id="cartfull" class="cart-section main-section" style="display: none;">
+<div class="cartfull-container">
+<h2 class="cartfull-title"><a href="#cart">YOUR CART</a></h2>
 <!-- Tabla -->
-<table class="cart-table">
+<table class="cartfull-table">
 <thead>
 <tr>
-<th class="cart-image-col">IMAGE</th>
-<th class="cart-productname-col">PRODUCT NAME</th>
-<th class="cart-price-col">PRICE</th>
-<th class="cart-qty-col">QTY</th>
-<th class="cart-remove-col">RMV</th>
+<th class="cartfull-image-col">IMAGE</th>
+<th class="cartfull-productname-col">PRODUCT NAME</th>
+<th class="cartfull-price-col">PRICE</th>
+<th class="cartfull-qty-col">QTY</th>
+<th class="cartfull-remove-col">RMV</th>
 </tr>
 </thead>
-<tbody class="cart-body">
+<tbody class="cartfull-body">
 <!-- Línea debajo de subtítulos -->
-<tr class="cart-tabledivider"><td colspan="5"></td></tr>     
+<tr class="cartfull-tabledivider"><td colspan="5"></td></tr>     
 <!-- Aquí se agregarán dinámicamente los productos con JS -->
 <!-- Línea debajo de productos -->
-<tr class="cart-tabledivider2"><td colspan="5"></td></tr>
+<tr class="cartfull-tabledivider2"><td colspan="5"></td></tr>
 <!-- Fila Shipping -->
 <tr>
-<td class="cart-image-col"></td>
-<td class="cart-productname-col text-right">Shipping</td>
-<td class="cart-price-col">
-<span class="cart-white-cell price-cell">
+<td class="cartfull-image-col"></td>
+<td class="cartfull-productname-col text-right">Shipping</td>
+<td class="cartfull-price-col">
+<span class="cartfull-white-cell price-cell">
 <span class="currency">$</span>
 </span>
 </td>
-<td class="cart-qty-col"></td> <!-- 🚫 sin recuadro -->
-<td class="cart-remove-col"></td>
+<td class="cartfull-qty-col"></td> <!-- 🚫 sin recuadro -->
+<td class="cartfull-remove-col"></td>
 </tr>
 <!-- Fila Total -->
 <tr>
-<td class="cart-image-col"></td>
-<td class="cart-productname-col text-right">Total</td>
-<td class="cart-price-col">
-<span class="cart-white-cell price-cell">
+<td class="cartfull-image-col"></td>
+<td class="cartfull-productname-col text-right">Total</td>
+<td class="cartfull-price-col">
+<span class="cartfull-white-cell price-cell">
 <span class="currency">$</span>
 </span>
 </td>
-<td class="cart-qty-col text-center">
-<span class="cart-white-cell text-center total-qty">0</span> <!-- ✅ recuadro con total -->
+<td class="cartfull-qty-col text-center">
+<span class="cartfull-white-cell text-center total-qty">0</span> <!-- ✅ recuadro con total -->
 </td>
-<td class="cart-remove-col"></td>
+<td class="cartfull-remove-col"></td>
 </tr>
 </tbody>
 </table>
 <!-- Contenedor de botones debajo de la tabla -->
-<div class="cart-buttons">
-<button id="btn-cart-back" onclick="history.back()">BACK</button>
-<button id="btn-cart-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-<button id="btn-cart-pay">PAY</button>
+<div class="cartfull-buttons">
+<button id="btn-cartfull-back" onclick="history.back()">BACK</button>
+<button id="btn-cartfull-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-cartfull-pay">PAY</button>
 </div>
 </div>
 </section>
