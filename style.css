@@ -2695,7 +2695,7 @@ nav {
   border-radius: 15px;
 }
 /* Contenedor de la info */
-.necklace1-info {
+.necklace2-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2794,6 +2794,163 @@ nav {
   transition: background-color 0.3s ease;
 }
 .necklace2-buttons2 button:hover {
+  transform: scale(1.05);
+}
+
+/* ======================================
+   SECCIÓN INDEPENDIENTE NECKLACE 3
+====================================== */
+.necklace3-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.necklace3-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; /* franja encima del fondo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.necklace3-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.necklace3-title a {
+  color: white;
+  text-decoration: none;
+}
+/* Grid de 2 columnas */
+.necklace3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.necklace3-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* Contenedor de la info */
+.necklace3-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* Nombre del producto */
+.necklace3-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* Precio */
+.necklace3-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* Shipping */
+.necklace3-shipping {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* Shipping */
+.necklace3-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* Botones */
+.necklace3-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.necklace3-buttons button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.necklace3-buttons button:hover {
+  transform: scale(1.05);
+}
+/* Botón Share con color distinto */
+.necklace3-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.necklace3-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.necklace3-buttons2 button {
+  background-color:  #ff1493; /* fucsia */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.necklace3-buttons2 button:hover {
   transform: scale(1.05);
 }
 
