@@ -3106,21 +3106,28 @@ nav {
  }
 
 /* ======================================
-   TABLA GUIA COMPLETA DE MARGENES
+   GUIA DE RECUADROS PARA MEDIR MÁRGENES
 ====================================== */
-.cartfull-table td,
-.cartfull-table th {
-  outline: 1px solid rgba(255,0,0,0.7); /* línea roja semi-transparente para ver celdas */
-  background-color: rgba(0,255,0,0.05);  /* color de relleno muy suave para ver espacio */
+
+/* Recuadro de imagen */
+.cartfull-product-image {
+  outline: 2px solid red; /* línea roja para ver la imagen */
 }
 
-/* Opcional: guía de columnas */
-.cartfull-table td + td {
-  /* puedes ajustar visualmente el gap aquí si quieres */
-  /* padding-left: 10px; */
+/* Recuadro del nombre u otros campos blancos */
+.cartfull-white-cell {
+  outline: 2px solid blue; /* línea azul para ver el cuadro blanco */
 }
 
-/* Esto no toca tu tabla real, solo sirve para medir */
+/* Recuadro de precio */
+.price-cell {
+  outline: 2px solid green; /* línea verde para ver el recuadro de precio */
+}
+
+/* Recuadro del botón de eliminar */
+.remove-btn {
+  outline: 2px solid orange; /* línea naranja para el botón */
+}
 
 
 
