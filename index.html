@@ -1134,29 +1134,19 @@ ADD TO CART (PE)
 
       
 <!-- SECCIÓN CART -->
-<section id="cart" class="yourcart-section main-section">
-<!-- CART EMPTY -->
-<div id="cartempty" class="cartempty-section">
+<!-- SECCIÓN CART EMPTY -->
+<section id="cartempty" class="cartempty-section main-section" style="display: none;">
 <div class="cartempty-container">
 <h2 class="cartempty-title"><a href="#cartempty">YOUR CART</a></h2>
 <p class="cartempty-description">
 Your cart is empty
 </p>
 </div>
-</div>
+</section>
 <!-- FIN CART EMPTY -->
-      
-
-
-
-      
-
-
-
-
-
-<!-- CART -->
-<div id="cart" class="cart-section">
+            
+<!--  SECCIÓN CART -->
+<section id="cart" class="cart-section main-section" style="display: none;">
 <div class="cart-container">
 <h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>
 <!-- Tabla -->
@@ -1172,14 +1162,10 @@ Your cart is empty
 </thead>
 <tbody class="cart-body">
 <!-- Línea debajo de subtítulos -->
-<tr class="cart-tabledivider">
-<td colspan="5"></td>
-</tr>     
+<tr class="cart-tabledivider"><td colspan="5"></td></tr>     
 <!-- Aquí se agregarán dinámicamente los productos con JS -->
 <!-- Línea debajo de productos -->
-<tr class="cart-tabledivider2">
-<td colspan="5"></td>
-</tr>
+<tr class="cart-tabledivider2"><td colspan="5"></td></tr>
 <!-- Fila Shipping -->
 <tr>
 <td class="cart-image-col"></td>
@@ -1215,12 +1201,8 @@ Your cart is empty
 <button id="btn-cart-pay">PAY</button>
 </div>
 </div>
-</div>
-<!-- FIN CART -->
-
-
-     
 </section>
+<!-- FIN CART -->
 
 
 
@@ -1433,7 +1415,7 @@ jewelrySection.scrollIntoView({ behavior: "smooth" });
 </script>
 
       
-<!-- Script para ir a la seccion del producto -->      
+<!-- Script para ir a la seccion del PRODUCTO -->      
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const allSections = document.querySelectorAll("section");
@@ -1460,49 +1442,11 @@ productSection.scrollIntoView({ behavior: "smooth" });
 });
 });
 </script> 
+   
 
 
 
 
-
-
-
-      
-
-    
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-      
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const cartButton = document.querySelector(".cart-button");
@@ -1513,10 +1457,6 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 });
 });
 </script>
-
-
-
-
 
 
 <!-- SCRIPT DEL CARRITO -->
@@ -1664,6 +1604,49 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-cart-continue").addEventListener("click", () => {
     location.hash = "#store";
   });
+});
+</script>
+
+      
+<!-- SCRIPT PARA MOSTRAR UNA U OTRA SECCIÓN DEL CARRITO-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+const allSections = document.querySelectorAll('section');
+const cartSection = document.getElementById('cart');
+const cartEmptySection = document.getElementById('cartempty');
+function cartHasItems() {
+const cartBody = document.querySelector('.cart-body');
+return !!(cartBody && cartBody.querySelector('.remove-btn'));
+}
+function showOnly(sectionEl) {
+allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
+}
+// Botón/enlace de menú que apunta a #cart
+document.querySelectorAll('a[href="#cart"], button[data-target="#cart"]').forEach(el => {
+el.addEventListener('click', function (e) {
+e.preventDefault();
+if (cartHasItems()) {
+showOnly(cartSection);
+location.hash = '#cart';
+} else {
+showOnly(cartEmptySection);
+location.hash = '#cartempty';
+}
+});
+});
+// Si el usuario navega con el hash
+window.addEventListener('hashchange', function () {
+if (location.hash === '#cart') {
+if (cartHasItems()) {
+showOnly(cartSection);
+} else {
+showOnly(cartEmptySection);
+location.hash = '#cartempty';
+}
+} else if (location.hash === '#cartempty') {
+showOnly(cartEmptySection);
+}
+});
 });
 </script>
 
