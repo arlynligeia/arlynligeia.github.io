@@ -1615,12 +1615,14 @@ document.addEventListener('DOMContentLoaded', function () {
   const cartEmptySection = document.getElementById('cartempty');
   const cartFullSection = document.getElementById('cartfull');
 
-  // Función que revisa si hay productos en el carrito
-  function cartHasItems() {
-    const cartBody = document.querySelector('.cartfull-body');
-    // Considera que hay productos si hay alguna fila agregada antes del divider2
-    return !!(cartBody && cartBody.querySelector('.cart-item'));
-  }
+ // Función que revisa si hay productos en el carrito
+function cartHasItems() {
+  const cartBody = document.querySelector('.cartfull-body');
+  if (!cartBody) return false;
+  // ✅ considera que hay productos si existe al menos un botón de eliminar (remove-btn)
+  return cartBody.querySelector('.remove-btn') !== null;
+}
+
 
   // Ocultar todas las secciones y mostrar solo una
   function showOnly(sectionEl) {
