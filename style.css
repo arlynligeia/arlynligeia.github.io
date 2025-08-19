@@ -3104,17 +3104,23 @@ nav {
   padding-bottom: 0px;
   height: 0;
  }
-/* Lineas de prueba */
-.cartfull-table td {
-  border: 1px solid red;   /* línea temporal para medir celdas */
-}
+
+/* ======================================
+   TABLA GUIA COMPLETA DE MARGENES
+====================================== */
+.cartfull-table td,
 .cartfull-table th {
-  border: 1px solid blue;  /* línea temporal para medir headers */
-}
-.cartfull-table td + td {
-  padding-left: 10px;      /* espacio entre columnas, ajustable */
+  outline: 1px solid rgba(255,0,0,0.7); /* línea roja semi-transparente para ver celdas */
+  background-color: rgba(0,255,0,0.05);  /* color de relleno muy suave para ver espacio */
 }
 
+/* Opcional: guía de columnas */
+.cartfull-table td + td {
+  /* puedes ajustar visualmente el gap aquí si quieres */
+  /* padding-left: 10px; */
+}
+
+/* Esto no toca tu tabla real, solo sirve para medir */
 
 
 
