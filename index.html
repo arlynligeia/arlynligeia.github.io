@@ -1608,45 +1608,52 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
       
-<!-- SCRIPT PARA MOSTRAR UNA U OTRA SECCIÓN DEL CARRITO-->
+
+<!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-const allSections = document.querySelectorAll('section');
-const cartSection = document.getElementById('cart');
-const cartEmptySection = document.getElementById('cartempty');
-function cartHasItems() {
-const cartBody = document.querySelector('.cart-body');
-return !!(cartBody && cartBody.querySelector('.remove-btn'));
-}
-function showOnly(sectionEl) {
-allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
-}
-// Botón/enlace de menú que apunta a #cart
-document.querySelectorAll('a[href="#cart"], button[data-target="#cart"]').forEach(el => {
-el.addEventListener('click', function (e) {
-e.preventDefault();
-if (cartHasItems()) {
-showOnly(cartSection);
-location.hash = '#cart';
-} else {
-showOnly(cartEmptySection);
-location.hash = '#cartempty';
-}
-});
-});
-// Si el usuario navega con el hash
-window.addEventListener('hashchange', function () {
-if (location.hash === '#cart') {
-if (cartHasItems()) {
-showOnly(cartSection);
-} else {
-showOnly(cartEmptySection);
-location.hash = '#cartempty';
-}
-} else if (location.hash === '#cartempty') {
-showOnly(cartEmptySection);
-}
-});
+  const allSections = document.querySelectorAll('section');
+  const cartEmptySection = document.getElementById('cartempty');
+  const cartFullSection = document.getElementById('cartfull');
+
+  // Función que revisa si hay productos en el carrito
+  function cartHasItems() {
+    const cartBody = document.querySelector('.cartfull-body');
+    return !!(cartBody && cartBody.querySelector('.remove-btn'));
+  }
+
+  // Función que oculta todas las secciones y muestra solo una
+  function showOnly(sectionEl) {
+    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
+  }
+
+  // Botón/enlace de menú que apunta a CART
+  document.querySelectorAll('a[href="#cart"], button[data-target="#cart"]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+        location.hash = '#cartfull';
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    });
+  });
+
+  // Si el usuario navega directamente con el hash
+  window.addEventListener('hashchange', function () {
+    if (location.hash === '#cartfull') {
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    } else if (location.hash === '#cartempty') {
+      showOnly(cartEmptySection);
+    }
+  });
 });
 </script>
 
