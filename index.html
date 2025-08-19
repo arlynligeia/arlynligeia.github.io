@@ -1573,11 +1573,16 @@ document.addEventListener("DOMContentLoaded", () => {
     location.hash = "#store";
   });
 
-      // 👉 Botón BUY
-document.getElementById("btn-cartfull-buy").addEventListener("click", () => {
-  location.hash = "#shippinginformation"; // 👈 va al id de la sección shipping
-});
-});
+     // 👉 Botón BUY
+const buyBtn = document.getElementById("btn-cartfull-buy");
+if (buyBtn) {
+  buyBtn.textContent = "CHECKOUT"; // Cambia el nombre del botón
+  buyBtn.addEventListener("click", () => {
+    location.hash = "#shippinginformation";
+  });
+}
+
+}); // <- Cierre correcto de DOMContentLoaded
 </script>
 
 
