@@ -3322,6 +3322,20 @@ nav {
 .shippinginformation-buttons {
   display: flex;
 }
+.shippinginformation-col {
+  flex: 1; /* Cada columna ocupa mismo ancho */
+  display: flex;
+  justify-content: center;
+}
+.shippinginformation-col.left {
+  justify-content: flex-start; /* BACK a la izquierda */
+}
+.shippinginformation-col.center {
+  justify-content: center; /* CONTINUE centrado */
+}
+.shippinginformation-col.right {
+  justify-content: flex-end; /* PAY a la derecha */
+}
 .shippinginformation-buttons-row button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
