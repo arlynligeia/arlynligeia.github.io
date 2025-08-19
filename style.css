@@ -3104,6 +3104,23 @@ nav {
   padding-bottom: 0px;
   height: 0;
  }
+/* Lineas de prueba */
+.cartfull-table td {
+  border: 1px solid red;   /* línea temporal para medir celdas */
+}
+.cartfull-table th {
+  border: 1px solid blue;  /* línea temporal para medir headers */
+}
+.cartfull-table td + td {
+  padding-left: 10px;      /* espacio entre columnas, ajustable */
+}
+
+
+
+
+
+
+
 
 
 
