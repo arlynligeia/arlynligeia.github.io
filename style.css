@@ -2955,6 +2955,9 @@ nav {
 }
 
 /* ======================================
+   TODO LO QUE FORMA PARTE DEL CARRITO
+====================================== */
+/* ======================================
    CART EMPTY
 ====================================== */
 .cartempty-container {
@@ -3054,9 +3057,12 @@ nav {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;   /* importante: separar las celdas */
-  border-spacing: 10px 0;
   margin-top: 0;
   margin-bottom: 10px;  
+}
+/* solo agrega espacio entre columnas */
+.cartfull-table td + td {
+  padding-left: 10px;
 }
 /* Ancho de columnas */
 .cartfull-image-col {
@@ -3098,6 +3104,14 @@ nav {
   padding-bottom: 0px;
   height: 0;
  }
+.cartfull-table th {
+  border: 1px solid blue; /* línea temporal para los headers */
+  padding: 10px 0;
+}
+
+
+
+
 /* Imagen pequeña */
 .cartfull-product-image {
   max-width: 72px;
