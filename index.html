@@ -1170,6 +1170,36 @@ Your cart is empty
 <section id="shippinginformation" class="shippinginformation-section main-section" style="display: none;">
 <div class="shippinginformation-container">
 <h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
+<!-- Nombres y recuadros blancos -->
+<form action="https://formspree.io/f/xayrlvbb" method="POST">
+<label for="email" class="shippinginformation-label">EMAIL</label>
+<input type="email" id="email" name="email" class="shippinginformation-input" required>
+<label for="firstname" class="shippinginformation-label">FIRST NAME</label>
+<input type="text" id="firstname" name="firstname" class="shippinginformation-input" required>
+<label for="lastname" class="shippinginformation-label">LAST NAME</label>
+<input type="text" id="lastname" name="lastname" class="shippinginformation-input" required>
+<label for="idnumber" class="shippinginformation-label">ID NUMBER</label>
+<input type="text" id="idnumber" name="idnumber" class="shippinginformation-input" required>       
+<label for="country" class="shippinginformation-label">COUNTRY</label>
+<input type="text" id="country" name="country" class="shippinginformation-input" required>
+<label for="state" class="shippinginformation-label">STATE/PROVINCE/REGION</label>
+<input type="text" id="state" name="state" class="shippinginformation-input" required>
+<label for="city" class="shippinginformation-label">CITY</label>
+<input type="text" id="city" name="city" class="shippinginformation-input" required>
+<label for="zipcode" class="shippinginformation-label">ZIP CODE</label>
+<input type="text" id="zipcode" name="zipcode" class="shippinginformation-input" required>
+<label for="address" class="shippinginformation-label">ADDRESS</label>
+<input type="text" id="address" name="address" class="shippinginformation-input" required>
+<label for="mobilephone" class="shippinginformation-label">MOBILE PHONE</label>
+<input type="text" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
+
+<!-- Contenedor de botones debajo de todo -->
+<div class="shippinginformation-buttons">
+<button type="button" id="btn-shippinginformation-back" ...>BACK</button>
+<button type="button" id="btn-shippinginformation-continue" ...>CONTINUE SHOPPING</button>
+<button id="btn-shippinginformation-pay" disabled>PAY</button>
+</div>
+</form>  
 </section>
 <!-- FIN SHIPPING INFORMATION -->
 
