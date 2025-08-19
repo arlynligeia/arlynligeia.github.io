@@ -1146,9 +1146,9 @@ Your cart is empty
 <!-- FIN CART EMPTY -->
             
 <!--  SECCIÓN CART -->
-<section id="cartfull" class="cart-section main-section" style="display: none;">
+<section id="cartfull" class="cartfull-section main-section" style="display: none;">
 <div class="cartfull-container">
-<h2 class="cartfull-title"><a href="#cart">YOUR CART</a></h2>
+<h2 class="cartfull-title"><a href="#cartfull">YOUR CART</a></h2>
 <!-- Tabla -->
 <table class="cartfull-table">
 <thead>
@@ -1503,8 +1503,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cartBody.querySelectorAll("tr").forEach(row => {
       if (!row.querySelector(".remove-btn")) return;
 
-      const priceEl = row.querySelector(".cart-price-col .amount");
-      const qtyEl   = row.querySelector(".cart-qty-col .cart-white-cell");
+      const priceEl = row.querySelector(".cartfull-price-col .amount");
+      const qtyEl   = row.querySelector(".cartfull-qty-col .cartfull-white-cell");
       const shipEl  = row.getAttribute("data-shipping");
 
       const price = parseFloat(priceEl?.textContent || "0") || 0;
@@ -1518,20 +1518,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // actualizar fila Shipping
     const shippingRow = cartBody.querySelector("tr:nth-last-child(2)");
-    const shippingCell = shippingRow.querySelector(".cart-price-col .price-cell");
+    const shippingCell = shippingRow.querySelector(".cartfull-price-col .price-cell");
     shippingCell.innerHTML = `<span class="currency">$</span><span class="amount">${totalShipping.toFixed(2)}</span>`;
 
     // actualizar fila Total
     const totalRow = cartBody.querySelector("tr:last-child");
-    let totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+    let totalAmountEl = totalRow.querySelector(".cartfull-price-col .amount");
     if (!totalAmountEl) {
-      const priceCell = totalRow.querySelector(".cart-price-col .price-cell");
+      const priceCell = totalRow.querySelector(".cartfull-price-col .price-cell");
       priceCell.innerHTML = `<span class="currency">$</span><span class="amount">0.00</span>`;
-      totalAmountEl = totalRow.querySelector(".cart-price-col .amount");
+      totalAmountEl = totalRow.querySelector(".cartfull-price-col .amount");
     }
     totalAmountEl.textContent = (total + totalShipping).toFixed(2);
 
-    const totalQtyEl = totalRow.querySelector(".cart-qty-col .total-qty");
+    const totalQtyEl = totalRow.querySelector(".cartfull-qty-col .total-qty");
     if (totalQtyEl) totalQtyEl.textContent = totalQty;
   }
 
@@ -1546,26 +1546,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let existingRow = null;
       cartBody.querySelectorAll("tr").forEach(row => {
-        const nameCell = row.querySelector(".cart-productname-col span");
+        const nameCell = row.querySelector(".cartfull-productname-col span");
         if (nameCell && nameCell.textContent === name) {
           existingRow = row;
         }
       });
 
       if (existingRow) {
-        const qtyEl = existingRow.querySelector(".cart-qty-col span");
+        const qtyEl = existingRow.querySelector(".cartfull-qty-col span");
         qtyEl.textContent = parseInt(qtyEl.textContent) + 1;
       } else {
         const newRow = document.createElement("tr");
         newRow.setAttribute("data-shipping", shipping); // guardamos shipping unitario
         newRow.innerHTML = `
-          <td class="cart-image-col"><img src="${image}" alt="${name}" class="cart-product-image"></td>
-          <td class="cart-productname-col"><span class="cart-white-cell text-left">${name}</span></td>
-          <td class="cart-price-col"><span class="cart-white-cell price-cell"><span class="currency">$</span><span class="amount">${price}</span></span></td>
-          <td class="cart-qty-col"><span class="cart-white-cell text-center">1</span></td>
-          <td class="cart-remove-col"><button class="remove-btn">X</button></td>
+          <td class="cartfull-image-col"><img src="${image}" alt="${name}" class="cartfull-product-image"></td>
+          <td class="cartfull-productname-col"><span class="cartfull-white-cell text-left">${name}</span></td>
+          <td class="cartfull-price-col"><span class="cartfull-white-cell price-cell"><span class="currency">$</span><span class="amount">${price}</span></span></td>
+          <td class="cartfull-qty-col"><span class="cartfull-white-cell text-center">1</span></td>
+          <td class="cartfull-remove-col"><button class="remove-btn">X</button></td>
         `;
-        const divider2 = cartBody.querySelector(".cart-tabledivider2");
+        const divider2 = cartBody.querySelector(".cartfull-tabledivider2");
         cartBody.insertBefore(newRow, divider2);
       }
 
@@ -1604,64 +1604,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-cartfull-continue").addEventListener("click", () => {
     location.hash = "#store";
   });
-});
-</script>
-
-      
-
-<!-- SCRIPT PARA MOSTRAR CART EMPTY O CART FULL -->
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const allSections = document.querySelectorAll('section');
-  const cartEmptySection = document.getElementById('cartempty');
-  const cartFullSection = document.getElementById('cartfull');
-
-  // Función que revisa si hay productos en el carrito
-  function cartHasItems() {
-    const cartBody = document.querySelector('.cartfull-body');
-    // Considera que hay productos si hay alguna fila agregada antes del divider2
-    return !!(cartBody && cartBody.querySelector('.cart-item'));
-  }
-
-  // Ocultar todas las secciones y mostrar solo una
-  function showOnly(sectionEl) {
-    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
-  }
-
-  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
-  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    });
-  });
-
-  // Si el usuario entra con hash directo
-  function checkHash() {
-    if (location.hash === '#cart') {
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    } else if (location.hash === '#cartfull') {
-      showOnly(cartFullSection);
-    } else if (location.hash === '#cartempty') {
-      showOnly(cartEmptySection);
-    }
-  }
-
-  // Revisar al cargar y en cambios de hash
-  checkHash();
-  window.addEventListener('hashchange', checkHash);
 });
 </script>
 
