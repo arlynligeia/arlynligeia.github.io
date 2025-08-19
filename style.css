@@ -2954,112 +2954,6 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================
-   SECCIÓN INDEPENDIENTE NECKLACE 3
-====================================== */
-/* Contenedor */
-.necklace3-container {
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-/* Imagen */
-.necklace3-image {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-}
-.necklace3-image img {
-  width: 360px;
-  height: auto;
-  border-radius: 15px;
-  display: inline-block;
-}
-/* Texto del producto */
-.necklace3-subtitle {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-.necklace3-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-.necklace3-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  line-height: 1.6;
-  text-align: justify;
-}
-#necklace,
-#necklace2,
-#necklace3 {
-  display: none; /* Ocultos por defecto */
-}
-
 /* ======================================
    CART EMPTY
 ====================================== */
@@ -3112,33 +3006,10 @@ nav {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   CART
+   CART FULL
 ====================================== */
-.cart-container {
+.cartfull-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -3149,7 +3020,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.cart-container::before {
+.cartfull-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -3160,7 +3031,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
-.cart-title {
+.cartfull-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -3173,12 +3044,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.cart-title a {
+.cartfull-title a {
   color: white;
   text-decoration: none;
 }
 /* TABLA */
-.cart-table {
+.cartfull-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;   /* importante: separar las celdas */
@@ -3187,29 +3058,29 @@ nav {
   margin-bottom: 10px;  
 }
 /* Ancho de columnas */
-.cart-image-col {
+.cartfull-image-col {
   width: 10%;
 }
-.cart-productname-col {
+.cartfull-productname-col {
   width: 56%;
 }
-.cart-price-col {
+.cartfull-price-col {
   width: 16%;
 }
-.cart-qty-col {
+.cartfull-qty-col {
   width: 10%;
 }
-.cart-remove-col {
+.cartfull-remove-col {
   width: 8%;
 }
 /* Fila en general para que todo esté alineado verticalmente */
-.cart-table td {
+.cartfull-table td {
   vertical-align: middle;
   padding-top: 10px;
   padding-bottom: 10px; 
 }
 /* Subtítulos */
-.cart-table th {
+.cartfull-table th {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #39ff14;
@@ -3220,14 +3091,14 @@ nav {
   text-transform: uppercase;
  }
 /* Linea separadora */
-.cart-tabledivider td {
+.cartfull-tabledivider td {
   border-top: 3px solid #39ff14;
   padding-top: 0px;
   padding-bottom: 0px;
   height: 0;
  }
 /* Imagen pequeña */
-.cart-product-image {
+.cartfull-product-image {
   max-width: 72px;
   border-radius: 6px;
   display: block; 
@@ -3235,7 +3106,7 @@ nav {
   margin: 0 auto;
 }
 /* Recuadro blanco genérico */
-.cart-white-cell {
+.cartfull-white-cell {
   background-color: white;
   border-radius: 6px;
   display: block;
@@ -3308,7 +3179,7 @@ nav {
   transform: scale(1.05);
 }
 /* Linea separadora */
-.cart-tabledivider2 td {
+.cartfull-tabledivider2 td {
   border-top: 3px solid #39ff14;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -3321,20 +3192,20 @@ nav {
   color: white;
   text-align: right;
 }
-.cart-qty-col strong {
+.cartfull-qty-col strong {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   font-weight: bold;
   color: black;
 }
 /* Botones */
-.cart-buttons {
+.cartfull-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.cart-buttons button {
+.cartfull-buttons button {
   background-color:  #ff1493; /* fucsia */
   border-radius: 6px;
   padding-top: 10px;
@@ -3348,7 +3219,7 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.cart-buttons button:hover {
+.cartfull-buttons button:hover {
   transform: scale(1.05);
 }
 
