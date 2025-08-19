@@ -3312,13 +3312,17 @@ nav {
   min-height: 150px;
 }
 /* Botones */
-.shippinginformation-buttons {
+.shippinginformation-buttons-row {
   display: flex;
   justify-content: space-between;
-  margin-top: 0px;
+  align-items: center;
+  margin-top: 0px;  
   margin-bottom: 0px;
 }
-.shippinginformation-buttons button {
+.shippinginformation-buttons {
+  display: flex;
+}
+.shippinginformation-buttons-row button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   padding-top: 10px;
@@ -3332,9 +3336,15 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.shippinginformation-buttons button:hover {
+.shippinginformation-buttons-row button:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
 
 
 
