@@ -1077,7 +1077,7 @@ ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 3"
-data-price="1000000.00"
+data-price="50.00"
 data-image="assets/assets/Collar 1.jpg"
 data-shipping="5">
 ADD TO CART (PE)
@@ -1088,13 +1088,18 @@ ADD TO CART (PE)
 <div class="necklace3-buttons2">
 <button id="btn-necklace3-back" onclick="location.href='#jewelry-necklaces'">BACK</button>
 <button id="btn-necklace3-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-<button id="btn-necklace3-cart" disabled>GO TO CART</button>
-</div>
-</div>
-</section>
-</div>
-</section>
+<button id="btn-necklace3-cart" data-section="cart">GO TO CART</button>
 
+</div>
+</div>
+</section>
+</div>
+</section>
+<!-- FIN NECKLACE 3 -->
+<!-- FIN SECCIÓN STORE -->
+
+
+      
       
 <!-- SECCIÓN CART -->
 <!-- SECCIÓN CART EMPTY -->
@@ -1112,7 +1117,7 @@ Your cart is empty
 <section id="cartfull" class="cartfull-section main-section" style="display: none;">
 <div class="cartfull-container">
 <h2 class="cartfull-title"><a href="#cartfull">YOUR CART</a></h2>
-<!-- Tabla -->
+<!-- TABLA -->
 <table class="cartfull-table">
 <thead>
 <tr>
@@ -1124,12 +1129,12 @@ Your cart is empty
 </tr>
 </thead>
 <tbody class="cartfull-body">
-<!-- Línea debajo de subtítulos -->
+<!-- LÍNEA DEBAJO DE LOS SUBTITULOS -->
 <tr class="cartfull-tabledivider"><td colspan="5"></td></tr>     
 <!-- Aquí se agregarán dinámicamente los productos con JS -->
-<!-- Línea debajo de productos -->
+<!-- LÍNEA DEBAJO DE LOS PRODUCTOS -->
 <tr class="cartfull-tabledivider2"><td colspan="5"></td></tr>
-<!-- Fila Shipping -->
+<!-- Fila SHIPPING -->
 <tr>
 <td class="cartfull-image-col"></td>
 <td class="cartfull-productname-col text-right">Shipping</td>
@@ -1141,7 +1146,7 @@ Your cart is empty
 <td class="cartfull-qty-col"></td>
 <td class="cartfull-remove-col"></td>
 </tr>
-<!-- Fila Total -->
+<!-- Fila TOTAL -->
 <tr>
 <td class="cartfull-image-col"></td>
 <td class="cartfull-productname-col text-right">Total</td>
@@ -1157,7 +1162,7 @@ Your cart is empty
 </tr>
 </tbody>
 </table>
-<!-- Contenedor de botones debajo de la tabla -->
+<!-- BOTONES DEBAJO DE LA TABLA -->
 <div class="cartfull-buttons">
 <button id="btn-cartfull-back" onclick="history.back()">BACK</button>
 <button id="btn-cartfull-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
@@ -1171,7 +1176,7 @@ Your cart is empty
 <section id="shippinginformation" class="shippinginformation-section main-section" style="display: none;">
 <div class="shippinginformation-container">
 <h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
-<!-- Nombres y recuadros blancos -->
+<!-- NOMBRES Y RECUADROS -->
 <form action="https://formspree.io/f/xayrlvbb" method="POST">
 <label for="email" class="shippinginformation-label">EMAIL</label>
 <input type="email" id="email" name="email" class="shippinginformation-input" required>
@@ -1200,11 +1205,11 @@ Your cart is empty
 <div class="shippinginformation-buttons-row">
 <!-- Contenedor para BACK -->
 <div class="shippinginformation-col left">
-<button type="button" id="btn-shippinginformation-back" onclick="location.href='#cartfull'">BACK</button>
+<button id="btn-shippinginformation-back" onclick="location.href='#cartfull'">BACK</button>
 </div>
 <!-- Contenedor para CONTINUE SHOPPING -->
 <div class="shippinginformation-col center">
-<button type="button" id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
 </div>
 <!-- BOTON PARA ENVIAR EL FORMULARIO -->
 <div class="shippinginformation-col right">
