@@ -1160,7 +1160,7 @@ Your cart is empty
 <div class="cartfull-buttons">
 <button id="btn-cartfull-back" onclick="history.back()">BACK</button>
 <button id="btn-cartfull-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-<button id="btn-cartfull-pay">PAY</button>
+ <button id="btn-cartfull-buy">BUY</button> <!-- Cambiado -->
 </div>
 </div>
 </section>
@@ -1572,6 +1572,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("btn-cartfull-continue").addEventListener("click", () => {
     location.hash = "#store";
   });
+
+      // 👉 Botón BUY
+document.getElementById("btn-cartfull-buy").addEventListener("click", () => {
+  location.hash = "#shippinginformation"; // 👈 va al id de la sección shipping
+});
 });
 </script>
 
@@ -1635,6 +1640,8 @@ function cartHasItems() {
 </script>
 
 
+
+  
 
 
 
