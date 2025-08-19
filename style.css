@@ -3265,10 +3265,65 @@ nav {
   color: white;
   text-decoration: none;
 }
+/* Texto y recuadros */
+/* Labels */
+.shippinginformation-label {
+  display: block;
+  font-size: 1.25rem;
+  color: white;
+  margin-bottom: 8px;
+  text-align: left;
+  font-family: 'Orbitron', sans-serif;
+}
 
-
-
-
+/* Inputs */
+.shippinginformation-input,
+.shippinginformation-textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #fff; /* borde blanco para visibilidad */
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  background-color: #fff;
+  color: #000;
+}
+.shippinginformation-input {
+  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+.shippinginformation-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+/* Botones */
+.shippinginformation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.shippinginformation-buttons button {
+  background-color:  #ff1493; /* fucsia */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.shippinginformation-buttons button:hover {
+  transform: scale(1.05);
+}
 
 
 
