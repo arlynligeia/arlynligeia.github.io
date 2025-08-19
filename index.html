@@ -1279,7 +1279,7 @@ We may update this policy from time to time. Changes will be posted on this page
 
 
 
-<!-- Script para el carrusel --> 
+<!-- Script para el CARRUSEL PRINCIPAL--> 
 <script>
 const images = document.querySelectorAll('.carousel-image');
 let current = 0;
@@ -1291,15 +1291,8 @@ images[current].classList.add('active');
 setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
 
-
-
-
-
-
-
-
       
-<!-- Script para cambiar secciones con el menú -->
+<!-- Script para cambiar secciones con el MENÚ -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const menuLinks = document.querySelectorAll(".menu-link");
@@ -1327,9 +1320,8 @@ history.pushState(null, "", "#" + targetId);
 });
 </script>
 
-
       
-<!-- Script para los submenús como Support my Work -->
+<!-- Script para los SUBMENUS -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const submenuLinks = document.querySelectorAll(".menu-button");
@@ -1380,9 +1372,7 @@ history.pushState(null, "", newHash);
 });
 </script>
 
-
-
-
+      
 <!-- Script para el carrusel de STORE -->
 <script>
 const storeImages = document.querySelectorAll('.store-carousel-image');
@@ -1433,6 +1423,8 @@ e.preventDefault();
 fashionSelectionSection.style.display = "none";
 // Mostrar Jewelry
 jewelrySection.style.display = "block";
+// 👉 Cambiar el hash en la URL
+window.location.hash = "jewelry";
 // Scroll hacia Jewelry
 jewelrySection.scrollIntoView({ behavior: "smooth" });
 });
