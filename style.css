@@ -111,13 +111,6 @@ nav {
   transform: scaleX(1);
 }
 
-
-
-
-
-
-
-
 /* --------------------------------------
    CARRUSEL DE INICIO Y TEXTO LATERAL
 ----------------------------------------- */
@@ -212,90 +205,93 @@ nav {
 /* ======================================
    SOCIAL MEDIA CONTENT
 ====================================== */
-/* Contenedor */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .socialmediacontent-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
-/* Franja superior decorativa */
 .socialmediacontent-container::before {
   content: "";
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
   background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
-  height: 90px; /* grosor de la franja */
-  z-index: 1; /* franja encima del fondo */
+  height: 90px; 
 }
-/* Título */
 .socialmediacontent-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
   display: block;
+  margin-top: 0;
+  margin-bottom: 16px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0;
-  margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
 .socialmediacontent-title a {
-  color: white; /* mantiene el texto blanco */
-  text-decoration: none; /* quita el subrayado */
+  color: white;
+  text-decoration: none;
 }
-/* Tabla 1 */
+/* TABLA 1 */
 .socialmediacontent-table {
   width: 100%;
   table-layout: fixed;
+  border-collapse: separate;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
-
-/* Ancho de columnas */
+.socialmediacontent-table td + td,
+.socialmediacontent-table th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
 .socialmediacontent-account-col {
-  width: 20%; /* editable: columna de botones */
+  width: 20%;
 }
 .socialmediacontent-days-col {
-  width: 50%; /* editable: columna de días */
+  width: 50%;
 }
 .socialmediacontent-time-col {
-  width: 30%; /* editable: columna de hora */
+  width: 30%;
 }
-/* Fila en general para que todo esté alineado verticalmente */
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
 .socialmediacontent-table td {
-  vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
-  padding-top: 10px;
+  vertical-align: middle;
+  padding-top: 0px;
   padding-bottom: 10px; 
 }
-/* Subtítulos */
+/* SUBTÍTULOS */
 .socialmediacontent-table th {
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #ff1493; /* Fucsia */
-  padding-top: 0px;
-  padding-bottom: 0px;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
  }
-/* Linea separadora */
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
 .socialmediacontent-tabledivider td {
   border-top: 3px solid #ff1493; /* Fucsia */
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 5px; /* editable margen inferior */
+  padding-top: 0px;
+  padding-bottom: 5px;
+  height: 0; 
  }
-/* Columnas */
+/* COLUMNAS */
 /* ACCOUNT */
 .tiktok-button-wrapper,
 .youtube-button-wrapper {
@@ -305,87 +301,56 @@ nav {
 .youtube-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px;
-  display: block; /* ocupa todo el ancho disponible */ 
-  width: 100%; /* mismo ancho que recuadros */
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white !important;
   text-decoration: none;
-  margin: 0 auto; /* centra el botón */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-sizing: border-box; /* incluye el padding en el ancho */
-  border: none !important; /* Elimina el borde blanco que se ve */
+  box-sizing: border-box;
+  border: none !important;
+  cursor: pointer; 
   transition: transform 0.3s ease, background-color 0.3s ease;  
 }
 .tiktok-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 .youtube-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
 /* DAYS Y TIME */
-/* Recuadro blanco para DAYS */
-.socialmediacontent-white-cell-days {
+/* RECUADRO BLANC GENERICO */
+.socialmediacontent-white-cell {
   background-color: white;
   border-radius: 6px;
   display: block;
-  width: 95%;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+  width: 100%;
   margin: 0 auto;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
-  text-align: center;
-  box-sizing: border-box;
-}
-/* Recuadro blanco para TIME */
-.socialmediacontent-white-cell-time {
-  background-color: white;
-  border-radius: 6px;
-  display: block;  
-  width: 100%; /* puedes ajustar este ancho solo para TIME */
+  padding-right: 5px;  
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
   text-align: center;
   box-sizing: border-box;
 }
-/* Texto*/
-.label-days,
-.label-time {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
-  padding-left: 0px; /* editable margen izquierdo */
-  padding-right: 0px; /* espacio antes del recuadro */
-  line-height: 1.6;
+.text-center {
   text-align: center;
 }
-/* Subtítulo debajo de la tabla */
-/* Contenedor del subtítulo Live Stream */
+/* SUBTÍTULO DEBAJO DE LA TABLA LIVE STREAM */
 .socialmediacontent-livestream {
   display: flex;
   align-items: center;
-  gap: 10px; /* Espacio entre el punto y el texto */
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 0px; 
+  gap: 10px;
 }
-/* Punto rojo con parpadeo */
+/* PUNTO ROJO*/
 .socialmediacontent-red-dot {
   width: 18px;
   height: 18px;
@@ -394,61 +359,67 @@ nav {
   flex-shrink: 0;
   animation: blink 1s infinite;
 }
+/* SUBTÍTULO*/
 .socialmediacontent-subtitle {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
-  margin-top: 0;  /* Elimina el espacio adicional no deseado */
-  margin-bottom: 16px;
-  line-height: 1.2; /* Alinea mejor con el punto */
+  line-height: 1.2;
   text-align: left;
 }
-/* Tabla 2 */
+/* TABLA 2 */
 .socialmediacontent-table2 {
   width: 100%;
   table-layout: fixed;
+  border-collapse: separate;
   margin-top: 0;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
-/* Ancho de columnas */
+.socialmediacontent-table2 td + td,
+.socialmediacontent-table2 th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
 .socialmediacontent-account2-col {
-  width: 20%; /* editable: columna de botones */
+  width: 20%;
 }
 .socialmediacontent-days2-col {
-  width: 50%; /* editable: columna de días */
+  width: 50%;
 }
 .socialmediacontent-time2-col {
-  width: 30%; /* editable: columna de hora */
+  width: 30%;
 }
-/* Fila en general para que todo esté alineado verticalmente */
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
 .socialmediacontent-table2 td {
-  vertical-align: middle; /* Alinea botón y recuadros al centro de la fila */
-  padding-top: 10px;
+  vertical-align: middle;
+  padding-top: 0px;
   padding-bottom: 10px; 
 }
-/* Subtítulos */
+/* SUBTÍTULOS */
 .socialmediacontent-table2 th {
+  padding-top: 0px;
+  padding-bottom: 0px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #ff1493; /* Fucsia */
-  padding-top: 0px;
-  padding-bottom: 0px;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
  }
-/* Linea separadora */
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
 .socialmediacontent-tabledivider2 td {
   border-top: 3px solid #ff1493; /* Fucsia */
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 5px; /* editable margen inferior */
+  padding-top: 0px;
+  padding-bottom: 5px;
+  height: 0; 
  }
-/* Columnas */
+/* COLUMNAS */
 /* ACCOUNT */
-/* Columna de botones en columna */
 .tiktok2-button-wrapper {
   margin-top: 0px;
-  margin-bottom: 10px; /* espacio entre TikTok y Twitch */
+  margin-bottom: 10px;
   text-align: center
 }  
 .twitch-button-wrapper {
@@ -460,77 +431,79 @@ nav {
 .twitch-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px;
-  display: block; /* ocupa todo el ancho disponible */ 
-  width: 100%; /* mismo ancho que recuadros */
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white !important;
   text-decoration: none;
-  margin: 0 auto; /* centra el botón */
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-sizing: border-box; /* incluye el padding en el ancho */
-  border: none !important; /* Elimina el borde blanco que se ve */
+  box-sizing: border-box;
+  border: none !important;
+  cursor: pointer; 
   transition: transform 0.3s ease, background-color 0.3s ease;  
 }
 .tiktok2-button:hover {
-  transform: scale(1.05);
-  cursor: pointer;
+  transform: scale(1.05); 
 }
 .twitch-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
 }
-/* DAYS Y TIME */
-/* Recuadro blanco para DAYS */
-.socialmediacontent-white-cell-days2 {
+/* RECUADRO BLANC GENERICO */
+.socialmediacontent-white-cell2 {
   background-color: white;
   border-radius: 6px;
   display: block;
-  width: 95%;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+  width: 100%;
   margin: 0 auto;
   padding-top: 5px;
   padding-bottom: 5px;
   padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
-  text-align: center;
-  box-sizing: border-box;
-}
-/* Recuadro blanco para TIME */
-.socialmediacontent-white-cell-time2 {
-  background-color: white;
-  border-radius: 6px;
-  display: block;  
-  width: 100%; /* puedes ajustar este ancho solo para TIME */
+  padding-right: 5px;  
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
-  margin: 0 auto;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 5px;
-  padding-right: 5px;
-  line-height: 1.6;
   text-align: center;
   box-sizing: border-box;
 }
-/* Texto*/
-.label-days2,
-.label-time2 {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-  padding-top: 0px; /* editable margen superior */
-  padding-bottom: 0px; /* editable margen inferior */
-  padding-left: 0px; /* editable margen izquierdo */
-  padding-right: 0px; /* espacio antes del recuadro */
-  line-height: 1.6;
+.text-center {
   text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    TIKTOK HIGHLIGHTS
