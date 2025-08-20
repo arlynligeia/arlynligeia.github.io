@@ -2041,6 +2041,16 @@ nav {
 .contactforfans-button:hover {
   transform: scale(1.05);
 }
+/* Ocultar por defecto */
+.contactforwork-section,
+.contactforfans-section {
+  display: none;
+}
+/* Cuando está activa */
+.contact-section .active {
+  display: block;
+}
+
 
 /* ======================================
    SECCIÓN STORE
