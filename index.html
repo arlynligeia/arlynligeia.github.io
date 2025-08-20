@@ -1418,6 +1418,45 @@ history.pushState(null, "", newHash);
 </script>
 
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+const workSection = document.getElementById("contactforwork");
+const fansSection = document.getElementById("contactforfans");
+// 🔹 Por defecto mostrar "Contact for Work"
+workSection.classList.add("active");
+// Botones del menú
+const contactBtn = document.querySelector('a[data-section="contact"]');
+const workBtn = document.querySelector('a[href="#contactforwork"]');
+const fansBtn = document.querySelector('a[href="#contactforfans"]');
+// Contact (mamá) → muestra WORK
+contactBtn.addEventListener("click", function(e) {
+e.preventDefault();
+workSection.classList.add("active");
+fansSection.classList.remove("active");
+document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+});
+// Contact for Work
+workBtn.addEventListener("click", function(e) {
+e.preventDefault();
+workSection.classList.add("active");
+fansSection.classList.remove("active");
+document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+});
+// Contact for Fans
+fansBtn.addEventListener("click", function(e) {
+e.preventDefault();
+fansSection.classList.add("active");
+workSection.classList.remove("active");
+document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+});
+});
+</script>
+
+
+
+
+
       
 <!-- Script para el carrusel de STORE -->
 <script>
