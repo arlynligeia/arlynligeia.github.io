@@ -1605,10 +1605,12 @@ newRow.innerHTML = `
 `;
 const divider2 = cartBody.querySelector(".cartfull-tabledivider2");
 cartBody.insertBefore(newRow, divider2);
-}
+}     
 updateCartTotals();
-});
-});
+// 👉 AQUÍ VA LA NOTIFICACIÓN (DENTRO DEL CLICK)
+showNotification(`${name} was added to your cart ✅`);
+}); // <-- cierre del addEventListener("click")
+}); // <-- cierre del forEach de botones
 // BOTÓN RMV (REMUEVE LA FILA DEL CARRITO)
 cartBody.addEventListener("click", e => {
 if (e.target.classList.contains("remove-btn")) {
