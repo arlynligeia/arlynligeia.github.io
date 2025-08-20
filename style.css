@@ -852,6 +852,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas */
   gap: 20px;
+  grid-auto-rows: 250px; /* 👈 igual que physical products */
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -862,13 +863,12 @@ nav {
 /* COLUMNAS DE VIDEOS */
 .youtube-video-column {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 /* TAMAÑO DE VIDEO */
 .youtube-video-column iframe {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
   border-radius: 15px;
   border: none;
 }
@@ -879,6 +879,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columnas exactas */
   gap: 20px;
+  grid-auto-rows: 250px; /* 👈 igual que physical products */
   margin-top: 0px;
   margin-bottom: 0px;
   padding-top: 0px;
@@ -889,13 +890,12 @@ nav {
 /* COLUMNAS DE VIDEOS */
 .youtube2-video-column {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 /* TAMAÑO DE VIDEO */
 .youtube2-video-column iframe {
   display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
   border-radius: 15px;
   border: none;
 }
