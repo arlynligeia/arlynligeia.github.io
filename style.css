@@ -871,7 +871,33 @@ nav {
   border-radius: 15px;
   border: none;
 }
-
+/* CONTENEDOR DE VIDEOS */
+.youtubehighlight2-videos {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* COLUMNAS DE VIDEOS */
+.youtube2-video-column {
+  flex: 1;
+  min-width: calc(50% - 5px);
+  box-sizing: border-box;
+}
+/* TAMAÑO DE VIDEO */
+.youtube2-video-column iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border-radius: 15px;
+  border: none;
+}
 
 
 /* ======================================
