@@ -844,7 +844,6 @@ nav {
 .youtube-follow-button:hover {
   transform: scale(1.05);
 }
-
 /* CONTENEDOR DE VIDEOS */
 /* GRID DE DOS COLUMNAS */
 .youtubehighlight-videos {
@@ -853,7 +852,8 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   grid-auto-rows: 250px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 /* COLUMNAS DE VIDEOS */
 .youtube-video-column {
