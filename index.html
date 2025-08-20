@@ -1482,10 +1482,12 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 <!-- SCRIPT DEL CARRITO -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  const cartBody = document.querySelector(".cartfull-body");
-  const addToCartButtons = document.querySelectorAll(".addtocart-intl, .addtocart-pe");
-  const allSections = document.querySelectorAll("section");
-
+const cartBody = document.querySelector(".cartfull-body");
+const addToCartButtons = document.querySelectorAll(".addtocart-intl, .addtocart-pe");
+const allSections = document.querySelectorAll("section");
+      
+  let shippingMode = null; // <- guarda el tipo de carrito: "intl" o "pe"
+      
   // 👉 Mostrar solo la sección activa según el hash
   function showSectionFromHash() {
     const raw = location.hash.replace("#", "");
@@ -1563,6 +1565,20 @@ document.addEventListener("DOMContentLoaded", () => {
       const price = button.getAttribute("data-price");
       const image = button.getAttribute("data-image");
       const shipping = button.getAttribute("data-shipping");
+
+
+          // 🚨 detectar si el botón es intl o pe
+      const type = button.classList.contains("addtocart-intl") ? "intl" : "pe";
+
+      // 🚫 si ya hay productos y no coincide el tipo, bloquear
+      if (shippingMode && shippingMode !== type) {
+        alert("⚠️ No puedes mezclar productos con envío nacional e internacional en el mismo carrito.");
+        return;
+      }
+           // ✅ si es el primer producto, fijamos el tipo
+      if (!shippingMode) {
+        shippingMode = type;
+      }
 
       let existingRow = null;
       cartBody.querySelectorAll("tr").forEach(row => {
