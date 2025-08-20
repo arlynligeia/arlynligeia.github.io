@@ -1984,103 +1984,108 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
 /* ======================================
    CONTACT FOR FANS
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .contactforfans-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
-  width: 800px;
+  position: relative;
+  width: 550px;
   background-color: #ff1493; /* Fucsia */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .contactforfans-container::before {
   content: "";
   position: absolute;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
   top: 0;
   left: 0;
+  background-color: #e60073; /* fucsia intenso */ 
   width: 100%;
-  height: 90px; /* grosor de la franja */
-  background-color: #e60073; /* fucsia intenso */
-  border-radius: 20px 20px 0 0;
-  z-index: 1; /* franja encima del fondo */
+  height: 90px;   
 }
 .contactforfans-title {
   position: relative;
-  z-index: 2; /* título encima de la franja */
+  z-index: 2;
+  display: block; 
+  margin-top: 0px;
+  margin-bottom: 16px;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
   text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
 }
 .contactforfans-title a {
-  color: white;           /* mantiene el texto blanco */
-  text-decoration: none;  /* quita el subrayado */
+  color: white;
+  text-decoration: none;
 }
+/* TEXTOS Y RECUADROS */
+/* Labels */
 .contactforfans-label {
   display: block;
-  font-size: 1.25rem;
+  margin-top: 0; 
+  margin-bottom: 5px;
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 1.2rem;
   color: white;
-  margin-bottom: 8px;
-  text-align: left;
-  font-family: 'Orbitron', sans-serif;
+  text-align: left;  
 }
+/* Inputs */
 .contactforfans-input,
 .contactforfans-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: none;
+  background-color: #fff;
   border-radius: 6px;
+  border: 1px solid #fff; /* borde blanco para visibilidad */ 
+  width: 100%;
+  margin-top: 0;  
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px; 
+  box-sizing: border-box;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
+  color: black;
 }
 .contactforfans-input {
   height: 40px;
-}
-.contactforfans-input,
-.contactforfans-textarea {
-  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
   box-sizing: border-box;
 }
 .contactforfans-textarea {
   resize: vertical;
   min-height: 150px;
 }
+/* BOTÓN */
 .contactforfans-button {
   display: block;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 30px; 
   background-color: #9900CC; /* purpura neon */
-  color: white;
+  border-radius: 6px; 
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  color: white;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .contactforfans-button:hover {
   transform: scale(1.05);
-  cursor: pointer;
- }
+}
 
 /* ======================================
    SECCIÓN STORE
