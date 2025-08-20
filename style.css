@@ -859,8 +859,7 @@ nav {
 }
 /* COLUMNAS DE VIDEOS */
 .youtube-video-column {
-  flex: 1;
-  min-width: calc(50% - 5px);
+  flex: 1 1 calc((100% - 20px) / 2); /* ← clave: 2 columnas + gap */
   box-sizing: border-box;
 }
 /* TAMAÑO DE VIDEO */
@@ -886,8 +885,7 @@ nav {
 }
 /* COLUMNAS DE VIDEOS */
 .youtube2-video-column {
-  flex: 1;
-  min-width: calc(50% - 5px);
+  flex: 1 1 calc((100% - 20px) / 2); /* ← clave: 2 columnas + gap */
   box-sizing: border-box;
 }
 /* TAMAÑO DE VIDEO */
