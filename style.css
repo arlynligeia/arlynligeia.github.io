@@ -1940,6 +1940,140 @@ nav {
 }
 
 /* ======================================
+   DIRECT CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.directcontact-container {
+  position: relative;
+  width: 600px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.directcontact-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  border-radius: 20px 20px 0 0;
+  top: 0;
+  left: 0;
+  background-color: #8000A8; /* purpura intenso */ 
+  width: 100%;
+  height: 90px;   
+}
+.directcontact-title {
+  position: relative;
+  z-index: 2;
+  display: block; 
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.directcontact-title a {
+  color: white;
+  text-decoration: none;
+}
+/* TABLA */
+.directcontact-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.directcontact-table td + td,
+.directcontact-table th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
+.directcontact-topic-col {
+  width: 20%;
+}
+.directcontact-email-col {
+  width: 80%;
+}
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
+.directcontact-table td {
+  vertical-align: middle;
+  padding-top: 0px;
+  padding-bottom: 10px; 
+}
+/* SUBTÍTULOS */
+.directcontact-table th {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493; /* Fucsia */
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+ }
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
+.directcontact-tabledivider td {
+  border-top: 3px solid #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 5px;
+  height: 0; 
+ }
+/* COLUMNAS */
+/* TOPIC */
+.directcontact-button-wrapper {
+  text-align: center;
+}
+.directcontact-button {
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none !important;
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.directcontact-button:hover {
+  transform: scale(1.05);
+}
+/* EMAIL */
+/* RECUADRO BLANC GENERICO */
+.directcontact-white-cell {
+  background-color: white;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;  
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  text-align: center;
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+
+/* ======================================
    CONTACT FOR FANS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
