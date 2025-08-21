@@ -2188,13 +2188,15 @@ nav {
 }
 
 
+
+
 /* ======================================
    SECCIÓN STORE
 ====================================== */
 /* ======================================
    WELCOME TO MY STORE
 ====================================== */
-/* Contenedor general */
+/* CONTENEDOR */
 .store-carousel-container {
   position: relative;
   height: calc(100vh - 220px);
@@ -2203,16 +2205,17 @@ nav {
   align-items: center;
   margin-top: 30px;
 }
-/* Carrusel de bienvenida*/
+/* CARRUSEL DE BIENVENIDA*/
 .store-carousel {
   position: relative; 
   width: 95%;
   height: 100%;
+  background-color: #000000; 
   border: 2px solid white;
   border-radius: 20px;
   overflow: hidden;
 }
-/* Imágenes del carrusel */
+/* IMÁGENES DEL CARRUSEL */
 .store-carousel-image {
   position: absolute;
   width: 100%;
@@ -2224,7 +2227,7 @@ nav {
 .store-carousel-image.active {
   opacity: 1;
 }
-/* Texto fijo al centro */
+/* TEXTO DEL CARRUSEL */
 .store-carousel-text {
   position: absolute;
   z-index: 2;
@@ -2241,6 +2244,7 @@ nav {
 /* ======================================
    PHYSICAL PRODUCTS
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .physicalproducts-container {
   position: relative;
   width: 90%;
@@ -2280,7 +2284,7 @@ nav {
   color: white;
   text-decoration: none;
 } 
-/* GRID de 3 columnas */
+/* GRID DE 3 COLUMNAS*/
 .physicalproducts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2288,7 +2292,7 @@ nav {
   grid-auto-rows: 250px;
   margin: 0;
 }
-/* Tarjetas de productos */
+/* TARJETAS DE PRODUCTOS */
 .product-card {
   position: relative;
   overflow: hidden;
@@ -2448,10 +2452,13 @@ nav {
 }
 .shippingdetails-description {
   margin-top: 10px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;   
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
+  text-align: justify;  
 }
 .shippingdetails-description strong {
   font-weight: bold;
