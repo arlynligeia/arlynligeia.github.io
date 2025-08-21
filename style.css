@@ -2806,7 +2806,7 @@ nav {
   width: 100%;
   border-radius: 15px;
 }
-/* Contenedor de la info */
+/* CONTENEDOR DE LA INFORMACIÓN */
 .necklace1-info {
   display: flex;
   flex-direction: column;
@@ -2878,7 +2878,7 @@ nav {
 .necklace1-buttons button:hover {
   transform: scale(1.05);
 }
-/* Botón Share con color distinto */
+/* BOTÓN SHARE */
 .necklace1-buttons .share-button {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
@@ -2908,21 +2908,17 @@ nav {
 .necklace1-buttons2 button:hover {
   transform: scale(1.05);
 }
-/* Botón GO TO CART (fucsia) */
+/* Botón GO TO CART */
 #btn-necklace1-cart {
   background-color: #ff1493; /* fucsia */
 }
 
-
-
-
-
-
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE 2
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace2-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -2935,7 +2931,7 @@ nav {
 .necklace2-container::before {
   content: "";
   position: absolute;
-  z-index: 1; /* franja encima del fondo */
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -2960,7 +2956,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Grid de 2 columnas */
+/* GRID DE DOS COLUMNAS */
 .necklace2-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2972,13 +2968,13 @@ nav {
   width: 100%;
   border-radius: 15px;
 }
-/* Contenedor de la info */
+/* CONTENEDOR DE LA INFORMACIÓN */
 .necklace2-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-/* Nombre del producto */
+/* NOMBRE DEL PRODUCTO */
 .necklace2-subtitle {
   margin-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
@@ -2988,7 +2984,7 @@ nav {
   line-height: 1.6;
   font-weight: bold;  
 }
-/* Precio */
+/* PRECIO */
 .necklace2-price {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -2998,7 +2994,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* SHIPPING */
 .necklace2-shipping {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -3008,7 +3004,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* DESCRIPCIÓN DEL PRODUCTO */
 .necklace2-description {
   margin-top: 0px;
   margin-bottom: 0px; 
@@ -3019,14 +3015,14 @@ nav {
   line-height: 1.6;
   text-align: justify;
 }
-/* Botones */
+/* BOTONES */
 .necklace2-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .necklace2-buttons button {
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -3044,13 +3040,13 @@ nav {
 .necklace2-buttons button:hover {
   transform: scale(1.05);
 }
-/* Botón Share con color distinto */
+/* BOTÓN SHARE */
 .necklace2-buttons .share-button {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;  
 }
-/* Botones */
+/* BOTONES */
 .necklace2-buttons2 {
   display: flex;
   justify-content: space-between;
@@ -3058,7 +3054,7 @@ nav {
   margin-bottom: 0px;
 }
 .necklace2-buttons2 button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -3074,12 +3070,17 @@ nav {
 .necklace2-buttons2 button:hover {
   transform: scale(1.05);
 }
+/* Botón GO TO CART */
+#btn-necklace2-cart {
+  background-color: #ff1493; /* fucsia */
+}
 
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE 3
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace3-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -3117,7 +3118,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Grid de 2 columnas */
+/* GRID DE DOS COLUMNAS */
 .necklace3-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3129,13 +3130,13 @@ nav {
   width: 100%;
   border-radius: 15px;
 }
-/* Contenedor de la info */
+/* CONTENEDOR DE LA INFORMACIÓN */
 .necklace3-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-/* Nombre del producto */
+/* NOMBRE DEL PRODUCTO */
 .necklace3-subtitle {
   margin-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
@@ -3145,7 +3146,7 @@ nav {
   line-height: 1.6;
   font-weight: bold;  
 }
-/* Precio */
+/* PRECIO */
 .necklace3-price {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -3155,7 +3156,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* SHIPPING */
 .necklace3-shipping {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -3165,7 +3166,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* DESCRIPCIÓN DEL PRODUCTO */
 .necklace3-description {
   margin-top: 0px;
   margin-bottom: 0px; 
@@ -3176,14 +3177,14 @@ nav {
   line-height: 1.6;
   text-align: justify;
 }
-/* Botones */
+/* BOTONES */
 .necklace3-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .necklace3-buttons button {
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -3201,13 +3202,13 @@ nav {
 .necklace3-buttons button:hover {
   transform: scale(1.05);
 }
-/* Botón Share con color distinto */
+/* BOTÓN SHARE */
 .necklace3-buttons .share-button {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;  
 }
-/* Botones */
+/* BOTONES */
 .necklace3-buttons2 {
   display: flex;
   justify-content: space-between;
@@ -3215,7 +3216,7 @@ nav {
   margin-bottom: 0px;
 }
 .necklace3-buttons2 button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -3230,6 +3231,10 @@ nav {
 }
 .necklace3-buttons2 button:hover {
   transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-necklace3-cart {
+  background-color: #ff1493; /* fucsia */
 }
 
 /* ======================================
