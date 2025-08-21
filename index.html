@@ -1199,14 +1199,14 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 <button class="addtocart-intl"
 data-name="Necklace 2"
 data-price="50.00"
-data-image="assets/assets/Collar 1.jpg"
+data-image="assets/assets/Collar 2.jpg"
 data-shipping="50">
 ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 2"
 data-price="50.00"
-data-image="assets/assets/Collar 1.jpg"
+data-image="assets/assets/Collar 2.jpg"
 data-shipping="5">
 ADD TO CART (PE)
 </button>
@@ -1248,14 +1248,14 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 <button class="addtocart-intl"
 data-name="Necklace 3"
 data-price="50.00"
-data-image="assets/assets/Collar 1.jpg"
+data-image="assets/assets/Collar 3.jpg"
 data-shipping="50">
 ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 3"
 data-price="50.00"
-data-image="assets/assets/Collar 1.jpg"
+data-image="assets/assets/Collar 3.jpg"
 data-shipping="5">
 ADD TO CART (PE)
 </button>
@@ -1701,6 +1701,11 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
       
 <!-- SCRIPT DEL CARRITO -->
 <script>
+         const stock = {
+  "Necklace 1": 9,
+  "Necklace 2": 5,
+  "Necklace 3": 3
+};
 document.addEventListener("DOMContentLoaded", () => {
 const cartBody = document.querySelector(".cartfull-body");
 const addToCartButtons = document.querySelectorAll(".addtocart-intl, .addtocart-pe");
@@ -1794,6 +1799,25 @@ return;
 if (!shippingMode) {
 shippingMode = type;
 }
+
+
+
+      // --- 🚨 VALIDACIÓN DE STOCK ---
+    let currentQty = 0;
+    cartBody.querySelectorAll("tr").forEach(row => {
+      const nameCell = row.querySelector(".cartfull-productname-col span");
+      if (nameCell && nameCell.textContent === name) {
+        const qtyEl = row.querySelector(".cartfull-qty-col span");
+        currentQty = parseInt(qtyEl.textContent);
+      }
+    });
+
+    if (stock[name] !== undefined && currentQty >= stock[name]) {
+      showNotification(`⚠️ ${name} is out of stock`);
+      return; // no permite agregar más
+    }
+    // --- 🚨 FIN VALIDACIÓN DE STOCK ---
+      
 let existingRow = null;
 cartBody.querySelectorAll("tr").forEach(row => {
 const nameCell = row.querySelector(".cartfull-productname-col span");
