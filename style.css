@@ -3329,7 +3329,7 @@ nav {
 .cartfull-table th + th {
   border-left: 10px solid transparent;
 }
-/* Ancho de columnas */
+/* ANCHO DE COLUMNAS */
 .cartfull-image-col {
   width: 10%;
 }
@@ -3345,31 +3345,32 @@ nav {
 .cartfull-remove-col {
   width: 8%;
 }
-/* Fila en general para que todo esté alineado verticalmente */
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
 .cartfull-table td {
   vertical-align: middle;
-  padding-top: 10px;
+  padding-top: 0px;
   padding-bottom: 10px;
 }
 /* Subtítulos */
 .cartfull-table th {
+  padding-top: 0px;
+  padding-bottom: 0px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #39ff14;
-  padding-top: 0px;
-  padding-bottom: 0px;
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
 }
-/* Linea separadora */
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
 .cartfull-tabledivider td {
   border-top: 3px solid #39ff14;
   padding-top: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 5px;
   height: 0;
 }
-/* Imagen pequeña */
+/* COLUMNAS */
+/* IMAGEN */
 .cartfull-product-image {
   max-width: 72px;
   border-radius: 6px;
@@ -3377,7 +3378,7 @@ nav {
   height: auto;
   margin: 0;
 }
-/* Recuadro blanco genérico */
+/* RECUADRO BLANC GENERICO */
 .cartfull-white-cell {
   background-color: white;
   border-radius: 6px;
@@ -3394,7 +3395,7 @@ nav {
   color: black;
   box-sizing: border-box;
 }
-/* Alineaciones */
+/* ALINEACIONES */
 .text-left {
   text-align: left;
 }
@@ -3404,7 +3405,7 @@ nav {
 .text-center {
   text-align: center;
 }
-/* Recuadro de precio con $ fijo */
+/* RECUADRO CON PRECIO FIJO */
 .price-cell {
   background-color: white;
   border-radius: 6px;
@@ -3428,9 +3429,9 @@ nav {
 }
 .price-cell .amount {
   text-align: right;
-  flex-grow: 1; /* empuja el número hacia la derecha */
+  flex-grow: 1;
 }
-/* Botón RMV */
+/* BOTÓN REMOVER */
 .remove-btn {
   background-color: #39ff14;
   border-radius: 6px;
@@ -3438,8 +3439,8 @@ nav {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
@@ -3450,7 +3451,7 @@ nav {
 .remove-btn:hover {
   transform: scale(1.05);
 }
-/* Linea separadora */
+/* LÍNEA DEBAJO DE LOS PRODUCTOS*/
 .cartfull-tabledivider2 td {
   border-top: 3px solid #39ff14;
   padding-top: 0px;
@@ -3469,7 +3470,7 @@ nav {
   font-weight: bold;
   color: black;
 }
-/* Botones */
+/* BOTONES DEBAJO DE LA TABLA */
 .cartfull-buttons {
   display: flex;
   justify-content: space-between;
@@ -3477,12 +3478,12 @@ nav {
   margin-bottom: 0px;
 }
 .cartfull-buttons button {
-  background-color: #ff1493; /* fucsia */
+  background-color: #39ff14;
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white !important;
@@ -3493,6 +3494,10 @@ nav {
 .cartfull-buttons button:hover {
   transform: scale(1.05);
 }
+
+
+
+
 
 /* ======================================
    SHIPPING INFORMATION
