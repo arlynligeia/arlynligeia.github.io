@@ -2322,7 +2322,7 @@ nav {
 .shippingdetails-container {
   position: relative;
   width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #ff1493; /* Fucsia por defecto */ 
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px;
@@ -2337,7 +2337,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #00B8BA; /* Turquesa */
+  background-color: #e60073; /* fucsia intenso */
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
@@ -2395,14 +2395,14 @@ nav {
   padding-bottom: 0px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  color: #ff1493; /* Fucsia */
+  color: #00B8BA; /* Turquesa */
   line-height: 1.5;
   text-align: center;
   text-transform: uppercase;
  }
 /* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
 .shippingdetails-tabledivider td {
-  border-top: 3px solid #ff1493; /* Fucsia */
+  border-top: 3px solid #00B8BA; /* Turquesa */
   padding-top: 0px;
   padding-bottom: 5px;
   height: 0; 
@@ -2431,17 +2431,22 @@ nav {
 }
 /* CAJA DE NOTAS */
 .shippingdetails-notes {
-  background-color: #fff3cd; /* amarillo claro */
+  background-color: #9900CC; /* purpura neon */
   border: 2px solid #ffeeba;
-  border-radius: 8px;
-  padding: 15px 20px;
-  margin-top: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;   
 }
 .shippingdetails-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
-  color: #856404; /* marrón advertencia */
-  margin-bottom: 8px;
+  color: white;
 }
 .shippingdetails-description strong {
   font-weight: bold;
