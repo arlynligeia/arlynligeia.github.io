@@ -2238,7 +2238,8 @@ nav {
   font-size: 3rem;
   color: #39ff14;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  text-align: center; 
+  text-align: center;
+  white-space: nowrap;
 }
 
 /* ======================================
@@ -2470,6 +2471,7 @@ nav {
 /* ======================================
    FASHION SELECTION
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .fashionselection-container {
   position: relative;
   width: 800px;
@@ -2509,7 +2511,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* GRID de 2 columnas */
+/* GRID DE DOS COLUMNAS */
 .fashionselection-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -2545,11 +2547,10 @@ nav {
   white-space: nowrap;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-/* Efecto zoom al pasar el mouse */
 .fashionselection-card:hover img {
   transform: scale(1.1);
 }
-/* Botones */
+/* BOTONES */
 .fashionselection-buttons {
   display: flex;
   justify-content: space-between;
@@ -2557,7 +2558,7 @@ nav {
   margin-bottom: 0px;
 }
 .fashionselection-buttons button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2577,8 +2578,9 @@ nav {
 /* ======================================
    SECCIÓN JEWELRY
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .jewelry-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -2591,7 +2593,7 @@ nav {
 .jewelry-container::before {
   content: "";
   position: absolute;
-  z-index: 1; /* franja encima del fondo */
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -2620,6 +2622,7 @@ nav {
 /* ======================================
    NECKLACES
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .necklaces-container {
   position: relative;
   width: 800px;
@@ -2659,7 +2662,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* GRID de 3 columnas */
+/* GRID DE TRES COLUMNAS */
 .necklaces-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2667,20 +2670,20 @@ nav {
   margin-top: 0px;
   margin-bottom: 20px;
 }
-/* Imagen */
+/* IMAGEN */
 .necklaces-image {
   width: 100%;
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 1Opx;
 }
 .necklaces-image img {
   width: 100%;
   border-radius: 15px;
 }
-/* Texto */
+/* TEXTO */
 .necklaces-subtitle {
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
@@ -2698,14 +2701,14 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
- /* Botón */
+ /* BOTÓN VIEW*/
 .view-button-wrapper {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 .view-button {
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   display: inline-block;
   padding-top: 10px;
@@ -2723,7 +2726,7 @@ nav {
 .view-button:hover {
   transform: scale(1.05);
 }
-/* Botones */
+/* BOTONES */
 .necklaces-buttons {
   display: flex;
   justify-content: space-between;
@@ -2731,7 +2734,7 @@ nav {
   margin-bottom: 0px;
 }
 .necklaces-buttons button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2749,10 +2752,11 @@ nav {
 }
 
 /* ======================================
-   SECCIÓN INDEPENDIENTE NECKLACE
+   SECCIÓN INDEPENDIENTE NECKLACE 1
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace1-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
@@ -2790,7 +2794,7 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* Grid de 2 columnas */
+/* GRID DE DOS COLUMNAS */
 .necklace1-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2808,7 +2812,7 @@ nav {
   flex-direction: column;
   justify-content: center;
 }
-/* Nombre del producto */
+/* NOMBRE DEL PRODUCTO */
 .necklace1-subtitle {
   margin-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
@@ -2818,7 +2822,7 @@ nav {
   line-height: 1.6;
   font-weight: bold;  
 }
-/* Precio */
+/* PRECIO */
 .necklace1-price {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -2828,7 +2832,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* SHIPPING */
 .necklace1-shipping {
   margin-top: 0px;
   margin-bottom: 10px; 
@@ -2838,7 +2842,7 @@ nav {
   text-decoration: none; 
   line-height: 1.6;
 }
-/* Shipping */
+/* DESCRIPCIÓN DEL PRODUCTO */
 .necklace1-description {
   margin-top: 0px;
   margin-bottom: 0px; 
@@ -2849,14 +2853,14 @@ nav {
   line-height: 1.6;
   text-align: justify;
 }
-/* Botones */
+/* BOTONES */
 .necklace1-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .necklace1-buttons button {
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -2888,7 +2892,7 @@ nav {
   margin-bottom: 0px;
 }
 .necklace1-buttons2 button {
-  background-color:  #ff1493; /* fucsia */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -2904,6 +2908,12 @@ nav {
 .necklace1-buttons2 button:hover {
   transform: scale(1.05);
 }
+
+
+
+
+
+
 
 /* ======================================
    SECCIÓN INDEPENDIENTE NECKLACE 2
