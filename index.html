@@ -1811,7 +1811,7 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
      const available = stock[productName];
 
      // Busca la sección correspondiente (ej: necklace1, necklace2…)
-     const productSection = document.querySelector([id*="${productName.toLowerCase().replace(" ", "")}"]);
+    const productSection = document.querySelector(`[id*="${productName.toLowerCase().replace(" ", "")}"]`);
      if (!productSection) return;
 
      const buttons = productSection.querySelectorAll(button[data-name="${productName}"]);
