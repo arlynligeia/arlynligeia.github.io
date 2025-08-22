@@ -1845,31 +1845,7 @@ if (stock[name] !== undefined && currentQty >= stock[name]) {
 showNotification(`⚠️ ${name} is out of stock`);
 return; // no permite agregar más
 }
-// --- 🚨 FIN VALIDACIÓN DE STOCK ---
-
-      
-// --- 🚨 VALIDACIÓN DE STOCK ANTES DE AGREGAR ---
-if (stock[name] !== undefined && currentQty >= stock[name]) {
-  // Cambiar precio a "OUT OF STOCK"
-  const priceEl = button.closest("section").querySelector(".necklace1-price, .necklace2-price, .necklace3-price");
-  if (priceEl) {
-    priceEl.textContent = "OUT OF STOCK";
-    priceEl.classList.add("outofstock");
-  }
-
-  // Desactivar solo los botones "Add to Cart" (intl y pe)
-  const addButtons = button.closest("section").querySelectorAll(".addtocart-intl, .addtocart-pe");
-  addButtons.forEach(btn => {
-    btn.disabled = true;
-    btn.style.opacity = "0.5";
-  });
-
-  showNotification(`⚠️ ${name} is out of stock`);
-  return; // bloquea el clic
-}
-// --- 🚨 FIN VALIDACIÓN ---
-
-      
+// --- 🚨 FIN VALIDACIÓN DE STOCK ---      
 let existingRow = null;
 cartBody.querySelectorAll("tr").forEach(row => {
 const nameCell = row.querySelector(".cartfull-productname-col span");
@@ -1895,6 +1871,31 @@ const divider2 = cartBody.querySelector(".cartfull-tabledivider2");
 cartBody.insertBefore(newRow, divider2);
 }
 updateCartTotals();
+
+
+      
+// --- 🚨 REVISAR STOCK DESPUÉS DE AGREGAR AL CARRITO ---
+const stockQty = stock[name] !== undefined ? stock[name] : Infinity;
+
+if (currentQty + 1 >= stockQty) { // ya se alcanzó el stock máximo
+  // Cambiar precio a "OUT OF STOCK" en la sección correspondiente
+  const priceEl = button.closest("section").querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
+  if (priceEl) {
+    priceEl.textContent = "OUT OF STOCK";
+    priceEl.style.color = "#39FF14"; // verde neón sin brillo
+  }
+
+  // Desactivar botones ADD TO CART de esa sección
+  const addButtons = button.closest("section").querySelectorAll(".addtocart-intl, .addtocart-pe");
+  addButtons.forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = "0.5";
+  });
+}
+// --- 🚨 FIN REVISAR STOCK ---
+
+
+      
 // 👉 AQUÍ VA LA NOTIFICACIÓN (DENTRO DEL CLICK)
 showNotification(`${name} was added to your cart ✅`);
 }); // <-- cierre del addEventListener("click")
