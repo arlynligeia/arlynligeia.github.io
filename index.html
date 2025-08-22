@@ -1350,7 +1350,7 @@ Your cart is empty
 <div class="shippinginformation-container">
 <h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
 <!-- NOMBRES Y RECUADROS -->
-<form action="https://formspree.io/f/xrblnevd" method="POST">
+<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
 <label for="email" class="shippinginformation-label">EMAIL</label>
 <input type="email" id="email" name="email" class="shippinginformation-input" required>
 <label for="firstname" class="shippinginformation-label">FIRST NAME</label>
@@ -2013,11 +2013,13 @@ location.hash = "#shippinginformation";
 <!-- SCRIPT ENVIAR FORMULARIO A CORREO Y LLEVAR A PAYPAL -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-  // Obtener el botón PAY y el formulario
   const payButton = document.getElementById("btn-shippinginformation-pay");
   const shippingForm = document.getElementById("shippinginformation-form");
-  
-  // Habilitar el botón PAY cuando haya productos en el carrito
+  const paypalForm = document.getElementById("paypalForm");
+  const paypalAmountInput = document.getElementById("paypalAmount");
+  const shippingTotalInput = document.getElementById("shippingTotal");
+
+  // Habilitar botón PAY si hay productos
   function checkCart() {
     const totalAmountEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
     if (totalAmountEl && parseFloat(totalAmountEl.textContent) > 0) {
@@ -2029,28 +2031,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  checkCart(); // revisar al cargar la página
+  checkCart(); // revisar al cargar
 
-  // Manejar clic en PAY
   payButton.addEventListener("click", (e) => {
-    e.preventDefault(); // evitar submit inmediato
+    e.preventDefault();
+
+    // Actualizar campos ocultos con total
+    const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
+    paypalAmountInput.value = totalAmount;
+    shippingTotalInput.value = totalAmount;
 
     // 1️⃣ Enviar formulario a Formspree
     const formData = new FormData(shippingForm);
     fetch(shippingForm.action, {
       method: shippingForm.method,
       body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
+      headers: { 'Accept': 'application/json' }
     }).then(response => {
       if (response.ok) {
-        console.log("Formulario enviado correctamente a tu correo");
+        console.log("Formulario enviado correctamente");
 
-        // 2️⃣ Redirigir a PayPal con el monto del carrito
-        const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeiacp@gmail.com&amount=${totalAmount}&currency_code=USD`;
-        window.location.href = paypalUrl;
+        // 2️⃣ Enviar a PayPal
+        paypalForm.submit();
       } else {
         alert("Hubo un error al enviar el formulario.");
       }
@@ -2061,6 +2063,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
+
 
 
 
