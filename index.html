@@ -1392,15 +1392,15 @@ Your cart is empty
 <button type="button" id="btn-shippinginformation-pay" disabled>PAY</button>
 </div>
 </div>
-<!-- NUEVO FORMULARIO PARA PAYPAL (NO VISIBLE, SE USA SOLO EN JS) -->
-<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="TU_CORREO_PAYPAL">
-<input type="hidden" name="item_name" value="Pedido Tienda Online">
-<input type="hidden" name="amount" value="0" id="paypalAmount">
-<input type="hidden" name="currency_code" value="USD">
-</form>
-</div>
+ <!-- FORMULARIO PAYPAL -->
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="arlynligeiacp@gmail.com"> <!-- TU PAYPAL -->
+      <input type="hidden" name="item_name" value="Pedido Tienda Online">
+      <input type="hidden" name="amount" value="0" id="paypalAmount">
+      <input type="hidden" name="currency_code" value="USD">
+    </form>
+  </div>
 </section>
 <!-- FIN SECCIÓN SHIPPING INFORMATION -->
 <!-- FIN PARTE CART -->
@@ -2011,6 +2011,7 @@ location.hash = "#shippinginformation";
 
 
 <!-- SCRIPT ENVIAR FORMULARIO A CORREO Y LLEVAR A PAYPAL -->
+<!-- SCRIPT -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const payButton = document.getElementById("btn-shippinginformation-pay");
@@ -2051,7 +2052,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         console.log("Formulario enviado correctamente");
 
-        // 2️⃣ Enviar a PayPal
+        // 2️⃣ Redirigir a PayPal
         paypalForm.submit();
       } else {
         alert("Hubo un error al enviar el formulario.");
@@ -2063,7 +2064,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 </script>
-
 
 
 
