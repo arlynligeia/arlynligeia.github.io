@@ -1848,18 +1848,26 @@ return; // no permite agregar más
 // --- 🚨 FIN VALIDACIÓN DE STOCK ---
 
       
-// --- 🚨 CAMBIAR PRECIO A "OUT OF STOCK" ---
-const btnContainer = button.closest(".product-card"); // ajusta si usas otra clase
+// --- 🚨 VALIDACIÓN DE STOCK ANTES DE AGREGAR ---
 if (stock[name] !== undefined && currentQty >= stock[name]) {
-  const priceEl = btnContainer.querySelector(".price .amount");
+  // Cambiar precio a "OUT OF STOCK"
+  const priceEl = button.closest("section").querySelector(".necklace1-price, .necklace2-price, .necklace3-price");
   if (priceEl) {
     priceEl.textContent = "OUT OF STOCK";
-    priceEl.classList.add("outofstock"); // estilo CSS para marcarlo
+    priceEl.classList.add("outofstock");
   }
-  button.disabled = true; // desactiva el botón
-  button.style.opacity = "0.5"; // efecto visual
+
+  // Desactivar solo los botones "Add to Cart" (intl y pe)
+  const addButtons = button.closest("section").querySelectorAll(".addtocart-intl, .addtocart-pe");
+  addButtons.forEach(btn => {
+    btn.disabled = true;
+    btn.style.opacity = "0.5";
+  });
+
+  showNotification(`⚠️ ${name} is out of stock`);
+  return; // bloquea el clic
 }
-// --- 🚨 FIN CAMBIO PRECIO ---
+// --- 🚨 FIN VALIDACIÓN ---
 
       
 let existingRow = null;
