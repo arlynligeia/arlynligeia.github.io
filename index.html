@@ -1802,8 +1802,8 @@ function updateProductAvailability(productName, priceValue) {
   if (!productSection) return;
 
   const buttons = productSection.querySelectorAll(`button[data-name="${productName}"]`);
-  const outOfStockText = productSection.querySelector(".necklace1-outofstock");
-  const priceEl = productSection.querySelector(".necklace1-price");
+  const outOfStockText = productSection.querySelector(`.${productName.toLowerCase().replace(" ", "")}-outofstock`);
+const priceEl = productSection.querySelector(`.${productName.toLowerCase().replace(" ", "")}-price`);
 
   // contar cuántos de ese producto hay en carrito
   let currentQty = 0;
@@ -1821,17 +1821,23 @@ function updateProductAvailability(productName, priceValue) {
       btn.disabled = true;
       btn.style.opacity = "0.5";
     });
-    if (outOfStockText) outOfStockText.style.display = "block";
-    if (priceEl) priceEl.textContent = "OUT OF STOCK";
+   if (outOfStockText) outOfStockText.style.display = "block";
+if (priceEl) {
+  priceEl.textContent = "OUT OF STOCK";
+  priceEl.classList.add("outofstock"); // 👉 agrega clase para el estilo verde
+}
+
   } else {
     // 🟢 Con stock
     buttons.forEach(btn => {
       btn.disabled = false;
       btn.style.opacity = "1";
     });
-    if (outOfStockText) outOfStockText.style.display = "none";
-    if (priceEl) priceEl.textContent = `$${priceValue.toFixed(2)}`;
-  }
+   if (outOfStockText) outOfStockText.style.display = "none";
+if (priceEl) {
+  priceEl.textContent = `$${priceValue.toFixed(2)}`;
+  priceEl.classList.remove("outofstock"); // 👉 quita la clase para volver al blanco normal
+}
 }
 
       
