@@ -1462,7 +1462,7 @@ We may update this policy from time to time. Changes will be posted on this page
 
 
       
-<!-- Script para el CARRUSEL PRINCIPAL--> 
+<!-- SCRIP PARA EL CARRUSEL PRINCIPAL--> 
 <script>
 const images = document.querySelectorAll('.carousel-image');
 let current = 0;
@@ -1473,10 +1473,13 @@ images[current].classList.add('active');
 }
 setInterval(showNextImage, 3000); // Cambia cada 10 segundos
 </script>
+<!-- FIN DE SCRIP PARA EL CARRUSEL PRINCIPAL --> 
+
+      
 
 
       
-<!-- Script para cambiar secciones con el MENÚ -->
+<!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const menuLinks = document.querySelectorAll(".menu-link");
@@ -1503,10 +1506,13 @@ history.pushState(null, "", "#" + targetId);
 });
 });
 </script>
+<!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
+
+
 
 
       
-<!-- Script para los SUBMENUS -->
+<!-- SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const submenuLinks = document.querySelectorAll(".menu-button");
@@ -1556,9 +1562,12 @@ history.pushState(null, "", newHash);
 });
 });
 </script>
+<!-- FIN DE SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
 
 
 
+
+      
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 const workSection = document.getElementById("contactforwork");
@@ -1598,7 +1607,7 @@ document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 
 
       
-<!-- Script para el carrusel de STORE -->
+<!-- SCRIP PARA EL CARRUSEL DE STORE -->
 <script>
 const storeImages = document.querySelectorAll('.store-carousel-image');
 let storeCurrent = 0;
@@ -1609,10 +1618,13 @@ storeImages[storeCurrent].classList.add('active');
 }
 setInterval(showNextStoreImage, 3000); // Cambia cada 3 segundos
 </script>
+<!-- FIN DE SCRIP PARA EL CARRUSEL DE STORE -->
+
+
 
 
       
-<!-- Script para ir a la seccion FASHION SELECTION -->
+<!-- SCRIP PARA IR A LA SECCIÓN FASHION SELECTION -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 // Link de FASHION en Physical Products
@@ -1634,10 +1646,13 @@ fashionSelectionSection.scrollIntoView({ behavior: "smooth" });
 }
 });
 </script>
+<!-- FIN DE SCRIP PARA IR A LA SECCIÓN FASHION SELECTION -->
+
+
 
 
       
-<!-- Script para ir a la seccion JEWELRY -->
+<!-- SCRIP PARA IR A LA SECCIÓN JEWELRY -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 const jewelryLink = document.querySelector('#fashionselection .fashionselection-card[href="#jewelry"]');
@@ -1658,10 +1673,13 @@ jewelrySection.scrollIntoView({ behavior: "smooth" });
 }
 });
 </script>
+<!-- FIN DE SCRIP PARA IR A LA SECCIÓN JEWELRY -->
+
+
 
 
       
-<!-- Script para ir a la seccion del PRODUCTO -->      
+<!-- SCRIP PARA IR A LA SECCIÓN DE LOS PRODUCTOS DENTRO DE NECKLACES -->   
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const allSections = document.querySelectorAll("section");
@@ -1688,11 +1706,12 @@ productSection.scrollIntoView({ behavior: "smooth" });
 });
 });
 </script> 
-  
+<!-- FIN DE SCRIP PARA IR A LA SECCIÓN DE LOS PRODUCTOS DENTRO DE NECKLACES -->     
 
 
 
 
+      
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 const cartButton = document.querySelector(".cart-button");
@@ -1827,6 +1846,22 @@ showNotification(`⚠️ ${name} is out of stock`);
 return; // no permite agregar más
 }
 // --- 🚨 FIN VALIDACIÓN DE STOCK ---
+
+      
+// --- 🚨 CAMBIAR PRECIO A "OUT OF STOCK" ---
+const btnContainer = button.closest(".product-card"); // ajusta si usas otra clase
+if (stock[name] !== undefined && currentQty >= stock[name]) {
+  const priceEl = btnContainer.querySelector(".price .amount");
+  if (priceEl) {
+    priceEl.textContent = "OUT OF STOCK";
+    priceEl.classList.add("outofstock"); // estilo CSS para marcarlo
+  }
+  button.disabled = true; // desactiva el botón
+  button.style.opacity = "0.5"; // efecto visual
+}
+// --- 🚨 FIN CAMBIO PRECIO ---
+
+      
 let existingRow = null;
 cartBody.querySelectorAll("tr").forEach(row => {
 const nameCell = row.querySelector(".cartfull-productname-col span");
@@ -1901,6 +1936,12 @@ location.hash = "#shippinginformation";
 
 
 
+
+
+
+
+
+      
       
 <!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL-->
 <script>
