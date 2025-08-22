@@ -1802,8 +1802,8 @@ function updateProductAvailability(productName, priceValue) {
   if (!productSection) return;
 
   const buttons = productSection.querySelectorAll(`button[data-name="${productName}"]`);
-  const outOfStockText = productSection.querySelector(`.${productName.toLowerCase().replace(" ", "")}-outofstock`);
-const priceEl = productSection.querySelector(`.${productName.toLowerCase().replace(" ", "")}-price`);
+const outOfStockText = productSection.querySelector(".necklace1-outofstock");
+const priceEl = productSection.querySelector(".necklace1-price");
 
   // contar cuántos de ese producto hay en carrito
   let currentQty = 0;
