@@ -1143,6 +1143,10 @@ WELCOME TO MY STORE
 <p class="necklace1-description">
 This necklace is handcrafted with black glass beads, polyester velvet ribbon, and a zinc alloy charm. Each piece is woven and sewn by hand.
 </p>
+<!-- Texto de AGOTADO (inicialmente oculto) -->
+<p class="necklace1-outofstock" style="display:none; color:red; font-weight:bold;">
+OUT OF STOCK
+</p>
 </div>
 </div>
 <!-- Botones -->
@@ -1701,10 +1705,10 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
       
 <!-- SCRIPT DEL CARRITO -->
 <script>
-         const stock = {
-  "Necklace 1": 9,
-  "Necklace 2": 5,
-  "Necklace 3": 3
+const stock = {
+"Necklace 1": 9,
+"Necklace 2": 5,
+"Necklace 3": 3
 };
 document.addEventListener("DOMContentLoaded", () => {
 const cartBody = document.querySelector(".cartfull-body");
@@ -1780,6 +1784,49 @@ setTimeout(() => {
 notif.classList.remove("show");
 }, 3000);
 }
+
+// FUNCIÓN PARA MOSTRAR "OUT OF STOCK"
+function updateProductAvailability(productName, priceValue) {
+  const available = stock[productName];
+
+  // Busca la sección correspondiente (ej: necklace1, necklace2…)
+  const productSection = document.querySelector(`[id*="${productName.toLowerCase().replace(" ", "")}"]`);
+  if (!productSection) return;
+
+  const buttons = productSection.querySelectorAll(`button[data-name="${productName}"]`);
+  const outOfStockText = productSection.querySelector(".necklace1-outofstock");
+  const priceEl = productSection.querySelector(".necklace1-price");
+
+  // contar cuántos de ese producto hay en carrito
+  let currentQty = 0;
+  document.querySelectorAll(".cartfull-body tr").forEach(row => {
+    const nameCell = row.querySelector(".cartfull-productname-col span");
+    if (nameCell && nameCell.textContent === productName) {
+      const qtyEl = row.querySelector(".cartfull-qty-col span");
+      currentQty = parseInt(qtyEl.textContent);
+    }
+  });
+
+  if (currentQty >= available) {
+    // 🔴 Sin stock
+    buttons.forEach(btn => {
+      btn.disabled = true;
+      btn.style.opacity = "0.5";
+    });
+    if (outOfStockText) outOfStockText.style.display = "block";
+    if (priceEl) priceEl.textContent = "OUT OF STOCK";
+  } else {
+    // 🟢 Con stock
+    buttons.forEach(btn => {
+      btn.disabled = false;
+      btn.style.opacity = "1";
+    });
+    if (outOfStockText) outOfStockText.style.display = "none";
+    if (priceEl) priceEl.textContent = `$${priceValue.toFixed(2)}`;
+  }
+}
+
+      
 // ADD TO CART
 addToCartButtons.forEach(button => {
 button.addEventListener("click", e => {
@@ -1845,6 +1892,12 @@ cartBody.insertBefore(newRow, divider2);
 updateCartTotals();
 // 👉 AQUÍ VA LA NOTIFICACIÓN (DENTRO DEL CLICK)
 showNotification(`${name} was added to your cart ✅`);
+
+// ⬅⬅⬅ AQUI PEGAR EL BLOQUE DE DISPONIBILIDAD
+      updateProductAvailability("Necklace 1", 50.00);
+      updateProductAvailability("Necklace 2", 50.00);
+      updateProductAvailability("Necklace 3", 50.00);
+      
 }); // <-- cierre del addEventListener("click")
 }); // <-- cierre del forEach de botones
 // BOTÓN RMV (REMUEVE LA FILA DEL CARRITO)
@@ -1852,6 +1905,11 @@ cartBody.addEventListener("click", e => {
 if (e.target.classList.contains("remove-btn")) {
 e.target.closest("tr").remove();
 updateCartTotals();
+      // 🔄 Revisar stock otra vez al remover
+updateProductAvailability("Necklace 1", 50.00);
+updateProductAvailability("Necklace 2", 50.00);
+updateProductAvailability("Necklace 3", 50.00);
+
 }
 });
 // GUARDA LA SECCIÓN ANTERIOR DEL CARRITO
@@ -1883,6 +1941,11 @@ buyBtn.addEventListener("click", () => {
 location.hash = "#shippinginformation";
 });
 }
+        // 🚀 Revisar disponibilidad apenas carga la página
+    updateProductAvailability("Necklace 1", 50.00);
+    updateProductAvailability("Necklace 2", 50.00);
+    updateProductAvailability("Necklace 3", 50.00);
+
 }); // <- Cierre correcto de DOMContentLoaded
 </script>
 
