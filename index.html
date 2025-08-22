@@ -1350,7 +1350,7 @@ Your cart is empty
 <div class="shippinginformation-container">
 <h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
 <!-- NOMBRES Y RECUADROS -->
-<form action="https://formspree.io/f/xayrlvbb" method="POST">
+<form action="https://formspree.io/f/xrblnevd" method="POST">
 <label for="email" class="shippinginformation-label">EMAIL</label>
 <input type="email" id="email" name="email" class="shippinginformation-input" required>
 <label for="firstname" class="shippinginformation-label">FIRST NAME</label>
@@ -1373,6 +1373,8 @@ Your cart is empty
 <input type="text" id="apartment" name="apartment" class="shippinginformation-input" required>    
 <label for="mobilephone" class="shippinginformation-label">MOBILE PHONE</label>
 <input type="text" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
+<!-- NUEVO CAMPO OCULTO PARA TOTAL DEL CARRITO -->
+<input type="hidden" name="total" id="shippingTotal" value="0">
 </form>
 <!-- BOTONES FUERA DEL FORULARIO-->
 <div class="shippinginformation-buttons-row">
@@ -1385,11 +1387,19 @@ Your cart is empty
 <button id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
 </div>
 <!-- BOTON PARA ENVIAR EL FORMULARIO -->
+<!-- BOTÓN PAY -->
 <div class="shippinginformation-col right">
-<form action="https://formspree.io/f/xayrlvbb" method="POST">
-<button type="submit" id="btn-shippinginformation-pay" disabled>PAY</button>
-</form>
+<button type="button" id="btn-shippinginformation-pay" disabled>PAY</button>
 </div>
+</div>
+<!-- NUEVO FORMULARIO PARA PAYPAL (NO VISIBLE, SE USA SOLO EN JS) -->
+<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="TU_CORREO_PAYPAL">
+<input type="hidden" name="item_name" value="Pedido Tienda Online">
+<input type="hidden" name="amount" value="0" id="paypalAmount">
+<input type="hidden" name="currency_code" value="USD">
+</form>
 </div>
 </section>
 <!-- FIN SECCIÓN SHIPPING INFORMATION -->
@@ -1726,7 +1736,63 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 
 
 
+<!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL-->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const allSections = document.querySelectorAll('section');
+  const cartEmptySection = document.getElementById('cartempty');
+  const cartFullSection = document.getElementById('cartfull');
 
+ // Función que revisa si hay productos en el carrito
+function cartHasItems() {
+  const cartBody = document.querySelector('.cartfull-body');
+  if (!cartBody) return false;
+  // ✅ considera que hay productos si existe al menos un botón de eliminar (remove-btn)
+  return cartBody.querySelector('.remove-btn') !== null;
+}
+
+
+  // Ocultar todas las secciones y mostrar solo una
+  function showOnly(sectionEl) {
+    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
+  }
+
+  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
+  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
+    el.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+        location.hash = '#cartfull';
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    });
+  });
+
+  // Si el usuario entra con hash directo
+  function checkHash() {
+    if (location.hash === '#cart') {
+      if (cartHasItems()) {
+        showOnly(cartFullSection);
+        location.hash = '#cartfull';
+      } else {
+        showOnly(cartEmptySection);
+        location.hash = '#cartempty';
+      }
+    } else if (location.hash === '#cartfull') {
+      showOnly(cartFullSection);
+    } else if (location.hash === '#cartempty') {
+      showOnly(cartEmptySection);
+    }
+  }
+
+  // Revisar al cargar y en cambios de hash
+  checkHash();
+  window.addEventListener('hashchange', checkHash);
+});
+</script>
 
 
 
@@ -1938,77 +2004,73 @@ location.hash = "#shippinginformation";
 }
 }); // <- Cierre correcto de DOMContentLoaded
 </script>
+<!-- FIN SCRIPT DEL CARRITO -->
 
 
 
 
 
-
-
-
-
-
-
-
-      
-      
-<!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL-->
+<!-- SCRIPT ENVIAR FORMULARIO A CORREO Y LLEVAR A PAYPAL -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const allSections = document.querySelectorAll('section');
-  const cartEmptySection = document.getElementById('cartempty');
-  const cartFullSection = document.getElementById('cartfull');
-
- // Función que revisa si hay productos en el carrito
-function cartHasItems() {
-  const cartBody = document.querySelector('.cartfull-body');
-  if (!cartBody) return false;
-  // ✅ considera que hay productos si existe al menos un botón de eliminar (remove-btn)
-  return cartBody.querySelector('.remove-btn') !== null;
-}
-
-
-  // Ocultar todas las secciones y mostrar solo una
-  function showOnly(sectionEl) {
-    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
-  }
-
-  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
-  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    });
-  });
-
-  // Si el usuario entra con hash directo
-  function checkHash() {
-    if (location.hash === '#cart') {
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    } else if (location.hash === '#cartfull') {
-      showOnly(cartFullSection);
-    } else if (location.hash === '#cartempty') {
-      showOnly(cartEmptySection);
+document.addEventListener("DOMContentLoaded", () => {
+  // Obtener el botón PAY y el formulario
+  const payButton = document.getElementById("btn-shippinginformation-pay");
+  const shippingForm = document.getElementById("shippinginformation-form");
+  
+  // Habilitar el botón PAY cuando haya productos en el carrito
+  function checkCart() {
+    const totalAmountEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
+    if (totalAmountEl && parseFloat(totalAmountEl.textContent) > 0) {
+      payButton.disabled = false;
+      payButton.style.opacity = "1";
+    } else {
+      payButton.disabled = true;
+      payButton.style.opacity = "0.5";
     }
   }
 
-  // Revisar al cargar y en cambios de hash
-  checkHash();
-  window.addEventListener('hashchange', checkHash);
+  checkCart(); // revisar al cargar la página
+
+  // Manejar clic en PAY
+  payButton.addEventListener("click", (e) => {
+    e.preventDefault(); // evitar submit inmediato
+
+    // 1️⃣ Enviar formulario a Formspree
+    const formData = new FormData(shippingForm);
+    fetch(shippingForm.action, {
+      method: shippingForm.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        console.log("Formulario enviado correctamente a tu correo");
+
+        // 2️⃣ Redirigir a PayPal con el monto del carrito
+        const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeiacp@gmail.com&amount=${totalAmount}&currency_code=USD`;
+        window.location.href = paypalUrl;
+      } else {
+        alert("Hubo un error al enviar el formulario.");
+      }
+    }).catch(error => {
+      console.error("Error al enviar formulario:", error);
+      alert("Hubo un error al enviar el formulario.");
+    });
+  });
 });
 </script>
+
+
+
+
+
+
+
+      
+      
+
 
 
 
