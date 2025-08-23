@@ -1966,13 +1966,53 @@ if (currentQty + 1 >= stockQty) { // ya se alcanzó el stock máximo
 showNotification(`${name} was added to your cart ✅`);
 }); // <-- cierre del addEventListener("click")
 }); // <-- cierre del forEach de botones
-// BOTÓN RMV (REMUEVE LA FILA DEL CARRITO)
-cartBody.addEventListener("click", e => {
-if (e.target.classList.contains("remove-btn")) {
-e.target.closest("tr").remove();
-updateCartTotals();
-}
-});
+
+
+      
+ // BOTÓN RMV (ELIMINA DEL CARRITO Y REACTIVA STOCK SI CORRESPONDE)
+  cartBody.addEventListener("click", e => {
+    if (e.target.classList.contains("remove-btn")) {
+      const row = e.target.closest("tr");
+      const name = row.querySelector(".cartfull-productname-col span").textContent;
+      const price = row.querySelector(".cartfull-price-col .amount").textContent;
+      row.remove();
+      updateCartTotals();
+
+      // Recalcular cuántos quedan en el carrito de ese producto
+      let remainingQty = 0;
+      cartBody.querySelectorAll("tr").forEach(r => {
+        const nameCell = r.querySelector(".cartfull-productname-col span");
+        if (nameCell && nameCell.textContent === name) {
+          const qtyEl = r.querySelector(".cartfull-qty-col span");
+          remainingQty = parseInt(qtyEl.textContent);
+        }
+      });
+
+      // 🚨 Si ya no está agotado, reactivar botones y restaurar precio
+      if (remainingQty < stock[name]) {
+        const section = document.querySelector(`section:has(.${name.toLowerCase().replace(" ", "")}-price)`);
+        if (section) {
+          const priceEl = section.querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
+          if (priceEl) {
+            priceEl.textContent = `$${price}`;
+            priceEl.style.color = ""; // restaurar color normal
+          }
+          const addButtons = section.querySelectorAll(".addtocart-intl, .addtocart-pe");
+          addButtons.forEach(btn => {
+            btn.disabled = false;
+            btn.style.opacity = "1";
+          });
+        }
+      }
+    }
+  });
+
+
+
+
+
+
+      
 // GUARDA LA SECCIÓN ANTERIOR DEL CARRITO
 let previousHash = "#home";
 window.addEventListener("hashchange", () => {
