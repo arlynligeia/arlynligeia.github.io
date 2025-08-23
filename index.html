@@ -2091,15 +2091,12 @@ document.addEventListener("DOMContentLoaded", () => {
       payButton.style.opacity = "0.5";
     }
   }
-
-  checkCart(); // revisar al cargar
-
-      
+  checkCart();
 
   payButton.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // 1) Tomar y normalizar el total (solo números y punto)
+    // 1) Total normalizado
     const totalEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
     const rawTotal = (totalEl?.textContent || "0").replace(/[^\d.]/g, "");
     const totalAmount = (Number.parseFloat(rawTotal) || 0).toFixed(2);
@@ -2122,41 +2119,32 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartDetailsInput = document.getElementById("cartDetails");
     if (cartDetailsInput) cartDetailsInput.value = cartSummary;
 
-    // 4) Abrir una pestaña de inmediato para evitar bloqueo (target fijo)
+    // 4) Abrir ventana PayPal de inmediato
     const win = window.open("about:blank", "paypalWin");
     if (win) {
       paypalForm.setAttribute("target", "paypalWin");
     } else {
-      // Fallback si el navegador no permite abrir de inmediato
       paypalForm.removeAttribute("target");
     }
 
-    // 5) Enviar a Formspree (no bloquea el flujo a PayPal)
+    // 5) Enviar Formspree y luego PayPal
     const formData = new FormData(shippingForm);
     fetch(shippingForm.action, {
       method: shippingForm.method || "POST",
       body: formData,
       headers: { "Accept": "application/json" }
     })
-    .then(async resp => {
-      if (!resp.ok) {
-        const text = await resp.text().catch(() => "");
-        console.warn("Formspree respondió con error:", text);
-      } else {
-        console.log("Formulario enviado correctamente a Formspree");
-      }
+    .then(resp => {
+      if (!resp.ok) console.warn("Error Formspree");
+      else console.log("Enviado a Formspree");
     })
-    .catch(err => {
-      console.error("Error enviando a Formspree:", err);
-    })
+    .catch(err => console.error("Error:", err))
     .finally(() => {
-      // 6) Pase lo que pase → enviar a PayPal
       paypalForm.submit();
     });
   });
 });
 </script>
-
 
 
 
