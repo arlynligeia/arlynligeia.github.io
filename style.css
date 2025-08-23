@@ -111,18 +111,27 @@ nav {
   transform: scaleX(1);
 }
 
-/* --------------------------------------
+
+
+/* ======================================
+   SECCIÓN HOME
+====================================== */
+/* ======================================
    CARRUSEL DE INICIO Y TEXTO LATERAL
------------------------------------------ */
+====================================== */
 .carousel-container {
   position: relative;
   height: calc(100vh - 220px);
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;   /* Centramos todo horizontalmente */
   align-items: flex-start;
   margin-top: 30px;
   padding-right: 50px;
+  padding: 0 50px;           /* margen igual a ambos lados */
+  gap: 20px;                 /* espacio entre texto y carrusel */
 }
+
+
 .carousel {
   width: 60%;
   height: 100%;
@@ -144,9 +153,9 @@ nav {
   opacity: 1;
 }
 
-/* --------------------------------------
-   CONTENEDOR NUEVO A LA IZQUIERDA DEL CARRUSEL
------------------------------------------ */
+/* ======================================
+   CONTENEDOR A LA IZQUIERDA DEL CARRUSEL
+====================================== */
 .side-info-box {
   width: 400px;
   height: 100%;
@@ -156,7 +165,6 @@ nav {
   align-items: center;
   box-sizing: border-box;
   padding: 20px;
-  margin-right: 40px; /* Puedes ajustar el valor */
 }
 .side-info-text {
   text-align: center;
