@@ -177,14 +177,14 @@ nav {
   color: #39ff14;
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
   line-height: 1.2;
-  margin: 0 0 20px;
+  margin: 0;   /* ❌ quita márgenes extra */
   text-align: center;        /* 👈 solo el título centrado */
 }
 .side-info-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  margin-bottom: 16px;
+  margin: 0;   /* ❌ quita márgenes extra */
   line-height: 1.5;
   text-align: justify;
 }
@@ -193,7 +193,7 @@ nav {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin: 0;   /* ❌ quita márgenes extra */
 }
 .social-icons img {
   width: 32px;
