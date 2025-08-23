@@ -156,49 +156,56 @@ nav {
 ====================================== */
 .side-info-box {
   width: 500px;
-  height: 100%;
-  background-color: rgba(0, 255, 255, 0.3); /* Celeste transparente */
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
-  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .side-info-text {
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 100%;
 }
 .side-info-title {
+  margin: 0; 
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   color: #39ff14;
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
   line-height: 1.2;
-  margin: 0;
   text-align: center;
 }
 .side-info-description {
+  margin: 0;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  margin: 0;
   line-height: 1.5;
   text-align: justify;
 }
 
+
 /* Contenedor principal de los iconos */
 .social-icons-grid {
   display: flex;
-  flex-direction: column;   /* dos filas */
-  align-items: center;      /* centrar todo horizontalmente */
+  flex-direction: column;
+  align-items: center;
   background-color: #ff1493; /* fucsia sólido */
   border: 2px solid #ff00ff; /* borde neón */
   border-radius: 15px;
-  padding: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
   box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
   gap: 12px; /* espacio entre filas */
 }
@@ -214,9 +221,8 @@ nav {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .social-icons-grid img:hover {
   transform: scale(1.1);
   filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
