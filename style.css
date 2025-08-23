@@ -189,34 +189,38 @@ nav {
   text-align: justify;
 }
 
+/* Contenedor principal de los iconos */
 .social-icons-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* primera fila: 4 íconos */
-  grid-auto-rows: auto;
-  gap: 12px 16px; /* espacio entre íconos */
-  justify-items: center;
-  margin-top: 20px;
-}
- /* 🎨 Estilo contenedor fucsia neón */
-  background-color: #ff1493; /* Fucsia */
-  border: 2px solid #ff00ff;                 /* borde fucsia neón */
+  display: flex;
+  flex-direction: column;   /* dos filas */
+  align-items: center;      /* centrar todo horizontalmente */
+  background-color: #ff1493; /* fucsia sólido */
+  border: 2px solid #ff00ff; /* borde neón */
   border-radius: 15px;
   padding: 20px;
+  margin-top: 20px;
   box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
+  gap: 15px; /* espacio entre filas */
 }
 
-.social-icons-grid a:nth-child(n+5) {
-  grid-column: span 1; /* segunda fila íconos */
+/* Cada fila de iconos */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* espacio entre iconos */
 }
+
+/* Iconos individuales */
 .social-icons-grid img {
   width: 36px;
   height: 36px;
   object-fit: contain;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .social-icons-grid img:hover {
   transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
 }
 
 
