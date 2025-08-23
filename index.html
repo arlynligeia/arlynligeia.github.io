@@ -2073,73 +2073,74 @@ location.hash = "#shippinginformation";
 <!-- SCRIPT ENVIAR FORMULARIO A CORREO Y LLEVAR A PAYPAL -->
 <!-- SCRIPT -->
 <script>
- document.addEventListener("DOMContentLoaded", () => {
-   const payButton = document.getElementById("btn-shippinginformation-pay");
-   const shippingForm = document.getElementById("shippinginformation-form");
-   const paypalForm = document.getElementById("paypalForm");
-   const paypalAmountInput = document.getElementById("paypalAmount");
-   const shippingTotalInput = document.getElementById("shippingTotal");
+document.addEventListener("DOMContentLoaded", () => {
+  const payButton = document.getElementById("btn-shippinginformation-pay");
+  const shippingForm = document.getElementById("shippinginformation-form");
+  const paypalForm = document.getElementById("paypalForm");
+  const paypalAmountInput = document.getElementById("paypalAmount");
+  const shippingTotalInput = document.getElementById("shippingTotal");
 
-   // Habilitar botón PAY si hay productos
-   function checkCart() {
-     const totalAmountEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
-     if (totalAmountEl && parseFloat(totalAmountEl.textContent) > 0) {
-       payButton.disabled = false;
-       payButton.style.opacity = "1";
-     } else {
-       payButton.disabled = true;
-       payButton.style.opacity = "0.5";
-     }
-   }
+  // Habilitar botón PAY si hay productos
+  function checkCart() {
+    const totalAmountEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
+    if (totalAmountEl && parseFloat(totalAmountEl.textContent) > 0) {
+      payButton.disabled = false;
+      payButton.style.opacity = "1";
+    } else {
+      payButton.disabled = true;
+      payButton.style.opacity = "0.5";
+    }
+  }
 
-   checkCart(); // revisar al cargar
+  checkCart(); // revisar al cargar
 
-   payButton.addEventListener("click", (e) => {
-     e.preventDefault();
+  payButton.addEventListener("click", (e) => {
+    e.preventDefault();
 
-     // Actualizar campos ocultos con total
-     const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
-     paypalAmountInput.value = totalAmount;
-     shippingTotalInput.value = totalAmount;
+    // Actualizar campos ocultos con total
+    const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
+    paypalAmountInput.value = totalAmount;
+    shippingTotalInput.value = totalAmount;
 
-     // ✅ Construir detalle del carrito
-     let cartSummary = "";
-     document.querySelectorAll("#cartfull .cartfull-body tr").forEach(row => {
-       const name = row.querySelector(".cartfull-productname-col span")?.textContent;
-       const price = row.querySelector(".cartfull-price-col .amount")?.textContent;
-       const qty = row.querySelector(".cartfull-qty-col span")?.textContent;
-       if (name && price && qty) {
-         cartSummary += ${name} - Qty: ${qty} - $${price}\n;
-       }
-     });
-     cartSummary += \nTOTAL: $${totalAmount};
+    // ✅ Construir detalle del carrito
+    let cartSummary = "";
+    document.querySelectorAll("#cartfull .cartfull-body tr").forEach(row => {
+      const name = row.querySelector(".cartfull-productname-col span")?.textContent;
+      const price = row.querySelector(".cartfull-price-col .amount")?.textContent;
+      const qty = row.querySelector(".cartfull-qty-col span")?.textContent;
+      if (name && price && qty) {
+        cartSummary += `${name} - Qty: ${qty} - $${price}\n`;
+      }
+    });
+    cartSummary += `\nTOTAL: $${totalAmount}`;
 
-     // ✅ Guardar en el campo oculto
-     document.getElementById("cartDetails").value = cartSummary;
+    // ✅ Guardar en el campo oculto
+    document.getElementById("cartDetails").value = cartSummary;
 
-     // 1️⃣ Enviar formulario a Formspree
-     const formData = new FormData(shippingForm);
-     fetch(shippingForm.action, {
-       method: shippingForm.method,
-       body: formData,
-       headers: {
-         'Accept': 'application/json'
-       }
-     }).then(response => {
-       if (response.ok) {
-         console.log("Formulario enviado correctamente");
-         // 2️⃣ Redirigir a PayPal
-         paypalForm.submit();
-       } else {
-         alert("Hubo un error al enviar el formulario.");
-       }
-     }).catch(error => {
-       console.error("Error al enviar formulario:", error);
-       alert("Hubo un error al enviar el formulario.");
-     });
-   });
- });
+    // 1️⃣ Enviar formulario a Formspree
+    const formData = new FormData(shippingForm);
+    fetch(shippingForm.action, {
+      method: shippingForm.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        console.log("Formulario enviado correctamente");
+        // 2️⃣ Redirigir a PayPal
+        paypalForm.submit();
+      } else {
+        alert("Hubo un error al enviar el formulario.");
+      }
+    }).catch(error => {
+      console.error("Error al enviar formulario:", error);
+      alert("Hubo un error al enviar el formulario.");
+    });
+  });
+});
 </script>
+
 
 
 
