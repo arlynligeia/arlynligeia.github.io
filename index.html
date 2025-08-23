@@ -1836,9 +1836,7 @@ if (parentEl) parentEl.scrollIntoView({ behavior: "instant" });
 }
 }
 window.addEventListener("hashchange", showSectionFromHash);
-showSectionFromHash();
-
-      
+showSectionFromHash();      
 // ACTUALIZA TOTALES (PRECIO + SHIPPING)
 function updateCartTotals() {
 let total = 0;
@@ -1939,83 +1937,63 @@ newRow.innerHTML = `
 const divider2 = cartBody.querySelector(".cartfull-tabledivider2");
 cartBody.insertBefore(newRow, divider2);
 }
-updateCartTotals();
-
-
-      
+updateCartTotals();      
 // --- 🚨 REVISAR STOCK DESPUÉS DE AGREGAR AL CARRITO ---
 const stockQty = stock[name] !== undefined ? stock[name] : Infinity;
-
 if (currentQty + 1 >= stockQty) { // ya se alcanzó el stock máximo
-  // Cambiar precio a "OUT OF STOCK" en la sección correspondiente
-  const priceEl = button.closest("section").querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
-  if (priceEl) {
-    priceEl.textContent = "OUT OF STOCK";
-    priceEl.style.color = "#39FF14"; // verde neón sin brillo
-  }
-
-  // Desactivar botones ADD TO CART de esa sección
-  const addButtons = button.closest("section").querySelectorAll(".addtocart-intl, .addtocart-pe");
-  addButtons.forEach(btn => {
-    btn.disabled = true;
-    btn.style.opacity = "0.5";
-  });
+// CAMBIAR EL PRECIO A "OUT OF STOCK" EN LA SECCIÓN CORRESPONDIENTE
+const priceEl = button.closest("section").querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
+if (priceEl) {
+priceEl.textContent = "OUT OF STOCK";
+priceEl.style.color = "#39FF14"; // verde neón sin brillo
+}
+// DESACTIVAR BOTONES ADD TO CART DE LA SECCIÓN CORRESPONDIENTE
+const addButtons = button.closest("section").querySelectorAll(".addtocart-intl, .addtocart-pe");
+addButtons.forEach(btn => {
+btn.disabled = true;
+btn.style.opacity = "0.5";
+});
 }
 // --- 🚨 FIN REVISAR STOCK ---
-
-
-      
 // 👉 AQUÍ VA LA NOTIFICACIÓN (DENTRO DEL CLICK)
 showNotification(`${name} was added to your cart ✅`);
 }); // <-- cierre del addEventListener("click")
 }); // <-- cierre del forEach de botones
-
-
-      
- // BOTÓN RMV (ELIMINA DEL CARRITO Y REACTIVA STOCK SI CORRESPONDE)
-  cartBody.addEventListener("click", e => {
-    if (e.target.classList.contains("remove-btn")) {
-      const row = e.target.closest("tr");
-      const name = row.querySelector(".cartfull-productname-col span").textContent;
-      const price = row.querySelector(".cartfull-price-col .amount").textContent;
-      row.remove();
-      updateCartTotals();
-
-      // Recalcular cuántos quedan en el carrito de ese producto
-      let remainingQty = 0;
-      cartBody.querySelectorAll("tr").forEach(r => {
-        const nameCell = r.querySelector(".cartfull-productname-col span");
-        if (nameCell && nameCell.textContent === name) {
-          const qtyEl = r.querySelector(".cartfull-qty-col span");
-          remainingQty = parseInt(qtyEl.textContent);
-        }
-      });
-
-      // 🚨 Si ya no está agotado, reactivar botones y restaurar precio
-      if (remainingQty < stock[name]) {
-        const section = document.querySelector(`section:has(.${name.toLowerCase().replace(" ", "")}-price)`);
-        if (section) {
-          const priceEl = section.querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
-          if (priceEl) {
-            priceEl.textContent = `$${price}`;
-            priceEl.style.color = ""; // restaurar color normal
-          }
-          const addButtons = section.querySelectorAll(".addtocart-intl, .addtocart-pe");
-          addButtons.forEach(btn => {
-            btn.disabled = false;
-            btn.style.opacity = "1";
-          });
-        }
-      }
-    }
-  });
-
-
-
-
-
-
-      
+// BOTÓN RMV (ELIMINA DEL CARRITO Y REACTIVA STOCK SI CORRESPONDE)
+cartBody.addEventListener("click", e => {
+if (e.target.classList.contains("remove-btn")) {
+const row = e.target.closest("tr");
+const name = row.querySelector(".cartfull-productname-col span").textContent;
+const price = row.querySelector(".cartfull-price-col .amount").textContent;
+row.remove();
+updateCartTotals();
+// RECALCULAR CUANTOS PRODUCTOS QUEDAN EN EL CARRITO
+let remainingQty = 0;
+cartBody.querySelectorAll("tr").forEach(r => {
+const nameCell = r.querySelector(".cartfull-productname-col span");
+if (nameCell && nameCell.textContent === name) {
+const qtyEl = r.querySelector(".cartfull-qty-col span");
+remainingQty = parseInt(qtyEl.textContent);
+}
+});
+// 🚨 SI UN PRODUCTO YA NO ESTA AGOTADO, REACTIVAR BOTONES Y RESTAURAR PRECIO
+if (remainingQty < stock[name]) {
+const section = document.querySelector(`section:has(.${name.toLowerCase().replace(" ", "")}-price)`);
+if (section) {
+const priceEl = section.querySelector(`.${name.toLowerCase().replace(" ", "")}-price`);
+if (priceEl) {
+priceEl.textContent = `$${price}`;
+priceEl.style.color = ""; // restaurar color normal
+}
+const addButtons = section.querySelectorAll(".addtocart-intl, .addtocart-pe");
+addButtons.forEach(btn => {
+btn.disabled = false;
+btn.style.opacity = "1";
+});
+}
+}
+}
+});
 // GUARDA LA SECCIÓN ANTERIOR DEL CARRITO
 let previousHash = "#home";
 window.addEventListener("hashchange", () => {
