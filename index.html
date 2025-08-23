@@ -1373,8 +1373,12 @@ Your cart is empty
 <input type="text" id="apartment" name="apartment" class="shippinginformation-input" required>    
 <label for="mobilephone" class="shippinginformation-label">MOBILE PHONE</label>
 <input type="text" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
-<!-- NUEVO CAMPO OCULTO PARA TOTAL DEL CARRITO -->
+      
+<!-- CAMPO OCULTO PARA DETALLE DEL CARRITO -->
+<input type="hidden" name="cartDetails" id="cartDetails">
+<!-- CAMPO OCULTO PARA TOTAL DEL CARRITO -->
 <input type="hidden" name="total" id="shippingTotal" value="0">
+      
 </form>
 <!-- BOTONES FUERA DEL FORULARIO-->
 <div class="shippinginformation-buttons-row">
@@ -1578,6 +1582,7 @@ history.pushState(null, "", newHash);
 
 
       
+<!-- SCRIP PARA MOSTRAR CONTACT FOR WORK Y CONTACT FOR FANS SEGÚN CORRESPONDA-->      
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 const workSection = document.getElementById("contactforwork");
@@ -1611,7 +1616,7 @@ document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
 });
 });
 </script>
-
+<!-- FIN DE SCRIP PARA MOSTRAR CONTACT FOR WORK Y CONTACT FOR FANS SEGÚN CORRESPONDA--> 
 
 
 
@@ -1736,63 +1741,59 @@ yourCartSection.classList.toggle("active"); // Muestra/oculta
 
 
 
-<!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL-->
+<!-- SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  const allSections = document.querySelectorAll('section');
-  const cartEmptySection = document.getElementById('cartempty');
-  const cartFullSection = document.getElementById('cartfull');
-
- // Función que revisa si hay productos en el carrito
+const allSections = document.querySelectorAll('section');
+const cartEmptySection = document.getElementById('cartempty');
+const cartFullSection = document.getElementById('cartfull');
+// Función que revisa si hay productos en el carrito
 function cartHasItems() {
-  const cartBody = document.querySelector('.cartfull-body');
-  if (!cartBody) return false;
-  // ✅ considera que hay productos si existe al menos un botón de eliminar (remove-btn)
-  return cartBody.querySelector('.remove-btn') !== null;
+const cartBody = document.querySelector('.cartfull-body');
+if (!cartBody) return false;
+// ✅ considera que hay productos si existe al menos un botón de eliminar (remove-btn)
+return cartBody.querySelector('.remove-btn') !== null;
 }
-
-
-  // Ocultar todas las secciones y mostrar solo una
-  function showOnly(sectionEl) {
-    allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
-  }
-
-  // Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
-  document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
-    el.addEventListener('click', function (e) {
-      e.preventDefault();
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    });
-  });
-
-  // Si el usuario entra con hash directo
-  function checkHash() {
-    if (location.hash === '#cart') {
-      if (cartHasItems()) {
-        showOnly(cartFullSection);
-        location.hash = '#cartfull';
-      } else {
-        showOnly(cartEmptySection);
-        location.hash = '#cartempty';
-      }
-    } else if (location.hash === '#cartfull') {
-      showOnly(cartFullSection);
-    } else if (location.hash === '#cartempty') {
-      showOnly(cartEmptySection);
-    }
-  }
-
-  // Revisar al cargar y en cambios de hash
-  checkHash();
-  window.addEventListener('hashchange', checkHash);
+// Ocultar todas las secciones y mostrar solo una
+function showOnly(sectionEl) {
+allSections.forEach(s => s.style.display = (s === sectionEl ? 'block' : 'none'));
+}
+// Botón "Cart" (soporta tanto href="#cart" como data-section="cart")
+document.querySelectorAll('a[href="#cart"], [data-section="cart"]').forEach(el => {
+el.addEventListener('click', function (e) {
+e.preventDefault();
+if (cartHasItems()) {
+showOnly(cartFullSection);
+location.hash = '#cartfull';
+} else {
+showOnly(cartEmptySection);
+location.hash = '#cartempty';
+}
+});
+});
+// Si el usuario entra con hash directo
+function checkHash() {
+if (location.hash === '#cart') {
+if (cartHasItems()) {
+showOnly(cartFullSection);
+location.hash = '#cartfull';
+} else {
+showOnly(cartEmptySection);
+location.hash = '#cartempty';
+}
+} else if (location.hash === '#cartfull') {
+showOnly(cartFullSection);
+} else if (location.hash === '#cartempty') {
+showOnly(cartEmptySection);
+}
+}
+// Revisar al cargar y en cambios de hash
+checkHash();
+window.addEventListener('hashchange', checkHash);
 });
 </script>
+<!-- FIN DE SCRIPT PARA IR A LA SECCION CART EMPTY O CART FULL -->
+
 
 
 
@@ -2074,35 +2075,51 @@ document.addEventListener("DOMContentLoaded", () => {
 
   checkCart(); // revisar al cargar
 
-  payButton.addEventListener("click", (e) => {
-    e.preventDefault();
+      
+payButton.addEventListener("click", (e) => {
+  e.preventDefault();
 
-    // Actualizar campos ocultos con total
-    const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
-    paypalAmountInput.value = totalAmount;
-    shippingTotalInput.value = totalAmount;
+  // Actualizar campos ocultos con total
+  const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
+  paypalAmountInput.value = totalAmount;
+  shippingTotalInput.value = totalAmount;
 
-    // 1️⃣ Enviar formulario a Formspree
-    const formData = new FormData(shippingForm);
-    fetch(shippingForm.action, {
-      method: shippingForm.method,
-      body: formData,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        console.log("Formulario enviado correctamente");
+  // ✅ Construir detalle del carrito
+  let cartSummary = "";
+  document.querySelectorAll("#cartfull .cartfull-body tr").forEach(row => {
+    const name = row.querySelector(".cartfull-productname-col span")?.textContent;
+    const price = row.querySelector(".cartfull-price-col .amount")?.textContent;
+    const qty = row.querySelector(".cartfull-qty-col span")?.textContent;
+    if (name && price && qty) {
+      cartSummary += `${name} - Qty: ${qty} - $${price}\n`;
+    }
+  });
+  cartSummary += `\nTOTAL: $${totalAmount}`;
+  
+  // ✅ Guardar en el campo oculto
+  document.getElementById("cartDetails").value = cartSummary;
 
-        // 2️⃣ Redirigir a PayPal
-        paypalForm.submit();
-      } else {
-        alert("Hubo un error al enviar el formulario.");
-      }
-    }).catch(error => {
-      console.error("Error al enviar formulario:", error);
+  // 1️⃣ Enviar formulario a Formspree
+  const formData = new FormData(shippingForm);
+  fetch(shippingForm.action, {
+    method: shippingForm.method,
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      console.log("Formulario enviado correctamente");
+
+      // 2️⃣ Redirigir a PayPal
+      paypalForm.submit();
+    } else {
       alert("Hubo un error al enviar el formulario.");
-    });
+    }
+  }).catch(error => {
+    console.error("Error al enviar formulario:", error);
+    alert("Hubo un error al enviar el formulario.");
   });
 });
+
 </script>
 
 
