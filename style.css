@@ -160,7 +160,7 @@ nav {
   background-color: rgba(0, 255, 255, 0.3); /* Celeste transparente */
   display: flex;
   justify-content: center;
-  align-items: flex-start;   /* alinear arriba */
+  align-items: flex-start;
   box-sizing: border-box;
   padding: 20px;
 }
@@ -168,7 +168,7 @@ nav {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px;                 /* espacio entre elementos */
+  gap: 12px;
   height: 100%;
 }
 .side-info-title {
@@ -177,14 +177,14 @@ nav {
   color: #39ff14;
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
   line-height: 1.2;
-  margin: 0;   /* ❌ quita márgenes extra */
-  text-align: center;        /* 👈 solo el título centrado */
+  margin: 0;
+  text-align: center;
 }
 .side-info-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  margin: 0;   /* ❌ quita márgenes extra */
+  margin: 0;
   line-height: 1.5;
   text-align: justify;
 }
@@ -200,9 +200,8 @@ nav {
   padding: 20px;
   margin-top: 20px;
   box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
-  gap: 15px; /* espacio entre filas */
+  gap: 12px; /* espacio entre filas */
 }
-
 /* Cada fila de iconos */
 .social-row {
   display: flex;
