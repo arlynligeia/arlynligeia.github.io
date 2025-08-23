@@ -188,22 +188,37 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin: 0;   /* ❌ quita márgenes extra */
+
+.social-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* primera fila: 4 íconos */
+  grid-auto-rows: auto;
+  gap: 12px 16px; /* espacio entre íconos */
+  justify-items: center;
+  margin-top: 20px;
 }
-.social-icons img {
-  width: 32px;
-  height: 32px;
+ /* 🎨 Estilo contenedor fucsia neón */
+  background-color: #ff1493; /* Fucsia */
+  border: 2px solid #ff00ff;                 /* borde fucsia neón */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
+}
+
+.social-icons-grid a:nth-child(n+5) {
+  grid-column: span 1; /* segunda fila íconos */
+}
+.social-icons-grid img {
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   transition: transform 0.2s ease;
 }
-.social-icons img:hover {
+
+.social-icons-grid img:hover {
   transform: scale(1.1);
 }
+
 
 
 
