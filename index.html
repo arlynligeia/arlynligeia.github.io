@@ -2095,50 +2095,66 @@ document.addEventListener("DOMContentLoaded", () => {
   checkCart(); // revisar al cargar
 
       
-payButton.addEventListener("click", (e) => {
-  e.preventDefault();
 
-  // Actualizar campos ocultos con total
-  const totalAmount = document.querySelector("#cartfull .cartfull-price-col .amount:last-child").textContent;
-  paypalAmountInput.value = totalAmount;
-  shippingTotalInput.value = totalAmount;
+  payButton.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  // ✅ Construir detalle del carrito
-  let cartSummary = "";
-  document.querySelectorAll("#cartfull .cartfull-body tr").forEach(row => {
-    const name = row.querySelector(".cartfull-productname-col span")?.textContent;
-    const price = row.querySelector(".cartfull-price-col .amount")?.textContent;
-    const qty = row.querySelector(".cartfull-qty-col span")?.textContent;
-    if (name && price && qty) {
-      cartSummary += `${name} - Qty: ${qty} - $${price}\n`;
-    }
-  });
-  cartSummary += `\nTOTAL: $${totalAmount}`;
-  
-  // ✅ Guardar en el campo oculto
-  document.getElementById("cartDetails").value = cartSummary;
+    // 1) Tomar y normalizar el total (solo números y punto)
+    const totalEl = document.querySelector("#cartfull .cartfull-price-col .amount:last-child");
+    const rawTotal = (totalEl?.textContent || "0").replace(/[^\d.]/g, "");
+    const totalAmount = (Number.parseFloat(rawTotal) || 0).toFixed(2);
 
-  // 1️⃣ Enviar formulario a Formspree
-  const formData = new FormData(shippingForm);
-  fetch(shippingForm.action, {
-    method: shippingForm.method,
-    body: formData,
-    headers: { 'Accept': 'application/json' }
-  }).then(response => {
-    if (response.ok) {
-      console.log("Formulario enviado correctamente");
+    // 2) Pasar total a Formspree y PayPal
+    paypalAmountInput.value = totalAmount;
+    shippingTotalInput.value = totalAmount;
 
-      // 2️⃣ Redirigir a PayPal
-      paypalForm.submit();
+    // 3) Construir detalle del carrito
+    let cartSummary = "";
+    document.querySelectorAll("#cartfull .cartfull-body tr").forEach(row => {
+      const name = row.querySelector(".cartfull-productname-col span")?.textContent;
+      const price = row.querySelector(".cartfull-price-col .amount")?.textContent;
+      const qty = row.querySelector(".cartfull-qty-col span")?.textContent;
+      if (name && price && qty) {
+        cartSummary += `${name} - Qty: ${qty} - $${price}\n`;
+      }
+    });
+    cartSummary += `\nTOTAL: $${totalAmount}`;
+    const cartDetailsInput = document.getElementById("cartDetails");
+    if (cartDetailsInput) cartDetailsInput.value = cartSummary;
+
+    // 4) Abrir una pestaña de inmediato para evitar bloqueo (target fijo)
+    const win = window.open("about:blank", "paypalWin");
+    if (win) {
+      paypalForm.setAttribute("target", "paypalWin");
     } else {
-      alert("Hubo un error al enviar el formulario.");
+      // Fallback si el navegador no permite abrir de inmediato
+      paypalForm.removeAttribute("target");
     }
-  }).catch(error => {
-    console.error("Error al enviar formulario:", error);
-    alert("Hubo un error al enviar el formulario.");
+
+    // 5) Enviar a Formspree (no bloquea el flujo a PayPal)
+    const formData = new FormData(shippingForm);
+    fetch(shippingForm.action, {
+      method: shippingForm.method || "POST",
+      body: formData,
+      headers: { "Accept": "application/json" }
+    })
+    .then(async resp => {
+      if (!resp.ok) {
+        const text = await resp.text().catch(() => "");
+        console.warn("Formspree respondió con error:", text);
+      } else {
+        console.log("Formulario enviado correctamente a Formspree");
+      }
+    })
+    .catch(err => {
+      console.error("Error enviando a Formspree:", err);
+    })
+    .finally(() => {
+      // 6) Pase lo que pase → enviar a PayPal
+      paypalForm.submit();
+    });
   });
 });
-
 </script>
 
 
