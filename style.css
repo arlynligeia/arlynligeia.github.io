@@ -123,7 +123,7 @@ nav {
   position: relative;
   height: calc(100vh - 220px);
   display: flex;
-  justify-content: center;   /* Centramos todo horizontalmente */
+  justify-content: center;
   align-items: flex-start;
   margin-top: 30px;
   padding-right: 50px;
@@ -160,7 +160,7 @@ nav {
   background-color: rgba(0, 255, 255, 0.3); /* Celeste transparente */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;   /* alinear arriba */
   box-sizing: border-box;
   padding: 20px;
 }
@@ -168,7 +168,7 @@ nav {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 16px;                 /* espacio entre elementos */
   height: 100%;
 }
 .side-info-title {
@@ -178,6 +178,7 @@ nav {
   text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
   line-height: 1.2;
   margin: 0 0 20px;
+  text-align: center;        /* 👈 solo el título centrado */
 }
 .side-info-description {
   font-family: 'Share Tech Mono', monospace;
