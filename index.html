@@ -1872,23 +1872,6 @@ totalAmountEl.textContent = (total + totalShipping).toFixed(2);
 const totalQtyEl = totalRow.querySelector(".cartfull-qty-col .total-qty");
 if (totalQtyEl) totalQtyEl.textContent = totalQty;
 }
-
- // ✅ NUEVO: revisar si hay productos y habilitar botón PAY
-  const payButton = document.getElementById("btn-shippinginformation-pay");
-  if (payButton) {
-    if ((total + totalShipping) > 0) {
-      payButton.disabled = false;
-      payButton.style.opacity = "1";
-    } else {
-      payButton.disabled = true;
-      payButton.style.opacity = "0.5";
-    }
-  }
-}
-
-
-
-      
 // NOTIFICACIÓN GLOBAL AL AÑADIR UN PRODUCTO AL CARRITO
 function showNotification(message) {
 const notif = document.getElementById("cart-notification");
