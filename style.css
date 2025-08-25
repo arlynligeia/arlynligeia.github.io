@@ -1482,46 +1482,82 @@ nav {
 /* ======================================
    RESEARCH ARTICLE
 ====================================== */
+/* Contenedor */
 .researcharticle-container {
-  position: relative;
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
 }
 /* Franja superior decorativa */
 .researcharticle-container::before {
   content: "";
   position: absolute;
-  z-index: 1; 
+  z-index: 1; /* franja encima del fondo */  
   top: 0;
   left: 0;
   width: 100%;
   background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
-  height: 90px;
+  height: 90px; /* grosor de la franja */
+}
+/* Contenedor para título + botón en la misma fila */
+.researcharticle-header {
+  position: relative; /* para que el título y el botón estén encima de la franja */
+  z-index: 2; /* encima de la franja */
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between; /* título a la izquierda, botón a la derecha */
+  margin-bottom: 16px; /* separa del contenido siguiente */
 }
 /* Título */
 .researcharticle-title {
   position: relative;
-  z-index: 2;
+  z-index: 2; /* título encima de la franja */
   display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 2.5rem;
   color: white;
   text-decoration: none;
-  margin-top: 0px;
+  margin-top: 0px; 
   margin-bottom: 16px;
   line-height: 1.6;
   text-align: left;
 }
 .researcharticle-title a {
-  color: white; /* mantiene el texto blanco */
-  text-decoration: none; /* quita el subrayado */
+  color: white;
+  text-decoration: none;
+}
+/* Botón Follow */
+.orcid-button {
+  z-index: 2; /* encima de la franja */   
+  display: inline-block;
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-top: 0px; 
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+/* Hover del botón */
+.orcid-button:hover {
+  transform: scale(1.05);
 }
 /* Botones */
 .researcharticle1-button {
