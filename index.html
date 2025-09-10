@@ -1547,7 +1547,6 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
 <!-- SCRIP PARA EL MENÚ-->       
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  // Configuración de secciones principales
   const mainSections = [
     'home', 'biography', 'film', 'music', 'fashion', 'art',
     'science', 'bemypatron', 'contact', 'store', 'cart'
@@ -1556,21 +1555,28 @@ document.addEventListener("DOMContentLoaded", function () {
   const allSections = document.querySelectorAll("section");
   const menuLinks = document.querySelectorAll(".menu-link");
 
-  // Función para mostrar solo la sección seleccionada
+  // Función mejorada: usar opacidad y posición en vez de display
   function showSection(sectionId) {
     allSections.forEach(section => {
-      section.style.display = section.id === sectionId ? "block" : "none";
+      if (section.id === sectionId) {
+        section.style.opacity = "1";
+        section.style.visibility = "visible";
+        section.style.position = "relative";
+      } else {
+        section.style.opacity = "0";
+        section.style.visibility = "hidden";
+        section.style.position = "absolute";
+        section.style.top = "0";
+        section.style.left = "0";
+      }
     });
   }
 
-  // Función principal de navegación
   function navigateToSection(sectionId, scrollBehavior = 'smooth') {
     if (!mainSections.includes(sectionId)) return;
     
-    // 1. Mostrar solo la sección seleccionada
     showSection(sectionId);
     
-    // 2. Scroll al inicio de la sección
     setTimeout(() => {
       const targetSection = document.getElementById(sectionId);
       if (targetSection) {
@@ -1579,13 +1585,11 @@ document.addEventListener("DOMContentLoaded", function () {
           block: 'start'
         });
       }
-      
-      // 3. Actualizar URL
       window.location.hash = sectionId;
     }, 50);
   }
 
-  // Event listeners para menú principal
+  // El resto del script igual...
   menuLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -1594,7 +1598,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Event listeners para títulos de secciones (click múltiple)
+  // Event listeners para títulos
   allSections.forEach(section => {
     const title = section.querySelector('h1, h2, h3, h4, h5, h6');
     if (title) {
@@ -1605,22 +1609,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Manejo de recarga (F5)
   function handleInitialNavigation() {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
-      
       if (mainSections.includes(hash)) {
         navigateToSection(hash, 'auto');
         return;
       }
     }
-    
-    // Por defecto, mostrar home
     navigateToSection('home', 'auto');
   }
 
-  // Inicializar
   handleInitialNavigation();
   window.addEventListener("hashchange", handleInitialNavigation);
 });
