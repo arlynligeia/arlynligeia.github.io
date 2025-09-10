@@ -1565,83 +1565,74 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
       
 
 
+     
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
 // navigation.js - Manejo del menú principal (CORREGIDO)
 document.addEventListener("DOMContentLoaded", function () {
-    const menuLinks = document.querySelectorAll(".menu-link");
-    const sectionTitleLinks = document.querySelectorAll(".main-section a[href^='#']");
-    const sections = document.querySelectorAll(".main-section");
-    
-    // Función para mostrar una sección principal
-    function showMainSection(sectionId) {
-        // Ocultar todas las secciones
-        sections.forEach(section => {
-            section.style.display = "none";
-        });
-        
-        // Mostrar la sección seleccionada
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.style.display = "block";
-            
-            // Scroll to top of the section
-            setTimeout(() => {
-                targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-            }, 50);
-            
-            // Actualizar URL
-            history.pushState(null, "", "#" + sectionId);
-            return true;
-        }
-        return false;
-    }
-
-    // Configurar eventos para el menú principal
-    menuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.dataset.section;
-            showMainSection(targetId);
-        });
-    });
-
-    // Configurar eventos para los títulos de sección (NUEVO)
-    sectionTitleLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            
-            // Verificar que sea una sección principal
-            const targetSection = document.getElementById(targetId);
-            if (targetSection && targetSection.classList.contains("main-section")) {
-                showMainSection(targetId);
-            }
-        });
-    });
-
-    // Manejar carga inicial basada en hash
-    function handleInitialLoad() {
-        const hash = window.location.hash.substring(1);
-        
-        // Si el hash contiene guion, es una subsección (manejado por el otro script)
-        if (hash && hash.includes("-")) {
-            const mainSectionId = hash.split("-")[0];
-            showMainSection(mainSectionId);
-        } 
-        // Si es una sección principal
-        else if (hash && document.getElementById(hash) && document.getElementById(hash).classList.contains("main-section")) {
-            showMainSection(hash);
-        } 
-        // Default: mostrar home
-        else {
-            showMainSection("home");
-        }
-    }
-
-    // Configurar eventos
-    window.addEventListener("load", handleInitialLoad);
-    window.addEventListener("popstate", handleInitialLoad);
+const menuLinks = document.querySelectorAll(".menu-link");
+const sectionTitleLinks = document.querySelectorAll(".main-section a[href^='#']");
+const sections = document.querySelectorAll(".main-section");
+// Función para mostrar una sección principal
+function showMainSection(sectionId) {
+// Ocultar todas las secciones
+sections.forEach(section => {
+section.style.display = "none";
+});
+// Mostrar la sección seleccionada
+const targetSection = document.getElementById(sectionId);
+if (targetSection) {
+targetSection.style.display = "block";
+// Scroll to top of the section
+setTimeout(() => {
+targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+}, 50);
+// Actualizar URL
+history.pushState(null, "", "#" + sectionId);
+return true;
+}
+return false;
+}
+// Configurar eventos para el menú principal
+menuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+e.preventDefault();
+const targetId = this.dataset.section;
+showMainSection(targetId);
+});
+});
+// Configurar eventos para los títulos de sección (NUEVO)
+sectionTitleLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+e.preventDefault();
+const targetId = this.getAttribute("href").substring(1);
+// Verificar que sea una sección principal
+const targetSection = document.getElementById(targetId);
+if (targetSection && targetSection.classList.contains("main-section")) {
+showMainSection(targetId);
+}
+});
+});
+// Manejar carga inicial basada en hash
+function handleInitialLoad() {
+const hash = window.location.hash.substring(1);
+// Si el hash contiene guion, es una subsección (manejado por el otro script)
+if (hash && hash.includes("-")) {
+const mainSectionId = hash.split("-")[0];
+showMainSection(mainSectionId);
+} 
+// Si es una sección principal
+else if (hash && document.getElementById(hash) && document.getElementById(hash).classList.contains("main-section")) {
+showMainSection(hash);
+} 
+// Default: mostrar home
+else {
+showMainSection("home");
+}
+}
+// Configurar eventos
+window.addEventListener("load", handleInitialLoad);
+window.addEventListener("popstate", handleInitialLoad);
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
@@ -1660,10 +1651,9 @@ document.addEventListener("DOMContentLoaded", function () {
      
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 <script>
-// subnavigation.js - Manejo de submenús y elementos internos
+// subnavigation.js - Manejo de submenús y elementos internos (CORREGIDO)
 document.addEventListener("DOMContentLoaded", function () {
     const submenuLinks = document.querySelectorAll(".submenu-button");
-    const titleLinks = document.querySelectorAll("a[href^='#']");
     const sections = document.querySelectorAll(".main-section");
     
     // Mapeo de secciones y subsecciones
@@ -1680,7 +1670,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     // Función para hacer scroll a un elemento y actualizar URL
-    function scrollToElement(elementId, updateHash = true) {
+    function scrollToSubElement(elementId, updateHash = true) {
         const targetElement = document.getElementById(elementId);
         if (!targetElement) return false;
         
@@ -1698,12 +1688,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // Asegurar que la sección principal esté visible
         const mainSection = document.getElementById(mainSectionId);
         if (mainSection) {
+            // Ocultar todas las secciones y mostrar la principal
             sections.forEach(section => {
                 section.style.display = "none";
             });
             mainSection.style.display = "block";
             
-            // Scroll al elemento
+            // Scroll al elemento después de que la sección esté visible
             setTimeout(() => {
                 targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
                 
@@ -1725,18 +1716,30 @@ document.addEventListener("DOMContentLoaded", function () {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
-            scrollToElement(targetId, true);
+            scrollToSubElement(targetId, true);
         });
     });
 
-    // Configurar eventos para títulos y enlaces internos
-    titleLinks.forEach(link => {
-        if (link.getAttribute("href") !== "#") {
-            link.addEventListener("click", function (e) {
+    // Configurar eventos para títulos dentro de contenedores (NUEVO)
+    document.addEventListener("click", function (e) {
+        // Verificar si se hizo click en un enlace que apunta a una subsección
+        if (e.target.matches("a[href^='#']") && e.target.getAttribute("href") !== "#") {
+            const targetId = e.target.getAttribute("href").substring(1);
+            
+            // Verificar si es una subsección (no una sección principal)
+            let isSubsection = false;
+            for (const subsections of Object.values(subsectionGroups)) {
+                if (subsections.includes(targetId)) {
+                    isSubsection = true;
+                    break;
+                }
+            }
+            
+            // Si es una subsección, manejar el click
+            if (isSubsection) {
                 e.preventDefault();
-                const targetId = this.getAttribute("href").substring(1);
-                scrollToElement(targetId, true);
-            });
+                scrollToSubElement(targetId, true);
+            }
         }
     });
 
@@ -1750,21 +1753,24 @@ document.addEventListener("DOMContentLoaded", function () {
             const mainSectionId = parts[0];
             const subsectionId = parts.slice(1).join("-");
             
-            // Mostrar la sección principal primero
-            const mainSection = document.getElementById(mainSectionId);
-            if (mainSection) {
-                sections.forEach(section => {
-                    section.style.display = "none";
-                });
-                mainSection.style.display = "block";
-                
-                // Scroll a la subsección después de que la sección se muestre
-                setTimeout(() => {
-                    const subsectionElement = document.getElementById(subsectionId);
-                    if (subsectionElement) {
-                        subsectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }
-                }, 200);
+            // Verificar si la subsección existe
+            if (subsectionGroups[mainSectionId] && subsectionGroups[mainSectionId].includes(subsectionId)) {
+                // Mostrar la sección principal primero
+                const mainSection = document.getElementById(mainSectionId);
+                if (mainSection) {
+                    sections.forEach(section => {
+                        section.style.display = "none";
+                    });
+                    mainSection.style.display = "block";
+                    
+                    // Scroll a la subsección después de que la sección se muestre
+                    setTimeout(() => {
+                        const subsectionElement = document.getElementById(subsectionId);
+                        if (subsectionElement) {
+                            subsectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                    }, 200);
+                }
             }
         }
     }
@@ -1774,7 +1780,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("popstate", handleSubsectionLoad);
 });
 </script>
-<!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
+<!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 
 
 
