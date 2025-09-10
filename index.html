@@ -1552,42 +1552,29 @@ document.addEventListener("DOMContentLoaded", function () {
     'science', 'bemypatron', 'contact', 'store', 'cart'
   ];
 
-  // Seleccionar solo las secciones principales, no el footer
-  const allSections = document.querySelectorAll("section:not(footer)");
+  const allSections = document.querySelectorAll("section");
   const menuLinks = document.querySelectorAll(".menu-link");
-  const footer = document.querySelector("footer");
 
-  function showSection(sectionId) {
-    allSections.forEach(section => {
-      if (section.id === sectionId) {
-        section.style.display = "block";
-        // Asegurar que el footer se muestre
-        if (footer) footer.style.display = "block";
-      } else {
-        section.style.display = "none";
-      }
-    });
-  }
-
-  // El resto del script igual...
+  // FUNCIÓN CORREGIDA - Sin ocultar secciones
   function navigateToSection(sectionId, scrollBehavior = 'smooth') {
     if (!mainSections.includes(sectionId)) return;
     
-    showSection(sectionId);
+    const targetSection = document.getElementById(sectionId);
+    if (!targetSection) return;
     
+    // 1. PRIMERO hacer scroll a la sección
+    targetSection.scrollIntoView({ 
+      behavior: scrollBehavior,
+      block: 'start'
+    });
+    
+    // 2. LUEGO actualizar la URL
     setTimeout(() => {
-      const targetSection = document.getElementById(sectionId);
-      if (targetSection) {
-        targetSection.scrollIntoView({ 
-          behavior: scrollBehavior,
-          block: 'start'
-        });
-      }
       window.location.hash = sectionId;
-    }, 50);
+    }, 100);
   }
 
-  // Event listeners y resto del código igual...
+  // Event listeners para menú principal
   menuLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -1596,7 +1583,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // ... resto del script
+  // Event listeners para títulos de secciones
+  allSections.forEach(section => {
+    if (!mainSections.includes(section.id)) return;
+    
+    const title = section.querySelector('h1, h2, h3, h4, h5, h6');
+    if (title) {
+      title.style.cursor = 'pointer';
+      title.addEventListener("click", function () {
+        navigateToSection(section.id);
+      });
+    }
+  });
+
+  // Manejo de recarga (F5) - SIMPLIFICADO
+  function handleInitialNavigation() {
+    // Solo hacer scroll si hay hash válido
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      if (mainSections.includes(hash)) {
+        // Pequeño delay para asegurar que el DOM esté listo
+        setTimeout(() => {
+          navigateToSection(hash, 'auto');
+        }, 100);
+        return;
+      }
+    }
+    
+    // Scroll al inicio si no hay hash
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }
+
+  // Inicializar
+  setTimeout(handleInitialNavigation, 300);
+  window.addEventListener("hashchange", handleInitialNavigation);
 });
 </script>
 <!-- FIN SCRIP PARA EL MENÚ-->      
