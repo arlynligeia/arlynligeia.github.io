@@ -2111,10 +2111,15 @@ section.style.display = "none";
 const privacySection = document.getElementById("privacypolicy");
 if (privacySection) {
 privacySection.style.display = "block";
-privacySection.scrollIntoView({ behavior: "smooth" });
-}
-});
-}
+      
+  // Cambiar el hash en la URL
+        window.location.hash = "privacypolicy";
+
+        // Scroll suave hacia Privacy Policy
+        privacySection.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  }
 });
 </script>
 <!-- FIN SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER--> 
