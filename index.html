@@ -1568,71 +1568,195 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
      
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
-// navigation.js - Manejo del menú principal (CORREGIDO)
+// navigation-unified.js - Manejo completo de navegación
 document.addEventListener("DOMContentLoaded", function () {
-const menuLinks = document.querySelectorAll(".menu-link");
-const sectionTitleLinks = document.querySelectorAll(".main-section a[href^='#']");
-const sections = document.querySelectorAll(".main-section");
-// Función para mostrar una sección principal
-function showMainSection(sectionId) {
-// Ocultar todas las secciones
-sections.forEach(section => {
-section.style.display = "none";
-});
-// Mostrar la sección seleccionada
-const targetSection = document.getElementById(sectionId);
-if (targetSection) {
-targetSection.style.display = "block";
-// Scroll to top of the section
-setTimeout(() => {
-targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-}, 50);
-// Actualizar URL
-history.pushState(null, "", "#" + sectionId);
-return true;
-}
-return false;
-}
-// Configurar eventos para el menú principal
-menuLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-e.preventDefault();
-const targetId = this.dataset.section;
-showMainSection(targetId);
-});
-});
-// Configurar eventos para los títulos de sección (NUEVO)
-sectionTitleLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-e.preventDefault();
-const targetId = this.getAttribute("href").substring(1);
-// Verificar que sea una sección principal
-const targetSection = document.getElementById(targetId);
-if (targetSection && targetSection.classList.contains("main-section")) {
-showMainSection(targetId);
-}
-});
-});
-// Manejar carga inicial basada en hash
-function handleInitialLoad() {
-const hash = window.location.hash.substring(1);
-// Si el hash contiene guion, es una subsección (manejado por el otro script)
-if (hash && hash.includes("-")) {
-const mainSectionId = hash.split("-")[0];
-showMainSection(mainSectionId);
-} 
-// Si es una sección principal
-else if (hash && document.getElementById(hash) && document.getElementById(hash).classList.contains("main-section")) {
-showMainSection(hash);
-} 
-// Default: mostrar home
-else {
-showMainSection("home");
-}
-}
-// Configurar eventos
-window.addEventListener("load", handleInitialLoad);
-window.addEventListener("popstate", handleInitialLoad);
+    const menuLinks = document.querySelectorAll(".menu-link");
+    const submenuLinks = document.querySelectorAll(".submenu-button");
+    const allInternalLinks = document.querySelectorAll("a[href^='#']");
+    const sections = document.querySelectorAll(".main-section");
+    
+    // ==================== CONFIGURACIÓN DE SECCIONES ====================
+    // Mapeo completo de secciones y subsecciones
+    const subsectionGroups = {
+        home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
+        film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+        music: ["singles", "album", "videomusic", "lyrics"],
+        fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+        art: ["painting", "poetry"],
+        science: ["researcharticle", "researchproject"],
+        bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+        contact: ["contactforwork", "contactforfans"],
+        store: ["digitalproducts", "physicalproducts", "shippingdetails"]
+    };
+
+    // ==================== FUNCIONES PRINCIPALES ====================
+    
+    // FUNCIÓN PARA MOSTRAR SECCIÓN PRINCIPAL (MENÚ)
+    function showMainSection(sectionId, scrollToTop = true) {
+        // Ocultar todas las secciones
+        sections.forEach(section => {
+            section.style.display = "none";
+        });
+        
+        // Mostrar la sección seleccionada
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = "block";
+            
+            if (scrollToTop) {
+                // Scroll al inicio de la sección
+                setTimeout(() => {
+                    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 50);
+            }
+            
+            // Actualizar URL
+            history.pushState(null, "", "#" + sectionId);
+            return true;
+        }
+        return false;
+    }
+
+    // FUNCIÓN PARA SCROLL A SUBSECCIÓN (SUBMENÚ)
+    function scrollToSubElement(elementId, updateHash = true) {
+        const targetElement = document.getElementById(elementId);
+        if (!targetElement) return false;
+        
+        // Encontrar la sección principal
+        let mainSectionId = null;
+        for (const [section, subsections] of Object.entries(subsectionGroups)) {
+            if (subsections.includes(elementId)) {
+                mainSectionId = section;
+                break;
+            }
+        }
+        
+        if (!mainSectionId) return false;
+        
+        // Mostrar la sección principal (sin hacer scroll al top)
+        showMainSection(mainSectionId, false);
+        
+        // Scroll al elemento después de que la sección esté visible
+        setTimeout(() => {
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                
+                // Actualizar URL con formato seccion-subseccion
+                if (updateHash) {
+                    const newHash = "#" + mainSectionId + "-" + elementId;
+                    if (window.location.hash !== newHash) {
+                        history.pushState(null, "", newHash);
+                    }
+                }
+            }
+        }, 100);
+        
+        return true;
+    }
+
+    // ==================== MANEJADORES DE EVENTOS ====================
+    
+    // EVENTOS PARA MENÚ PRINCIPAL
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.dataset.section;
+            showMainSection(targetId, true);
+        });
+    });
+
+    // EVENTOS PARA SUBMENÚS
+    submenuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            scrollToSubElement(targetId, true);
+        });
+    });
+
+    // EVENTOS PARA TODOS LOS ENLACES INTERNOS (TÍTULOS)
+    allInternalLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            if (this.getAttribute("href") !== "#") {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                
+                // Verificar si es una sección principal
+                const targetElement = document.getElementById(targetId);
+                if (targetElement && targetElement.classList.contains("main-section")) {
+                    showMainSection(targetId, true);
+                } 
+                // Verificar si es una subsección
+                else {
+                    let isSubsection = false;
+                    for (const subsections of Object.values(subsectionGroups)) {
+                        if (subsections.includes(targetId)) {
+                            isSubsection = true;
+                            break;
+                        }
+                    }
+                    
+                    if (isSubsection) {
+                        scrollToSubElement(targetId, true);
+                    }
+                }
+            }
+        });
+    });
+
+    // ==================== MANEJO DE CARGA INICIAL ====================
+    
+    function handleInitialLoad() {
+        const hash = window.location.hash.substring(1);
+        
+        if (!hash) {
+            // Default: mostrar home
+            showMainSection("home", true);
+            return;
+        }
+        
+        // Verificar si es una subsección (contiene guion)
+        if (hash.includes("-")) {
+            const parts = hash.split("-");
+            const mainSectionId = parts[0];
+            const subsectionId = parts.slice(1).join("-");
+            
+            // Verificar si la subsección existe
+            if (subsectionGroups[mainSectionId] && subsectionGroups[mainSectionId].includes(subsectionId)) {
+                scrollToSubElement(subsectionId, false);
+            } else {
+                // Fallback: mostrar la sección principal
+                showMainSection(mainSectionId, true);
+            }
+        } 
+        // Si es una sección principal
+        else if (document.getElementById(hash) && document.getElementById(hash).classList.contains("main-section")) {
+            showMainSection(hash, true);
+        } 
+        // Si es una subsección sin guion (formato viejo)
+        else {
+            let isSubsection = false;
+            for (const subsections of Object.values(subsectionGroups)) {
+                if (subsections.includes(hash)) {
+                    isSubsection = true;
+                    break;
+                }
+            }
+            
+            if (isSubsection) {
+                scrollToSubElement(hash, false);
+            } else {
+                // Fallback: mostrar home
+                showMainSection("home", true);
+            }
+        }
+    }
+
+    // ==================== INICIALIZACIÓN ====================
+    
+    // Configurar eventos
+    window.addEventListener("load", handleInitialLoad);
+    window.addEventListener("popstate", handleInitialLoad);
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
@@ -1649,98 +1773,7 @@ window.addEventListener("popstate", handleInitialLoad);
 
 
      
-<!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
-<script>
-// subnavigation.js - SOLUCIÓN DEFINITIVA
-document.addEventListener("DOMContentLoaded", function () {
-    const submenuLinks = document.querySelectorAll(".submenu-button");
-    
-    // SOLO manejar los botones de submenú, NO los títulos
-    submenuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            
-            // Mapeo de secciones
-            const subsectionGroups = {
-                home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
-                film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-                music: ["singles", "album", "videomusic", "lyrics"],
-                fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
-                art: ["painting", "poetry"],
-                science: ["researcharticle", "researchproject"],
-                bemypatron: ["supportmywork", "supportmystudies", "gifts"],
-                contact: ["contactforwork", "contactforfans"],
-                store: ["digitalproducts", "physicalproducts", "shippingdetails"]
-            };
-            
-            // Encontrar la sección principal
-            let mainSectionId = null;
-            for (const [section, subsections] of Object.entries(subsectionGroups)) {
-                if (subsections.includes(targetId)) {
-                    mainSectionId = section;
-                    break;
-                }
-            }
-            
-            if (!mainSectionId) return;
-            
-            // Activar el menú principal
-            const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
-            if (mainMenuLink) {
-                // Simular click en el menú principal
-                mainMenuLink.click();
-                
-                // Esperar a que la transición termine
-                setTimeout(() => {
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ 
-                            behavior: "smooth", 
-                            block: "start" 
-                        });
-                        
-                        // Actualizar URL
-                        history.pushState(null, "", "#" + mainSectionId + "-" + targetId);
-                    }
-                }, 400); // Tiempo suficiente para que el otro script termine
-            }
-        });
-    });
 
-    // Manejar carga inicial para subsecciones
-    function handleSubsectionLoad() {
-        const hash = window.location.hash.substring(1);
-        
-        if (hash && hash.includes("-")) {
-            const [mainSectionId, subsectionId] = hash.split("-");
-            
-            const subsectionGroups = {
-                home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
-                // ... (el mismo mapeo de arriba)
-            };
-            
-            if (subsectionGroups[mainSectionId]?.includes(subsectionId)) {
-                const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
-                if (mainMenuLink) {
-                    mainMenuLink.click();
-                    
-                    setTimeout(() => {
-                        const element = document.getElementById(subsectionId);
-                        if (element) {
-                            element.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                    }, 400);
-                }
-            }
-        }
-    }
-
-    window.addEventListener("load", handleSubsectionLoad);
-    window.addEventListener("popstate", handleSubsectionLoad);
-});
-</script>
-<!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 
 
 
@@ -2196,8 +2229,6 @@ location.hash = "#shippinginformation";
 <!-- FIN SCRIPT DEL CARRITO -->
 
 
-<script src="js/navigation.js"></script>
-<script src="js/subnavigation.js"></script>
 
 
       
