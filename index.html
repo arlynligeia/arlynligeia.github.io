@@ -1573,15 +1573,17 @@ location.hash = "#" + targetId;
  }
     });
   });
-
-  /* 🔽🔽🔽 Mueve aquí el bloque de recarga 🔽🔽🔽 */
+  /* 🔽🔽🔽 Bloque de recarga corregido 🔽🔽🔽 */
   if (window.location.hash) {
     const raw = window.location.hash.substring(1); // quita el "#"
 
-    const targetSection = document.getElementById(raw);
+    // ⟶⟶⟶ ✅ CORREGIDO: Si el hash trae "home-submenu", separar en partes
+    const parentId = raw.includes("-") ? raw.split("-")[0] : raw;
+
+    const targetSection = document.getElementById(parentId); // ⟶⟶⟶ ✅ Ahora sí existe
     if (targetSection) {
       sections.forEach(section => {
-        section.style.display = (section.id === raw) ? "block" : "none";
+        section.style.display = (section.id === parentId) ? "block" : "none"; // ⟶⟶⟶ ✅ Compara contra el id correcto
       });
       setTimeout(() => {
         targetSection.scrollIntoView({ behavior: "smooth" });
@@ -1593,6 +1595,7 @@ location.hash = "#" + targetId;
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
+
 
 
 
