@@ -1567,9 +1567,10 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
 
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
-// navigation.js - Manejo del menú principal
+// navigation.js - Manejo del menú principal (CORREGIDO)
 document.addEventListener("DOMContentLoaded", function () {
     const menuLinks = document.querySelectorAll(".menu-link");
+    const sectionTitleLinks = document.querySelectorAll(".main-section a[href^='#']");
     const sections = document.querySelectorAll(".main-section");
     
     // Función para mostrar una sección principal
@@ -1605,6 +1606,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Configurar eventos para los títulos de sección (NUEVO)
+    sectionTitleLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            
+            // Verificar que sea una sección principal
+            const targetSection = document.getElementById(targetId);
+            if (targetSection && targetSection.classList.contains("main-section")) {
+                showMainSection(targetId);
+            }
+        });
+    });
+
     // Manejar carga inicial basada en hash
     function handleInitialLoad() {
         const hash = window.location.hash.substring(1);
@@ -1631,6 +1646,18 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 
+
+
+
+
+
+
+
+
+
+
+
+     
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 <script>
 // subnavigation.js - Manejo de submenús y elementos internos
