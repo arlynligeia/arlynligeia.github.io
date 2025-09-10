@@ -1651,23 +1651,30 @@ window.addEventListener("popstate", handleInitialLoad);
      
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 <script>
-// subnavigation.js - SOLUCIÓN CORRECTA
+// subnavigation.js - SOLUCIÓN DEFINITIVA
 document.addEventListener("DOMContentLoaded", function () {
     const submenuLinks = document.querySelectorAll(".submenu-button");
     
-    // Solo manejar submenús, NO los títulos (eso ya lo hace el otro script)
+    // SOLO manejar los botones de submenú, NO los títulos
     submenuLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
             const targetId = this.getAttribute("href").substring(1);
             
-            // Encontrar la sección principal manualmente
+            // Mapeo de secciones
             const subsectionGroups = {
                 home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
                 film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-                // ... tus demás grupos
+                music: ["singles", "album", "videomusic", "lyrics"],
+                fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+                art: ["painting", "poetry"],
+                science: ["researcharticle", "researchproject"],
+                bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+                contact: ["contactforwork", "contactforfans"],
+                store: ["digitalproducts", "physicalproducts", "shippingdetails"]
             };
             
+            // Encontrar la sección principal
             let mainSectionId = null;
             for (const [section, subsections] of Object.entries(subsectionGroups)) {
                 if (subsections.includes(targetId)) {
@@ -1676,22 +1683,61 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
             
-            if (mainSectionId) {
-                // Activar el menú principal manualmente
-                const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
-                if (mainMenuLink) {
-                    // Esperar a que el menú principal termine de mostrar la sección
-                    setTimeout(() => {
-                        const targetElement = document.getElementById(targetId);
-                        if (targetElement) {
-                            targetElement.scrollIntoView({ behavior: "smooth" });
-                            history.pushState(null, "", "#" + mainSectionId + "-" + targetId);
-                        }
-                    }, 300); // Tiempo suficiente
-                }
+            if (!mainSectionId) return;
+            
+            // Activar el menú principal
+            const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
+            if (mainMenuLink) {
+                // Simular click en el menú principal
+                mainMenuLink.click();
+                
+                // Esperar a que la transición termine
+                setTimeout(() => {
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: "smooth", 
+                            block: "start" 
+                        });
+                        
+                        // Actualizar URL
+                        history.pushState(null, "", "#" + mainSectionId + "-" + targetId);
+                    }
+                }, 400); // Tiempo suficiente para que el otro script termine
             }
         });
     });
+
+    // Manejar carga inicial para subsecciones
+    function handleSubsectionLoad() {
+        const hash = window.location.hash.substring(1);
+        
+        if (hash && hash.includes("-")) {
+            const [mainSectionId, subsectionId] = hash.split("-");
+            
+            const subsectionGroups = {
+                home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
+                // ... (el mismo mapeo de arriba)
+            };
+            
+            if (subsectionGroups[mainSectionId]?.includes(subsectionId)) {
+                const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
+                if (mainMenuLink) {
+                    mainMenuLink.click();
+                    
+                    setTimeout(() => {
+                        const element = document.getElementById(subsectionId);
+                        if (element) {
+                            element.scrollIntoView({ behavior: "smooth", block: "start" });
+                        }
+                    }, 400);
+                }
+            }
+        }
+    }
+
+    window.addEventListener("load", handleSubsectionLoad);
+    window.addEventListener("popstate", handleSubsectionLoad);
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
