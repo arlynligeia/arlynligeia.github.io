@@ -1651,7 +1651,7 @@ window.addEventListener("popstate", handleInitialLoad);
      
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
 <script>
-// subnavigation.js - Manejo de submenús y elementos internos (CORREGIDO)
+// subnavigation.js - Manejo exclusivo de submenús
 document.addEventListener("DOMContentLoaded", function () {
     const submenuLinks = document.querySelectorAll(".submenu-button");
     const sections = document.querySelectorAll(".main-section");
@@ -1669,7 +1669,7 @@ document.addEventListener("DOMContentLoaded", function () {
         store: ["digitalproducts", "physicalproducts", "shippingdetails"]
     };
 
-    // Función para hacer scroll a un elemento y actualizar URL
+    // Función para scroll a un elemento y actualizar URL
     function scrollToSubElement(elementId, updateHash = true) {
         const targetElement = document.getElementById(elementId);
         if (!targetElement) return false;
@@ -1685,44 +1685,46 @@ document.addEventListener("DOMContentLoaded", function () {
         
         if (!mainSectionId) return false;
         
-        // Asegurar que la sección principal esté visible
-        const mainSection = document.getElementById(mainSectionId);
-        if (mainSection) {
-            // Ocultar todas las secciones y mostrar la principal
-            sections.forEach(section => {
-                section.style.display = "none";
-            });
-            mainSection.style.display = "block";
+        // Asegurar que la sección principal esté visible usando el script existente
+        // Simulamos un click en el menú principal
+        const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
+        if (mainMenuLink) {
+            mainMenuLink.click(); // Esto activará el script de menú principal existente
             
-            // Scroll al elemento después de que la sección esté visible
+            // Scroll al elemento después de que la sección se muestre
             setTimeout(() => {
-                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                
-                // Actualizar URL con formato seccion-subseccion
-                if (updateHash) {
-                    const newHash = "#" + mainSectionId + "-" + elementId;
-                    history.pushState(null, "", newHash);
+                const targetElement = document.getElementById(elementId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                    
+                    // Actualizar URL con formato seccion-subseccion
+                    if (updateHash) {
+                        const newHash = "#" + mainSectionId + "-" + elementId;
+                        if (window.location.hash !== newHash) {
+                            history.pushState(null, "", newHash);
+                        }
+                    }
                 }
-            }, 100);
-            
-            return true;
+            }, 300); // Tiempo suficiente para que el script principal muestre la sección
         }
         
-        return false;
+        return true;
     }
 
     // Configurar eventos para submenús
     submenuLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
+            e.stopPropagation(); // Evitar que otros manejadores interfieran
+            
             const targetId = this.getAttribute("href").substring(1);
             scrollToSubElement(targetId, true);
         });
     });
 
-    // Configurar eventos para títulos dentro de contenedores (NUEVO)
+    // Configurar eventos para títulos dentro de contenedores hijos
     document.addEventListener("click", function (e) {
-        // Verificar si se hizo click en un enlace que apunta a una subsección
+        // Verificar si se hizo click en un enlace que apunta a un hash
         if (e.target.matches("a[href^='#']") && e.target.getAttribute("href") !== "#") {
             const targetId = e.target.getAttribute("href").substring(1);
             
@@ -1738,6 +1740,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Si es una subsección, manejar el click
             if (isSubsection) {
                 e.preventDefault();
+                e.stopPropagation();
                 scrollToSubElement(targetId, true);
             }
         }
@@ -1755,29 +1758,35 @@ document.addEventListener("DOMContentLoaded", function () {
             
             // Verificar si la subsección existe
             if (subsectionGroups[mainSectionId] && subsectionGroups[mainSectionId].includes(subsectionId)) {
-                // Mostrar la sección principal primero
-                const mainSection = document.getElementById(mainSectionId);
-                if (mainSection) {
-                    sections.forEach(section => {
-                        section.style.display = "none";
-                    });
-                    mainSection.style.display = "block";
-                    
-                    // Scroll a la subsección después de que la sección se muestre
+                // Usar el script principal para mostrar la sección madre
+                const mainMenuLink = document.querySelector(`.menu-link[data-section="${mainSectionId}"]`);
+                if (mainMenuLink) {
+                    // Pequeña espera para asegurar que el DOM esté listo
                     setTimeout(() => {
-                        const subsectionElement = document.getElementById(subsectionId);
-                        if (subsectionElement) {
-                            subsectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                        }
-                    }, 200);
+                        mainMenuLink.click();
+                        
+                        // Scroll a la subsección después de que la sección se muestre
+                        setTimeout(() => {
+                            const subsectionElement = document.getElementById(subsectionId);
+                            if (subsectionElement) {
+                                subsectionElement.scrollIntoView({ behavior: "smooth", block: "start" });
+                            }
+                        }, 300);
+                    }, 100);
                 }
             }
         }
     }
 
     // Configurar eventos para subsecciones
-    window.addEventListener("load", handleSubsectionLoad);
-    window.addEventListener("popstate", handleSubsectionLoad);
+    window.addEventListener("load", function() {
+        // Pequeño delay para asegurar que el script principal esté listo
+        setTimeout(handleSubsectionLoad, 50);
+    });
+    
+    window.addEventListener("popstate", function() {
+        setTimeout(handleSubsectionLoad, 50);
+    });
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL SUBMENÚ -->
