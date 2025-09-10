@@ -2123,29 +2123,6 @@ privacySection.scrollIntoView({ behavior: "smooth" });
 
 
       
-<!-- SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER--> 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const termsLink = document.getElementById("show-terms");
-const allSections = document.querySelectorAll("section");
-if (termsLink) {
-termsLink.addEventListener("click", function (e) {
-e.preventDefault();
-// Oculta todas las secciones
-allSections.forEach(section => {
-section.style.display = "none";
-});
-// Muestra la sección de Terms & Conditions
-const termsSection = document.getElementById("terms");
-if (termsSection) {
-termsSection.style.display = "block";
-termsSection.scrollIntoView({ behavior: "smooth" });
-}
-});
-}
-});
-</script>
-<!-- FIN SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER-->
 
 
 
