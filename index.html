@@ -1636,6 +1636,69 @@ history.pushState(null, "", newHash);
 
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+
+  function showFromHash(hash) {
+    if (!hash) return;
+
+    const cleanHash = hash.replace("#", "");
+    const parts = cleanHash.split("-");
+    const parentId = parts[0];      // ej: "home"
+    const childId = parts[1];       // ej: "socialmediacontent"
+
+    // Ocultar todas las secciones
+    sections.forEach(section => {
+      section.style.display = section.id === parentId ? "block" : "none";
+    });
+
+    const parentSection = document.getElementById(parentId);
+    if (!parentSection) return;
+
+    parentSection.style.display = "block";
+
+    // Si hay subsección, scrollea a ella
+    if (childId) {
+      const childElement = document.getElementById(childId);
+      if (childElement) {
+        childElement.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Si es Home, forzar scroll al carrusel en vez del inicio
+      if (parentId === "home") {
+        const carousel = document.getElementById("carousel"); // usa el id real de tu carrusel
+        if (carousel) {
+          carousel.scrollIntoView({ behavior: "smooth" });
+        } else {
+          parentSection.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        parentSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }
+
+  // Mostrar correcto al cargar
+  showFromHash(window.location.hash);
+
+  // Reaccionar cuando cambie el hash (clic en títulos, back/forward del navegador)
+  window.addEventListener("hashchange", function () {
+    showFromHash(window.location.hash);
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
       
 <!-- SCRIP PARA MOSTRAR CONTACT FOR WORK Y CONTACT FOR FANS SEGÚN CORRESPONDA-->      
 <script>
