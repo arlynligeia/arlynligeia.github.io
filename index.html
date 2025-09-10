@@ -1568,12 +1568,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const allSections = document.querySelectorAll("section");
   const menuLinks = document.querySelectorAll(".menu-link");
   const submenuLinks = document.querySelectorAll(".menu-button");
+  const allTitles = document.querySelectorAll("h1, h2, h3, h4, h5, h6"); // Todos los títulos
 
   // Función para mostrar una sección y ocultar las demás
   function showSection(sectionId) {
     allSections.forEach(section => {
       section.style.display = section.id === sectionId ? "block" : "none";
     });
+  }
+
+  // Función para actualizar el hash sin disparar scroll
+  function updateHash(hash) {
+    // Usamos replaceState para no agregar al historial de navegación
+    window.history.replaceState(null, null, `#${hash}`);
   }
 
   // Función para navegar a una sección principal
@@ -1590,8 +1597,7 @@ document.addEventListener("DOMContentLoaded", function () {
           block: 'start'
         });
       }
-      // Actualizar URL
-      window.location.hash = sectionId;
+      updateHash(sectionId);
     }, 50);
   }
 
@@ -1609,8 +1615,7 @@ document.addEventListener("DOMContentLoaded", function () {
           block: 'start'
         });
       }
-      // Actualizar URL con formato: #parent-child
-      window.location.hash = `${parentId}-${childId}`;
+      updateHash(`${parentId}-${childId}`);
     }, 100);
   }
 
@@ -1641,13 +1646,82 @@ document.addEventListener("DOMContentLoaded", function () {
       if (parentId) {
         navigateToSubsection(parentId, targetId);
       } else {
-        // Si no encuentra padre, trata como sección principal
         navigateToSection(targetId);
       }
     });
   });
 
-  // Manejo de recarga (F5) y URL inicial
+  // Event listeners para TODOS los títulos (click múltiple)
+  allTitles.forEach(title => {
+    title.addEventListener("click", function () {
+      const section = this.closest("section");
+      if (!section) return;
+      
+      const sectionId = section.id;
+      
+      // Verificar si es una subsección dentro de una sección madre
+      let parentId = null;
+      for (const [parent, subsections] of Object.entries(sectionConfig)) {
+        if (subsections.includes(sectionId)) {
+          parentId = parent;
+          break;
+        }
+      }
+      
+      if (parentId) {
+        // Es una subsección, navegar a ella
+        navigateToSubsection(parentId, sectionId);
+      } else {
+        // Es una sección principal
+        navigateToSection(sectionId);
+      }
+    });
+  });
+
+  // Sistema de ScrollSpy para actualizar hash al hacer scroll manual
+  function initScrollSpy() {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.6 // 60% visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const elementId = entry.target.id;
+          
+          // Encontrar si es subsección o sección principal
+          let parentId = null;
+          for (const [parent, subsections] of Object.entries(sectionConfig)) {
+            if (subsections.includes(elementId)) {
+              parentId = parent;
+              break;
+            }
+          }
+          
+          if (parentId) {
+            updateHash(`${parentId}-${elementId}`);
+          } else if (sectionConfig[elementId] !== undefined) {
+            updateHash(elementId);
+          }
+        }
+      });
+    }, observerOptions);
+
+    // Observar todas las secciones y subsecciones
+    allSections.forEach(section => {
+      observer.observe(section);
+    });
+    
+    // También observar elementos dentro de las secciones que puedan ser subsecciones
+    Object.values(sectionConfig).flat().forEach(id => {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    });
+  }
+
+  // Manejo de recarga (F5) - FORZAR scroll al elemento del hash
   function handleInitialNavigation() {
     if (window.location.hash) {
       const hash = window.location.hash.substring(1);
@@ -1656,6 +1730,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Es una subsección: #parent-child
         const [parentId, childId] = hash.split("-");
         if (sectionConfig[parentId] && sectionConfig[parentId].includes(childId)) {
+          // Forzar scroll al elemento (comportamiento 'auto' para F5)
           navigateToSubsection(parentId, childId, 'auto');
           return;
         }
@@ -1672,10 +1747,11 @@ document.addEventListener("DOMContentLoaded", function () {
     navigateToSection('home', 'auto');
   }
 
-  // Ejecutar al cargar
+  // Inicializar
   handleInitialNavigation();
+  initScrollSpy();
 
-  // También manejar el evento hashchange para navegación manual
+  // Manejar cambios de hash manuales
   window.addEventListener("hashchange", handleInitialNavigation);
 });
 </script>
