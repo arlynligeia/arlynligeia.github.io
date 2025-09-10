@@ -1540,7 +1540,7 @@ images[current].classList.remove('active');
 current = (current + 1) % images.length;
 images[current].classList.add('active');
 }
-setInterval(showNextImage, 1000); // Cambia cada 10 segundos
+setInterval(showNextImage, 8000); // Cambia cada 10 segundos
 </script>
 <!-- FIN DE SCRIP PARA EL CARRUSEL PRINCIPAL --> 
 
@@ -1548,131 +1548,137 @@ setInterval(showNextImage, 1000); // Cambia cada 10 segundos
 
 
       
-<!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-const menuLinks = document.querySelectorAll(".menu-link");
-const sections = document.querySelectorAll("section");
-menuLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-e.preventDefault();
-const targetId = this.dataset.section;
-// OCULTA TODAS LAS SECCIONES
-sections.forEach(section => {
-if (section.id === targetId) {
-section.style.display = "block";
-} else {
-section.style.display = "none";
-}
-});
-// Scroll al inicio de la sección activada
-const targetSection = document.getElementById(targetId);
-if (targetSection) {
-targetSection.scrollIntoView({ behavior: "smooth" });
-location.hash = "#" + targetId;
- }
+  // Configuración completa de todas las secciones y subsecciones
+  const sectionConfig = {
+    home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
+    biography: [],
+    film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+    music: ["singles", "album", "videomusic", "lyrics"],
+    fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+    art: ["painting", "poetry"],
+    science: ["researcharticle", "researchproject"],
+    bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+    contact: ["contactforwork", "contactforfans"],
+    store: ["physicalproducts", "digitalproducts"],
+    cart: []
+  };
+
+  const allSections = document.querySelectorAll("section");
+  const menuLinks = document.querySelectorAll(".menu-link");
+  const submenuLinks = document.querySelectorAll(".menu-button");
+
+  // Función para mostrar una sección y ocultar las demás
+  function showSection(sectionId) {
+    allSections.forEach(section => {
+      section.style.display = section.id === sectionId ? "block" : "none";
+    });
+  }
+
+  // Función para navegar a una sección principal
+  function navigateToSection(sectionId, scrollBehavior = 'smooth') {
+    if (!document.getElementById(sectionId)) return;
+    
+    showSection(sectionId);
+    
+    setTimeout(() => {
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.scrollIntoView({ 
+          behavior: scrollBehavior,
+          block: 'start'
+        });
+      }
+      // Actualizar URL
+      window.location.hash = sectionId;
+    }, 50);
+  }
+
+  // Función para navegar a una subsección
+  function navigateToSubsection(parentId, childId, scrollBehavior = 'smooth') {
+    if (!document.getElementById(parentId) || !document.getElementById(childId)) return;
+    
+    showSection(parentId);
+    
+    setTimeout(() => {
+      const targetElement = document.getElementById(childId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ 
+          behavior: scrollBehavior,
+          block: 'start'
+        });
+      }
+      // Actualizar URL con formato: #parent-child
+      window.location.hash = `${parentId}-${childId}`;
+    }, 100);
+  }
+
+  // Event listeners para menú principal
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("data-section");
+      navigateToSection(targetId);
     });
   });
-  /* 🔽🔽🔽 Bloque de recarga corregido 🔽🔽🔽 */
-  if (window.location.hash) {
-    const raw = window.location.hash.substring(1); // quita el "#"
 
-    // ⟶⟶⟶ ✅ CORREGIDO: Si el hash trae "home-submenu", separar en partes
-    const parentId = raw.includes("-") ? raw.split("-")[0] : raw;
-
-    const targetSection = document.getElementById(parentId); // ⟶⟶⟶ ✅ Ahora sí existe
-    if (targetSection) {
-      sections.forEach(section => {
-        section.style.display = (section.id === parentId) ? "block" : "none"; // ⟶⟶⟶ ✅ Compara contra el id correcto
-      });
-      setTimeout(() => {
-        targetSection.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  }
-  /* 🔼🔼🔼 Fin del bloque de recarga 🔼🔼🔼 */
-
-});
-</script>
-<!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
-
-
-
-
-
+  // Event listeners para submenús
+  submenuLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
       
-<!-- SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-const submenuLinks = document.querySelectorAll(".menu-button");
-const sections = document.querySelectorAll("section");
-submenuLinks.forEach(link => {
-link.addEventListener("click", function (e) {
-const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
-const targetElement = document.getElementById(targetId);
-// Grupos de sub-secciones por sección madre
-const subsectionGroups = {
-home: ["socialmediacontent", "tiktokhighlight", "destacadodetiktok", "youtubehighlight"],
-film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-music: ["singles", "album", "videomusic"],
-fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
-science: ["researcharticle", "researchproject"],
-bemypatron: ["supportmywork", "supportmystudies", "gifts"],
-contact: ["contactforfans", "contactforwork"],
-store: ["digitalproducts", "physicalproducts"]
-};
-// Buscar la sección madre del target
-let parentSectionId = null;
-for (const [parent, subsections] of Object.entries(subsectionGroups)) {
-if (subsections.includes(targetId)) {
-parentSectionId = parent;
-break;
-}
-}
-// Si se encuentra la sección madre y el elemento destino existe
-if (parentSectionId && targetElement) {
-e.preventDefault();
-// Oculta todas las secciones y muestra solo la madre
-sections.forEach(section => {
-section.style.display = section.id === parentSectionId ? "block" : "none";
-});
-// Scroll hacia la subsección deseada
-setTimeout(() => {
-targetElement.scrollIntoView({ behavior: "smooth" });
-let newHash = "#" + parentSectionId;
-if (targetId !== "physicalproducts" && targetId !== "digitalproducts") {
-  newHash = "#" + parentSectionId + "-" + targetId;
-}
-location.hash = "#" + targetId;
-  }, 50);
+      // Encontrar la sección madre
+      let parentId = null;
+      for (const [section, subsections] of Object.entries(sectionConfig)) {
+        if (subsections.includes(targetId)) {
+          parentId = section;
+          break;
+        }
+      }
+      
+      if (parentId) {
+        navigateToSubsection(parentId, targetId);
+      } else {
+        // Si no encuentra padre, trata como sección principal
+        navigateToSection(targetId);
       }
     });
   });
 
-  /* 🔽🔽🔽 Mueve aquí el bloque de recarga 🔽🔽🔽 */
-  if (window.location.hash) {
-    const raw = window.location.hash.substring(1); // quita el "#"
-
-    // Para submenú: si hay guion, separar madre y subsección
-    if (raw.includes("-")) {
-      const [parentId, childId] = raw.split("-", 2);
-      const parentSection = document.getElementById(parentId);
-      const childElement = document.getElementById(childId);
-
-      if (parentSection) {
-        sections.forEach(s => s.style.display = (s.id === parentId) ? "block" : "none");
-        setTimeout(() => {
-          if (childElement) childElement.scrollIntoView({ behavior: "smooth" });
-          else parentSection.scrollIntoView({ behavior: "smooth" });
-        }, 100);
+  // Manejo de recarga (F5) y URL inicial
+  function handleInitialNavigation() {
+    if (window.location.hash) {
+      const hash = window.location.hash.substring(1);
+      
+      if (hash.includes("-")) {
+        // Es una subsección: #parent-child
+        const [parentId, childId] = hash.split("-");
+        if (sectionConfig[parentId] && sectionConfig[parentId].includes(childId)) {
+          navigateToSubsection(parentId, childId, 'auto');
+          return;
+        }
+      } else {
+        // Es una sección principal
+        if (sectionConfig[hash] !== undefined) {
+          navigateToSection(hash, 'auto');
+          return;
+        }
       }
     }
+    
+    // Por defecto, mostrar home
+    navigateToSection('home', 'auto');
   }
-  /* 🔼🔼🔼 Fin del bloque de recarga 🔼🔼🔼 */
 
+  // Ejecutar al cargar
+  handleInitialNavigation();
+
+  // También manejar el evento hashchange para navegación manual
+  window.addEventListener("hashchange", handleInitialNavigation);
 });
 </script>
-<!-- FIN DE SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
 
 
 
