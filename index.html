@@ -1557,7 +1557,7 @@ menuLinks.forEach(link => {
 link.addEventListener("click", function (e) {
 e.preventDefault();
 const targetId = this.dataset.section;
-// Oculta todas las secciones
+// OCULTA TODAS LAS SECCIONES
 sections.forEach(section => {
 if (section.id === targetId) {
 section.style.display = "block";
@@ -1569,14 +1569,30 @@ section.style.display = "none";
 const targetSection = document.getElementById(targetId);
 if (targetSection) {
 targetSection.scrollIntoView({ behavior: "smooth" });
-history.pushState(null, "", "#" + targetId);      
-}
-});
-});
+location.hash = "#" + targetId;
+ }
+    });
+  });
+
+  /* 🔽🔽🔽 Mueve aquí el bloque de recarga 🔽🔽🔽 */
+  if (window.location.hash) {
+    const raw = window.location.hash.substring(1); // quita el "#"
+
+    const targetSection = document.getElementById(raw);
+    if (targetSection) {
+      sections.forEach(section => {
+        section.style.display = (section.id === raw) ? "block" : "none";
+      });
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+  /* 🔼🔼🔼 Fin del bloque de recarga 🔼🔼🔼 */
+
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
-
 
 
 
@@ -1624,12 +1640,33 @@ let newHash = "#" + parentSectionId;
 if (targetId !== "physicalproducts" && targetId !== "digitalproducts") {
   newHash = "#" + parentSectionId + "-" + targetId;
 }
-history.pushState(null, "", newHash);
+location.hash = "#" + targetId;
+  }, 50);
+      }
+    });
+  });
 
-}, 50);
-}
-});
-});
+  /* 🔽🔽🔽 Mueve aquí el bloque de recarga 🔽🔽🔽 */
+  if (window.location.hash) {
+    const raw = window.location.hash.substring(1); // quita el "#"
+
+    // Para submenú: si hay guion, separar madre y subsección
+    if (raw.includes("-")) {
+      const [parentId, childId] = raw.split("-", 2);
+      const parentSection = document.getElementById(parentId);
+      const childElement = document.getElementById(childId);
+
+      if (parentSection) {
+        sections.forEach(s => s.style.display = (s.id === parentId) ? "block" : "none");
+        setTimeout(() => {
+          if (childElement) childElement.scrollIntoView({ behavior: "smooth" });
+          else parentSection.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+    }
+  }
+  /* 🔼🔼🔼 Fin del bloque de recarga 🔼🔼🔼 */
+
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
