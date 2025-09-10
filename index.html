@@ -1564,201 +1564,87 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
 
       
 
-
-     
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
-// navigation-unified.js - SOLUCIÓN DEFINITIVA
 document.addEventListener("DOMContentLoaded", function () {
-    const menuLinks = document.querySelectorAll(".menu-link");
-    const submenuLinks = document.querySelectorAll(".submenu-button");
-    const allInternalLinks = document.querySelectorAll("a[href^='#']");
-    const sections = document.querySelectorAll(".main-section");
-    
-    // ==================== BANDERA DE CONTROL ====================
-    let allowScrollToTop = true;
-    
-    // ==================== CONFIGURACIÓN ====================
-    const subsectionGroups = {
-        home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
-        film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
-        music: ["singles", "album", "videomusic", "lyrics"],
-        fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
-        art: ["painting", "poetry"],
-        science: ["researcharticle", "researchproject"],
-        bemypatron: ["supportmywork", "supportmystudies", "gifts"],
-        contact: ["contactforwork", "contactforfans"],
-        store: ["digitalproducts", "physicalproducts", "shippingdetails"]
-    };
-
-    // ==================== FUNCIONES ====================
-    function showMainSection(sectionId) {
-        sections.forEach(section => {
-            section.style.display = "none";
-        });
-        
-        const targetSection = document.getElementById(sectionId);
-        if (targetSection) {
-            targetSection.style.display = "block";
-            
-            // SOLO hacer scroll si la bandera lo permite
-            if (allowScrollToTop) {
-                setTimeout(() => {
-                    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
-                }, 50);
-            }
-            
-            history.pushState(null, "", "#" + sectionId);
-            return true;
-        }
-        return false;
-    }
-
-    function scrollToSubElement(elementId) {
-        // DESACTIVAR scroll al top temporalmente
-        allowScrollToTop = false;
-        
-        const targetElement = document.getElementById(elementId);
-        if (!targetElement) {
-            allowScrollToTop = true;
-            return false;
-        }
-        
-        let mainSectionId = null;
-        for (const [section, subsections] of Object.entries(subsectionGroups)) {
-            if (subsections.includes(elementId)) {
-                mainSectionId = section;
-                break;
-            }
-        }
-        
-        if (!mainSectionId) {
-            allowScrollToTop = true;
-            return false;
-        }
-        
-        // Mostrar sección principal (sin scroll automático)
-        showMainSection(mainSectionId);
-        
-        setTimeout(() => {
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                history.pushState(null, "", "#" + mainSectionId + "-" + elementId);
-            }
-            // REACTIVAR scroll al top después de 500ms
-            setTimeout(() => {
-                allowScrollToTop = true;
-            }, 500);
-        }, 100);
-        
-        return true;
-    }
-
-    // ==================== EVENTOS ====================
-    menuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            allowScrollToTop = true; // Asegurar scroll al top
-            showMainSection(this.dataset.section);
-        });
-    });
-
-    submenuLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            scrollToSubElement(this.getAttribute("href").substring(1));
-        });
-    });
-
-    allInternalLinks.forEach(link => {
-        link.addEventListener("click", function (e) {
-            if (this.getAttribute("href") !== "#") {
-                e.preventDefault();
-                const targetId = this.getAttribute("href").substring(1);
-                
-                const targetElement = document.getElementById(targetId);
-                if (targetElement && targetElement.classList.contains("main-section")) {
-                    allowScrollToTop = true;
-                    showMainSection(targetId);
-                } else {
-                    let isSubsection = false;
-                    for (const subsections of Object.values(subsectionGroups)) {
-                        if (subsections.includes(targetId)) {
-                            isSubsection = true;
-                            break;
-                        }
-                    }
-                    if (isSubsection) {
-                        scrollToSubElement(targetId);
-                    }
-                }
-            }
-        });
-    });
-
-    // ==================== CARGA INICIAL ====================
-    function handleInitialLoad() {
-        const hash = window.location.hash.substring(1);
-        
-        if (!hash) {
-            allowScrollToTop = true;
-            showMainSection("home");
-            return;
-        }
-        
-        if (hash.includes("-")) {
-            const parts = hash.split("-");
-            const mainSectionId = parts[0];
-            const subsectionId = parts.slice(1).join("-");
-            
-            if (subsectionGroups[mainSectionId] && subsectionGroups[mainSectionId].includes(subsectionId)) {
-                allowScrollToTop = false;
-                showMainSection(mainSectionId);
-                
-                setTimeout(() => {
-                    const element = document.getElementById(subsectionId);
-                    if (element) {
-                        element.scrollIntoView({ behavior: "smooth", block: "start" });
-                    }
-                    setTimeout(() => {
-                        allowScrollToTop = true;
-                    }, 500);
-                }, 200);
-            }
-        } else {
-            allowScrollToTop = true;
-            showMainSection(hash);
-        }
-    }
-
-    window.addEventListener("load", handleInitialLoad);
-    window.addEventListener("popstate", handleInitialLoad);
+const menuLinks = document.querySelectorAll(".menu-link");
+const sections = document.querySelectorAll("section");
+menuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+e.preventDefault();
+const targetId = this.dataset.section;
+// Oculta todas las secciones
+sections.forEach(section => {
+if (section.id === targetId) {
+section.style.display = "block";
+} else {
+section.style.display = "none";
+}
+});
+// Scroll al inicio de la sección activada
+const targetSection = document.getElementById(targetId);
+if (targetSection) {
+targetSection.scrollIntoView({ behavior: "smooth" });
+history.pushState(null, "", "#" + targetId);
+}
+});
+});
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 
 
 
-
-
-
-
-
-
-
-
-
-     
-
-
-
-
-
-
-
-
-
-     
+<!-- SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const submenuLinks = document.querySelectorAll(".menu-button");
+const sections = document.querySelectorAll("section");
+submenuLinks.forEach(link => {
+link.addEventListener("click", function (e) {
+const targetId = this.getAttribute("href").substring(1); // Ej: "supportmywork"
+const targetElement = document.getElementById(targetId);
+// Grupos de sub-secciones por sección madre
+const subsectionGroups = {
+home: ["socialmediacontent", "tiktokhighlight", "destacadodetiktok", "youtubehighlight"],
+film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
+music: ["singles", "album", "videomusic"],
+fashion: ["sscollection", "fwcollection", "capsulecollection", "resortcollection", "inspiredbyfilm"],
+science: ["researcharticle", "researchproject"],
+bemypatron: ["supportmywork", "supportmystudies", "gifts"],
+contact: ["contactforfans", "contactforwork"],
+store: ["digitalproducts", "physicalproducts"]
+};
+// Buscar la sección madre del target
+let parentSectionId = null;
+for (const [parent, subsections] of Object.entries(subsectionGroups)) {
+if (subsections.includes(targetId)) {
+parentSectionId = parent;
+break;
+}
+}
+// Si se encuentra la sección madre y el elemento destino existe
+if (parentSectionId && targetElement) {
+e.preventDefault();
+// Oculta todas las secciones y muestra solo la madre
+sections.forEach(section => {
+section.style.display = section.id === parentSectionId ? "block" : "none";
+});
+// Scroll hacia la subsección deseada
+setTimeout(() => {
+targetElement.scrollIntoView({ behavior: "smooth" });
+let newHash = "#" + parentSectionId;
+if (targetId !== "physicalproducts" && targetId !== "digitalproducts") {
+  newHash = "#" + parentSectionId + "-" + targetId;
+}
+history.pushState(null, "", newHash);
+}, 50);
+      }
+    });
+  });
+});
+</script>
+<!-- FIN DE SCRIP PARA CAMBIAR DE SECCIÓN CON LOS SUBMENUS -->
 <!-- SCRIP PARA MOSTRAR CONTACT FOR WORK Y CONTACT FOR FANS SEGÚN CORRESPONDA-->      
 <script>
 document.addEventListener("DOMContentLoaded", function() {
@@ -2203,6 +2089,9 @@ location.hash = "#shippinginformation";
 }); // <- Cierre correcto de DOMContentLoaded
 </script>
 <!-- FIN SCRIPT DEL CARRITO -->
+
+     
+
 
 
 
