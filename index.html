@@ -1445,7 +1445,7 @@ Your cart is empty
 
       
 <!-- SECCIÓN PRIVACY POLICY-->
-<section id="privacy-policy" class="privacy-policy-section" style="display: none;">
+<section id="privacypolicy" class="privacypolicy-section" style="display: none;">
 <div class="privacypolicy-container">
 <h2 class="privacypolicy-title"><a href="#privacypolicy">PRIVACY POLICY</a></h2>
 <p class="privacypolicy-description">
@@ -2098,7 +2098,7 @@ location.hash = "#shippinginformation";
 <!-- SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER-->      
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-const privacyLink = document.getElementById("show-privacy-policy");
+const privacyLink = document.getElementById("show-privacypolicy");
 const allSections = document.querySelectorAll("section");
 if (privacyLink) {
 privacyLink.addEventListener("click", function (e) {
@@ -2108,7 +2108,7 @@ allSections.forEach(section => {
 section.style.display = "none";
 });
 // Muestra la sección de Privacy Policy
-const privacySection = document.getElementById("privacy-policy");
+const privacySection = document.getElementById("privacypolicy");
 if (privacySection) {
 privacySection.style.display = "block";
 privacySection.scrollIntoView({ behavior: "smooth" });
@@ -2157,7 +2157,7 @@ termsSection.scrollIntoView({ behavior: "smooth" });
 <div class="footer-espacio"></div>
 <div class="footer-texto">© 2025 Arlyn Ligeia. All rights reserved.</div>
 <div class="footer-texto">
-<p><a href="#" id="show-privacy-policy">Privacy Policy</a></p>
+<p><a href="#" id="show-privacypolicy">Privacy Policy</a></p>
 <p><a href="#" id="show-terms">Terms & Conditions</a></p>
 </div>
 </footer>
