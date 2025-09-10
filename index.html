@@ -1573,6 +1573,26 @@ history.pushState(null, "", "#" + targetId);
 }
 });
 });
+  /* 🔽🔽🔽 AQUI EMPIEZA LO QUE AGREGAS 🔽🔽🔽 */
+  // --- Manejo de recarga con hash ---
+  if (window.location.hash) {
+    const targetId = window.location.hash.substring(1); // quita el "#"
+    const targetSection = document.getElementById(targetId);
+
+    if (targetSection) {
+      // Oculta todas menos la que toca
+      sections.forEach(section => {
+        section.style.display = (section.id === targetId) ? "block" : "none";
+      });
+
+      // Hace scroll automático después de un pequeño delay
+      setTimeout(() => {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  }
+  /* 🔼🔼🔼 AQUI TERMINA LO QUE AGREGAS 🔼🔼🔼 */
+
 });
 </script>
 <!-- FIN DE SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
