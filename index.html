@@ -1568,15 +1568,17 @@ setInterval(showNextImage, 8000); // Cambia cada 10 segundos
      
 <!-- SCRIP PARA CAMBIAR LAS SECCIONES CON EL MENÚ -->
 <script>
-// navigation-unified.js - Manejo completo de navegación
+// navigation-unified.js - SOLUCIÓN DEFINITIVA
 document.addEventListener("DOMContentLoaded", function () {
     const menuLinks = document.querySelectorAll(".menu-link");
     const submenuLinks = document.querySelectorAll(".submenu-button");
     const allInternalLinks = document.querySelectorAll("a[href^='#']");
     const sections = document.querySelectorAll(".main-section");
     
-    // ==================== CONFIGURACIÓN DE SECCIONES ====================
-    // Mapeo completo de secciones y subsecciones
+    // ==================== BANDERA DE CONTROL ====================
+    let allowScrollToTop = true;
+    
+    // ==================== CONFIGURACIÓN ====================
     const subsectionGroups = {
         home: ["socialmediacontent", "tiktokhighlight", "youtubehighlight"],
         film: ["featurefilm", "shortfilm", "musicvideodirection", "behindthescenes", "soundtrack"],
@@ -1589,40 +1591,39 @@ document.addEventListener("DOMContentLoaded", function () {
         store: ["digitalproducts", "physicalproducts", "shippingdetails"]
     };
 
-    // ==================== FUNCIONES PRINCIPALES ====================
-    
-    // FUNCIÓN PARA MOSTRAR SECCIÓN PRINCIPAL (MENÚ)
-    function showMainSection(sectionId, scrollToTop = true) {
-        // Ocultar todas las secciones
+    // ==================== FUNCIONES ====================
+    function showMainSection(sectionId) {
         sections.forEach(section => {
             section.style.display = "none";
         });
         
-        // Mostrar la sección seleccionada
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.style.display = "block";
             
-            if (scrollToTop) {
-                // Scroll al inicio de la sección
+            // SOLO hacer scroll si la bandera lo permite
+            if (allowScrollToTop) {
                 setTimeout(() => {
                     targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
                 }, 50);
             }
             
-            // Actualizar URL
             history.pushState(null, "", "#" + sectionId);
             return true;
         }
         return false;
     }
 
-    // FUNCIÓN PARA SCROLL A SUBSECCIÓN (SUBMENÚ)
-    function scrollToSubElement(elementId, updateHash = true) {
-        const targetElement = document.getElementById(elementId);
-        if (!targetElement) return false;
+    function scrollToSubElement(elementId) {
+        // DESACTIVAR scroll al top temporalmente
+        allowScrollToTop = false;
         
-        // Encontrar la sección principal
+        const targetElement = document.getElementById(elementId);
+        if (!targetElement) {
+            allowScrollToTop = true;
+            return false;
+        }
+        
         let mainSectionId = null;
         for (const [section, subsections] of Object.entries(subsectionGroups)) {
             if (subsections.includes(elementId)) {
@@ -1631,63 +1632,55 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         
-        if (!mainSectionId) return false;
+        if (!mainSectionId) {
+            allowScrollToTop = true;
+            return false;
+        }
         
-        // Mostrar la sección principal (sin hacer scroll al top)
-        showMainSection(mainSectionId, false);
+        // Mostrar sección principal (sin scroll automático)
+        showMainSection(mainSectionId);
         
-        // Scroll al elemento después de que la sección esté visible
         setTimeout(() => {
             if (targetElement) {
                 targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
-                
-                // Actualizar URL con formato seccion-subseccion
-                if (updateHash) {
-                    const newHash = "#" + mainSectionId + "-" + elementId;
-                    if (window.location.hash !== newHash) {
-                        history.pushState(null, "", newHash);
-                    }
-                }
+                history.pushState(null, "", "#" + mainSectionId + "-" + elementId);
             }
+            // REACTIVAR scroll al top después de 500ms
+            setTimeout(() => {
+                allowScrollToTop = true;
+            }, 500);
         }, 100);
         
         return true;
     }
 
-    // ==================== MANEJADORES DE EVENTOS ====================
-    
-    // EVENTOS PARA MENÚ PRINCIPAL
+    // ==================== EVENTOS ====================
     menuLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.dataset.section;
-            showMainSection(targetId, true);
+            allowScrollToTop = true; // Asegurar scroll al top
+            showMainSection(this.dataset.section);
         });
     });
 
-    // EVENTOS PARA SUBMENÚS
     submenuLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            scrollToSubElement(targetId, true);
+            scrollToSubElement(this.getAttribute("href").substring(1));
         });
     });
 
-    // EVENTOS PARA TODOS LOS ENLACES INTERNOS (TÍTULOS)
     allInternalLinks.forEach(link => {
         link.addEventListener("click", function (e) {
             if (this.getAttribute("href") !== "#") {
                 e.preventDefault();
                 const targetId = this.getAttribute("href").substring(1);
                 
-                // Verificar si es una sección principal
                 const targetElement = document.getElementById(targetId);
                 if (targetElement && targetElement.classList.contains("main-section")) {
-                    showMainSection(targetId, true);
-                } 
-                // Verificar si es una subsección
-                else {
+                    allowScrollToTop = true;
+                    showMainSection(targetId);
+                } else {
                     let isSubsection = false;
                     for (const subsections of Object.values(subsectionGroups)) {
                         if (subsections.includes(targetId)) {
@@ -1695,66 +1688,49 @@ document.addEventListener("DOMContentLoaded", function () {
                             break;
                         }
                     }
-                    
                     if (isSubsection) {
-                        scrollToSubElement(targetId, true);
+                        scrollToSubElement(targetId);
                     }
                 }
             }
         });
     });
 
-    // ==================== MANEJO DE CARGA INICIAL ====================
-    
+    // ==================== CARGA INICIAL ====================
     function handleInitialLoad() {
         const hash = window.location.hash.substring(1);
         
         if (!hash) {
-            // Default: mostrar home
-            showMainSection("home", true);
+            allowScrollToTop = true;
+            showMainSection("home");
             return;
         }
         
-        // Verificar si es una subsección (contiene guion)
         if (hash.includes("-")) {
             const parts = hash.split("-");
             const mainSectionId = parts[0];
             const subsectionId = parts.slice(1).join("-");
             
-            // Verificar si la subsección existe
             if (subsectionGroups[mainSectionId] && subsectionGroups[mainSectionId].includes(subsectionId)) {
-                scrollToSubElement(subsectionId, false);
-            } else {
-                // Fallback: mostrar la sección principal
-                showMainSection(mainSectionId, true);
+                allowScrollToTop = false;
+                showMainSection(mainSectionId);
+                
+                setTimeout(() => {
+                    const element = document.getElementById(subsectionId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                    setTimeout(() => {
+                        allowScrollToTop = true;
+                    }, 500);
+                }, 200);
             }
-        } 
-        // Si es una sección principal
-        else if (document.getElementById(hash) && document.getElementById(hash).classList.contains("main-section")) {
-            showMainSection(hash, true);
-        } 
-        // Si es una subsección sin guion (formato viejo)
-        else {
-            let isSubsection = false;
-            for (const subsections of Object.values(subsectionGroups)) {
-                if (subsections.includes(hash)) {
-                    isSubsection = true;
-                    break;
-                }
-            }
-            
-            if (isSubsection) {
-                scrollToSubElement(hash, false);
-            } else {
-                // Fallback: mostrar home
-                showMainSection("home", true);
-            }
+        } else {
+            allowScrollToTop = true;
+            showMainSection(hash);
         }
     }
 
-    // ==================== INICIALIZACIÓN ====================
-    
-    // Configurar eventos
     window.addEventListener("load", handleInitialLoad);
     window.addEventListener("popstate", handleInitialLoad);
 });
