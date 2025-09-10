@@ -1,33 +1,32 @@
 /* --- FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Freckle+Face&family=Share+Tech+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&display=swap');
 
-/* --------------------------------------
-   ESTILOS GENERALES DEL BODY Y BACKGROUND
------------------------------------------ */
+/* --- ESTILOS GENERALES DEL BODY Y BACKGROUND --- */
 body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  color: white;
+margin: 0;
+font-family: 'Orbitron', sans-serif;
+color: white;
 background: url('assets/assets/Fondociudad.png') no-repeat center center fixed;
-  background-size: cover;
+background-size: cover;
 }
 
-/* --------------------------------------
-   TÍTULO PRINCIPAL DEL SITIO (TOP)
------------------------------------------ */
+/* --- TÍTULO PRINCIPAL DEL SITIO (TOP) --- */
 .site-title {
   text-align: center;
   font-size: 4.5em;
   margin: 20px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* --------------------------------------
-   MENÚ DE NAVEGACIÓN (NAV Y SUBMENÚ)
------------------------------------------ */
+/* --- CONTENEDOR PRINCIPAL DEL MENÚ --- */
 nav {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px;
 }
+
+/* --- MENÚ PRINCIPAL (LISTA) --- */
 .menu {
   list-style: none;
   padding: 0;
@@ -35,11 +34,14 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
-.menu li {
+.menu > li {
   position: relative;
 }
-.menu > li > button,
+
+/* --- BOTONES DEL MENÚ PRINCIPAL --- */
 .menu-button {
   font-family: 'Orbitron', sans-serif;
   background: transparent;
@@ -50,51 +52,70 @@ nav {
   font-size: 1rem;
   text-transform: uppercase;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
-.menu > li > button:hover,
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-/* Submenús desplegables */
+
+/* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
   display: none;
   position: absolute;
-  top: 40px;
+  top: 100%;
   left: 0;
   list-style: none;
   padding: 0;
   margin: 0;
-  background: rgba(0, 0, 0, 0.7);
-  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid #444;
+  border-top: none;
   z-index: 1000;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
-.submenu li button,
-.submenu li a {
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* --- ELEMENTOS DEL SUBMENÚ --- */
+.submenu li {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #333;
+}
+.submenu li:last-child {
+  border-bottom: none;
+}
+.submenu-button {
   display: block;
   width: 100%;
   text-align: left;
   background: transparent;
   border: none;
   color: white;
-  padding: 10px 15px;
-  font-size: 0.9rem;
+  padding: 12px 20px;
+  font-size: 0.95rem;
   font-family: 'Rajdhani', sans-serif;
   text-transform: capitalize;
   white-space: nowrap;
   text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
 }
-.menu li:hover .submenu {
-  display: block;
+.submenu-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  padding-left: 25px;
 }
 
-/* Efecto turquesa al pasar el mouse por submenú */
-.submenu li {
-  position: relative;
-  overflow: hidden;
-}
+/* --- LÍNEA TURQUESA ANIMADA --- */
 .submenu li::before {
   content: '';
   position: absolute;
@@ -102,14 +123,19 @@ nav {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background-color: turquoise;
+  background-color: #40E0D0; /* Turquesa */
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
+  z-index: 1;
 }
 .submenu li:hover::before {
   transform: scaleX(1);
 }
+
+
+
+
 
 
 
