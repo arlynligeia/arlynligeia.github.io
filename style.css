@@ -3,11 +3,11 @@
 
 /* --- ESTILOS GENERALES DEL BODY Y BACKGROUND --- */
 body {
-margin: 0;
-font-family: 'Orbitron', sans-serif;
-color: white;
-background: url('assets/assets/Fondociudad.png') no-repeat center center fixed;
-background-size: cover;
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+  background: url('assets/assets/Fondociudad.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* --- TÍTULO PRINCIPAL DEL SITIO (TOP) --- */
@@ -15,15 +15,12 @@ background-size: cover;
   text-align: center;
   font-size: 4.5em;
   margin: 20px 0;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 /* --- CONTENEDOR PRINCIPAL DEL MENÚ --- */
 nav {
   text-align: center;
-  margin: 10px;
+  margin-top: 10px;
 }
 
 /* --- MENÚ PRINCIPAL (LISTA) --- */
@@ -34,10 +31,8 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 0 auto;
-  max-width: 1200px;
 }
-.menu > li {
+.menu li {
   position: relative;
 }
 
@@ -55,30 +50,28 @@ nav {
   transition: all 0.3s ease;
   text-decoration: none;
   display: inline-block;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  /* Mejoras visuales manteniendo tamaño original */
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 40px; /* Posición original */
   left: 0;
   list-style: none;
   padding: 0;
   margin: 0;
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid #444;
-  border-top: none;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid white;
   z-index: 1000;
-  min-width: 200px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  /* Mejoras visuales manteniendo tamaño original */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 .menu li:hover .submenu {
   display: block;
@@ -88,10 +81,6 @@ nav {
 .submenu li {
   position: relative;
   overflow: hidden;
-  border-bottom: 1px solid #333;
-}
-.submenu li:last-child {
-  border-bottom: none;
 }
 .submenu-button {
   display: block;
@@ -100,19 +89,18 @@ nav {
   background: transparent;
   border: none;
   color: white;
-  padding: 12px 20px;
-  font-size: 0.95rem;
+  padding: 10px 15px; /* Padding original */
+  font-size: 0.9rem; /* Tamaño original */
   font-family: 'Rajdhani', sans-serif;
   text-transform: capitalize;
   white-space: nowrap;
   text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
+  transition: all 0.2s ease; /* Transición suave */
 }
 .submenu-button:hover {
   background: rgba(255, 255, 255, 0.1);
-  padding-left: 25px;
+  /* Efecto suave sin cambiar el tamaño */
+  padding-left: 18px; /* Mínimo ajuste para efecto */
 }
 
 /* --- LÍNEA TURQUESA ANIMADA --- */
@@ -123,11 +111,10 @@ nav {
   bottom: 0;
   height: 3px;
   width: 100%;
-  background-color: #40E0D0; /* Turquesa */
+  background-color: turquoise;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
-  z-index: 1;
 }
 .submenu li:hover::before {
   transform: scaleX(1);
