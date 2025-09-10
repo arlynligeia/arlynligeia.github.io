@@ -1552,26 +1552,24 @@ document.addEventListener("DOMContentLoaded", function () {
     'science', 'bemypatron', 'contact', 'store', 'cart'
   ];
 
-  const allSections = document.querySelectorAll("section");
+  // Seleccionar solo las secciones principales, no el footer
+  const allSections = document.querySelectorAll("section:not(footer)");
   const menuLinks = document.querySelectorAll(".menu-link");
+  const footer = document.querySelector("footer");
 
-  // Función mejorada: usar opacidad y posición en vez de display
   function showSection(sectionId) {
     allSections.forEach(section => {
       if (section.id === sectionId) {
-        section.style.opacity = "1";
-        section.style.visibility = "visible";
-        section.style.position = "relative";
+        section.style.display = "block";
+        // Asegurar que el footer se muestre
+        if (footer) footer.style.display = "block";
       } else {
-        section.style.opacity = "0";
-        section.style.visibility = "hidden";
-        section.style.position = "absolute";
-        section.style.top = "0";
-        section.style.left = "0";
+        section.style.display = "none";
       }
     });
   }
 
+  // El resto del script igual...
   function navigateToSection(sectionId, scrollBehavior = 'smooth') {
     if (!mainSections.includes(sectionId)) return;
     
@@ -1589,7 +1587,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 50);
   }
 
-  // El resto del script igual...
+  // Event listeners y resto del código igual...
   menuLinks.forEach(link => {
     link.addEventListener("click", function (e) {
       e.preventDefault();
@@ -1598,30 +1596,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Event listeners para títulos
-  allSections.forEach(section => {
-    const title = section.querySelector('h1, h2, h3, h4, h5, h6');
-    if (title) {
-      title.style.cursor = 'pointer';
-      title.addEventListener("click", function () {
-        navigateToSection(section.id);
-      });
-    }
-  });
-
-  function handleInitialNavigation() {
-    if (window.location.hash) {
-      const hash = window.location.hash.substring(1);
-      if (mainSections.includes(hash)) {
-        navigateToSection(hash, 'auto');
-        return;
-      }
-    }
-    navigateToSection('home', 'auto');
-  }
-
-  handleInitialNavigation();
-  window.addEventListener("hashchange", handleInitialNavigation);
+  // ... resto del script
 });
 </script>
 <!-- FIN SCRIP PARA EL MENÚ-->      
