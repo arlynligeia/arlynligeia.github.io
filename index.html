@@ -2092,101 +2092,65 @@ location.hash = "#shippinginformation";
 
 
 
-      
-      
-
-
-
-
-  
-
-
-
-
-
-
 
       
-      
 
-     
-
-
-  
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER-->      
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const allSections = document.querySelectorAll("section");
-
-  function showSectionById(id) {
-    // Ocultar todas las secciones
-    allSections.forEach(section => section.style.display = "none");
-
-    // Mostrar la sección pedida
-    const target = document.getElementById(id);
-    if (target) {
-      target.style.display = "block";
-      target.scrollIntoView({ behavior: "smooth" });
-
-      // Actualizar la URL sin recargar
-      history.pushState(null, "", "#" + id);
-    }
-  }
-
-  // --- Enlaces del footer ---
-  const privacyLink = document.getElementById("show-privacy-policy");
-  const termsLink = document.getElementById("show-terms");
-
-  if (privacyLink) {
-    privacyLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      showSectionById("privacy-policy");
-    });
-  }
-
-  if (termsLink) {
-    termsLink.addEventListener("click", function (e) {
-      e.preventDefault();
-      showSectionById("terms");
-    });
-  }
-
-  // --- Enlaces de los títulos (los <a href="#privacy-policy"> y <a href="#terms">) ---
-  document.querySelectorAll(".privacypolicy-title a, .terms-title a").forEach(link => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const id = this.getAttribute("href").substring(1); // quita el "#"
-      showSectionById(id);
-    });
-  });
-
-  // --- Al cargar la página, revisar el hash en la URL ---
-  if (window.location.hash) {
-    const id = window.location.hash.substring(1);
-    showSectionById(id);
-  }
+const privacyLink = document.getElementById("show-privacy-policy");
+const allSections = document.querySelectorAll("section");
+if (privacyLink) {
+privacyLink.addEventListener("click", function (e) {
+e.preventDefault();
+// Oculta todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Muestra la sección de Privacy Policy
+const privacySection = document.getElementById("privacy-policy");
+if (privacySection) {
+privacySection.style.display = "block";
+privacySection.scrollIntoView({ behavior: "smooth" });
+}
+});
+}
 });
 </script>
+<!-- FIN SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER--> 
 
 
 
 
+      
+<!-- SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER--> 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const termsLink = document.getElementById("show-terms");
+const allSections = document.querySelectorAll("section");
+if (termsLink) {
+termsLink.addEventListener("click", function (e) {
+e.preventDefault();
+// Oculta todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Muestra la sección de Terms & Conditions
+const termsSection = document.getElementById("terms");
+if (termsSection) {
+termsSection.style.display = "block";
+termsSection.scrollIntoView({ behavior: "smooth" });
+}
+});
+}
+});
+</script>
+<!-- FIN SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER-->
 
-       
+
+
+
+      
 <!-- FOOTER -->
 <footer class="footer-custom">
 <div class="footer-nombre">ARLYN LIGEIA</div>
