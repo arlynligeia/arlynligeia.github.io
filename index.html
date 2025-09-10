@@ -2128,43 +2128,62 @@ location.hash = "#shippinginformation";
 
 
 
-      
-       <!-- Script para mostrar Privacy Policy desde el footer -->
+<!-- SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER-->      
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const privacyLink = document.getElementById("show-privacy-policy");
-    const allSections = document.querySelectorAll("section");
-
-    if (privacyLink) {
-      privacyLink.addEventListener("click", function (e) {
-        e.preventDefault();
-
-        // Oculta todas las secciones
-        allSections.forEach(section => {
-          section.style.display = "none";
-        });
-
-        // Muestra la sección de Privacy Policy
-        const privacySection = document.getElementById("privacy-policy");
-        if (privacySection) {
-          privacySection.style.display = "block";
-          privacySection.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    }
-  });
+document.addEventListener("DOMContentLoaded", function () {
+const privacyLink = document.getElementById("show-privacy-policy");
+const allSections = document.querySelectorAll("section");
+if (privacyLink) {
+privacyLink.addEventListener("click", function (e) {
+e.preventDefault();
+// Oculta todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Muestra la sección de Privacy Policy
+const privacySection = document.getElementById("privacy-policy");
+if (privacySection) {
+privacySection.style.display = "block";
+privacySection.scrollIntoView({ behavior: "smooth" });
+}
+});
+}
+});
 </script>
+<!-- FIN SCRIPT PARA MOSTRAR PRIVACY POLICY DESDE EL FOOTER--> 
 
 
 
 
       
+<!-- SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER--> 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+const termsLink = document.getElementById("show-terms");
+const allSections = document.querySelectorAll("section");
+if (termsLink) {
+termsLink.addEventListener("click", function (e) {
+e.preventDefault();
+// Oculta todas las secciones
+allSections.forEach(section => {
+section.style.display = "none";
+});
+// Muestra la sección de Terms & Conditions
+const termsSection = document.getElementById("terms");
+if (termsSection) {
+termsSection.style.display = "block";
+termsSection.scrollIntoView({ behavior: "smooth" });
+}
+});
+}
+});
+</script>
+<!-- FIN SCRIPT PARA MOSTRAR TERMS & CONDITIONS DESDE EL FOOTER--> 
 
 
 
 
-
-  
+       
 <!-- FOOTER -->
 <footer class="footer-custom">
 <div class="footer-nombre">ARLYN LIGEIA</div>
