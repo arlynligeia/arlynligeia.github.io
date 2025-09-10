@@ -1557,7 +1557,7 @@ menuLinks.forEach(link => {
 link.addEventListener("click", function (e) {
 e.preventDefault();
 const targetId = this.dataset.section;
-// Oculta todas las secciones
+// OCULTA TODAS LAS SECCIONES
 sections.forEach(section => {
 if (section.id === targetId) {
 section.style.display = "block";
@@ -1565,7 +1565,7 @@ section.style.display = "block";
 section.style.display = "none";
 }
 });
-// Scroll al inicio de la sección activada
+// SCROLL AL INICIO ACTIVADA
 const targetSection = document.getElementById(targetId);
 if (targetSection) {
 targetSection.scrollIntoView({ behavior: "smooth" });
@@ -1573,25 +1573,38 @@ history.pushState(null, "", "#" + targetId);
 }
 });
 });
-  /* 🔽🔽🔽 AQUI EMPIEZA LO QUE AGREGAS 🔽🔽🔽 */
-  // --- Manejo de recarga con hash ---
-  if (window.location.hash) {
-    const targetId = window.location.hash.substring(1); // quita el "#"
-    const targetSection = document.getElementById(targetId);
+/* 🔽🔽🔽 AQUI REEMPLAZAS EL BLOQUE DE RELOAD 🔽🔽🔽 */
+if (window.location.hash) {
+  const raw = window.location.hash.substring(1); // quita el "#"
+  // Si el hash tiene guion, lo tratamos como parent-child
+  if (raw.includes("-")) {
+    const [parentId, childId] = raw.split("-", 2);
+    const parentSection = document.getElementById(parentId);
+    const childElement = document.getElementById(childId);
 
-    if (targetSection) {
-      // Oculta todas menos la que toca
-      sections.forEach(section => {
-        section.style.display = (section.id === targetId) ? "block" : "none";
-      });
+    if (parentSection) {
+      // Mostrar solo la sección madre
+      sections.forEach(s => s.style.display = (s.id === parentId) ? "block" : "none");
 
-      // Hace scroll automático después de un pequeño delay
+      // Scroll a la subsección (si existe) o al inicio de la madre
       setTimeout(() => {
-        targetSection.scrollIntoView({ behavior: "smooth" });
+        if (childElement) childElement.scrollIntoView({ behavior: "smooth" });
+        else parentSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  } else {
+    // Hash sin guion: solo sección madre
+    const parentSection = document.getElementById(raw);
+    if (parentSection) {
+      sections.forEach(s => s.style.display = (s.id === raw) ? "block" : "none");
+      setTimeout(() => {
+        parentSection.scrollIntoView({ behavior: "smooth" });
       }, 100);
     }
   }
-  /* 🔼🔼🔼 AQUI TERMINA LO QUE AGREGAS 🔼🔼🔼 */
+}
+/* 🔼🔼🔼 FIN DEL BLOQUE A REEMPLAZAR 🔼🔼🔼 */
+
 
 });
 </script>
