@@ -1,48 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARLYN LIGEIA</title>
-<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="style.css">
 <!-- FUENTES -->
-<!-- ORBITRON: TÍTULOS Y BOTONES -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
-<!-- SHARE TECH MONO: TEXTOS -->
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<!-- RAJDHANI: SUBMENUS Y TEXTOS SECUNDARIOS -->
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
-</head>
-     
-<body>
 
+<!-- ✅ CSS TEMPORAL -->
+<style>
+.subsection {
+display: block !important;
+margin: 40px 0;
+}
+.main-section {
+display: block !important;  /* ← AÑADE ESTA LÍNEA */
+margin: 40px 0;
+}
+</style>
+<!-- ✅ FIN CSS TEMPORAL -->
+     
+</head>
+  
+<body>
+  
 <header>
-      
+  
 <h1 class="site-title">ARLYN LIGEIA</h1>
-      
+
 <nav>
-      
-<!-- MENU -->      
-<ul class="menu" id="menu">    
+
+<ul class="menu" id="menu">
 
 <!-- HOME -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="home">Home</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="home">Home</a>
 <ul class="submenu">
 <li><a href="#socialmediacontent" class="submenu-button">Social Media Content</a></li>
-<li><a href="#tiktokhighlight" class="submenu-button">Tiktok Highlight</a></li>     
+<li><a href="#tiktokhighlight" class="submenu-button">Tiktok Highlight</a></li>
 <li><a href="#youtubehighlight" class="submenu-button">Youtube Highlight</a></li>
 </ul>
-</li>      
-
+</li>
+  
 <!-- BIOGRAPHY -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="biography">Biography</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="biography">Biography</a>
 </li>
-
+              
 <!-- FILM -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="film">Film</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="film">Film</a>
 <ul class="submenu">
 <li><a href="#featurefilm" class="submenu-button">Feature Film</a></li>
 <li><a href="#shortfilm" class="submenu-button">Short Film</a></li>
@@ -51,21 +61,21 @@
 <li><a href="#soundtrack" class="submenu-button">Soundtrack</a></li>
 </ul>
 </li>
-
+              
 <!-- MUSIC -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="music">Music</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="music">Music</a>
 <ul class="submenu">
-<li><a href="#singles" class="submenu-button">Singles</a></li>   
+<li><a href="#singles" class="submenu-button">Singles</a></li>
 <li><a href="#album" class="submenu-button">Album</a></li>
 <li><a href="#videomusic" class="submenu-button">Music Video</a></li>
-<li><a href="#lyrics" class="submenu-button">Lyrics</a></li>      
+<li><a href="#lyrics" class="submenu-button">Lyrics</a></li>
 </ul>
 </li>
 
 <!-- FASHION -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="fashion">Fashion</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="fashion">Fashion</a>
 <ul class="submenu">
 <li><a href="#sscollection" class="submenu-button">SS Collection</a></li>
 <li><a href="#fwcollection" class="submenu-button">FW Collection</a></li>
@@ -74,47 +84,45 @@
 <li><a href="#inspiredbyfilm" class="submenu-button">Inspired by Film</a></li>
 </ul>
 </li>
-
-<!-- ART -->      
+                
+<!-- ART -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="art">Art</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="art">Art</a>
 <ul class="submenu">
 <li><a href="#painting" class="submenu-button">Painting</a></li>
-<li><a href="#poetry" class="submenu-button">Poetry</a></li>
 </ul>
 </li>
-
+                
 <!-- SCIENCE -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="science">Science</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="science">Science</a>
 <ul class="submenu">
 <li><a href="#researcharticle" class="submenu-button">Research Article</a></li>
-<li><a href="#researchproject" class="submenu-button">Research Project</a></li>
 </ul>
 </li>
-
+                
 <!-- BE MY PATRON -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="bemypatron">Be my Patron</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="bemypatron">Be my Patron</a>
 <ul class="submenu">
 <li><a href="#supportmywork" class="submenu-button">Support my Work</a></li>
 <li><a href="#supportmystudies" class="submenu-button">Support my Studies</a></li>
 <li><a href="#gifts" class="submenu-button">Gifts</a></li>
 </ul>
 </li>
-      
+              
 <!-- CONTACT -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="contact">Contact</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="contact">Contact</a>
 <ul class="submenu">
 <li><a href="#contactforwork" class="submenu-button">Contact for Work</a></li>
 <li><a href="#contactforfans" class="submenu-button">Contact for Fans</a></li>
 </ul>
 </li>
-
+                
 <!-- STORE -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="store">Store</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="store">Store</a>
 <ul class="submenu">
 <li><a href="#digitalproducts" class="submenu-button">Digital Products</a></li>
 <li><a href="#physicalproducts" class="submenu-button">Physical Products</a></li>
@@ -123,32 +131,22 @@
 
 <!-- CART -->
 <li>
-<a href="#" class="menu-button menu-link" data-section="cart">Cart</a>
+<a href="javascript:void(0)" class="menu-button menu-link" data-section="cart">Cart</a>
 </li>
 
 </ul>
-
+  
 </nav>
-      
+    
 </header>
 
-
-
-
-
-
-
-
-
-
-      
-
-<!-- SECCIÓN HOME-->
-<section id="home" class="home-section main-section">  
+<main>
+        
+<!-- SECCIÓN HOME -->
+<section id="home" class="home-section main-section">
 <!-- INICIO CARRUSEL -->
 <div class="carousel-container">
 <!-- CONTENEDOR NUEVO A LA IZQUIERDA -->
-<!-- TEXTO DE BIENVENIDA -->      
 <div class="side-info-box">
 <div class="side-info-text">
 <h2 class="side-info-title">
@@ -159,7 +157,7 @@
 <p class="side-info-description">
 I want a crab fishing boat and a patron to fund my delirium…
 </p>
-  <div class="social-icons-grid">
+<div class="social-icons-grid">
 <!-- Fila 1 -->
 <div class="social-row">
 <a href="https://www.youtube.com/@arlynligeia" target="_blank">
@@ -178,43 +176,45 @@ I want a crab fishing boat and a patron to fund my delirium…
 <img src="assets/assets/Spotify.png" alt="Spotify">
 </a>
 </div>
-
-  <!-- Fila 2 -->
-  <div class="social-row">
-    <a href="https://www.instagram.com/arlynligeia/?next=%2F%40arlynligeia%2F" target="_blank">
-      <img src="assets/assets/Instagram.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/@arlynligeia" target="_blank">
-      <img src="assets/assets/Facebook.png" alt="Facebook">
-    </a>
-        <a href="https://www.facebook.com/@arlynligeiaofficial" target="_blank">
-      <img src="assets/assets/Facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.twitter.com/@arlynligeia" target="_blank">
-      <img src="assets/assets/X.png" alt="X">
-    </a>
-    <a href="https://www.tumblr.com/@arlynligeia" target="_blank">
-      <img src="assets/assets/Tumblr.png" alt="Tumblr">
-    </a>
-    <a href="https://www.pinterest.com/arlynligeia/_profile/" target="_blank">
-      <img src="assets/assets/Pinterest.png" alt="Pinterest">
- </a>
-        </div>
-      </div><!-- /social-icons-grid -->
-
-    </div><!-- /side-info-text -->
-  </div><!-- /side-info-box -->
+<!-- Fila 2 -->
+<div class="social-row">
+<a href="https://www.instagram.com/arlynligeia/?next=%2F%40arlynligeia%2F" target="_blank">
+<img src="assets/assets/Instagram.png" alt="Instagram">
+</a>
+<a href="https://www.facebook.com/@arlynligeia" target="_blank">
+<img src="assets/assets/Facebook.png" alt="Facebook">
+</a>
+<a href="https://www.facebook.com/@arlynligeiaofficial" target="_blank">
+<img src="assets/assets/Facebook.png" alt="Facebook">
+</a>
+<a href="https://www.twitter.com/@arlynligeia" target="_blank">
+<img src="assets/assets/X.png" alt="X">
+</a>
+<a href="https://www.tumblr.com/@arlynligeia" target="_blank">
+<img src="assets/assets/Tumblr.png" alt="Tumblr">
+</a>
+<a href="https://www.pinterest.com/arlynligeia/_profile/" target="_blank">
+<img src="assets/assets/Pinterest.png" alt="Pinterest">
+</a>
+</div>
+</div>
+</div>
+</div>
 <!-- ÍMAGENES DEL CARRUSEL -->
 <div class="carousel">
-<img src="assets/assets/ALCP 2.jpg" class="carousel-image active" id="img1" />
-<img src="assets/assets/1969 Afiche promocional.jpg" class="carousel-image" id="img2" />
-<img src="assets/assets/ALCP 5.jpg" class="carousel-image" id="img3" />
+<img src="assets/assets/Primer Afiche Alone Horizontal.png" class="carousel-image active" id="img1">
+<img src="assets/assets/1969 Afiche promocional.jpg" class="carousel-image" id="img2">
+<img src="assets/assets/ALCP 5.jpg" class="carousel-image" id="img3">
 </div>
 </div>
 <!-- FIN CARRUSEL -->
-    
-<!-- SOCIAL MEDIA CONTENT -->
-<div id="socialmediacontent" class="socialmediacontent-section">
+</section>
+<!-- FIN SECCIÓN HOME -->
+
+<!-- Subsecciones de HOME -->
+
+<!-- SOCIAL MEDIA CONTENT -->  
+<section id="socialmediacontent" class="subsection">
 <div class="socialmediacontent-container">
 <h2 class="socialmediacontent-title"><a href="#home-socialmediacontent">SOCIAL MEDIA CONTENT</a></h2>  
 <!-- TABLA 1-->
@@ -324,151 +324,11 @@ I want a crab fishing boat and a patron to fund my delirium…
 </tbody>
 </table>
 </div>
-</div>
-      
-<!-- TIKTOK HIGHLIGHT -->
-<div id="tiktokhighlights" class="tiktokhighlights-section">
-<div class="tiktokhighlights-container">
-<!-- Header: título + botón en la misma fila -->
-<div class="tiktokhighlights-header">
-<h2 class="tiktokhighlights-title">
-<a href="#tiktokhighlights">TIKTOK HIGHLIGHT</a>
-</h2>
-<!-- Botón Follow a TikTok -->
-<a href="https://www.tiktok.com/@arlynligeia" target="_blank" class="tiktok-follow-button">
-FOLLOW
-</a>
-</div>    
-<!-- Primera fila de videos -->
-<div class="tiktokhighlights-videos">
-<!-- Columna 1 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 2 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529225907039472901?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 2.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 3 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-</div>
-<!-- Segunda fila de videos -->
-<div class="tiktokhighlights2-videos">
-<!-- Columna 1 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 2 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529225907039472901?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 2.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 3 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-</div>
-</div>
-</div>
-<!-- FIN SOCIAL MEDIA CONTENT -->
-
-<!-- DESTACADO DE TIKTOK -->
-<div id="destacadosdetiktok" class="destacadosdetiktok-section">
-<div class="destacadosdetiktok-container">
-<!-- Header: título + botón en la misma fila -->
-<div class="destacadosdetiktok-header">
-<h2 class="destacadosdetiktok-title">
-<a href="#destacadosdetiktok">DESTACADO DE TIKTOK</a>
-</h2>
-<!-- Botón Follow a TikTok -->
-<a href="https://www.tiktok.com/@arlynligeiacp" target="_blank" class="tiktok-follow-button">
-FOLLOW
-</a>
-</div>    
-<!-- Primera fila de videos -->
-<div class="destacadosdetiktok-videos">
-<!-- Columna 1 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 2 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529225907039472901?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 2.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 3 -->
-<div class="tiktok-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-</div>
-<!-- Segunda fila de videos -->
-<div class="destacadosdetiktok2-videos">
-<!-- Columna 1 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 2 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529225907039472901?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 2.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-<!-- Columna 3 -->
-<div class="tiktok2-video-column">
-<a href="https://www.tiktok.com/@arlynligeia/video/7529770592552226054?is_from_webapp=1&sender_device=pc" target="_blank">
-<video width="100%" height="350" controls preload="metadata" muted>
-<source src="assets/assets/Video 1.mp4" type="video/mp4">
-</video>
-</a>
-</div>
-</div>
-</div>
-</div>
-
+</section>
+<!-- FIN SOCIAL MEDIA CONTENT --> 
+  
 <!-- YOUTUBE HIGHLIGHT -->
-<div id="youtubehighlight" class="youtubehighlight-section">
+<section id="youtubehighlight" class="subsection">
 <div class="youtubehighlight-container">
 <!-- TÍTULO Y BOTÓN EN LA MISMA FILA -->
 <div class="youtubehighlight-header">
@@ -546,13 +406,14 @@ allowfullscreen></iframe>
 </div>
 </div>
 </div>
-<!-- FIN YOUTUBE HIGHLIGHTS -->
 </section>
-<!-- FIN SECCIÓN HOME -->
+<!-- FIN YOUTUBE HIGHLIGHT -->
+
+<!-- Fin Subsecciones de HOME -->
 
 
-      
-<!-- SECCIÓN BIOGRAPHY-->
+  
+<!-- SECCIÓN BIOGRAPHY -->
 <section id="biography" class="biography-section main-section">
 <div class="biography-container">
 <h2 class="biography-title"><a href="#biography">BIOGRAPHY</a></h2>
@@ -566,6 +427,7 @@ With a solid academic background, she holds a degree in Psychology and, as compl
 In 2021, Ligeia directed her first audiovisual work, a music video for an independent band, marking the beginning of her path as a director. She directed the video via video call during the COVID-19 lockdown. In 2024, despite facing a severe economic crisis, she improvised with what she had at hand and managed to create her first short film. She wrote, directed, shot, starred in, and edited it herself.<br><br>
 After completing a music video and a short film, Ligeia is now in the production stage of her first feature film—entirely written, directed, shot, starred in, and edited by her. At the same time, she is working on her debut album and her first fashion collection.<br><br>
 Ligeia draws inspiration from film noir, gothic cinema, and science fiction, as well as from vaporwave and cyberpunk aesthetics. She defines her art as authentic and visceral, a space where she freely explores female sexual desire. She admires the archetype of the femme fatale, a recurring theme in her work. She refuses to be pigeonholed and opposes any prejudice, convinced that true art arises from the fusion of diverse stimuli. She firmly believes that emotion and reason can coexist in perfect harmony.
+</p>
 </div>    
 <!-- Columna 2 Imagen -->
 <div class="biography-image">
@@ -577,18 +439,29 @@ Ligeia draws inspiration from film noir, gothic cinema, and science fiction, as 
 <!-- FIN SECCIÓN BIOGRAPHY -->
 
 
-      
-<!-- SECCIÓN FILM-->
-<section id="film" class="film-section main-section">  
+  
+<!-- SECCIÓN FILM -->
+<section id="film" class="main-section">
+<!-- Banner estilo carrusel pero estático -->
+<div class="store-carousel-container">
+<div class="store-carousel">
+<img src="assets/assets/Primer Afiche Alone Horizontal 2.png" class="store-carousel-image active" />
+</div>
+</div>
+</section>
+<!-- FIN SECCIÓN FILM (VISIBLE) -->
+
+<!-- Subsecciones de FILM -->
+
 <!-- FEATURE FILM -->
-<div id="featurefilm" class="featurefilm-section">
+<section id="featurefilm" class="subsection">
 <div class="featurefilm-container">
 <h2 class="featurefilm-title"><a href="#film-featurefilm">FEATURE FILM</a></h2>
 <!-- Columnas -->      
 <div class="featurefilm-columns">
 <!-- Columna 1 Imagen -->
 <div class="featurefilm-image">
-<img src="assets/assets/Afiche oficial Alone.jpg" alt="Afiche oficial Alone">
+<img src="assets/assets/Primer afiche Alone Vertical.png" alt="Primer afiche Alone Vertical">
 </div>      
 <!-- Columna 2 Texto -->
 <div class="featurefilm-text-side">
@@ -613,10 +486,11 @@ Filming is currently underway.
 </p>
 </div>
 </div>
-</div>
-      
-<!-- SHORT FILM-->
-<div id="shortfilm" class="shortfilm-section">
+</section>
+<!-- FIN FEATURE FILM --> 
+   
+<!-- SHORT FILM -->
+<section id="shortfilm" class="subsection">
 <div class="shortfilm-container">
 <h2 class="shortfilm-title"><a href="#film-shortfilm">SHORT FILM</a></h2>
 <!-- Subtitulo -->        
@@ -636,10 +510,11 @@ EL INFIERNO DE OZUL is a silent short film written, directed, shot, starred in, 
 With very limited resources and facing economic hardship, Ligeia was forced to improvise with what she had at hand, transforming those limitations into creative strength. This short film stands as a testament to her belief in art as a means of survival.
 </p>
 </div>
-</div>
-     
-<!-- MUSIC VIDEO DIRECTION-->
-<div id="musicvideodirection" class="musicvideodirection-section">
+</section>
+<!-- FIN SHORT FILM -->
+
+<!-- MUSIC VIDEO DIRECTION -->
+<section id="musicvideodirection" class="subsection">
 <div class="musicvideodirection-container">
 <h2 class="musicvideodirection-title"><a href="#film-musicvideodirection">MUSIC VIDEO DIRECTION</a></h2>
 <!-- Subtitulo -->       
@@ -661,15 +536,23 @@ She also edited the entire music video on her own.<br><br>
 The video explores Gothic Romanticism as its central theme, delving into fantasy and deep emotions such as solitude, presented through a melancholic and evocative aesthetic.
 </p>
 </div>
-</div>
 </section>
+<!-- FIN MUSIC VIDEO DIRECTION -->
+  
+<!-- Fin Subsecciones de FILM -->
 
+   
 
-      
-<!-- SECCIÓN MUSIC-->
-<section id="music" class="music-section main-section"> 
+<!-- SECCIÓN MUSIC -->
+<section id="music" class="music-section main-section">
+<!-- Contenido introductorio de MUSIC puede ir aquí si lo deseas -->
+</section>
+<!-- FIN SECCIÓN MUSIC -->
+
+<!-- Subsecciones de MUSIC -->
+     
 <!-- ALBUM -->
-<div id="album" class="album-section">
+<section id="album" class="subsection">
 <div class="album-container">
 <h2 class="album-title"><a href="#music-album">ALBUM</a></h2>
 <!-- Columnas -->      
@@ -699,15 +582,23 @@ The storyline and lyrics are fully completed. The project is currently in the co
 </p>
 </div>
 </div>
-</div>
 </section>
+<!-- FIN ALBUM -->
+     
+<!-- Fin Subsecciones de MUSIC -->
 
 
-      
-<!-- SECCIÓN FASHION-->
-<section id="fashion" class="fashion-section main-section"> 
-<!-- FW COLLECTION SECTION -->
-<div id="fwcollection" class="fwcollection-section">
+     
+<!-- SECCIÓN FASHION -->
+<section id="fashion" class="fashion-section main-section">
+<!-- Contenido introductorio de FASHION puede ir aquí si lo deseas -->
+</section>
+<!-- FIN SECCIÓN FASHION -->
+
+<!-- Subsecciones de FASHION -->
+     
+<!-- FW COLLECTION -->
+<section id="fwcollection" class="subsection">
 <div class="fwcollection-container">
 <h2 class="fwcollection-title"><a href="#fashion-fwcollection">FW COLLECTION</a></h2>
 <!-- Imagen -->
@@ -727,15 +618,23 @@ It is aimed at both women and men who enjoy experimenting with fashion and break
 The collection is currently in the development phase, with finalized sketches and prototypes in the making.
 </p>
 </div>
-</div>
 </section>
+<!-- FIN FW COLLECTION -->
+     
+<!-- Fin Subsecciones de FASHION -->
 
 
-      
+
 <!-- SECCIÓN SCIENCE -->
-<section id="science" class="science-section main-section"> 
-<!-- RESEARCH ARTICLE -->      
-<div id="researcharticle" class="researcharticle-section">
+<section id="science" class="science-section main-section">
+<!-- Contenido introductorio de SCIENCE puede ir aquí si lo deseas -->
+</section>
+<!-- FIN SECCIÓN SCIENCE -->
+
+<!-- Subsecciones de SCIENCE -->
+     
+<!-- RESEARCH ARTICLE -->
+<section id="researcharticle" class="subsection">
 <div class="researcharticle-container">
 <!-- Header: título + botón en la misma fila -->
 <div class="researcharticle-header">
@@ -767,12 +666,14 @@ class="researcharticle3-button">
 NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ
 </a>
 </div>
-</div>
 </section>
+<!-- FIN RESEARCH ARTICLE -->
+     
+<!-- Fin Subsecciones de SCIENCE -->
 
 
-      
-<!-- SECCIÓN BE MY PATRON-->
+
+<!-- SECCIÓN BE MY PATRON -->
 <section id="bemypatron" class="bemypatron-section main-section"> 
 <div class="bemypatron-container">
 <h2 class="bemypatron-title"><a href="#bemypatron">BE MY PATRON</a></h2>
@@ -780,8 +681,13 @@ NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ
 Ligeia extends an invitation, to become her patron and, together, to forge a new chapter on the canvas of art. Patronage takes many forms, and you can be a part of this story by supporting her work and studies, or by sending gifts that enriches her creative.
 </p>
 </div>
-<!-- SUPPORT MY WORK-->
-<div id="supportmywork" class="supportmywork-section">
+</section>
+<!-- FIN SECCIÓN BE MY PATRON -->
+
+<!-- Subsecciones de BE MY PATRON -->
+     
+<!-- SUPPORT MY WORK -->
+<section id="supportmywork" class="subsection">
 <div class="supportmywork-container">
 <h2 class="supportmywork-title"><a href="#bemypatron-supportmywork">SUPPORT MY WORK</a></h2>
 <p class="supportmywork-description">
@@ -793,9 +699,11 @@ DONATE WITH PAYPAL
 </a>
 </div>
 </div>
-</div>
-<!-- SUPPORT MY STUDIES-->
-<div id="supportmystudies" class="supportmystudies-section">
+</section>
+<!-- FIN SUPPORT MY WORK -->
+
+<!-- SUPPORT MY STUDIES -->
+<section id="supportmystudies" class="subsection">
 <div class="supportmystudies-container">
 <h2 class="supportmystudies-title"><a href="#bemypatron-supportmystudies">SUPPORT MY STUDIES</a></h2>
 <p class="supportmystudies-description">
@@ -807,9 +715,11 @@ DONATE WITH PAYPAL
 </a>
 </div>
 </div>
-</div>
-<!-- GIFTS-->
-<div id="gifts" class="gifts-section">
+</section>
+<!-- FIN SUPPORT MY STUDIES -->
+
+<!-- GIFTS -->
+<section id="gifts" class="subsection">
 <div class="gifts-container">
 <h2 class="gifts-title"><a href="#bemypatron-gifts">GIFTS</a></h2>
 <p class="gifts-description">
@@ -821,25 +731,33 @@ DONATE WITH PAYPAL
 </a>
 </div>
 </div>
-</div>
 </section>
+<!-- FIN GIFTS -->
+     
+<!-- Fin Subsecciones de BE MY PATRON -->
 
 
-      
-<!-- SECCIÓN CONTACT-->
-<section id="contact" class="contact-section main-section"> 
-<!-- CONTACT FOR WORK-->
-<div id="contactforwork" class="contactforwork-section">
+
+<!-- SECCIÓN CONTACT -->
+<section id="contact" class="contact-section main-section">
+<!-- Contenido introductorio de CONTACT puede ir aquí si lo deseas -->
+</section>
+<!-- FIN SECCIÓN CONTACT -->
+
+<!-- Subsecciones de CONTACT -->
+     
+<!-- CONTACT FOR WORK -->
+<section id="contactforwork" class="subsection">
 <div class="contactforwork-container">
 <h2 class="contactforwork-title"><a href="#contact-contactforwork">CONTACT FOR WORK</a></h2>
 <!-- NOMBRES Y RECUADROS -->
 <form action="https://formspree.io/f/xwpqdyaq" method="POST">
-<label for="email" class="contactforwork-label">EMAIL</label>
-<input type="email" id="email" name="email" class="contactforwork-input" required>     
-<label for="firstname" class="contactforwork-label">FIRST NAME</label>
-<input type="text" id="firstname" name="firstname" class="contactforwork-input" required>
-<label for="lastname" class="contactforwork-label">LAST NAME</label>
-<input type="text" id="lastname" name="lastname" class="contactforwork-input" required>
+<label for="email-work" class="contactforwork-label">EMAIL</label>
+<input type="email" id="email-work" name="email" class="contactforwork-input" required>     
+<label for="firstname-work" class="contactforwork-label">FIRST NAME</label>
+<input type="text" id="firstname-work" name="firstname" class="contactforwork-input" required>
+<label for="lastname-work" class="contactforwork-label">LAST NAME</label>
+<input type="text" id="lastname-work" name="lastname" class="contactforwork-input" required>
 <!-- ELEGIR OPCIÓN DE TEMA -->
 <label for="topic" class="contactforwork-label">TOPIC</label>
 <select id="topic" name="topic" class="contactforwork-input" required>
@@ -851,16 +769,17 @@ DONATE WITH PAYPAL
 <option value="fashion">Fashion</option>
 <option value="art">Art</option>
 </select>
-<label for="message" class="contactforwork-label">MESSAGE</label>
-<textarea id="message" name="message" class="contactforwork-textarea" rows="6" required></textarea>
+<label for="message-work" class="contactforwork-label">MESSAGE</label>
+<textarea id="message-work" name="message" class="contactforwork-textarea" rows="6" required></textarea>
 <!-- BOTÓN -->      
 <button type="submit" class="contactforwork-button">SUBMIT</button>
 </form>
 </div>
-<!-- FIN CONTACT FOR WORK-->
+</section>
+<!-- FIN CONTACT FOR WORK -->
 
-<!-- DIRECT CONTACT-->
-<div id="directcontact" class="directcontact-section">
+<!-- DIRECT CONTACT -->
+<section id="directcontact" class="subsection">
 <div class="directcontact-container">
 <h2 class="directcontact-title"><a href="#contact-directcontact">DIRECT CONTACT</a></h2>
 <!-- TABLA 1-->
@@ -912,48 +831,46 @@ DONATE WITH PAYPAL
 <!-- COLUMNA 2 -->
 <td class="directcontact-email-col email-col label-email">
 <span class="directcontact-white-cell">arlynligeiafashion@gmail.com</span>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
-</div>
+</section>
 <!-- FIN DIRECT CONTACT -->
-</div>
-<!-- FIN CONTACT FOR WORK-->
-      
-<!-- CONTACT FOR FANS-->
-<div id="contactforfans" class="contactforfans-section">
+
+<!-- CONTACT FOR FANS -->
+<section id="contactforfans" class="subsection">
 <div class="contactforfans-container">
 <h2 class="contactforfans-title"><a href="#contact-contactforfans">CONTACT FOR FANS</a></h2>    
 <!-- NOMBRES Y RECUADROS -->
 <form action="https://formspree.io/f/mvgqjllr" method="POST">      
-<label for="email" class="contactforfans-label">EMAIL</label>
-<input type="email" id="email" name="email" class="contactforfans-input" required>     
-<label for="firstname" class="contactforfans-label">FIRST NAME</label>
-<input type="text" id="firstname" name="firstname" class="contactforfans-input" required>
-<label for="lastname" class="contactforfans-label">LAST NAME</label>
-<input type="text" id="lastname" name="lastname" class="contactforfans-input" required>    
-<label for="message" class="contactforfans-label">MESSAGE</label>
-<textarea id="message" name="message" class="contactforfans-textarea" rows="6" required></textarea>
+<label for="email-fans" class="contactforfans-label">EMAIL</label>
+<input type="email" id="email-fans" name="email" class="contactforfans-input" required>     
+<label for="firstname-fans" class="contactforfans-label">FIRST NAME</label>
+<input type="text" id="firstname-fans" name="firstname" class="contactforfans-input" required>
+<label for="lastname-fans" class="contactforfans-label">LAST NAME</label>
+<input type="text" id="lastname-fans" name="lastname" class="contactforfans-input" required>    
+<label for="message-fans" class="contactforfans-label">MESSAGE</label>
+<textarea id="message-fans" name="message" class="contactforfans-textarea" rows="6" required></textarea>
 <!-- BOTÓN -->      
 <button type="submit" class="contactforfans-button">SUBMIT</button>
 </form>
 </div>
-</div>
-<!-- FIN CONTACT FOR FANS-->  
 </section>
-<!-- FIN SECCIÓN CONTACT -->   
+<!-- FIN CONTACT FOR FANS -->
+
+<!-- Fin Subsecciones de CONTACT -->
 
 
-      
-<!-- SECCIÓN STORE-->
+<!-- SECCIÓN STORE -->
 <section id="store" class="store-section main-section">
 <!-- Carrusel -->
 <div class="store-carousel-container">
 <div class="store-carousel">
-<img src="assets/assets/Fondociudad.png" class="store-carousel-image active" />
-<img src="assets/assets/Nuevayork.png" class="store-carousel-image" />
-<img src="assets/assets/Fondo galactico.png" class="store-carousel-image" />
+<img src="assets/assets/Fondociudad.png" class="store-carousel-image active">
+<img src="assets/assets/Nuevayork.png" class="store-carousel-image">
+<img src="assets/assets/Fondo galactico.png" class="store-carousel-image">
 </div>
 <!-- Texto centrado -->
 <div class="store-carousel-text">
@@ -961,9 +878,38 @@ WELCOME TO MY STORE
 </div>
 </div>
 <!-- Fin de carrusel-->
-      
+</section>
+<!-- FIN SECCIÓN STORE -->
+
+<!-- Subsecciones de STORE -->
+
+<!-- DIGITAL PRODUCTS -->
+<section id="digitalproducts" class="subsection">
+<div class="digitalproducts-container">
+<h2 class="digitalproducts-title"><a href="#store-digitalproducts">DIGITAL PRODUCTS</a></h2>
+<!-- Columnas -->
+<!-- Grid con 2 filas de 3 columnas -->
+<div class="digitalproducts-grid">      
+<!-- FILA 1 -->
+<a href="javascript:void(0)" class="product-card disabled">
+<img src="assets/assets/Tienda.png" alt="Film">
+<span>FILM</span>
+</a>
+<a href="javascript:void(0)" class="product-card disabled">
+<img src="assets/assets/Tienda.png" alt="Music">
+<span>MUSIC</span>
+</a>
+<a href="#fashionselection" class="product-card">
+<img src="assets/assets/Tienda.png" alt="Fashion">
+<span>FASHION</span>
+</a>
+</div>
+</div>
+</section>
+<!-- FIN DIGITAL PRODUCTS -->
+   
 <!-- PHYSICAL PRODUCTS -->
-<div id="physicalproducts" class="physicalproducts-section">
+<section id="physicalproducts" class="subsection">
 <div class="physicalproducts-container">
 <h2 class="physicalproducts-title"><a href="#store-physicalproducts">PHYSICAL PRODUCTS</a></h2>
 <!-- Columnas -->
@@ -997,11 +943,11 @@ WELCOME TO MY STORE
 </a>
 </div>
 </div>
-</div>
+</section>
 <!-- FIN PHYSICAL PRODUCTS -->
 
 <!-- SHIPPING DETAILS -->
-<div id="shippingdetails" class="shippingdetails-section">
+<section id="shippingdetails" class="subsection">
 <div class="shippingdetails-container">
 <h2 class="shippingdetails-title"><a href="#store-shippingdetails">SHIPPING DETAILS</a></h2> 
 <!-- TABLA 1-->
@@ -1059,7 +1005,6 @@ WELCOME TO MY STORE
 </tbody>
 </table>
 <!-- CAJA DE NOTAS -->
-<!-- CAJA DE NOTAS -->
 <div class="shippingdetails-notes">
 <p class="shippingdetails-description">⚠️ <strong>NOTES</strong></p>
 <p class="shippingdetails-description">Please check your package carefully before accepting it.</p>
@@ -1068,16 +1013,299 @@ WELCOME TO MY STORE
 <p class="shippingdetails-description">We are not responsible for lost or damaged items once handed over to the courier.</p>
 </div>
 </div>
-</div>
+</section>
 <!-- FIN SHIPPING DETAILS -->
-</section> <!-- 👈 cierre de store -->
-<!-- FIN SECCIÓN STORE -->
+
+<!-- Fin Subsecciones de STORE -->
 
 
-      
-<!-- TODO ESTO PERTENECE A LA PARTE FASHION SELECTION -->      
-<!-- SECCIÓN FASHION SELECTION -->
-<section id="fashionselection" class="fashionselection-section">
+     
+<!-- TODO ESTO PERTENECE A LA PARTE DIGITAL FILM SELECTION -->
+   
+<!-- DIGITAL FILM SELECTION -->
+<section id="digitalfilmselection" class="subsection">
+<div class="digitalfilmselection-container">
+<h2 class="digitalfilmselection-title"><a href="#store-digitalfilmselection">DIGITAL FILM SELECTION</a></h2>
+<!-- Columnas -->
+<!-- Grid de 2 columnas - Estructura lista para agregar más -->
+<div class="digitalfilmselection-grid">
+<!-- FILA 1 -->
+<a href="#alone" class="digitalfilmselection-card">
+<img src="assets/assets/Primer Afiche Alone Horizontal.png" alt="Alone">
+</a>
+<a href="javascript:void(0)" class="digitalfilmselection-card disabled" style="visibility: hidden;">
+<!-- Espacio reservado para futura tarjeta -->
+</a>
+</div>
+<!-- Botones -->
+<div class="digitalfilmselection-buttons">
+<button id="btn-dfs-back" onclick="location.href='#store-digitalproducts'">BACK</button>
+<button id="btn-dfs-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+</section>
+<!-- FIN DIGITAL FILM SELECTION -->
+
+<!-- ALONE -->
+<section id="alone" class="subsection">
+<div class="alone-container">
+<h2 class="alone-title">
+<a href="#store-digitalfilmselection-alone">ALONE</a>
+</h2>
+<!-- Grid de 3 columnas -->
+<div class="alone-grid">
+<!-- Fila 1 -->
+<!-- Producto 1 - Simple Sponsor -->
+<div class="product">
+<div class="alone-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Simple Sponsor">
+</div>
+<div class="alone-subtitle">SIMPLE SPONSOR</div>
+<div class="alone-price">$ 50.00</div>
+<div class="view-button-wrapper">
+<a href="#simplesponsor" class="view-button">VIEW</a>
+</div>
+</div>
+<!-- Producto 2 - Featured Sponsor -->
+<div class="product">
+<div class="alone-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Featured Sponsor">
+</div>
+<div class="alone-subtitle">FEATURED SPONSOR</div>
+<div class="alone-price">$ 100.00</div>
+<div class="view-button-wrapper">
+<a href="#featuredsponsor" class="view-button">VIEW</a>
+</div>
+</div>
+<!-- Producto 3 - Small Business Logo -->
+<div class="product">
+<div class="alone-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Small Business Logo">
+</div>
+<div class="alone-subtitle">SMALL BUSINESS LOGO</div>
+<div class="alone-price">$ 250.00</div>
+<div class="view-button-wrapper">
+<a href="#smallbusinesslogo" class="view-button">VIEW</a>
+</div>
+</div>
+<!-- Fila 2 -->
+<!-- Producto 4 - Featured Business Logo -->
+<div class="product">
+<div class="alone-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Featured Business Logo">
+</div>
+<div class="alone-subtitle">FEATURED BUSINESS LOGO</div>
+<div class="alone-price">$ 500.00</div>
+<div class="view-button-wrapper">
+<a href="#featuredbusinesslogo" class="view-button">VIEW</a>
+</div>
+</div>
+</div>
+<!-- Botones de abajo -->
+<div class="alone-buttons">
+<button id="btn-alone-back" onclick="location.href='#store-digitalfilmselection'">BACK</button>
+<button id="btn-alone-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+</section>
+<!-- FIN ALONE -->
+
+<!-- SIMPLE SPONSOR -->
+<section id="simplesponsor" class="subsection">
+<div class="simplesponsor-container">
+<h2 class="simplesponsor-title"><a href="#alone-simplesponsor">SIMPLE SPONSOR</a></h2>      
+<!-- Dos columnas -->
+<div class="simplesponsor-grid">
+<!-- Columna 1: Imagen -->
+<div class="simplesponsor-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Simple Sponsor">
+</div>
+<!-- Columna 2: Información -->
+<div class="simplesponsor-info">
+<div class="simplesponsor-subtitle">SIMPLE SPONSOR</div>
+<div class="simplesponsor-price">$50.00</div>
+<p class="simplesponsor-description">
+Simple sponsor in the credits of the film Alone. Will appear as a sponsor of the film in the list of sponsors after the film credits. The order in which your name appears in the list of sponsors is according to the purchase order.
+</p>
+</div>
+</div>
+<!-- Botones -->
+<div class="simplesponsor-buttons">
+<button class="addtocart"
+data-name="Simple Sponsor"
+data-price="50.00"
+data-image="assets/assets/Collar 1.jpg">
+ADD TO CART
+</button>
+<button class="share-button">SHARE</button>
+</div>
+<!-- Botones de abajo -->
+<div class="simplesponsor-buttons2">
+<button id="btn-simplesponsor-back" onclick="location.href='#alone'">BACK</button>
+<button id="btn-simplesponsor-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-simplesponsor-cart" data-section="cart">GO TO CART</button>
+</div>
+</div>
+</section>
+<!-- FIN SIMPLE SPONSOR -->
+
+<!-- FEATURED SPONSOR -->
+<section id="featuredsponsor" class="subsection">
+<div class="featuredsponsor-container">
+<h2 class="featuredsponsor-title"><a href="#alone-featuredsponsor">FEATURED SPONSOR</a></h2>      
+<!-- Dos columnas -->
+<div class="featuredsponsor-grid">
+<!-- Columna 1: Imagen -->
+<div class="featuredsponsor-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Featured Sponsor">
+</div>
+<!-- Columna 2: Información -->
+<div class="featuredsponsor-info">
+<div class="featuredsponsor-subtitle">FEATURED SPONSOR</div>
+<div class="featuredsponsor-price">$100.00</div>
+<p class="featuredsponsor-description">
+Featured sponsor in the credits of the film Alone. Will appear prominently as a sponsor of the film in the list of sponsors after the film credits. Your name will be highlighted and appear before simple sponsors. The order in which your name appears in the list of sponsors is according to the purchase order.
+</p>
+</div>
+</div>
+<!-- Botones -->
+<div class="featuredsponsor-buttons">
+<button class="addtocart"
+data-name="Featured Sponsor"
+data-price="100.00"
+data-image="assets/assets/Collar 1.jpg">
+ADD TO CART
+</button>
+<button class="share-button">SHARE</button>
+</div>
+<!-- Botones de abajo -->
+<div class="featuredsponsor-buttons2">
+<button id="btn-featuredsponsor-back" onclick="location.href='#alone'">BACK</button>
+<button id="btn-featuredsponsor-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-featuredsponsor-cart" data-section="cart">GO TO CART</button>
+</div>
+</div>
+</section>
+<!-- FIN FEATURED SPONSOR -->
+
+<!-- SMALL BUSINESS LOGO -->
+<section id="smallbusinesslogo" class="subsection">
+<div class="smallbusinesslogo-container">
+<h2 class="smallbusinesslogo-title"><a href="#alone-smallbusinesslogo">SMALL BUSINESS LOGO</a></h2>      
+<!-- Dos columnas -->
+<div class="smallbusinesslogo-grid">
+<!-- Columna 1: Imagen -->
+<div class="smallbusinesslogo-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Small Business Logo">
+</div>
+<!-- Columna 2: Información -->
+<div class="smallbusinesslogo-info">
+<div class="smallbusinesslogo-subtitle">SMALL BUSINESS LOGO</div>
+<div class="smallbusinesslogo-price">$250.00</div>
+<p class="smallbusinesslogo-description">
+Small business logo placement in the credits of the film Alone. Your business logo will appear in the sponsors section after the film credits. Perfect for small businesses and entrepreneurs looking for visibility. The order in which your logo appears is according to the purchase order.
+</p>
+</div>
+</div>
+<!-- Botones -->
+<div class="smallbusinesslogo-buttons">
+<button class="addtocart"
+data-name="Small Business Logo"
+data-price="250.00"
+data-image="assets/assets/Collar 1.jpg">
+ADD TO CART
+</button>
+<button class="share-button">SHARE</button>
+</div>
+<!-- Botones de abajo -->
+<div class="smallbusinesslogo-buttons2">
+<button id="btn-smallbusinesslogo-back" onclick="location.href='#alone'">BACK</button>
+<button id="btn-smallbusinesslogo-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-smallbusinesslogo-cart" data-section="cart">GO TO CART</button>
+</div>
+</div>
+</section>
+<!-- FIN SMALL BUSINESS LOGO -->
+
+<!-- FEATURED BUSINESS LOGO -->
+<section id="featuredbusinesslogo" class="subsection">
+<div class="featuredbusinesslogo-container">
+<h2 class="featuredbusinesslogo-title"><a href="#alone-featuredbusinesslogo">FEATURED BUSINESS LOGO</a></h2>      
+<!-- Dos columnas -->
+<div class="featuredbusinesslogo-grid">
+<!-- Columna 1: Imagen -->
+<div class="featuredbusinesslogo-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Featured Business Logo">
+</div>
+<!-- Columna 2: Información -->
+<div class="featuredbusinesslogo-info">
+<div class="featuredbusinesslogo-subtitle">FEATURED BUSINESS LOGO</div>
+<div class="featuredbusinesslogo-price">$500.00</div>
+<p class="featuredbusinesslogo-description">
+Featured business logo placement in the credits of the film Alone. Your business logo will appear prominently in the sponsors section after the film credits, with enhanced visibility and size. Ideal for established businesses seeking premium exposure. The order in which your logo appears is according to the purchase order.
+</p>
+</div>
+</div>
+<!-- Botones -->
+<div class="featuredbusinesslogo-buttons">
+<button class="addtocart"
+data-name="Featured Business Logo"
+data-price="500.00"
+data-image="assets/assets/Collar 1.jpg">
+ADD TO CART
+</button>
+<button class="share-button">SHARE</button>
+</div>
+<!-- Botones de abajo -->
+<div class="featuredbusinesslogo-buttons2">
+<button id="btn-featuredbusinesslogo-back" onclick="location.href='#alone'">BACK</button>
+<button id="btn-featuredbusinesslogo-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button id="btn-featuredbusinesslogo-cart" data-section="cart">GO TO CART</button>
+</div>
+</div>
+</section>
+<!-- FIN FEATURED BUSINESS LOGO -->   
+   
+<!-- FIN A LA PARTE DIGITAL FILM SELECTION -->
+
+
+   
+<!-- TODO ESTO PERTENECE A LA PARTE DIGITAL MUSIC SELECTION -->
+
+<!-- DIGITAL MUSIC SELECTION -->
+<section id="digitalmusicselection" class="subsection">
+<div class="digitalmusicselection-container">
+<h2 class="digitalmusicselection-title"><a href="#store-digitalmusicselection">DIGITAL MUSIC SELECTION</a></h2>
+<!-- Columnas -->
+<!-- Grid de 2 columnas - 1 fila -->
+<div class="digitalmusicselection-grid">
+<!-- FILA 1 -->
+<a href="#singles" class="digitalmusicselection-card">
+<img src="assets/assets/Nuevayork.png" alt="Singles">
+<span>SINGLES</span>
+</a>
+<a href="#album" class="digitalmusicselection-card">
+<img src="assets/assets/Nuevayork.png" alt="Album">
+<span>ALBUM</span>
+</a>
+</div>
+<!-- Botones -->
+<div class="digitalmusicselection-buttons">
+<button id="btn-dms-back" onclick="location.href='#store-digitalproducts'">BACK</button>
+<button id="btn-dms-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+</section>
+<!-- FIN DIGITAL MUSIC SELECTION -->
+   
+<!-- FIN A LA PARTE DIGITAL MUSIC SELECTION -->
+   
+
+
+<!-- TODO ESTO PERTENECE A LA PARTE FASHION SELECTION -->
+     
+<!-- FASHION SELECTION -->
+<section id="fashionselection" class="subsection">
 <div class="fashionselection-container">
 <h2 class="fashionselection-title"><a href="#fashionselection">FASHION SELECTION</a></h2>
 <!-- Columnas -->
@@ -1114,72 +1342,12 @@ WELCOME TO MY STORE
 </div>
 </div>
 </section>
-<!-- FIN SECCIÓN FASHION SELECTION -->
-      
-<!-- SECCIÓN JEWELRY-->
-<section id="jewelry" class="jewelry-section" style="display: none;">
-<div class="jewelry-container">
-<h2 class="jewelry-title"><a href="#jewelry">JEWELRY</a></h2>
-</div>
-<!-- FIN JEWELRY -->
+<!-- FIN FASHION SELECTION -->
 
-<!-- NECKLACES-->
-<div id="necklaces" class="necklaces-section">
-<div class="necklaces-container">
-<h2 class="necklaces-title">
-<a href="#jewelry-necklaces">NECKLACES</a>
-</h2>
-<!-- Grid de 3 columnas -->
-<div class="necklaces-grid">
-<!-- Producto 1 -->
-<div class="product">
-<div class="necklaces-image">
-<img src="assets/assets/Collar 1.jpg" alt="Collar 1">
-</div>
-<div class="necklaces-subtitle">NECKLACE 1</div>
-<div class="necklaces-price">$ 50.00</div>
-<div class="view-button-wrapper">
-<a href="#necklace1" class="view-button">VIEW</a>
-</div>
-</div>
-<!-- Producto 2 -->
-<div class="product">
-<div class="necklaces-image">
-<img src="assets/assets/Collar 2.jpg" alt="Collar 2">
-</div>
-<div class="necklaces-subtitle">NECKLACE 2</div>
-<div class="necklaces-price">$ 50.00</div>
-<div class="view-button-wrapper">
-<a href="#necklace2" class="view-button">VIEW</a>
-</div>
-</div>
-<!-- Producto 3 -->
-<div class="product">
-<div class="necklaces-image">
-<img src="assets/assets/Collar 3.jpg" alt="Collar 3">
-</div>
-<div class="necklaces-subtitle">NECKLACE 3</div>
-<div class="necklaces-price">$ 50.00</div>
-<div class="view-button-wrapper">
-<a href="#necklace3" class="view-button">VIEW</a>
-</div>
-</div>
-</div>
-<!-- Botones de abajo -->
-<div class="necklaces-buttons">
-<button id="btn-necklaces-back" onclick="location.href='#fashionselection'">BACK</button>
-<button id="btn-necklaces-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-</div>
-</div> 
-</div>
-<!-- FIN NECKLACES -->
-</section>
-<!-- FIN SECCIÓN JEWELRY -->
- 
-<!-- SECCIÓN INDEPENDIENTE NECKLACE 1 -->
-<section id="necklace1" class="necklace1-section" style="display: none;">
+<!-- NECKLACE 1 -->
+<section id="necklace1" class="subsection">
 <div class="necklace1-container">
-<h2 class="necklace1-title"><a href="#necklace1">NECKLACE 1</a></h2>      
+<h2 class="necklace1-title"><a href="#jewelry-necklace1">NECKLACE 1</a></h2>      
 <!-- Dos columnas -->
 <div class="necklace1-grid">
 <!-- Columna 1: Imagen -->
@@ -1217,18 +1385,18 @@ ADD TO CART (PE)
 </div>
 <!-- Botones de abajo -->
 <div class="necklace1-buttons2">
-<button id="btn-necklace1-back" onclick="location.href='#jewelry-necklaces'">BACK</button>
+<button id="btn-necklace1-back" onclick="location.href='#jewelry'">BACK</button>
 <button id="btn-necklace1-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
 <button id="btn-necklace1-cart" data-section="cart">GO TO CART</button>
 </div>
 </div>
 </section>
-<!-- FIN SECCIÓN INDEPENDIENTE NECKLACE 1 -->
+<!-- FIN NECKLACE 1 -->
 
-<!-- SECCIÓN INDEPENDIENTE NECKLACE 2 -->
-<section id="necklace2" class="necklace2-section" style="display: none;">
+<!-- NECKLACE 2 -->
+<section id="necklace2" class="subsection">
 <div class="necklace2-container">
-<h2 class="necklace2-title"><a href="#necklace2">NECKLACE 2</a></h2>      
+<h2 class="necklace2-title"><a href="#jewelry-necklace2">NECKLACE 2</a></h2>      
 <!-- Dos columnas -->
 <div class="necklace2-grid">
 <!-- Columna 1: Imagen -->
@@ -1266,18 +1434,18 @@ ADD TO CART (PE)
 </div>
 <!-- Botones de abajo -->
 <div class="necklace2-buttons2">
-<button id="btn-necklace2-back" onclick="location.href='#jewelry-necklaces'">BACK</button>
+<button id="btn-necklace2-back" onclick="location.href='#jewelry'">BACK</button>
 <button id="btn-necklace2-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
 <button id="btn-necklace2-cart" data-section="cart">GO TO CART</button>
 </div>
 </div>
 </section>
-<!-- FIN SECCIÓN INDEPENDIENTE NECKLACE 2 -->
+<!-- FIN NECKLACE 2 -->
 
-<!-- SECCIÓN INDEPENDIENTE NECKLACE 3 -->
-<section id="necklace3" class="necklace3-section" style="display: none;">
+<!-- NECKLACE 3 -->
+<section id="necklace3" class="subsection">
 <div class="necklace3-container">
-<h2 class="necklace3-title"><a href="#necklace3">NECKLACE 3</a></h2>      
+<h2 class="necklace3-title"><a href="#jewelry-necklace3">NECKLACE 3</a></h2>      
 <!-- Dos columnas -->
 <div class="necklace3-grid">
 <!-- Columna 1: Imagen -->
@@ -1315,256 +1483,19 @@ ADD TO CART (PE)
 </div>
 <!-- BOTONES DE ABAJO -->
 <div class="necklace3-buttons2">
-<button id="btn-necklace3-back" onclick="location.href='#jewelry-necklaces'">BACK</button>
+<button id="btn-necklace3-back" onclick="location.href='#jewelry'">BACK</button>
 <button id="btn-necklace3-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
 <button id="btn-necklace3-cart" data-section="cart">GO TO CART</button>
 </div>
 </div>
 </section>
-<!-- FIN SECCIÓN INDEPENDIENTE NECKLACE 3 -->
-<!-- FIN PARTE FASHION SELECTION -->   
+<!-- FIN NECKLACE 3 -->
+   
+<!-- FIN A LA PARTE FASHION SELECTION -->
 
+</main>
 
-      
-<!-- TODO ESTO PERTENECE A LA PARTE CART-->  
-<!-- SECCIÓN CART EMPTY -->
-<section id="cartempty" class="cartempty-section main-section" style="display: none;">
-<div class="cartempty-container">
-<h2 class="cartempty-title"><a href="#cartempty">YOUR CART</a></h2>
-<p class="cartempty-description">
-Your cart is empty
-</p>
-</div>
-</section>
-<!-- FIN SECCIÓN CART EMPTY -->
-            
-<!--  SECCIÓN CART FULL-->
-<section id="cartfull" class="cartfull-section main-section" style="display: none;">
-<div class="cartfull-container">
-<h2 class="cartfull-title"><a href="#cartfull">YOUR CART</a></h2>
-<!-- TABLA -->
-<table class="cartfull-table">
-<thead>
-<tr>
-<th class="cartfull-image-col">IMAGE</th>
-<th class="cartfull-productname-col">PRODUCT NAME</th>
-<th class="cartfull-price-col">PRICE</th>
-<th class="cartfull-qty-col">QTY</th>
-<th class="cartfull-remove-col">RMV</th>
-</tr>
-</thead>
-<tbody class="cartfull-body">
-<!-- LÍNEA DEBAJO DE LOS SUBTITULOS -->
-<tr class="cartfull-tabledivider"><td colspan="5"></td></tr>     
-<!-- Aquí se agregarán dinámicamente los productos con JS -->
-<!-- LÍNEA DEBAJO DE LOS PRODUCTOS -->
-<tr class="cartfull-tabledivider2"><td colspan="5"></td></tr>
-<!-- Fila SHIPPING -->
-<tr>
-<td class="cartfull-image-col"></td>
-<td class="cartfull-productname-col text-right">Shipping</td>
-<td class="cartfull-price-col">
-<span class="cartfull-white-cell price-cell">
-<span class="currency">$</span>
-</span>
-</td>
-<td class="cartfull-qty-col"></td>
-<td class="cartfull-remove-col"></td>
-</tr>
-<!-- Fila TOTAL -->
-<tr>
-<td class="cartfull-image-col"></td>
-<td class="cartfull-productname-col text-right">Total</td>
-<td class="cartfull-price-col">
-<span class="cartfull-white-cell price-cell">
-<span class="currency">$</span>
-</span>
-</td>
-<td class="cartfull-qty-col text-center">
-<span class="cartfull-white-cell text-center total-qty">0</span>
-</td>
-<td class="cartfull-remove-col"></td>
-</tr>
-</tbody>
-</table>
-<!-- BOTONES DEBAJO DE LA TABLA -->
-<div class="cartfull-buttons">
-<button id="btn-cartfull-back" onclick="history.back()">BACK</button>
-<button id="btn-cartfull-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-<button id="btn-cartfull-buy" onclick="location.href='#shippinginformation'">BUY</button>
-</div>
-</div>
-</section>
-<!-- FIN SECCIÓN CART FULL -->
-
-<!-- SECCIÓN SHIPPING INFORMATION -->
-<section id="shippinginformation" class="shippinginformation-section main-section" style="display: none;">
-<div class="shippinginformation-container">
-<h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
-<!-- NOMBRES Y RECUADROS -->
-<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
-<label for="email" class="shippinginformation-label">EMAIL</label>
-<input type="email" id="email" name="email" class="shippinginformation-input" required>
-<label for="firstname" class="shippinginformation-label">FIRST NAME</label>
-<input type="text" id="firstname" name="firstname" class="shippinginformation-input" required>
-<label for="lastname" class="shippinginformation-label">LAST NAME</label>
-<input type="text" id="lastname" name="lastname" class="shippinginformation-input" required>
-<label for="idnumber" class="shippinginformation-label">ID NUMBER</label>
-<input type="text" id="idnumber" name="idnumber" class="shippinginformation-input" required>       
-<label for="country" class="shippinginformation-label">COUNTRY</label>
-<input type="text" id="country" name="country" class="shippinginformation-input" required>
-<label for="state" class="shippinginformation-label">STATE/PROVINCE/REGION</label>
-<input type="text" id="state" name="state" class="shippinginformation-input" required>
-<label for="city" class="shippinginformation-label">CITY</label>
-<input type="text" id="city" name="city" class="shippinginformation-input" required>
-<label for="zipcode" class="shippinginformation-label">ZIP CODE</label>
-<input type="text" id="zipcode" name="zipcode" class="shippinginformation-input" required>
-<label for="address" class="shippinginformation-label">ADDRESS</label>
-<input type="text" id="address" name="address" class="shippinginformation-input" required>
-<label for="apartment" class="shippinginformation-label">APARTMENT/SUITE/ETC</label>
-<input type="text" id="apartment" name="apartment" class="shippinginformation-input" required>    
-<label for="mobilephone" class="shippinginformation-label">MOBILE PHONE</label>
-<input type="text" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
-      
-<!-- CAMPO OCULTO PARA DETALLE DEL CARRITO -->
-<input type="hidden" name="cartDetails" id="cartDetails">
-<!-- CAMPO OCULTO PARA TOTAL DEL CARRITO -->
-<input type="hidden" name="total" id="shippingTotal" value="0">
-      
-</form>
-<!-- BOTONES FUERA DEL FORULARIO-->
-<div class="shippinginformation-buttons-row">
-<!-- Contenedor para BACK -->
-<div class="shippinginformation-col left">
-<button id="btn-shippinginformation-back" onclick="location.href='#cartfull'">BACK</button>
-</div>
-<!-- Contenedor para CONTINUE SHOPPING -->
-<div class="shippinginformation-col center">
-<button id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-</div>
-<!-- BOTON PARA ENVIAR EL FORMULARIO -->
-<!-- BOTÓN PAY -->
-<div class="shippinginformation-col right">
-<button type="button" id="btn-shippinginformation-pay" disabled>PAY</button>
-</div>
-</div>
- <!-- FORMULARIO PAYPAL -->
-    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="arlynligeiacp@gmail.com"> <!-- TU PAYPAL -->
-      <input type="hidden" name="item_name" value="Pedido Tienda Online">
-      <input type="hidden" name="amount" value="0" id="paypalAmount">
-      <input type="hidden" name="currency_code" value="USD">
-    </form>
-  </div>
-</section>
-<!-- FIN SECCIÓN SHIPPING INFORMATION -->
-<!-- FIN PARTE CART -->
-
-      
-<!-- SECCIÓN PRIVACY POLICY-->
-<section id="privacypolicy" class="privacypolicy-section" style="display: none;">
-<div class="privacypolicy-container">
-<h2 class="privacypolicy-title"><a href="#privacypolicy">PRIVACY POLICY</a></h2>
-<p class="privacypolicy-description">
-Effective Date: 08/01/2025<br><br>
-Arlyn Ligeia is committed to protecting your privacy. This Privacy Policy describes how we collect, use, and protect your information when you visit our website or make a purchase.<br><br>
-1. Information We Collect<br><br>
-We may collect the following personal information that you provide to us directly:<br><br>
-• Contact Information: Your name and email address, used to process purchases and manage contact forms.<br>
-• Shipping and Billing Information: The addresses needed to deliver products.<br>
-• Payment Information: Credit card details or other payment data, which are securely processed through third-party payment providers like PayPal.<br><br>
-We also collect non-personal data, such as your IP address and browser type, for analytical purposes to improve our site's functionality.<br><br>
-2. How We Use Your Information<br><br>
-We use your information for the following purposes:<br><br>
-• Order Processing: To manage your purchases and ship your products.<br>
-• Communication: To send you notifications about your order, respond to your inquiries, or provide you with updates.<br>
-• Marketing: To send you newsletters or product information (only if you have given your consent).<br>
-• Website Analytics: To improve the user experience and the overall performance of our website.<br><br>
-3. How We Share Your Information<br><br>
-We do not sell or rent your personal information. We may share your data with trusted third parties who help us operate our business, such as shipping companies and payment providers, so they can fulfill their functions.<br><br>
-4. Cookies<br><br>
-We use cookies and similar technologies to track activity on our website and optimize your experience. You have the option to configure your browser to reject cookies, although this may affect the functionality of some parts of the site.<br><br>
-5. Your Rights<br><br>
-You have the right to request:<br><br>
-• Access, correction, or updates to your personal information.<br>
-• Unsubscribing from our email list.<br>
-• The deletion of your personal data, provided we do not have a legal or financial obligation to retain it.<br><br>
-To exercise any of these rights, please contact us at: arlynligeiapp@gmail.com<br><br>
-6. Changes to This Policy<br><br>
-We reserve the right to update this privacy policy at any time. Any changes will be posted on this page with the new effective date. We recommend that you review this policy periodically.
-</p>
-</div>
-</section>
-
-
-
-<!-- SECCIÓN TERMS AND CONDITIONS-->
-<section id="terms" class="terms-section" style="display: none;">
-<div class="terms-container">
-<h2 class="terms-title"><a href="#terms">TERMS AND CONDITIONS</a></h2>
-<p class="terms-description">
-Effective Date: 08/01/2025<br><br>
-By using the website operated by Arlyn Ligeia, you agree to the following terms and conditions. Please read them carefully before making any purchases or subscribing to our services. If you do not agree with these terms, we ask that you do not use this website.<br><br>
-1. Website Use<br><br>
-Access to and use of this website are subject to these terms and applicable law. By using it, you agree to comply with all local, national, and international laws.<br><br>
-2. Products and Services<br><br>
-We offer digital products (such as movies, music, and digital fashion shows) and physical products (such as clothing, accessories, and paintings). The descriptions, prices, and availability of all products and services are subject to change without prior notice.<br><br>
-3. Payments<br><br>
-Payments are processed securely through third-party providers like PayPal. By making a purchase, you agree to the terms and privacy policies of the respective payment provider.<br><br>
-4. Shipping and Delivery<br><br>
-We ship through trusted carriers such as FedEx and Olva Courier. Delivery times are estimated and may vary depending on your location. Once your order has been shipped, you will receive an email with tracking information. We are not responsible for delays caused by the shipping companies.<br><br>
-5. Refunds and Exchanges<br><br>
-All sales are final. Returns or exchanges will only be accepted if the item arrives damaged or incorrect. If your order is defective, you must contact us within 7 days of the delivery date so we can assess your case. The approval of a return is at the seller's discretion.<br><br>
-6. Intellectual Property<br><br>
-All content on this website, including movies, music, videos, images, and text, is the property of Arlyn Ligeia and is protected by intellectual property laws. It is strictly forbidden to use, reproduce, or distribute this content without our express written permission.<br><br>
-7. User Conduct<br><br>
-You agree not to use this website for illegal purposes or to infringe upon the rights of third parties. We reserve the right to restrict, suspend, or terminate your access to the website if any violation of these terms is detected.<br><br>
-8. Changes to the Terms<br><br>
-We reserve the right to update these terms and conditions at any time. Changes will be posted on this page and will take effect immediately. We recommend you review them periodically.<br><br>
-9. Contact<br><br>
-If you have any questions about these terms, you can contact us at: arlynligeiaterms@gmail.com
-</p>
-</div>
-</section>
-
-
-
-
-
-
-
-
-
-      
-<!-- NOTIFICACIÓN GLOBAL AL AÑADIR UN PRODUCTO AL CARRITO -->
-<div id="cart-notification" class="cart-notification"></div>
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-      
-
-
-     
-
-
-
-
-
-      
-<!-- FOOTER -->
+<!-- FOOTER -->   
 <footer class="footer-custom">
 <div class="footer-nombre">ARLYN LIGEIA</div>
 <div class="footer-espacio"></div>
@@ -1574,5 +1505,8 @@ If you have any questions about these terms, you can contact us at: arlynligeiat
 <p><a href="#" id="show-terms">Terms & Conditions</a></p>
 </div>
 </footer>
+<!-- FIN FOOTER -->   
+  
 </body>
+  
 </html>
