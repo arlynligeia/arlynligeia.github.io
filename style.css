@@ -120,14 +120,8 @@ nav {
   transform: scaleX(1);
 }
 
-
-
-
-
-
-
 /* ======================================
-   SECCIÓN HOME
+   HOME
 ====================================== */
 /* ======================================
    CARRUSEL DE INICIO Y TEXTO LATERAL
@@ -204,8 +198,6 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-
-
 /* Contenedor principal de los iconos */
 .social-icons-grid {
   display: inline-flex; 
@@ -243,12 +235,6 @@ nav {
   transform: scale(1.1);
   filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
 }
-
-
-
-
-
-
 
 /* ======================================
    SOCIAL MEDIA CONTENT
@@ -523,297 +509,6 @@ nav {
 }
 
 /* ======================================
-   TIKTOK HIGHLIGHTS
-====================================== */
-/* Contenedor */
-.tiktokhighlights-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
-  width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* Franja superior decorativa */
-.tiktokhighlights-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; /* franja encima del fondo */  
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00B8BA; /* Turquesa */
-  border-radius: 20px 20px 0 0;
-  height: 90px; /* grosor de la franja */
-}
-/* Contenedor para título + botón en la misma fila */
-.tiktokhighlights-header {
-  position: relative; /* para que el título y el botón estén encima de la franja */
-  z-index: 2; /* encima de la franja */
-  display: flex;
-  align-items: center; /* centra verticalmente */
-  justify-content: space-between; /* título a la izquierda, botón a la derecha */
-  margin-bottom: 16px; /* separa del contenido siguiente */
-}
-/* Título */
-.tiktokhighlights-title {
-  position: relative;
-  z-index: 2; /* título encima de la franja */
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
-}
-.tiktokhighlights-title a {
-  color: white;
-  text-decoration: none;
-}
-/* Botón Follow */
-.tiktok-follow-button {
-  z-index: 2; /* encima de la franja */   
-  display: inline-block;
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  border: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-/* Hover del botón */
-.tiktok-follow-button:hover {
-  transform: scale(1.05);
-}
-/* Contenedor de videos fila 1*/
-.tiktokhighlights-videos {
-  z-index: 2; 
-  display: flex; /* filas de columnas */
-  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
-  gap: 10px; /* espacio entre columnas */
-  margin-top: 0px; 
-  margin-bottom: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  justify-content: space-between; /* separa las columnas uniformemente */
-}
-
-/* Cada columna de video */
-.tiktok-video-column {
-  flex: 1 1 32%; /* ocupa hasta 32% del ancho, se adapta al contenedor */
-  min-width: 250px; /* ancho mínimo de columna */
-  box-sizing: border-box;
-}
-
-/* Video dentro de cada columna */
-.tiktok-video-column video {
-  display: block;
-  width: 100%; /* ocupa todo el ancho de la columna */
-  height: auto; /* mantiene proporción original */
-  border-radius: 15px; /* bordes redondeados */
-  object-fit: cover; /* rellena el contenedor sin deformar */
-  cursor: pointer; /* indica que se puede hacer click */
-}
-/* Contenedor de videos fila 2 */
-.tiktokhighlights2-videos {
-  z-index: 2; 
-  display: flex; /* filas de columnas */
-  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
-  gap: 10px; /* espacio entre columnas */
-  margin-top: 0px; 
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  justify-content: space-between; /* separa las columnas uniformemente */
-}
-
-/* Cada columna de video */
-.tiktok2-video-column {
-  flex: 1 1 32%; /* ocupa hasta 32% del ancho, se adapta al contenedor */
-  min-width: 250px; /* ancho mínimo de columna */
-  box-sizing: border-box;
-}
-
-/* Video dentro de cada columna */
-.tiktok2-video-column video {
-  display: block;
-  width: 100%; /* ocupa todo el ancho de la columna */
-  height: auto; /* mantiene proporción original */
-  border-radius: 15px; /* bordes redondeados */
-  object-fit: cover; /* rellena el contenedor sin deformar */
-  cursor: pointer; /* indica que se puede hacer click */
-}
-#tiktokhighlights {
-    display: none;
-}
-
-/* ======================================
-   DESTACADOS DE TIKTOK
-====================================== */
-/* Contenedor */
-.destacadosdetiktok-container {
-  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
-  width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px; /* editable margen superior */
-  padding-bottom: 30px; /* editable margen inferior */
-  padding-left: 30px; /* editable margen izquierdo */
-  padding-right: 30px; /* editable margen derecho */
-}
-/* Franja superior decorativa */
-.destacadosdetiktok-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; /* franja encima del fondo */  
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00B8BA; /* Turquesa */
-  border-radius: 20px 20px 0 0;
-  height: 90px; /* grosor de la franja */
-}
-/* Contenedor para título + botón en la misma fila */
-.destacadosdetiktok-header {
-  position: relative; /* para que el título y el botón estén encima de la franja */
-  z-index: 2; /* encima de la franja */
-  display: flex;
-  align-items: center; /* centra verticalmente */
-  justify-content: space-between; /* título a la izquierda, botón a la derecha */
-  margin-bottom: 16px; /* separa del contenido siguiente */
-}
-/* Título */
-.destacadosdetiktok-title {
-  position: relative;
-  z-index: 2; /* título encima de la franja */
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
-}
-.destacadosdetiktok-title a {
-  color: white;
-  text-decoration: none;
-}
-/* Botón Follow */
-.tiktok-follow-button {
-  z-index: 2; /* encima de la franja */   
-  display: inline-block;
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
-  border: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  cursor: pointer;
-}
-/* Hover del botón */
-.tiktok-follow-button:hover {
-  transform: scale(1.05);
-}
-/* Contenedor de videos fila 1*/
-.destacadosdetiktok-videos {
-  z-index: 2; 
-  display: flex; /* filas de columnas */
-  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
-  gap: 10px; /* espacio entre columnas */
-  margin-top: 0px; 
-  margin-bottom: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  justify-content: space-between; /* separa las columnas uniformemente */
-}
-
-/* Cada columna de video */
-.tiktok-video-column {
-  flex: 1 1 32%; /* ocupa hasta 32% del ancho, se adapta al contenedor */
-  min-width: 250px; /* ancho mínimo de columna */
-  box-sizing: border-box;
-}
-/* Video dentro de cada columna */
-.tiktok-video-column video {
-  display: block;
-  width: 100%; /* ocupa todo el ancho de la columna */
-  height: auto; /* mantiene proporción original */
-  border-radius: 15px; /* bordes redondeados */
-  object-fit: cover; /* rellena el contenedor sin deformar */
-  cursor: pointer; /* indica que se puede hacer click */
-}
-/* Contenedor de videos fila 2 */
-.destacadosdetiktok2-videos {
-  z-index: 2; 
-  display: flex; /* filas de columnas */
-  flex-wrap: wrap; /* permite nuevas filas si agregas más videos */
-  gap: 10px; /* espacio entre columnas */
-  margin-top: 0px; 
-  margin-bottom: 0px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  justify-content: space-between; /* separa las columnas uniformemente */
-}
-
-/* Cada columna de video */
-.tiktok2-video-column {
-  flex: 1 1 32%; /* ocupa hasta 32% del ancho, se adapta al contenedor */
-  min-width: 250px; /* ancho mínimo de columna */
-  box-sizing: border-box;
-}
-
-/* Video dentro de cada columna */
-.tiktok2-video-column video {
-  display: block;
-  width: 100%; /* ocupa todo el ancho de la columna */
-  height: auto; /* mantiene proporción original */
-  border-radius: 15px; /* bordes redondeados */
-  object-fit: cover; /* rellena el contenedor sin deformar */
-  cursor: pointer; /* indica que se puede hacer click */
-}
-#destacadosdetiktok {
-    display: none;
-}
-
-/* ======================================
    YOUTUBE HIGHLIGHT
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
@@ -1046,7 +741,7 @@ nav {
 
 
 /* ======================================
-  FILM SECTION
+  FILM
 ====================================== */
 /* CONTENEDOR PARA FILM */
 .film-banner-container {
@@ -1181,12 +876,6 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-
-
-
-
-
-
 
 /* ======================================
    SHORT FILM
@@ -1333,6 +1022,9 @@ nav {
 
 
 /* ======================================
+   MUSIC
+====================================== */
+/* ======================================
    ALBUM
 ====================================== */
 .album-container {
@@ -1444,6 +1136,9 @@ nav {
 
 
 /* ======================================
+   FASHION
+====================================== */
+/* ======================================
    FW COLLECTION
 ====================================== */
 .fwcollection-container {
@@ -1520,6 +1215,9 @@ nav {
 
 
 
+/* ======================================
+   SCIENCE
+====================================== */
 /* ======================================
    RESEARCH ARTICLE
 ====================================== */
@@ -1670,13 +1368,6 @@ nav {
   transform: scale(1.05);
   cursor: pointer;
  }
-
-
-
-
-
-
-
 
 
 
@@ -1946,8 +1637,9 @@ nav {
 }
 
 
+
 /* ======================================
-   SECCIÓN CONTACT
+   CONTACT
 ====================================== */
 /* ======================================
    CONTACT FOR WORK
@@ -2300,9 +1992,8 @@ nav {
 
 
 
-
 /* ======================================
-   SECCIÓN STORE
+   STORE
 ====================================== */
 /* ======================================
    WELCOME TO MY STORE
@@ -3641,46 +3332,6 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================
-   TODO LO QUE FORMA PARTE DE FASHION SELECTION
-====================================== */
 /* ======================================
    FASHION SELECTION
 ====================================== */
@@ -3789,7 +3440,7 @@ nav {
 }
 
 /* ======================================
-   SECCIÓN JEWELRY
+   JEWELRY
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .jewelry-container {
@@ -3965,7 +3616,7 @@ nav {
 }
 
 /* ======================================
-   SECCIÓN INDEPENDIENTE NECKLACE 1
+   NECKLACE 1
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace1-container {
@@ -4133,9 +3784,8 @@ nav {
   font-weight: bold;
 }
 
-
 /* ======================================
-   SECCIÓN INDEPENDIENTE NECKLACE 2
+   NECKLACE 2
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace2-container {
@@ -4297,7 +3947,7 @@ nav {
 }
 
 /* ======================================
-   SECCIÓN INDEPENDIENTE NECKLACE 3
+   NECKLACE 3
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .necklace3-container {
@@ -4458,584 +4108,6 @@ nav {
   background-color: #ff1493; /* fucsia */
 }
 
-/* ======================================
-   TODO LO QUE FORMA PARTE DEL CARRITO
-====================================== */
-/* ======================================
-   CART EMPTY
-====================================== */
-.cartempty-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.cartempty-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-}
-.cartempty-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin-top: 0px;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left; 
-}
-.cartempty-title a {
-  color: white;
-  text-decoration: none;
-}
-.cartempty-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  line-height: 1.5;
-  text-align: center;
-}
-
-/* ======================================
-   CART FULL
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.cartfull-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.cartfull-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.cartfull-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.cartfull-title a {
-  color: white;
-  text-decoration: none;
-}
-/* TABLA */
-.cartfull-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  margin-top: 0;
-  margin-bottom: 10px;
-}
-.cartfull-table td + td,
-.cartfull-table th + th {
-  border-left: 10px solid transparent;
-}
-/* ANCHO DE COLUMNAS */
-.cartfull-image-col {
-  width: 10%;
-}
-.cartfull-productname-col {
-  width: 54%;
-}
-.cartfull-price-col {
-  width: 18%;
-}
-.cartfull-qty-col {
-  width: 10%;
-}
-.cartfull-remove-col {
-  width: 8%;
-}
-/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
-.cartfull-table td {
-  vertical-align: middle;
-  padding-top: 0px;
-  padding-bottom: 10px;
-}
-/* Subtítulos */
-.cartfull-table th {
-  padding-top: 0px;
-  padding-bottom: 0px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39ff14;
-  line-height: 1.5;
-  text-align: center;
-  text-transform: uppercase;
-}
-/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
-.cartfull-tabledivider td {
-  border-top: 3px solid #39ff14;
-  padding-top: 0px;
-  padding-bottom: 5px;
-  height: 0;
-}
-/* COLUMNAS */
-/* IMAGEN */
-.cartfull-product-image {
-  max-width: 72px;
-  border-radius: 6px;
-  display: block;
-  height: auto;
-  margin: 0;
-}
-/* RECUADRO BLANC GENERICO */
-.cartfull-white-cell {
-  background-color: white;
-  border-radius: 6px;
-  display: block;
-  width: 100%;
-  height: 40px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-  box-sizing: border-box;
-}
-/* ALINEACIONES */
-.text-left {
-  text-align: left;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-/* RECUADRO CON PRECIO FIJO */
-.price-cell {
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 40px;
-  margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-  box-sizing: border-box;
-}
-.price-cell .currency {
-  text-align: left;
-}
-.price-cell .amount {
-  text-align: right;
-  flex-grow: 1;
-}
-/* BOTÓN REMOVER */
-.remove-btn {
-  background-color: #39ff14;
-  border-radius: 6px;
-  display: inline-block;
-  width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.remove-btn:hover {
-  transform: scale(1.05);
-}
-/* LÍNEA DEBAJO DE LOS PRODUCTOS*/
-.cartfull-tabledivider2 td {
-  border-top: 3px solid #39ff14;
-  padding-top: 0px;
-  padding-bottom: 5px;
-  height: 0;
-}
-.text-right {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  text-align: right;
-}
-.cartfull-qty-col strong {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: black;
-}
-/* BOTONES DEBAJO DE LA TABLA */
-.cartfull-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.cartfull-buttons button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.cartfull-buttons button:hover {
-  transform: scale(1.05);
-}
-/* COLOR BOTÓN BUY */
-#btn-cartfull-buy {
-  background-color: #ff1493; /* Fucsia */
-}
-
-/* ======================================
-   SHIPPING INFORMATION
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.shippinginformation-container {
-  position: relative;
-  width: 550px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.shippinginformation-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px; 
-}
-.shippinginformation-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 16px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.shippinginformation-title a {
-  color: white;
-  text-decoration: none;
-}
-/* TEXTOS Y RECUADROS */
-/* Labels */
-.shippinginformation-label {
-  display: block;
-  margin-top: 0; 
-  margin-bottom: 5px;
-  font-family: 'Orbitron', sans-serif; 
-  font-size: 1.2rem;
-  color: white;
-  text-align: left;  
-}
-/* Inputs */
-.shippinginformation-input,
-.shippinginformation-textarea {
-  background-color: #fff;
-  border-radius: 6px;
-  border: 1px solid #fff; /* borde blanco para visibilidad */ 
-  width: 100%;
-  margin-top: 0;  
-  margin-bottom: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px; 
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.shippinginformation-input {
-  height: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  box-sizing: border-box;
-}
-.shippinginformation-textarea {
-  resize: vertical;
-  min-height: 150px;
-}
-/* BOTONES */
-.shippinginformation-buttons-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0px;  
-  margin-bottom: 0px;
-}
-.shippinginformation-buttons {
-  display: flex;
-}
-.shippinginformation-buttons-row button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important; 
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.shippinginformation-buttons-row button:hover {
-  transform: scale(1.05);
-}
-/* Botón PAY */
-#btn-shippinginformation-pay {
-  background-color: #ff1493; /* fucsia */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================
-   POLICY PRIVACY SECTION
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.privacypolicy-container {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.privacypolicy-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  z-index: 1;
-}
-.privacypolicy-title {
-  position: relative;
-  z-index: 2;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
-  text-decoration: none;
-}
-.privacypolicy-title a {
-  color: white;
-  text-decoration: none;
-}
-/* DESCRIPCIÓN */
-.privacypolicy-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-
-/* ======================================
-   TERMS SECTION
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.terms-container {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.terms-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  z-index: 1;
-}
-.terms-title {
-  position: relative;
-  z-index: 2;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  display: block;
-  margin-top: 0;
-  margin-bottom: 16px;
-  line-height: 1.6;
-  text-align: left;
-  text-decoration: none;
-}
-.terms-title a {
-  color: white;
-  text-decoration: none;
-}
-/* DESCRIPCIÓN */
-.terms-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  margin-bottom: 16px;
-  color: white;
-  text-align: justify;
-}
-
-
-
-
-
-
-
-/* Oculta todas las secciones por defecto */
-section {
-  display: none;
-}
-
-/* Muestra solo la sección Home al cargar */
-#home {
-  display: block;
-}
-
-
-/* ======================================
-   NOTIFICACIÓN AL AGREGAR PRODUCTO AL CARRITO
-====================================== */
-.cart-notification {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #333;
-  z-index: 1000;
-  border-radius: 8px;
-  padding: 12px 18px;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  color: white;
-  text-align: justify;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.4s ease, transform 0.4s ease;
-  transform: translateY(-20px);
- 
-}
-.cart-notification.show {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-
-
-
-
 
 
 /* ================================
@@ -5055,19 +4127,19 @@ section {
   margin-bottom: 10px;
 }
 .footer-texto {
-  font-size: 0.9rem; /* Más pequeño que el nombre */
+  font-size: 0.9rem;
   text-transform: none;
   margin: 4px 0;
 }
 .footer-texto a {
-  color: white;                /* Mantiene color blanco */
-  text-decoration: none;       /* Sin subrayado por defecto */
+  color: white; 
+  text-decoration: none;     
 }
 .footer-texto a:hover,
 .footer-texto a:visited,
 .footer-texto a:focus {
-  color: white;                /* Blanco en todos los estados */
-  text-decoration: underline;  /* Subrayado opcional al pasar el mouse */
+  color: white;                
+  text-decoration: underline; 
 }
 /* Espacio visual entre nombre y los textos */
 .footer-espacio {
