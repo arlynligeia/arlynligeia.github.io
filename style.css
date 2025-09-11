@@ -2632,6 +2632,131 @@ nav {
 }
 
 /* ======================================
+   DIGITAL FILM SELECTION
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.digitalfilmselection-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.digitalfilmselection-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.digitalfilmselection-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.digitalfilmselection-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.digitalfilmselection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: 250px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+/* Tarjeta de productos*/
+.digitalfilmselection-card {
+  position: relative;
+  overflow: hidden;
+  display: block; 
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+}
+.digitalfilmselection-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.digitalfilmselection-card span {
+  position: absolute;
+  z-index: 2; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+.digitalfilmselection-card:hover img {
+  transform: scale(1.1);
+}
+/* BOTONES */
+.digitalfilmselection-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.digitalfilmselection-buttons button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.digitalfilmselection-buttons button:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
    TODO LO QUE FORMA PARTE DE FASHION SELECTION
 ====================================== */
 /* ======================================
