@@ -1024,6 +1024,31 @@ nav {
 /* ======================================
    MUSIC
 ====================================== */
+/* CONTENEDOR PARA MUSIC */
+.music-banner-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CONTENEDOR DE IMAGEN ESTÁTICA */
+.music-banner {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMAGEN ESTÁTICA */
+.music-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* ======================================
    ALBUM
 ====================================== */
@@ -1138,6 +1163,31 @@ nav {
 /* ======================================
    FASHION
 ====================================== */
+/* CONTENEDOR PARA FASHION */
+.fashion-banner-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CONTENEDOR DE IMAGEN ESTÁTICA */
+.fashion-banner {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMAGEN ESTÁTICA */
+.fashion-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* ======================================
    FW COLLECTION
 ====================================== */
