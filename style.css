@@ -3057,6 +3057,501 @@ nav {
   font-weight: bold;
 }
 
+/* ======================================
+   FEATURED SPONSOR
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featuredsponsor-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.featuredsponsor-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.featuredsponsor-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.featuredsponsor-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.featuredsponsor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.featuredsponsor-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.featuredsponsor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.featuredsponsor-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.featuredsponsor-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.featuredsponsor-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.featuredsponsor-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featuredsponsor-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredsponsor-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.featuredsponsor-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.featuredsponsor-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.featuredsponsor-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredsponsor-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-featuredsponsor-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+   SMALL BUSINESS LOGO
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.smallbusinesslogo-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.smallbusinesslogo-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.smallbusinesslogo-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.smallbusinesslogo-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.smallbusinesslogo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.smallbusinesslogo-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.smallbusinesslogo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.smallbusinesslogo-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.smallbusinesslogo-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.smallbusinesslogo-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.smallbusinesslogo-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.smallbusinesslogo-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.smallbusinesslogo-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.smallbusinesslogo-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.smallbusinesslogo-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.smallbusinesslogo-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.smallbusinesslogo-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-smallbusinesslogo-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+   FEATURED BUSINESS LOGO
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featuredbusinesslogo-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.featuredbusinesslogo-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.featuredbusinesslogo-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.featuredbusinesslogo-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.featuredbusinesslogo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.featuredbusinesslogo-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.featuredbusinesslogo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.featuredbusinesslogo-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.featuredbusinesslogo-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.featuredbusinesslogo-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.featuredbusinesslogo-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featuredbusinesslogo-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredbusinesslogo-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.featuredbusinesslogo-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.featuredbusinesslogo-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.featuredbusinesslogo-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredbusinesslogo-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-featuredbusinesslogo-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
