@@ -1269,6 +1269,54 @@ nav {
    SCIENCE
 ====================================== */
 /* ======================================
+   WELCOME TO SCIENCE
+====================================== */
+/* CONTENEDOR */
+.science-carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CARRUSEL DE BIENVENIDA*/
+.science-carousel {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMÁGENES DEL CARRUSEL */
+.science-carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.science-carousel-image.active {
+  opacity: 1;
+}
+/* TEXTO DEL CARRUSEL */
+.science-carousel-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-align: center;
+  white-space: nowrap;
+}
+/* ======================================
    RESEARCH ARTICLE
 ====================================== */
 /* Contenedor */
@@ -1422,8 +1470,54 @@ nav {
 
 
 /* ======================================
-   BE MY PATRON SECTION
+   BE MY PATRON
 ====================================== */
+/* CARRUSEL */
+.bemypatron-carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CARRUSEL DE BIENVENIDA*/
+.bemypatron-carousel {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMÁGENES DEL CARRUSEL */
+.bemypatron-carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.bemypatron-carousel-image.active {
+  opacity: 1;
+}
+/* TEXTO DEL CARRUSEL */
+.bemypatron-carousel-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-align: center;
+  white-space: nowrap;
+}
+/* CONTENEDOR */
 .bemypatron-container {
   position: relative; /* ← NECESARIO para que la franja se posicione dentro */
   width: 800px;
