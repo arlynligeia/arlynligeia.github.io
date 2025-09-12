@@ -1572,6 +1572,83 @@ ADD TO CART (PE)
    
 <!-- FIN A LA PARTE FASHION SELECTION -->
 
+
+
+<!-- CART -->
+<section id="cart" class="cart-section main-section">
+<div class="cart-container">
+<h2 class="cart-title">YOUR CART</h2>
+<!-- Estado: Carrito Vacío -->
+<div class="cart-empty" id="cart-empty">
+<p class="cart-empty-description">Your cart is empty</p>
+<div class="cart-empty-buttons">
+<button onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+<!-- Estado: Carrito con Productos -->
+<div class="cart-full" id="cart-full" style="display: none;">
+<!-- TABLA -->
+<table class="cart-table">
+<thead>
+<tr>
+<th class="cart-image-col">IMAGE</th>
+<th class="cart-productname-col">PRODUCT NAME</th>
+<th class="cart-price-col">PRICE</th>
+<th class="cart-qty-col">QTY</th>
+<th class="cart-remove-col">RMV</th>
+</tr>
+</thead>
+<tbody class="cart-body">
+<!-- LÍNEA SEPARADORA -->
+<tr class="cart-tabledivider"><td colspan="5"></td></tr>     
+<!-- Aquí se agregarán dinámicamente los productos con JS -->
+<tr id="cart-no-items" class="cart-no-items">
+<td colspan="5" class="text-center">No products added yet</td>
+</tr>
+<!-- LÍNEA SEPARADORA -->
+<tr class="cart-tabledivider2"><td colspan="5"></td></tr>
+<!-- Fila SHIPPING -->
+<tr class="cart-shipping-row">
+<td class="cart-image-col"></td>
+<td class="cart-productname-col text-right">Shipping</td>
+<td class="cart-price-col">
+<span class="cart-white-cell price-cell">
+<span class="currency">$</span>
+<span id="cart-shipping-price">0.00</span>
+</span>
+</td>
+<td class="cart-qty-col"></td>
+<td class="cart-remove-col"></td>
+</tr>
+<!-- Fila TOTAL -->
+<tr class="cart-total-row">
+<td class="cart-image-col"></td>
+<td class="cart-productname-col text-right">Total</td>
+<td class="cart-price-col">
+<span class="cart-white-cell price-cell">
+<span class="currency">$</span>
+<span id="cart-total-price">0.00</span>
+</span>
+</td>
+<td class="cart-qty-col text-center">
+<span class="cart-white-cell text-center total-qty" id="cart-total-qty">0</span>
+</td>
+<td class="cart-remove-col"></td>
+</tr>
+</tbody>
+</table>
+<!-- BOTONES -->
+<div class="cart-buttons">
+<button class="cart-button-back" onclick="history.back()">BACK</button>
+<button class="cart-button-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<button class="cart-button-buy" id="cart-buy-button" onclick="location.href='#cart-shippinginformation'">BUY</button>
+<button class="cart-button-clear" id="cart-clear-button">CLEAR CART</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FIN CART -->
+
 </main>
 
 <!-- FOOTER -->   
