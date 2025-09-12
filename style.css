@@ -2730,15 +2730,6 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
 /* ======================================
    SIMPLE SPONSOR
 ====================================== */
@@ -3058,10 +3049,10 @@ nav {
 }
 
 /* ======================================
-   SMALL BUSINESS LOGO
+   VIP SPONSOR
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.smallbusinesslogo-container {
+.vipsponsor-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -3072,7 +3063,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.smallbusinesslogo-container::before {
+.vipsponsor-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -3083,7 +3074,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;  
 }
-.smallbusinesslogo-title {
+.vipsponsor-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -3096,30 +3087,30 @@ nav {
   line-height: 1.6;
   text-align: left;  
 }
-.smallbusinesslogo-title a {
+.vipsponsor-title a {
   color: white;
   text-decoration: none;
 }
 /* GRID DE DOS COLUMNAS */
-.smallbusinesslogo-grid {
+.vipsponsor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin-top: 0px;
   margin-bottom: 20px;
 }
-.smallbusinesslogo-image img {
+.vipsponsor-image img {
   width: 100%;
   border-radius: 15px;
 }
 /* CONTENEDOR DE LA INFORMACIÓN */
-.smallbusinesslogo-info {
+.vipsponsor-info {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 /* NOMBRE DEL PRODUCTO */
-.smallbusinesslogo-subtitle {
+.vipsponsor-subtitle {
   margin-bottom: 10px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
@@ -3129,7 +3120,7 @@ nav {
   font-weight: bold;  
 }
 /* PRECIO */
-.smallbusinesslogo-price {
+.vipsponsor-price {
   margin-top: 0px;
   margin-bottom: 10px; 
   font-family: 'Share Tech Mono', monospace;
@@ -3139,7 +3130,7 @@ nav {
   line-height: 1.6;
 }
 /* DESCRIPCIÓN DEL PRODUCTO */
-.smallbusinesslogo-description {
+.vipsponsor-description {
   margin-top: 0px;
   margin-bottom: 0px; 
   font-family: 'Share Tech Mono', monospace;
@@ -3150,12 +3141,12 @@ nav {
   text-align: justify;
 }
 /* BOTONES */
-.smallbusinesslogo-buttons {
+.vipsponsor-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.smallbusinesslogo-buttons button {
+.vipsponsor-buttons button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   margin-top: 0px;
@@ -3171,23 +3162,23 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.smallbusinesslogo-buttons button:hover {
+.vipsponsor-buttons button:hover {
   transform: scale(1.05);
 }
 /* BOTÓN SHARE */
-.smallbusinesslogo-buttons .share-button {
+.vipsponsor-buttons .share-button {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;  
 }
 /* Botones */
-.smallbusinesslogo-buttons2 {
+.vipsponsor-buttons2 {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.smallbusinesslogo-buttons2 button {
+.vipsponsor-buttons2 button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
@@ -3201,11 +3192,328 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.smallbusinesslogo-buttons2 button:hover {
+.vipsponsor-buttons2 button:hover {
   transform: scale(1.05);
 }
 /* Botón GO TO CART */
-#btn-smallbusinesslogo-cart {
+#btn-vipsponsor-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+/* ======================================
+   SIMPLE LOGO VENTURE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.simplelogoventure-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.simplelogoventure-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.simplelogoventure-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.simplelogoventure-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.simplelogoventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.simplelogoventure-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.simplelogoventure-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.simplelogoventure-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.simplelogoventure-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.simplelogoventure-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.simplelogoventure-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.simplelogoventure-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.simplelogoventure-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.simplelogoventure-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.simplelogoventure-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.simplelogoventure-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.simplelogoventure-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-simplelogoventure-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+   FEATURED LOGO VENTURE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featuredlogoventure-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.featuredlogoventure-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.featuredlogoventure-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.featuredlogoventure-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.featuredlogoventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.featuredlogoventure-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.featuredlogoventure-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.featuredlogoventure-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.featuredlogoventure-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.featuredlogoventure-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.featuredlogoventure-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featuredlogoventure-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredlogoventure-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.featuredlogoventure-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.featuredlogoventure-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.featuredlogoventure-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.featuredlogoventure-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-featuredlogoventure-cart {
   background-color: #ff1493; /* fucsia */
 }
 /* Solo aplica al texto OUT OF STOCK */
@@ -3365,6 +3673,165 @@ nav {
 }
 /* Botón GO TO CART */
 #btn-featuredbusinesslogo-cart {
+  background-color: #ff1493; /* fucsia */
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+   EXECUTIVE SPONSOR
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.executivesponsor-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.executivesponsor-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;  
+}
+.executivesponsor-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;  
+}
+.executivesponsor-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.executivesponsor-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.executivesponsor-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE LA INFORMACIÓN */
+.executivesponsor-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* NOMBRE DEL PRODUCTO */
+.executivesponsor-subtitle {
+  margin-bottom: 10px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  text-decoration: none;
+  line-height: 1.6;
+  font-weight: bold;  
+}
+/* PRECIO */
+.executivesponsor-price {
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.executivesponsor-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  text-decoration: none; 
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES */
+.executivesponsor-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.executivesponsor-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.executivesponsor-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.executivesponsor-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;  
+}
+/* Botones */
+.executivesponsor-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.executivesponsor-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.executivesponsor-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART */
+#btn-executivesponsor-cart {
   background-color: #ff1493; /* fucsia */
 }
 /* Solo aplica al texto OUT OF STOCK */
