@@ -4534,6 +4534,209 @@ nav {
   margin: 0;
 }
 
+/* ======================================
+   SHIPPING INFORMATION
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippinginformation-container {
+  position: relative;
+  width: 900px; /* Aumentado para las dos columnas */
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 30px;
+}
+.shippinginformation-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.shippinginformation-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: 0 0 25px 0; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+/* LAYOUT DE DOS COLUMNAS */
+.form-columns {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 25px;
+}
+.form-column {
+  flex: 1;
+  min-width: 0;
+}
+.form-column h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #39ff14; /* Verde neón */
+  margin: 0 0 15px 0;
+  text-align: left;
+}
+/* RESUMEN DEL PEDIDO */
+.order-summary {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 2px solid #39ff14;
+}
+.order-summary h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #39ff14;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+#order-items {
+  margin-bottom: 15px;
+}
+.order-totals {
+  border-top: 2px solid #39ff14;
+  padding-top: 15px;
+}
+.order-subtotal,
+.order-shipping,
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 8px;
+}
+.order-total {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #39ff14;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #39ff14;
+}
+/* TEXTOS Y RECUADROS */
+/* Labels */
+.shippinginformation-label {
+  display: block;
+  margin: 0 0 5px 0;
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 1.2rem;
+  color: white;
+  text-align: left;  
+}
+/* Inputs y Select */
+.shippinginformation-input,
+.shippinginformation-textarea,
+.shippinginformation-select {
+  background-color: #fff;
+  border-radius: 6px;
+  border: 1px solid #fff;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 10px 5px;
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+}
+.shippinginformation-input,
+.shippinginformation-select {
+  height: 40px;
+}
+.shippinginformation-textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.shippinginformation-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+}
+/* BOTONES */
+.shippinginformation-buttons-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  gap: 15px;
+}
+.shippinginformation-col {
+  flex: 1;
+  text-align: center;
+}
+.shippinginformation-col.left {
+  text-align: left;
+}
+.shippinginformation-col.center {
+  text-align: center;
+}
+.shippinginformation-col.right {
+  text-align: right;
+}
+.shippinginformation-buttons-row button {
+  background-color: #00CED1; /* Celeste agua */
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 250px;
+}
+.shippinginformation-buttons-row button:hover {
+  transform: scale(1.05);
+}
+/* Botón PAY */
+#btn-shippinginformation-pay {
+  background-color: #ff1493; /* fucsia */
+}
+/* Estados de botones */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+button:disabled:hover {
+  transform: none;
+}
+/* RESPONSIVE */
+@media (max-width: 950px) {
+  .shippinginformation-container {
+    width: 95%;
+    max-width: 550px;
+  }
+    .form-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+    .shippinginformation-buttons-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+    .shippinginformation-col {
+    text-align: center !important;
+  }
+    .shippinginformation-buttons-row button {
+    max-width: 100%;
+  }
+}
+
 
 /* ================================
    🔻 FOOTER PERSONALIZADO
