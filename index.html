@@ -1649,6 +1649,100 @@ ADD TO CART (PE)
 </section>
 <!-- FIN CART -->
 
+<!-- SHIPPING INFORMATION -->
+<section id="cart-shippinginformation" class="shippinginformation-section main-section" style="display: none;">
+<div class="shippinginformation-container">
+<h2 class="shippinginformation-title">SHIPPING INFORMATION</h2>
+<!-- RESUMEN DEL PEDIDO -->
+<div class="order-summary" id="order-summary">
+<h3>Order Summary</h3>
+<div id="order-items"></div>
+<div class="order-totals">
+<div class="order-subtotal">
+<span>Subtotal:</span>
+<span id="order-subtotal">$0.00</span>
+</div>
+<div class="order-shipping">
+<span>Shipping:</span>
+<span id="order-shipping">$0.00</span>
+</div>
+<div class="order-total">
+<span>Total:</span>
+<span id="order-total">$0.00</span>
+</div>
+</div>
+</div>
+<!-- FORMULARIO DE ENVÍO -->
+<form id="shippinginformation-form">
+<div class="form-columns">
+<!-- COLUMNA 1: INFORMACIÓN PERSONAL -->
+<div class="form-column">
+<h3>Personal Information</h3>
+<label for="email" class="shippinginformation-label">EMAIL*</label>
+<input type="email" id="email" name="email" class="shippinginformation-input" required>
+<label for="firstname" class="shippinginformation-label">FIRST NAME*</label>
+<input type="text" id="firstname" name="firstname" class="shippinginformation-input" required>
+<label for="lastname" class="shippinginformation-label">LAST NAME*</label>
+<input type="text" id="lastname" name="lastname" class="shippinginformation-input" required>
+<label for="idnumber" class="shippinginformation-label">ID NUMBER*</label>
+<input type="text" id="idnumber" name="idnumber" class="shippinginformation-input" required>
+<label for="mobilephone" class="shippinginformation-label">MOBILE PHONE*</label>
+<input type="tel" id="mobilephone" name="mobilephone" class="shippinginformation-input" required>
+</div>
+<!-- COLUMNA 2: DIRECCIÓN DE ENVÍO -->
+<div class="form-column">
+<h3>Shipping Address</h3>
+<label for="country" class="shippinginformation-label">COUNTRY*</label>
+<select id="country" name="country" class="shippinginformation-input" required>
+<option value="">Select Country</option>
+<option value="PE">Perú</option>
+<option value="US">United States</option>
+<option value="MX">Mexico</option>
+<!-- Agregar más países -->
+</select>
+<label for="state" class="shippinginformation-label">STATE/PROVINCE/REGION*</label>
+<input type="text" id="state" name="state" class="shippinginformation-input" required>
+<label for="city" class="shippinginformation-label">CITY*</label>
+<input type="text" id="city" name="city" class="shippinginformation-input" required>
+<label for="zipcode" class="shippinginformation-label">ZIP CODE*</label>
+<input type="text" id="zipcode" name="zipcode" class="shippinginformation-input" required>
+<label for="address" class="shippinginformation-label">ADDRESS*</label>
+<input type="text" id="address" name="address" class="shippinginformation-input" required>
+<label for="apartment" class="shippinginformation-label">APARTMENT/SUITE/ETC</label>
+<input type="text" id="apartment" name="apartment" class="shippinginformation-input">
+</div>
+</div>
+<!-- CAMPOS OCULTOS PARA LOS DATOS DEL CARRITO -->
+<input type="hidden" name="cart_details" id="cartDetails">
+<input type="hidden" name="cart_total" id="cartTotal">
+<input type="hidden" name="cart_items" id="cartItems">
+<input type="hidden" name="shipping_cost" id="shippingCost">
+</form>
+<!-- BOTONES -->
+<div class="shippinginformation-buttons-row">
+<div class="shippinginformation-col left">
+<button id="btn-shippinginformation-back" onclick="location.href='#cart'">BACK TO CART</button>
+</div>
+<div class="shippinginformation-col center">
+<button id="btn-shippinginformation-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+<div class="shippinginformation-col right">
+<button type="button" id="btn-shippinginformation-pay" disabled>PROCEED TO PAYMENT</button>
+</div>
+</div>
+<!-- FORMULARIO PAYPAL (OCULTO) -->
+<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="arlynligeiacp@gmail.com">
+<input type="hidden" name="item_name" value="Order from Arlyn Ligeia Store">
+<input type="hidden" name="amount" value="0" id="paypalAmount">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="custom" id="paypalCustom">
+</form>
+</div>
+</section>
+<!-- FIN SHIPPING INFORMATION -->
+     
 </main>
 
 <!-- FOOTER -->   
