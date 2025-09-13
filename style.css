@@ -4931,59 +4931,50 @@ nav {
   background-position: right 10px center;
   background-size: 16px;
 }
-/* BOTONES */
+/* BOTONES - CORREGIDO */
 .shippinginformation-buttons-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribuye el espacio entre botones */
   align-items: center;
   margin: 0;
   gap: 15px;
 }
 .shippinginformation-col {
-  flex: 1;
+  flex: 0 0 auto; /* Elimina flex:1 para que no se expandan */
   text-align: center;
 }
 .shippinginformation-col.left {
   text-align: left;
+  margin-right: auto; /* Empuja este botón a la izquierda */
 }
 .shippinginformation-col.center {
   text-align: center;
+  margin: 0 auto; /* Centra este botón */
 }
 .shippinginformation-col.right {
   text-align: right;
+  margin-left: auto; /* Empuja este botón a la derecha */
 }
 .shippinginformation-buttons-row button {
   background-color: #00CED1; /* Celeste agua */
   border-radius: 6px;
-  width: 100%;
+  width: auto; /* Cambia de 100% a auto */
+  min-width: 200px; /* Ancho mínimo para consistencia */
   max-width: 250px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px; 
+  padding: 10px 20px; /* Padding mantenido */
   cursor: pointer;
   transition: transform 0.3s ease; 
-}
-.shippinginformation-buttons-row button:hover {
-  transform: scale(1.05);
+  white-space: nowrap; /* Evita que el texto se divida */
 }
 /* Botón PAY */
 #btn-shippinginformation-pay {
   background-color: #ff1493; /* fucsia */
 }
-/* Estados de botones */
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-button:disabled:hover {
-  transform: none;
-}
-/* RESPONSIVE */
+/* RESPONSIVE - ACTUALIZADO */
 @media (max-width: 950px) {
   .shippinginformation-container {
     width: 95%;
@@ -4999,9 +4990,12 @@ button:disabled:hover {
   }
     .shippinginformation-col {
     text-align: center !important;
+    margin: 0 !important; /* Resetea márgenes en móvil */
+    width: 100%;
   }
-    .shippinginformation-buttons-row button {
+   .shippinginformation-buttons-row button {
     max-width: 100%;
+    width: 100%; /* Botones full width en móvil */
   }
 }
 
