@@ -5060,13 +5060,13 @@ button:disabled:hover {
 }
 
 /* ======================================
-   TERMS SECTION
+   TERMS AND CONDITIONS SECTION
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.terms-container {
+.termsandconditions-container {
   position: relative;
   width: 800px;
-  background-color: #001F99;; /* azul electrico */
+  background-color: #001F99; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px;
@@ -5074,7 +5074,7 @@ button:disabled:hover {
   padding-left: 30px;
   padding-right: 30px;
 }
-.terms-container::before {
+.termsandconditions-container::before {
   content: "";
   position: absolute;
   top: 0;
@@ -5085,7 +5085,7 @@ button:disabled:hover {
   border-radius: 20px 20px 0 0;
   z-index: 1;
 }
-.terms-title {
+.termsandconditions-title {
   position: relative;
   z-index: 2;
   font-family: 'Orbitron', sans-serif;
@@ -5098,12 +5098,12 @@ button:disabled:hover {
   text-align: left;
   text-decoration: none;
 }
-.terms-title a {
+.termsandconditions-title a {
   color: white;
   text-decoration: none;
 }
 /* DESCRIPCIÓN */
-.terms-description {
+.termsandconditions-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   line-height: 1.5;
