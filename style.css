@@ -4931,7 +4931,7 @@ nav {
   background-position: right 10px center;
   background-size: 16px;
 }
-/* BOTONES */
+/* BOTONES - CÓDIGO CORREGIDO */
 .shippinginformation-buttons-row {
   display: flex;
   justify-content: space-between;
@@ -4939,90 +4939,54 @@ nav {
   margin: 0;
   gap: 15px;
 }
-
 .shippinginformation-col {
   flex: 1;
-  text-align: center;
-  display: flex; /* ✅ NUEVO - para alineación */
+  display: flex;
 }
-
 .shippinginformation-col.left {
-  text-align: left;
-  justify-content: flex-start; /* ✅ NUEVO - alinea izquierda */
+  justify-content: flex-start;
 }
-
 .shippinginformation-col.center {
-  text-align: center;
-  justify-content: center; /* ✅ NUEVO - alinea centro */
+  justify-content: center;
 }
-
 .shippinginformation-col.right {
-  text-align: right;
-  justify-content: flex-end; /* ✅ NUEVO - alinea derecha */
+  justify-content: flex-end;
 }
-
 .shippinginformation-buttons-row button {
   background-color: #00CED1; /* Celeste agua */
   border-radius: 6px;
-  width: 100%;
-  max-width: 250px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   border: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px; 
+  padding: 10px 20px;
   cursor: pointer;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
+  /* Eliminamos width: 100% y mantenemos max-width */
+  max-width: 250px;
+  width: auto; /* Aseguramos que el ancho sea automático */
+  flex-shrink: 0; /* Evita que los botones se encojan */
 }
-
-.shippinginformation-buttons-row button:hover {
-  transform: scale(1.05);
-}
-
-/* Botón PAY */
 #btn-shippinginformation-pay {
   background-color: #ff1493; /* fucsia */
 }
-
-/* Estados de botones */
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-button:disabled:hover {
-  transform: none;
-}
-
-/* RESPONSIVE */
+/* RESPONSIVE - CORRECCIÓN PARA BOTONES */
 @media (max-width: 950px) {
-  .shippinginformation-container {
-    width: 95%;
-    max-width: 550px;
-  }
-  
-  .form-columns {
-    flex-direction: column;
-    gap: 0;
-  }
-  
   .shippinginformation-buttons-row {
     flex-direction: column;
     gap: 15px;
   }
-  
-  .shippinginformation-col {
-    text-align: center !important;
-    justify-content: center !important; /* ✅ NUEVO - centra en móvil */
+    .shippinginformation-col {
+    width: 100%;
+    justify-content: center !important;
   }
-  
-  .shippinginformation-buttons-row button {
+    .shippinginformation-buttons-row button {
     max-width: 100%;
+    width: 100%;
   }
 }
+
+
 
 /* ======================================
    POLICY PRIVACY SECTION
