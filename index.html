@@ -287,7 +287,7 @@ I want a crab fishing boat and a patron to fund my delirium…
 <!-- SUBTÍTULO LIVE STREAM -->
 <div class="socialmediacontent-livestream">
 <span class="socialmediacontent-red-dot"></span>
-<span class="socialmediacontent-subtitle">LIVE STREAM (Since September 15)</span>
+<span class="socialmediacontent-subtitle">LIVE STREAM</span>
 </div>    
 <!-- TABLA 2 -->
 <table class="socialmediacontent-table2">
@@ -782,12 +782,12 @@ DONATE WITH PAYPAL
 <label for="topic" class="contact-label">TOPIC</label>
 <select id="topic" name="topic" class="contact-input" required>
 <option value="" disabled selected>Select a topic</option>
+<option value="influencer">Influencer</option>     
 <option value="social-media-creator">Social Media Creator</option>
-<option value="influencer">Influencer</option>
 <option value="film">Film</option>
 <option value="music">Music</option>
 <option value="fashion">Fashion</option>
-<option value="art">Art</option>
+<option value="science">Science</option>     
 </select>
 <label for="message-work" class="contact-label">MESSAGE</label>
 <textarea id="message-work" name="message" class="contact-textarea" rows="6" required></textarea>
@@ -1051,6 +1051,7 @@ WELCOME TO MY STORE
 <!-- FILA 1 -->
 <a href="#store-digitalproducts-digitalfilmselection-alone" class="digitalfilmselection-card">
 <img src="assets/assets/Desierto 4K Horizontal.png" alt="Alone">
+<span>ALONE</span>
 </a>
 <a href="javascript:void(0)" class="digitalfilmselection-card disabled" style="visibility: hidden;">
 <!-- Espacio reservado para futura tarjeta -->
@@ -1428,7 +1429,43 @@ ADD TO CART
 </div>
 </section>
 <!-- FIN DIGITAL MUSIC SELECTION -->
-   
+
+<!-- ALBUM (STORE) -->
+<section id="store-digitalproducts-digitalfilmselection-album" class="subsection">
+<div class="store-album-container">
+<h2 class="store-album-title">
+<a href="#store-digitalproducts-digitalfilmselection-album">ALBUM</a>
+</h2>
+<!-- Grid de 3 columnas -->
+<div class="store-album-grid">
+<!-- Fila 1 - Primer producto -->
+<!-- Producto 1 - 1969 -->
+<div class="store-product">
+<div class="store-album-image">
+<img src="assets/assets/1969 Afiche 1 Instagram.png" alt="1969 Album">
+</div>
+<div class="store-album-subtitle">1969</div>
+<div class="store-album-price">$ 50.00</div>
+<div class="store-view-button-wrapper">
+<a href="#store-digitalproducts-digitalfilmselection-album-1969" class="store-view-button">VIEW</a>
+</div>
+</div>
+<!-- Espacios reservados para futuros productos (ocultos por ahora) -->
+<div class="store-product" style="display: none;">
+<!-- Espacio reservado para futuro producto -->
+</div>
+<div class="store-product" style="display: none;">
+<!-- Espacio reservado para futuro producto -->
+</div>
+<!-- Botones de abajo -->
+<div class="store-album-buttons">
+<button id="btn-store-album-back" onclick="location.href='#store-digitalproducts-digitalfilmselection'">BACK</button>
+<button id="btn-store-album-continue" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+</section>
+<!-- FIN ALBUM (STORE) -->
+     
 <!-- FIN A LA PARTE DIGITAL MUSIC SELECTION -->
    
 
@@ -1546,10 +1583,9 @@ ADD TO CART
 </div>
 <!-- Columna 2: Información -->
 <div class="necklace1-info">
-<div class="necklace1-subtitle">NECKLACE 1</div>
-<div class="necklace1-price">$50.00</div>
-<p class="necklace1-shipping">Shipping INTL: $50</p>
-<p class="necklace1-shipping">Shipping PE: $5</p>
+<div class="necklace1-price">$ 50.00</div>
+<p class="necklace1-shipping">Shipping INTL: $ 50.00</p>
+<p class="necklace1-shipping">Shipping PE: $ 5.00</p>
 <p class="necklace1-description">
 This necklace is handcrafted with black glass beads, polyester velvet ribbon, and a zinc alloy charm. Each piece is woven and sewn by hand.
 </p>
@@ -1561,14 +1597,14 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 data-name="Necklace 1"
 data-price="50.00"
 data-image="assets/assets/Collar 1.jpg"
-data-shipping="50">
+data-shipping="50.00">
 ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 1"
 data-price="50.00"
 data-image="assets/assets/Collar 1.jpg"
-data-shipping="5">
+data-shipping="5.00">
 ADD TO CART (PE)
 </button>
 <button class="share-button">SHARE</button>
@@ -1595,10 +1631,9 @@ ADD TO CART (PE)
 </div>
 <!-- Columna 2: Información -->
 <div class="necklace2-info">
-<div class="necklace2-subtitle">NECKLACE 2</div>
-<div class="necklace2-price">$50.00</div>
-<p class="necklace2-shipping">Shipping INTL: $50</p>
-<p class="necklace2-shipping">Shipping PE: $5</p>
+<div class="necklace2-price">$ 50.00</div>
+<p class="necklace2-shipping">Shipping INTL: $ 50.00</p>
+<p class="necklace2-shipping">Shipping PE: $ 5.00</p>
 <p class="necklace2-description">
 This necklace is handcrafted with black glass beads, polyester velvet ribbon, and a zinc alloy charm. Each piece is woven and sewn by hand.
 </p>
@@ -1610,14 +1645,14 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 data-name="Necklace 2"
 data-price="50.00"
 data-image="assets/assets/Collar 2.jpg"
-data-shipping="50">
+data-shipping="50.00">
 ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 2"
 data-price="50.00"
 data-image="assets/assets/Collar 2.jpg"
-data-shipping="5">
+data-shipping="5.00">
 ADD TO CART (PE)
 </button>
 <button class="share-button">SHARE</button>
@@ -1644,10 +1679,9 @@ ADD TO CART (PE)
 </div>
 <!-- Columna 2: Información -->
 <div class="necklace3-info">
-<div class="necklace3-subtitle">NECKLACE 3</div>
-<div class="necklace3-price">$50.00</div>
-<p class="necklace3-shipping">Shipping INTL: $50</p>
-<p class="necklace3-shipping">Shipping PE: $5</p>
+<div class="necklace3-price">$ 50.00</div>
+<p class="necklace3-shipping">Shipping INTL: $ 50.00</p>
+<p class="necklace3-shipping">Shipping PE: $ 5.00</p>
 <p class="necklace3-description">
 This necklace is handcrafted with black glass beads, polyester velvet ribbon, and a zinc alloy charm. Each piece is woven and sewn by hand.
 </p>
@@ -1659,14 +1693,14 @@ This necklace is handcrafted with black glass beads, polyester velvet ribbon, an
 data-name="Necklace 3"
 data-price="50.00"
 data-image="assets/assets/Collar 3.jpg"
-data-shipping="50">
+data-shipping="50.00">
 ADD TO CART (INTL)
 </button>
 <button class="addtocart-pe"
 data-name="Necklace 3"
 data-price="50.00"
 data-image="assets/assets/Collar 3.jpg"
-data-shipping="5">
+data-shipping="5.00">
 ADD TO CART (PE)
 </button>
 <button class="share-button">SHARE</button>
@@ -1690,14 +1724,14 @@ ADD TO CART (PE)
 <div class="cart-container">
 <h2 class="cart-title">YOUR CART</h2>
 <!-- Estado: Carrito Vacío -->
-<div class="cart-empty" id="cart-empty">
+<div class="cart-empty" id="cart-empty" style="display: none;">
 <p class="cart-empty-description">Your cart is empty</p>
 <div class="cart-empty-buttons">
 <button onclick="location.href='#store'">CONTINUE SHOPPING</button>
 </div>
 </div>
 <!-- Estado: Carrito con Productos -->
-<div class="cart-full" id="cart-full" style="display: none;">
+<div class="cart-full" id="cart-full">
 <!-- TABLA -->
 <table class="cart-table">
 <thead>
