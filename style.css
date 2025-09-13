@@ -4936,8 +4936,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px;
-  gap: 0px;
+  margin: 0;
+  gap: 0;
+  width: 100%;
 }
 .shippinginformation-col {
   flex: 1;
@@ -4959,9 +4960,9 @@ nav {
   font-size: 1.2rem;
   color: white;
   border: none;
-  max-width: 250px;
-  width: auto;
-  flex-shrink: 0;
+  white-space: nowrap;
+  width: auto !important;
+  max-width: none;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -4986,8 +4987,8 @@ nav {
     justify-content: center !important;
   }
     .shippinginformation-buttons-row button {
+    width: 100% !important;
     max-width: 100%;
-    width: 100%;
   }
 }
 
