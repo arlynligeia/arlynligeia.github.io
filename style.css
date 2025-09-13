@@ -4931,71 +4931,96 @@ nav {
   background-position: right 10px center;
   background-size: 16px;
 }
-/* BOTONES - CORREGIDO */
+/* BOTONES */
 .shippinginformation-buttons-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  gap: 0px;
+  gap: 15px;
 }
+
 .shippinginformation-col {
-  flex: 1; /* MANTIENE la función de agrandarse */
+  flex: 1;
   text-align: center;
-  display: flex;
-  justify-content: center;
+  display: flex; /* ✅ NUEVO - para alineación */
 }
+
 .shippinginformation-col.left {
-  justify-content: flex-start; /* Izquierda */
   text-align: left;
+  justify-content: flex-start; /* ✅ NUEVO - alinea izquierda */
 }
+
 .shippinginformation-col.center {
-  justify-content: center; /* Centro */
   text-align: center;
+  justify-content: center; /* ✅ NUEVO - alinea centro */
 }
+
 .shippinginformation-col.right {
-  justify-content: flex-end; /* Derecha */
   text-align: right;
+  justify-content: flex-end; /* ✅ NUEVO - alinea derecha */
 }
+
 .shippinginformation-buttons-row button {
   background-color: #00CED1; /* Celeste agua */
   border-radius: 6px;
-  width: 100%; /* MANTIENE el ancho completo */
+  width: 100%;
   max-width: 250px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; 
 }
+
+.shippinginformation-buttons-row button:hover {
+  transform: scale(1.05);
+}
+
 /* Botón PAY */
 #btn-shippinginformation-pay {
   background-color: #ff1493; /* fucsia */
 }
-/* RESPONSIVE - ACTUALIZADO */
+
+/* Estados de botones */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+/* RESPONSIVE */
 @media (max-width: 950px) {
   .shippinginformation-container {
     width: 95%;
     max-width: 550px;
   }
-    .form-columns {
+  
+  .form-columns {
     flex-direction: column;
     gap: 0;
   }
-    .shippinginformation-buttons-row {
+  
+  .shippinginformation-buttons-row {
     flex-direction: column;
     gap: 15px;
   }
-    .shippinginformation-col {
+  
+  .shippinginformation-col {
     text-align: center !important;
-    justify-content: center !important;
-    width: 100%;
+    justify-content: center !important; /* ✅ NUEVO - centra en móvil */
   }
-    .shippinginformation-buttons-row button {
+  
+  .shippinginformation-buttons-row button {
     max-width: 100%;
-    width: 100%;
   }
 }
 
