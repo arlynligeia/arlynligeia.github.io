@@ -2598,6 +2598,17 @@ nav {
   transform: scale(1.05);
 }
 
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    ALONE
 ====================================== */
@@ -2730,20 +2741,6 @@ nav {
   transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SIMPLE SPONSOR
 ====================================== */
@@ -2807,21 +2804,21 @@ nav {
 }
 /* PRECIO */
 .simplesponsor-price {
-  margin-top: 0px;
-  margin-bottom: 10px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 10px; 
   text-decoration: none; 
   line-height: 1.6;
 }
 /* DESCRIPCIÓN DEL PRODUCTO */
 .simplesponsor-description {
-  margin-top: 0px;
-  margin-bottom: 0px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
   text-decoration: none; 
   line-height: 1.6;
   text-align: justify;
@@ -2835,15 +2832,15 @@ nav {
 .simplesponsor-buttons button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
   margin-top: 0px;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important; 
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -2858,13 +2855,13 @@ nav {
   font-size: 1rem;  
 }
 /* Botones */
-.simplesponsor-buttons2 {
+.simplesponsor-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.simplesponsor-buttons2 button {
+.simplesponsor-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
@@ -2878,11 +2875,11 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.simplesponsor-buttons2 button:hover {
+.simplesponsor-buttons button:hover {
   transform: scale(1.05);
 }
 /* Botón GO TO CART */
-#btn-simplesponsor-cart {
+#button-simplesponsor-gotocart {
   background-color: #ff1493; /* fucsia */
 }
 /* Solo aplica al texto OUT OF STOCK */
@@ -2956,21 +2953,21 @@ nav {
 }
 /* PRECIO */
 .featuredsponsor-price {
-  margin-top: 0px;
-  margin-bottom: 10px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 10px; 
   text-decoration: none; 
   line-height: 1.6;
 }
 /* DESCRIPCIÓN DEL PRODUCTO */
 .featuredsponsor-description {
-  margin-top: 0px;
-  margin-bottom: 0px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
   text-decoration: none; 
   line-height: 1.6;
   text-align: justify;
@@ -3007,31 +3004,31 @@ nav {
   font-size: 1rem;  
 }
 /* Botones */
-.featuredsponsor-buttons2 {
+.featuredsponsor-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.featuredsponsor-buttons2 button {
+.featuredsponsor-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important; 
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.featuredsponsor-buttons2 button:hover {
+.featuredsponsor-buttons button:hover {
   transform: scale(1.05);
 }
 /* Botón GO TO CART */
-#btn-featuredsponsor-cart {
+#button-featuredsponsor-gotocart {
   background-color: #ff1493; /* fucsia */
 }
 /* Solo aplica al texto OUT OF STOCK */
@@ -3105,21 +3102,21 @@ nav {
 }
 /* PRECIO */
 .vipsponsor-price {
-  margin-top: 0px;
-  margin-bottom: 10px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 10px; 
   text-decoration: none; 
   line-height: 1.6;
 }
 /* DESCRIPCIÓN DEL PRODUCTO */
 .vipsponsor-description {
-  margin-top: 0px;
-  margin-bottom: 0px; 
   font-family: 'Share Tech Mono', monospace;
   font-size: 1rem;
   color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
   text-decoration: none; 
   line-height: 1.6;
   text-align: justify;
@@ -3133,15 +3130,15 @@ nav {
 .vipsponsor-buttons button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
   margin-top: 0px;
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white !important; 
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -3156,13 +3153,13 @@ nav {
   font-size: 1rem;  
 }
 /* Botones */
-.vipsponsor-buttons2 {
+.vipsponsor-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.vipsponsor-buttons2 button {
+.vipsponsor-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   padding-top: 10px;
@@ -3176,11 +3173,11 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.vipsponsor-buttons2 button:hover {
+.vipsponsor-buttons button:hover {
   transform: scale(1.05);
 }
 /* Botón GO TO CART */
-#btn-vipsponsor-cart {
+#button-vipsponsor-gotocart {
   background-color: #ff1493; /* fucsia */
 }
 /* Solo aplica al texto OUT OF STOCK */
@@ -3190,6 +3187,15 @@ nav {
   color: #39FF14;
   font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
 /* ======================================
    SIMPLE LOGO VENTURE
 ====================================== */
