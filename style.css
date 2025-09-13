@@ -2661,22 +2661,22 @@ nav {
 }
 /* TEXTO */
 .alone-subtitle {
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  color: white;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-.alone-price {
-  margin-top: 0px;
-  margin-bottom: 10px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
   line-height: 1.6;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.alone-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.6;
+  margin-top: 0px;
+  margin-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -2690,13 +2690,13 @@ nav {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   display: inline-block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
   text-decoration: none; 
   border: none;  
   cursor: pointer;
@@ -2729,6 +2729,9 @@ nav {
 .alone-buttons button:hover {
   transform: scale(1.05);
 }
+
+
+
 
 
 
