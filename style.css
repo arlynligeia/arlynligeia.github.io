@@ -4937,7 +4937,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  gap: 15px;
+  gap: 10px;
 }
 .shippinginformation-col {
   flex: 1;
@@ -4959,13 +4959,18 @@ nav {
   font-size: 1.2rem;
   color: white;
   border: none;
-  padding: 10px 20px;
+  max-width: 250px;
+  width: auto;
+  flex-shrink: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px; 
   cursor: pointer;
   transition: transform 0.3s ease;
-  /* Eliminamos width: 100% y mantenemos max-width */
-  max-width: 250px;
-  width: auto; /* Aseguramos que el ancho sea automático */
-  flex-shrink: 0; /* Evita que los botones se encojan */
+}
+.shippinginformation-buttons-row button:hover {
+  transform: scale(1.05);
 }
 #btn-shippinginformation-pay {
   background-color: #ff1493; /* fucsia */
