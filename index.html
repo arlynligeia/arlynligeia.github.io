@@ -1766,20 +1766,20 @@ ADD TO CART (PE)
 <h2 class="shippinginformation-title">SHIPPING INFORMATION</h2>
 <!-- RESUMEN DEL PEDIDO -->
 <div class="order-summary" id="order-summary">
-<h3>Order Summary</h3>
+<h3>ORDER SUMMARY</h3>
 <div id="order-items"></div>
 <div class="order-totals">
 <div class="order-subtotal">
 <span>Subtotal:</span>
-<span id="order-subtotal">$0.00</span>
+<span id="order-subtotal">$ 0.00</span>
 </div>
 <div class="order-shipping">
 <span>Shipping:</span>
-<span id="order-shipping">$0.00</span>
+<span id="order-shipping">$ 0.00</span>
 </div>
 <div class="order-total">
 <span>Total:</span>
-<span id="order-total">$0.00</span>
+<span id="order-total">$ 0.00</span>
 </div>
 </div>
 </div>
@@ -1788,7 +1788,7 @@ ADD TO CART (PE)
 <div class="form-columns">
 <!-- COLUMNA 1: INFORMACIÓN PERSONAL -->
 <div class="form-column">
-<h3>Personal Information</h3>
+<h3>PERSONAL INFORMATION</h3>
 <label for="email" class="shippinginformation-label">EMAIL*</label>
 <input type="email" id="email" name="email" class="shippinginformation-input" required>
 <label for="firstname" class="shippinginformation-label">FIRST NAME*</label>
@@ -1802,13 +1802,59 @@ ADD TO CART (PE)
 </div>
 <!-- COLUMNA 2: DIRECCIÓN DE ENVÍO -->
 <div class="form-column">
-<h3>Shipping Address</h3>
+<h3>SHIPPING ADDRESS</h3>
 <label for="country" class="shippinginformation-label">COUNTRY*</label>
 <select id="country" name="country" class="shippinginformation-input" required>
 <option value="">Select Country</option>
-<option value="PE">Perú</option>
+<!-- América del Norte -->
 <option value="US">United States</option>
+<option value="CA">Canada</option>
 <option value="MX">Mexico</option>
+<!-- América Central -->
+<option value="BZ">Belize</option>
+<option value="CR">Costa Rica</option>
+<option value="SV">El Salvador</option>
+<option value="GT">Guatemala</option>
+<option value="HN">Honduras</option>
+<option value="NI">Nicaragua</option>
+<option value="PA">Panama</option>
+<!-- Caribe -->
+<option value="AG">Antigua and Barbuda</option>
+<option value="BS">Bahamas</option>
+<option value="BB">Barbados</option>
+<option value="CU">Cuba</option>
+<option value="DM">Dominica</option>
+<option value="DO">Dominican Republic</option>
+<option value="GD">Grenada</option>
+<option value="HT">Haiti</option>
+<option value="JM">Jamaica</option>
+<option value="KN">Saint Kitts and Nevis</option>
+<option value="LC">Saint Lucia</option>
+<option value="VC">Saint Vincent and the Grenadines</option>
+<option value="TT">Trinidad and Tobago</option>
+<!-- América del Sur -->
+<option value="AR">Argentina</option>
+<option value="BO">Bolivia</option>
+<option value="BR">Brazil</option>
+<option value="CL">Chile</option>
+<option value="CO">Colombia</option>
+<option value="EC">Ecuador</option>
+<option value="GY">Guyana</option>
+<option value="PY">Paraguay</option>
+<option value="PE">Peru</option>
+<option value="SR">Suriname</option>
+<option value="UY">Uruguay</option>
+<option value="VE">Venezuela</option>
+<!-- Europa (principales) -->
+<option value="ES">Spain</option>
+<option value="FR">France</option>
+<option value="DE">Germany</option>
+<option value="IT">Italy</option>
+<option value="GB">United Kingdom</option>
+<option value="PT">Portugal</option>
+<option value="NL">Netherlands</option>
+<option value="BE">Belgium</option>
+<option value="CH">Switzerland</option>
 <!-- Agregar más países -->
 </select>
 <label for="state" class="shippinginformation-label">STATE/PROVINCE/REGION*</label>
@@ -1844,7 +1890,7 @@ ADD TO CART (PE)
 <!-- FORMULARIO PAYPAL (OCULTO) -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
 <input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="arlynligeiacp@gmail.com">
+<input type="hidden" name="business" value="arlynligeia@gmail.com">
 <input type="hidden" name="item_name" value="Order from Arlyn Ligeia Store">
 <input type="hidden" name="amount" value="0" id="paypalAmount">
 <input type="hidden" name="currency_code" value="USD">
