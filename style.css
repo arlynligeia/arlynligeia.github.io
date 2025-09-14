@@ -2360,45 +2360,8 @@ nav {
   font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   DIGITAL MUSIC SELECTION
+  DIGITAL MUSIC SELECTION
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .digitalmusicselection-container {
@@ -2453,7 +2416,7 @@ nav {
 .digitalmusicselection-card {
   position: relative;
   overflow: hidden;
-  display: block; 
+  display: block;
   border-radius: 15px;
   color: white;
   text-decoration: none;
@@ -2466,7 +2429,7 @@ nav {
 }
 .digitalmusicselection-card span {
   position: absolute;
-  z-index: 2; 
+  z-index: 2;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -2486,8 +2449,8 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-#digitalmusicselection-back-button,
-#digitalmusicselection-continueshopping-button {
+.digitalmusicselection-back-button,
+.digitalmusicselection-continueshopping-button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -2499,16 +2462,14 @@ nav {
   padding-right: 20px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
-#digitalmusicselection-back-button:hover,
-#digitalmusicselection-continueshopping-button:hover {
+.digitalmusicselection-back-button:hover,
+.digitalmusicselection-continueshopping-button:hover {
   transform: scale(1.05);
-  background-color: #009999;
 }
-
 /* ======================================
-   ALBUM PRODUCTS
+  ALBUM PRODUCTS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .albumproducts-container {
@@ -2531,7 +2492,7 @@ nav {
   width: 100%;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
-  height: 90px; 
+  height: 90px;
 }
 .albumproducts-title {
   position: relative;
@@ -2541,7 +2502,7 @@ nav {
   font-size: 2.5rem;
   color: white;
   margin-top: 0;
-  margin-bottom: 16px; 
+  margin-bottom: 16px;
   text-decoration: none;
   line-height: 1.6;
   text-align: left;
@@ -2589,7 +2550,7 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
- /* BOTÓN VIEW*/
+/* BOTÓN VIEW*/
 .albumproducts-view-button-wrapper {
   text-align: center;
   margin-top: 0px;
@@ -2606,8 +2567,8 @@ nav {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  text-decoration: none; 
-  border: none;  
+  text-decoration: none;
+  border: none;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -2630,7 +2591,7 @@ nav {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
