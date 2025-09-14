@@ -62,7 +62,7 @@ nav {
 .submenu {
   display: none;
   position: absolute;
-  top: 100px; /* Posición original */
+  top: 40px; /* Posición original */
   left: 0;
   list-style: none;
   padding: 0;
@@ -84,7 +84,7 @@ nav {
 }
 .submenu-button {
   display: block;
-  width: 30%;
+  width: 100%;
   text-align: left;
   background: transparent;
   border: none;
@@ -119,6 +119,7 @@ nav {
 .submenu li:hover::before {
   transform: scaleX(1);
 }
+
 
 
 
