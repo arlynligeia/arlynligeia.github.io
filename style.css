@@ -436,8 +436,8 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-#digitalfilmselection-back-button,
-#digitalfilmselection-continueshopping-button {
+.digitalfilmselection-back-button,
+.digitalfilmselection-continueshopping-button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -449,18 +449,12 @@ nav {
   padding-right: 20px;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
-#digitalfilmselection-back-button:hover,
-#digitalfilmselection-continueshopping-button:hover {
+.digitalfilmselection-back-button:hover,
+.digitalfilmselection-continueshopping-button:hover {
   transform: scale(1.05);
-  background-color: #009999;
 }
-
-
-
-
-
 
 /* ======================================
    FEATURE FILM PRODUCTS
