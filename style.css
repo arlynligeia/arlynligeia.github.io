@@ -3018,6 +3018,357 @@ nav {
   font-weight: bold;
 }
 
+/* ======================================
+  NECKLACE 2
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.necklace2-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.necklace2-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.necklace2-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.necklace2-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.necklace2-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.necklace2-image {
+  display: flex;
+  align-items: center;
+}
+.necklace2-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.necklace2-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.necklace2-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px; /* Reducido para acercar el precio al shipping */
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* CONTENEDOR DE SHIPPING */
+.necklace2-shipping-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.necklace2-shipping {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.necklace2-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.necklace2-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.necklace2-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.necklace2-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.necklace2-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.necklace2-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.necklace2-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.necklace2-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.necklace2-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.necklace2-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+  NECKLACE 3
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.necklace3-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.necklace3-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.necklace3-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.necklace3-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.necklace3-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.necklace3-image {
+  display: flex;
+  align-items: center;
+}
+.necklace3-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.necklace3-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.necklace3-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px; /* Reducido para acercar el precio al shipping */
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* CONTENEDOR DE SHIPPING */
+.necklace3-shipping-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.necklace3-shipping {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  color: white;
+  margin: 0;
+  line-height: 1.5;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.necklace3-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.necklace3-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.necklace3-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.necklace3-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.necklace3-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.necklace3-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.necklace3-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.necklace3-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.necklace3-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.necklace3-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
 
 
 
