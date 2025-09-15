@@ -120,6 +120,639 @@ nav {
   transform: scaleX(1);
 }
 
+/* ======================================
+   HOME
+====================================== */
+/* ======================================
+   CARRUSEL DE INICIO Y TEXTO LATERAL
+====================================== */
+.carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding-right: 50px;
+  padding: 0 50px;
+  gap: 30px;
+}
+.carousel {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+}
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel-image.active {
+  opacity: 1;
+}
+
+/* ======================================
+   CONTENEDOR A LA IZQUIERDA DEL CARRUSEL
+====================================== */
+.side-info-box {
+  width: 500px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.side-info-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.side-info-title {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  text-align: center;
+}
+.side-info-description {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.5;
+  text-align: justify;
+}
+/* Contenedor principal de los iconos */
+.social-icons-grid {
+  display: inline-flex; 
+  flex-direction: column;
+  align-items: center;
+  align-self: center;  
+  background-color: #ff1493; /* fucsia sólido */
+  border: 2px solid #ff00ff; /* borde neón */
+  border-radius: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
+  gap: 12px; /* espacio entre filas */
+  max-width: 100%; 
+}
+/* Cada fila de iconos */
+.social-row {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* espacio entre iconos */
+}
+/* Iconos individuales */
+.social-icons-grid img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.social-icons-grid img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
+}
+
+/* ======================================
+   SOCIAL MEDIA CONTENT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.socialmediacontent-container {
+  position: relative;
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.socialmediacontent-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.socialmediacontent-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.socialmediacontent-title a {
+  color: white;
+  text-decoration: none;
+}
+/* TABLA 1 */
+.socialmediacontent-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.socialmediacontent-table td + td,
+.socialmediacontent-table th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
+.socialmediacontent-account-col {
+  width: 20%;
+}
+.socialmediacontent-days-col {
+  width: 50%;
+}
+.socialmediacontent-time-col {
+  width: 30%;
+}
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
+.socialmediacontent-table td {
+  vertical-align: middle;
+  padding-top: 0px;
+  padding-bottom: 10px; 
+}
+/* SUBTÍTULOS */
+.socialmediacontent-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+ }
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
+.socialmediacontent-tabledivider td {
+  border-top: 3px solid #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 5px;
+  height: 0; 
+ }
+/* COLUMNAS */
+/* ACCOUNT */
+.tiktok-button-wrapper,
+.youtube-button-wrapper {
+  text-align: center;
+}
+.tiktok-button,
+.youtube-button {
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none !important;
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.tiktok-button:hover {
+  transform: scale(1.05);
+}
+.youtube-button:hover {
+  transform: scale(1.05);
+}
+/* DAYS Y TIME */
+/* RECUADRO BLANC GENERICO */
+.socialmediacontent-white-cell {
+  background-color: white;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;  
+  text-align: center;
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+/* SUBTÍTULO DEBAJO DE LA TABLA LIVE STREAM */
+.socialmediacontent-livestream {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0px; 
+  gap: 10px;
+}
+/* PUNTO ROJO*/
+.socialmediacontent-red-dot {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: blink 1s infinite;
+}
+/* SUBTÍTULO*/
+.socialmediacontent-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.2;
+  text-align: left;
+}
+/* TABLA 2 */
+.socialmediacontent-table2 {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.socialmediacontent-table2 td + td,
+.socialmediacontent-table2 th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
+.socialmediacontent-account2-col {
+  width: 20%;
+}
+.socialmediacontent-days2-col {
+  width: 50%;
+}
+.socialmediacontent-time2-col {
+  width: 30%;
+}
+/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
+.socialmediacontent-table2 td {
+  vertical-align: middle;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+/* SUBTÍTULOS */
+.socialmediacontent-table2 th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 0px;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+ }
+/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
+.socialmediacontent-tabledivider2 td {
+  border-top: 3px solid #ff1493; /* Fucsia */
+  padding-top: 0px;
+  padding-bottom: 5px;
+  height: 0; 
+ }
+/* COLUMNAS */
+/* ACCOUNT */
+.tiktok2-button-wrapper {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: center
+}  
+.twitch-button-wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.tiktok2-button,
+.twitch-button {
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white !important;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none !important;
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.tiktok2-button:hover {
+  transform: scale(1.05); 
+}
+.twitch-button:hover {
+  transform: scale(1.05);
+}
+/* RECUADRO BLANC GENERICO */
+.socialmediacontent-white-cell2 {
+  background-color: white;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;  
+  text-align: center;
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+
+/* ======================================
+   YOUTUBE HIGHLIGHT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.youtubehighlight-container {
+  position: relative;
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.youtubehighlight-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; /* franja encima del fondo */  
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+/* TÍTULO Y BOTÓN */
+.youtubehighlight-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+/* TÍTULO */
+.youtubehighlight-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0px; 
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.youtubehighlight-title a {
+  color: white;
+  text-decoration: none;
+}
+/* BOTÓN FOLLOW */
+.youtube-follow-button {
+  background-color: #ff1493; /* Fucsia por defecto */ 
+  z-index: 2;
+  display: inline-block;
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px; 
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.youtube-follow-button:hover {
+  transform: scale(1.05);
+}
+/* CONTENEDOR DE VIDEOS */
+/* GRID DE DOS COLUMNAS */
+.youtubehighlight-videos {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: 250px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+/* COLUMNAS DE VIDEOS */
+.youtube-video-column {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* CONTENEDOR PARA MANTENER PROPORCIÓN 16:9 */
+.youtube-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* EL IFRAME SE AJUSTA SIN DEFORMARSE */
+.youtube-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+/* CONTENEDOR DE VIDEOS 2 */
+/* GRID DE DOS COLUMNAS 2 */
+.youtubehighlight2-videos {
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: 250px;
+  margin: 0;
+}
+/* COLUMNAS DE VIDEOS */
+.youtube2-video-column {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* CONTENEDOR PARA MANTENER PROPORCIÓN 16:9 */
+.youtube2-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+}
+/* EL IFRAME SE AJUSTA SIN DEFORMARSE */
+.youtube2-video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
+/* ======================================
+   BIOGRAPHY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.biography-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.biography-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.biography-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.biography-title a {
+  color: white;
+  text-decoration: none;
+}
+/* COLUMNAS */
+.biography-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+/* COLUMNA DE TEXTO */
+.biography-text-side {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.biography-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: justify;
+}
+/* COLUMNA DE IMAGEN*/
+ .biography-image {
+  flex: 1;
+  min-width: 300px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.biography-image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
