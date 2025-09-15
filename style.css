@@ -1515,6 +1515,497 @@ nav {
   font-weight: bold;
 }
 
+/* ======================================
+  SIMPLE LOGO VENTURE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.simplelogoventure-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.simplelogoventure-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.simplelogoventure-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.simplelogoventure-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.simplelogoventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.simplelogoventure-image {
+  display: flex;
+  align-items: center;
+}
+.simplelogoventure-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.simplelogoventure-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.simplelogoventure-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.simplelogoventure-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.simplelogoventure-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.simplelogoventure-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.simplelogoventure-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.simplelogoventure-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.simplelogoventure-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.simplelogoventure-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.simplelogoventure-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.simplelogoventure-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.simplelogoventure-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+  FEATURED LOGO VENTURE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featuredlogoventure-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.featuredlogoventure-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.featuredlogoventure-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.featuredlogoventure-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.featuredlogoventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.featuredlogoventure-image {
+  display: flex;
+  align-items: center;
+}
+.featuredlogoventure-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.featuredlogoventure-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.featuredlogoventure-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.featuredlogoventure-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.featuredlogoventure-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.featuredlogoventure-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.featuredlogoventure-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.featuredlogoventure-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.featuredlogoventure-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.featuredlogoventure-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.featuredlogoventure-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.featuredlogoventure-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.featuredlogoventure-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+  EXCLUSIVE LOGO VENTURE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.exclusivelogoventure-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.exclusivelogoventure-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.exclusivelogoventure-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.exclusivelogoventure-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.exclusivelogoventure-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.exclusivelogoventure-image {
+  display: flex;
+  align-items: center;
+}
+.exclusivelogoventure-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.exclusivelogoventure-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.exclusivelogoventure-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.exclusivelogoventure-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.exclusivelogoventure-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.exclusivelogoventure-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.exclusivelogoventure-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.exclusivelogoventure-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.exclusivelogoventure-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.exclusivelogoventure-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.exclusivelogoventure-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.exclusivelogoventure-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.exclusivelogoventure-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
 
 
 
