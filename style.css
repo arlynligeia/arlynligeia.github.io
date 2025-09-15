@@ -1254,6 +1254,521 @@ nav {
   text-align: justify;
 }
 
+/* ======================================
+   SCIENCE
+====================================== */
+/* ======================================
+   WELCOME TO SCIENCE
+====================================== */
+/* CONTENEDOR */
+.science-carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CARRUSEL DE BIENVENIDA*/
+.science-carousel {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMÁGENES DEL CARRUSEL */
+.science-carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.science-carousel-image.active {
+  opacity: 1;
+}
+/* TEXTO DEL CARRUSEL */
+.science-carousel-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-align: center;
+  white-space: nowrap;
+}
+/* ======================================
+   RESEARCH ARTICLE
+====================================== */
+/* Contenedor */
+.researcharticle-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+/* Franja superior decorativa */
+.researcharticle-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; /* franja encima del fondo */  
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px; /* grosor de la franja */
+}
+/* Contenedor para título + botón en la misma fila */
+.researcharticle-header {
+  position: relative; /* para que el título y el botón estén encima de la franja */
+  z-index: 2; /* encima de la franja */
+  display: flex;
+  align-items: center; /* centra verticalmente */
+  justify-content: space-between; /* título a la izquierda, botón a la derecha */
+  margin-bottom: 16px; /* separa del contenido siguiente */
+}
+/* Título */
+.researcharticle-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  margin-top: 0px; 
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+.researcharticle-title a {
+  color: white;
+  text-decoration: none;
+}
+/* Botón Follow */
+.orcid-button {
+  z-index: 2; /* encima de la franja */   
+  display: inline-block;
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-top: 0px; 
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  border: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+/* Hover del botón */
+.orcid-button:hover {
+  transform: scale(1.05);
+}
+/* Botones */
+.researcharticle1-button {
+  display: block;
+  background-color: #ff1493; /* Fucsia */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px; 
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+ } 
+ .researcharticle1-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+.researcharticle2-button {
+  display: block;
+  background-color: #ff1493; /* Fucsia */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+ } 
+ .researcharticle2-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+.researcharticle3-button {
+  display: block;
+  background-color: #ff1493; /* Fucsia */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+ } 
+ .researcharticle3-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+ }
+
+
+/* ======================================
+   BE MY PATRON
+====================================== */
+/* CARRUSEL */
+.bemypatron-carousel-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CARRUSEL DE BIENVENIDA*/
+.bemypatron-carousel {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/* IMÁGENES DEL CARRUSEL */
+.bemypatron-carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.bemypatron-carousel-image.active {
+  opacity: 1;
+}
+/* TEXTO DEL CARRUSEL */
+.bemypatron-carousel-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  text-align: center;
+  white-space: nowrap;
+}
+/* CONTENEDOR */
+.bemypatron-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #001F99;; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+.bemypatron-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color:  #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
+.bemypatron-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+.bemypatron-title a {
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
+}
+.bemypatron-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 0px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* ======================================
+   SUPPORT MY WORK SECTION
+====================================== */
+.supportmywork-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #001F99;; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+.supportmywork-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color:  #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
+.supportmywork-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+.supportmywork-title a {
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
+}
+.supportmywork-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff1493; /* Fucsia */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ======================================
+   SUPPORT MY STUDIES SECTION
+====================================== */
+.supportmystudies-container {
+  position: relative; /* ← NECESARIO para que la franja se posicione dentro */
+  width: 800px;
+  background-color: #001F99;; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+.supportmystudies-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color:  #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
+.supportmystudies-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+.supportmystudies-title a {
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
+}
+.supportmystudies-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff1493; /* Fucsia */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+/* ======================================
+   GIFTS SECTION
+====================================== */
+.gifts-container {
+  position: relative;
+  width: 800px;
+  background-color: #001F99;; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px; /* editable margen superior */
+  padding-bottom: 30px; /* editable margen inferior */
+  padding-left: 30px; /* editable margen izquierdo */
+  padding-right: 30px; /* editable margen derecho */
+}
+.gifts-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px; /* grosor de la franja */
+  background-color:  #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  z-index: 1; /* franja encima del fondo */
+}
+.gifts-title {
+  position: relative;
+  z-index: 2; /* título encima de la franja */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  display: block;
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.6;
+  text-align: left;
+  text-decoration: none;
+}
+.gifts-title a {
+  color: white;           /* mantiene el texto blanco */
+  text-decoration: none;  /* quita el subrayado */
+}
+.gifts-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0;  /* Elimina el espacio adicional no deseado */
+  margin-bottom: 16px;
+  line-height: 1.5;
+  text-align: justify;
+}
+.donate-button-wrapper {
+  text-align: center;
+}
+.donate-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff1493; /* Fucsia */
+  color: white !important;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border: none !important; /* Elimina el borde blanco que se ve */
+  border-radius: 6px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.donate-button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+
 
 
 
