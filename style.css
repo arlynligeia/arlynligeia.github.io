@@ -1027,7 +1027,7 @@ nav {
    ALONE FILM DIGITAL PRODUCTS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.alonefilmdigitalproducts-container {
+.alonedigitalproducts-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -1038,7 +1038,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.alonefilmdigitalproducts-container::before {
+.alonedigitalproducts-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1049,7 +1049,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
-.alonefilmdigitalproducts-title {
+.alonedigitalproducts-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -1062,12 +1062,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.alonefilmdigitalproducts-title a {
+.alonedigitalproducts-title a {
   color: white;
   text-decoration: none;
 }
 /* GRID DE TRES COLUMNAS */
-.alonefilmdigitalproducts-grid {
+.alonedigitalproducts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -1075,17 +1075,17 @@ nav {
   margin-bottom: 20px;
 }
 /* IMAGEN */
-.alonefilmdigitalproducts-image {
+.alonedigitalproducts-image {
   width: 100%;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-.alonefilmdigitalproducts-image img {
+.alonedigitalproducts-image img {
   width: 100%;
   border-radius: 15px;
 }
 /* TEXTO */
-.alonefilmdigitalproducts-subtitle {
+.alonedigitalproducts-subtitle {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -1095,7 +1095,7 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
-.alonefilmdigitalproducts-price {
+.alonedigitalproducts-price {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -1106,12 +1106,12 @@ nav {
   text-transform: uppercase;
 }
  /* BOTÓN VIEW*/
-.alonefilmdigitalproducts-view-button-wrapper {
+.alonedigitalproducts-view-button-wrapper {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmdigitalproducts-view-button {
+.alonedigitalproducts-view-button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   display: inline-block;
@@ -1127,17 +1127,17 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.alonefilmdigitalproducts-view-button:hover {
+.alonedigitalproducts-view-button:hover {
   transform: scale(1.05);
 }
 /* BOTONES */
-.alonefilmdigitalproducts-buttons {
+.alonedigitalproducts-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmdigitalproducts-buttons button {
+.alonedigitalproducts-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -1151,7 +1151,7 @@ nav {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.alonefilmdigitalproducts-buttons button:hover {
+.alonedigitalproducts-buttons button:hover {
   transform: scale(1.05);
 }
 
