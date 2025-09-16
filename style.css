@@ -763,7 +763,7 @@ nav {
    ALONE FILM SPONSORSHIP
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.alonefilmsponsorship-container {
+.alonesponsorship-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -774,7 +774,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.alonefilmsponsorship-container::before {
+.alonesponsorship-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -785,7 +785,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
-.alonefilmsponsorship-title {
+.alonesponsorship-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -798,12 +798,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.alonefilmsponsorship-title a {
+.alonesponsorship-title a {
   color: white;
   text-decoration: none;
 }
 /* GRID DE TRES COLUMNAS */
-.alonefilmsponsorship-grid {
+.alonesponsorship-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -811,17 +811,17 @@ nav {
   margin-bottom: 20px;
 }
 /* IMAGEN */
-.alonefilmsponsorship-image {
+.alonesponsorship-image {
   width: 100%;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-.alonefilmsponsorship-image img {
+.alonesponsorship-image img {
   width: 100%;
   border-radius: 15px;
 }
 /* TEXTO */
-.alonefilmsponsorship-subtitle {
+.alonesponsorship-subtitle {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -831,7 +831,7 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
-.alonefilmsponsorship-price {
+.alonesponsorship-price {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -842,12 +842,12 @@ nav {
   text-transform: uppercase;
 }
  /* BOTÓN VIEW*/
-.alonefilmsponsorship-view-button-wrapper {
+.alonesponsorship-view-button-wrapper {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmsponsorship-view-button {
+.alonesponsorship-view-button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   display: inline-block;
@@ -863,17 +863,17 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.alonefilmsponsorship-view-button:hover {
+.alonesponsorship-view-button:hover {
   transform: scale(1.05);
 }
 /* BOTONES */
-.alonefilmsponsorship-buttons {
+.alonesponsorship-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmsponsorship-buttons button {
+.alonesponsorship-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -887,7 +887,7 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.alonefilmsponsorship-buttons button:hover {
+.alonesponsorship-buttons button:hover {
   transform: scale(1.05);
 }
 
@@ -895,7 +895,7 @@ nav {
    ALONE FILM EXECUTIVE PRODUCERS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.alonefilmexecutiveproducers-container {
+.aloneexecutiveproducers-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -906,7 +906,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.alonefilmexecutiveproducers-container::before {
+.aloneexecutiveproducers-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -917,7 +917,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
-.alonefilmexecutiveproducers-title {
+.aloneexecutiveproducers-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -930,12 +930,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.alonefilmexecutiveproducers-title a {
+.aloneexecutiveproducers-title a {
   color: white;
   text-decoration: none;
 }
 /* GRID DE TRES COLUMNAS */
-.alonefilmexecutiveproducers-grid {
+.aloneexecutiveproducers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -943,17 +943,17 @@ nav {
   margin-bottom: 20px;
 }
 /* IMAGEN */
-.alonefilmexecutiveproducers-image {
+.aloneexecutiveproducers-image {
   width: 100%;
   margin-top: 0px;
   margin-bottom: 10px;
 }
-.alonefilmexecutiveproducers-image img {
+.aloneexecutiveproducers-image img {
   width: 100%;
   border-radius: 15px;
 }
 /* TEXTO */
-.alonefilmexecutiveproducers-subtitle {
+.aloneexecutiveproducers-subtitle {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -963,7 +963,7 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
-.alonefilmexecutiveproducers-price {
+.aloneexecutiveproducers-price {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -974,12 +974,12 @@ nav {
   text-transform: uppercase;
 }
  /* BOTÓN VIEW*/
-.alonefilmexecutiveproducers-view-button-wrapper {
+.aloneexecutiveproducers-view-button-wrapper {
   text-align: center;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmexecutiveproducers-view-button {
+.aloneexecutiveproducers-view-button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   display: inline-block;
@@ -995,17 +995,17 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.alonefilmexecutiveproducers-view-button:hover {
+.aloneexecutiveproducers-view-button:hover {
   transform: scale(1.05);
 }
 /* BOTONES */
-.alonefilmexecutiveproducers-buttons {
+.aloneexecutiveproducers-buttons {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.alonefilmexecutiveproducers-buttons button {
+.aloneexecutiveproducers-buttons button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -1019,7 +1019,7 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.alonefilmexecutiveproducers-buttons button:hover {
+.aloneexecutiveproducers-buttons button:hover {
   transform: scale(1.05);
 }
 
