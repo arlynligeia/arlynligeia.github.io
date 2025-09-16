@@ -2007,6 +2007,497 @@ nav {
   font-weight: bold;
 }
 
+/* ======================================
+  BRONZE EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.bronzeexecutiveproducer-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.bronzeexecutiveproducer-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.bronzeexecutiveproducer-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.bronzeexecutiveproducer-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.bronzeexecutiveproducer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.bronzeexecutiveproducer-image {
+  display: flex;
+  align-items: center;
+}
+.bronzeexecutiveproducer-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.bronzeexecutiveproducer-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.bronzeexecutiveproducer-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.bronzeexecutiveproducer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.bronzeexecutiveproducer-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.bronzeexecutiveproducer-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.bronzeexecutiveproducer-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.bronzeexecutiveproducer-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.bronzeexecutiveproducer-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.bronzeexecutiveproducer-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.bronzeexecutiveproducer-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.bronzeexecutiveproducer-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.bronzeexecutiveproducer-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+  SILVER EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.silverexecutiveproducer-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.silverexecutiveproducer-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.silverexecutiveproducer-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.silverexecutiveproducer-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.silverexecutiveproducer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.silverexecutiveproducer-image {
+  display: flex;
+  align-items: center;
+}
+.silverexecutiveproducer-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.silverexecutiveproducer-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.silverexecutiveproducer-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.silverexecutiveproducer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.silverexecutiveproducer-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.silverexecutiveproducer-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.silverexecutiveproducer-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.silverexecutiveproducer-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.silverexecutiveproducer-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.silverexecutiveproducer-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.silverexecutiveproducer-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.silverexecutiveproducer-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.silverexecutiveproducer-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
+
+/* ======================================
+  GOLD EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.goldexecutiveproducer-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.goldexecutiveproducer-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.goldexecutiveproducer-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.goldexecutiveproducer-title a {
+  color: white;
+  text-decoration: none;
+}
+/* GRID DE DOS COLUMNAS */
+.goldexecutiveproducer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+.goldexecutiveproducer-image {
+  display: flex;
+  align-items: center;
+}
+.goldexecutiveproducer-image img {
+  width: 100%;
+  border-radius: 15px;
+  height: auto;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.goldexecutiveproducer-price-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 300px;
+}
+/* PRECIO */
+.goldexecutiveproducer-price {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.5;
+  text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.goldexecutiveproducer-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.goldexecutiveproducer-buttons button {
+  background-color: #ff1493; /* fucsia */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.goldexecutiveproducer-buttons button:hover {
+  transform: scale(1.05);
+}
+/* BOTÓN SHARE */
+.goldexecutiveproducer-buttons .share-button {
+  background-color: #39ff14;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+}
+/* CONTENEDOR DESCRIPCIÓN */
+.goldexecutiveproducer-description-container {
+  margin: 0px;
+}
+/* DESCRIPCIÓN DEL PRODUCTO */
+.goldexecutiveproducer-description {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: justify;
+}
+/* BOTONES INFERIORES */
+.goldexecutiveproducer-buttons2 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.goldexecutiveproducer-buttons2 button {
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 6px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.goldexecutiveproducer-buttons2 button:hover {
+  transform: scale(1.05);
+}
+/* Botón GO TO CART - AHORA COLOR FUCSIA */
+.goldexecutiveproducer-gotocart-button {
+  background-color: #ff1493 !important;
+}
+/* Solo aplica al texto OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;
+  font-weight: bold;
+}
 
 
 
