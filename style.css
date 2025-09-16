@@ -1159,7 +1159,7 @@ nav {
   SIMPLE SPONSOR
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.simplesponsor-container {
+.basicsponsor-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -1170,7 +1170,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.simplesponsor-container::before {
+.basicsponsor-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -1181,7 +1181,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
-.simplesponsor-title {
+.basicsponsor-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -1194,12 +1194,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.simplesponsor-title a {
+.basicsponsor-title a {
   color: white;
   text-decoration: none;
 }
 /* GRID DE DOS COLUMNAS */
-.simplesponsor-grid {
+.basicsponsor-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -1207,17 +1207,17 @@ nav {
   margin-bottom: 20px;
   align-items: stretch;
 }
-.simplesponsor-image {
+.basicsponsor-image {
   display: flex;
   align-items: center;
 }
-.simplesponsor-image img {
+.basicsponsor-image img {
   width: 100%;
   border-radius: 15px;
   height: auto;
 }
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.simplesponsor-price-buttons {
+.basicsponsor-price-buttons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1226,7 +1226,7 @@ nav {
   min-height: 300px;
 }
 /* PRECIO */
-.simplesponsor-price {
+.basicsponsor-price {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.5rem;
   color: white;
@@ -1237,13 +1237,13 @@ nav {
   text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.simplesponsor-buttons {
+.basicsponsor-buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
 }
-.simplesponsor-buttons button {
+.basicsponsor-buttons button {
   background-color: #ff1493; /* fucsia */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -1259,21 +1259,21 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.simplesponsor-buttons button:hover {
+.basicsponsor-buttons button:hover {
   transform: scale(1.05);
 }
 /* BOTÓN SHARE */
-.simplesponsor-buttons .share-button {
+.basicsponsor-buttons .share-button {
   background-color: #39ff14;
   font-family: 'Orbitron', sans-serif;
   font-size: 1rem;
 }
 /* CONTENEDOR DESCRIPCIÓN */
-.simplesponsor-description-container {
+.basicsponsor-description-container {
   margin: 0px;
 }
 /* DESCRIPCIÓN DEL PRODUCTO */
-.simplesponsor-description {
+.basicsponsor-description {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -1284,13 +1284,13 @@ nav {
   text-align: justify;
 }
 /* BOTONES INFERIORES */
-.simplesponsor-buttons2 {
+.basicsponsor-buttons2 {
   display: flex;
   justify-content: space-between;
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.simplesponsor-buttons2 button {
+.basicsponsor-buttons2 button {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
@@ -1304,11 +1304,11 @@ nav {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-.simplesponsor-buttons2 button:hover {
+.basicsponsor-buttons2 button:hover {
   transform: scale(1.05);
 }
 /* Botón GO TO CART - AHORA COLOR FUCSIA */
-.simplesponsor-gotocart-button {
+.basicsponsor-gotocart-button {
   background-color: #ff1493 !important;
 }
 /* Solo aplica al texto OUT OF STOCK */
