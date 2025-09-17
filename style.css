@@ -160,7 +160,6 @@ nav {
   color: white;
   text-decoration: none;
 }
-
 /* COLUMNAS */
 .biography-columns {
   display: flex;
@@ -169,16 +168,11 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-
 /* COLUMNA DE TEXTO */
 .biography-column-text {
   flex: 1;
   min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-
 .biography-text {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
@@ -188,22 +182,16 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-
 /* COLUMNA DE IMAGEN */
 .biography-column-image {
   flex: 1;
   min-width: 300px;
   margin-top: 0px;
   margin-bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-
 .biography-image {
   width: 100%;
 }
-
 .biography-image img {
   width: 100%;
   border-radius: 15px;
