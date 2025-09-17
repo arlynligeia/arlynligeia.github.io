@@ -538,6 +538,129 @@ EL INFIERNO DE OZUL
   text-align: justify;
 }
 
+/* ======================================
+   SHORT FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.musicvideodirection-container {
+  position: relative;
+  width: 800px;
+  background-color: #001F99; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.musicvideodirection-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.musicvideodirection-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.musicvideodirection-title a {
+  color: white;
+  text-decoration: none;
+}
+/* TEXTO */
+.musicvideodirection-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+ text-align: justify;
+}
+
+/* ======================================
+ DESPERTAR - BLUE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.despertar-container {
+  position: relative;
+  width: 800px;
+  background-color: #001F99; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.despertar-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.despertar-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.despertar-title a {
+  color: white;
+  text-decoration: none;
+}
+/* VIDEO */
+.despertar-container-video {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.despertar-video {
+  width: 100%;
+}
+.despertar-video iframe {
+  width: 100%;
+  border-radius: 15px;
+  height: 400px;
+}
+/* TEXTO */
+.despertar-container-text {
+  width: 100%;
+}
+.despertar-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: justify;
+}
 
 
 
