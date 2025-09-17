@@ -208,22 +208,29 @@ nav {
 /* ======================================
   FILM
 ====================================== */
-/* CONTENEDOR PARA FILM */
-.film-container-banner {
+/* CONTENEDOR PRINCIPAL DE FILM */
+.film-container {
   position: relative;
   height: calc(100vh - 220px);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+}
+
+/* CONTENEDOR DEL BANNER */
+.film-container-banner {
+  position: relative; 
   width: 95%;
+  height: 100%;
   background-color: #000000; 
   border: 2px solid white;
   border-radius: 20px;
   overflow: hidden;
 }
-/* IMAGEN ESTÁTICA */
-.alone-film-banner {
+
+/* IMAGEN DEL BANNER */
+.film-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
