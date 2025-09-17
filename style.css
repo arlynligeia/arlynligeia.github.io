@@ -176,6 +176,9 @@ nav {
   flex: 1;
   min-width: 300px;
 }
+.biography-container-text {
+  width: 100%;
+}
 .biography-text {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
@@ -192,12 +195,14 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.biography-image {
+.biography-container-image {
   width: 100%;
 }
-.biography-image img {
+.biography-container-image img {
   width: 100%;
   border-radius: 15px;
+  height: auto;
+  display: block;
 }
 
 /* ======================================
@@ -282,7 +287,7 @@ nav {
   margin-top: 0px;
   margin-bottom: 0px;
   line-height: 1.5;
-text-align: justify;
+ text-align: justify;
 }
 
 /* ======================================
@@ -336,7 +341,7 @@ text-align: justify;
   margin-top: 0px; 
   margin-bottom: 0px;
 }
-/* COLUMNA IMAGEN */
+/* COLUMNA DE IMAGEN */
 .alonefilm-column-image {
   flex: 1;
   min-width: 300px;
@@ -349,11 +354,16 @@ text-align: justify;
 .alonefilm-container-image img {
   width: 100%;
   border-radius: 15px;
+  height: auto;
+  display: block;
 }
-/* COLUMNA TEXTO */
+/* COLUMNA DE TEXTO */
 .alonefilm-column-text {
   flex: 1;
   min-width: 300px;
+}
+.alonefilm-container-text {
+  width: 100%;
 }
 /* FORMATOS DIFERENTES PARA CADA SUBTÍTULO */
 .alonefilm-subtitle-1 {
@@ -395,7 +405,6 @@ text-align: justify;
   line-height: 1.5;
   text-align: justify;
 }
-
 
 
 
