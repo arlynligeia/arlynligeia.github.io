@@ -130,7 +130,10 @@ nav {
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .biography-container::before {
   content: "";
@@ -238,7 +241,10 @@ nav {
   background-color: #9900CC; /* purpura neon */
   border-radius: 20px;
   margin: 40px auto;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .featurefilm-container::before {
   content: "";
@@ -268,23 +274,15 @@ nav {
   color: white;
   text-decoration: none;
 }
-
-/* CONTENEDOR DE TEXTO */
-.featurefilm-container-text {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 /* TEXTO */
 .featurefilm-text {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
-  line-height: 1.6;
   margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
+  margin-bottom: 0px;
+  line-height: 1.5;
+text-align: justify;
 }
 
 /* ======================================
@@ -297,7 +295,10 @@ nav {
   background-color: #001F99; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
-  padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 .alonefilm-container::before {
   content: "";
@@ -327,18 +328,14 @@ nav {
   color: white;
   text-decoration: none;
 }
-
 /* COLUMNAS */
 .alonefilm-columns {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   margin-top: 0px; 
-  margin-bottom: 16px;
+  margin-bottom: 0px;
 }
-
 /* COLUMNA IMAGEN */
 .alonefilm-column-image {
   flex: 1;
@@ -346,40 +343,47 @@ nav {
   margin-top: 0px; 
   margin-bottom: 0px;
 }
-
-.alonefilm-image {
+.alonefilm-container-image {
   width: 100%;
 }
-
-.alonefilm-image img {
+.alonefilm-container-image img {
   width: 100%;
   border-radius: 15px;
 }
-
 /* COLUMNA TEXTO */
 .alonefilm-column-text {
   flex: 1;
   min-width: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
-
-.alonefilm-container-text {
-  margin-bottom: 20px;
+/* FORMATOS DIFERENTES PARA CADA SUBTÍTULO */
+.alonefilm-subtitle-1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: center;
 }
-
-.alonefilm-subtitle-1,
-.alonefilm-subtitle-2,
+.alonefilm-subtitle-2 {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: justify;
+}
 .alonefilm-subtitle-3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
   margin-top: 0px;
-  margin-bottom: 16px; 
-  line-height: 1.3;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: center;
 }
-
+/* TEXTOS */
 .alonefilm-text-1,
 .alonefilm-text-2,
 .alonefilm-text-3 {
@@ -391,19 +395,6 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-
-/* SECCIÓN INFERIOR */
-.alonefilm-bottom {
-  margin-top: 30px;
-}
-
-/* CORRECCIÓN DE TIPOGRAFÍA (tenía "ont-family") */
-.alonefilm-text-3 {
-  font-family: 'Share Tech Mono', monospace;
-}
-
-
-
 
 
 
