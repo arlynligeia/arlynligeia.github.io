@@ -243,7 +243,7 @@ nav {
 .featurefilm-container {
   position: relative;
   width: 800px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #001F99; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px;
@@ -294,7 +294,7 @@ nav {
    ALONE FILM
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.alonefilm-container {
+.alone-container {
   position: relative;
   width: 800px;
   background-color: #001F99; /* azul electrico */
@@ -305,7 +305,7 @@ nav {
   padding-left: 30px;
   padding-right: 30px;
 }
-.alonefilm-container::before {
+.alone-container::before {
   content: "";
   position: absolute;
   z-index: 1; 
@@ -316,7 +316,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
-.alonefilm-title {
+.alone-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -329,12 +329,12 @@ nav {
   line-height: 1.6;
   text-align: left;
 }
-.alonefilm-title a {
+.alone-title a {
   color: white;
   text-decoration: none;
 }
 /* COLUMNAS */
-.alonefilm-columns {
+.alone-columns {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -342,31 +342,31 @@ nav {
   margin-bottom: 10px;
 }
 /* COLUMNA DE IMAGEN */
-.alonefilm-column-image {
+.alone-column-image {
   flex: 1;
   min-width: 300px;
   margin-top: 0px; 
   margin-bottom: 0px;
 }
-.alonefilm-container-image {
+.alone-container-image {
   width: 100%;
 }
-.alonefilm-container-image img {
+.alone-container-image img {
   width: 100%;
   border-radius: 15px;
   height: auto;
   display: block;
 }
 /* COLUMNA DE TEXTO */
-.alonefilm-column-text {
+.alone-column-text {
   flex: 1;
   min-width: 300px;
 }
-.alonefilm-container-text {
+.alone-container-text {
   width: 100%;
 }
 /* FORMATOS DIFERENTES PARA CADA SUBTÍTULO */
-.alonefilm-subtitle-1 {
+.alone-subtitle-1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
@@ -375,7 +375,7 @@ nav {
   line-height: 1.5;
   text-align: center;
 }
-.alonefilm-subtitle-2 {
+.alone-subtitle-2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -384,7 +384,7 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-.alonefilm-subtitle-3 {
+.alone-subtitle-3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
@@ -394,7 +394,7 @@ nav {
   text-align: center;
 }
 /* TEXTOS */
-.alonefilm-text-1 {
+.alone-text-1 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -403,8 +403,8 @@ nav {
   line-height: 1.5;
   text-align: justify;
 }
-.alonefilm-text-2,
-.alonefilm-text-3 {
+.alone-text-2,
+.alone-text-3 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
@@ -414,8 +414,129 @@ nav {
   text-align: justify;
 }
 
+/* ======================================
+   SHORT FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shortfilm-container {
+  position: relative;
+  width: 800px;
+  background-color: #001F99; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.shortfilm-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px; 
+}
+.shortfilm-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.shortfilm-title a {
+  color: white;
+  text-decoration: none;
+}
+/* TEXTO */
+.shortfilm-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+ text-align: justify;
+}
 
-
+/* ======================================
+EL INFIERNO DE OZUL
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.elinfiernodeozul-container {
+  position: relative;
+  width: 800px;
+  background-color: #001F99; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.elinfiernodeozul-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.elinfiernodeozul-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.elinfiernodeozul-title a {
+  color: white;
+  text-decoration: none;
+}
+/* VIDEO */
+.elinfiernodeozul-container-video {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.elinfiernodeozul-video {
+  width: 100%;
+}
+.elinfiernodeozul-video iframe {
+  width: 100%;
+  border-radius: 15px;
+  height: 400px;
+}
+/* TEXTO */
+.elinfiernodeozul-container-text {
+  width: 100%;
+}
+.elinfiernodeozul-text {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  line-height: 1.5;
+  text-align: justify;
+}
 
 
 
