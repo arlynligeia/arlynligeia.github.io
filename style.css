@@ -1375,7 +1375,7 @@ nav {
   display: flex;
   justify-content: center;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 .supportmywork-donatewithpaypal-button {
   background-color: #ff1493; /* Fucsia por defecto */
@@ -1395,12 +1395,24 @@ nav {
 .supportmywork-donatewithpaypal-button:hover {
   transform: scale(1.05);
 }
-  
-  
-  
-
-
-
+  .supportmywork-view-button {
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.supportmywork-view-button:hover {
+  transform: scale(1.05);
+}
  
 
 
