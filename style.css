@@ -205,6 +205,8 @@ nav {
   display: block;
 }
 
+
+
 /* ======================================
   FILM
 ====================================== */
@@ -469,7 +471,7 @@ nav {
 }
 
 /* ======================================
-EL INFIERNO DE OZUL
+  EL INFIERNO DE OZUL
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .elinfiernodeozul-container {
@@ -593,7 +595,7 @@ EL INFIERNO DE OZUL
 }
 
 /* ======================================
- DESPERTAR - BLUE
+  DESPERTAR - BLUE
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .despertar-container {
@@ -662,11 +664,43 @@ EL INFIERNO DE OZUL
   text-align: justify;
 }
 
+
+
 /* ======================================
-   MUSIC
+  MUSIC
+====================================== */
+/* CONTENEDOR PRINCIPAL DE FILM */
+.music-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+/* CONTENEDOR DEL BANNER */
+.music-container-banner {
+  position: relative; 
+  width: 95%;
+  height: 100%;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* IMAGEN DEL BANNER */
+.music-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================================
+   ALBUM
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.music-container {
+.album-container {
   position: relative;
   width: 800px;
   background-color: #00CED1; /* Celeste agua (color base) */
@@ -677,7 +711,7 @@ EL INFIERNO DE OZUL
   padding-left: 30px;
   padding-right: 30px;
 }
-.music-container::before {
+.album-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -688,7 +722,7 @@ EL INFIERNO DE OZUL
   border-radius: 20px 20px 0 0;
   height: 90px; 
 }
-.music-title {
+.album-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -701,12 +735,12 @@ EL INFIERNO DE OZUL
   line-height: 1.6;
   text-align: left;
 }
-.music-title a {
+.album-title a {
   color: white;
   text-decoration: none;
 }
 /* TEXTO */
-.music-text {
+.album-text {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: white;
