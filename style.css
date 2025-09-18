@@ -1357,11 +1357,9 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* CONTENEDOR DE TEXTO */
+/* CONTENEDOR DE TEXTO Y BOTÓN */
 .supportmywork-container-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
 }
 .supportmywork-text {
   font-family: 'Share Tech Mono', monospace;
@@ -1369,31 +1367,23 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
-}
-/* CONTENEDOR DE BOTÓN */
-.supportmywork-container-button,
-.supportmystudies-container-button,
-.gifts-container-button {
-  display: block;
-  justify-content: center;
-  text-align: center;
-  margin-top: 0px; 
-  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
 .donatewithpaypal-button {
-  display: inline-block;
+  display: flex;
   background-color: #ff1493; /* Fucsia por defecto */
   border-radius: 6px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
+  margin-top: 0px;
+  margin-bottom: 0px; 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  white-space: nowrap; /* ← Evitar que el texto se divida */
-  line-height: normal; /* ← Resetear línea de altura */
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;  
@@ -1445,11 +1435,9 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* CONTENEDOR DE TEXTO */
+/* CONTENEDOR DE TEXTO Y BOTÓN */
 .supportmystudies-container-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
 }
 /* TEXTOS */
 .supportmystudies-text {
@@ -1458,6 +1446,8 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
 
 /* ======================================
@@ -1503,11 +1493,9 @@ nav {
   color: white;
   text-decoration: none;
 }
-/* CONTENEDOR DE TEXTO */
+/* CONTENEDOR DE TEXTO Y BOTÓN */
 .gifts-container-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
 }
 .gifts-text {
   font-family: 'Share Tech Mono', monospace;
@@ -1515,6 +1503,8 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
 
 
