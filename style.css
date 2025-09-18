@@ -1579,7 +1579,111 @@ nav {
   transform: scale(1.05);
 }
 
-
+/* ======================================
+   CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.contact-container {
+  position: relative;
+  width: 550px;
+  background-color: #001F99;; /* azul electrico */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contact-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color:  #001A80; /* azul noche intenso */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.contact-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 16px; 
+}
+.contact-title a {
+  color: white;
+  text-decoration: none;
+}
+/* CONTENEDOR DEL FORMULARIO */
+.contact-container-label {
+  width: 100%;
+}
+.contact-label {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 5px; 
+}
+/* CAMPOS DE ENTRADA */
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 10px; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+.contact-input {
+  height: 40px;
+}
+.contact-textarea {
+  height: 120px;
+  resize: vertical;
+}
+/* CONTENEDOR DE BOTÓN */
+.contact-container-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.contact-submit-button {
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.contact-submit-button:hover {
+  transform: scale(1.05);
+}
 
 
 
