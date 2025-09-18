@@ -1586,7 +1586,7 @@ nav {
 .contact-container {
   position: relative;
   width: 550px;
-  background-color: #001F99;; /* azul electrico */
+  background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px;
@@ -1601,7 +1601,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color:  #001A80; /* azul noche intenso */
+  background-color: #00B8BA; /* Turquesa */
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
@@ -1685,6 +1685,133 @@ nav {
   transform: scale(1.05);
 }
 
+/* ======================================
+   DIRECT CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.directcontact-container {
+  position: relative;
+  width: 550px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.directcontact-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+.directcontact-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+  margin-top: 0px;
+  margin-bottom: 16px; 
+}
+.directcontact-title a {
+  color: white;
+  text-decoration: none;
+}
+/* TABLA */
+.directcontact-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: separate;
+  margin: 0;
+}
+.directcontact-table td + td,
+.directcontact-table th + th {
+  border-left: 10px solid transparent;
+}
+/* ANCHO DE LAS COLUMNAS */
+.directcontact-topic-column { /* ← Corregido: -col a -column */
+  width: 30%;
+}
+.directcontact-email-column { /* ← Corregido: -col a -column */
+  width: 70%;
+}
+/* ALINEACIÓN VERTICAL */
+.directcontact-table td {
+  vertical-align: middle;
+  padding: 0 0 10px 0; /* ← Simplificado */
+}
+/* SUBTÍTULOS */
+.directcontact-table th {
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #ff1493; /* Fucsia */
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* LÍNEA DIVISORIA */
+.directcontact-tabledivider td {
+  border-top: 3px solid #ff1493;
+  padding: 0 0 5px 0;
+  height: 0; 
+}
+
+/* BOTONES DE TOPIC */
+.directcontact-film-button,
+.directcontact-music-button,
+.directcontact-fashion-button {
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0; /* ← Simplificado */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  cursor: pointer; 
+  transition: transform 0.3s ease;
+}
+
+.directcontact-film-button:hover,
+.directcontact-music-button:hover,
+.directcontact-fashion-button:hover {
+  transform: scale(1.05);
+}
+
+/* TEXTOS DE EMAIL */
+.directcontact-email-text {
+  background-color: white;
+  border-radius: 6px;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 0 auto;
+  padding: 10px 5px; /* ← Simplificado */
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 20px; /* ← Para centrar verticalmente */
+}
 
 
 
