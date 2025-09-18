@@ -1392,6 +1392,8 @@ nav {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  white-space: nowrap; /* ← Evitar que el texto se divida */
+  line-height: normal; /* ← Resetear línea de altura */
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;  
