@@ -1360,8 +1360,6 @@ nav {
 /* CONTENEDOR DE TEXTO */
 .supportmywork-container-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
 }
 .supportmywork-text {
   font-family: 'Share Tech Mono', monospace;
@@ -1369,21 +1367,20 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
 /* CONTENEDOR DE BOTÓN */
-.supportmywork-container-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px; 
-  margin-bottom: 0px;
-}
 .donatewithpaypal-button {
+  display: inline-block;
   background-color: #ff1493; /* Fucsia por defecto */
   border-radius: 6px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
+  font-weight: bold;
   text-decoration: none;
+  text-align: center;
   margin-top: 0px;
   margin-bottom: 0px; 
   padding-top: 10px;
