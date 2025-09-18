@@ -1547,7 +1547,7 @@ nav {
 .gifts-container {
   position: relative;
   width: 800px;
-  background-color: #9900CC; /* purpura neon */
+  background-color: #001F99;; /* azul electrico */
   border-radius: 20px;
   margin: 40px auto;
   padding-top: 30px;
@@ -1562,7 +1562,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #8000A8; /* purpura intenso */
+  background-color:  #001A80; /* azul noche intenso */
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
@@ -1586,6 +1586,8 @@ nav {
 /* CONTENEDOR DE TEXTO */
 .gifts-container-text {
   width: 100%;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
 .gifts-text {
   font-family: 'Share Tech Mono', monospace;
@@ -1593,28 +1595,23 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 10px; 
 }
 /* CONTENEDOR DE BOTÓN */
 .gifts-container-button {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin-top: 0px; 
+  margin-bottom: 0px;
 }
 .gifts-button {
-  z-index: 2; /* encima de la franja */   
-  display: inline-block;
   background-color: #ff1493; /* Fucsia por defecto */
   border-radius: 6px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  font-weight: bold;
   color: white;
   text-decoration: none;
-  text-align: center;
-  margin-top: 0px; 
-  margin-bottom: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -1626,8 +1623,6 @@ nav {
 .gifts-button:hover {
   transform: scale(1.05);
 }
-
-
 
 
 
