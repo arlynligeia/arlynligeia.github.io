@@ -183,8 +183,6 @@ nav {
 }
 .biography-container-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px; 
 }
 .biography-text {
   font-family: 'Share Tech Mono', monospace;
@@ -197,8 +195,6 @@ nav {
 .biography-column-image {
   flex: 1;
   min-width: 300px;
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 .biography-container-image {
   width: 100%;
@@ -355,8 +351,6 @@ nav {
 .alone-column-image {
   flex: 1;
   min-width: 300px;
-  margin-top: 0px; 
-  margin-bottom: 0px;
 }
 .alone-container-image {
   width: 100%;
@@ -375,7 +369,8 @@ nav {
 .alone-container-text {
   width: 100%;
 }
-.alone-subtitle-1 {
+.alone-subtitle-1,
+.alone-subtitle-3 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
   color: white;
@@ -390,15 +385,6 @@ nav {
   color: white;
   line-height: 1.5;
   text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 10px; 
-}
-.alone-subtitle-3 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  line-height: 1.5;
-  text-align: center;
   margin-top: 0px;
   margin-bottom: 10px; 
 }
@@ -820,8 +806,6 @@ nav {
 .album1969-column-image {
   flex: 1;
   min-width: 300px;
-  margin-top: 0px; 
-  margin-bottom: 0px;
 }
 .album1969-container-image {
   width: 100%;
@@ -840,15 +824,7 @@ nav {
 .album1969-container-text {
   width: 100%;
 }
-.album1969-subtitle-1 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  line-height: 1.5;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 10px; 
-}
+.album1969-subtitle-1, 
 .album1969-subtitle-2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 2rem;
@@ -858,15 +834,7 @@ nav {
   margin-top: 0px;
   margin-bottom: 10px; 
 }
-.album1969-text-1 {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 10px; 
-}
+.album1969-text-1, 
 .album1969-text-2 {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
