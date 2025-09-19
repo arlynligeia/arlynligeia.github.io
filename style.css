@@ -1727,13 +1727,10 @@ nav {
   color: white;
   text-decoration: none;
 }
-
-
 /* CONTENEDOR DE TABLA */
 .directcontact-table-container {
   width: 100%;
 }
-
 /* TABLA */
 .directcontact-table {
   width: 100%;
@@ -1741,27 +1738,23 @@ nav {
   border-collapse: separate;
   margin: 0;
 }
-
 .directcontact-table td + td,
 .directcontact-table th + th {
   border-left: 10px solid transparent;
 }
-
 /* COLUMNAS */
 .directcontact-table-topic { /* ← Clase actualizada */
   width: 30%;
 }
-
 .directcontact-table-email { /* ← Clase actualizada */
   width: 70%;
 }
-
 /* ALINEACIÓN */
 .directcontact-table td {
   vertical-align: middle;
-  padding: 0 0 10px 0;
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
-
 /* SUBTÍTULOS */
 .directcontact-table th {
   font-family: 'Orbitron', sans-serif;
@@ -1772,16 +1765,15 @@ nav {
   padding: 0;
   text-transform: uppercase;
 }
-
 /* LÍNEA DIVISORIA */
 .directcontact-table-divider td { /* ← Clase actualizada */
   border-top: 3px solid #ff1493;
-  padding: 0 0 5px 0;
+  padding-top: 0px;
+  padding-bottom: 5px;
   height: 0; 
 }
-
-/* BOTONES - CLASES ACTUALIZADAS */
-.directcontact-button { /* ← Clase base para todos los botones */
+/* BOTONES */
+.directcontact-button {
   display: block;
   width: 100%;
   background-color: #ff1493;
@@ -1792,17 +1784,18 @@ nav {
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
-  padding: 10px 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   box-sizing: border-box;
   border: none !important;
   cursor: pointer; 
   transition: transform 0.3s ease;
 }
-
 .directcontact-button:hover {
   transform: scale(1.05);
 }
-
 /* EMAIL */
 .directcontact-email-text {
   display: block;
@@ -1810,12 +1803,15 @@ nav {
   height: 40px;
   background-color: white;
   border-radius: 6px;
-  margin: 0 auto;
-  padding: 10px 5px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
   text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
   line-height: 20px;
 }
@@ -1832,7 +1828,6 @@ nav {
   margin: 40px auto;
   padding: 30px;
 }
-
 .contactforfans-container::before {
   content: "";
   position: absolute;
@@ -1844,7 +1839,6 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
-
 .contactforfans-title {
   position: relative;
   z-index: 2;
@@ -1855,9 +1849,9 @@ nav {
   text-decoration: none;
   line-height: 1.6;
   text-align: left;
-  margin: 0 0 16px 0;
+  margin-top: 0px;
+  margin-bottom: 16px; 
 }
-
 .contactforfans-title a {
   color: white;
   text-decoration: none;
@@ -1871,9 +1865,9 @@ nav {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  margin: 15px 0 5px 0;
+  margin-top: 0px;
+  margin-bottom: 5px; 
 }
-
 /* CAMPOS DE ENTRADA */
 .contactforfans-input,
 .contactforfans-textarea {
@@ -1886,26 +1880,23 @@ nav {
   padding: 10px;
   border: none;
   box-sizing: border-box;
-  margin: 0 0 10px 0;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
-
 .contactforfans-input {
   height: 40px;
 }
-
 .contactforfans-textarea {
   height: 120px;
   resize: vertical;
 }
-
 /* CONTENEDOR DE BOTÓN */
 .contactforfans-button-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0 0 0;
+  margin-top: 0px;
+  margin-bottom: 0px; 
 }
-
-/* BOTÓN */
 .contactforfans-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px; 
@@ -1913,12 +1904,14 @@ nav {
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 .contactforfans-button:hover {
   transform: scale(1.05);
 }
