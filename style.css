@@ -1579,6 +1579,14 @@ nav {
   transform: scale(1.05);
 }
 
+
+
+
+
+
+
+
+
 /* ======================================
    CONTACT
 ====================================== */
@@ -1591,7 +1599,6 @@ nav {
   margin: 40px auto;
   padding: 30px;
 }
-
 .contact-container::before {
   content: "";
   position: absolute;
@@ -1603,7 +1610,6 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
-
 .contact-title {
   position: relative;
   z-index: 2;
@@ -1614,28 +1620,26 @@ nav {
   text-decoration: none;
   line-height: 1.6;
   text-align: left;
-  margin: 0 0 16px 0;
+  margin-top: 0px;
+  margin-bottom: 16px; 
 }
-
 .contact-title a {
   color: white;
   text-decoration: none;
 }
-
 /* CONTENEDOR DEL FORMULARIO */
 .contact-form-container {
   width: 100%;
 }
-
 .contact-label {
   display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  margin: 15px 0 5px 0;
+  margin-top: 0px;
+  margin-bottom: 5px; 
 }
-
-/* CAMPOS DE ENTRADA */
+/* RECUADROS DEL FORMULARIO */
 .contact-input,
 .contact-textarea {
   width: 100%;
@@ -1647,26 +1651,23 @@ nav {
   padding: 10px;
   border: none;
   box-sizing: border-box;
-  margin: 0 0 10px 0;
+  margin-top: 0px;
+  margin-bottom: 10px; 
 }
-
 .contact-input {
   height: 40px;
 }
-
 .contact-textarea {
   height: 120px;
   resize: vertical;
 }
-
 /* CONTENEDOR DE BOTÓN */
 .contact-button-container {
   display: flex;
   justify-content: center;
-  margin: 20px 0 0 0;
+  margin-top: 0px;
+  margin-bottom: 0px; 
 }
-
-/* BOTÓN */
 .contact-button {
   background-color: #ff1493; /* Fucsia */
   border-radius: 6px; 
@@ -1674,12 +1675,14 @@ nav {
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  padding: 10px 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
-
 .contact-button:hover {
   transform: scale(1.05);
 }
@@ -1694,10 +1697,7 @@ nav {
   background-color: #00CED1; /* Celeste agua (color base) */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
 }
 .directcontact-container::before {
   content: "";
@@ -1727,6 +1727,8 @@ nav {
   color: white;
   text-decoration: none;
 }
+
+
 /* CONTENEDOR DE TABLA */
 .directcontact-table-container {
   width: 100%;
