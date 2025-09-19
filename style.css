@@ -2143,10 +2143,7 @@ width: 800px;
 background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
-padding-top: 30px;
-padding-bottom: 30px;
-padding-left: 30px;
-padding-right: 30px;
+padding: 30px;
 }
 .digitalfilm-container::before {
 content: "";
@@ -2229,18 +2226,23 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 /* BOTONES */
-.digitalfilm-button {
+.digitalfilm-button-back,
+.digitalfilm-button-continue {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-padding: 10px 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.digitalfilm-button:hover {
+.digitalfilm-button-back:hover,
+.digitalfilm-button-continue:hover {
 transform: scale(1.05);
 }
 
