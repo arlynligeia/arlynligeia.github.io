@@ -1733,7 +1733,8 @@ nav {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
-  margin: 0;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 .directcontact-table td + td,
 .directcontact-table th + th {
@@ -1749,11 +1750,11 @@ nav {
 /* ALINEACIÓN VERTICAL */
 .directcontact-table td {
   vertical-align: middle;
-  padding: 0 0 10px 0; /* ← Simplificado */
+  padding-top: 0px;
+  padding-bottom: 10px;
 }
 /* SUBTÍTULOS */
 .directcontact-table th {
-  padding: 0;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #ff1493; /* Fucsia */
@@ -1761,54 +1762,57 @@ nav {
   text-align: center;
   text-transform: uppercase;
 }
-
 /* LÍNEA DIVISORIA */
 .directcontact-tabledivider td {
   border-top: 3px solid #ff1493;
-  padding: 0 0 5px 0;
+  margin-top: 0px;
+  margin-bottom: 5px;
   height: 0; 
 }
-
-/* BOTONES DE TOPIC */
+/* CONTENEDOR DE BOTÓN */
 .directcontact-film-button,
 .directcontact-music-button,
 .directcontact-fashion-button {
-  background-color: #ff1493; /* Fucsia */
-  border-radius: 6px;
   display: block;
+  justify-content: center;
+  background-color: #ff1493; /* Fucsia por defecto */
+  border-radius: 6px;
   width: 100%;
-  margin: 0 auto;
-  padding: 10px 0; /* ← Simplificado */
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  text-align: center;
-  box-sizing: border-box;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: none;
-  cursor: pointer; 
-  transition: transform 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .directcontact-film-button:hover,
 .directcontact-music-button:hover,
 .directcontact-fashion-button:hover {
   transform: scale(1.05);
 }
-
 /* TEXTOS DE EMAIL */
 .directcontact-email-text {
+  display: block;
   background-color: white;
   border-radius: 6px;
-  display: block;
   width: 100%;
   height: 40px;
-  margin: 0 auto;
-  padding: 10px 5px; /* ← Simplificado */
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
   text-align: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   box-sizing: border-box;
   line-height: 20px; /* ← Para centrar verticalmente */
 }
