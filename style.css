@@ -1728,30 +1728,39 @@ nav {
   color: white;
   text-decoration: none;
 }
+/* CONTENEDOR DE TABLA */
+.directcontact-table-container {
+  width: 100%;
+}
+
 /* TABLA */
 .directcontact-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
-  margin-top: 0;
-  margin-bottom: 0px;
+  margin: 0;
 }
+
 .directcontact-table td + td,
 .directcontact-table th + th {
   border-left: 10px solid transparent;
 }
-.directcontact-topic-column { /* ← Solo cambié -col a -column */
+
+/* COLUMNAS */
+.directcontact-table-topic { /* ← Clase actualizada */
   width: 30%;
 }
-.directcontact-email-column { /* ← Solo cambié -col a -column */
+
+.directcontact-table-email { /* ← Clase actualizada */
   width: 70%;
 }
-/* FILA GENERAL PARA QUE TODO ESTE ALINEADO VERTICALMENTE */
+
+/* ALINEACIÓN */
 .directcontact-table td {
   vertical-align: middle;
-  padding-top: 0px;
-  padding-bottom: 10px; 
+  padding: 0 0 10px 0;
 }
+
 /* SUBTÍTULOS */
 .directcontact-table th {
   font-family: 'Orbitron', sans-serif;
@@ -1759,24 +1768,22 @@ nav {
   color: #ff1493; /* Fucsia */
   line-height: 1.5;
   text-align: center;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 0;
   text-transform: uppercase;
 }
-/* LÍNEA DEBAJO DE LOS SUBTÍTULOS*/
-.directcontact-tabledivider td {
-  border-top: 3px solid #ff1493; /* Fucsia */
-  padding-top: 0px;
-  padding-bottom: 5px;
+
+/* LÍNEA DIVISORIA */
+.directcontact-table-divider td { /* ← Clase actualizada */
+  border-top: 3px solid #ff1493;
+  padding: 0 0 5px 0;
   height: 0; 
 }
-/* BOTONES - MANTENIENDO TU ESTILO ORIGINAL */
-.directcontact-film-button,
-.directcontact-music-button,
-.directcontact-fashion-button {
+
+/* BOTONES - CLASES ACTUALIZADAS */
+.directcontact-button { /* ← Clase base para todos los botones */
   display: block;
   width: 100%;
-  background-color: #ff1493; /* Fucsia */
+  background-color: #ff1493;
   border-radius: 6px;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
@@ -1784,20 +1791,18 @@ nav {
   text-decoration: none;
   text-align: center;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px; 
+  padding: 10px 0;
   box-sizing: border-box;
   border: none !important;
   cursor: pointer; 
-  transition: transform 0.3s ease, background-color 0.3s ease;  
+  transition: transform 0.3s ease;
 }
-.directcontact-film-button:hover,
-.directcontact-music-button:hover,
-.directcontact-fashion-button:hover {
+
+.directcontact-button:hover {
   transform: scale(1.05);
 }
 
-/* EMAIL - MANTENIENDO TU ESTILO ORIGINAL */
+/* EMAIL */
 .directcontact-email-text {
   display: block;
   width: 100%;
@@ -1805,10 +1810,7 @@ nav {
   background-color: white;
   border-radius: 6px;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 5px;
-  padding-right: 5px;  
+  padding: 10px 5px;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
@@ -1816,6 +1818,12 @@ nav {
   box-sizing: border-box;
   line-height: 20px;
 }
+
+
+
+
+
+
 
 
 
