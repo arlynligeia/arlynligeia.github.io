@@ -1586,14 +1586,12 @@ nav {
 .contact-container {
   position: relative;
   width: 550px;
-  background-color: #00CED1; /* Celeste agua (color base) */
+  background-color: #00CED1; /* Celeste agua */
   border-radius: 20px;
   margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 30px;
 }
+
 .contact-container::before {
   content: "";
   position: absolute;
@@ -1605,6 +1603,7 @@ nav {
   border-radius: 20px 20px 0 0;
   height: 90px;
 }
+
 .contact-title {
   position: relative;
   z-index: 2;
@@ -1615,25 +1614,27 @@ nav {
   text-decoration: none;
   line-height: 1.6;
   text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+  margin: 0 0 16px 0;
 }
+
 .contact-title a {
   color: white;
   text-decoration: none;
 }
+
 /* CONTENEDOR DEL FORMULARIO */
-.contact-container-label {
+.contact-form-container {
   width: 100%;
 }
+
 .contact-label {
   display: block;
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
-  margin-top: 0px;
-  margin-bottom: 5px; 
+  margin: 15px 0 5px 0;
 }
+
 /* CAMPOS DE ENTRADA */
 .contact-input,
 .contact-textarea {
@@ -1643,45 +1644,43 @@ nav {
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.25rem;
   color: black;
-  margin-top: 0px;
-  margin-bottom: 10px; 
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   border: none;
   box-sizing: border-box;
+  margin: 0 0 10px 0;
 }
+
 .contact-input {
   height: 40px;
 }
+
 .contact-textarea {
   height: 120px;
   resize: vertical;
 }
+
 /* CONTENEDOR DE BOTÓN */
-.contact-container-button {
+.contact-button-container {
   display: flex;
   justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin: 20px 0 0 0;
 }
-.contact-submit-button {
-  background-color: #ff1493; /* Fucsia por defecto */
+
+/* BOTÓN */
+.contact-button {
+  background-color: #ff1493; /* Fucsia */
   border-radius: 6px; 
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: white;
   text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
 }
-.contact-submit-button:hover {
+
+.contact-button:hover {
   transform: scale(1.05);
 }
 
@@ -1819,6 +1818,108 @@ nav {
   line-height: 20px;
 }
 
+/* ======================================
+   CONTACT FOR FANS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.contactforfans-container {
+  position: relative;
+  width: 550px;
+  background-color: #00CED1; /* Celeste agua */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.contactforfans-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+
+.contactforfans-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+  margin: 0 0 16px 0;
+}
+
+.contactforfans-title a {
+  color: white;
+  text-decoration: none;
+}
+/* CONTENEDOR DEL FORMULARIO */
+.contactforfans-form-container {
+  width: 100%;
+}
+.contactforfans-label {
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  margin: 15px 0 5px 0;
+}
+
+/* CAMPOS DE ENTRADA */
+.contactforfans-input,
+.contactforfans-textarea {
+  width: 100%;
+  background-color: white;
+  border-radius: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  margin: 0 0 10px 0;
+}
+
+.contactforfans-input {
+  height: 40px;
+}
+
+.contactforfans-textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+/* CONTENEDOR DE BOTÓN */
+.contactforfans-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 0 0;
+}
+
+/* BOTÓN */
+.contactforfans-button {
+  background-color: #ff1493; /* Fucsia */
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contactforfans-button:hover {
+  transform: scale(1.05);
+}
 
 
 
