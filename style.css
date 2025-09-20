@@ -2237,7 +2237,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .digitalfilm-button-back,
-.digitalfilm-button-continue {
+.digitalfilm-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2253,7 +2253,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .digitalfilm-button-back:hover,
-.digitalfilm-button-continue:hover {
+.digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2350,7 +2350,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .digitalmusic-button-back,
-.digitalmusic-button-continue {
+.digitalmusic-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2366,7 +2366,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .digitalmusic-button-back:hover,
-.digitalmusic-button-continue:hover {
+.digitalmusic-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2475,7 +2475,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .physicalfashion-button-back,
-.physicalfashion-button-continue {
+.physicalfashion-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2491,7 +2491,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .physicalfashion-button-back:hover,
-.physicalfashion-button-continue:hover {
+.physicalfashion-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2568,7 +2568,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .digitalfeaturefilm-button-back,
-.digitalfeaturefilm-button-continue {
+.digitalfeaturefilm-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2584,7 +2584,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .digitalfeaturefilm-button-back:hover,
-.digitalfeaturefilm-button-continue:hover {
+.digitalfeaturefilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2666,7 +2666,7 @@ line-height: 1.6;
 text-align: justify;
 }
 /* CONTENEDOR DE BOTONES */
-.physicaljewelry-buttons-container {
+.physicaljewelry-buttons-continueshopping {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -2689,7 +2689,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .physicaljewelry-button-back:hover,
-.physicaljewelry-button-continue:hover {
+.physicaljewelry-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2830,7 +2830,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .alonesponsorship-button-back,
-.alonesponsorship-button-continue {
+.alonesponsorship-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2846,7 +2846,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .alonesponsorship-button-back:hover,
-.alonesponsorship-button-continue:hover {
+.alonesponsorship-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -2967,7 +2967,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .aloneexecutiveproducers-button-back,
-.aloneexecutiveproducers-button-continue {
+.aloneexecutiveproducers-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -2983,7 +2983,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .aloneexecutiveproducers-button-back:hover,
-.aloneexecutiveproducers-button-continue:hover {
+.aloneexecutiveproducers-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -3104,7 +3104,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .alonedigitalproducts-button-back,
-.alonedigitalproducts-button-continue {
+.alonedigitalproducts-button-continueshopping {
 background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -3120,7 +3120,7 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .alonedigitalproducts-button-back:hover,
-.alonedigitalproducts-button-continue:hover {
+.alonedigitalproducts-button-continueshopping:hover {
 transform: scale(1.05);
 }
 
@@ -3140,182 +3140,195 @@ transform: scale(1.05);
    NECKLACES
 ====================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-  SIMPLE SPONSOR
+   PLANET SPONSOR
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.basicsponsor-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.planetsponsor-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
-.basicsponsor-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+.planetsponsor-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
-.basicsponsor-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
+.planetsponsor-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
-.basicsponsor-title a {
-  color: white;
-  text-decoration: none;
+.planetsponsor-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.planetsponsor-columns-container {
+position: relative;
+z-index: 2;
 }
 /* GRID DE DOS COLUMNAS */
-.basicsponsor-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
+.planetsponsor-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 }
-.basicsponsor-image {
-  display: flex;
-  align-items: center;
+/* IMAGEN */
+.planetsponsor-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-.basicsponsor-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
+.planetsponsor-image img {
+width: 100%;
+border-radius: 15px;
 }
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.basicsponsor-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
+.planetsponsor-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
 }
 /* PRECIO */
 .basicsponsor-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 10px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.basicsponsor-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
+.planetsponsor-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
 }
-.basicsponsor-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.planetsponsor-button-addtocart,
+.planetsponsor-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 10px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
 }
-.basicsponsor-buttons button:hover {
-  transform: scale(1.05);
+.planetsponsor-button-addtocart:hover,
+.planetsponsor-button-share:hover {
+transform: scale(1.05);
 }
-/* BOTÓN SHARE */
-.basicsponsor-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
+.planetsponsor-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+.planetsponsor-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+/* CONTENEDOR DE TEXTO */
+.planetsponsor-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-/* CONTENEDOR DESCRIPCIÓN */
-.basicsponsor-description-container {
-  margin: 0px;
+.planetsponsor-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 20px;
+line-height: 1.5;
+text-align: justify;
 }
-/* DESCRIPCIÓN DEL PRODUCTO */
-.basicsponsor-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
+/* CONTENEDOR DE BOTONES */
+.planetsponsor-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-/* BOTONES INFERIORES */
-.basicsponsor-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.planetsponsor-button-back,
+.planetsponsor-button-continueshopping,
+.planetsponsor-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
 }
-.basicsponsor-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.alonedigitalproducts-button-back:hover,
+.alonedigitalproducts-button-continueshopping:hover {
+transform: scale(1.05);
 }
-.basicsponsor-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.basicsponsor-gotocart-button {
+.planetsponsor-button-back,
+.planetsponsor-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.planetsponsor-button-gotocart {
   background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
+} 
+/* TEXTO OUT OF STOCK */
 .outofstock {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
-  color: #39FF14;
+  color: #39FF14;  /* verde neon) */
   font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
 
 /* ======================================
   FEATURED SPONSOR
