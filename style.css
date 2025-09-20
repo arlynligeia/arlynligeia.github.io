@@ -2714,7 +2714,7 @@ transform: scale(1.05);
 ====================================== */
 
 /* ======================================
-   ALONE FILM SPONSORSHIP
+   ALONE SPONSORSHIP
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .alonesponsorship-container {
@@ -2850,153 +2850,159 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   ALONE FILM EXECUTIVE PRODUCERS
+   ALONE EXECUTIVE PRODUCERS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .aloneexecutiveproducers-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .aloneexecutiveproducers-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px; 
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .aloneexecutiveproducers-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px; 
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .aloneexecutiveproducers-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.aloneexecutiveproducers-columns-container {
+position: relative;
+z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
 .aloneexecutiveproducers-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 }
 /* IMAGEN */
 .aloneexecutiveproducers-image {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px;
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
 }
 .aloneexecutiveproducers-image img {
-  width: 100%;
-  border-radius: 15px;
+width: 100%;
+border-radius: 15px;
 }
 /* TEXTO */
 .aloneexecutiveproducers-subtitle {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.6;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
 }
 .aloneexecutiveproducers-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.6;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
-  text-transform: uppercase;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
 }
- /* BOTÓN VIEW*/
-.aloneexecutiveproducers-view-button-wrapper {
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* BOTÓN VIEW*/
+.aloneexecutiveproducers-button-view-wrapper {
+text-align: center;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.aloneexecutiveproducers-view-button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  display: inline-block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-decoration: none; 
-  border: none;  
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+.aloneexecutiveproducers-button-view {
+display: inline-block;
+background-color: #ff1493; /* fucsia */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;  
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.aloneexecutiveproducers-view-button:hover {
-  transform: scale(1.05);
+.aloneexecutiveproducers-button-view:hover {
+transform: scale(1.05);
 }
-/* BOTONES */
-.aloneexecutiveproducers-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* CONTENEDOR DE BOTONES */
+.aaloneexecutiveproducers-buttons-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.aloneexecutiveproducers-buttons button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px; 
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.aloneexecutiveproducers-button-back,
+.aloneexecutiveproducers-button-continue {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
 }
-.aloneexecutiveproducers-buttons button:hover {
-  transform: scale(1.05);
+.aloneexecutiveproducers-button-back:hover,
+.aloneexecutiveproducers-button-continue:hover {
+transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ALONE FILM DIGITAL PRODUCTS
