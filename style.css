@@ -2010,7 +2010,11 @@ margin-bottom: 16px;
 color: white;
 text-decoration: none;
 }
-
+/* CONTENEDOR DE COLUMNAS */
+.digitalproducts-columns-container {
+position: relative;
+z-index: 2;
+}
 /* GRID DE 3 COLUMNAS*/
 .digitalproducts-grid {
 display: grid;
@@ -2047,7 +2051,6 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-/* Efecto zoom al pasar el mouse */
 .digitalproducts-card:hover .digitalproducts-card-image {
 transform: scale(1.1);
 }
@@ -2092,6 +2095,11 @@ margin-bottom: 16px;
 color: white;
 text-decoration: none;
 }
+/* CONTENEDOR DE COLUMNAS */
+.physicalproducts-columns-container {
+position: relative;
+z-index: 2;
+}
 /* GRID DE 3 COLUMNAS*/
 .physicalproducts-grid {
 display: grid;
@@ -2128,10 +2136,13 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-/* Efecto zoom al pasar el mouse */
 .physicalproducts-card:hover .physicalproducts-card-image {
 transform: scale(1.1);
 }
+
+/* ======================================
+   SHIPPING DETAILS
+====================================== */
 
 /* ======================================
    DIGITALFILM
@@ -2225,7 +2236,6 @@ justify-content: space-between;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-/* BOTONES */
 .digitalfilm-button-back,
 .digitalfilm-button-continue {
 background-color: #00CED1; /* Celeste agua (color base) */
@@ -2328,7 +2338,7 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-.digitalmusic-card:hover .digitalfilm-card-image {
+.digitalmusic-card:hover .digitalmusic-card-image {
 transform: scale(1.1);
 }
 /* CONTENEDOR DE BOTONES */
@@ -2338,7 +2348,6 @@ justify-content: space-between;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-/* BOTONES */
 .digitalmusic-button-back,
 .digitalmusic-button-continue {
 background-color: #00CED1; /* Celeste agua (color base) */
@@ -2358,6 +2367,18 @@ transition: transform 0.3s ease;
 .digitalmusic-button-continue:hover {
 transform: scale(1.05);
 }
+
+/* ======================================
+   DIGITAL FASHION
+====================================== */
+
+/* ======================================
+   PHYSICAL FILM
+====================================== */
+
+/* ======================================
+   PHYSICAL MUSIC
+====================================== */
 
 /* ======================================
    PHYSICAL FASHION
@@ -2441,7 +2462,7 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-.physicalfashion-card:hover .digitalfilm-card-image {
+.physicalfashion-card:hover .physicalfashion-card-image {
 transform: scale(1.1);
 }
 /* CONTENEDOR DE BOTONES */
@@ -2451,7 +2472,6 @@ justify-content: space-between;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-/* BOTONES */
 .physicalfashion-button-back,
 .physicalfashion-button-continue {
 background-color: #00CED1; /* Celeste agua (color base) */
@@ -2472,106 +2492,226 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
+/* ======================================
+   PHYSICAL ART
+====================================== */
 
+/* ======================================
+   GARAGE SALE
+====================================== */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* ======================================
+   OTHERS
+====================================== */
 
 /* ======================================
    DIGITAL FEATURE FILM
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .digitalfeaturefilm-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .digitalfeaturefilm-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px; 
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px; 
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .digitalfeaturefilm-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* CONTENIDO */
-.digitalfeaturefilm-content {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  text-align: center;
+/* CONTENEDOR DE TEXTO */
+.digitalfeaturefilm-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.digitalfeaturefilm-content p {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.6;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  text-align: center;
+.digitalfeaturefilm-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.6;
+text-align: justify;
 }
-/* BOTONES */
-.digitalfeaturefilm-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
+/* CONTENEDOR DE BOTONES */
+.digitalfeaturefilm-buttons-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.digitalfeaturefilm-back-button,
-.digitalfeaturefilm-continueshopping-button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px; 
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+.digitalfeaturefilm-button-back,
+.digitalfeaturefilm-button-continue {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
 }
-.digitalfeaturefilm-back-button:hover,
-.digitalfeaturefilm-continueshopping-button:hover {
-  transform: scale(1.05);
+.digitalfeaturefilm-button-back:hover,
+.digitalfeaturefilm-button-continue:hover {
+transform: scale(1.05);
 }
+
+/* ======================================
+   DIGITAL SHORT FILM
+====================================== */
+
+/* ======================================
+   DIGITAL SINGLES
+====================================== */
+
+/* ======================================
+   DIGITAL ALBUM
+====================================== */
+
+/* ======================================
+   PHYSICAL FEATURE FILM
+====================================== */
+
+/* ======================================
+   PHYSICAL SHORT FILM
+====================================== */
+
+/* ======================================
+   PHYSICAL ALBUM
+====================================== */
+
+/* ======================================
+   PHYSICAL JEWELRY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.physicaljewelry-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.physicaljewelry-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
+}
+.physicaljewelry-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.physicaljewelry-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE TEXTO */
+.physicaljewelry-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.physicaljewelry-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.6;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.physicaljewelry-buttons-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.physicaljewelry-button-back,
+.physicaljewelry-button-continue {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.physicaljewelry-button-back:hover,
+.physicaljewelry-button-continue:hover {
+transform: scale(1.05);
+}
+
+/* ======================================
+   PHYSICAL CLOTHING
+====================================== */
+
+/* ======================================
+   PHYSICAL BAGS
+====================================== */
+
+/* ======================================
+   PHYSICAL SHOES
+====================================== */
+
+/* ======================================
+   PHYSICAL ACCESORIES
+====================================== */
+
+/* ======================================
+   PHYSICAL MAKEUP
+====================================== */
+
+
+
+
+
 
 /* ======================================
    ALONE FILM SPONSORSHIP
