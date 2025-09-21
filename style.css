@@ -4189,13 +4189,20 @@ background-color: #00CED1 !important;
   font-weight: bold;
 }
 
+
+
+
+
+
+
+
 /* ======================================
-   NEBULA EXECUTIVE PRODUCER
+NEBULA EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .nebulaexecutiveproducer-container {
 position: relative;
-width: 800px;
+width: 1000px; /* Cambiado de 800px a 1000px */
 background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
@@ -4208,9 +4215,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px; 
+height: 90px;
 background-color: #8000A8; /* purpura intenso */
-border-radius: 20px 20px 0 0;  
+border-radius: 20px 20px 0 0;
 }
 .nebulaexecutiveproducer-title {
 position: relative;
@@ -4223,7 +4230,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px; 
+margin-bottom: 16px;
 }
 .nebulaexecutiveproducer-title a {
 color: white;
@@ -4237,20 +4244,22 @@ z-index: 2;
 /* GRID DE DOS COLUMNAS */
 .nebulaexecutiveproducer-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
+grid-template-columns: 400px 1fr; /* Fijamos la primera columna a 400px */
+gap: 40px; /* Aumentamos el gap para mejor espaciado */
 margin-top: 0px;
 margin-bottom: 15px;
+justify-content: center; /* Centramos el contenido */
 }
-/* IMAGEN */
+/* IMAGEN - MANTENEMOS TAMAÑO FIJO */
 .nebulaexecutiveproducer-image {
-width: 100%;
+width: 400px; /* Tamaño fijo para la imagen */
 margin-top: 0px;
 margin-bottom: 0px;
 }
 .nebulaexecutiveproducer-image img {
 width: 100%;
 border-radius: 15px;
+max-width: 400px; /* Aseguramos que no crezca más de 400px */
 }
 /* CONTENEDOR DE PRECIO Y BOTONES */
 .nebulaexecutiveproducer-price-buttons {
@@ -4301,11 +4310,11 @@ transform: scale(1.05);
 .nebulaexecutiveproducer-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
-}  
+}
 .nebulaexecutiveproducer-button-share {
 background-color: #39ff14 !important;
 font-size: 1rem;
-}  
+}
 /* CONTENEDOR DE TEXTO */
 .nebulaexecutiveproducer-text-container {
 width: 100%;
@@ -4335,7 +4344,7 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-text-decoration: none; 
+text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -4352,16 +4361,16 @@ transform: scale(1.05);
 .nebulaexecutiveproducer-button-back,
 .nebulaexecutiveproducer-button-continueshopping {
 background-color: #00CED1 !important;
-}  
+}
 .nebulaexecutiveproducer-button-gotocart {
-  background-color: #ff1493 !important;
-} 
+background-color: #ff1493 !important;
+}
 /* TEXTO OUT OF STOCK */
 .outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14; /* verde neon) */
+font-weight: bold;
 }
 
 /* ======================================
