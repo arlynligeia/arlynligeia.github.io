@@ -4285,9 +4285,12 @@ text-align: justify;
 }
 /* CONTENEDOR DE PRECIO Y BOTONES */
 .nebulaexecutiveproducer-price-buttons-container {
-text-align: center;
-margin-top: 0px;
-margin-bottom: 0px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
 }
 /* PRECIO */
 .nebulaexecutiveproducer-price {
