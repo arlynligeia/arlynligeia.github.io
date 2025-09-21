@@ -263,14 +263,13 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE DOS COLUMNAS */
-.alone-grid {
-alonefilmstandardpackage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
+alone-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+align-items: stretch;
 }
 /* CONTENEDOR DE IMAGEN */
 .alone-image-container {
@@ -283,31 +282,58 @@ border-radius: 15px;
 height: auto;
 }
 /* CONTENEDOR DE TEXTO */
-.alone-text-1-container,
-.alone-text-2-container {
+.alone-text-1-container {
 width: 100%;
 }
-.alone-subtitle-1,
-.alone-subtitle-2,
-.alone-subtitle-3{
+.alone-subtitle-1 {
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: white;
 line-height: 1.5;
+text-align: center;  
 margin-top: 0px;
 margin-bottom: 10px; 
 }
-.alone-subtitle-1,
-.alone-subtitle-3 {
-font-family: 'Orbitron', sans-serif;
-font-size: 2rem;
-text-align: center;
+.alone-text-1 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px; 
 }
 .alone-subtitle-2 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
+color: white;
+line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px; 
 }
-.alone-text-1,
-.alone-text-2,
+.alone-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px; 
+} 
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
+.alone-text-2-container {
+width: 100%;
+}
+.alone-subtitle-3 {
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white;
+line-height: 1.5;
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px; 
+}
 .alone-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -315,15 +341,12 @@ color: white;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-}
-.alone-text-1 {
-margin-bottom: 10px; 
-}
-.alone-text-2,
-.alone-text-3 {
 margin-bottom: 0px; 
 }
-
+  
+  
+  
+  
 
 
 
