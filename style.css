@@ -173,6 +173,7 @@ z-index: 2;
 /* GRID DE DOS COLUMNAS */
 .biography-grid {
 display: grid;
+align-items: stretch;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin-top: 0px;
@@ -191,17 +192,18 @@ text-align: justify;
 }
 /* CONTENEDOR DE IMAGEN */
 .biography-image-container {
-width: 100%;
 display: flex;
-justify-content: center;
-align-items: flex-start;
+align-items: center;
 }
 .biography-image-container img {
 width: 100%;
 border-radius: 15px;
 height: auto;
-display: block;
 }
+
+
+
+
 
 /* ======================================
    FILM
