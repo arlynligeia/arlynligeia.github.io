@@ -3141,181 +3141,6 @@ transform: scale(1.05);
 ====================================== */
 
 /* ======================================
-   PLANET SPONSOR
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.planetsponsor-container {
-position: relative;
-width: 800px;
-background-color: #9900CC; /* purpura neon */
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.planetsponsor-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px; 
-background-color: #8000A8; /* purpura intenso */
-border-radius: 20px 20px 0 0;  
-}
-.planetsponsor-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.planetsponsor-title a {
-color: white;
-text-decoration: none;
-}
-/* CONTENEDOR DE COLUMNAS */
-.planetsponsor-columns-container {
-position: relative;
-z-index: 2;
-}
-/* GRID DE DOS COLUMNAS */
-.planetsponsor-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
-margin-top: 0px;
-margin-bottom: 15px;
-}
-/* IMAGEN */
-.planetsponsor-image {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.planetsponsor-image img {
-width: 100%;
-border-radius: 15px;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.planetsponsor-price-buttons {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-min-height: 300px;
-}
-/* PRECIO */
-.planetsponsor-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 15px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.planetsponsor-buttons-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.planetsponsor-button-addtocart,
-.planetsponsor-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.planetsponsor-button-addtocart:hover,
-.planetsponsor-button-share:hover {
-transform: scale(1.05);
-}
-.planetsponsor-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}  
-.planetsponsor-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.planetsponsor-text-container {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 20px;
-}
-.planetsponsor-text {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-}
-/* CONTENEDOR DE BOTONES */
-.planetsponsor-buttons2-container {
-display: flex;
-justify-content: space-between;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.planetsponsor-button-back,
-.planetsponsor-button-continueshopping,
-.planetsponsor-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white;
-text-decoration: none; 
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.planetsponsor-button-back:hover,
-.planetsponsor-button-continueshopping:hover,
-.planetsponsor-button-gotocart:hover {
-transform: scale(1.05);
-}
-.planetsponsor-button-back,
-.planetsponsor-button-continueshopping {
-background-color: #00CED1 !important;
-}  
-.planetsponsor-button-gotocart {
-  background-color: #ff1493 !important;
-} 
-/* TEXTO OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
-}
-
-/* ======================================
    COMET SPONSOR
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
@@ -3360,26 +3185,50 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
+/* GRID DE TRES COLUMNAS */
 .cometsponsor-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 }
 /* IMAGEN */
 .cometsponsor-image {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 10px;
 }
 .cometsponsor-image img {
 width: 100%;
 border-radius: 15px;
 }
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.cometsponsor-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cometsponsor-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.cometsponsor-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.cometsponsor-price-buttons {
+.cometsponsor-price-buttons-container {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -3427,20 +3276,20 @@ transform: scale(1.05);
 .cometsponsor-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
-}  
+}
 .cometsponsor-button-share {
 background-color: #39ff14 !important;
 font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.cometsponsor-text-container {
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.cometsponsor-text2-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 20px;
 }
-.cometsponsor-text {
+.cometsponsor-text2 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
@@ -3456,12 +3305,12 @@ margin-bottom: 0px;
 .cometsponsor-button-back,
 .cometsponsor-button-continueshopping,
 .cometsponsor-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-text-decoration: none; 
+text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -3478,16 +3327,215 @@ transform: scale(1.05);
 .cometsponsor-button-back,
 .cometsponsor-button-continueshopping {
 background-color: #00CED1 !important;
-}  
+}
 .cometsponsor-button-gotocart {
-  background-color: #ff1493 !important;
-} 
+background-color: #ff1493 !important;
+}
 /* TEXTO OUT OF STOCK */
 .outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   PLANET SPONSOR
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.planetsponsor-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.planetsponsor-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.planetsponsor-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.planetsponsor-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.planetsponsor-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE TRES COLUMNAS */
+.planetsponsor-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+/* IMAGEN */
+.planetsponsor-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.planetsponsor-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.planetsponsor-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsor-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.planetsponsor-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.planetsponsor-price-buttons-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.planetsponsor-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.planetsponsor-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.planetsponsor-button-addtocart,
+.planetsponsor-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.planetsponsor-button-addtocart:hover,
+.planetsponsor-button-share:hover {
+transform: scale(1.05);
+}
+.planetsponsor-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.planetsponsor-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.planetsponsor-text2-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.planetsponsor-text2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.planetsponsor-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsor-button-back,
+.planetsponsor-button-continueshopping,
+.planetsponsor-button-gotocart {
+background-color: #00CED1;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.planetsponsor-button-back:hover,
+.planetsponsor-button-continueshopping:hover,
+.planetsponsor-button-gotocart:hover {
+transform: scale(1.05);
+}
+.planetsponsor-button-back,
+.planetsponsor-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.planetsponsor-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
 }
 
 /* ======================================
@@ -3535,26 +3583,50 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
+/* GRID DE TRES COLUMNAS */
 .starsponsor-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 }
 /* IMAGEN */
 .starsponsor-image {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 10px;
 }
 .starsponsor-image img {
 width: 100%;
 border-radius: 15px;
 }
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.starsponsor-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.starsponsor-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.starsponsor-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.starsponsor-price-buttons {
+.starsponsor-price-buttons-container {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -3602,20 +3674,20 @@ transform: scale(1.05);
 .starsponsor-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
-}  
+}
 .starsponsor-button-share {
 background-color: #39ff14 !important;
 font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.starsponsor-text-container {
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.starsponsor-text2-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 20px;
 }
-.starsponsor-text {
+.starsponsor-text2 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
@@ -3631,12 +3703,12 @@ margin-bottom: 0px;
 .starsponsor-button-back,
 .starsponsor-button-continueshopping,
 .starsponsor-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-text-decoration: none; 
+text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -3653,190 +3725,16 @@ transform: scale(1.05);
 .starsponsor-button-back,
 .starsponsor-button-continueshopping {
 background-color: #00CED1 !important;
-}  
+}
 .starsponsor-button-gotocart {
-  background-color: #ff1493 !important;
-} 
-/* TEXTO OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
-}
-/* ======================================
-   PLANET SPONSOR BRAND
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.planetsponsorbrand-container {
-position: relative;
-width: 800px;
-background-color: #9900CC; /* purpura neon */
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.planetsponsorbrand-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px; 
-background-color: #8000A8; /* purpura intenso */
-border-radius: 20px 20px 0 0;  
-}
-.planetsponsorbrand-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.planetsponsorbrand-title a {
-color: white;
-text-decoration: none;
-}
-/* CONTENEDOR DE COLUMNAS */
-.planetsponsorbrand-columns-container {
-position: relative;
-z-index: 2;
-}
-/* GRID DE DOS COLUMNAS */
-.planetsponsorbrand-grid {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
-margin-top: 0px;
-margin-bottom: 15px;
-}
-/* IMAGEN */
-.planetsponsorbrand-image {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.planetsponsorbrand-image img {
-width: 100%;
-border-radius: 15px;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.planetsponsorbrand-price-buttons {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-height: 100%;
-min-height: 300px;
-}
-/* PRECIO */
-.planetsponsorbrand-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 15px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.planetsponsorbrand-buttons-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.planetsponsorbrand-button-addtocart,
-.planetsponsorbrand-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.planetsponsorbrand-button-addtocart:hover,
-.planetsponsorbrand-button-share:hover {
-transform: scale(1.05);
-}
-.planetsponsorbrand-button-addtocart {
 background-color: #ff1493 !important;
-font-size: 1.2rem;
-}  
-.planetsponsorbrand-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.planetsponsorbrand-text-container {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 20px;
 }
-.planetsponsorbrand-text {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-}
-/* CONTENEDOR DE BOTONES */
-.planetsponsorbrand-buttons2-container {
-display: flex;
-justify-content: space-between;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.planetsponsorbrand-button-back,
-.planetsponsorbrand-button-continueshopping,
-.planetsponsorbrand-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white;
-text-decoration: none; 
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.planetsponsorbrand-button-back:hover,
-.planetsponsorbrand-button-continueshopping:hover,
-.planetsponsorbrand-button-gotocart:hover {
-transform: scale(1.05);
-}
-.planetsponsorbrand-button-back,
-.planetsponsorbrand-button-continueshopping {
-background-color: #00CED1 !important;
-}  
-.planetsponsorbrand-button-gotocart {
-  background-color: #ff1493 !important;
-} 
 /* TEXTO OUT OF STOCK */
 .outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
 }
 
 /* ======================================
@@ -3884,26 +3782,50 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
+/* GRID DE TRES COLUMNAS */
 .cometsponsorbrand-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 }
 /* IMAGEN */
 .cometsponsorbrand-image {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 10px;
 }
 .cometsponsorbrand-image img {
 width: 100%;
 border-radius: 15px;
 }
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.cometsponsorbrand-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cometsponsorbrand-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.cometsponsorbrand-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.cometsponsorbrand-price-buttons {
+.cometsponsorbrand-price-buttons-container {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -3951,20 +3873,20 @@ transform: scale(1.05);
 .cometsponsorbrand-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
-}  
+}
 .cometsponsorbrand-button-share {
 background-color: #39ff14 !important;
 font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.cometsponsorbrand-text-container {
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.cometsponsorbrand-text2-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 20px;
 }
-.cometsponsorbrand-text {
+.cometsponsorbrand-text2 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
@@ -3980,12 +3902,12 @@ margin-bottom: 0px;
 .cometsponsorbrand-button-back,
 .cometsponsorbrand-button-continueshopping,
 .cometsponsorbrand-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-text-decoration: none; 
+text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -4002,16 +3924,215 @@ transform: scale(1.05);
 .cometsponsorbrand-button-back,
 .cometsponsorbrand-button-continueshopping {
 background-color: #00CED1 !important;
-}  
+}
 .cometsponsorbrand-button-gotocart {
-  background-color: #ff1493 !important;
-} 
+background-color: #ff1493 !important;
+}
 /* TEXTO OUT OF STOCK */
 .outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   PLANET SPONSOR BRAND
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.planetsponsorbrand-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.planetsponsorbrand-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.planetsponsorbrand-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.planetsponsorbrand-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.planetsponsorbrand-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE TRES COLUMNAS */
+.planetsponsorbrand-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+/* IMAGEN */
+.planetsponsorbrand-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.planetsponsorbrand-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.planetsponsorbrand-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsorbrand-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.planetsponsorbrand-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.planetsponsorbrand-price-buttons-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.planetsponsorbrand-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.planetsponsorbrand-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.planetsponsorbrand-button-addtocart,
+.planetsponsorbrand-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.planetsponsorbrand-button-addtocart:hover,
+.planetsponsorbrand-button-share:hover {
+transform: scale(1.05);
+}
+.planetsponsorbrand-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.planetsponsorbrand-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.planetsponsorbrand-text2-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.planetsponsorbrand-text2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.planetsponsorbrand-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsorbrand-button-back,
+.planetsponsorbrand-button-continueshopping,
+.planetsponsorbrand-button-gotocart {
+background-color: #00CED1;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.planetsponsorbrand-button-back:hover,
+.planetsponsorbrand-button-continueshopping:hover,
+.planetsponsorbrand-button-gotocart:hover {
+transform: scale(1.05);
+}
+.planetsponsorbrand-button-back,
+.planetsponsorbrand-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.planetsponsorbrand-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
 }
 
 /* ======================================
@@ -4059,26 +4180,50 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
+/* GRID DE TRES COLUMNAS */
 .starsponsorbrand-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 }
 /* IMAGEN */
 .starsponsorbrand-image {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 10px;
 }
 .starsponsorbrand-image img {
 width: 100%;
 border-radius: 15px;
 }
+/* CONTENEDOR DE TEXTO SINOPSIS */
+.starsponsorbrand-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.starsponsorbrand-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
+.starsponsorbrand-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
 /* CONTENEDOR DE PRECIO Y BOTONES */
-.starsponsorbrand-price-buttons {
+.starsponsorbrand-price-buttons-container {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -4126,20 +4271,20 @@ transform: scale(1.05);
 .starsponsorbrand-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
-}  
+}
 .starsponsorbrand-button-share {
 background-color: #39ff14 !important;
 font-size: 1rem;
-}  
-/* CONTENEDOR DE TEXTO */
-.starsponsorbrand-text-container {
+}
+/* CONTENEDOR DE TEXTO LARGO */
+.starsponsorbrand-text2-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 20px;
 }
-.starsponsorbrand-text {
+.starsponsorbrand-text2 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
@@ -4155,12 +4300,12 @@ margin-bottom: 0px;
 .starsponsorbrand-button-back,
 .starsponsorbrand-button-continueshopping,
 .starsponsorbrand-button-gotocart {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
-text-decoration: none; 
+text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -4177,24 +4322,17 @@ transform: scale(1.05);
 .starsponsorbrand-button-back,
 .starsponsorbrand-button-continueshopping {
 background-color: #00CED1 !important;
-}  
+}
 .starsponsorbrand-button-gotocart {
-  background-color: #ff1493 !important;
-} 
+background-color: #ff1493 !important;
+}
 /* TEXTO OUT OF STOCK */
 .outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;  /* verde neon) */
-  font-weight: bold;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
 }
-
-
-
-
-
-
-
 
 /* ======================================
 NEBULA EXECUTIVE PRODUCER
