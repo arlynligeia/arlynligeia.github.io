@@ -127,6 +127,92 @@ nav {
 
 
 
+/* ======================================
+   BIOGRAPHY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.biography-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.biography-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
+}
+.biography-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px;
+margin-bottom: 16px;
+}
+.biography-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.biography-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS - SELECTOR CORREGIDO */
+.biography-grid-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* CONTENEDOR DE TEXTO */
+.biography-text-container {
+width: 100%;
+min-width: 0; /* ← EVITA DESBORDAMIENTO */
+}
+.biography-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: justify;
+word-break: break-word; /* ← EVITA que texto largo desborde */
+overflow-wrap: break-word; /* ← Fuerza corte de palabras */
+}
+/* CONTENEDOR DE IMAGEN*/
+.biography-image-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+  min-width: 0; /* ← EVITA DESBORDAMIENTO */
+}
+.biography-image-container img {
+width: 100%;
+border-radius: 15px;
+height: auto;
+display: block; /* ← ELIMINA espacio fantasma debajo de imagen */
+}
+
+
+
+
+
+
 
 
 
