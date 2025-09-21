@@ -167,7 +167,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS - SELECTOR CORREGIDO */
+/* GRID DE DOS COLUMNAS*/
 .biography-grid-container {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -178,7 +178,7 @@ margin-bottom: 15px;
 /* CONTENEDOR DE TEXTO */
 .biography-text-container {
 width: 100%;
-min-width: 0; /* ← EVITA DESBORDAMIENTO */
+min-width: 0;
 }
 .biography-text {
 font-family: 'Share Tech Mono', monospace;
@@ -194,13 +194,13 @@ overflow-wrap: break-word; /* ← Fuerza corte de palabras */
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
-  min-width: 0; /* ← EVITA DESBORDAMIENTO */
+min-width: 0;
 }
 .biography-image-container img {
 width: 100%;
 border-radius: 15px;
 height: auto;
-display: block; /* ← ELIMINA espacio fantasma debajo de imagen */
+display: block;
 }
 
 
