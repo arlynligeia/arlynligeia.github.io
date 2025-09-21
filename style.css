@@ -177,30 +177,29 @@ z-index: 2;
   gap: 20px;
   margin-top: 0px;
   margin-bottom: 20px;
-  align-items: stretch;
 }
 /* CONTENEDOR DE TEXTO */
 .biography-text-container {
-width: 100%;
+  width: 100%;
 }
 .biography-text {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white;
-line-height: 1.5;
-text-align: justify;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.5;
+  text-align: justify;
 }
-/* CONTENEDOR DE IMAGEN */
+/* CONTENEDOR DE IMAGEN - SOLUCIÓN MÍNIMA */
 .biography-image-container {
-display: flex;
-align-items: center;
+  width: 100%; /* ¡ESTA ES LA PROPIEDAD CLAVE QUE FALTABA! */
+  display: flex;
+  align-items: center;
 }
 .biography-image-container img {
-width: 100%;
-border-radius: 15px;
-height: auto;
+  width: 100%; /* Esto ya lo tenías */
+  border-radius: 15px;
+  height: auto; /* Esto ya lo tenías */
 }
-
 
 
 
