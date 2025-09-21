@@ -174,7 +174,6 @@ z-index: 2;
 .biography-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-grid-auto-rows: 250px;
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 0px;
@@ -193,6 +192,9 @@ text-align: justify;
 /* CONTENEDOR DE IMAGEN */
 .biography-image-container {
 width: 100%;
+display: flex;
+justify-content: center;
+align-items: flex-start;
 }
 .biography-image-container img {
 width: 100%;
