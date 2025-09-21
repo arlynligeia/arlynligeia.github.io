@@ -4252,14 +4252,16 @@ justify-content: center; /* Centramos el contenido */
 }
 /* IMAGEN - MANTENEMOS TAMAÑO FIJO */
 .nebulaexecutiveproducer-image {
-width: 400px; /* Tamaño fijo para la imagen */
+width: 400px;
+display: flex;
+justify-content: center;
 margin-top: 0px;
 margin-bottom: 0px;
 }
 .nebulaexecutiveproducer-image img {
 width: 100%;
 border-radius: 15px;
-max-width: 400px; /* Aseguramos que no crezca más de 400px */
+max-width: 400px;
 }
 /* CONTENEDOR DE PRECIO Y BOTONES */
 .nebulaexecutiveproducer-price-buttons {
@@ -4323,7 +4325,7 @@ margin-bottom: 20px;
 }
 .nebulaexecutiveproducer-text {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
@@ -4372,6 +4374,9 @@ font-size: 1.2rem;
 color: #39FF14; /* verde neon) */
 font-weight: bold;
 }
+
+
+
 
 /* ======================================
    PULSAR EXECUTIVE PRODUCER
