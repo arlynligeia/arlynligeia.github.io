@@ -4189,6 +4189,1055 @@ background-color: #00CED1 !important;
   font-weight: bold;
 }
 
+/* ======================================
+   NEBULA EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.nebulaexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.nebulaexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.nebulaexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.nebulaexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.nebulaexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.nebulaexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.nebulaexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.nebulaexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.nebulaexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.nebulaexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.nebulaexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.nebulaexecutiveproducer-button-addtocart,
+.nebulaexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.nebulaexecutiveproducer-button-addtocart:hover,
+.nebulaexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.nebulaexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.nebulaexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.nebulaexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.nebulaexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.nebulaexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.nebulaexecutiveproducer-button-back,
+.nebulaexecutiveproducer-button-continueshopping,
+.nebulaexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.nebulaexecutiveproducer-button-back:hover,
+.nebulaexecutiveproducer-button-continueshopping:hover,
+.nebulaexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.nebulaexecutiveproducer-button-back,
+.nebulaexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.nebulaexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
+
+/* ======================================
+   PULSAR EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.pulsarexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.pulsarexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.pulsarexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.pulsarexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.pulsarexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.pulsarexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.pulsarexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.pulsarexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.pulsarexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.pulsarexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.pulsarexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.pulsarexecutiveproducer-button-addtocart,
+.pulsarexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.pulsarexecutiveproducer-button-addtocart:hover,
+.pulsarexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.pulsarexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.pulsarexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.pulsarexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.pulsarexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.pulsarexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.pulsarexecutiveproducer-button-back,
+.pulsarexecutiveproducer-button-continueshopping,
+.pulsarexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.pulsarexecutiveproducer-button-back:hover,
+.pulsarexecutiveproducer-button-continueshopping:hover,
+.pulsarexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.pulsarexecutiveproducer-button-back,
+.pulsarexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.pulsarexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
+
+/* ======================================
+   BLACK HOLE EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.blackholeexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.blackholeexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.blackholeexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.blackholeexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.blackholeexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.blackholeexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.blackholeexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.blackholeexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.blackholeexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.blackholeexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.blackholeexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.blackholeexecutiveproducer-button-addtocart,
+.blackholeexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.blackholeexecutiveproducer-button-addtocart:hover,
+.blackholeexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.blackholeexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.blackholeexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.blackholeexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.blackholeexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.blackholeexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.blackholeexecutiveproducer-button-back,
+.blackholeexecutiveproducer-button-continueshopping,
+.blackholeexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.blackholeexecutiveproducer-button-back:hover,
+.blackholeexecutiveproducer-button-continueshopping:hover,
+.blackholeexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.blackholeexecutiveproducer-button-back,
+.blackholeexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.blackholeexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
+
+/* ======================================
+   QUASAR EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.quasarexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.quasarexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.quasarexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.quasarexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.quasarexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.quasarexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.quasarexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.quasarexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.quasarexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.quasarexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.quasarexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.quasarexecutiveproducer-button-addtocart,
+.quasarexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.quasarexecutiveproducer-button-addtocart:hover,
+.quasarexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.quasarexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.quasarexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.quasarexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.quasarexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.quasarexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.quasarexecutiveproducer-button-back,
+.quasarexecutiveproducer-button-continueshopping,
+.quasarexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.quasarexecutiveproducer-button-back:hover,
+.quasarexecutiveproducer-button-continueshopping:hover,
+.quasarexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.quasarexecutiveproducer-button-back,
+.quasarexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.quasarexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
+
+/* ======================================
+   GALAXY EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.galaxyexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.galaxyexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.galaxyexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.galaxyexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.galaxyexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.galaxyexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.galaxyexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.galaxyexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.galaxyexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.galaxyexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.galaxyexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.galaxyexecutiveproducer-button-addtocart,
+.galaxyexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.galaxyexecutiveproducer-button-addtocart:hover,
+.galaxyexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.galaxyexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.galaxyexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.galaxyexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.galaxyexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.galaxyexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.galaxyexecutiveproducer-button-back,
+.galaxyexecutiveproducer-button-continueshopping,
+.galaxyexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.galaxyexecutiveproducer-button-back:hover,
+.galaxyexecutiveproducer-button-continueshopping:hover,
+.galaxyexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.galaxyexecutiveproducer-button-back,
+.galaxyexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.galaxyexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
+
+/* ======================================
+   COSMOS EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.cosmosexecutiveproducer-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.cosmosexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
+}
+.cosmosexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.cosmosexecutiveproducer-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.cosmosexecutiveproducer-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.cosmosexecutiveproducer-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* IMAGEN */
+.cosmosexecutiveproducer-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cosmosexecutiveproducer-image img {
+width: 100%;
+border-radius: 15px;
+}
+/* CONTENEDOR DE PRECIO Y BOTONES */
+.cosmosexecutiveproducer-price-buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* PRECIO */
+.cosmosexecutiveproducer-price {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white;
+margin-top: 0px;
+margin-bottom: 15px;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+}
+/* BOTONES ADD TO CART Y SHARE */
+.cosmosexecutiveproducer-buttons-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.cosmosexecutiveproducer-button-addtocart,
+.cosmosexecutiveproducer-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white;
+text-decoration: none;
+margin-top: 0px;
+margin-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cosmosexecutiveproducer-button-addtocart:hover,
+.cosmosexecutiveproducer-button-share:hover {
+transform: scale(1.05);
+}
+.cosmosexecutiveproducer-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}  
+.cosmosexecutiveproducer-button-share {
+background-color: #39ff14 !important;
+font-size: 1rem;
+}  
+/* CONTENEDOR DE TEXTO */
+.cosmosexecutiveproducer-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
+}
+.cosmosexecutiveproducer-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+}
+/* CONTENEDOR DE BOTONES */
+.cosmosexecutiveproducer-buttons2-container {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cosmosexecutiveproducer-button-back,
+.cosmosexecutiveproducer-button-continueshopping,
+.cosmosexecutiveproducer-button-gotocart {
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none; 
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cosmosexecutiveproducer-button-back:hover,
+.cosmosexecutiveproducer-button-continueshopping:hover,
+.cosmosexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.cosmosexecutiveproducer-button-back,
+.cosmosexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}  
+.cosmosexecutiveproducer-button-gotocart {
+  background-color: #ff1493 !important;
+} 
+/* TEXTO OUT OF STOCK */
+.outofstock {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #39FF14;  /* verde neon) */
+  font-weight: bold;
+}
 
 
 
@@ -4215,1809 +5264,7 @@ background-color: #00CED1 !important;
 
 
 
-/* ======================================
- PLANET EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.planetexecutiveproducer-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.planetexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.planetexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.planetexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.planetexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.planetexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.planetexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.planetexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.planetexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.planetexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.planetexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.planetexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.planetexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.planetexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.planetexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.planetexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.planetexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.planetexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.planetexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
 
-/* ======================================
- COMET EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.cometexecutiveproducer-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.cometexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.cometexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.cometexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.cometexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.cometexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.cometexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.cometexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.cometexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.cometexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.cometexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.cometexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.cometexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.cometexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.cometexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.cometexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.cometexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.cometexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.cometexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- STAR EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.starexecutiveproducer-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.starexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.starexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.starexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.starexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.starexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.starexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.starexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.starexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.starexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.starexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.starexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.starexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.starexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.starexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.starexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.starexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.starexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.starexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- NEBULA EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.nebulaexecutiveproducer-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.nebulaexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.nebulaexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.nebulaexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.nebulaexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.nebulaexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.nebulaexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.nebulaexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.nebulaexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.nebulaexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.nebulaexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.nebulaexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.nebulaexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.nebulaexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.nebulaexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.nebulaexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.nebulaexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.nebulaexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.nebulaexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- GALAXY EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.galaxyexecutiveproducer-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.galaxyexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.galaxyexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.galaxyexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.galaxyexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.galaxyexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.galaxyexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.galaxyexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.galaxyexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.galaxyexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.galaxyexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.galaxyexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.galaxyexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.galaxyexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.galaxyexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.galaxyexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.galaxyexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.galaxyexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.galaxyexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- BLACK HOLE EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.blackholeexecutiveproducer-container {
-  position: relative;
-  width: 1000px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.blackholeexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.blackholeexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.blackholeexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.blackholeexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.blackholeexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.blackholeexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.blackholeexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.blackholeexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.blackholeexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.blackholeexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.blackholeexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.blackholeexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.blackholeexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.blackholeexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.blackholeexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.blackholeexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.blackholeexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.blackholeexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- QUASAR EXECUTIVE PRODUCER
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.quasarexecutiveproducer-container {
-  position: relative;
-  width: 1000px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.quasarexecutiveproducer-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.quasarexecutiveproducer-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.quasarexecutiveproducer-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.quasarexecutiveproducer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.quasarexecutiveproducer-image {
-  display: flex;
-  align-items: center;
-}
-.quasarexecutiveproducer-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.quasarexecutiveproducer-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.quasarexecutiveproducer-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.quasarexecutiveproducer-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.quasarexecutiveproducer-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.quasarexecutiveproducer-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.quasarexecutiveproducer-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.quasarexecutiveproducer-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.quasarexecutiveproducer-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.quasarexecutiveproducer-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.quasarexecutiveproducer-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.quasarexecutiveproducer-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.quasarexecutiveproducer-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- ALONE ONLINE PREMIERE
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.aloneonlinepremiere-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.aloneonlinepremiere-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.aloneonlinepremiere-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.aloneonlinepremiere-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.aloneonlinepremiere-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.aloneonlinepremiere-image {
-  display: flex;
-  align-items: center;
-}
-.aloneonlinepremiere-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.aloneonlinepremiere-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.aloneonlinepremiere-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.aloneonlinepremiere-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.aloneonlinepremiere-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.aloneonlinepremiere-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.aloneonlinepremiere-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.aloneonlinepremiere-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.aloneonlinepremiere-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.aloneonlinepremiere-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.aloneonlinepremiere-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.aloneonlinepremiere-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.aloneonlinepremiere-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- ALONE STANDARD PACKAGE
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.alonestandardpackage-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.alonestandardpackage-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.alonestandardpackage-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.alonestandardpackage-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.alonestandardpackage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.alonestandardpackage-image {
-  display: flex;
-  align-items: center;
-}
-.alonestandardpackage-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.alonestandardpackage-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.alonestandardpackage-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.alonestandardpackage-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.alonestandardpackage-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.alonestandardpackage-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.alonestandardpackage-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.alonestandardpackage-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.alonestandardpackage-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.alonestandardpackage-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.alonestandardpackage-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.alonestandardpackage-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.alonestandardpackage-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- ALONE PREMIUM PACKAGE
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.alonepremiumpackage-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.alonepremiumpackage-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.alonepremiumpackage-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.alonepremiumpackage-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.alonepremiumpackage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.alonepremiumpackage-image {
-  display: flex;
-  align-items: center;
-}
-.alonepremiumpackage-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.alonepremiumpackage-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.alonepremiumpackage-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.alonepremiumpackage-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.alonepremiumpackage-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.alonepremiumpackage-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.alonepremiumpackage-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.alonepremiumpackage-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.alonepremiumpackage-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.alonepremiumpackage-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.alonepremiumpackage-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.alonepremiumpackage-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.alonepremiumpackage-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
-
-/* ======================================
- ALONE LUXURY PACKAGE
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.aloneluxurypackage-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.aloneluxurypackage-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
-}
-.aloneluxurypackage-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 16px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-}
-.aloneluxurypackage-title a {
-  color: white;
-  text-decoration: none;
-}
-/* GRID DE DOS COLUMNAS */
-.aloneluxurypackage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  align-items: stretch;
-}
-.aloneluxurypackage-image {
-  display: flex;
-  align-items: center;
-}
-.aloneluxurypackage-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-}
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.aloneluxurypackage-price-buttons {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  min-height: 300px;
-}
-/* PRECIO */
-.aloneluxurypackage-price {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.5rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.5;
-  text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.aloneluxurypackage-buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
-.aloneluxurypackage-buttons button {
-  background-color: #ff1493; /* fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.aloneluxurypackage-buttons button:hover {
-  transform: scale(1.05);
-}
-/* BOTÓN SHARE */
-.aloneluxurypackage-buttons .share-button {
-  background-color: #39ff14;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-}
-/* CONTENEDOR DESCRIPCIÓN */
-.aloneluxurypackage-description-container {
-  margin: 0px;
-}
-/* DESCRIPCIÓN DEL PRODUCTO */
-.aloneluxurypackage-description {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  margin-top: 0px;
-  margin-bottom: 20px;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: justify;
-}
-/* BOTONES INFERIORES */
-.aloneluxurypackage-buttons2 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-.aloneluxurypackage-buttons2 button {
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-.aloneluxurypackage-buttons2 button:hover {
-  transform: scale(1.05);
-}
-/* Botón GO TO CART - AHORA COLOR FUCSIA */
-.aloneluxurypackage-gotocart-button {
-  background-color: #ff1493 !important;
-}
-/* Solo aplica al texto OUT OF STOCK */
-.outofstock {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39FF14;
-  font-weight: bold;
-}
 
 
 
