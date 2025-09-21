@@ -121,91 +121,6 @@ nav {
 }
 
 
-
-/* ======================================
-   BIOGRAPHY
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.biography-container {
-position: relative;
-width: 800px;
-background-color: #9900CC; /* purpura neon */
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.biography-container::before {
-content: "";
-position: absolute;
-z-index: 1; 
-top: 0;
-left: 0;
-width: 100%;
-height: 90px;
-background-color: #8000A8; /* purpura intenso */
-border-radius: 20px 20px 0 0;
-}
-.biography-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0px;
-margin-bottom: 16px;
-}
-.biography-title a {
-color: white;
-text-decoration: none;
-}
-/* CONTENEDOR DE COLUMNAS */
-.biography-columns-container {
-position: relative;
-z-index: 2;
-}
-/* GRID DE DOS COLUMNAS*/
-.biography-grid-container {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-/* CONTENEDOR DE TEXTO */
-.biography-text-container {
-width: 100%;
-min-width: 0;
-margin-top: 0px;
-margin-bottom: 0px;  
-}
-.biography-text {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white;
-line-height: 1.5;
-text-align: justify;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-/* CONTENEDOR DE IMAGEN*/
-.biography-image-container {
-width: 100%;
-min-width: 0;
-margin-top: 0px;
-margin-bottom: 0px;
-
-}
-.biography-image-container img {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 15px;
-}
-
 /* ======================================
    PRUEBA
 ====================================== */
@@ -351,35 +266,88 @@ font-size: 1rem;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.prueba-price-buttons-container {
-    width: 100%;
-    min-width: 0; /* ← MISMA función */
+/* ======================================
+   BIOGRAPHY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.biography-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
-
-
-
-
-
-
-
+.biography-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
+}
+.biography-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px;
+margin-bottom: 16px;
+}
+.biography-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE COLUMNAS */
+.biography-columns-container {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS*/
+.biography-grid-container {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+/* CONTENEDOR DE TEXTO */
+.biography-text-container {
+width: 100%;
+min-width: 0;
+margin-top: 0px;
+margin-bottom: 0px;  
+}
+.biography-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: justify;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+/* CONTENEDOR DE IMAGEN*/
+.biography-image-container {
+width: 100%;
+min-width: 0;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.biography-image-container img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+}
 
 /* ======================================
    FILM
@@ -511,29 +479,33 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
-.alone-grid {
+/* GRID DE DOS COLUMNAS*/
+.alone-grid-container {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 0px;
 }
-/* CONTENEDOR DE IMAGEN */
+/* CONTENEDOR DE IMAGEN*/
 .alone-image-container {
 width: 100%;
+min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.alone-image img {
+.alone-image-container img {
 width: 100%;
+height: auto;
+display: block;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO */
-.alone-text-1-container {
+.alone-text-container {
 width: 100%;
+min-width: 0;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 0px;  
 }
 .alone-subtitle-1 {
 font-family: 'Orbitron', sans-serif;
@@ -555,6 +527,8 @@ line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
+word-break: break-word;
+overflow-wrap: break-word;
 }
 .alone-subtitle-2 {
 font-family: 'Share Tech Mono', monospace;
@@ -575,7 +549,9 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 10px; 
+margin-bottom: 10px;
+word-break: break-word;
+overflow-wrap: break-word;
 } 
 /* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
 .alone-text-2-container {
@@ -601,6 +577,21 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
  
 
