@@ -560,6 +560,8 @@ overflow-wrap: break-word;
 /* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
 .alone-text-2-container {
 width: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
 .alone-subtitle-3 {
 font-family: 'Orbitron', sans-serif;
@@ -868,7 +870,7 @@ object-fit: cover;
 .album-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -881,7 +883,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #00B8BA; /* Turquesa */
 border-radius: 20px 20px 0 0;
 }
 .album-title {
@@ -925,7 +927,7 @@ margin-bottom: 0px;
 .album1969-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #00CED1; /* Celeste agua (color base) */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -938,7 +940,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #00B8BA; /* Turquesa */
 border-radius: 20px 20px 0 0;
 }
 .album1969-title {
@@ -1017,6 +1019,8 @@ overflow-wrap: break-word;
 /* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
 .album1969-text-2-container {
 width: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
 .album1969-subtitle-2 {
 font-family: 'Orbitron', sans-serif;
@@ -1039,52 +1043,33 @@ margin-top: 0px;
 margin-bottom: 0px; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-  FASHION
+   FASHION
 ====================================== */
-/* CONTENEDOR PRINCIPAL DE FILM */
+/* CONTENEDOR PRINCIPAL DE FASHION */
 .fashion-container {
-  position: relative;
-  height: calc(100vh - 220px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
 }
 /* CONTENEDOR DEL BANNER */
-.fashion-container-banner {
-  position: relative; 
-  width: 95%;
-  height: 100%;
-  background-color: #000000; 
-  border: 2px solid white;
-  border-radius: 20px;
-  overflow: hidden;
+.fashion-image-container {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000; 
+border: 2px solid white;
+border-radius: 20px;
+overflow: hidden;
 }
-
 /* IMAGEN DEL BANNER */
-.fashion-banner-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.fashion-image-banner {
+width: 100%;
+height: 100%;
+object-fit: cover;
 }
 
 /* ======================================
@@ -1092,56 +1077,56 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .fwcollection-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .fwcollection-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px; 
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .fwcollection-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .fwcollection-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.fwcollection-container-text {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.fwcollection-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 .fwcollection-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 /* ======================================
@@ -1149,79 +1134,87 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .fw2627-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .fw2627-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .fw2627-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px;
+margin-bottom: 16px; 
 }
 .fw2627-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* CONTENEDOR DE IMAGEN */
-.fw2627-container-image {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
+/* CONTENEDOR DE IMAGEN*/
+.fw2627-image-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.fw2627-container-image img {
-  width: 100%;
-  border-radius: 15px;
-  height: auto;
-  display: block;
+.fw2627-image-container img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO */
-.fw2627-container-text {
-  width: 100%;
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
+.fw2627-text-2-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
-.fw2627-subtitle-1, 
+.fw2627-subtitle-1,
 .fw2627-subtitle-2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2rem;
-  color: white;
-  line-height: 1.5;
-  text-align: center;
-  margin-top: 0px;
-  margin-bottom: 10px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px; 
 }
 .fw2627-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 0px; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
+
+
+
+
+
+
+
 
 
 
