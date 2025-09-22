@@ -1209,45 +1209,39 @@ margin-top: 0px;
 margin-bottom: 0px; 
 }
 
-
-
-
-
-
-
 /* ======================================
-  SCIENCE
+   SCIENCE
 ====================================== */
-/* CONTENEDOR PRINCIPAL DE FILM */
-.science-container {
-  position: relative;
-  height: calc(100vh - 220px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+/* CONTENEDOR */
+.science-carousel-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
 }
 /* CARRUSEL DE BIENVENIDA*/
-.science-container-carousel {
-  position: relative; 
-  width: 95%;
-  height: 100%;
-  background-color: #000000; 
-  border: 2px solid white;
-  border-radius: 20px;
-  overflow: hidden;
+.science-carousel-container {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000; 
+border: 2px solid white;
+border-radius: 20px;
+overflow: hidden;
 }
 /* IMÁGENES DEL CARRUSEL */
 .science-carousel-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
 }
 .science-carousel-image.active {
-  opacity: 1;
+opacity: 1;
 }
 
 /* ======================================
@@ -1255,92 +1249,90 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .researcharticle-container {
-  position: relative;
-  width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .researcharticle-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00B8BA; /* Turquesa */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA; /* Turquesa */
+border-radius: 20px 20px 0 0;
 }
 /* CONTENEDOR TÍTULO + BOTÓN */
-.researcharticle-container-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.researcharticle-header-container {
+position: relative;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 /* Título */
 .researcharticle-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px; 
-  margin-bottom: 16px;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px; 
+margin-bottom: 16px;
 }
 .researcharticle-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* Botón ORCID */
-.orcid-button {
-  z-index: 2; /* encima de la franja */   
-  display: inline-block;
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;  
+/* BOTÓN ORCID */
+.researcharticle-button-orcid {
+z-index: 2; /* encima de la franja */   
+display: inline-block;
+background-color: #ff1493; /* Fucsia por defecto */
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+font-weight: bold;
+color: white;
+text-decoration: none;
+text-align: center;
+margin-top: 0px; 
+margin-bottom: 16px;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;  
 }
-.orcid-button:hover {
-  transform: scale(1.05);
+.researcharticle-button-orcid:hover {
+transform: scale(1.05);
 }
 /* CONTENEDOR DE TEXTO */
-.researcharticle-container-text {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.researcharticle-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 .researcharticle-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
 }
 
 /* ======================================
@@ -1348,80 +1340,94 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .psychology-container {
-  position: relative;
-  width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .psychology-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00B8BA; /* Turquesa */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA; /* Turquesa */
+border-radius: 20px 20px 0 0;
 }
 .psychology-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px;
+margin-bottom: 16px; 
 }
 .psychology-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* CONTENEDOR DE BOTONES */
-.psychology-container-buttons {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+/* CONTENEDOR DE BOTONES - NOMBRE CORREGIDO */
+.psychology-buttons-container {
+width: 100%;
+display: flex;
+flex-direction: column;
 }
-.psychology1-button,
-.psychology2-button,
-.psychology3-button {
-  display: block;
-  background-color: #ff1493; /* Fucsia */
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  margin-top: 0px; 
-  margin-bottom: 20px;
-  margin-left: 0px;
-  margin-right: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+/* BOTONES - NOMBRES CORREGIDOS */
+.psychology-button-1,
+.psychology-button-2,
+.psychology-button-3 {
+display: block;
+background-color: #ff1493; /* Fucsia */
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+text-align: center;
+margin-top: 0px; 
+margin-bottom: 20px;
+margin-left: 0px;
+margin-right: 0px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
  } 
-.psychology1-button:hover,
-.psychology2-button:hover,
-.psychology3-button:hover {
-  transform: scale(1.05);
+.psychology-button-1:hover,
+.psychology-button-2:hover,
+.psychology-button-3:hover {
+transform: scale(1.05);
  }
-.psychology3-button {
-  margin-bottom: 0px;
+.psychology-button-3 {
+margin-bottom: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
   BE MY PATRON
