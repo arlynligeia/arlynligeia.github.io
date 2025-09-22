@@ -3067,7 +3067,6 @@ transform: scale(1.05);
    PHYSICAL MAKEUP
 ====================================== */
 
-
 /* ======================================
    ALONE SPONSORSHIP
 ====================================== */
@@ -3495,6 +3494,12 @@ transform: scale(1.05);
    NECKLACES
 ====================================== */
 
+
+
+
+
+
+
 /* ======================================
    COMET SPONSOR
 ====================================== */
@@ -3541,7 +3546,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.cometsponsor-grid {
+.cometsponsor-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -3549,7 +3554,7 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.cometsponsor-image {
+.cometsponsor-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
@@ -3559,22 +3564,15 @@ width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.cometsponsor-text-container {
+.cometsponsor-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cometsponsor-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.cometsponsor-text {
+.cometsponso-text-1,
+.cometsponso-text-2,
+.cometsponso-text-3,
+.cometsponso-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -3598,14 +3596,14 @@ min-height: 300px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
 color: white;
-margin-top: 0px;
-margin-bottom: 10px;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.cometsponsor-buttons-container {
+.cometsponsor-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -3617,7 +3615,7 @@ font-family: 'Orbitron', sans-serif;
 color: white;
 text-decoration: none;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
@@ -3638,22 +3636,34 @@ font-size: 1.2rem;
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .cometsponsor-text2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.cometsponsor-text2 {
+.cometsponsor-text-5,
+.cometsponsor-text-6,
+.cometsponsor-text-7,
+.cometsponsor-text-8,
+.cometsponsor-text-9,
+.cometsponsor-text-10,
+.cometsponsor-text-11,
+.cometsponsor-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cometsponsor-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.cometsponsor-buttons2-container {
+.cometsponsor-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -3662,7 +3672,6 @@ margin-bottom: 0px;
 .cometsponsor-button-back,
 .cometsponsor-button-continueshopping,
 .cometsponsor-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -3695,6 +3704,11 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
+
+
+
+
+
 
 /* ======================================
    PLANET SPONSOR
