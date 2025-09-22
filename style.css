@@ -2143,30 +2143,8 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    STORE
-====================================== */
-/* ======================================
-   WELCOME TO MY STORE
 ====================================== */
 /* CONTENEDOR */
 .store-carousel-container {
@@ -2260,7 +2238,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE 3 COLUMNAS*/
-.digitalproducts-grid {
+.digitalproducts-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-auto-rows: 250px;
@@ -2345,7 +2323,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE 3 COLUMNAS*/
-.physicalproducts-grid {
+.physicalproducts-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 grid-auto-rows: 250px;
@@ -2387,6 +2365,157 @@ transform: scale(1.1);
 /* ======================================
    SHIPPING DETAILS
 ====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippingdetails-container {
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.shippingdetails-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
+}
+.shippingdetails-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.shippingdetails-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE LA TABLA */
+.shippingdetails-table-container {
+width: 100%;
+}
+/* TABLA */
+.shippingdetails-table {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+margin: 0;
+}
+.shippingdetails-table td + td,
+.shippingdetails-table th + th {
+border-left: 10px solid transparent;
+}
+/* COLUMNAS */
+.shippingdetails-table-type {
+width: 10%;
+}
+.shippingdetails-table-courier {
+width: 20%;
+}
+.shippingdetails-table-shippingdays {
+width: 25%;
+}
+.shippingdetails-table-estimateddeliverytime {
+width: 45%;
+}
+/* ALINEACIÓN */
+.shippingdetails-table td {
+vertical-align: middle;
+padding-top: 0px;
+padding-bottom: 10px; 
+}
+/* SUBTÍTULOS */
+.shippingdetails-table th {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14; /* Verde neon */
+line-height: 1.5;
+text-align: center;
+padding: 0;
+text-transform: uppercase;
+}
+/* LÍNEA DIVISORIA */
+.shippingdetails-table-divider td {
+border-top: 3px solid #39ff14;
+padding-top: 0px;
+padding-bottom: 5px;
+height: 0; 
+}
+/* RECUADRO BLANCO */
+.shippingdetails-white-cell {
+display: block;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
+text-align: center;
+margin: 0 auto;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;  
+box-sizing: border-box;
+}
+/* CONTENEDOR DE TEXTO */
+.shippingdetails-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
+}
+.shippingdetails-text-paragraph-1,
+.shippingdetails-text-paragraph-2,
+.shippingdetails-text-paragraph-3,
+.shippingdetails-text-paragraph-4,
+.shippingdetails-text-paragraph-5 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px; 
+}
+.shippingdetails-text-paragraph-5 {
+margin-bottom: 0px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    DIGITALFILM
