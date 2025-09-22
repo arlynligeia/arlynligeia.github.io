@@ -1245,14 +1245,6 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 
-
-
-
-
-
-
-
-
 /* ======================================
    RESEARCH ARTICLE
 ====================================== */
@@ -1384,13 +1376,13 @@ margin-bottom: 16px;
 color: white;
 text-decoration: none;
 }
-/* CONTENEDOR DE BOTONES - NOMBRE CORREGIDO */
+/* CONTENEDOR DE BOTONES */
 .psychology-buttons-container {
 width: 100%;
 display: flex;
 flex-direction: column;
 }
-/* BOTONES - NOMBRES CORREGIDOS */
+/* BOTONES */
 .psychology-button-1,
 .psychology-button-2,
 .psychology-button-3 {
@@ -1422,106 +1414,96 @@ transform: scale(1.05);
 margin-bottom: 0px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-  BE MY PATRON
+   BE MY PATRON CARRUSEL
 ====================================== */
-/* CONTENEDOR PRINCIPAL DE FILM */
-.bemypatron-container {
-  position: relative;
-  height: calc(100vh - 220px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
+/* CONTENEDOR */
+.bemypatron-carousel-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
 }
 /* CARRUSEL DE BIENVENIDA*/
-.bemypatron-container-carousel {
-  position: relative; 
-  width: 95%;
-  height: 100%;
-  background-color: #000000; 
-  border: 2px solid white;
-  border-radius: 20px;
-  overflow: hidden;
+.bemypatron-carousel {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000; 
+border: 2px solid white;
+border-radius: 20px;
+overflow: hidden;
 }
 /* IMÁGENES DEL CARRUSEL */
 .bemypatron-carousel-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
 }
 .bemypatron-carousel-image.active {
-  opacity: 1;
+opacity: 1;
 }
+
 /* ======================================
-   BE MY PATRON SEGUNDO CONTENEDOR
+   BE MY PATRON CONTENEDOR PRINCIPAL
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.bemypatron-container2 {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+.bemypatron-container { 
+position: relative;
+width: 800px;
+background-color: #001F99;; /* azul electrico */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
-.bemypatron-container2::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+.bemypatron-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80; /* azul noche intenso */
+border-radius: 20px 20px 0 0;
 }
 .bemypatron-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0px;
+margin-bottom: 16px; 
 }
 .bemypatron-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.bemypatron-container-text {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px; 
+.bemypatron-text-container { 
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
 .bemypatron-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px; 
 }
 
 /* ======================================
@@ -1529,87 +1511,87 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .supportmywork-container {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .supportmywork-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .supportmywork-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .supportmywork-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.supportmywork-container-text {
-  width: 100%;
-  margin-top: 0px;
-  margin-bottom: 10px; 
+.supportmywork-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
 }
 .supportmywork-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE BOTÓN */
-.supportmywork-container-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.supportmywork-button-container {
+display: flex;
+justify-content: center;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.supportmywork-donatewithpaypal-button {
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  height: auto !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
+.supportmywork-button-donatewithpaypal {
+background-color: #ff1493; /* Fucsia por defecto */
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+width: auto !important;
+min-width: 0 !important;
+max-width: none !important;
+height: auto !important;
+margin: 0 !important;
+box-sizing: border-box !important;
 }
-.supportmywork-donatewithpaypal-button:hover {
-  transform: scale(1.05);
+.supportmywork-button-donatewithpaypal:hover {
+transform: scale(1.05);
 }
 
 /* ======================================
@@ -1617,88 +1599,87 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .supportmystudies-container {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .supportmystudies-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .supportmystudies-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .supportmystudies-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* CONTENEDOR DE TEXTO Y BOTÓN */
-.supportmystudies-container-text {
-  width: 100%;
+/* CONTENEDOR DE TEXTO */
+.supportmystudies-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
 }
-/* TEXTOS */
 .supportmystudies-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 10px; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE BOTÓN */
-.supportmystudies-container-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.supportmystudies-button-container {
+display: flex;
+justify-content: center;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.supportmystudies-donatewithpaypal-button {
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  height: auto !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
+.supportmystudies-button-donatewithpaypal {
+background-color: #ff1493; /* Fucsia por defecto */
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+width: auto !important;
+min-width: 0 !important;
+max-width: none !important;
+height: auto !important;
+margin: 0 !important;
+box-sizing: border-box !important;
 }
-.supportmystudies-donatewithpaypal-button:hover {
-  transform: scale(1.05);
+.supportmystudies-button-donatewithpaypal:hover {
+transform: scale(1.05);
 }
 
 /* ======================================
@@ -1706,88 +1687,89 @@ margin-bottom: 0px;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .gifts-container {
-  position: relative;
-  width: 800px;
-  background-color: #001F99;; /* azul electrico */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .gifts-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color:  #001A80; /* azul noche intenso */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .gifts-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
-  margin-top: 0px;
-  margin-bottom: 16px; 
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
 .gifts-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-/* CONTENEDOR DE TEXTO Y BOTÓN */
-.gifts-container-text {
-  width: 100%;
+/* CONTENEDOR DE TEXTO */
+.gifts-text-container {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 15px;
 }
 .gifts-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
-  margin-top: 0px;
-  margin-bottom: 10px; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE BOTÓN */
-.gifts-container-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 0px;
-  margin-bottom: 0px;
+.gifts-button-container {
+display: flex;
+justify-content: center;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-.gifts-donatewithpaypal-button {
-  background-color: #ff1493; /* Fucsia por defecto */
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  width: auto !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  height: auto !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
+.gifts-button-donatewithpaypal {
+background-color: #ff1493; /* Fucsia por defecto */
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+width: auto !important;
+min-width: 0 !important;
+max-width: none !important;
+height: auto !important;
+margin: 0 !important;
+box-sizing: border-box !important;
 }
-.gifts-donatewithpaypal-button:hover {
-  transform: scale(1.05);
+.gifts-button-donatewithpaypal:hover {
+transform: scale(1.05);
 }
+
 
 
 
