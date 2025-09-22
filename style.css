@@ -3705,11 +3705,6 @@ color: #39FF14;
 font-weight: bold;
 }
 
-
-
-
-
-
 /* ======================================
    PLANET SPONSOR
 ====================================== */
@@ -3756,7 +3751,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.planetsponsor-grid {
+.planetsponsor-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -3764,32 +3759,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.planetsponsor-image {
+.planetsponsor-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsor-image img {
+.planetsponsor-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.planetsponsor-text-container {
+.planetsponsor-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsor-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.planetsponsor-text {
+.planetsponsor-text-1,
+.planetsponsor-text-2,
+.planetsponsor-text-3,
+.planetsponsor-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -3820,7 +3808,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.planetsponsor-buttons-container {
+.planetsponsor-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -3854,21 +3842,33 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.planetsponsor-text2-container {
+.planetsponsor-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.planetsponsor-text2 {
+.planetsponsor-text-5,
+.planetsponsor-text-6,
+.planetsponsor-text-7,
+.planetsponsor-text-8,
+.planetsponsor-text-9,
+.planetsponsor-text-10,
+.planetsponsor-text-11,
+.planetsponsor-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.planetsponsor-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.planetsponsor-buttons2-container {
+.planetsponsor-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -3957,7 +3957,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.starsponsor-grid {
+.starsponsor-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -3965,32 +3965,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.starsponsor-image {
+.starsponsor-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsor-image img {
+.starsponsor-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.starsponsor-text-container {
+.starsponsor-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsor-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.starsponsor-text {
+.starsponsor-text-1,
+.starsponsor-text-2,
+.starsponsor-text-3,
+.starsponsor-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4021,7 +4014,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.starsponsor-buttons-container {
+.starsponsor-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4055,21 +4048,33 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.starsponsor-text2-container {
+.starsponsor-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.starsponsor-text2 {
+.starsponsor-text-5,
+.starsponsor-text-6,
+.starsponsor-text-7,
+.starsponsor-text-8,
+.starsponsor-text-9,
+.starsponsor-text-10,
+.starsponsor-text-11,
+.starsponsor-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.starsponsor-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.starsponsor-buttons2-container {
+.starsponsor-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4158,7 +4163,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.cometsponsorbrand-grid {
+.cometsponsorbrand-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -4166,32 +4171,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.cometsponsorbrand-image {
+.cometsponsorbrand-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cometsponsorbrand-image img {
+.cometsponsorbrand-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.cometsponsorbrand-text-container {
+.cometsponsorbrand-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cometsponsorbrand-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.cometsponsorbrand-text {
+.cometsponsorbrand-text-1,
+.cometsponsorbrand-text-2,
+.cometsponsorbrand-text-3,
+.cometsponsorbrand-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4222,7 +4220,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.cometsponsorbrand-buttons-container {
+.cometsponsorbrand-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4256,21 +4254,33 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.cometsponsorbrand-text2-container {
+.cometsponsorbrand-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.cometsponsorbrand-text2 {
+.cometsponsorbrand-text-5,
+.cometsponsorbrand-text-6,
+.cometsponsorbrand-text-7,
+.cometsponsorbrand-text-8,
+.cometsponsorbrand-text-9,
+.cometsponsorbrand-text-10,
+.cometsponsorbrand-text-11,
+.cometsponsorbrand-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cometsponsorbrand-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.cometsponsorbrand-buttons2-container {
+.cometsponsorbrand-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4359,7 +4369,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.planetsponsorbrand-grid {
+.planetsponsorbrand-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -4367,32 +4377,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.planetsponsorbrand-image {
+.planetsponsorbrand-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsorbrand-image img {
+.planetsponsorbrand-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.planetsponsorbrand-text-container {
+.planetsponsorbrand-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsorbrand-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.planetsponsorbrand-text {
+.planetsponsorbrand-text-1,
+.planetsponsorbrand-text-2,
+.planetsponsorbrand-text-3,
+.planetsponsorbrand-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4423,7 +4426,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.planetsponsorbrand-buttons-container {
+.planetsponsorbrand-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4457,21 +4460,33 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.planetsponsorbrand-text2-container {
+.planetsponsorbrand-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.planetsponsorbrand-text2 {
+.planetsponsorbrand-text-5,
+.planetsponsorbrand-text-6,
+.planetsponsorbrand-text-7,
+.planetsponsorbrand-text-8,
+.planetsponsorbrand-text-9,
+.planetsponsorbrand-text-10,
+.planetsponsorbrand-text-11,
+.planetsponsorbrand-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.planetsponsorbrand-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.planetsponsorbrand-buttons2-container {
+.planetsponsorbrand-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4560,7 +4575,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.starsponsorbrand-grid {
+.starsponsorbrand-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -4568,32 +4583,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.starsponsorbrand-image {
+.starsponsorbrand-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsorbrand-image img {
+.starsponsorbrand-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.starsponsorbrand-text-container {
+.starsponsorbrand-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsorbrand-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.starsponsorbrand-text {
+.starsponsorbrand-text-1,
+.starsponsorbrand-text-2,
+.starsponsorbrand-text-3,
+.starsponsorbrand-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4624,7 +4632,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.starsponsorbrand-buttons-container {
+.starsponsorbrand-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4658,21 +4666,33 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.starsponsorbrand-text2-container {
+.starsponsorbrand-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.starsponsorbrand-text2 {
+.starsponsorbrand-text-5,
+.starsponsorbrand-text-6,
+.starsponsorbrand-text-7,
+.starsponsorbrand-text-8,
+.starsponsorbrand-text-9,
+.starsponsorbrand-text-10,
+.starsponsorbrand-text-11,
+.starsponsorbrand-text-12 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.starsponsorbrand-text-12 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.starsponsorbrand-buttons2-container {
+.starsponsorbrand-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4716,13 +4736,13 @@ font-weight: bold;
 }
 
 /* ======================================
-  NEBULA EXECUTIVE PRODUCER
+   NEBULA EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .nebulaexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4734,9 +4754,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .nebulaexecutiveproducer-title {
 position: relative;
@@ -4749,7 +4769,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .nebulaexecutiveproducer-title a {
 color: white;
@@ -4761,7 +4781,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.nebulaexecutiveproducer-grid {
+.nebulaexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -4769,32 +4789,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.nebulaexecutiveproducer-image {
+.nebulaexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.nebulaexecutiveproducer-image img {
+.nebulaexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.nebulaexecutiveproducer-text-container {
+.nebulaexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.nebulaexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.nebulaexecutiveproducer-text {
+.nebulaexecutiveproducer-text-1,
+.nebulaexecutiveproducer-text-2,
+.nebulaexecutiveproducer-text-3,
+.nebulaexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4825,7 +4838,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.nebulaexecutiveproducer-buttons-container {
+.nebulaexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -4859,21 +4872,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.nebulaexecutiveproducer-text2-container {
+.nebulaexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.nebulaexecutiveproducer-text2 {
+.nebulaexecutiveproducer-text-5,
+.nebulaexecutiveproducer-text-6,
+.nebulaexecutiveproducer-text-7,
+.nebulaexecutiveproducer-text-8,
+.nebulaexecutiveproducer-text-9,
+.nebulaexecutiveproducer-text-10,
+.nebulaexecutiveproducer-text-11,
+.nebulaexecutiveproducer-text-12,
+.nebulaexecutiveproducer-text-13,
+.nebulaexecutiveproducer-text-14,
+.nebulaexecutiveproducer-text-15,
+.nebulaexecutiveproducer-text-16,
+.nebulaexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.nebulaexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.nebulaexecutiveproducer-buttons2-container {
+.nebulaexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4917,13 +4947,13 @@ font-weight: bold;
 }
 
 /* ======================================
-PULSAR EXECUTIVE PRODUCER
+   PULSAR EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .pulsarexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4935,9 +4965,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .pulsarexecutiveproducer-title {
 position: relative;
@@ -4950,7 +4980,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .pulsarexecutiveproducer-title a {
 color: white;
@@ -4962,7 +4992,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.pulsarexecutiveproducer-grid {
+.pulsarexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -4970,32 +5000,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.pulsarexecutiveproducer-image {
+.pulsarexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.pulsarexecutiveproducer-image img {
+.pulsarexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.pulsarexecutiveproducer-text-container {
+.pulsarexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.pulsarexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.pulsarexecutiveproducer-text {
+.pulsarexecutiveproducer-text-1,
+.pulsarexecutiveproducer-text-2,
+.pulsarexecutiveproducer-text-3,
+.pulsarexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5026,7 +5049,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.pulsarexecutiveproducer-buttons-container {
+.pulsarexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -5060,21 +5083,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.pulsarexecutiveproducer-text2-container {
+.pulsarexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.pulsarexecutiveproducer-text2 {
+.pulsarexecutiveproducer-text-5,
+.pulsarexecutiveproducer-text-6,
+.pulsarexecutiveproducer-text-7,
+.pulsarexecutiveproducer-text-8,
+.pulsarexecutiveproducer-text-9,
+.pulsarexecutiveproducer-text-10,
+.pulsarexecutiveproducer-text-11,
+.pulsarexecutiveproducer-text-12,
+.pulsarexecutiveproducer-text-13,
+.pulsarexecutiveproducer-text-14,
+.pulsarexecutiveproducer-text-15,
+.pulsarexecutiveproducer-text-16,
+.pulsarexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.pulsarexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.pulsarexecutiveproducer-buttons2-container {
+.pulsarexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5118,13 +5158,13 @@ font-weight: bold;
 }
 
 /* ======================================
-BLACK HOLE EXECUTIVE PRODUCER
+   BLACK HOLE EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .blackholeexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5136,9 +5176,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .blackholeexecutiveproducer-title {
 position: relative;
@@ -5151,7 +5191,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .blackholeexecutiveproducer-title a {
 color: white;
@@ -5163,7 +5203,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.blackholeexecutiveproducer-grid {
+.blackholeexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -5171,32 +5211,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.blackholeexecutiveproducer-image {
+.blackholeexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.blackholeexecutiveproducer-image img {
+.blackholeexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.blackholeexecutiveproducer-text-container {
+.blackholeexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.blackholeexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.blackholeexecutiveproducer-text {
+.blackholeexecutiveproducer-text-1,
+.blackholeexecutiveproducer-text-2,
+.blackholeexecutiveproducer-text-3,
+.blackholeexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5227,7 +5260,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.blackholeexecutiveproducer-buttons-container {
+.blackholeexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -5261,21 +5294,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.blackholeexecutiveproducer-text2-container {
+.blackholeexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.blackholeexecutiveproducer-text2 {
+.blackholeexecutiveproducer-text-5,
+.blackholeexecutiveproducer-text-6,
+.blackholeexecutiveproducer-text-7,
+.blackholeexecutiveproducer-text-8,
+.blackholeexecutiveproducer-text-9,
+.blackholeexecutiveproducer-text-10,
+.blackholeexecutiveproducer-text-11,
+.blackholeexecutiveproducer-text-12,
+.blackholeexecutiveproducer-text-13,
+.blackholeexecutiveproducer-text-14,
+.blackholeexecutiveproducer-text-15,
+.blackholeexecutiveproducer-text-16,
+.blackholeexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.blackholeexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.blackholeexecutiveproducer-buttons2-container {
+.blackholeexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5319,13 +5369,13 @@ font-weight: bold;
 }
 
 /* ======================================
-QUASAR EXECUTIVE PRODUCER
+   QUASAR EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .quasarexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5337,9 +5387,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .quasarexecutiveproducer-title {
 position: relative;
@@ -5352,7 +5402,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .quasarexecutiveproducer-title a {
 color: white;
@@ -5364,7 +5414,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.quasarexecutiveproducer-grid {
+.quasarexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -5372,32 +5422,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.quasarexecutiveproducer-image {
+.quasarexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.quasarexecutiveproducer-image img {
+.quasarexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.quasarexecutiveproducer-text-container {
+.quasarexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.quasarexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.quasarexecutiveproducer-text {
+.quasarexecutiveproducer-text-1,
+.quasarexecutiveproducer-text-2,
+.quasarexecutiveproducer-text-3,
+.quasarexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5428,7 +5471,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.quasarexecutiveproducer-buttons-container {
+.quasarexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -5462,21 +5505,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.quasarexecutiveproducer-text2-container {
+.quasarexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.quasarexecutiveproducer-text2 {
+.quasarexecutiveproducer-text-5,
+.quasarexecutiveproducer-text-6,
+.quasarexecutiveproducer-text-7,
+.quasarexecutiveproducer-text-8,
+.quasarexecutiveproducer-text-9,
+.quasarexecutiveproducer-text-10,
+.quasarexecutiveproducer-text-11,
+.quasarexecutiveproducer-text-12,
+.quasarexecutiveproducer-text-13,
+.quasarexecutiveproducer-text-14,
+.quasarexecutiveproducer-text-15,
+.quasarexecutiveproducer-text-16,
+.quasarexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.quasarexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.quasarexecutiveproducer-buttons2-container {
+.quasarexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5520,13 +5580,13 @@ font-weight: bold;
 }
 
 /* ======================================
-GALAXY EXECUTIVE PRODUCER
+   GALAXY EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .galaxyexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5538,9 +5598,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .galaxyexecutiveproducer-title {
 position: relative;
@@ -5553,7 +5613,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .galaxyexecutiveproducer-title a {
 color: white;
@@ -5565,7 +5625,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.galaxyexecutiveproducer-grid {
+.galaxyexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -5573,32 +5633,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.galaxyexecutiveproducer-image {
+.galaxyexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.galaxyexecutiveproducer-image img {
+.galaxyexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.galaxyexecutiveproducer-text-container {
+.galaxyexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.galaxyexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.galaxyexecutiveproducer-text {
+.galaxyexecutiveproducer-text-1,
+.galaxyexecutiveproducer-text-2,
+.galaxyexecutiveproducer-text-3,
+.galaxyexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5629,7 +5682,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.galaxyexecutiveproducer-buttons-container {
+.galaxyexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -5663,21 +5716,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.galaxyexecutiveproducer-text2-container {
+.galaxyexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.galaxyexecutiveproducer-text2 {
+.galaxyexecutiveproducer-text-5,
+.galaxyexecutiveproducer-text-6,
+.galaxyexecutiveproducer-text-7,
+.galaxyexecutiveproducer-text-8,
+.galaxyexecutiveproducer-text-9,
+.galaxyexecutiveproducer-text-10,
+.galaxyexecutiveproducer-text-11,
+.galaxyexecutiveproducer-text-12,
+.galaxyexecutiveproducer-text-13,
+.galaxyexecutiveproducer-text-14,
+.galaxyexecutiveproducer-text-15,
+.galaxyexecutiveproducer-text-16,
+.galaxyexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.galaxyexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.galaxyexecutiveproducer-buttons2-container {
+.galaxyexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5721,13 +5791,13 @@ font-weight: bold;
 }
 
 /* ======================================
-COSMOS EXECUTIVE PRODUCER
+   COSMOS EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .cosmosexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC;
+background-color: #9900CC; /* purpura neon */
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5739,9 +5809,9 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 90px;
-background-color: #8000A8;
-border-radius: 20px 20px 0 0;
+height: 90px; 
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;  
 }
 .cosmosexecutiveproducer-title {
 position: relative;
@@ -5754,7 +5824,7 @@ text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
-margin-bottom: 16px;
+margin-bottom: 16px; 
 }
 .cosmosexecutiveproducer-title a {
 color: white;
@@ -5766,7 +5836,7 @@ position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.cosmosexecutiveproducer-grid {
+.cosmosexecutiveproducer-grid-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
@@ -5774,32 +5844,25 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* IMAGEN */
-.cosmosexecutiveproducer-image {
+.cosmosexecutiveproducer-image-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-image img {
+.cosmosexecutiveproducer-image-container img {
 width: 100%;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO SINOPSIS */
-.cosmosexecutiveproducer-text-container {
+.cosmosexecutiveproducer-text-1-container {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-subtitle {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white;
-line-height: 1.5;
-text-align: center;
-margin-top: 0px;
-margin-bottom: 10px;
-text-transform: uppercase;
-}
-.cosmosexecutiveproducer-text {
+.cosmosexecutiveproducer-text-1,
+.cosmosexecutiveproducer-text-2,
+.cosmosexecutiveproducer-text-3,
+.cosmosexecutiveproducer-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5830,7 +5893,7 @@ line-height: 1.5;
 text-align: center;
 }
 /* BOTONES ADD TO CART Y SHARE */
-.cosmosexecutiveproducer-buttons-container {
+.cosmosexecutiveproducer-buttons-1-container {
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -5864,21 +5927,38 @@ background-color: #39ff14 !important;
 font-size: 1rem;
 }
 /* CONTENEDOR DE TEXTO LARGO */
-.cosmosexecutiveproducer-text2-container {
+.cosmosexecutiveproducer-text-2-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-text2 {
+.cosmosexecutiveproducer-text-5,
+.cosmosexecutiveproducer-text-6,
+.cosmosexecutiveproducer-text-7,
+.cosmosexecutiveproducer-text-8,
+.cosmosexecutiveproducer-text-9,
+.cosmosexecutiveproducer-text-10,
+.cosmosexecutiveproducer-text-11,
+.cosmosexecutiveproducer-text-12,
+.cosmosexecutiveproducer-text-13,
+.cosmosexecutiveproducer-text-14,
+.cosmosexecutiveproducer-text-15,
+.cosmosexecutiveproducer-text-16,
+.cosmosexecutiveproducer-text-17 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cosmosexecutiveproducer-text-17 {
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
-.cosmosexecutiveproducer-buttons2-container {
+.cosmosexecutiveproducer-buttons-2-container {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5887,7 +5967,7 @@ margin-bottom: 0px;
 .cosmosexecutiveproducer-button-back,
 .cosmosexecutiveproducer-button-continueshopping,
 .cosmosexecutiveproducer-button-gotocart {
-background-color: крайне важно;
+background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5920,8 +6000,6 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
-
-
 
 
 
