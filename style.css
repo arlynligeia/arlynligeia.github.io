@@ -1018,7 +1018,7 @@ display: block;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO */
-.album1969-text-container {
+.album1969-text-1-container {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
@@ -1063,7 +1063,9 @@ text-align: center;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
-.album1969-text-2 {
+.album1969-text-paragraph-1,
+.album1969-text-paragraph-2,
+.album1969-text-paragraph-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -1071,6 +1073,9 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
+margin-bottom: 15px; 
+}
+.album1969-text-paragraph-3 {
 margin-bottom: 0px; 
 }
 
@@ -1204,7 +1209,7 @@ text-decoration: none;
 .fw2627-image-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 0px;
+margin-bottom: 15px;
 }
 .fw2627-image-container img {
 width: 100%;
@@ -1227,9 +1232,11 @@ text-decoration: none;
 line-height: 1.5;
 text-align: center;  
 margin-top: 0px;
-margin-bottom: 10px; 
+margin-bottom: 0px; 
 }
-.fw2627-text {
+.fw2627-text-paragraph-1,
+.fw2627-text-paragraph-2,
+.fw2627-text-paragraph-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -1237,6 +1244,9 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
+margin-bottom: 15px; 
+}
+.fw2627-text-paragraph-3 {
 margin-bottom: 0px; 
 }
 
@@ -1756,7 +1766,7 @@ text-decoration: none;
 .gifts-text-container {
 width: 100%;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 20px;
 }
 .gifts-text {
 font-family: 'Share Tech Mono', monospace;
@@ -1843,6 +1853,8 @@ text-decoration: none;
 /* CONTENEDOR DEL FORMULARIO */
 .contact-form-container {
 width: 100%;
+margin-top: 0px;
+margin-bottom: 20px; 
 }
 .contact-label {
 display: block;
@@ -1865,14 +1877,15 @@ padding: 10px;
 border: none;
 box-sizing: border-box;
 margin-top: 0px;
-margin-bottom: 10px; 
+margin-bottom: 15px; 
 }
 .contact-input {
 height: 40px;
 }
 .contact-textarea {
-height: 120px;
+height: 150px;
 resize: vertical;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE BOTÓN */
 .contact-button-container {
@@ -2076,6 +2089,8 @@ text-decoration: none;
 /* CONTENEDOR DEL FORMULARIO */
 .contactforfans-form-container {
 width: 100%;
+margin-top: 0px;
+margin-bottom: 20px; 
 }
 .contactforfans-label {
 display: block;
@@ -2098,14 +2113,15 @@ padding: 10px;
 border: none;
 box-sizing: border-box;
 margin-top: 0px;
-margin-bottom: 10px; 
+margin-bottom: 15px; 
 }
 .contactforfans-input {
 height: 40px;
 }
 .contactforfans-textarea {
-height: 120px;
+height: 150px;
 resize: vertical;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE BOTÓN */
 .contactforfans-button-container {
