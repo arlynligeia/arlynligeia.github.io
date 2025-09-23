@@ -2333,75 +2333,88 @@ ADD TO CART
 </section>
 <!-- END COSMOS EXECUTIVE PRODUCER -->
 
-<!-- CART -->
-<section id="cart" class="cart-section main-section">
-<div class="cart-container">
-<h2 class="cart-title">YOUR CART</h2>
-<!-- CARRITO VACIO -->
-<div class="cart-empty-container" id="cart-empty-container" style="display: none;">
-<p class="cart-empty-text">Your cart is empty</p>
-<div class="cart-empty-buttons-container">
-<button class="cart-empty-button-continueshopping" onclick="location.href='#store'">CONTINUE SHOPPING</button>
-</div>
-</div>
+
 
 
   
+<!-- CART -->
+<section id="cart" class="cart-section main-section">
+<div class="cart-container">
+<h2 class="cart-container-title">YOUR CART</h2>
+<!-- CARRITO VACIO -->
+<div class="cart-container-empty" id="cart-container-empty" style="display: none;">
+<p class="cart-container-empty-text">Your cart is empty</p>
+<div class="cart-container-empty-buttons">
+<button class="cart-container-empty-button-continueshopping" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
 <!-- CARRITO LLENO -->
-<div class="cart-full-container" id="cart-full-container">
-<!-- CONTENEDOR DE LA TABLA -->  
-<div class="cart-table-container">
-<table class="cart-table">        
-<thead>    
-<tr>
-<th class="cart-table-image">IMAGE</th>
-<th class="cart-table-productname">PRODUCT NAME</th>
-<th class="cart-table-price">PRICE</th>
-<th class="cart-table-quantity">QTY</th>
-<th class="cart-table-remove">RMV</th>
+<div class="cart-container-full" id="cart-container-full">
+<!-- CONTENEDOR DE LA TABLA -->
+<div class="cart-container-table">
+<table class="cart-container-table-main">   
+<!-- ENCABEZADO DE TABLA -->
+<thead class="cart-container-table-head-row">
+<tr class="cart-container-table-head-row-main">
+<th class="cart-container-table-head-row-main-image">IMAGE</th>
+<th class="cart-container-table-head-row-main-productname">PRODUCT NAME</th>
+<th class="cart-container-table-head-row-main-price">PRICE</th>
+<th class="cart-container-table-head-row-main-quantity">QTY</th>
+<th class="cart-container-table-head-row-main-remove">RMV</th>
 </tr>
 </thead>
-<!-- LÍNEA DEBAJO DE LOS SUBTÍTULOS -->
-<tbody class="cart-table-body">
-<tr class="cart-table-divider"><td colspan="5"></td></tr>
+<!-- CUERPO DE TABLA -->
+<tbody class="cart-container-table-body">
+<!-- LÍNEA DIVISORIA SUPERIOR -->
+<tr class="cart-container-table-body-divider"><td colspan="5" class="cart-container-table-body-divider-cell"></td></tr>
 <!-- PRODUCTOS (se agregarán dinámicamente con JS) -->
-<tr id="cart-no-items" class="cart-no-items-row">
-<td colspan="5" class="cart-no-items-text">No products added yet</td>
+<tr id="cart-container-table-body-noitems" class="cart-container-table-body-noitems">
+<td colspan="5" class="cart-container-table-body-noitems-text">No products added yet</td>
 </tr>
-<!-- LÍNEA SEPARADORA -->
-<tr class="cart-table-divider"><td colspan="5"></td></tr>
+<!-- LÍNEA DIVISORIA MEDIA -->
+<tr class="cart-container-table-body-divider"><td colspan="5" class="cart-container-table-body-divider-cell"></td></tr>
 <!-- FILA SHIPPING -->
-<tr class="cart-table-shipping-row">
-<td class="cart-table-image-cell"></td>
-<td class="cart-table-productname-cell cart-text-right">Shipping</td>
-<td class="cart-table-price-cell">
-<span class="cart-price-text">
-<span class="cart-currency">$</span>
-<span id="cart-shipping-price">0.00</span>
-</span>
+<tr class="cart-container-table-body-shipping">
+<td class="cart-container-table-body-shipping-cell"></td>
+<td class="cart-container-table-body-shipping-cell">
+<div class="cart-container-table-body-shipping-text-container">
+<span class="cart-container-table-body-shipping-text">Shipping</span>
+</div>
 </td>
-<td class="cart-table-quantity-cell"></td>
-<td class="cart-table-remove-cell"></td>
+<td class="cart-container-table-body-shipping-cell">
+<div class="cart-container-table-body-shipping-price-container">
+<span class="cart-container-table-body-shipping-price-currency">$</span>
+<span class="cart-container-table-body-shipping-price-amount" id="cart-shipping-price">0.00</span>
+</div>
+</td>
+<td class="cart-container-table-body-shipping-cell"></td>
+<td class="cart-container-table-body-shipping-cell"></td>
 </tr>
 <!-- FILA TOTAL -->
-<tr class="cart-table-total-row">
-<td class="cart-table-image-cell"></td>
-<td class="cart-table-productname-cell cart-text-right">Total</td>
-<td class="cart-table-price-cell">
-<span class="cart-price-text">
-<span class="cart-currency">$</span>
-<span id="cart-total-price">0.00</span>
-</span>
+<tr class="cart-container-table-body-total">
+<td class="cart-container-table-body-total-cell"></td>
+<td class="cart-container-table-body-total-cell">
+<div class="cart-container-table-body-total-text-container">
+<span class="cart-container-table-body-total-text">Total</span>
+</div>
 </td>
-<td class="cart-table-quantity-cell">
-<span class="cart-quantity-text" id="cart-total-quantity">0</span>
+<td class="cart-container-table-body-total-cell">
+<div class="cart-container-table-body-total-price-container">
+<span class="cart-container-table-body-total-price-currency">$</span>
+<span class="cart-container-table-body-total-price-amount" id="cart-total-price">0.00</span>
+</div>
 </td>
-<td class="cart-table-remove-cell"></td>
+<td class="cart-container-table-body-total-cell">
+<div class="cart-container-table-body-total-quantity-container">
+<span class="cart-container-table-body-total-quantity" id="cart-total-quantity">0</span>
+</div>
+</td>
+<td class="cart-container-table-body-total-cell"></td>
 </tr>
 </tbody>
 </table>
 </div>
-<!-- CONTENEDOR DE BOTONES -->
+<!-- CONTENEDOR DE BOTONES (mantenidos tal cual) -->
 <div class="cart-buttons-container">
 <button class="cart-button-back" onclick="history.back()">BACK</button>
 <a href="#store" class="cart-button-continueshopping">CONTINUE SHOPPING</a>
