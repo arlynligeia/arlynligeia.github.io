@@ -5966,8 +5966,8 @@ width: 100%;
 /* TABLA */
 .cart-table {
 width: 100%;
-table-layout: fixed;
-border-collapse: separate;
+table-layout: fixed; /* ← Esto fuerza el ancho de columnas */
+border-collapse: collapse; /* ← Cambiado a collapse para mejor control */
 margin: 0;  
 }
 .cart-table td + td,
@@ -6115,6 +6115,7 @@ color: white;
 .text-center {
 text-align: center;
 }
+
 /* BOTONES DEBAJO DE LA TABLA */
 .cart-buttons-container {
 display: flex;
@@ -6159,6 +6160,215 @@ background-color: #00CED1 !important;
 
 
 
+
+
+
+/* ======================================
+   CARRO LLENO DE PRUEBA
+====================================== */
+/* CONTENEDOR PRINCIPAL */
+.cartfull-container {
+  position: relative;
+  width: 800px;
+  background-color: #9900CC; /* purpura neon */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding: 30px;
+}
+.cartfull-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #8000A8; /* purpura intenso */
+  border-radius: 20px 20px 0 0;
+}
+/* TÍTULO */
+.cartfull-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  text-decoration: none;
+  margin: 0 0 16px 0;
+  line-height: 1.6;
+  text-align: left;
+}
+.cartfull-title a {
+color: white;
+text-decoration: none;
+}
+/* CONTENEDOR DE TABLA */
+.cartfull-table-container {
+width: 100%;
+}
+/* TABLA */
+.cartfull-table {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+margin: 0;
+}
+.cartfull-table td + td,
+.cartfull-table th + th {
+border-left: 10px solid transparent;
+}
+/* ANCHO DE COLUMNAS */
+.cartfull-table-image {
+width: 10%;
+}
+.cartfull-table-productname {
+width: 54%;
+}
+.cartfull-table-price {
+width: 18%;
+}
+.cartfull-table-quantity {
+width: 10%;
+}
+.cartfull-table-remove {
+width: 8%;
+}
+/* ALINEACIÓN - CORREGIDO */
+.cartfull-table td { /* ← CORREGIDO */
+vertical-align: middle;
+padding-top: 0px;
+padding-bottom: 10px;
+}
+/* SUBTÍTULOS - CORREGIDO */
+.cartfull-table th { /* ← CORREGIDO */
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14;
+line-height: 1.5;
+text-align: center;
+padding: 0;
+text-transform: uppercase;
+}
+/* LÍNEA DIVISORIA */
+.cartfull-table-divider-1 td {
+border-top: 3px solid #ff1493;
+padding-top: 0px;
+padding-bottom: 5px;
+height: 0; 
+}
+/* IMAGEN */
+.cartfull-table-image-cell {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cartfull-table-image-cell img {
+width: 100%;
+border-radius: 6px;
+}
+/* Recuadros blancos*/
+.cartfull-table-productname-cell,
+.cartfull-table-price-cell,
+.cartfull-table-quantity-cell {
+display: block;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
+margin: 0 auto;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+box-sizing: border-box;
+line-height: 20px;
+}
+.cartfull-table-productname-cell {
+text-align: justify;
+}
+.cartfull-table-price-cell  cartfull-price-text-1 {
+text-align: left;
+}
+.cartfull-table-price-cell  cartfull-price-text-2 {
+text-align: right;
+}
+.cartfull-table-quantity-cell {
+text-align: center;
+}
+/* CONTENEDOR DE BOTON REMOVER */
+.cartfull-table-remove-cell {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cartfull-button-remove {
+display: block;
+width: 100%;  
+background-color: #39ff14;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+text-align: center;
+margin: 0 auto;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+box-sizing: border-box;
+border: none !important;
+cursor: pointer; 
+transition: transform 0.3s ease;
+}
+.cartfull-button-remove:hover {
+transform: scale(1.05);
+}
+/* LÍNEA DIVISORIA */
+.cartfull-table-divider-2 td {
+border-top: 3px solid #ff1493;
+padding-top: 0px;
+padding-bottom: 5px;
+height: 0; 
+}
+/* Recuadros blancos - CORREGIDO (faltaban puntos) */
+.cartfull-table-productname-2-cell, /* ← CORREGIDO */
+.cartfull-table-price-2-cell, /* ← CORREGIDO */
+.cartfull-table-quantity-2-cell { /* ← CORREGIDO */
+display: block;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
+text-align: right;
+margin: 0 auto;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 10px;
+padding-right: 10px;
+box-sizing: border-box;
+line-height: 20px;
+}
+.cartfull-table-productname-2-cell {
+text-align: right;
+}
+.cartfull-table-price-2-cell  cartfull-price-text-1 {
+text-align: left;
+}
+.cartfull-table-price-2-cell  cartfull-price-text-2 {
+text-align: right;
+}
+.cartfull-table-quantity-2-cell {
+text-align: center;
+}
 
 
 
