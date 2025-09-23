@@ -2416,71 +2416,162 @@ ADD TO CART
 
 
 
-<!-- ESTRUCTURA DE CARRITO DE PRUEBA SOLAMENTE TABLA -->  
-<section id="cartfull" class="cartfull-section main-section">
-<div class="cartfull-container">
-<h2 class="cartfull-title">YOUR CART</h2>
-<!-- CONTENEDOR DE LA TABLA -->  
-<div class="cartfull-table-container">
-<table class="cartfull-table">        
-<thead>    
-<tr>
-<th class="cartfull-table-image">IMAGE</th>
-<th class="cartfull-table-productname">PRODUCT NAME</th>
-<th class="cartfull-table-price">PRICE</th>
-<th class="cartfull-table-quantity">QTY</th>
-<th class="cartfull-table-remove">RMV</th>
+<!-- TABLA EJEMPLO -->
+<section id="table-example" class="table-section main-section">
+<div class="table-container">
+<h2 class="table-title">YOUR CART</h2>
+<!-- CONTENEDOR PRINCIPAL DE TABLA -->
+<div class="table-main-container">
+<!-- CONTENEDOR DE TABLA -->
+<div class="table-table-container">
+<table class="table-table">   
+<!-- ENCABEZADO DE TABLA -->
+<thead class="table-head-container">
+<tr class="table-head-row">
+<th class="table-head-image">IMAGE</th>
+<th class="table-head-productname">PRODUCT NAME</th>
+<th class="table-head-price">PRICE</th>
+<th class="table-head-quantity">QTY</th>
+<th class="table-head-remove">RMV</th>
 </tr>
 </thead>
-<!-- LÍNEA DEBAJO DE LOS SUBTÍTULOS -->
-<tbody class="cartfull-table-body">
-<tr class="cartfull-table-divider-1"><td colspan="5"></td></tr>
+<!-- CUERPO DE TABLA -->
+<tbody class="table-body-container">
+<!-- LÍNEA DIVISORIA SUPERIOR -->
+<tr class="table-divider-row"><td colspan="5" class="table-divider-cell"></td></tr>
 <!-- FILA PRODUCTO 1 -->
-<tr>
-<td class="cartfull-table-image-cell">
-<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor" class="cartfull-product-image">
+<tr class="table-product-row">
+<!-- CONTENEDOR DE IMAGEN -->
+<td class="table-image-cell">
+<div class="table-image-container">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor" class="table-product-image">
+</div>
 </td>
-<td class="cartfull-table-productname-cell">
-<span class="cartfull-productname-text">Planet Sponsor</span>
+<!-- CONTENEDOR DE NOMBRE DE PRODUCTO -->
+<td class="table-productname-cell">
+<div class="table-productname-container">
+<span class="table-productname-text">Planet Sponsor</span>
+</div>
 </td>
-<td class="cartfull-table-price-cell">
-<span class="cartfull-price-text-1">$</span>
-<span class="cartfull-price-text-2">100.00</span>  
+<!-- CONTENEDOR DE PRECIO -->
+<td class="table-price-cell">
+<div class="table-price-container">
+<span class="table-price-currency">$</span>
+<span class="table-price-amount">100.00</span>
+</div>
 </td>
-<td class="cartfull-table-quantity-cell">
-<span class="cartfull-quantity-text">1</span>
+<!-- CONTENEDOR DE CANTIDAD -->
+<td class="table-quantity-cell">
+<div class="table-quantity-container">
+<span class="table-quantity-text">1</span>
+</div>
 </td>
-<td class="cartfull-table-remove-cell">
-<button class="cartfull-button-remove">X</button>
+<!-- CONTENEDOR DE BOTÓN REMOVER -->
+<td class="table-remove-cell">
+<div class="table-remove-container">
+<button class="table-remove-button">X</button>
+</div>
 </td>
 </tr>
-<!-- LÍNEA SEPARADORA -->
-<tr class="cartfull-table-divider-2"><td colspan="5"></td></tr>
+<!-- FILA PRODUCTO 2 -->
+<tr class="table-product-row">
+<td class="table-image-cell">
+<div class="table-image-container">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Necklace 1" class="table-product-image">
+</div>
+</td>
+<td class="table-productname-cell">
+<div class="table-productname-container">
+<span class="table-productname-text">Necklace 1</span>
+</div>
+</td>
+<td class="table-price-cell">
+<div class="table-price-container">
+<span class="table-price-currency">$</span>
+<span class="table-price-amount">50.00</span>
+</div>
+</td>
+<td class="table-quantity-cell">
+<div class="table-quantity-container">
+<span class="table-quantity-text">2</span>
+</div>
+</td>
+<td class="table-remove-cell">
+<div class="table-remove-container">
+<button class="table-remove-button">X</button>
+</div>
+</td>
+</tr>
+<!-- FILA PRODUCTO 3 -->
+<tr class="table-product-row">
+<td class="table-image-cell">
+<div class="table-image-container">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Black Hole Executive Product" class="table-product-image">
+</div>
+</td>
+<td class="table-productname-cell">
+<div class="table-productname-container">
+<span class="table-productname-text">Black Hole Executive Product</span>
+</div>
+</td>
+<td class="table-price-cell">
+<div class="table-price-container">
+<span class="table-price-currency">$</span>
+<span class="table-price-amount">1,000,000.00</span>
+</div>
+</td>
+<td class="table-quantity-cell">
+<div class="table-quantity-container">
+<span class="table-quantity-text">1</span>
+</div>
+</td>
+<td class="table-remove-cell">
+<div class="table-remove-container">
+<button class="table-remove-button">X</button>
+</div>
+</td>
+</tr>
+<!-- LÍNEA DIVISORIA MEDIA -->
+<tr class="table-divider-row"><td colspan="5" class="table-divider-cell"></td></tr>
 <!-- FILA SHIPPING -->
-<tr>
-<td class="cartfull-table-image-cell"></td>
-<td class="cartfull-table-productname-2-cell">
-<span class="cartfull-shipping-text">SHIPPING</span>
-</td> 
-<td class="cartfull-table-price-2-cell">
-<span class="cartfull-price-2-text-1">$</span>
-<span class="cartfull-price-2-text-2">10.00</span>  
+<tr class="table-shipping-row">
+<td class="table-image-cell"></td>
+<td class="table-productname-cell">
+<div class="table-shipping-container">
+<span class="table-shipping-text">Shipping</span>
+</div>
 </td>
+<td class="table-price-cell">
+<div class="table-shippingprice-container">
+<span class="table-shippingprice-text">$ 10.00</span>
+</div>
+</td>
+<td class="table-quantity-cell"></td>
+<td class="table-remove-cell"></td>
+</tr>
 <!-- FILA TOTAL -->
-<tr>
-<td class="cartfull-table-image-cell"></td>
-<td class="cartfull-table-productname-2-cell">
-<span class="cartfull-total-text">TOTAL</span>
-</td> 
-<td class="cartfull-table-price-2-cell">
-<span class="cartfull-price-2-text-1">$</span>
-<span class="cartfull-price-2-text-2">110.00</span>  
+<tr class="table-total-row">
+<td class="table-image-cell"></td>
+<td class="table-productname-cell">
+<div class="table-totaltext-container">
+<span class="table-totaltext-text">Total</span>
+</div>
 </td>
-<td class="cartfull-table-quantity-2-cell">
-<span class="cartfull-quantity-2-text">1</span>
-</td>  
+<td class="table-price-cell">
+<div class="table-totalprice-container">
+<span class="table-totalprice-text">$ 1,000,160.00</span>
+</div>
+</td>
+<td class="table-quantity-cell">
+<div class="table-totalquantity-container">
+<span class="table-totalquantity-text">4</span>
+</div>
+</td>
+<td class="table-remove-cell"></td>
+</tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 </section>
