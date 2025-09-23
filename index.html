@@ -2332,11 +2332,90 @@ ADD TO CART
 </div>
 </section>
 <!-- END COSMOS EXECUTIVE PRODUCER -->
-  
+
+<!-- CART -->
+<section id="cart" class="cart-section main-section">
+<div class="cart-container">
+<h2 class="cart-title">YOUR CART</h2>
+<!-- CARRITO VACIO -->
+<div class="cart-empty-container" id="cart-empty-container" style="display: none;">
+<p class="cart-empty-text">Your cart is empty</p>
+<div class="cart-empty-buttons-container">
+<button class="cart-empty-button-continueshopping" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+</div>
+</div>
+<!-- CARRITO LLENO -->
+<div class="cart-full-container" id="cart-full-container">
+<!-- CONTENEDOR DE LA TABLA -->  
+<div class="cart-table-container">
+<table class="cart-table">        
+<thead>    
+<tr>
+<th class="cart-table-image">IMAGE</th>
+<th class="cart-table-productname">PRODUCT NAME</th>
+<th class="cart-table-price">PRICE</th>
+<th class="cart-table-quantity">QTY</th>
+<th class="cart-table-remove">RMV</th>
+</tr>
+</thead>
+<!-- LÍNEA DEBAJO DE LOS SUBTÍTULOS -->
+<tbody class="cart-table-body">
+<tr class="cart-table-divider"><td colspan="5"></td></tr>
+<!-- PRODUCTOS (se agregarán dinámicamente con JS) -->
+<tr id="cart-no-items" class="cart-no-items-row">
+<td colspan="5" class="cart-no-items-text">No products added yet</td>
+</tr>
+<!-- LÍNEA SEPARADORA -->
+<tr class="cart-table-divider"><td colspan="5"></td></tr>
+<!-- FILA SHIPPING -->
+<tr class="cart-table-shipping-row">
+<td class="cart-table-image-cell"></td>
+<td class="cart-table-productname-cell cart-text-right">Shipping</td>
+<td class="cart-table-price-cell">
+<span class="cart-price-text">
+<span class="cart-currency">$</span>
+<span id="cart-shipping-price">0.00</span>
+</span>
+</td>
+<td class="cart-table-quantity-cell"></td>
+<td class="cart-table-remove-cell"></td>
+</tr>
+<!-- FILA TOTAL -->
+<tr class="cart-table-total-row">
+<td class="cart-table-image-cell"></td>
+<td class="cart-table-productname-cell cart-text-right">Total</td>
+<td class="cart-table-price-cell">
+<span class="cart-price-text">
+<span class="cart-currency">$</span>
+<span id="cart-total-price">0.00</span>
+</span>
+</td>
+<td class="cart-table-quantity-cell">
+<span class="cart-quantity-text" id="cart-total-quantity">0</span>
+</td>
+<td class="cart-table-remove-cell"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- CONTENEDOR DE BOTONES -->
+<div class="cart-buttons-container">
+<button class="cart-button-back" onclick="history.back()">BACK</button>
+<a href="#store" class="cart-button-continueshopping">CONTINUE SHOPPING</a>
+<a href="#cart-shippinginformation" class="cart-button-buy" id="cart-button-buy">BUY</a>  
+<button class="cart-button-clear" id="cart-button-clear">CLEAR CART</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FIN CART -->
 
 
 
-  
+
+
+
+
 
   
 
