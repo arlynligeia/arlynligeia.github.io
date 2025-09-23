@@ -6164,10 +6164,10 @@ background-color: #00CED1 !important;
 
 
 /* ======================================
-   TABLA EJEMPLO - ESTRUCTURA CONSISTENTE
+   CARRO LLENO - ESTRUCTURA CONSISTENTE
 ====================================== */
-/* CONTENEDOR PRINCIPAL */
-.table-container {
+/* CONTENEDOR PRINCIPAL - FRANJA - TÍTULO */
+.cartfull-container {
   position: relative;
   width: 800px;
   background-color: #9900CC; /* purpura neon */
@@ -6175,7 +6175,7 @@ background-color: #00CED1 !important;
   margin: 40px auto;
   padding: 30px;
 }
-.table-container::before {
+.cartfull-container::before {
   content: "";
   position: absolute;
   z-index: 1;
@@ -6186,8 +6186,7 @@ background-color: #00CED1 !important;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
 }
-/* TÍTULO */
-.table-title {
+.cartfull-container-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -6199,24 +6198,16 @@ background-color: #00CED1 !important;
   line-height: 1.6;
   text-align: left;
 }
-.table-title a {
+.cartfull-container-title a {
   color: white;
   text-decoration: none;
 }
 
-/* ======================================
-   ESTRUCTURA DE TABLA CONSISTENTE
-====================================== */
-/* CONTENEDOR PRINCIPAL DE TABLA */
-.table-main-container {
+/* CONTENEDOR DE LA TABLA */
+.cartfull-container-table {
   width: 100%;
 }
-/* CONTENEDOR DE TABLA */
-.table-table-container {
-  width: 100%;
-}
-/* TABLA PRINCIPAL */
-.table-table {
+.cartfull-container-table-main {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
@@ -6224,56 +6215,46 @@ background-color: #00CED1 !important;
 }
 
 /* GAP ENTRE COLUMNAS - 5px EXACTO */
-.table-table td + td,
-.table-table th + th {
-  padding-left: 5px; /* ← Gap de 5px exacto */
+.cartfull-container-table-main td + td,
+.cartfull-container-table-main th + th {
+  padding-left: 5px;
 }
-
-.table-table td:first-child,
-.table-table th:first-child {
+.cartfull-container-table-main td:first-child,
+.cartfull-container-table-main th:first-child {
   padding-left: 0;
 }
 
 /* ANCHO DE COLUMNAS EXACTO */
-.table-table th:nth-child(1),
-.table-table td:nth-child(1) { /* IMAGE - 10% */
+.cartfull-container-table-main th:nth-child(1),
+.cartfull-container-table-main td:nth-child(1) { /* IMAGE - 10% */
   width: 10%;
 }
-
-.table-table th:nth-child(2),
-.table-table td:nth-child(2) { /* PRODUCT NAME - 52% */
+.cartfull-container-table-main th:nth-child(2),
+.cartfull-container-table-main td:nth-child(2) { /* PRODUCT NAME - 52% */
   width: 52%;
 }
-
-.table-table th:nth-child(3),
-.table-table td:nth-child(3) { /* PRICE - 22% */
+.cartfull-container-table-main th:nth-child(3),
+.cartfull-container-table-main td:nth-child(3) { /* PRICE - 22% */
   width: 22%;
 }
-
-.table-table th:nth-child(4),
-.table-table td:nth-child(4) { /* QTY - 8% */
+.cartfull-container-table-main th:nth-child(4),
+.cartfull-container-table-main td:nth-child(4) { /* QTY - 8% */
   width: 8%;
 }
-
-.table-table th:nth-child(5),
-.table-table td:nth-child(5) { /* RMV - 8% */
+.cartfull-container-table-main th:nth-child(5),
+.cartfull-container-table-main td:nth-child(5) { /* RMV - 8% */
   width: 8%;
 }
 
 /* ENCABEZADOS DE TABLA */
-.table-head-container {
+.cartfull-container-table-head-row-main {
   width: 100%;
 }
-
-.table-head-row {
-  width: 100%;
-}
-
-.table-head-image,
-.table-head-productname,
-.table-head-price,
-.table-head-quantity,
-.table-head-remove {
+.cartfull-container-table-head-row-main-image,
+.cartfull-container-table-head-row-main-productname,
+.cartfull-container-table-head-row-main-price,
+.cartfull-container-table-head-row-main-quantity,
+.cartfull-container-table-head-row-main-remove {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #39ff14;
@@ -6283,18 +6264,17 @@ background-color: #00CED1 !important;
 }
 
 /* LÍNEA DIVISORIA */
-.table-divider-row {
+.cartfull-container-table-body-divider {
   width: 100%;
 }
-
-.table-divider-cell {
+.cartfull-container-table-body-divider-cell {
   border-top: 3px solid #ff1493;
   height: 0;
   padding: 5px 0;
 }
 
 /* CELDAS DE TABLA - ALINEACIÓN GENERAL */
-.table-table td {
+.cartfull-container-table-main td {
   vertical-align: middle;
   padding: 5px 0;
 }
@@ -6303,14 +6283,13 @@ background-color: #00CED1 !important;
    CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
 ====================================== */
 /* CONTENEDOR DE IMAGEN */
-.table-image-container {
+.cartfull-container-table-body-product-image-container {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.table-product-image {
+.cartfull-container-table-body-product-image {
   max-width: 100%;
   max-height: 100%; 
   border-radius: 6px;
@@ -6318,7 +6297,7 @@ background-color: #00CED1 !important;
 }
 
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
-.table-productname-container {
+.cartfull-container-table-body-product-productname-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6331,14 +6310,13 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-
-.table-productname-text {
+.cartfull-container-table-body-product-productname {
   text-align: left;
   width: 100%;
 }
 
 /* CONTENEDOR DE PRECIO - RECUADRO BLANCO */
-.table-price-container {
+.cartfull-container-table-body-product-price-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6352,17 +6330,15 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-
-.table-price-currency {
+.cartfull-container-table-body-product-price-currency {
   text-align: left;
 }
-
-.table-price-amount {
+.cartfull-container-table-body-product-price-amount {
   text-align: right;
 }
 
 /* CONTENEDOR DE CANTIDAD - RECUADRO BLANCO */
-.table-quantity-container {
+.cartfull-container-table-body-product-quantity-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6376,22 +6352,20 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-
-.table-quantity-text {
+.cartfull-container-table-body-product-quantity {
   text-align: center;
   width: 100%;
 }
 
 /* CONTENEDOR DE BOTÓN REMOVER */
-.table-remove-container {
+.cartfull-container-table-body-product-remove-container {
   width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.table-remove-button {
+.cartfull-container-table-body-product-remove-button {
   width: 100%;
   height: 40px;
   background-color: #39ff14;
@@ -6405,17 +6379,15 @@ background-color: #00CED1 !important;
   box-sizing: border-box;
   transition: transform 0.3s ease;
 }
-
-.table-remove-button:hover {
+.cartfull-container-table-body-product-remove-button:hover {
   transform: scale(1.05);
 }
 
 /* ======================================
    FILAS ESPECIALES (SHIPPING Y TOTAL)
 ====================================== */
-
 /* SHIPPING - TEXTO SIN RECUADRO BLANCO */
-.table-shipping-container {
+.cartfull-container-table-body-shipping-text-container {
   width: 100%;
   height: 40px;
   display: flex;
@@ -6427,12 +6399,12 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: white;
 }
-.table-shipping-text {
+.cartfull-container-table-body-shipping-text {
   text-align: right;
 }
 
 /* SHIPPING PRICE - CON RECUADRO BLANCO */
-.table-shippingprice-container {
+.cartfull-container-table-body-shipping-price-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6446,22 +6418,15 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-.table-shippingprice-currency {
+.cartfull-container-table-body-shipping-price-currency {
   text-align: left;
 }
-
-.table-shippingprice-amount {
+.cartfull-container-table-body-shipping-price-amount {
   text-align: right;
 }
 
-.table-shippingprice-text {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 /* TOTAL - TEXTO SIN RECUADRO BLANCO */
-.table-totaltext-container {
+.cartfull-container-table-body-total-text-container {
   width: 100%;
   height: 40px;
   display: flex;
@@ -6473,13 +6438,12 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: white;
 }
-
-.table-totaltext-text {
+.cartfull-container-table-body-total-text {
   text-align: right;
 }
 
 /* TOTAL PRICE - CON RECUADRO BLANCO */
-.table-totalprice-container {
+.cartfull-container-table-body-total-price-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6493,23 +6457,15 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-
-.table-totalprice-currency {
+.cartfull-container-table-body-total-price-currency {
   text-align: left;
 }
-
-.table-totalprice-amount {
+.cartfull-container-table-body-total-price-amount {
   text-align: right;
 }
 
-.table-totalprice-text {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
 /* TOTAL QTY - CON RECUADRO BLANCO */
-.table-totalquantity-container {
+.cartfull-container-table-body-total-quantity-container {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -6523,8 +6479,7 @@ background-color: #00CED1 !important;
   font-size: 1.25rem;
   color: black;
 }
-
-.table-totalquantity-text {
+.cartfull-container-table-body-total-quantity {
   text-align: center;
   width: 100%;
 }
