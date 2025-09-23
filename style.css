@@ -5886,41 +5886,40 @@ font-weight: bold;
 ====================================== */
 /* CONTENEDOR PRINCIPAL - FRANJA - TÍTULO */
 .cart-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC; /* purpura neon */
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .cart-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8; /* purpura intenso */
+border-radius: 20px 20px 0 0;
 }
 .cart-container-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin: 0 0 16px 0;
-  line-height: 1.6;
-  text-align: left;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+text-decoration: none;
+margin: 0 0 16px 0;
+line-height: 1.6;
+text-align: left;
 }
 .cart-container-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
-
 /* CARRITO VACIO */
 .cart-container-empty {
   width: 100%;
@@ -5952,147 +5951,135 @@ font-weight: bold;
 .cart-container-empty-button-continueshopping:hover {
   transform: scale(1.05);
 }
-
 /* CARRITO LLENO */
 .cart-container-full {
-  width: 100%;
+width: 100%;
 }
-
 /* CONTENEDOR DE LA TABLA */
 .cart-container-table {
-  width: 100%;
+width: 100%;
 }
 .cart-container-table-main {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
 }
-
 /* GAP ENTRE COLUMNAS - 5px EXACTO */
 .cart-container-table-main td + td,
 .cart-container-table-main th + th {
-  padding-left: 5px;
+padding-left: 5px;
 }
 .cart-container-table-main td:first-child,
 .cart-container-table-main th:first-child {
-  padding-left: 0;
+padding-left: 0;
 }
-
 /* ANCHO DE COLUMNAS EXACTO */
 .cart-container-table-main th:nth-child(1),
 .cart-container-table-main td:nth-child(1) { /* IMAGE - 10% */
-  width: 10%;
+width: 10%;
 }
 .cart-container-table-main th:nth-child(2),
 .cart-container-table-main td:nth-child(2) { /* PRODUCT NAME - 52% */
-  width: 52%;
+ width: 52%;
 }
 .cart-container-table-main th:nth-child(3),
 .cart-container-table-main td:nth-child(3) { /* PRICE - 22% */
-  width: 22%;
+width: 22%;
 }
 .cart-container-table-main th:nth-child(4),
 .cart-container-table-main td:nth-child(4) { /* QTY - 8% */
-  width: 8%;
+width: 8%;
 }
 .cart-container-table-main th:nth-child(5),
 .cart-container-table-main td:nth-child(5) { /* RMV - 8% */
-  width: 8%;
+width: 8%;
 }
 
 /* ENCABEZADOS DE TABLA */
 .cart-container-table-head-row-main {
-  width: 100%;
+width: 100%;
 }
 .cart-container-table-head-row-main-image,
 .cart-container-table-head-row-main-productname,
 .cart-container-table-head-row-main-price,
 .cart-container-table-head-row-main-quantity,
 .cart-container-table-head-row-main-remove {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39ff14;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 0 10px 0;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14;
+text-align: center;
+text-transform: uppercase;
+padding: 0 0 10px 0;
 }
-
 /* LÍNEA DIVISORIA */
 .cart-container-table-body-divider {
-  width: 100%;
+width: 100%;
 }
 .cart-container-table-body-divider-cell {
-  border-top: 3px solid #ff1493;
-  height: 0;
-  padding: 5px 0;
+border-top: 3px solid #ff1493;
+height: 0;
+padding: 5px 0;
 }
-
 /* NO HAY PRODUCTOS */
 .cart-container-table-body-noitems-text {
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-align: center;
+padding: 20px 0;
 }
 
 /* CELDAS DE TABLA - ALINEACIÓN GENERAL */
 .cart-container-table-main td {
-  vertical-align: middle;
-  padding: 5px 0;
+vertical-align: middle;
+padding: 5px 0;
 }
-
-/* ======================================
-   CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
-====================================== */
 /* CONTENEDOR DE IMAGEN */
 .cart-container-table-body-product-image-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .cart-container-table-body-product-image {
-  max-width: 100%;
-  max-height: 100%; 
-  border-radius: 6px;
-  object-fit: contain;
+max-width: 100%;
+max-height: 100%; 
+border-radius: 6px;
+object-fit: contain;
 }
-
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
 .cart-container-table-body-product-name-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-product-name {
   text-align: left;
   width: 100%;
 }
-
 /* CONTENEDOR DE PRECIO - RECUADRO BLANCO */
 .cart-container-table-body-product-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-product-price-currency {
   text-align: left;
@@ -6100,194 +6087,186 @@ font-weight: bold;
 .cart-container-table-body-product-price-amount {
   text-align: right;
 }
-
 /* CONTENEDOR DE CANTIDAD - RECUADRO BLANCO */
 .cart-container-table-body-product-quantity-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-product-quantity {
-  text-align: center;
-  width: 100%;
+text-align: center;
+width: 100%;
 }
-
 /* CONTENEDOR DE BOTÓN REMOVER */
 .cart-container-table-body-product-remove-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .cart-container-table-body-product-remove-button {
-  width: 100%;
-  height: 40px;
-  background-color: #39ff14;
-  border-radius: 6px;
-  border: none;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
+width: 100%;
+height: 40px;
+background-color: #39ff14;
+border-radius: 6px;
+border: none;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+cursor: pointer;
+padding: 10px;
+box-sizing: border-box;
+transition: transform 0.3s ease;
 }
 .cart-container-table-body-product-remove-button:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 
-/* ======================================
-   FILAS ESPECIALES (SHIPPING Y TOTAL)
-====================================== */
+/* FILAS ESPECIALES (SHIPPING Y TOTAL) */
 /* SHIPPING - TEXTO SIN RECUADRO BLANCO */
 .cart-container-table-body-shipping-text-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 10px 0;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
 }
 .cart-container-table-body-shipping-text {
-  text-align: right;
+text-align: right;
 }
-
 /* SHIPPING PRICE - CON RECUADRO BLANCO */
 .cart-container-table-body-shipping-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-shipping-price-currency {
-  text-align: left;
+text-align: left;
 }
 .cart-container-table-body-shipping-price-amount {
-  text-align: right;
+text-align: right;
 }
-
 /* TOTAL - TEXTO SIN RECUADRO BLANCO */
 .cart-container-table-body-total-text-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 10px 0;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
 }
 .cart-container-table-body-total-text {
-  text-align: right;
+text-align: right;
 }
-
 /* TOTAL PRICE - CON RECUADRO BLANCO */
 .cart-container-table-body-total-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-total-price-currency {
-  text-align: left;
+text-align: left;
 }
 .cart-container-table-body-total-price-amount {
-  text-align: right;
+text-align: right;
 }
-
 /* TOTAL QTY - CON RECUADRO BLANCO */
 .cart-container-table-body-total-quantity-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
 }
 .cart-container-table-body-total-quantity {
-  text-align: center;
-  width: 100%;
+text-align: center;
+width: 100%;
 }
 /* ======================================
    BOTONES FINALES (MANTENIDOS TAL CUAL)
 ====================================== */
 .cart-buttons-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0px;
-  margin-bottom: 0px;
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 .cart-button-back,
 .cart-button-continueshopping,
 .cart-button-buy,
 .cart-button-clear {
-  border-radius: 6px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  text-decoration: none;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
 }
 .cart-button-back:hover,
 .cart-button-continueshopping:hover,
 .cart-button-buy:hover,
 .cart-button-clear:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
 .cart-button-back,
 .cart-button-continueshopping {
-  background-color: #00CED1 !important;
+background-color: #00CED1 !important;
 }
 .cart-button-buy {
-  background-color: #ff1493 !important;
+background-color: #ff1493 !important;
 }
 .cart-button-clear {
-  background-color: #8B0000 !important;
+background-color: #8B0000 !important;
 }
 
 
@@ -6295,538 +6274,6 @@ font-weight: bold;
 
 
 
-
-/* ======================================
-   CARRO LLENO - ESTRUCTURA CONSISTENTE
-====================================== */
-/* CONTENEDOR PRINCIPAL - FRANJA - TÍTULO */
-.cartfull-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding: 30px;
-}
-.cartfull-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-}
-.cartfull-container-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin: 0 0 16px 0;
-  line-height: 1.6;
-  text-align: left;
-}
-.cartfull-container-title a {
-  color: white;
-  text-decoration: none;
-}
-
-/* CONTENEDOR DE LA TABLA */
-.cartfull-container-table {
-  width: 100%;
-}
-.cartfull-container-table-main {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-/* GAP ENTRE COLUMNAS - 5px EXACTO */
-.cartfull-container-table-main td + td,
-.cartfull-container-table-main th + th {
-  padding-left: 5px;
-}
-.cartfull-container-table-main td:first-child,
-.cartfull-container-table-main th:first-child {
-  padding-left: 0;
-}
-
-/* ANCHO DE COLUMNAS EXACTO */
-.cartfull-container-table-main th:nth-child(1),
-.cartfull-container-table-main td:nth-child(1) { /* IMAGE - 10% */
-  width: 10%;
-}
-.cartfull-container-table-main th:nth-child(2),
-.cartfull-container-table-main td:nth-child(2) { /* PRODUCT NAME - 52% */
-  width: 52%;
-}
-.cartfull-container-table-main th:nth-child(3),
-.cartfull-container-table-main td:nth-child(3) { /* PRICE - 22% */
-  width: 22%;
-}
-.cartfull-container-table-main th:nth-child(4),
-.cartfull-container-table-main td:nth-child(4) { /* QTY - 8% */
-  width: 8%;
-}
-.cartfull-container-table-main th:nth-child(5),
-.cartfull-container-table-main td:nth-child(5) { /* RMV - 8% */
-  width: 8%;
-}
-
-/* ENCABEZADOS DE TABLA */
-.cartfull-container-table-head-row-main {
-  width: 100%;
-}
-.cartfull-container-table-head-row-main-image,
-.cartfull-container-table-head-row-main-productname,
-.cartfull-container-table-head-row-main-price,
-.cartfull-container-table-head-row-main-quantity,
-.cartfull-container-table-head-row-main-remove {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39ff14;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 0 10px 0;
-}
-
-/* LÍNEA DIVISORIA */
-.cartfull-container-table-body-divider {
-  width: 100%;
-}
-.cartfull-container-table-body-divider-cell {
-  border-top: 3px solid #ff1493;
-  height: 0;
-  padding: 5px 0;
-}
-
-/* CELDAS DE TABLA - ALINEACIÓN GENERAL */
-.cartfull-container-table-main td {
-  vertical-align: middle;
-  padding: 5px 0;
-}
-
-/* ======================================
-   CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
-====================================== */
-/* CONTENEDOR DE IMAGEN */
-.cartfull-container-table-body-product-image-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cartfull-container-table-body-product-image {
-  max-width: 100%;
-  max-height: 100%; 
-  border-radius: 6px;
-  object-fit: contain;
-}
-
-/* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
-.cartfull-container-table-body-product-name-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-product-name {
-  text-align: left;
-  width: 100%;
-}
-
-/* CONTENEDOR DE PRECIO - RECUADRO BLANCO */
-.cartfull-container-table-body-product-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-product-price-currency {
-  text-align: left;
-}
-.cartfull-container-table-body-product-price-amount {
-  text-align: right;
-}
-
-/* CONTENEDOR DE CANTIDAD - RECUADRO BLANCO */
-.cartfull-container-table-body-product-quantity-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-product-quantity {
-  text-align: center;
-  width: 100%;
-}
-/* CONTENEDOR DE BOTÓN REMOVER */
-.cartfull-container-table-body-product-remove-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.cartfull-container-table-body-product-remove-button {
-  width: 100%;
-  height: 40px;
-  background-color: #39ff14;
-  border-radius: 6px;
-  border: none;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-}
-.cartfull-container-table-body-product-remove-button:hover {
-  transform: scale(1.05);
-}
-
-/* ======================================
-   FILAS ESPECIALES (SHIPPING Y TOTAL)
-====================================== */
-/* SHIPPING - TEXTO SIN RECUADRO BLANCO */
-.cartfull-container-table-body-shipping-text-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-}
-.cartfull-container-table-body-shipping-text {
-  text-align: right;
-}
-
-/* SHIPPING PRICE - CON RECUADRO BLANCO */
-.cartfull-container-table-body-shipping-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-shipping-price-currency {
-  text-align: left;
-}
-.cartfull-container-table-body-shipping-price-amount {
-  text-align: right;
-}
-
-/* TOTAL - TEXTO SIN RECUADRO BLANCO */
-.cartfull-container-table-body-total-text-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-}
-.cartfull-container-table-body-total-text {
-  text-align: right;
-}
-
-/* TOTAL PRICE - CON RECUADRO BLANCO */
-.cartfull-container-table-body-total-price-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-total-price-currency {
-  text-align: left;
-}
-.cartfull-container-table-body-total-price-amount {
-  text-align: right;
-}
-
-/* TOTAL QTY - CON RECUADRO BLANCO */
-.cartfull-container-table-body-total-quantity-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-total-quantity {
-  text-align: center;
-  width: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================
-   TABLA 2 HORARIOS - ESTRUCTURA CONSISTENTE
-====================================== */
-/* CONTENEDOR PRINCIPAL */
-.table2-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding: 30px;
-}
-.table2-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
-}
-/* TÍTULO */
-.table2-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin: 0 0 16px 0;
-  line-height: 1.6;
-  text-align: left;
-}
-.table2-title a {
-  color: white;
-  text-decoration: none;
-}
-
-/* ======================================
-   ESTRUCTURA DE TABLA 2 CONSISTENTE
-====================================== */
-/* CONTENEDOR PRINCIPAL DE TABLA */
-.table2-main-container {
-  width: 100%;
-}
-/* CONTENEDOR DE TABLA */
-.table2-table-container {
-  width: 100%;
-}
-/* TABLA PRINCIPAL */
-.table2-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-/* GAP ENTRE COLUMNAS - 5px EXACTO */
-.table2-table td + td,
-.table2-table th + th {
-  padding-left: 5px; /* ← Gap de 5px exacto */
-}
-
-.table2-table td:first-child,
-.table2-table th:first-child {
-  padding-left: 0;
-}
-
-/* ANCHO DE COLUMNAS EXACTO - TABLA 2 HORARIOS */
-.table2-table th:nth-child(1),
-.table2-table td:nth-child(1) { /* ACCOUNT - 15% */
-  width: 15%;
-}
-
-.table2-table th:nth-child(2),
-.table2-table td:nth-child(2) { /* DAYS - 60% */
-  width: 60%;
-}
-
-.table2-table th:nth-child(3),
-.table2-table td:nth-child(3) { /* TIME - 25% */
-  width: 25%;
-}
-
-/* ENCABEZADOS DE TABLA */
-.table2-head-container {
-  width: 100%;
-}
-
-.table2-head-row {
-  width: 100%;
-}
-
-.table2-head-account,
-.table2-head-days,
-.table2-head-time {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39ff14;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 0 10px 0;
-}
-
-/* LÍNEA DIVISORIA */
-.table2-divider-row {
-  width: 100%;
-}
-
-.table2-divider-cell {
-  border-top: 3px solid #ff1493;
-  height: 0;
-  padding: 5px 0;
-}
-
-/* CELDAS DE TABLA - ALINEACIÓN GENERAL */
-.table2-table td {
-  vertical-align: middle;
-  padding: 5px 0;
-}
-
-/* ======================================
-   CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
-====================================== */
-/* CONTENEDOR DE ACCOUNT - BOTÓN */
-.table2-account-container {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.table2-account-button {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  border: none;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-  cursor: pointer;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
-}
-
-.table2-account-button:hover {
-  transform: scale(1.05);
-}
-
-/* CONTENEDOR DE DAYS - RECUADRO BLANCO */
-.table2-days-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-
-.table2-days-text {
-  text-align: left;
-  width: 100%;
-}
-
-/* CONTENEDOR DE TIME - RECUADRO BLANCO */
-.table2-time-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-
-.table2-time-text {
-  text-align: left;
-  width: 100%;
-}
 
 
 
