@@ -2340,91 +2340,103 @@ ADD TO CART
 <!-- CART -->
 <section id="cart" class="cart-section main-section">
 <div class="cart-container">
-<h2 class="cart-container-title">YOUR CART</h2>
+<h2 class="cart-title">YOUR CART</h2>
 <!-- CARRITO VACIO -->
-<div class="cart-container-empty" id="cart-container-empty" style="display: none;">
-<p class="cart-container-empty-text">Your cart is empty</p>
-<div class="cart-container-empty-buttons">
-<button class="cart-container-empty-button-continueshopping" onclick="location.href='#store'">CONTINUE SHOPPING</button>
+<div class="cart-empty" id="cart-empty" style="display: none;">
+<div class="cart-empty-container">  
+<p class="cart-empty-container-text">Your cart is empty</p>
+</div>  
+<div class="cart-empty-button">
+<a href="#store" class="cart-empty-button-continueshopping">CONTINUE SHOPPING</a>
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-container-full" id="cart-container-full">
-<!-- CONTENEDOR DE LA TABLA -->
-<div class="cart-container-table">
-<table class="cart-container-table-main">   
-<!-- ENCABEZADO DE TABLA -->
-<thead class="cart-container-table-head-row">
-<tr class="cart-container-table-head-row-main">
-<th class="cart-container-table-head-row-main-image">IMAGE</th>
-<th class="cart-container-table-head-row-main-productname">PRODUCT NAME</th>
-<th class="cart-container-table-head-row-main-price">PRICE</th>
-<th class="cart-container-table-head-row-main-quantity">QTY</th>
-<th class="cart-container-table-head-row-main-remove">RMV</th>
+<div class="cart-full" id="cart-full">
+<!-- TABLA -->
+<div class="cart-full-table">
+<table class="cart-full-table-main">   
+<!-- ENCABEZADO -->
+<thead class="cart-full-table-head">
+<tr class="cart-full-table-head-row">
+<th class="cart-full-table-head-image">IMAGE</th>
+<th class="cart-full-table-head-productname">PRODUCT NAME</th>
+<th class="cart-full-table-head-price">PRICE</th>
+<th class="cart-full-table-head-quantity">QTY</th>
+<th class="cart-full-table-head-remove">RMV</th>
 </tr>
 </thead>
-<!-- CUERPO DE TABLA -->
-<tbody class="cart-container-table-body">
+<!-- CUERPO -->
+<tbody class="cart-full-table-body">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="cart-container-table-body-divider"><td colspan="5" class="cart-container-table-body-divider-cell"></td></tr>
-<!-- PRODUCTOS (se agregarán dinámicamente con JS) -->
-<tr id="cart-container-table-body-noitems" class="cart-container-table-body-noitems">
-<td colspan="5" class="cart-container-table-body-noitems-text">No products added yet</td>
+<tr class="cart-full-table-body-divider"><td colspan="5" class="cart-full-table-body-divider-cell"></td></tr>
+<!-- PRODUCTOS (SE AGREGARAN CON JS) -->
+<tr id="cart-full-table-body-noitems" class="cart-full-table-body-noitems">
+<td colspan="5" class="cart-full-table-body-noitems-text">No products added yet</td>
 </tr>
 <!-- LÍNEA DIVISORIA MEDIA -->
-<tr class="cart-container-table-body-divider"><td colspan="5" class="cart-container-table-body-divider-cell"></td></tr>
+<tr class="cart-full-table-body-divider"><td colspan="5" class="cart-full-table-body-divider-cell"></td></tr> 
 <!-- FILA SHIPPING -->
-<tr class="cart-container-table-body-shipping">
-<td class="cart-container-table-body-shipping-cell"></td>
-<td class="cart-container-table-body-shipping-cell">
-<div class="cart-container-table-body-shipping-text-container">
-<span class="cart-container-table-body-shipping-text">Shipping</span>
+<tr class="cart-full-table-body-shipping">
+<td class="cart-full-table-body-shipping-image-cell"></td> 
+<td class="cart-full-table-body-shipping-productname-cell">
+<div class="cart-full-table-body-shipping-productname-cell-container">
+<span class="cart-full-table-body-shipping-productname-cell-container-text">Shipping</span>
 </div>
 </td>
-<td class="cart-container-table-body-shipping-cell">
-<div class="cart-container-table-body-shipping-price-container">
-<span class="cart-container-table-body-shipping-price-currency">$</span>
-<span class="cart-container-table-body-shipping-price-amount" id="cart-shipping-price">0.00</span>
+<td class="cart-full-table-body-shipping-price-cell">
+<div class="cart-full-table-body-shipping-price-cell-container">
+<span class="cart-full-table-body-shipping-price-cell-container-currency">$</span>
+<span class="cart-full-table-body-shipping-price-cell-container-amount" id="cart-full-shipping-price">0.00</span>
 </div>
 </td>
-<td class="cart-container-table-body-shipping-cell"></td>
-<td class="cart-container-table-body-shipping-cell"></td>
+<td class="cart-full-table-body-shipping-quantity-cell"></td>
+<td class="cart-full-table-body-shipping-remove-cell"></td>
 </tr>
 <!-- FILA TOTAL -->
-<tr class="cart-container-table-body-total">
-<td class="cart-container-table-body-total-cell"></td>
-<td class="cart-container-table-body-total-cell">
-<div class="cart-container-table-body-total-text-container">
-<span class="cart-container-table-body-total-text">Total</span>
+<tr class="cart-full-table-body-total">
+<td class="cart-full-table-body-total-image-cell"></td>
+<td class="cart-full-table-body-total-productname-cell">
+<div class="cart-full-table-body-total-productname-cell-container">
+<span class="cart-full-table-body-total-productname-cell-container-text">Total</span>
 </div>
 </td>
-<td class="cart-container-table-body-total-cell">
-<div class="cart-container-table-body-total-price-container">
-<span class="cart-container-table-body-total-price-currency">$</span>
-<span class="cart-container-table-body-total-price-amount" id="cart-total-price">0.00</span>
+<td class="cart-full-table-body-total-price-cell">
+<div class="cart-full-table-body-total-price-cell-container">
+<span class="cart-full-table-body-total-price-cell-container-currency">$</span>
+<span class="cart-full-table-body-total-price-cell-container-amount" id="cart-full-total-price">0.00</span>
 </div>
 </td>
-<td class="cart-container-table-body-total-cell">
-<div class="cart-container-table-body-total-quantity-container">
-<span class="cart-container-table-body-total-quantity" id="cart-total-quantity">0</span>
+<td class="cart-full-table-body-total-quantity-cell">
+<div class="cart-full-table-body-total-quantity-cell-container">
+<span class="cart-full-table-body-total-quantity-cell-container-text" id="cart-full-total-quantity">0</span>
 </div>
 </td>
-<td class="cart-container-table-body-total-cell"></td>
+<td class="cart-full-table-body-total-remove-cell"></td>
 </tr>
 </tbody>
 </table>
-</div>
-<!-- CONTENEDOR DE BOTONES (mantenidos tal cual) -->
-<div class="cart-buttons-container">
-<button class="cart-button-back" onclick="history.back()">BACK</button>
-<a href="#store" class="cart-button-continueshopping">CONTINUE SHOPPING</a>
-<a href="#cart-shippinginformation" class="cart-button-buy" id="cart-button-buy">BUY</a>  
-<button class="cart-button-clear" id="cart-button-clear">CLEAR CART</button>
+</div>  
+<!-- BOTONES -->
+<div class="cart-full-buttons">
+<button class="cart-full-button-back" onclick="history.back()">BACK</button>
+<a href="#store" class="cart-full-button-continueshopping">CONTINUE SHOPPING</a>
+<a href="#cart-shippinginformation" class="cart-full-button-buy" id="cart-button-buy">BUY</a>  
+<button class="cart-full-button-clear" id="cart-button-clear">CLEAR CART</button>
 </div>
 </div>
 </div>
 </section>
 <!-- FIN CART -->
+
+  
+
+
+
+
+
+
+
+
 
 
 
