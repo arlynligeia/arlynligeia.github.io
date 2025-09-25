@@ -6601,7 +6601,7 @@ margin-bottom: 15px;
 /* ANCHO DE COLUMNAS EXACTO */
 .electronicsalesreceipt-receipt-details-table th:nth-child(1),
 .electronicsalesreceipt-receipt-details-table td:nth-child(1) {
-width: 48%; /* Product/service description */
+width: 42%; /* Product/service description */
 }
 .electronicsalesreceipt-receipt-details-table th:nth-child(2),
 .electronicsalesreceipt-receipt-details-table td:nth-child(2) {
@@ -6609,11 +6609,11 @@ width: 8%; /* Qty */
 }
 .electronicsalesreceipt-receipt-details-table th:nth-child(3),
 .electronicsalesreceipt-receipt-details-table td:nth-child(3) {
-width: 22%; /* Unit Price */
+width: 25%; /* Unit Price */
 }
 .electronicsalesreceipt-receipt-details-table th:nth-child(4),
 .electronicsalesreceipt-receipt-details-table td:nth-child(4) {
-width: 22%; /* Total */
+width: 25%; /* Total */
 }
 /* CABECERA DE LA TABLA - CENTRADO */
 .electronicsalesreceipt-receipt-details-table-row-subtitle {
@@ -6627,7 +6627,9 @@ margin-top: 0px;
 margin-bottom: 5px;
 }
 /* CUERPO DE LA TABLA */
-.electronicsalesreceipt-receipt-details-table-row-product {
+.electronicsalesreceipt-receipt-details-table-row-product,
+.electronicsalesreceipt-receipt-details-table-row-shipping,
+electronicsalesreceipt-receipt-details-table-row-total {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -6643,23 +6645,18 @@ text-align: left;
 .electronicsalesreceipt-receipt-details-table-row-product:nth-child(2) { /* Qty */
 text-align: center;
 }
-.electronicsalesreceipt-receipt-details-table-row-product:nth-child(3) { /* Unit Price */
-text-align: left;
-}
-.electronicsalesreceipt-receipt-details-table-row-product:nth-child(4) { /* Total */
-text-align: left;
-}
 /* CONTENEDORES INTERNOS PARA MONEDAS */
 .electronicsalesreceipt-receipt-details-table-row-product-currency {
 display: inline-block;
 text-align: left;
-width: 20px;
 }
 .electronicsalesreceipt-receipt-details-table-row-product-amount {
 display: inline-block;
 text-align: right;
-width: calc(100% - 25px);
 }
+
+
+
 /* SHIPPING Y TOTAL - ALINEACIÓN DERECHA */
 .electronicsalesreceipt-receipt-details-table-row-shipping,
 .electronicsalesreceipt-receipt-details-table-row-total {
