@@ -2744,10 +2744,12 @@ ADD TO CART
 <!-- INFORMACIÓN DEL CLIENTE -->
 <div class="invoice-customer">
 <p class="invoice-customer-subtitle">BILLING & SHIPPING INFORMATION</p>
-<p id="invoice-customer-name">John Doe</p>
-<p id="invoice-customer-email">john@example.com</p>
-<p id="invoice-customer-phone">+1 234 567 890</p>
-<p id="invoice-customer-address">123 Main St, City, Country 12345</p>
+<div class="invoice-customer-text">  
+<p><span class="invoice-customer-label">Name:</span> <span id="invoice-customer-name">John Doe</span></p>
+<p><span class="invoice-customer-label">Email:</span> <span id="invoice-customer-email">john@example.com</span></p>
+<p><span class="invoice-customer-label">Phone:</span> <span id="invoice-customer-phone">+1 234 567 890</span></p>
+<p><span class="invoice-customer-label">Address:</span> <span id="invoice-customer-address">123 Main St, City, Country 12345</span></p>
+</div> 
 </div> 
 <!-- DETALLES DE LA ORDEN -->
 <div class="invoice-details">
@@ -2769,13 +2771,15 @@ ADD TO CART
 <span id="invoice-details-totals-total">$ 0.00</span>
 </div>
 </div>
-</div> 
+</div>  
 <!-- INFORMACIÓN DE PAGO -->
 <div class="invoice-payment">
 <p class="invoice-payment-subtitle">PAYMENT INFORMATION</p>
+<div class="invoice-payment-text">  
 <p>Payment Method: <span id="invoice-payment-method">PayPal</span></p>
 <p>Transaction ID: <span id="invoice-payment-transactionid">PAYPAL123456789</span></p>
 <p>Payment Date: <span id="invoice-payment-date">January 8, 2025</span></p>
+</div>
 </div>
 <!-- BOTONES -->
 <div class="invoice-buttons">
