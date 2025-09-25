@@ -6447,7 +6447,162 @@ transform: scale(1.05);
 
 
 
+/* ======================================
+   PRIVACY POLICY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.privacypolicy-container {
+position: relative;
+width: 1000px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.privacypolicy-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;  
+}
+.privacypolicy-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.privacypolicy-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DE TEXTO */
+.privacypolicy-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.privacypolicy-text-1,
+.privacypolicy-text-2,
+.privacypolicy-text-3,
+.privacypolicy-text-4,
+.privacypolicy-text-5,
+.privacypolicy-text-6,
+.privacypolicy-text-7,
+.privacypolicy-text-8,
+.privacypolicy-text-9,
+.privacypolicy-text-10,
+.privacypolicy-text-11,
+.privacypolicy-text-12,
+.privacypolicy-text-13,
+.privacypolicy-text-14,
+.privacypolicy-text-15,
+.privacypolicy-text-16,
+.privacypolicy-text-17,
+.privacypolicy-text-18,
+.privacypolicy-text-19 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.privacypolicy-text-19 {
+margin-bottom: 15px;
+}
 
+/* ======================================
+   TERMS AND CONDITIONS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.termsandconditions-container {
+position: relative;
+width: 1000px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.termsandconditions-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;  
+}
+.termsandconditions-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.termsandconditions-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DE TEXTO */
+.termsandconditions-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.termsandconditions-text-1,
+.termsandconditions-text-2,
+.termsandconditions-text-3,
+.termsandconditions-text-4,
+.termsandconditions-text-5,
+.termsandconditions-text-6,
+.termsandconditions-text-7,
+.termsandconditions-text-8,
+.termsandconditions-text-9,
+.termsandconditions-text-10,
+.termsandconditions-text-11,
+.termsandconditions-text-12,
+.termsandconditions-text-13,
+.termsandconditions-text-14,
+.termsandconditions-text-15,
+.termsandconditions-text-16,
+.termsandconditions-text-17,
+.termsandconditions-text-18,
+.termsandconditions-text-19,
+.termsandconditions-text-20 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.termsandconditions-text-20 {
+margin-bottom: 15px;
+}
 
 
 
