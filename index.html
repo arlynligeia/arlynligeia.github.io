@@ -2743,44 +2743,63 @@ ADD TO CART
 <!-- CONTENEDOR DEL RECIBO (7 SECCIONES DENTRO) -->
 <div class="electronicsalesreceipt-receipt">
 <!-- 1. SERIES - ORDER - DATE -->
-<div class="electronicsalesreceipt-receipt-series">
+<div class="electronicsalesreceipt-receipt-series"> 
 <div class="electronicsalesreceipt-receipt-series-serie">
 <span>Serie:</span>  
 <span id="electronicsalesreceipt-receipt-series-serie">B001</span> - 
 <span>N°</span>  
 <span id="electronicsalesreceipt-receipt-series-serie-number">00001</span>   
-</div>  
+</div>   
 <div class="electronicsalesreceipt-receipt-series-order">
 <span>Order N°:</span>  
 <span id="electronicsalesreceipt-receipt-series-order">AL202500001</span>   
-</div>   
+</div>  
 <div class="electronicsalesreceipt-receipt-series-date">        
 <span>Date:</span>  
 <span id="electronicsalesreceipt-receipt-series-date">January 8, 2025</span>    
-</div>
+</div>  
 </div>
 <!-- 2. INFORMACIÓN DEL EMISOR -->
-<div class="electronicsalesreceipt-receipt-issuer">
-<p class="electronicsalesreceipt-receipt-issuer-subtitle">ISSUER:</p>
-<div class="electronicsalesreceipt-receipt-issuer-text">     
-<p><span class="electronicsalesreceipt-receipt-issuer-text-label">RUC:</span> <span id="electronicsalesreceipt-receipt-issuer-text-ruc">10763395613</span></p>
-<p><span class="electronicsalesreceipt-receipt-issuer-text-label">Business Name:</span> <span id="electronicsalesreceipt-receipt-issuer-text-name">Arlyn Ligeia Campos Peña</span></p>
-<p><span class="electronicsalesreceipt-receipt-issuer-text-label">Address:</span> <span id="electronicsalesreceipt-receipt-issuer-text-address">Cooperativa La Alborada Mz. A Lt.1 – Cerro Colorado, Arequipa - Perú</span></p>   
+<div class="electronicsalesreceipt-receipt-issuer">  
+<div class="electronicsalesreceipt-receipt-issuer-subtitle">ISSUER:</div>  
+<div class="electronicsalesreceipt-receipt-issuer-text">  
+<div class="electronicsalesreceipt-receipt-issuer-text-line">
+<span class="electronicsalesreceipt-receipt-issuer-text-line-label">RUC:</span> 
+<span id="electronicsalesreceipt-receipt-issuer-text-line-ruc">10763395613</span>
+</div>
+<div class="electronicsalesreceipt-receipt-issuer-text-line">
+<span class="electronicsalesreceipt-receipt-issuer-text-line-label">Business Name:</span> 
+<span id="electronicsalesreceipt-receipt-issuer-text-line-name">Arlyn Ligeia Campos Peña</span>
+</div>
+<div class="electronicsalesreceipt-receipt-issuer-text-line">
+<span class="electronicsalesreceipt-receipt-issuer-text-line-label">Address:</span> 
+<span id="electronicsalesreceipt-receipt-issuer-text-line-address">Cooperativa La Alborada Mz. A Lt.1 – Cerro Colorado, Arequipa - Perú</span>
+</div>  
 </div> 
 </div>
 <!-- 3. INFORMACIÓN DEL CLIENTE -->
 <div class="electronicsalesreceipt-receipt-customer">
-<p class="electronicsalesreceipt-receipt-customer-subtitle">CUSTOMER:</p>
+<div class="electronicsalesreceipt-receipt-customer-subtitle">CUSTOMER:</div> 
 <div class="electronicsalesreceipt-receipt-customer-text">  
-<p><span class="electronicsalesreceipt-receipt-customer-text-label">Name:</span> <span id="electronicsalesreceipt-receipt-customer-text-name">John Doe</span></p>
-<p><span class="electronicsalesreceipt-receipt-customer-text-label">Email:</span> <span id="electronicsalesreceipt-receipt-customer-text-email">john@example.com</span></p>
-<p><span class="electronicsalesreceipt-receipt-customer-text-label">Phone:</span> <span id="electronicsalesreceipt-receipt-customer-text-phone">+1 234 567 890</span></p>
-<p><span class="electronicsalesreceipt-receipt-customer-text-label">Address:</span> <span id="electronicsalesreceipt-receipt-customer-text-address">123 Main St, City, Country 12345</span></p>
+<div class="electronicsalesreceipt-receipt-customer-text-line">
+<span class="electronicsalesreceipt-receipt-customer-text-line-label">Name:</span> 
+<span id="electronicsalesreceipt-receipt-customer-text-line-name">John Doe</span>
+</div>  
+<div class="electronicsalesreceipt-receipt-customer-text-line">
+<span class="electronicsalesreceipt-receipt-customer-text-line-label">Email:</span> 
+<span id="electronicsalesreceipt-receipt-customer-text-line-email">john@example.com</span>
+</div>  
+<div class="electronicsalesreceipt-receipt-customer-text-line">
+<span class="electronicsalesreceipt-receipt-customer-text-line-label">Phone:</span> 
+<span id="electronicsalesreceipt-receipt-customer-text-line-phone">+1 234 567 890</span>
 </div> 
+<div class="electronicsalesreceipt-receipt-customer-text-line">
+<span class="electronicsalesreceipt-receipt-customer-text-line-label">Address:</span> 
+<span id="electronicsalesreceipt-receipt-customer-text-line-address">123 Main St, City, Country 12345</span>
 </div>
 <!-- 4. DETALLES DE LA ORDEN CON TABLA -->
 <div class="electronicsalesreceipt-receipt-details">
-<p class="electronicsalesreceipt-receipt-details-subtitle">ORDER DETAILS</p>
+<div class="electronicsalesreceipt-receipt-details-subtitle">ORDER DETAILS</div>
 <table class="electronicsalesreceipt-receipt-details-table">
 <thead>
 <tr>
@@ -2852,18 +2871,27 @@ ADD TO CART
 </div>
 <!-- 6. INFORMACIÓN DE PAGO -->
 <div class="electronicsalesreceipt-receipt-payment">
-<p class="electronicsalesreceipt-receipt-payment-subtitle">PAYMENT INFORMATION</p>
+<div class="electronicsalesreceipt-receipt-payment-subtitle">PAYMENT INFORMATION</div>  
 <div class="electronicsalesreceipt-receipt-payment-text">  
-<p><span class="electronicsalesreceipt-receipt-payment-text-label">Payment Method:</span> <span id="electronicsalesreceipt-receipt-payment-text-method">PayPal</span></p>
-<p><span class="electronicsalesreceipt-receipt-payment-text-label">Transaction ID:</span> <span id="electronicsalesreceipt-receipt-payment-text-transactionid">PAYPAL123456789</span></p>
-<p><span class="electronicsalesreceipt-receipt-payment-text-label">Payment Date:</span> <span id="electronicsalesreceipt-receipt-payment-text-date">January 8, 2025</span></p>
+<div class="electronicsalesreceipt-receipt-payment-text-line">
+<span class="electronicsalesreceipt-receipt-payment-text-line-label">Payment Method:</span> 
+<span id="electronicsalesreceipt-receipt-payment-text-line-method">PayPal</span>
+</div>
+<div class="electronicsalesreceipt-receipt-payment-text-line">
+<span class="electronicsalesreceipt-receipt-payment-text-line-label">Transaction ID:</span> 
+<span id="electronicsalesreceipt-receipt-payment-text-line-transactionid">PAYPAL123456789</span>
+</div>
+<div class="electronicsalesreceipt-receipt-payment-text-line">
+<span class="electronicsalesreceipt-receipt-payment-text-line-label">Payment Date:</span> 
+<span id="electronicsalesreceipt-receipt-payment-text-line-date">January 8, 2025</span>
+</div>
 </div>
 </div>
 <!-- 7. INFORMACIÓN LEGAL -->
 <div class="electronicsalesreceipt-receipt-legal">
-<p class="electronicsalesreceipt-receipt-legal-text">Printed representation of the electronic sales receipt.</p>
-<p class="electronicsalesreceipt-receipt-legal-text">Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span></p>
-<p class="electronicsalesreceipt-receipt-legal-text">Authorized by Intendancy Resolution N°</p>
+<div class="electronicsalesreceipt-receipt-legal-text">Printed representation of the electronic sales receipt.</div>
+<div class="electronicsalesreceipt-receipt-legal-text">Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span></div>
+<div class="electronicsalesreceipt-receipt-legal-text">Authorized by Intendancy Resolution N°</div>
 </div>
 </div>
 <!-- BOTONES (FUERA del contenedor del recibo) -->
@@ -2875,6 +2903,27 @@ ADD TO CART
 </div>
 </section>
 <!-- FIN ELECTRONIC SALES RECEIPT -->
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
 
 
 
