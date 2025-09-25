@@ -6616,21 +6616,25 @@ width: 22%; /* Unit Price */
 width: 22%; /* Total */
 }
 /* CABECERA DE LA TABLA - CENTRADO */
-.electronicsalesreceipt-receipt-details-table-row-product {
+.electronicsalesreceipt-receipt-details-table-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
-text-align: center;
-padding: 10px;
-border-bottom: 2px solid #39ff14;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 5px;
 }
 /* CUERPO DE LA TABLA */
-.electronicsalesreceipt-receipt-details-table-row {
+.electronicsalesreceipt-receipt-details-table-row-product {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.1rem;
+font-size: 1.25rem;
 color: white !important;
-padding: 8px;
-border-bottom: 1px solid rgba(255,255,255,0.2);
+text-decoration: none;
+line-height: 1.5;   
+padding: 10px;
+border-bottom: 1px solid white !important;
 }
 /* ALINEACIÓN ESPECÍFICA POR COLUMNAS */
 .electronicsalesreceipt-receipt-details-table-row-product:nth-child(1) { /* Product description */
@@ -6680,6 +6684,11 @@ display: inline-block;
 text-align: right;
 width: calc(100% - 25px);
 }
+
+
+
+
+
 
 
 
