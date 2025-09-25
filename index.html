@@ -2428,13 +2428,22 @@ ADD TO CART
 </section>
 <!-- FIN CART -->
 
+
+
+
+
+
+
+
+
+  
 <!-- SHIPPING INFORMATION -->
 <section id="shippinginformation" class="shippinginformation-section main-section">
 <div class="shippinginformation-container">
-<h2 class="shippinginformation-title"><a href="#cart-shippinginformation">SHIPPING INFORMATION</a></h2>
+<h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
 <!-- RESUMEN DEL PEDIDO -->
 <div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">
-<p class="shippinginformation-ordersummary-head">ORDER SUMMARY</p>
+<p class="shippinginformation-ordersummary-subtitle">ORDER SUMMARY</p>
 <div id="shippinginformation-ordersummary-totals"></div> 
 <div class="shippinginformation-ordersummary-totals-subtotal"><span>Subtotal:</span>
 <span id="shippinginformation-ordersummary-totals-subtotal">$ 0.00</span>
@@ -2454,7 +2463,7 @@ ADD TO CART
 <div class="shippinginformation-form-grid">
 <!-- COLUMNA 1: INFORMACIÓN PERSONAL -->
 <div class="shippinginformation-form-grid-column">
-<p class="shippinginformation-form-grid-column-head">PERSONAL INFORMATION</p>
+<p class="shippinginformation-form-grid-column-subtitle">PERSONAL INFORMATION</p>
 <label for="email" class="shippinginformation-form-grid-column-label">EMAIL</label>
 <input type="email" id="email" name="email" class="shippinginformation-form-grid-column-input" required>
 <label for="firstname" class="shippinginformation-form-grid-column-label">FIRST NAME</label>
@@ -2468,7 +2477,7 @@ ADD TO CART
 </div>
 <!-- COLUMNA 2: DIRECCIÓN DE ENVÍO -->
 <div class="shippinginformation-form-grid-column">
-<p class="shippinginformation-form-grid-column-head">SHIPPING ADDRESS</p>
+<p class="shippinginformation-form-grid-column-subtitle">SHIPPING ADDRESS</p>
 <label for="country" class="shippinginformation-form-grid-column-label">COUNTRY</label>
 <select id="country" name="country" class="shippinginformation-form-grid-column-input" required>
 <option value="">Select Country</option>
@@ -2717,6 +2726,86 @@ ADD TO CART
 </section>
 <!-- FIN SHIPPING INFORMATION -->
 
+<!-- INVOICE/RECEIPT -->
+<section id="invoice" class="invoice-section main-section">
+<div class="invoice-container">
+<h2 class="invoice-title"><a href="#invoice">INVOICE/RECEIPT</a></h2>
+<!-- INFORMACIÓN DE LA ORDEN -->
+<div class="invoice-order">
+<div class="invoice-order-number">
+<span>Order #:</span>  
+<span id="invoice-order-number">AL202500001</span>   
+</div>        
+<div class="invoice-order-date">        
+<span>Order Date:</span>  
+<span id="invoice-order-date">January 8, 2025</span>    
+</div>        
+</div>         
+<!-- INFORMACIÓN DEL CLIENTE -->
+<div class="invoice-customer">
+<p class="invoice-customer-subtitle">BILLING & SHIPPING INFORMATION</p>
+<p id="invoice-customer-name">John Doe</p>
+<p id="invoice-customer-email">john@example.com</p>
+<p id="invoice-customer-phone">+1 234 567 890</p>
+<p id="invoice-customer-address">123 Main St, City, Country 12345</p>
+</div> 
+<!-- DETALLES DE LA ORDEN -->
+<div class="invoice-details">
+<p class="invoice-details-subtitle">ORDER DETAILS</p>
+<div id="invoice-details-productlist">
+<!-- LISTA DE PRODUCTOS (SE AGREGARAN CON JS) -->
+</div>  
+<div class="invoice-details-totals">
+<div class="invoice-details-totals-subtotal">  
+<span>Subtotal:</span>
+<span id="invoice-details-totals-subtotal">$ 0.00</span>
+</div>       
+<div class="invoice-details-totals-shipping">
+<span>Shipping:</span>
+<span id="invoice-details-totals-shipping">$ 0.00</span>
+</div>    
+<div class="invoice-details-totals-total">
+<span>TOTAL:</span>
+<span id="invoice-details-totals-total">$ 0.00</span>
+</div>
+</div>
+</div> 
+<!-- INFORMACIÓN DE PAGO -->
+<div class="invoice-payment">
+<p class="invoice-payment-subtitle">PAYMENT INFORMATION</p>
+<p>Payment Method: <span id="invoice-payment-method">PayPal</span></p>
+<p>Transaction ID: <span id="invoice-payment-transactionid">PAYPAL123456789</span></p>
+<p>Payment Date: <span id="invoice-payment-date">January 8, 2025</span></p>
+</div>
+<!-- BOTONES -->
+<div class="invoice-buttons">
+<a href="#invoice" class="invoice-button-continueshopping">CONTINUE SHOPPING</a>
+<button class="invoice-button-print" onclick="window.print()">PRINT INVOICE</button>
+<button class="invoice-button-download" id="invoice-button-download-pdf">DOWNLOAD PDF</button>
+</div>
+</div>
+</section>
+<!-- FIN INVOICE/RECEIPT -->        
+       
+    
+   
+
+  
+
+   
+
+
+
+
+
+
+
+
+
+
+
+  
+  
 <!-- PRIVACY POLICY -->
 <section id="privacypolicy" class="privacypolicy-section main-section">
 <div class="privacypolicy-container">
@@ -2786,73 +2875,8 @@ ADD TO CART
 </div>
 </div>
 </section>
-<!-- FIN TERMS AND CONDITIONS -->  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- FIN TERMS AND CONDITIONS --> 
   
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
 </main>
 
 <!-- FOOTER -->   
@@ -2868,4 +2892,5 @@ ADD TO CART
 <!-- FIN FOOTER -->   
   
 </body>
+  
 </html>
