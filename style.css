@@ -6312,7 +6312,7 @@ margin-bottom: 15px;
 padding: 20px;
 }
 /* TEXTOS */
-.shippinginformation-ordersummary-head {
+.shippinginformation-ordersummary-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #39ff14 !important;
@@ -6368,7 +6368,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 /* TEXTOS */
-.shippinginformation-form-grid-column-head {
+.shippinginformation-form-grid-column-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #39ff14 !important;
@@ -6376,7 +6376,7 @@ text-decoration: none;
 line-height: 1.5; 
 text-align: center;  
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
 /* TEXTOS SOBRE LOS RECUADROS */
 .shippinginformation-form-grid-column-label {
@@ -6444,6 +6444,243 @@ background-color: #ff1493 !important;
 .shippinginformation-button-proceedpayment:hover {
 transform: scale(1.05);
 }
+
+/* ======================================
+   INVOICE/RECEIPT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.invoice-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.invoice-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;  
+}
+.invoice-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.invoice-title a {
+color: white !important;
+text-decoration: none;
+}
+/* INFORMACIÓN DE LA ORDEN */
+.invoice-order {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+padding: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.invoice-order-number,
+.invoice-order-date {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.invoice-order-date {
+margin-bottom: 0px;
+}
+/* INFORMACIÓN DEL CLIENTE */
+.invoice-customer {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+padding: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.invoice-customer-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.invoice-customer p  {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* DETALLES DE LA ORDEN */
+.invoice-details {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+padding: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.invoice-details-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+#invoice-details-productlist {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.invoice-details-totals-subtotal,
+.invoice-details-totals-shipping {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.invoice-details-totals-total {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+/* INFORMACIÓN DE PAGO */
+.invoice-payment {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+padding: 20px;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.invoice-payment-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.invoice-payment p {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* BOTONES FINALES */
+.invoice-buttons {
+display: flex;
+justify-content: space-between;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.invoice-button-continueshopping,
+.invoice-button-print,
+.invoice-button-download {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.invoice-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.invoice-button-print {
+background-color: #FFA500 !important;
+}
+.invoice-button-download {
+background-color: #ff1493 !important;
+}
+.invoice-button-continueshopping:hover,
+.invoice-button-print:hover,
+.invoice-button-download:hover {
+transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
