@@ -2726,70 +2726,165 @@ ADD TO CART
 </section>
 <!-- FIN SHIPPING INFORMATION -->
 
-<!-- INVOICE/RECEIPT -->
-<section id="invoice" class="invoice-section main-section">
-<div class="invoice-container">
-<h2 class="invoice-title"><a href="#invoice">INVOICE/RECEIPT</a></h2>
-<!-- INFORMACIÓN DE LA ORDEN -->
-<div class="invoice-order">
-<div class="invoice-order-number">
-<span>Order #:</span>  
-<span id="invoice-order-number">AL202500001</span>   
-</div>        
-<div class="invoice-order-date">        
-<span>Order Date:</span>  
-<span id="invoice-order-date">January 8, 2025</span>    
-</div>        
-</div>         
-<!-- INFORMACIÓN DEL CLIENTE -->
-<div class="invoice-customer">
-<p class="invoice-customer-subtitle">BILLING & SHIPPING INFORMATION</p>
-<div class="invoice-customer-text">  
-<p><span class="invoice-customer-label">Name:</span> <span id="invoice-customer-name">John Doe</span></p>
-<p><span class="invoice-customer-label">Email:</span> <span id="invoice-customer-email">john@example.com</span></p>
-<p><span class="invoice-customer-label">Phone:</span> <span id="invoice-customer-phone">+1 234 567 890</span></p>
-<p><span class="invoice-customer-label">Address:</span> <span id="invoice-customer-address">123 Main St, City, Country 12345</span></p>
-</div> 
-</div> 
-<!-- DETALLES DE LA ORDEN -->
-<div class="invoice-details">
-<p class="invoice-details-subtitle">ORDER DETAILS</p>
-<div id="invoice-details-productlist">
-<!-- LISTA DE PRODUCTOS (SE AGREGARAN CON JS) -->
+
+
+
+
+
+
+
+
+
+  
+<!-- ELECTRONIC SALES RECEIPT -->
+<section id="electronicsalesreceipt" class="electronicsalesreceipt-section main-section">
+<div class="electronicsalesreceipt-container">
+<h2 class="electronicsalesreceipt-title"><a href="#electronicsalesreceipt">ELECTRONIC SALES RECEIPT</a></h2>
+<!-- CONTENEDOR DEL RECIBO (7 SECCIONES DENTRO) -->
+<div class="electronicsalesreceipt-receipt">
+<!-- 1. SERIES - ORDER - DATE -->
+<div class="electronicsalesreceipt-receipt-series">
+<div class="electronicsalesreceipt-receipt-series-serie">
+<span>Serie:</span>  
+<span id="electronicsalesreceipt-receipt-series-serie">B001</span> - 
+<span>N°</span>  
+<span id="electronicsalesreceipt-receipt-series-serie-number">00001</span>   
 </div>  
-<div class="invoice-details-totals">
-<div class="invoice-details-totals-subtotal">  
-<span>Subtotal:</span>
-<span id="invoice-details-totals-subtotal">$ 0.00</span>
-</div>       
-<div class="invoice-details-totals-shipping">
-<span>Shipping:</span>
-<span id="invoice-details-totals-shipping">$ 0.00</span>
-</div>    
-<div class="invoice-details-totals-total">
-<span>TOTAL:</span>
-<span id="invoice-details-totals-total">$ 0.00</span>
+<div class="electronicsalesreceipt-receipt-series-order">
+<span>Order N°:</span>  
+<span id="electronicsalesreceipt-receipt-series-order">AL202500001</span>   
+</div>   
+<div class="electronicsalesreceipt-receipt-series-date">        
+<span>Date:</span>  
+<span id="electronicsalesreceipt-receipt-series-date">January 8, 2025</span>    
 </div>
 </div>
-</div>  
-<!-- INFORMACIÓN DE PAGO -->
-<div class="invoice-payment">
-<p class="invoice-payment-subtitle">PAYMENT INFORMATION</p>
-<div class="invoice-payment-text">  
-<p>Payment Method: <span id="invoice-payment-method">PayPal</span></p>
-<p>Transaction ID: <span id="invoice-payment-transactionid">PAYPAL123456789</span></p>
-<p>Payment Date: <span id="invoice-payment-date">January 8, 2025</span></p>
+<!-- 2. INFORMACIÓN DEL EMISOR -->
+<div class="electronicsalesreceipt-receipt-issuer">
+<p class="electronicsalesreceipt-receipt-issuer-subtitle">ISSUER:</p>
+<div class="electronicsalesreceipt-receipt-issuer-text">     
+<p><span class="electronicsalesreceipt-receipt-issuer-text-label">RUC:</span> <span id="electronicsalesreceipt-receipt-issuer-text-ruc">10763395613</span></p>
+<p><span class="electronicsalesreceipt-receipt-issuer-text-label">Business Name:</span> <span id="electronicsalesreceipt-receipt-issuer-text-name">Arlyn Ligeia Campos Peña</span></p>
+<p><span class="electronicsalesreceipt-receipt-issuer-text-label">Address:</span> <span id="electronicsalesreceipt-receipt-issuer-text-address">Cooperativa La Alborada Mz. A Lt.1 – Cerro Colorado, Arequipa - Perú</span></p>   
+</div> 
+</div>
+<!-- 3. INFORMACIÓN DEL CLIENTE -->
+<div class="electronicsalesreceipt-receipt-customer">
+<p class="electronicsalesreceipt-receipt-customer-subtitle">CUSTOMER:</p>
+<div class="electronicsalesreceipt-receipt-customer-text">  
+<p><span class="electronicsalesreceipt-receipt-customer-text-label">Name:</span> <span id="electronicsalesreceipt-receipt-customer-text-name">John Doe</span></p>
+<p><span class="electronicsalesreceipt-receipt-customer-text-label">Email:</span> <span id="electronicsalesreceipt-receipt-customer-text-email">john@example.com</span></p>
+<p><span class="electronicsalesreceipt-receipt-customer-text-label">Phone:</span> <span id="electronicsalesreceipt-receipt-customer-text-phone">+1 234 567 890</span></p>
+<p><span class="electronicsalesreceipt-receipt-customer-text-label">Address:</span> <span id="electronicsalesreceipt-receipt-customer-text-address">123 Main St, City, Country 12345</span></p>
+</div> 
+</div>
+<!-- 4. DETALLES DE LA ORDEN CON TABLA -->
+<div class="electronicsalesreceipt-receipt-details">
+<p class="electronicsalesreceipt-receipt-details-subtitle">ORDER DETAILS</p>
+<table class="electronicsalesreceipt-receipt-details-table">
+<thead>
+<tr>
+<th class="electronicsalesreceipt-receipt-details-table-subtitle">Product/service description</th>
+<th class="electronicsalesreceipt-receipt-details-table-subtitle">Unit</th>
+<th class="electronicsalesreceipt-receipt-details-table-subtitle">Unit Price</th>
+<th class="electronicsalesreceipt-receipt-details-table-subtitle">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="electronicsalesreceipt-receipt-details-table-row">
+<td class="electronicsalesreceipt-receipt-details-table-row-product">Quasar Executive production</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">1</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">
+<span class="electronicsalesreceipt-receipt-details-table-row-product-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-product-amount">500,000.00</span>
+</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">
+<span class="electronicsalesreceipt-receipt-details-table-row-product-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-product-amount">500,000.00</span>
+</td>
+</tr>  
+<tr class="electronicsalesreceipt-receipt-details-table-row">
+<td class="electronicsalesreceipt-receipt-details-table-row-product">Quasar Executive production</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">1</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">
+<span class="electronicsalesreceipt-receipt-details-table-row-product-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-product-amount">500,000.00</span>
+</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-product">
+<span class="electronicsalesreceipt-receipt-details-table-row-product-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-product-amount">500,000.00</span>
+</td>
+</tr>        
+<tr class="electronicsalesreceipt-receipt-details-table-row">
+<td class="electronicsalesreceipt-receipt-details-table-row-shipping" colspan="3">Shipping:</td>
+<td class="electronicsalesreceipt-receipt-details-table-row-shipping">
+<span class="electronicsalesreceipt-receipt-details-table-row-shipping-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-shipping-amount">0.00</span>
+</td>
+</tr>            
+<tr class="electronicsalesreceipt-receipt-details-table-row">
+<td class="electronicsalesreceipt-receipt-details-table-row-total" colspan="3">Total:</td>            
+<td class="electronicsalesreceipt-receipt-details-table-row-total">
+<span class="electronicsalesreceipt-receipt-details-table-row-total-currency">$</span>
+<span class="electronicsalesreceipt-receipt-details-table-row-total-amount">1,000,000.00</span>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- 5. DESGLOSE DE IMPUESTOS -->
+<div class="electronicsalesreceipt-receipt-tax">
+<div class="electronicsalesreceipt-receipt-tax-subtotal">
+<span>Subtotal: </span>
+<span class="electronicsalesreceipt-receipt-tax-subtotal-currency">$</span>
+<span id="electronicsalesreceipt-receipt-tax-subtotal-amount">847,457.63</span>
+</div>
+<div class="electronicsalesreceipt-receipt-tax-vat">
+<span>VAT: </span>
+<span class="electronicsalesreceipt-receipt-tax-vat-currency">$</span>
+<span id="electronicsalesreceipt-receipt-tax-vat-amount">152,542.37</span>
+</div>
+<div class="electronicsalesreceipt-receipt-tax-total">
+<span>Total: </span>
+<span class="electronicsalesreceipt-receipt-tax-total-currency">$</span>
+<span id="electronicsalesreceipt-receipt-tax-total-amount">1,000,000.00</span>
 </div>
 </div>
-<!-- BOTONES -->
-<div class="invoice-buttons">
-<a href="#invoice" class="invoice-button-continueshopping">CONTINUE SHOPPING</a>
-<button class="invoice-button-print" onclick="window.print()">PRINT INVOICE</button>
-<button class="invoice-button-download" id="invoice-button-download-pdf">DOWNLOAD PDF</button>
+</div>
+<!-- 6. INFORMACIÓN DE PAGO -->
+<div class="electronicsalesreceipt-receipt-payment">
+<p class="electronicsalesreceipt-receipt-payment-subtitle">PAYMENT INFORMATION</p>
+<div class="electronicsalesreceipt-receipt-payment-text">  
+<p><span class="electronicsalesreceipt-receipt-payment-text-label">Payment Method:</span> <span id="electronicsalesreceipt-receipt-payment-text-method">PayPal</span></p>
+<p><span class="electronicsalesreceipt-receipt-payment-text-label">Transaction ID:</span> <span id="electronicsalesreceipt-receipt-payment-text-transactionid">PAYPAL123456789</span></p>
+<p><span class="electronicsalesreceipt-receipt-payment-text-label">Payment Date:</span> <span id="electronicsalesreceipt-receipt-payment-text-date">January 8, 2025</span></p>
+</div>
+</div>
+<!-- 7. INFORMACIÓN LEGAL -->
+<div class="electronicsalesreceipt-receipt-legal">
+<p class="electronicsalesreceipt-receipt-legal-text">Printed representation of the electronic sales receipt.</p>
+<p class="electronicsalesreceipt-receipt-legal-text">Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span></p>
+<p class="electronicsalesreceipt-receipt-legal-text">Authorized by Intendancy Resolution N°</p>
+</div>
+</div>
+<!-- BOTONES (FUERA del contenedor del recibo) -->
+<div class="electronicsalesreceipt-buttons">
+<a href="#store" class="electronicsalesreceipt-button-continueshopping">CONTINUE SHOPPING</a>
+<button class="electronicsalesreceipt-button-print" onclick="window.print()">PRINT RECEIPT</button>
+<button class="electronicsalesreceipt-button-download" id="electronicsalesreceipt-button-download-pdf">DOWNLOAD PDF</button>
 </div>
 </div>
 </section>
-<!-- FIN INVOICE/RECEIPT -->        
+<!-- FIN ELECTRONIC SALES RECEIPT -->
+
+
+
+    
+   
+
+
+
+
+
        
     
    
