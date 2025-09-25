@@ -6598,7 +6598,25 @@ width: 100%;
 border-collapse: collapse;
 margin-bottom: 15px;
 }
-.electronicsalesreceipt-receipt-details-table-subtitle {
+/* ANCHO DE COLUMNAS EXACTO */
+.electronicsalesreceipt-receipt-details-table th:nth-child(1),
+.electronicsalesreceipt-receipt-details-table td:nth-child(1) {
+width: 48%; /* Product/service description */
+}
+.electronicsalesreceipt-receipt-details-table th:nth-child(2),
+.electronicsalesreceipt-receipt-details-table td:nth-child(2) {
+width: 8%; /* Qty */
+}
+.electronicsalesreceipt-receipt-details-table th:nth-child(3),
+.electronicsalesreceipt-receipt-details-table td:nth-child(3) {
+width: 22%; /* Unit Price */
+}
+.electronicsalesreceipt-receipt-details-table th:nth-child(4),
+.electronicsalesreceipt-receipt-details-table td:nth-child(4) {
+width: 22%; /* Total */
+}
+/* CABECERA DE LA TABLA - CENTRADO */
+.electronicsalesreceipt-receipt-details-table-row-product {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
@@ -6606,24 +6624,65 @@ text-align: center;
 padding: 10px;
 border-bottom: 2px solid #39ff14;
 }
-.electronicsalesreceipt-receipt-details-table-row-product,
-.electronicsalesreceipt-receipt-details-table-row-shipping,
-.electronicsalesreceipt-receipt-details-table-row-total {
+/* CUERPO DE LA TABLA */
+.electronicsalesreceipt-receipt-details-table-row {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.1rem;
 color: white !important;
 padding: 8px;
-text-align: center;
 border-bottom: 1px solid rgba(255,255,255,0.2);
 }
+/* ALINEACIÓN ESPECÍFICA POR COLUMNAS */
+.electronicsalesreceipt-receipt-details-table-row-product:nth-child(1) { /* Product description */
+text-align: left;
+}
+.electronicsalesreceipt-receipt-details-table-row-product:nth-child(2) { /* Qty */
+text-align: center;
+}
+.electronicsalesreceipt-receipt-details-table-row-product:nth-child(3) { /* Unit Price */
+text-align: left;
+}
+.electronicsalesreceipt-receipt-details-table-row-product:nth-child(4) { /* Total */
+text-align: left;
+}
+/* CONTENEDORES INTERNOS PARA MONEDAS */
+.electronicsalesreceipt-receipt-details-table-row-product-currency {
+display: inline-block;
+text-align: left;
+width: 20px;
+}
+.electronicsalesreceipt-receipt-details-table-row-product-amount {
+display: inline-block;
+text-align: right;
+width: calc(100% - 25px);
+}
+/* SHIPPING Y TOTAL - ALINEACIÓN DERECHA */
 .electronicsalesreceipt-receipt-details-table-row-shipping,
 .electronicsalesreceipt-receipt-details-table-row-total {
 font-weight: bold;
+text-align: right;
+border-top: 2px solid #39ff14;
 }
 .electronicsalesreceipt-receipt-details-table-row-total {
 color: #39ff14 !important;
 font-size: 1.25rem;
 }
+/* CONTENEDORES PARA SHIPPING Y TOTAL */
+.electronicsalesreceipt-receipt-details-table-row-shipping-currency,
+.electronicsalesreceipt-receipt-details-table-row-total-currency {
+display: inline-block;
+text-align: left;
+width: 20px;
+}
+.electronicsalesreceipt-receipt-details-table-row-shipping-amount,
+.electronicsalesreceipt-receipt-details-table-row-total-amount {
+display: inline-block;
+text-align: right;
+width: calc(100% - 25px);
+}
+
+
+
 /* 5. DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-receipt-tax {
 background-color: rgba(255, 255, 255, 0.05);
@@ -6655,6 +6714,24 @@ margin-top: 0px;
 margin-bottom: 0px;
 font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6747,6 +6824,19 @@ background-color: #ff1493 !important;
 .electronicsalesreceipt-button-download:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
