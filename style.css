@@ -7162,19 +7162,19 @@ padding-left: 0;
 /* ANCHO DE COLUMNAS EXACTO */
 .prueba-table th:nth-child(1),
 .prueba-table td:nth-child(1) { /* PRODUCT NAME - 52% */
-width: 48%;
+width: 52%;
 }
 .prueba-table th:nth-child(2),
-.prueba-table td:nth-child(2) { /* UNIT PRICE - 20% */
-width: 22%;
+.prueba-table td:nth-child(2) { /* QTY - 8% */
+width: 8%;
 }
 .prueba-table th:nth-child(3),
-.prueba-table td:nth-child(3) { /* TOTAL - 20% */
-width: 22%;
+.prueba-table td:nth-child(3) { /* UNIT PRICE - 20% */
+width: 20%;
 }
 .prueba-table th:nth-child(4),
-.prueba-table td:nth-child(4) { /* QTY - 8% */
-width: 8%;
+.prueba-table td:nth-child(4) { /* TOTAL - 20% */
+width: 20%;
 }
 /* ENCABEZADOS DE TABLA */
 .prueba-table-head-row {
@@ -7211,9 +7211,9 @@ vertical-align: middle;
 
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
 .prueba-table-body-line-product-name,
+.prueba-table-body-line-product-quantity,
 .prueba-table-body-line-product-unitprice,
-.prueba-table-body-line-product-totalprice,
-.prueba-table-body-line-product-quantity {
+.prueba-table-body-line-product-totalprice {
 width: 100%;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
@@ -7222,8 +7222,8 @@ color: white !important;
 text-decoration: none;  
 align-items: center;
 justify-content: space-between;   
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 0px;
+padding-bottom: 0px;
 padding-left: 5px;
 padding-right: 5px;
 margin-top: 0px;
@@ -7233,6 +7233,10 @@ box-sizing: border-box;
 .prueba-table-body-line-product-name {
 text-align: left;
 }
+.prueba-table-body-line-product-quantity {
+justify-content: center; 
+text-align: center;
+}
 .prueba-table-body-line-product-unitprice-symbol,
 .prueba-table-body-line-product-totalprice-symbol {
 text-align: left;
@@ -7240,10 +7244,6 @@ text-align: left;
 .prueba-table-body-line-product-unitprice-amount,
 .prueba-table-body-line-product-totalprice-amount {
 text-align: right;
-}
-.prueba-table-body-line-product-quantity {
-justify-content: center; 
-text-align: center;
 }
 /* LÍNEA DIVISORIA */
 .prueba-table-body-divider-2 {
@@ -7267,8 +7267,8 @@ font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;   
-padding-top: 10px;
-padding-bottom: 10px;
+padding-top: 0px;
+padding-bottom: 0px;
 padding-left: 5px;
 padding-right: 5px;
 margin-top: 0px;
