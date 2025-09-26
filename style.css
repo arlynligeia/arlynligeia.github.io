@@ -7001,6 +7001,13 @@ text-decoration: none;
 
 
 
+
+
+
+
+
+
+
 /* ======================================
    CARRO LLENO - ESTRUCTURA CONSISTENTE
 ====================================== */
@@ -7024,7 +7031,7 @@ text-decoration: none;
   background-color: #8000A8; /* purpura intenso */
   border-radius: 20px 20px 0 0;
 }
-.cartfull-container-title {
+.cartfull-title {
   position: relative;
   z-index: 2;
   display: block;
@@ -7036,63 +7043,56 @@ text-decoration: none;
   line-height: 1.6;
   text-align: left;
 }
-.cartfull-container-title a {
-  color: white;
-  text-decoration: none;
-}
 
 /* CONTENEDOR DE LA TABLA */
-.cartfull-container-table {
+.cartfull-table {
   width: 100%;
 }
-.cartfull-container-table-main {
+.cartfull-table {
   width: 100%;
   table-layout: fixed;
   border-collapse: separate;
   border-spacing: 0;
 }
-
 /* GAP ENTRE COLUMNAS - 5px EXACTO */
-.cartfull-container-table-main td + td,
-.cartfull-container-table-main th + th {
+.cartfull-table td + td,
+.cartfull-table th + th {
   padding-left: 5px;
 }
-.cartfull-container-table-main td:first-child,
-.cartfull-container-table-main th:first-child {
+.cartfull-table td:first-child,
+.cartfull-table th:first-child {
   padding-left: 0;
 }
-
 /* ANCHO DE COLUMNAS EXACTO */
-.cartfull-container-table-main th:nth-child(1),
-.cartfull-container-table-main td:nth-child(1) { /* IMAGE - 10% */
+.cartfull-table th:nth-child(1),
+.cartfull-table td:nth-child(1) { /* IMAGE - 10% */
   width: 10%;
 }
-.cartfull-container-table-main th:nth-child(2),
-.cartfull-container-table-main td:nth-child(2) { /* PRODUCT NAME - 52% */
-  width: 52%;
+.cartfull-table th:nth-child(2),
+.cartfull-table td:nth-child(2) { /* PRODUCT NAME - 34% */
+  width: 34%;
 }
-.cartfull-container-table-main th:nth-child(3),
-.cartfull-container-table-main td:nth-child(3) { /* PRICE - 22% */
-  width: 22%;
+.cartfull-table th:nth-child(3),
+.cartfull-table td:nth-child(3) { /* UNIT PRICE - 20% */
+  width: 20%;
 }
-.cartfull-container-table-main th:nth-child(4),
-.cartfull-container-table-main td:nth-child(4) { /* QTY - 8% */
+.cartfull-table th:nth-child(4),
+.cartfull-table td:nth-child(4) { /* TOTAL - 20% */
+  width: 20%;
+}
+.cartfull-table th:nth-child(5),
+.cartfull-table td:nth-child(5) { /* QTY - 8% */
   width: 8%;
 }
-.cartfull-container-table-main th:nth-child(5),
-.cartfull-container-table-main td:nth-child(5) { /* RMV - 8% */
+.cartfull-table th:nth-child(6),
+.cartfull-table td:nth-child(6) { /* RMV - 8% */
   width: 8%;
 }
-
 /* ENCABEZADOS DE TABLA */
-.cartfull-container-table-head-row-main {
+.cartfull-table-head-row {
   width: 100%;
 }
-.cartfull-container-table-head-row-main-image,
-.cartfull-container-table-head-row-main-productname,
-.cartfull-container-table-head-row-main-price,
-.cartfull-container-table-head-row-main-quantity,
-.cartfull-container-table-head-row-main-remove {
+.cartfull-table-head-row-subtitle {
   font-family: 'Orbitron', sans-serif;
   font-size: 1.2rem;
   color: #39ff14;
@@ -7102,17 +7102,17 @@ text-decoration: none;
 }
 
 /* LÍNEA DIVISORIA */
-.cartfull-container-table-body-divider {
+.cartfull-table-body-divider {
   width: 100%;
 }
-.cartfull-container-table-body-divider-cell {
+.cartfull-table-body-divider {
   border-top: 3px solid #ff1493;
   height: 0;
   padding: 5px 0;
 }
 
 /* CELDAS DE TABLA - ALINEACIÓN GENERAL */
-.cartfull-container-table-main td {
+.cartfull-table-body-line-product {
   vertical-align: middle;
   padding: 5px 0;
 }
@@ -7121,13 +7121,13 @@ text-decoration: none;
    CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
 ====================================== */
 /* CONTENEDOR DE IMAGEN */
-.cartfull-container-table-body-product-image-container {
+.cartfull-table-body-line-product-image- {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cartfull-container-table-body-product-image {
+.cartfull-table-body-line-cell-product-image-photo {
   max-width: 100%;
   max-height: 100%; 
   border-radius: 6px;
@@ -7135,7 +7135,7 @@ text-decoration: none;
 }
 
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
-.cartfull-container-table-body-product-name-container {
+.cartfull-table-body-line-product-name {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -7148,13 +7148,13 @@ text-decoration: none;
   font-size: 1.25rem;
   color: black;
 }
-.cartfull-container-table-body-product-name {
+.cartfull-table-body-line-product-name-text {
   text-align: left;
   width: 100%;
 }
 
-/* CONTENEDOR DE PRECIO - RECUADRO BLANCO */
-.cartfull-container-table-body-product-price-container {
+/* CONTENEDOR DE PRECIO UNITARIO - RECUADRO BLANCO */
+.cartfull-table-body-line-product-unitprice {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -7168,15 +7168,37 @@ text-decoration: none;
   font-size: 1.25rem;
   color: black;
 }
-.cartfull-container-table-body-product-price-currency {
+.cartfull-table-body-line-product-unitprice-symbol {
   text-align: left;
 }
-.cartfull-container-table-body-product-price-amount {
+.cartfull-table-body-line-product-unitprice-amount {
+  text-align: right;
+}
+
+/* CONTENEDOR DE PRECIO TOTAL - RECUADRO BLANCO */
+.cartfull-table-body-line-product-totalprice {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+}
+.cartfull-table-body-line-product-totalprice-symbol {
+  text-align: left;
+}
+.cartfull-table-body-line-product-totalprice-amount {
   text-align: right;
 }
 
 /* CONTENEDOR DE CANTIDAD - RECUADRO BLANCO */
-.cartfull-container-table-body-product-quantity-container {
+.cartfull-table-body-line-product-quantity {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -7190,19 +7212,20 @@ text-decoration: none;
   font-size: 1.25rem;
   color: black;
 }
-.cartfull-container-table-body-product-quantity {
+.cartfull-table-body-line-product-quantity-number {
   text-align: center;
   width: 100%;
 }
+
 /* CONTENEDOR DE BOTÓN REMOVER */
-.cartfull-container-table-body-product-remove-container {
+.cartfull-table-body-line-product-button {
   width: 100%;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cartfull-container-table-body-product-remove-button {
+.cartfull-table-body-line-product-button-remove {
   width: 100%;
   height: 40px;
   background-color: #39ff14;
@@ -7216,15 +7239,15 @@ text-decoration: none;
   box-sizing: border-box;
   transition: transform 0.3s ease;
 }
-.cartfull-container-table-body-product-remove-button:hover {
+.cartfull-table-body-line-product-button-remove:hover {
   transform: scale(1.05);
 }
 
 /* ======================================
-   FILAS ESPECIALES (SHIPPING Y TOTAL)
+   FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL)
 ====================================== */
-/* SHIPPING - TEXTO SIN RECUADRO BLANCO */
-.cartfull-container-table-body-shipping-text-container {
+/* SUBTOTAL - TEXTO SIN RECUADRO BLANCO */
+.cartfull-table-body-line-subtotal-unitprice-label {
   width: 100%;
   height: 40px;
   display: flex;
@@ -7236,12 +7259,51 @@ text-decoration: none;
   font-size: 1.25rem;
   color: white;
 }
-.cartfull-container-table-body-shipping-text {
+.cartfull-table-body-line-subtotal-unitprice-label-text {
+  text-align: right;
+}
+
+/* SUBTOTAL PRICE - CON RECUADRO BLANCO */
+.cartfull-table-body-line-subtotal-total-price {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: black;
+}
+.cartfull-table-body-line-subtotal-total-price-symbol {
+  text-align: left;
+}
+.cartfull-table-body-line-subtotal-total-price-amount {
+  text-align: right;
+}
+
+/* SHIPPING - TEXTO SIN RECUADRO BLANCO */
+.cartfull-table-body-line-shipping-unitprice-label {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 10px 0;
+  box-sizing: border-box;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+}
+.cartfull-table-body-line-shipping-unitprice-label-text {
   text-align: right;
 }
 
 /* SHIPPING PRICE - CON RECUADRO BLANCO */
-.cartfull-container-table-body-shipping-price-container {
+.cartfull-table-body-line-shipping-total-price {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -7255,15 +7317,15 @@ text-decoration: none;
   font-size: 1.25rem;
   color: black;
 }
-.cartfull-container-table-body-shipping-price-currency {
+.cartfull-table-body-line-shipping-total-price-symbol {
   text-align: left;
 }
-.cartfull-container-table-body-shipping-price-amount {
+.cartfull-table-body-line-shipping-total-price-amount {
   text-align: right;
 }
 
 /* TOTAL - TEXTO SIN RECUADRO BLANCO */
-.cartfull-container-table-body-total-text-container {
+.cartfull-table-body-line-total-unitprice-label {
   width: 100%;
   height: 40px;
   display: flex;
@@ -7275,12 +7337,12 @@ text-decoration: none;
   font-size: 1.25rem;
   color: white;
 }
-.cartfull-container-table-body-total-text {
+.cartfull-table-body-line-total-unitprice-label-text {
   text-align: right;
 }
 
 /* TOTAL PRICE - CON RECUADRO BLANCO */
-.cartfull-container-table-body-total-price-container {
+.cartfull-table-body-line-total-total-price {
   width: 100%;
   height: 40px;
   background-color: white;
@@ -7294,34 +7356,12 @@ text-decoration: none;
   font-size: 1.25rem;
   color: black;
 }
-.cartfull-container-table-body-total-price-currency {
+.cartfull-table-body-line-total-total-price-symbol {
   text-align: left;
 }
-.cartfull-container-table-body-total-price-amount {
+.cartfull-table-body-line-total-total-price-amount {
   text-align: right;
 }
-
-/* TOTAL QTY - CON RECUADRO BLANCO */
-.cartfull-container-table-body-total-quantity-container {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-container-table-body-total-quantity {
-  text-align: center;
-  width: 100%;
-}
-
-
 
 
 
