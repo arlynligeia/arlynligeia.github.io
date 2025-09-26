@@ -6789,7 +6789,7 @@ margin-bottom: 0px;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -6937,15 +6937,15 @@ width: 100%;
 border-top: 3px solid #39ff14 !important;
 height: 0;
 padding-top: 0px;
-padding-bottom: 10px;  
+padding-bottom: 0px;  
 }
 /* CELDAS DE TABLA - ALINEACIÓN GENERAL */
 .cartfull-table-body-line-product {
 vertical-align: middle;
-padding-top: 10px;
+padding-top: 0px;
 padding-botton: 10px;
 margin-top: 0;
-margin-bottom: 10px; 
+margin-bottom: 0px; 
 }
 /* CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px */
 /* CONTENEDOR DE IMAGEN */
@@ -7036,9 +7036,9 @@ width: 100%;
 .cartfull-table-body-divider-2 {
 border-top: 3px solid #39ff14 !important;
 height: 0;
-padding-top: 10px;
-padding-bottom: 10px;
-margin-top: 10px;
+padding-top: 0px;
+padding-bottom: 5px;
+margin-top: 0px;
 margin-bottom: 0px;
 }
 /* FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL) */
