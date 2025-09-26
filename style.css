@@ -7103,7 +7103,7 @@ text-align: center;
 
 
 
-```css
+
 /* ======================================
    CARRO LLENO - ESTRUCTURA CONSISTENTE
 ====================================== */
@@ -7161,27 +7161,19 @@ padding-left: 0;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .prueba-table th:nth-child(1),
-.prueba-table td:nth-child(1) { /* IMAGE - 10% */
-width: 10%;
+.prueba-table td:nth-child(1) { /* PRODUCT NAME - 52% */
+width: 52%;
 }
 .prueba-table th:nth-child(2),
-.prueba-table td:nth-child(2) { /* PRODUCT NAME - 34% */
-width: 34%;
+.prueba-table td:nth-child(2) { /* UNIT PRICE - 20% */
+width: 20%;
 }
 .prueba-table th:nth-child(3),
-.prueba-table td:nth-child(3) { /* UNIT PRICE - 20% */
+.prueba-table td:nth-child(3) { /* TOTAL - 20% */
 width: 20%;
 }
 .prueba-table th:nth-child(4),
-.prueba-table td:nth-child(4) { /* TOTAL - 20% */
-width: 20%;
-}
-.prueba-table th:nth-child(5),
-.prueba-table td:nth-child(5) { /* QTY - 8% */
-width: 8%;
-}
-.prueba-table th:nth-child(6),
-.prueba-table td:nth-child(6) { /* RMV - 8% */
+.prueba-table td:nth-child(4) { /* QTY - 8% */
 width: 8%;
 }
 /* ENCABEZADOS DE TABLA */
@@ -7319,7 +7311,7 @@ text-align: right;
 justify-content: center;  
 text-align: center;
 }
-```
+
 
 
 
