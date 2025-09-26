@@ -6823,182 +6823,6 @@ transform: scale(1.05);
 
 
 
-/* ======================================
-   ELECTRONIC SALES RECEIPT
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.tabla-container {
-position: relative;
-width: 800px;
-background-color: #9900CC !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.tabla-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px; 
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;  
-}
-.tabla-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.tabla-title a {
-color: white !important;
-text-decoration: none;
-}
-/* ESTILOS GENERALES DE LA TABLA */
-.tabla-tabla {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 5px;
-    table-layout: fixed;
-    margin-top: 0px;
-    margin-bottom: 20px;
-}
-/* TÍTULOS DE LA TABLA */
-.tabla-tabla-row-titulo {
-    text-align: left;
-    padding: 10px;
-    font-weight: bold;
-    background-color: #f8f9fa;
-    border-bottom: 2px solid #dee2e6;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    color: #39ff14 !important;
-    text-decoration: none;
-    text-align: center;
-}
-/* DISTRIBUCIÓN DE COLUMNAS */
-.tabla-tabla-row-titulo:nth-child(1) { width: 10%; } /* IMAGE */
-.tabla-tabla-row-titulo:nth-child(2) { width: 34%; } /* PRODUCT/SERVICE */
-.tabla-tabla-row-titulo:nth-child(3) { width: 20%; } /* UNIT PRICE */
-.tabla-tabla-row-titulo:nth-child(4) { width: 20%; } /* TOTAL */
-.tabla-tabla-row-titulo:nth-child(5) { width: 8%; }  /* QTY */
-.tabla-tabla-row-titulo:nth-child(6) { width: 8%; }  /* RMV */
-/* FILAS DE TABLA */
-.tabla-tabla-row {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: separate;
-    border-spacing: 0;
-}
-/* GAP ENTRE COLUMNAS - 5px EXACTO */
-.tabla-tabla-row th + th,
-.tabla-tabla-row td + td {
-    padding-left: 5px;
-}
-/* LÍNEA DIVISORIA */
-.tabla-tabla-row-divider {
-    width: 100%;
-}
-.tabla-tabla-row-titulo-divider-cell {
-    border-top: 3px solid #ff1493;
-    height: 0;
-    padding: 5px 0;
-}
-/* CELDAS DE PRODUCTO */
-.tabla-tabla-row-producto {
-    width: 100%;
-    height: 40px;
-    background-color: white !important;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    box-sizing: border-box;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.25rem;
-    color: black !important;
-    vertical-align: middle;
-}
-/* CONTENEDOR DE IMAGEN */
-.tabla-tabla-row-producto-image {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.tabla-tabla-row-producto-image-cell {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 6px;
-    object-fit: contain;
-}
-/* TEXTOS DE PRODUCTO */
-.tabla-tabla-row-producto-name {
-    text-align: left;
-}
-.tabla-tabla-row-producto-symbol {
-    text-align: left;
-}
-.tabla-tabla-row-producto-amount {
-    text-align: right;
-}
-.-tabla-tabla-row-producto-quantity {
-    text-align: center;
-}
-/* BOTÓN REMOVER */
-.tabla-tabla-row-boton {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.tabla-tabla-row-boton-remove {
-    width: 100%;
-    height: 40px;
-    background-color: #39ff14;
-    border-radius: 6px;
-    border: none;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-}
-.tabla-tabla-row-boton-remove:hover {
-    transform: scale(1.05);
-}
-/* TOTALES */
-.tabla-tabla-row-totales {
-    width: 100%;
-    display: flex;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.25rem;
-    color: white !important;
-    text-decoration: none;  
-    align-items: right;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.tabla-tabla-row-totales-subtotal-monto-symbol {
-    text-align: left;
-}
-.tabla-tabla-row-totales-subtotal-monto-amount {
-    text-align: right;
-}
-
 
 
 
@@ -7013,355 +6837,253 @@ text-decoration: none;
 ====================================== */
 /* CONTENEDOR PRINCIPAL - FRANJA - TÍTULO */
 .cartfull-container {
-  position: relative;
-  width: 800px;
-  background-color: #9900CC; /* purpura neon */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding: 30px;
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
 }
 .cartfull-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 90px;
-  background-color: #8000A8; /* purpura intenso */
-  border-radius: 20px 20px 0 0;
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
 }
 .cartfull-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  text-decoration: none;
-  margin: 0 0 16px 0;
-  line-height: 1.6;
-  text-align: left;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
 }
-
 /* CONTENEDOR DE LA TABLA */
 .cartfull-table {
-  width: 100%;
+width: 100%;
 }
 .cartfull-table {
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: separate;
-  border-spacing: 0;
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
 }
 /* GAP ENTRE COLUMNAS - 5px EXACTO */
 .cartfull-table td + td,
 .cartfull-table th + th {
-  padding-left: 5px;
+padding-left: 5px;
 }
 .cartfull-table td:first-child,
 .cartfull-table th:first-child {
-  padding-left: 0;
+padding-left: 0;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .cartfull-table th:nth-child(1),
 .cartfull-table td:nth-child(1) { /* IMAGE - 10% */
-  width: 10%;
+width: 10%;
 }
 .cartfull-table th:nth-child(2),
 .cartfull-table td:nth-child(2) { /* PRODUCT NAME - 34% */
-  width: 34%;
+width: 34%;
 }
 .cartfull-table th:nth-child(3),
 .cartfull-table td:nth-child(3) { /* UNIT PRICE - 20% */
-  width: 20%;
+width: 20%;
 }
 .cartfull-table th:nth-child(4),
 .cartfull-table td:nth-child(4) { /* TOTAL - 20% */
-  width: 20%;
+width: 20%;
 }
 .cartfull-table th:nth-child(5),
 .cartfull-table td:nth-child(5) { /* QTY - 8% */
-  width: 8%;
+width: 8%;
 }
 .cartfull-table th:nth-child(6),
 .cartfull-table td:nth-child(6) { /* RMV - 8% */
-  width: 8%;
+width: 8%;
 }
 /* ENCABEZADOS DE TABLA */
 .cartfull-table-head-row {
-  width: 100%;
+width: 100%;
 }
 .cartfull-table-head-row-subtitle {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #39ff14;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 0 0 10px 0;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+text-transform: uppercase;
+padding-top: 10px;
+padding-botton: 10px;  
+margin-top: 0;
+margin-bottom: 0px; 
 }
-
 /* LÍNEA DIVISORIA */
 .cartfull-table-body-divider {
-  width: 100%;
+width: 100%;
 }
 .cartfull-table-body-divider {
-  border-top: 3px solid #ff1493;
-  height: 0;
-  padding: 5px 0;
+border-top: 3px solid #39ff14 !important;
+height: 0;
+padding: 5px 0;
 }
-
 /* CELDAS DE TABLA - ALINEACIÓN GENERAL */
 .cartfull-table-body-line-product {
-  vertical-align: middle;
-  padding: 5px 0;
+vertical-align: middle;
+padding-top: 10px;
+padding-botton: 10px;  
 }
-
-/* ======================================
-   CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px
-====================================== */
+/* CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px */
 /* CONTENEDOR DE IMAGEN */
 .cartfull-table-body-line-product-image- {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .cartfull-table-body-line-cell-product-image-photo {
-  max-width: 100%;
-  max-height: 100%; 
-  border-radius: 6px;
-  object-fit: contain;
+max-width: 100%;
+max-height: 100%; 
+border-radius: 6px;
+object-fit: contain;
 }
-
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
-.cartfull-table-body-line-product-name {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-product-name-text {
-  text-align: left;
-  width: 100%;
-}
-
-/* CONTENEDOR DE PRECIO UNITARIO - RECUADRO BLANCO */
-.cartfull-table-body-line-product-unitprice {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-product-unitprice-symbol {
-  text-align: left;
-}
-.cartfull-table-body-line-product-unitprice-amount {
-  text-align: right;
-}
-
-/* CONTENEDOR DE PRECIO TOTAL - RECUADRO BLANCO */
-.cartfull-table-body-line-product-totalprice {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-product-totalprice-symbol {
-  text-align: left;
-}
-.cartfull-table-body-line-product-totalprice-amount {
-  text-align: right;
-}
-
-/* CONTENEDOR DE CANTIDAD - RECUADRO BLANCO */
+.cartfull-table-body-line-product-name,
+.cartfull-table-body-line-product-unitprice,
+.cartfull-table-body-line-product-total,
 .cartfull-table-body-line-product-quantity {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
+width: 100%;
+height: 40px;
+background-color: white !important;
+border-radius: 6px;
+display: flex;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;  
+align-items: center;
+box-sizing: border-box;
+padding: 10px;
+}
+.cartfull-table-body-line-product-name {
+text-align: left;
+}
+.cartfull-table-body-line-product-unitprice-symbol,
+.cartfull-table-body-line-product-totalprice-symbol {
+text-align: left;
+}
+.cartfull-table-body-line-product-unitprice-amount,
+.cartfull-table-body-line-product-totalprice-amount {
+text-align: right;
 }
 .cartfull-table-body-line-product-quantity-number {
-  text-align: center;
-  width: 100%;
+text-align: center;
 }
-
 /* CONTENEDOR DE BOTÓN REMOVER */
 .cartfull-table-body-line-product-button {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .cartfull-table-body-line-product-button-remove {
-  width: 100%;
-  height: 40px;
-  background-color: #39ff14;
-  border-radius: 6px;
-  border: none;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  box-sizing: border-box;
-  transition: transform 0.3s ease;
+width: 100%;
+height: 40px;
+background-color: #39ff14 !important;
+border-radius: 6px;
+border: none;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+padding: 10px;
+cursor: pointer;
+box-sizing: border-box;
+transition: transform 0.3s ease;
 }
 .cartfull-table-body-line-product-button-remove:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
-
-/* ======================================
-   FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL)
-====================================== */
-/* SUBTOTAL - TEXTO SIN RECUADRO BLANCO */
-.cartfull-table-body-line-subtotal-unitprice-label {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-}
-.cartfull-table-body-line-subtotal-unitprice-label-text {
-  text-align: right;
-}
-
-/* SUBTOTAL PRICE - CON RECUADRO BLANCO */
-.cartfull-table-body-line-subtotal-total-price {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-subtotal-total-price-symbol {
-  text-align: left;
-}
-.cartfull-table-body-line-subtotal-total-price-amount {
-  text-align: right;
-}
-
-/* SHIPPING - TEXTO SIN RECUADRO BLANCO */
-.cartfull-table-body-line-shipping-unitprice-label {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-}
-.cartfull-table-body-line-shipping-unitprice-label-text {
-  text-align: right;
-}
-
-/* SHIPPING PRICE - CON RECUADRO BLANCO */
-.cartfull-table-body-line-shipping-total-price {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-shipping-total-price-symbol {
-  text-align: left;
-}
-.cartfull-table-body-line-shipping-total-price-amount {
-  text-align: right;
-}
-
-/* TOTAL - TEXTO SIN RECUADRO BLANCO */
+/* FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL) */
+.cartfull-table-body-line-subtotal-unitprice-label,
+.cartfull-table-body-line-shipping-unitprice-label,
 .cartfull-table-body-line-total-unitprice-label {
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 10px 0;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
+width: 100%;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+box-sizing: border-box;  
+padding: 10px;  
 }
+.cartfull-table-body-line-subtotal-unitprice-label-text,
+.cartfull-table-body-line-shipping-unitprice-label-text,
 .cartfull-table-body-line-total-unitprice-label-text {
-  text-align: right;
+text-align: right;
+}
+/* SUBTOTAL PRICE - CON RECUADRO BLANCO */
+.cartfull-table-body-line-subtotal-total-price,
+.cartfull-table-body-line-shipping-total-price,
+cartfull-table-body-line-total-total-price {
+width: 100%;
+height: 40px;
+background-color: white;
+border-radius: 6px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px;
+box-sizing: border-box;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black;
+}
+.cartfull-table-body-line-subtotal-total-price-symbol,
+.cartfull-table-body-line-shipping-total-price-symbol,
+cartfull-table-body-line-total-total-price-symbol {
+text-align: left;
+}
+.cartfull-table-body-line-subtotal-total-price-amount,
+.cartfull-table-body-line-shipping-total-price-amount,
+cartfull-table-body-line-total-total-price-amount {
+text-align: right;
 }
 
-/* TOTAL PRICE - CON RECUADRO BLANCO */
-.cartfull-table-body-line-total-total-price {
-  width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  box-sizing: border-box;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: black;
-}
-.cartfull-table-body-line-total-total-price-symbol {
-  text-align: left;
-}
-.cartfull-table-body-line-total-total-price-amount {
-  text-align: right;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
