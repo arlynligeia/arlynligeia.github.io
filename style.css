@@ -6693,40 +6693,6 @@ text-align: left;
 text-align: right;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 5. DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-receipt-tax {
 background-color: rgba(255, 255, 255, 0.05);
@@ -6758,27 +6724,6 @@ margin-top: 0px;
 margin-bottom: 0px;
 font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 6. INFORMACIÓN DE PAGO */
 .electronicsalesreceipt-receipt-payment {
@@ -6868,6 +6813,186 @@ background-color: #ff1493 !important;
 .electronicsalesreceipt-button-download:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+/* ESTILOS GENERALES DE LA TABLA */
+.tabla-tabla {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 5px;
+    table-layout: fixed;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+/* TÍTULOS DE LA TABLA */
+.tabla-tabla-row-titulo {
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #39ff14 !important;
+    text-decoration: none;
+    text-align: center;
+}
+/* DISTRIBUCIÓN DE COLUMNAS */
+.tabla-tabla-row-titulo:nth-child(1) { width: 10%; } /* IMAGE */
+.tabla-tabla-row-titulo:nth-child(2) { width: 34%; } /* PRODUCT/SERVICE */
+.tabla-tabla-row-titulo:nth-child(3) { width: 20%; } /* UNIT PRICE */
+.tabla-tabla-row-titulo:nth-child(4) { width: 20%; } /* TOTAL */
+.tabla-tabla-row-titulo:nth-child(5) { width: 8%; }  /* QTY */
+.tabla-tabla-row-titulo:nth-child(6) { width: 8%; }  /* RMV */
+/* FILAS DE TABLA */
+.tabla-tabla-row {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+/* GAP ENTRE COLUMNAS - 5px EXACTO */
+.tabla-tabla-row th + th,
+.tabla-tabla-row td + td {
+    padding-left: 5px;
+}
+/* LÍNEA DIVISORIA */
+.tabla-tabla-row-divider {
+    width: 100%;
+}
+.tabla-tabla-row-titulo-divider-cell {
+    border-top: 3px solid #ff1493;
+    height: 0;
+    padding: 5px 0;
+}
+/* CELDAS DE PRODUCTO */
+.tabla-tabla-row-producto {
+    width: 100%;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: black !important;
+    vertical-align: middle;
+}
+/* CONTENEDOR DE IMAGEN */
+.tabla-tabla-row-producto-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tabla-tabla-row-producto-image-cell {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 6px;
+    object-fit: contain;
+}
+/* TEXTOS DE PRODUCTO */
+.tabla-tabla-row-producto-name {
+    text-align: left;
+}
+.tabla-tabla-row-producto-symbol {
+    text-align: left;
+}
+.tabla-tabla-row-producto-amount {
+    text-align: right;
+}
+.-tabla-tabla-row-producto-quantity {
+    text-align: center;
+}
+/* BOTÓN REMOVER */
+.tabla-tabla-row-boton {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabla-tabla-row-boton-remove {
+    width: 100%;
+    height: 40px;
+    background-color: #39ff14;
+    border-radius: 6px;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+.tabla-tabla-row-boton-remove:hover {
+    transform: scale(1.05);
+}
+/* TOTALES */
+.tabla-tabla-row-totales {
+    width: 100%;
+    display: flex;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: white !important;
+    text-decoration: none;  
+    align-items: right;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.tabla-tabla-row-totales-subtotal-monto-symbol {
+    text-align: left;
+}
+.tabla-tabla-row-totales-subtotal-monto-amount {
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
