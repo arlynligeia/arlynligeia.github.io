@@ -6823,7 +6823,46 @@ transform: scale(1.05);
 
 
 
-
+/* ======================================
+   ELECTRONIC SALES RECEIPT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.tabla-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.tabla-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;  
+}
+.tabla-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.tabla-title a {
+color: white !important;
+text-decoration: none;
+}
 /* ESTILOS GENERALES DE LA TABLA */
 .tabla-tabla {
     width: 100%;
