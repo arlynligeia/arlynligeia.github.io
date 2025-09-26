@@ -6942,12 +6942,14 @@ padding: 5px 0;
 .cartfull-table-body-line-product {
 vertical-align: middle;
 padding-top: 10px;
-padding-botton: 10px;  
+padding-botton: 10px;
+margin-top: 0;
+margin-bottom: 10px; 
 }
 /* CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px */
 /* CONTENEDOR DE IMAGEN */
 .cartfull-table-body-line-product-image- {
- width: 100%;
+width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -7028,17 +7030,23 @@ font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 box-sizing: border-box;  
-padding: 10px;  
+padding: 10px;
+margin-top: 0;
+margin-bottom: 10px; 
 }
 .cartfull-table-body-line-subtotal-unitprice-label-text,
 .cartfull-table-body-line-shipping-unitprice-label-text,
 .cartfull-table-body-line-total-unitprice-label-text {
 text-align: right;
 }
+.cartfull-table-body-line-total-unitprice-label-text {
+margin-bottom: 0px;
+}
 /* SUBTOTAL PRICE - CON RECUADRO BLANCO */
 .cartfull-table-body-line-subtotal-total-price,
 .cartfull-table-body-line-shipping-total-price,
-.cartfull-table-body-line-total-total-price {
+.cartfull-table-body-line-total-total-price,
+.cartfull-table-body-line-total-quantity-number {
 width: 100%;
 height: 40px;
 background-color: white;
@@ -7046,11 +7054,13 @@ border-radius: 6px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 10px;
-box-sizing: border-box;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black;
+box-sizing: border-box;
+padding: 10px;
+margin-top: 0;
+margin-bottom: 10px; 
 }
 .cartfull-table-body-line-subtotal-total-price-symbol,
 .cartfull-table-body-line-shipping-total-price-symbol,
@@ -7062,8 +7072,13 @@ text-align: left;
 .cartfull-table-body-line-total-total-price-amount {
 text-align: right;
 }
-
-
+.cartfull-table-body-line-total-quantity-number {
+text-align: center;
+margin-bottom: 0px;
+}
+.cartfull-table-body-line-total-total-price-amount{
+margin-bottom: 0px;
+}
 
 
 
