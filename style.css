@@ -6575,7 +6575,7 @@ margin-bottom: 0px;
 
 
 /* 4. DETALLES DE LA ORDEN CON TABLA */
-.electronicsalesreceipt-receipt-details {
+.electronicsalesreceipt-receipt-orderdetails {
 background-color: rgba(255, 255, 255, 0.1);
 border-radius: 15px;
 border: 3px solid #39ff14 !important;
@@ -6583,7 +6583,7 @@ padding: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-.electronicsalesreceipt-receipt-details-subtitle {
+.electronicsalesreceipt-receipt-orderdetails-subtitle{
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
@@ -6593,105 +6593,174 @@ text-align: center;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.electronicsalesreceipt-receipt-details-table {
+/* CONTENEDOR DE LA TABLA */
+.electronicsalesreceipt-receipt-orderdetails-table {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
 border-spacing: 0;
 }
 /* GAP ENTRE COLUMNAS - 5px EXACTO */
-.electronicsalesreceipt-receipt-details-table td + td,
-.electronicsalesreceipt-receipt-details-table th + th {
+.electronicsalesreceipt-receipt-orderdetails-table td + td,
+.electronicsalesreceipt-receipt-orderdetails-table th + th {
 padding-left: 5px;
 }
-.electronicsalesreceipt-receipt-details-table td:first-child,
-.electronicsalesreceipt-receipt-details-table th:first-child {
+.electronicsalesreceipt-receipt-orderdetails-table td:first-child,
+.electronicsalesreceipt-receipt-orderdetails-table th:first-child {
 padding-left: 0;
 }
 /* ANCHO DE COLUMNAS EXACTO */
-.electronicsalesreceipt-receipt-details-table th:nth-child(1),
-.electronicsalesreceipt-receipt-details-table td:nth-child(1) { /* PRODUCT/SERVICE - 48% */
-width: 48%;
+.electronicsalesreceipt-receipt-orderdetails-table th:nth-child(1),
+.electronicsalesreceipt-receipt-orderdetails-table td:nth-child(1) { /* PRODUCT NAME - 52% */
+width: 52%;
 }
-.electronicsalesreceipt-receipt-details-table th:nth-child(2),
-.electronicsalesreceipt-receipt-details-table td:nth-child(2) { /* QTY - 8% */
+.electronicsalesreceipt-receipt-orderdetails-table th:nth-child(2),
+.electronicsalesreceipt-receipt-orderdetails-table td:nth-child(2) { /* QTY - 8% */
 width: 8%;
 }
-.electronicsalesreceipt-receipt-details-table th:nth-child(3),
-.electronicsalesreceipt-receipt-details-table td:nth-child(3) { /* UNIT PRICE - 22% */
-width: 22%;
+.electronicsalesreceipt-receipt-orderdetails-table th:nth-child(3),
+.electronicsalesreceipt-receipt-orderdetails-table td:nth-child(3) { /* UNIT PRICE - 20% */
+width: 20%;
 }
-.electronicsalesreceipt-receipt-details-table th:nth-child(4),
-.electronicsalesreceipt-receipt-details-table td:nth-child(4) { /* TOTAL - 22% */
-width: 22%;
+.electronicsalesreceipt-receipt-orderdetails-table th:nth-child(4),
+.electronicsalesreceipt-receipt-orderdetails-table td:nth-child(4) { /* TOTAL - 20% */
+width: 20%;
 }
 /* ENCABEZADOS DE TABLA */
-.electronicsalesreceipt-receipt-details-table-row-subtitle {
+.electronicsalesreceipt-receipt-orderdetails-table-head-row {
+width: 100%;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5; 
+line-height: 1.5;
 text-align: center;
-padding: 10px ;  
-margin-top: 0px;
-margin-bottom: 0px;
+text-transform: uppercase;
+padding-top: 10px;
+padding-bottom: 10px;  
+margin-top: 0;
+margin-bottom: 0px; 
 }
 /* LÍNEA DIVISORIA */
-.electronicsalesreceipt-receipt-details-table-row-divider {
+.electronicsalesreceipt-receipt-orderdetails-table-body-divider-1 {
 width: 100%;
 }
-.electronicsalesreceipt-receipt-details-table-row-divider-cell {
-border-top: 3px solid #ff1493;
+.electronicsalesreceipt-receipt-orderdetails-table-body-divider-1 {
+border-top: 3px solid #39ff14 !important;
 height: 0;
-padding-top: 5px ;
-padding-botton: 5px ;  
+padding-top: 0px;
+padding-bottom: 5px;  
 }
-.electronicsalesreceipt-receipt-details-table-row-product {
+/* CELDAS DE TABLA - ALINEACIÓN GENERAL */
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product {
+vertical-align: middle;
+}
+/* CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px */
+
+/* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-name,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-quantity,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice {
+width: 100%;
+display: flex;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;  
+align-items: center;
+justify-content: space-between;   
+padding-top: 0px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+margin-top: 0px;
+margin-bottom: 0px;
+box-sizing: border-box;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-name {
+text-align: left;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-quantity {
+justify-content: center; 
+text-align: center;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice-symbol,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice-symbol {
+text-align: left;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice-amount,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice-amount {
+text-align: right;
+}
+/* LÍNEA DIVISORIA */
+.electronicsalesreceipt-receipt-orderdetails-table-body-divider-2 {
+width: 100%;
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-divider-2 {
+border-top: 3px solid #39ff14 !important;
+height: 0;
+padding-top: 0px;
+padding-bottom: 5px;
+}
+/* FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL) */
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-unitprice-label,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-unitprice-label,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-total-unitprice-label {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: flex-end;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;   
+padding-top: 0px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
+margin-top: 0px;
+margin-bottom: 0px;
+box-sizing: border-box;  
+}
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-unitprice-label-text,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-unitprice-label-text,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-total-unitprice-label-text {
+text-align: right;
+}
+/* SUBTOTAL PRICE - CON RECUADRO BLANCO */
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price {
+width: 100%;
+display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
-line-height: 1.5;  
+align-items: center;
+justify-content: space-between; 
+padding-top: 0px;
+padding-bottom: 5px;
+padding-left: 5px;
+padding-right: 5px;
 margin-top: 0px;
 margin-bottom: 0px;
+box-sizing: border-box;
 }
-.electronicsalesreceipt-receipt-details-table-row-product:nth-child(1) {
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price-symbol,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price-symbol,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price-symbol {
 text-align: left;
 }
-.electronicsalesreceipt-receipt-details-table-row-product:nth-child(2) {
-text-align: center;
-}
-/* CONTENEDORES INTERNOS PARA MONEDAS */
-.electronicsalesreceipt-receipt-details-table-row-product-currency {
-display: inline-block;
-text-align: left;
-}
-.electronicsalesreceipt-receipt-details-table-row-product-amount {
-display: inline-block;
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price-amount,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price-amount,
+.electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price-amount {
 text-align: right;
 }
-/* SHIPPING Y TOTAL */
-.electronicsalesreceipt-receipt-details-table-row-shipping,
-.electronicsalesreceipt-receipt-details-table-row-total {
-width: 100%;
-display: flex;
-justify-content: flex-end;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white;
-text-align: right;
-padding: 10px ;
-box-sizing: border-box; 
-}
-.electronicsalesreceipt-receipt-details-table-row-shipping-currency,
-.electronicsalesreceipt-receipt-details-table-row-total-currency {
-text-align: left;
-}
-.electronicsalesreceipt-receipt-details-table-row-shipping-amount,
-.electronicsalesreceipt-receipt-details-table-row-total-amount {
-text-align: right;
-}
+
 
 /* 5. DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-receipt-tax {
@@ -6823,6 +6892,261 @@ transform: scale(1.05);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   PRIVACY POLICY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.privacypolicy-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.privacypolicy-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;  
+}
+.privacypolicy-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.privacypolicy-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DE TEXTO */
+.privacypolicy-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.privacypolicy-text-1,
+.privacypolicy-text-2,
+.privacypolicy-text-3,
+.privacypolicy-text-4,
+.privacypolicy-text-5,
+.privacypolicy-text-6,
+.privacypolicy-text-7,
+.privacypolicy-text-8,
+.privacypolicy-text-9,
+.privacypolicy-text-10,
+.privacypolicy-text-11,
+.privacypolicy-text-12,
+.privacypolicy-text-13,
+.privacypolicy-text-14,
+.privacypolicy-text-15,
+.privacypolicy-text-16,
+.privacypolicy-text-17,
+.privacypolicy-text-18,
+.privacypolicy-text-19 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.privacypolicy-text-19 {
+margin-bottom: 0px;
+}
+
+/* ======================================
+   TERMS AND CONDITIONS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.termsandconditions-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.termsandconditions-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;  
+}
+.termsandconditions-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.termsandconditions-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DE TEXTO */
+.termsandconditions-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.termsandconditions-text-1,
+.termsandconditions-text-2,
+.termsandconditions-text-3,
+.termsandconditions-text-4,
+.termsandconditions-text-5,
+.termsandconditions-text-6,
+.termsandconditions-text-7,
+.termsandconditions-text-8,
+.termsandconditions-text-9,
+.termsandconditions-text-10,
+.termsandconditions-text-11,
+.termsandconditions-text-12,
+.termsandconditions-text-13,
+.termsandconditions-text-14,
+.termsandconditions-text-15,
+.termsandconditions-text-16,
+.termsandconditions-text-17,
+.termsandconditions-text-18,
+.termsandconditions-text-19,
+.termsandconditions-text-20 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.termsandconditions-text-20 {
+margin-bottom: 0px;
+}
 
 
 
@@ -7310,261 +7634,6 @@ text-align: left;
 .prueba-table-body-line-total-total-price-amount {
 text-align: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================================
-   PRIVACY POLICY
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.privacypolicy-container {
-position: relative;
-width: 800px;
-background-color: #001F99 !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.privacypolicy-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px; 
-background-color: #001A80 !important;
-border-radius: 20px 20px 0 0;  
-}
-.privacypolicy-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.privacypolicy-title a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR DE TEXTO */
-.privacypolicy-text {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.privacypolicy-text-1,
-.privacypolicy-text-2,
-.privacypolicy-text-3,
-.privacypolicy-text-4,
-.privacypolicy-text-5,
-.privacypolicy-text-6,
-.privacypolicy-text-7,
-.privacypolicy-text-8,
-.privacypolicy-text-9,
-.privacypolicy-text-10,
-.privacypolicy-text-11,
-.privacypolicy-text-12,
-.privacypolicy-text-13,
-.privacypolicy-text-14,
-.privacypolicy-text-15,
-.privacypolicy-text-16,
-.privacypolicy-text-17,
-.privacypolicy-text-18,
-.privacypolicy-text-19 {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin-top: 0px;
-margin-bottom: 15px;
-}
-.privacypolicy-text-19 {
-margin-bottom: 0px;
-}
-
-/* ======================================
-   TERMS AND CONDITIONS
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.termsandconditions-container {
-position: relative;
-width: 800px;
-background-color: #001F99 !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.termsandconditions-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px; 
-background-color: #001A80 !important;
-border-radius: 20px 20px 0 0;  
-}
-.termsandconditions-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.termsandconditions-title a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR DE TEXTO */
-.termsandconditions-text {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.termsandconditions-text-1,
-.termsandconditions-text-2,
-.termsandconditions-text-3,
-.termsandconditions-text-4,
-.termsandconditions-text-5,
-.termsandconditions-text-6,
-.termsandconditions-text-7,
-.termsandconditions-text-8,
-.termsandconditions-text-9,
-.termsandconditions-text-10,
-.termsandconditions-text-11,
-.termsandconditions-text-12,
-.termsandconditions-text-13,
-.termsandconditions-text-14,
-.termsandconditions-text-15,
-.termsandconditions-text-16,
-.termsandconditions-text-17,
-.termsandconditions-text-18,
-.termsandconditions-text-19,
-.termsandconditions-text-20 {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin-top: 0px;
-margin-bottom: 15px;
-}
-.termsandconditions-text-20 {
-margin-bottom: 0px;
-}
-
-
-
-
-
-
-
-
-
 
 
 
