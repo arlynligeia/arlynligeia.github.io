@@ -7284,9 +7284,9 @@ margin-bottom: 5px;
 }
 /* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
 .cartfull-table-body-line-product-name,
+.cartfull-table-body-line-product-quantity,
 .cartfull-table-body-line-product-unitprice,
-.cartfull-table-body-line-product-totalprice,
-.cartfull-table-body-line-product-quantity {
+.cartfull-table-body-line-product-totalprice {
 width: 100%;
 height: 40px;
 background-color: white !important;
@@ -7307,6 +7307,10 @@ box-sizing: border-box;
 .cartfull-table-body-line-product-name {
 text-align: left;
 }
+.cartfull-table-body-line-product-quantity {
+justify-content: center; 
+text-align: center;
+}
 .cartfull-table-body-line-product-unitprice-symbol,
 .cartfull-table-body-line-product-totalprice-symbol {
 text-align: left;
@@ -7314,10 +7318,6 @@ text-align: left;
 .cartfull-table-body-line-product-unitprice-amount,
 .cartfull-table-body-line-product-totalprice-amount {
 text-align: right;
-}
-.cartfull-table-body-line-product-quantity {
-justify-content: center; 
-text-align: center;
 }
 /* CONTENEDOR DE BOTÓN REMOVER */
 .cartfull-table-body-line-product-button {
@@ -7385,8 +7385,7 @@ text-align: right;
 /* SUBTOTAL PRICE - CON RECUADRO BLANCO */
 .cartfull-table-body-line-subtotal-total-price,
 .cartfull-table-body-line-shipping-total-price,
-.cartfull-table-body-line-total-total-price,
-.cartfull-table-body-line-total-quantity-number {
+.cartfull-table-body-line-total-total-price {
 width: 100%;
 height: 40px;
 background-color: white !important;
@@ -7415,10 +7414,6 @@ text-align: left;
 .cartfull-table-body-line-shipping-total-price-amount,
 .cartfull-table-body-line-total-total-price-amount {
 text-align: right;
-}
-.cartfull-table-body-line-total-quantity-number {
-justify-content: center;  
-text-align: center;
 }
 
 
