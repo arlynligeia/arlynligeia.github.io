@@ -129,7 +129,7 @@ position: relative;
 .biography-container {
 position: relative;
 width: 800px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -142,7 +142,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .biography-title {
@@ -151,7 +151,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -159,16 +159,16 @@ margin-top: 0px;
 margin-bottom: 16px;
 }
 .biography-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.biography-columns-container {
+.biography-columns {
 position: relative;
 z-index: 2;
 }
 /* GRID DE DOS COLUMNAS*/
-.biography-grid-container {
+.biography-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
@@ -176,17 +176,17 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 /* CONTENEDOR DE TEXTO */
-.biography-text-container {
+.biography-columns-grid-text {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;  
 }
-.biography-text-1,
-.biography-text-2,
-.biography-text-3,
-.biography-text-4,
-.biography-text-5 {
+.biography-columns-grid-text-1,
+.biography-columns-grid-text-2,
+.biography-columns-grid-text-3,
+.biography-columns-grid-text-4,
+.biography-columns-grid-text-5 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -198,17 +198,17 @@ margin-bottom: 15px;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.biography-text-5 {
+.biography-columns-grid-text-5 {
 margin-bottom: 0px;
 }
 /* CONTENEDOR DE IMAGEN*/
-.biography-image-container {
+.biography-columns-grid-image {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.biography-image-container img {
+.biography-columns-grid-image img {
 width: 100%;
 height: auto;
 display: block;
@@ -228,17 +228,17 @@ align-items: center;
 margin-top: 30px;
 }
 /* CONTENEDOR DEL BANNER */
-.film-image-container {
+.film-banner {
 position: relative; 
 width: 95%;
 height: 100%;
-background-color: #000000; 
-border: 2px solid white;
+background-color: #000000 !important;
+border: 2px solid white !important;
 border-radius: 20px;
 overflow: hidden;
 }
 /* IMAGEN DEL BANNER */
-.film-image-banner {
+.film-banner img {
 width: 100%;
 height: 100%;
 object-fit: cover;
@@ -251,7 +251,7 @@ object-fit: cover;
 .featurefilm-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -264,7 +264,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .featurefilm-title {
@@ -273,7 +273,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -281,19 +281,19 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .featurefilm-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.featurefilm-text-container {
+.featurefilm-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.featurefilm-text {
+.featurefilm-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -308,7 +308,7 @@ margin-bottom: 0px;
 .alone-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -321,7 +321,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .alone-title {
@@ -330,7 +330,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -338,16 +338,16 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .alone-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.alone-columns-container {
+.alone-columns {
 position: relative;
 z-index: 2;
 }
 /* GRID DE DOS COLUMNAS*/
-.alone-grid-container {
+.alone-colums-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
@@ -355,97 +355,84 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* CONTENEDOR DE IMAGEN*/
-.alone-image-container {
+.alone-colums-grid-image {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.alone-image-container img {
+.alone-colums-grid-image img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO */
-.alone-text-1-container {
+.alone-colums-grid-text {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;  
 }
-.alone-text-1,
-.alone-text-2,
-.alone-text-3,
-.alone-text-4 {
-color: white;
-text-decoration: none;
-line-height: 1.5;
-margin-top: 0px;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.alone-text-1 {
+.alone-colums-grid-text-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-text-align: center;
-margin-bottom: 10px;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: left;
+margin-top: 0;
+margin-bottom: 10px; 
 }
-.alone-text-2,
-.alone-text-3,
-.alone-text-4 {
+.alone-colums-grid-text-1,
+.alone-colums-grid-text-2,
+.alone-colums-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-.alone-text-2 {
-margin-bottom: 30px;
-}
-.alone-text-3,
-.alone-text-4 {
-margin-bottom: 15px;
-}
-/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS*/
-.alone-text-2-container {
+.alone-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
-.alone-text-5,
-.alone-text-6,
-.alone-text-7,
-.alone-text-8,
-.alone-text-9,
-.alone-text-10 {
-color: white;
-text-decoration: none;
-line-height: 1.5;
-margin-top: 0px;
-}
-.alone-text-5 {
+.alone-text-subtitle{
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-text-align: center;
-margin-bottom: 10px;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: left;
+margin-top: 0;
+margin-bottom: 10px; 
 }
-.alone-text-6,
-.alone-text-7,
-.alone-text-8,
-.alone-text-9,
-.alone-text-10 {
+.alone-text-1,
+.alone-text-2,
+.alone-text-3,
+.alone-text-4,
+.alone-text-5 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-.alone-text-6,
-.alone-text-7,
-.alone-text-8,
-.alone-text-9 {
-margin-bottom: 15px; 
-}
-.alone-text-10 {
+.alone-text-5 {
 margin-bottom: 0px; 
 }
+
+
+
+
+
 
 /* ======================================
    SHORT FILM
