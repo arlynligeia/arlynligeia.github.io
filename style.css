@@ -167,7 +167,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS*/
+/* CONTENEDOR DE GRID */
 .biography-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -213,12 +213,14 @@ width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 
 /* ======================================
    FILM
 ====================================== */
-/* CONTENEDOR PRINCIPAL DE FILM */
+/* CONTENEDOR PRINCIPAL */
 .film-container {
 position: relative;
 height: calc(100vh - 220px);
@@ -233,11 +235,10 @@ position: relative;
 width: 95%;
 height: 100%;
 background-color: #000000 !important;
-border: 2px solid white !important;
+border: 3px solid white !important;
 border-radius: 20px;
 overflow: hidden;
 }
-/* IMAGEN DEL BANNER */
 .film-banner img {
 width: 100%;
 height: 100%;
@@ -346,7 +347,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS*/
+/* CONTENEDOR DE GRID */
 .alone-colums-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -366,6 +367,8 @@ width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
+margin-top: 0px;
+margin-bottom: 0px;
 }
 /* CONTENEDOR DE TEXTO */
 .alone-colums-grid-text {
@@ -394,8 +397,12 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 10px;
+margin-bottom: 15px;
 }
+.alone-colums-grid-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .alone-text {
 width: 100%;
 margin-top: 0px;
@@ -423,16 +430,11 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 10px;
+margin-bottom: 15px;
 }
 .alone-text-5 {
 margin-bottom: 0px; 
 }
-
-
-
-
-
 
 /* ======================================
    SHORT FILM
@@ -441,7 +443,7 @@ margin-bottom: 0px;
 .shortfilm-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -454,7 +456,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .shortfilm-title {
@@ -463,7 +465,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -471,19 +473,19 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .shortfilm-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.shortfilm-text-container {
+.shortfilm-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.shortfilm-text {
+.shortfilm-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: justify;
@@ -498,7 +500,7 @@ margin-bottom: 0px;
 .elinfiernodeozul-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -511,7 +513,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .elinfiernodeozul-title {
@@ -520,7 +522,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -528,22 +530,22 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .elinfiernodeozul-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE VIDEO */
-.elinfiernodeozul-video-container {
+.elinfiernodeozul-video {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-.elinfiernodeozul-video-container iframe {
+.elinfiernodeozul-video iframe {
 width: 100%;
 border-radius: 15px;
 height: 400px;
 }
 /* CONTENEDOR DE TEXTO DEBAJO DEL VIDEO*/
-.elinfiernodeozul-text-container {
+.elinfiernodeozul-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px; 
@@ -552,13 +554,11 @@ margin-bottom: 0px;
 .elinfiernodeozul-text-2 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-}
-.elinfiernodeozul-text-1 {
 margin-bottom: 15px; 
 }
 .elinfiernodeozul-text-2 {
@@ -572,7 +572,7 @@ margin-bottom: 0px;
 .musicvideodirection-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -585,7 +585,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .musicvideodirection-title {
@@ -594,7 +594,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -602,19 +602,19 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .musicvideodirection-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.musicvideodirection-text-container {
+.musicvideodirection-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.musicvideodirection-text {
+.musicvideodirection-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -629,7 +629,7 @@ margin-bottom: 0px;
 .despertar-container {
 position: relative;
 width: 800px;
-background-color: #001F99; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -642,7 +642,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .despertar-title {
@@ -651,7 +651,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -659,22 +659,22 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .despertar-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE VIDEO */
-.despertar-video-container {
+.despertar-video {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-.despertar-video-container iframe {
+.despertar-video iframe {
 width: 100%;
 border-radius: 15px;
 height: 400px;
 }
 /* CONTENEDOR DE TEXTO */
-.despertar-text-container {
+.despertar-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px; 
@@ -685,20 +685,29 @@ margin-bottom: 0px;
 .despertar-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0px; 
-}
-.despertar-text-1,
-.despertar-text-2,
-.despertar-text-3 {
+margin-top: 0px;
 margin-bottom: 15px; 
 }
 .despertar-text-4 {
 margin-bottom: 0px; 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    MUSIC
