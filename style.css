@@ -348,7 +348,7 @@ position: relative;
 z-index: 2;
 }
 /* CONTENEDOR DE GRID */
-.alone-colums-grid {
+.alone-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
@@ -356,13 +356,13 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* CONTENEDOR DE IMAGEN*/
-.alone-colums-grid-image {
+.alone-columns-grid-image {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.alone-colums-grid-image img {
+.alone-columns-grid-image img {
 width: 100%;
 height: auto;
 display: block;
@@ -371,13 +371,13 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 /* CONTENEDOR DE TEXTO */
-.alone-colums-grid-text {
+.alone-columns-grid-text {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;  
 }
-.alone-colums-grid-text-subtitle {
+.alone-columns-grid-text-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
@@ -387,9 +387,9 @@ text-align: center;
 margin-top: 0;
 margin-bottom: 10px; 
 }
-.alone-colums-grid-text-1,
-.alone-colums-grid-text-2,
-.alone-colums-grid-text-3 {
+.alone-columns-grid-text-1,
+.alone-columns-grid-text-2,
+.alone-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -399,7 +399,7 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-.alone-colums-grid-text-1 {
+.alone-columns-grid-text-1 {
 margin-bottom: 30px;
 }
 /* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
@@ -696,23 +696,10 @@ margin-bottom: 15px;
 margin-bottom: 0px; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MUSIC
 ====================================== */
-/* CONTENEDOR PRINCIPAL DE FILM */
+/* CONTENEDOR PRINCIPAL */
 .music-container {
 position: relative;
 height: calc(100vh - 220px);
@@ -722,16 +709,15 @@ align-items: center;
 margin-top: 30px;
 }
 /* CONTENEDOR DEL BANNER */
-.music-image-container {
+.music-banner {
 position: relative; 
 width: 95%;
 height: 100%;
-background-color: #000000; 
-border: 2px solid white;
+background-color: #000000 !important; 
+border: 3px solid white !important;
 border-radius: 20px;
 overflow: hidden;
 }
-/* IMAGEN DEL BANNER */
 .music-image-banner {
 width: 100%;
 height: 100%;
@@ -745,7 +731,7 @@ object-fit: cover;
 .album-container {
 position: relative;
 width: 800px;
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -758,7 +744,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #00B8BA; /* Turquesa */
+background-color: #00B8BA !important;
 border-radius: 20px 20px 0 0;
 }
 .album-title {
@@ -767,7 +753,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -775,19 +761,19 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .album-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.album-text-container {
+.album-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.album-text {
+.album-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -802,7 +788,7 @@ margin-bottom: 0px;
 .album1969-container {
 position: relative;
 width: 800px;
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -815,7 +801,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #00B8BA; /* Turquesa */
+background-color: #00B8BA !important;
 border-radius: 20px 20px 0 0;
 }
 .album1969-title {
@@ -824,7 +810,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -832,16 +818,16 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .album1969-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.album1969-columns-container {
+.album1969-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS*/
-.album1969-grid-container {
+/* CONTENEDOR DE GRID */
+.album1969-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
@@ -849,25 +835,90 @@ margin-top: 0px;
 margin-bottom: 15px;
 }
 /* CONTENEDOR DE IMAGEN*/
-.album1969-image-container {
+.album1969-colums-grid-image {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.album1969-image-container img {
+.album1969-colums-grid-image img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
 }
 /* CONTENEDOR DE TEXTO */
-.album1969-text-1-container {
+.album1969-columns-grid-text {
 width: 100%;
 min-width: 0;
 margin-top: 0px;
 margin-bottom: 0px;  
 }
+.album1969-columns-grid-text-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0;
+margin-bottom: 10px; 
+}
+.album1969-columns-grid-text-1 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMAS */
+.album1969-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;  
+}
+.album1969-text-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0;
+margin-bottom: 10px; 
+}
+.album1969-text-1,
+.album1969-text-2,
+.album1969-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 15px;
+}
+.album1969-text-3 {
+margin-bottom: 0px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .album1969-text-1,
 .album1969-text-2 {
 color: white;
