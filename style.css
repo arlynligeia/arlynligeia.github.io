@@ -1530,23 +1530,6 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    GIFTS
 ====================================== */
@@ -1554,7 +1537,7 @@ transform: scale(1.05);
 .gifts-container {
 position: relative;
 width: 800px;
-background-color: #001F99;; /* azul electrico */
+background-color: #001F99 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1567,7 +1550,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80; /* azul noche intenso */
+background-color: #001A80 !important;
 border-radius: 20px 20px 0 0;
 }
 .gifts-title {
@@ -1576,7 +1559,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -1584,19 +1567,19 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .gifts-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.gifts-text-container {
+.gifts-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.gifts-text {
+.gifts-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -1604,18 +1587,18 @@ margin-top: 0px;
 margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTÓN */
-.gifts-button-container {
+.gifts-button {
 display: flex;
 justify-content: center;
 margin-top: 0px;
 margin-bottom: 0px;
 }
 .gifts-button-donatewithpaypal {
-background-color: #ff1493; /* Fucsia por defecto */
+background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -1624,12 +1607,6 @@ padding-right: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
-width: auto !important;
-min-width: 0 !important;
-max-width: none !important;
-height: auto !important;
-margin: 0 !important;
-box-sizing: border-box !important;
 }
 .gifts-button-donatewithpaypal:hover {
 transform: scale(1.05);
@@ -1642,7 +1619,7 @@ transform: scale(1.05);
 .contact-container {
 position: relative;
 width: 550px;
-background-color: #00CED1; /* Celeste agua */
+background-color: #00CED1 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1655,7 +1632,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #00B8BA; /* Turquesa */
+background-color: #00B8BA !important;
 border-radius: 20px 20px 0 0;
 }
 .contact-title {
@@ -1664,7 +1641,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -1672,59 +1649,57 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .contact-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DEL FORMULARIO */
-.contact-form-container {
+.contact-form {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
-.contact-label {
+.contact-form-label {
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 margin-top: 0px;
 margin-bottom: 5px; 
 }
 /* RECUADROS DEL FORMULARIO */
-.contact-input,
-.contact-textarea {
+.contact-form-input,
+.contact-form-textarea {
 width: 100%;
-background-color: white;
+height: 40px;
+background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: black;
+color: black !important;
 padding: 10px;
-border: none;
-box-sizing: border-box;
 margin-top: 0px;
 margin-bottom: 15px; 
+border: none;
+box-sizing: border-box;
 }
-.contact-input {
-height: 40px;
-}
-.contact-textarea {
+.contact-form-textarea {
 height: 150px;
 resize: vertical;
 margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTÓN */
-.contact-button-container {
+.contact-button {
 display: flex;
 justify-content: center;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
 .contact-button-submit {
-background-color: #ff1493; /* Fucsia */
+background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -1737,6 +1712,13 @@ transition: transform 0.3s ease;
 .contact-button-submit:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
 
 /* ======================================
    DIRECT CONTACT
@@ -1871,6 +1853,11 @@ box-sizing: border-box;
 line-height: 20px;
 }
 
+
+
+
+
+
 /* ======================================
    CONTACT FOR FANS
 ====================================== */
@@ -1878,7 +1865,7 @@ line-height: 20px;
 .contactforfans-container {
 position: relative;
 width: 550px;
-background-color: #00CED1; /* Celeste agua */
+background-color: #00CED1 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1891,7 +1878,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #00B8BA; /* Turquesa */
+background-color: #00B8BA !important;
 border-radius: 20px 20px 0 0;
 }
 .contactforfans-title {
@@ -1900,7 +1887,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -1908,28 +1895,29 @@ margin-top: 0px;
 margin-bottom: 16px; 
 }
 .contactforfans-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR DEL FORMULARIO */
-.contactforfans-form-container {
+/* CONTENEDOR DE FORMULARIO */
+.contactforfans-form {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
-.contactforfans-label {
+.contactforfans-form-label {
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 margin-top: 0px;
 margin-bottom: 5px; 
 }
 /* CAMPOS DE ENTRADA */
-.contactforfans-input,
-.contactforfans-textarea {
+.contactforfans-form-input,
+.contactforfans-form-textarea {
 width: 100%;
-background-color: white;
+height: 40px;
+background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -1940,27 +1928,24 @@ box-sizing: border-box;
 margin-top: 0px;
 margin-bottom: 15px; 
 }
-.contactforfans-input {
-height: 40px;
-}
-.contactforfans-textarea {
+.contactforfans-form-textarea {
 height: 150px;
 resize: vertical;
 margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTÓN */
-.contactforfans-button-container {
+.contactforfans-button {
 display: flex;
 justify-content: center;
 margin-top: 0px;
 margin-bottom: 0px; 
 }
 .contactforfans-button-submit {
-background-color: #ff1493; /* Fucsia */
+background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -1973,6 +1958,13 @@ transition: transform 0.3s ease;
 .contactforfans-button-submit:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
 
 /* ======================================
    STORE
