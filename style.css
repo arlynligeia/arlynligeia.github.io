@@ -2579,7 +2579,7 @@ transform: scale(1.05);
 .physicalfashion-container {
 position: relative;
 width: 800px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2592,7 +2592,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .physicalfashion-title {
@@ -2601,7 +2601,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -2609,16 +2609,16 @@ margin-top: 0px;
 margin-bottom: 16px;
 }
 .physicalfashion-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.physicalfashion-columns-container {
+.physicalfashion-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
-.physicalfashion-grid-container {
+/* CONTENEDOR DE GRID */
+.physicalfashion-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-auto-rows: 250px;
@@ -2627,7 +2627,7 @@ margin-top: 0px;
 margin-bottom: 20px;
 }
 /* TARJETAS DE PRODUCTOS */
-.physicalfashion-card {
+.physicalfashion-columns-grid-card {
 position: relative;
 overflow: hidden;
 display: block;
@@ -2636,13 +2636,16 @@ color: white;
 text-decoration: none;
 height: 100%;
 }
-.physicalfashion-card-image {
+.physicalfashion-columns-grid-card img {
 width: 100%;
 height: 100%;
 object-fit: cover;
 transition: transform 0.3s ease;
 }
-.physicalfashion-card-text {
+.physicalfashion-columns-grid-card img:hover {
+transform: scale(1.1);
+}
+.physicalfashion-columns-grid-card-text {
 position: absolute;
 z-index: 2;
 top: 50%;
@@ -2654,11 +2657,8 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-.physicalfashion-card:hover .physicalfashion-card-image {
-transform: scale(1.1);
-}
 /* CONTENEDOR DE BOTONES */
-.physicalfashion-buttons-container {
+.physicalfashion-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -2666,11 +2666,11 @@ margin-bottom: 0px;
 }
 .physicalfashion-button-back,
 .physicalfashion-button-continueshopping {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none; 
 padding-top: 10px;
 padding-bottom: 10px;
@@ -2704,7 +2704,7 @@ transform: scale(1.05);
 .digitalfeaturefilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2717,7 +2717,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title {
@@ -2726,7 +2726,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -2734,25 +2734,27 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .digitalfeaturefilm-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.digitalfeaturefilm-text-container {
+.digitalfeaturefilm-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.digitalfeaturefilm-text {
+.digitalfeaturefilm-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white;
+color: white !important;
 text-decoration: none;  
-line-height: 1.6;
+line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;  
 }
 /* CONTENEDOR DE BOTONES */
-.digitalfeaturefilm-buttons-container {
+.digitalfeaturefilm-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -2760,11 +2762,11 @@ margin-bottom: 0px;
 }
 .digitalfeaturefilm-button-back,
 .digitalfeaturefilm-button-continueshopping {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none; 
 padding-top: 10px;
 padding-bottom: 10px;
@@ -2810,7 +2812,7 @@ transform: scale(1.05);
 .physicaljewelry-container {
 position: relative;
 width: 800px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2823,7 +2825,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .physicaljewelry-title {
@@ -2832,7 +2834,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -2840,24 +2842,26 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .physicaljewelry-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE TEXTO */
-.physicaljewelry-text-container {
+.physicaljewelry-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.physicaljewelry-text {
+.physicaljewelry-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
-line-height: 1.6;
+line-height: 1.5;
 text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;  
 }
 /* CONTENEDOR DE BOTONES */
-.physicaljewelry-buttons-container {
+.physicaljewelry-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -2865,7 +2869,7 @@ margin-bottom: 0px;
 }
 .physicaljewelry-button-back,
 .physicaljewelry-button-continueshopping {
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #00CED1 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
