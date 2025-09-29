@@ -2424,97 +2424,134 @@ ADD TO CART
 
 
 
+
+
+
+
   
 <!-- CART -->
 <section id="cart" class="cart-section main-section">
 <div class="cart-container">
-<h2 class="cart-title">YOUR CART</h2>
+<h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
 <!-- CARRITO VACIO -->
 <div class="cart-empty" id="cart-empty" style="display: none;">
-<div class="cart-empty-container">  
-<p class="cart-empty-container-text">Your cart is empty</p>
-</div>  
-<div class="cart-empty-button">
-<a href="#store" class="cart-empty-button-continueshopping">CONTINUE SHOPPING</a>
+<!-- CONTENEDOR DE TEXTO -->  
+<div class="cart-empty-noitems">  
+<p class="cart-empty-noitems-text">Your cart is empty</p>
+</div>
+<!-- CONTENEDOR DE BOTONES -->    
+<div class="cart-empty-buttons">
+<button class="cart-full-button-back" onclick="history.back()">BACK</button>
+<a href="#store" class="cart-full-button-continueshopping">CONTINUE SHOPPING</a>
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-full" id="cart-full">
-<!-- TABLA -->
-<div class="cart-full-table">
-<table class="cart-full-table-main">   
-<!-- ENCABEZADO -->
-<thead class="cart-full-table-head">
-<tr class="cart-full-table-head-row">
-<th class="cart-full-table-head-image">IMAGE</th>
-<th class="cart-full-table-head-productname">PRODUCT NAME</th>
-<th class="cart-full-table-head-price">PRICE</th>
-<th class="cart-full-table-head-quantity">QTY</th>
-<th class="cart-full-table-head-remove">RMV</th>
+<div class="cart-full" id="cart-full">  
+<!-- CONTENEDOR DE TABLA -->
+<div class="cart-full-table-container">
+<table class="cart-full-table-full">   
+<!-- ENCABEZADO DE TABLA -->
+<thead class="cart-full-table-full-head"> 
+<tr class="cart-full-table-full-head-row">
+<th class="cart-full-table-full-head-row-subtitle">IMAGE</th>
+<th class="cart-full-table-full-head-row-subtitle">PRODUCT/SERVICE</th>
+<th class="cart-full-table-full-head-row-subtitle">QTY</th>   
+<th class="cart-full-table-full-head-row-subtitle">UNIT PRICE</th>  
+<th class="cart-full-table-full-head-row-subtitle">TOTAL</th>
+<th class="cart-full-table-full-head-row-subtitle">RMV</th>
 </tr>
 </thead>
-<!-- CUERPO -->
-<tbody class="cart-full-table-body">
+<!-- CUERPO DE TABLA -->
+<tbody class="cart-full-table-full-body">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="cart-full-table-body-divider"><td colspan="5" class="cart-full-table-body-divider-cell"></td></tr>
+<tr class="cart-full-table-full-body-divider-1"><td colspan="6" class="cart-full-table-full-body-divider-1"></td></tr>
 <!-- PRODUCTOS (SE AGREGARAN CON JS) -->
-<tr id="cart-full-table-body-noitems" class="cart-full-table-body-noitems">
-<td colspan="5" class="cart-full-table-body-noitems-text">No products added yet</td>
+<tr id="cart-full-table-full-body-noitems" class="cart-full-table-full-body-noitems">
+<td colspan="6" class="cart-full-table-full-body-noitems-text">No products added yet</td>
 </tr>
-<!-- LÍNEA DIVISORIA MEDIA -->
-<tr class="cart-full-table-body-divider"><td colspan="5" class="cart-full-table-body-divider-cell"></td></tr> 
+<!-- LÍNEA DIVISORIA INFERIOR -->
+<tr class="cart-full-table-full-body-divider-2"><td colspan="6" class="cart-full-table-full-body-divider-2"></td></tr>
+<!-- FILA SUBTOTAL -->
+<tr class="cart-full-table-full-body-row-subtotal">
+<td class="cart-full-table-full-body-row-subtotal-image"></td>
+<td class="cart-full-table-full-body-row-subtotal-name"></td>
+<td class="cart-full-table-full-body-row-subtotal-quantity"></td>  
+<td class="cart-full-table-full-body-row-subtotal-unitprice">
+<div class="cart-full-table-full-body-row-subtotal-unitprice-label">  
+<span class="cart-full-table-full-body-row-subtotal-unitprice-label-text">Subtotal</span>
+</div>
+</td>
+<td class="cart-full-table-full-body-row-subtotal-total">
+<div class="cart-full-table-full-body-row-subtotal-total-price">
+<span class="cart-full-table-full-body-row-subtotal-total-price-symbol">$</span>
+<span class="cart-full-table-full-body-row-subtotal-total-price-amount" id="cart-full-subtotal">0.00</span>
+</div>
+</td>
+<td class="cart-full-table-full-body-row-subtotal-remove"></td>
+</tr>
 <!-- FILA SHIPPING -->
-<tr class="cart-full-table-body-shipping">
-<td class="cart-full-table-body-shipping-image-cell"></td> 
-<td class="cart-full-table-body-shipping-productname-cell">
-<div class="cart-full-table-body-shipping-productname-cell-container">
-<span class="cart-full-table-body-shipping-productname-cell-container-text">Shipping</span>
+<tr class="cart-full-table-full-body-row-shipping">
+<td class="cart-full-table-full-body-row-shipping-image"></td>
+<td class="cart-full-table-full-body-row-shipping-name"></td>
+<td class="cart-full-table-full-body-row-shipping-quantity"></td>  
+<td class="cart-full-table-full-body-row-shipping-unitprice">
+<div class="cart-full-table-full-body-row-shipping-unitprice-label">  
+<span class="cart-full-table-full-body-row-shipping-unitprice-label-text">Shipping</span>
 </div>
 </td>
-<td class="cart-full-table-body-shipping-price-cell">
-<div class="cart-full-table-body-shipping-price-cell-container">
-<span class="cart-full-table-body-shipping-price-cell-container-currency">$</span>
-<span class="cart-full-table-body-shipping-price-cell-container-amount" id="cart-full-shipping-price">0.00</span>
+<td class="cart-full-table-full-body-row-shipping-total">
+<div class="cart-full-table-full-body-row-shipping-total-price">
+<span class="cart-full-table-full-body-row-shipping-total-price-symbol">$</span>
+<span class="cart-full-table-full-body-row-shipping-total-price-amount" id="cart-full-shipping-price">0.00</span>
 </div>
 </td>
-<td class="cart-full-table-body-shipping-quantity-cell"></td>
-<td class="cart-full-table-body-shipping-remove-cell"></td>
-</tr>
+<td class="cart-full-table-full-body-row-shipping-remove"></td>
+</tr>  
 <!-- FILA TOTAL -->
-<tr class="cart-full-table-body-total">
-<td class="cart-full-table-body-total-image-cell"></td>
-<td class="cart-full-table-body-total-productname-cell">
-<div class="cart-full-table-body-total-productname-cell-container">
-<span class="cart-full-table-body-total-productname-cell-container-text">Total</span>
+<tr class="cart-full-table-full-body-row-total">
+<td class="cart-full-table-full-body-row-total-image"></td>
+<td class="cart-full-table-full-body-row-total-name"></td>
+<td class="cart-full-table-full-body-row-total-quantity"></td>    
+<td class="cart-full-table-full-body-row-total-unitprice">
+<div class="cart-full-table-full-body-row-total-unitprice-label">  
+<span class="cart-full-table-full-body-row-total-unitprice-label-text">TOTAL</span>
 </div>
 </td>
-<td class="cart-full-table-body-total-price-cell">
-<div class="cart-full-table-body-total-price-cell-container">
-<span class="cart-full-table-body-total-price-cell-container-currency">$</span>
-<span class="cart-full-table-body-total-price-cell-container-amount" id="cart-full-total-price">0.00</span>
+<td class="cart-full-table-full-body-row-total-total">
+<div class="cart-full-table-full-body-row-total-total-price">
+<span class="cart-full-table-full-body-row-total-total-price-symbol">$</span>
+<span class="cart-full-table-full-body-row-total-total-price-amount" id="cart-full-total-price">0.00</span>
 </div>
 </td>
-<td class="cart-full-table-body-total-quantity-cell">
-<div class="cart-full-table-body-total-quantity-cell-container">
-<span class="cart-full-table-body-total-quantity-cell-container-text" id="cart-full-total-quantity">0</span>
-</div>
-</td>
-<td class="cart-full-table-body-total-remove-cell"></td>
+<td class="cart-full-table-full-body-row-total-remove"></td>
 </tr>
 </tbody>
 </table>
 </div>  
-<!-- BOTONES -->
+<!-- CONTENEDOR DE BOTONES FINALES -->
 <div class="cart-full-buttons">
 <button class="cart-full-button-back" onclick="history.back()">BACK</button>
 <a href="#store" class="cart-full-button-continueshopping">CONTINUE SHOPPING</a>
-<a href="#cart-shippinginformation" class="cart-full-button-buy" id="cart-button-buy">BUY</a>  
-<button class="cart-full-button-clear" id="cart-button-clear">CLEAR CART</button>
+<a href="#cart-shippinginformation" class="cart-full-button-buy" id="cart-full-buy">BUY</a>
+<button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
 </div>
 </div>
 </div>
 </section>
-<!-- FIN CART -->
+<!-- FIN CART -->  
+
+
+  
+
+  
+  
+  
+  
+  
+ 
+
+
+
 
 
 
@@ -3158,7 +3195,7 @@ ADD TO CART
 <div class="cartfull-container">
 <h2 class="cartfull-title">YOUR CART</h2>
 <!-- CONTENEDOR DE LA TABLA -->
-<div class="cartfull-table-container">
+<div class="cartfull-table">
 <table class="cartfull-table-full">   
 <!-- ENCABEZADO DE TABLA -->
 <thead class="cartfull-table-full-head"> 
@@ -3176,183 +3213,183 @@ ADD TO CART
 <!-- LÍNEA DIVISORIA SUPERIOR -->
 <tr class="cartfull-table-full-body-divider-1"><td colspan="6" class="cartfull-table-full-body-divider-1"></td></tr>
 <!-- FILA 1: PRODUCTO 1 -->
-<tr class="cartfull-table-full-body-line">
+<tr class="cartfull-table-full-body-row">
 <!-- CONTENEDOR DE IMAGEN -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-image">
-<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor" class="cartfull-table-full-body-line-product-image-photo">
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor">
 </div>
 </td>
 <!-- CONTENEDOR DE NOMBRE DE PRODUCTO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-name">
-<span class="cartfull-table-full-body-line-product-name-text">Planet Sponsor</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-name">
+<span class="cartfull-table-full-body-row-product-name-text">Planet Sponsor</span>
 </div>
 </td>
 <!-- CONTENEDOR DE CANTIDAD -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-quantity">
-<span class="cartfull-table-full-body-line-product-quantity-number">1</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-quantity">
+<span class="cartfull-table-full-body-row-product-quantity-number">1</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE PRECIO UNITARIO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-unitprice">
-<span class="cartfull-table-full-body-line-product-unitprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-unitprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-unitprice">
+<span class="cartfull-table-full-body-row-product-unitprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-unitprice-amount">1,000,000.00</span>
 </div>
 </td>
 <!-- CONTENEDOR DE PRECIO TOTAL-->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-totalprice">
-<span class="cartfull-table-full-body-line-product-totalprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-totalprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-totalprice">
+<span class="cartfull-table-full-body-row-product-totalprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-totalprice-amount">1,000,000.00</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE BOTÓN REMOVER -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-button">
-<button class="cartfull-table-full-body-line-product-button-remove">X</button>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-button">
+<button class="cartfull-table-full-body-row-product-button-remove">X</button>
 </div>
 </td>
 </tr>
 <!-- FILA 2: PRODUCTO 2 -->
-<tr class="cartfull-table-full-body-line">
+<tr class="cartfull-table-full-body-row">
 <!-- CONTENEDOR DE IMAGEN -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-image">
-<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Black Hole Executive Producer" class="cartfull-table-full-body-line-product-image-photo">
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Black Hole Executive Producer">
 </div>
 </td>
 <!-- CONTENEDOR DE NOMBRE DE PRODUCTO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-name">
-<span class="cartfull-table-full-body-line-product-name-text">Black Hole Executive Producer</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-name">
+<span class="cartfull-table-full-body-row-product-name-text">Black Hole Executive Producer</span>
 </div>
 </td>
 <!-- CONTENEDOR DE CANTIDAD -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-quantity">
-<span class="cartfull-table-full-body-line-product-quantity-number">1</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-quantity">
+<span class="cartfull-table-full-body-row-product-quantity-number">1</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE PRECIO UNITARIO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-unitprice">
-<span class="cartfull-table-full-body-line-product-unitprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-unitprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-unitprice">
+<span class="cartfull-table-full-body-row-product-unitprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-unitprice-amount">1,000,000.00</span>
 </div>
 </td>
 <!-- CONTENEDOR DE PRECIO TOTAL-->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-totalprice">
-<span class="cartfull-table-full-body-line-product-totalprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-totalprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-totalprice">
+<span class="cartfull-table-full-body-row-product-totalprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-totalprice-amount">1,000,000.00</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE BOTÓN REMOVER -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-button">
-<button class="cartfull-table-full-body-line-product-button-remove">X</button>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-button">
+<button class="cartfull-table-full-body-row-product-button-remove">X</button>
 </div>
 </td>
 </tr>  
 <!-- FILA 3: PRODUCTO 3 -->
-<tr class="cartfull-table-full-body-line">
+<tr class="cartfull-table-full-body-row">
 <!-- CONTENEDOR DE IMAGEN -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-image">
-<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor" class="cartfull-table-full-body-line-product-image-photo">
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-image">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Planet Sponsor">
 </div>
 </td>
 <!-- CONTENEDOR DE NOMBRE DE PRODUCTO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-name">
-<span class="cartfull-table-full-body-line-product-name-text">Planet Sponsor</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-name">
+<span class="cartfull-table-full-body-row-product-name-text">Planet Sponsor</span>
 </div>
 </td>
 <!-- CONTENEDOR DE CANTIDAD -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-quantity">
-<span class="cartfull-table-full-body-line-product-quantity-number">1</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-quantity">
+<span class="cartfull-table-full-body-row-product-quantity-number">1</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE PRECIO UNITARIO -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-unitprice">
-<span class="cartfull-table-full-body-line-product-unitprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-unitprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-unitprice">
+<span class="cartfull-table-full-body-row-product-unitprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-unitprice-amount">1,000,000.00</span>
 </div>
 </td>
 <!-- CONTENEDOR DE PRECIO TOTAL-->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-totalprice">
-<span class="cartfull-table-full-body-line-product-totalprice-symbol">$</span>
-<span class="cartfull-table-full-body-line-product-totalprice-amount">1,000,000.00</span>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-totalprice">
+<span class="cartfull-table-full-body-row-product-totalprice-symbol">$</span>
+<span class="cartfull-table-full-body-row-product-totalprice-amount">1,000,000.00</span>
 </div>
 </td>  
 <!-- CONTENEDOR DE BOTÓN REMOVER -->
-<td class="cartfull-table-full-body-line-product">
-<div class="cartfull-table-full-body-line-product-button">
-<button class="cartfull-table-full-body-line-product-button-remove">X</button>
+<td class="cartfull-table-full-body-row-product">
+<div class="cartfull-table-full-body-row-product-button">
+<button class="cartfull-table-full-body-row-product-button-remove">X</button>
 </div>
 </td>
 </tr>
 <!-- LÍNEA DIVISORIA INFERIOR -->
 <tr class="cartfull-table-full-body-divider-2"><td colspan="6" class="cartfull-table-full-body-divider-2"></td></tr>
 <!-- FILA SUBTOTAL -->
-<tr class="cartfull-table-full-body-line-subtotal">
-<td class="cartfull-table-full-body-line-subtotal-image"></td>
-<td class="cartfull-table-full-body-line-subtotal-name"></td>
-<td class="cartfull-table-full-body-line-subtotal-quantity"></td>  
-<td class="cartfull-table-full-body-line-subtotal-unitprice">
-<div class="cartfull-table-full-body-line-subtotal-unitprice-label">  
-<span class="cartfull-table-full-body-line-subtotal-unitprice-label-text">Subtotal</span>
+<tr class="cartfull-table-full-body-row-subtotal">
+<td class="cartfull-table-full-body-row-subtotal-image"></td>
+<td class="cartfull-table-full-body-row-subtotal-name"></td>
+<td class="cartfull-table-full-body-row-subtotal-quantity"></td>  
+<td class="cartfull-table-full-body-row-subtotal-unitprice">
+<div class="cartfull-table-full-body-row-subtotal-unitprice-label">  
+<span class="cartfull-table-full-body-row-subtotal-unitprice-label-text">Subtotal</span>
 </div>
 </td>
-<td class="cartfull-table-full-body-line-subtotal-total">
-<div class="cartfull-table-full-body-line-subtotal-total-price">
-<span class="cartfull-table-full-body-line-subtotal-total-price-symbol">$</span>
-<span class="cartfull-table-full-body-line-subtotal-total-price-amount">3,000,000.00</span>  
+<td class="cartfull-table-full-body-row-subtotal-total">
+<div class="cartfull-table-full-body-row-subtotal-total-price">
+<span class="cartfull-table-full-body-row-subtotal-total-price-symbol">$</span>
+<span class="cartfull-table-full-body-row-subtotal-total-price-amount">3,000,000.00</span>  
 </div>
 </td>
-<td class="cartfull-table-full-body-line-subtotal-remove"></td>
+<td class="cartfull-table-full-body-row-subtotal-remove"></td>
 </tr>
 <!-- FILA SHIPPING -->
-<tr class="cartfull-table-full-body-line-shipping">
-<td class="cartfull-table-full-body-line-shipping-image"></td>
-<td class="cartfull-table-full-body-line-shipping-name"></td>
-<td class="cartfull-table-full-body-line-shipping-quantity"></td>  
-<td class="cartfull-table-full-body-line-shipping-unitprice">
-<div class="cartfull-table-full-body-line-shipping-unitprice-label">  
-<span class="cartfull-table-full-body-line-shipping-unitprice-label-text">Shipping</span>
+<tr class="cartfull-table-full-body-row-shipping">
+<td class="cartfull-table-full-body-row-shipping-image"></td>
+<td class="cartfull-table-full-body-row-shipping-name"></td>
+<td class="cartfull-table-full-body-row-shipping-quantity"></td>  
+<td class="cartfull-table-full-body-row-shipping-unitprice">
+<div class="cartfull-table-full-body-row-shipping-unitprice-label">  
+<span class="cartfull-table-full-body-row-shipping-unitprice-label-text">Shipping</span>
 </div>
 </td>
-<td class="cartfull-table-full-body-line-shipping-total">
-<div class="cartfull-table-full-body-line-shipping-total-price">
-<span class="cartfull-table-full-body-line-shipping-total-price-symbol">$</span>
-<span class="cartfull-table-full-body-line-shipping-total-price-amount">50.00</span>  
+<td class="cartfull-table-full-body-row-shipping-total">
+<div class="cartfull-table-full-body-row-shipping-total-price">
+<span class="cartfull-table-full-body-row-shipping-total-price-symbol">$</span>
+<span class="cartfull-table-full-body-row-shipping-total-price-amount">50.00</span>  
 </div>
 </td>
-<td class="cartfull-table-full-body-line-shipping-remove"></td>
+<td class="cartfull-table-full-body-row-shipping-remove"></td>
 </tr>
 <!-- FILA TOTAL -->
-<tr class="cartfull-table-full-body-line-total">
-<td class="cartfull-table-full-body-line-total-image"></td>
-<td class="cartfull-table-full-body-line-total-name"></td>
-<td class="cartfull-table-full-body-line-total-quantity"></td>    
-<td class="cartfull-table-full-body-line-total-unitprice">
-<div class="cartfull-table-full-body-line-total-unitprice-label">  
-<span class="cartfull-table-full-body-line-total-unitprice-label-text">TOTAL</span>
+<tr class="cartfull-table-full-body-row-total">
+<td class="cartfull-table-full-body-row-total-image"></td>
+<td class="cartfull-table-full-body-row-total-name"></td>
+<td class="cartfull-table-full-body-row-total-quantity"></td>    
+<td class="cartfull-table-full-body-row-total-unitprice">
+<div class="cartfull-table-full-body-row-total-unitprice-label">  
+<span class="cartfull-table-full-body-row-total-unitprice-label-text">TOTAL</span>
 </div>
 </td>
-<td class="cartfull-table-full-body-line-total-total">
-<div class="cartfull-table-full-body-line-total-total-price">
-<span class="cartfull-table-full-body-line-total-total-price-symbol">$</span>
-<span class="cartfull-table-full-body-line-total-total-price-amount">3,000,050.00</span>  
+<td class="cartfull-table-full-body-row-total-total">
+<div class="cartfull-table-full-body-row-total-total-price">
+<span class="cartfull-table-full-body-row-total-total-price-symbol">$</span>
+<span class="cartfull-table-full-body-row-total-total-price-amount">3,000,050.00</span>  
 </div>
 </td>
-<td class="cartfull-table-full-body-line-total-remove"></td>
+<td class="cartfull-table-full-body-row-total-remove"></td>
 </tr>
 </tbody>
 </table>
@@ -3362,6 +3399,18 @@ ADD TO CART
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- PRUEBA -->
 <section id="prueba" class="prueba-section main-section">
 <div class="prueba-container">
