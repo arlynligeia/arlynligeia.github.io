@@ -3610,7 +3610,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .cometsponsor-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .cometsponsor-buttons {
@@ -3655,16 +3655,6 @@ color: #39FF14;
 font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    PLANET SPONSOR
 ====================================== */
@@ -3672,7 +3662,7 @@ font-weight: bold;
 .planetsponsor-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3685,7 +3675,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .planetsponsor-title {
@@ -3694,7 +3684,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -3702,7 +3692,7 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .planetsponsor-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
@@ -3710,7 +3700,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE COLUMNAS */
+/* CONTENEDOR DE GRID */
 .planetsponsor-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -3718,7 +3708,7 @@ gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
+/* CONTENEDOR DE IMAGEN */
 .planetsponsor-columns-grid-image {
 width: 100%;
 margin-top: 0px;
@@ -3728,71 +3718,97 @@ margin-bottom: 0px;
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
+/* CONTENEDOR DE TEXTO */
 .planetsponsor-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsor-columns-grid-text-subtitle,
+.planetsponsor-columns-grid-text-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
 .planetsponsor-columns-grid-text-1,
 .planetsponsor-columns-grid-text-2,
 .planetsponsor-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* PRECIO */
-.planetsponsor-columns-grid-price {
+.planetsponsor-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.planetsponsor-columns-grid-acquire {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* CONTENEDOR DE PRECIO */
+.planetsponsor-columns-grid-acquire-price {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsor-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-/* BOTONES ADD TO CART Y SHARE */
-.planetsponsor-columns-grid-buttons {
+/* CONTENEDOR DE BOTONES */
+.planetsponsor-columns-grid-acquire-price-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.planetsponsor-columns-grid-button-addtocart,
-.planetsponsor-columns-grid-button-share {
+.planetsponsor-columns-grid-acquire-price-button-addtocart,
+.planetsponsor-columns-grid-acquire-price-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-color: white;
+color: white !important;
 text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.planetsponsor-columns-grid-button-addtocart:hover,
-.planetsponsor-columns-grid-button-share:hover {
+.planetsponsor-columns-grid-acquire-price-button-addtocart:hover,
+.planetsponsor-columns-grid-acquire-price-button-share:hover {
 transform: scale(1.05);
 }
-.planetsponsor-columns-grid-button-addtocart {
+.planetsponsor-columns-grid-acquire-price-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.planetsponsor-columns-grid-button-share {
+.planetsponsor-columns-grid-acquire-price-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .planetsponsor-text {
 width: 100%;
 margin-top: 0px;
@@ -3816,7 +3832,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .planetsponsor-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .planetsponsor-buttons {
@@ -3828,7 +3844,6 @@ margin-bottom: 0px;
 .planetsponsor-button-back,
 .planetsponsor-button-continueshopping,
 .planetsponsor-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -3869,7 +3884,7 @@ font-weight: bold;
 .starsponsor-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3882,7 +3897,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .starsponsor-title {
@@ -3891,7 +3906,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -3899,7 +3914,7 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .starsponsor-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
@@ -3907,7 +3922,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE COLUMNAS */
+/* CONTENEDOR DE GRID */
 .starsponsor-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -3915,7 +3930,7 @@ gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
+/* CONTENEDOR DE IMAGEN */
 .starsponsor-columns-grid-image {
 width: 100%;
 margin-top: 0px;
@@ -3925,71 +3940,97 @@ margin-bottom: 0px;
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
+/* CONTENEDOR DE TEXTO */
 .starsponsor-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsor-columns-grid-text-subtitle,
+.starsponsor-columns-grid-text-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
 .starsponsor-columns-grid-text-1,
 .starsponsor-columns-grid-text-2,
 .starsponsor-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* PRECIO */
-.starsponsor-columns-grid-price {
+.starsponsor-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.starsponsor-columns-grid-acquire {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* CONTENEDOR DE PRECIO */
+.starsponsor-columns-grid-acquire-price {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.starsponsor-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-/* BOTONES ADD TO CART Y SHARE */
-.starsponsor-columns-grid-buttons {
+/* CONTENEDOR DE BOTONES */
+.starsponsor-columns-grid-acquire-price-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.starsponsor-columns-grid-button-addtocart,
-.starsponsor-columns-grid-button-share {
+.starsponsor-columns-grid-acquire-price-button-addtocart,
+.starsponsor-columns-grid-acquire-price-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-color: white;
+color: white !important;
 text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.starsponsor-columns-grid-button-addtocart:hover,
-.starsponsor-columns-grid-button-share:hover {
+.starsponsor-columns-grid-acquire-price-button-addtocart:hover,
+.starsponsor-columns-grid-acquire-price-button-share:hover {
 transform: scale(1.05);
 }
-.starsponsor-columns-grid-button-addtocart {
+.starsponsor-columns-grid-acquire-price-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.starsponsor-columns-grid-button-share {
+.starsponsor-columns-grid-acquire-price-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .starsponsor-text {
 width: 100%;
 margin-top: 0px;
@@ -4013,7 +4054,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .starsponsor-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .starsponsor-buttons {
@@ -4025,7 +4066,6 @@ margin-bottom: 0px;
 .starsponsor-button-back,
 .starsponsor-button-continueshopping,
 .starsponsor-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -4066,7 +4106,7 @@ font-weight: bold;
 .cometsponsorbrand-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4079,7 +4119,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .cometsponsorbrand-title {
@@ -4088,7 +4128,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -4096,7 +4136,7 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .cometsponsorbrand-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
@@ -4104,7 +4144,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE COLUMNAS */
+/* CONTENEDOR DE GRID */
 .cometsponsorbrand-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -4112,7 +4152,7 @@ gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
+/* CONTENEDOR DE IMAGEN */
 .cometsponsorbrand-columns-grid-image {
 width: 100%;
 margin-top: 0px;
@@ -4122,71 +4162,97 @@ margin-bottom: 0px;
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
+/* CONTENEDOR DE TEXTO */
 .cometsponsorbrand-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cometsponsorbrand-columns-grid-text-subtitle,
+.cometsponsorbrand-columns-grid-text-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
 .cometsponsorbrand-columns-grid-text-1,
 .cometsponsorbrand-columns-grid-text-2,
 .cometsponsorbrand-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* PRECIO */
-.cometsponsorbrand-columns-grid-price {
+.cometsponsorbrand-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.cometsponsorbrand-columns-grid-acquire {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* CONTENEDOR DE PRECIO */
+.cometsponsorbrand-columns-grid-acquire-price {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cometsponsorbrand-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-/* BOTONES ADD TO CART Y SHARE */
-.cometsponsorbrand-columns-grid-buttons {
+/* CONTENEDOR DE BOTONES */
+.cometsponsorbrand-columns-grid-acquire-price-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.cometsponsorbrand-columns-grid-button-addtocart,
-.cometsponsorbrand-columns-grid-button-share {
+.cometsponsorbrand-columns-grid-acquire-price-button-addtocart,
+.cometsponsorbrand-columns-grid-acquire-price-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-color: white;
+color: white !important;
 text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.cometsponsorbrand-columns-grid-button-addtocart:hover,
-.cometsponsorbrand-columns-grid-button-share:hover {
+.cometsponsorbrand-columns-grid-acquire-price-button-addtocart:hover,
+.cometsponsorbrand-columns-grid-acquire-price-button-share:hover {
 transform: scale(1.05);
 }
-.cometsponsorbrand-columns-grid-button-addtocart {
+.cometsponsorbrand-columns-grid-acquire-price-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.cometsponsorbrand-columns-grid-button-share {
+.cometsponsorbrand-columns-grid-acquire-price-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .cometsponsorbrand-text {
 width: 100%;
 margin-top: 0px;
@@ -4210,7 +4276,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .cometsponsorbrand-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .cometsponsorbrand-buttons {
@@ -4222,7 +4288,6 @@ margin-bottom: 0px;
 .cometsponsorbrand-button-back,
 .cometsponsorbrand-button-continueshopping,
 .cometsponsorbrand-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -4263,7 +4328,7 @@ font-weight: bold;
 .planetsponsorbrand-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4276,7 +4341,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .planetsponsorbrand-title {
@@ -4285,7 +4350,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -4293,7 +4358,7 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .planetsponsorbrand-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
@@ -4301,7 +4366,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE COLUMNAS */
+/* CONTENEDOR DE GRID */
 .planetsponsorbrand-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -4309,7 +4374,7 @@ gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
+/* CONTENEDOR DE IMAGEN */
 .planetsponsorbrand-columns-grid-image {
 width: 100%;
 margin-top: 0px;
@@ -4319,71 +4384,97 @@ margin-bottom: 0px;
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
+/* CONTENEDOR DE TEXTO */
 .planetsponsorbrand-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.planetsponsorbrand-columns-grid-text-subtitle,
+.planetsponsorbrand-columns-grid-text-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
 .planetsponsorbrand-columns-grid-text-1,
 .planetsponsorbrand-columns-grid-text-2,
 .planetsponsorbrand-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* PRECIO */
-.planetsponsorbrand-columns-grid-price {
+.planetsponsorbrand-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.planetsponsorbrand-columns-grid-acquire {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* CONTENEDOR DE PRECIO */
+.planetsponsorbrand-columns-grid-acquire-price {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.planetsponsorbrand-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-/* BOTONES ADD TO CART Y SHARE */
-.planetsponsorbrand-columns-grid-buttons {
+/* CONTENEDOR DE BOTONES */
+.planetsponsorbrand-columns-grid-acquire-price-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.planetsponsorbrand-columns-grid-button-addtocart,
-.planetsponsorbrand-columns-grid-button-share {
+.planetsponsorbrand-columns-grid-acquire-price-button-addtocart,
+.planetsponsorbrand-columns-grid-acquire-price-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-color: white;
+color: white !important;
 text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.planetsponsorbrand-columns-grid-button-addtocart:hover,
-.planetsponsorbrand-columns-grid-button-share:hover {
+.planetsponsorbrand-columns-grid-acquire-price-button-addtocart:hover,
+.planetsponsorbrand-columns-grid-acquire-price-button-share:hover {
 transform: scale(1.05);
 }
-.planetsponsorbrand-columns-grid-button-addtocart {
+.planetsponsorbrand-columns-grid-acquire-price-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.planetsponsorbrand-columns-grid-button-share {
+.planetsponsorbrand-columns-grid-acquire-price-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .planetsponsorbrand-text {
 width: 100%;
 margin-top: 0px;
@@ -4407,7 +4498,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .planetsponsorbrand-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .planetsponsorbrand-buttons {
@@ -4419,7 +4510,6 @@ margin-bottom: 0px;
 .planetsponsorbrand-button-back,
 .planetsponsorbrand-button-continueshopping,
 .planetsponsorbrand-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -4460,7 +4550,7 @@ font-weight: bold;
 .starsponsorbrand-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4473,7 +4563,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .starsponsorbrand-title {
@@ -4482,7 +4572,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -4490,7 +4580,7 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .starsponsorbrand-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
@@ -4498,7 +4588,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* GRID DE COLUMNAS */
+/* CONTENEDOR DE GRID */
 .starsponsorbrand-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -4506,7 +4596,7 @@ gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
+/* CONTENEDOR DE IMAGEN */
 .starsponsorbrand-columns-grid-image {
 width: 100%;
 margin-top: 0px;
@@ -4516,71 +4606,97 @@ margin-bottom: 0px;
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
+/* CONTENEDOR DE TEXTO */
 .starsponsorbrand-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.starsponsorbrand-columns-grid-text-subtitle,
+.starsponsorbrand-columns-grid-text-subtitle {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
 .starsponsorbrand-columns-grid-text-1,
 .starsponsorbrand-columns-grid-text-2,
 .starsponsorbrand-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* PRECIO */
-.starsponsorbrand-columns-grid-price {
+.starsponsorbrand-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.starsponsorbrand-columns-grid-acquire {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100%;
+min-height: 300px;
+}
+/* CONTENEDOR DE PRECIO */
+.starsponsorbrand-columns-grid-acquire-price {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.starsponsorbrand-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
 }
-/* BOTONES ADD TO CART Y SHARE */
-.starsponsorbrand-columns-grid-buttons {
+/* CONTENEDOR DE BOTONES */
+.starsponsorbrand-columns-grid-acquire-price-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.starsponsorbrand-columns-grid-button-addtocart,
-.starsponsorbrand-columns-grid-button-share {
+.starsponsorbrand-columns-grid-acquire-price-button-addtocart,
+.starsponsorbrand-columns-grid-acquire-price-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-color: white;
+color: white !important;
 text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
 padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.starsponsorbrand-columns-grid-button-addtocart:hover,
-.starsponsorbrand-columns-grid-button-share:hover {
+.starsponsorbrand-columns-grid-acquire-price-button-addtocart:hover,
+.starsponsorbrand-columns-grid-acquire-price-button-share:hover {
 transform: scale(1.05);
 }
-.starsponsorbrand-columns-grid-button-addtocart {
+.starsponsorbrand-columns-grid-acquire-price-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.starsponsorbrand-columns-grid-button-share {
+.starsponsorbrand-columns-grid-acquire-price-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO LARGO */
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
 .starsponsorbrand-text {
 width: 100%;
 margin-top: 0px;
@@ -4604,7 +4720,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 .starsponsorbrand-text-8 {
-margin-bottom: 20px;
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
 .starsponsorbrand-buttons {
@@ -4616,7 +4732,6 @@ margin-bottom: 0px;
 .starsponsorbrand-button-back,
 .starsponsorbrand-button-continueshopping,
 .starsponsorbrand-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -4649,6 +4764,15 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
 
 
 
