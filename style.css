@@ -3270,18 +3270,8 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   ALONE EXECUTIVE PRODUCERS
+   ALONE DIGITAL PRODUCTS
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .alonedigitalproducts-container {
@@ -3321,30 +3311,36 @@ color: white;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.alonedigitalproducts-columns-container {
+.alonedigitalproducts-columns {
 position: relative;
 z-index: 2;
 }
 /* GRID DE TRES COLUMNAS */
-.alonedigitalproducts-grid-container {
+.alonedigitalproducts-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 20px;
 }
-/* IMAGEN */
-.alonedigitalproducts-image {
+/* CONTENEDOR DE PRODUCTO */
+.alonedigitalproducts-columns-grid-product {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.alonedigitalproducts-image img {
+/* IMAGEN */
+.alonedigitalproducts-columns-grid-product-image {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.alonedigitalproducts-columns-grid-product-image img {
 width: 100%;
 border-radius: 15px;
 }
 /* TEXTO */
-.alonedigitalproducts-subtitle {
+.alonedigitalproducts-columns-grid-product-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -3354,7 +3350,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 text-transform: uppercase;
 }
-.alonedigitalproducts-price {
+.alonedigitalproducts-columns-grid-product-text-price {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -3365,12 +3361,12 @@ margin-bottom: 10px;
 text-transform: uppercase;
 }
 /* BOTÓN VIEW*/
-.alonedigitalproducts-button-view-wrapper {
+.alonedigitalproducts-columns-grid-product-button {
 text-align: center;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.alonedigitalproducts-button-view {
+.alonedigitalproducts-columns-grid-product-button-view {
 display: inline-block;
 background-color: #ff1493; /* fucsia */
 border-radius: 6px;
@@ -3386,11 +3382,11 @@ border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
 }
-.alonedigitalproducts-button-view:hover {
+.alonedigitalproducts-columns-grid-product-button-view:hover {
 transform: scale(1.05);
 }
 /* CONTENEDOR DE BOTONES */
-.alonedigitalproducts-buttons-container {
+.alonedigitalproducts-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
