@@ -4765,25 +4765,6 @@ color: #39FF14;
 font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    NEBULA EXECUTIVE PRODUCER
 ====================================== */
@@ -4791,7 +4772,7 @@ font-weight: bold;
 .nebulaexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4804,7 +4785,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .nebulaexecutiveproducer-title {
@@ -4813,7 +4794,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -4821,53 +4802,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .nebulaexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.nebulaexecutiveproducer-columns-container {
+.nebulaexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.nebulaexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.nebulaexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.nebulaexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.nebulaexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.nebulaexecutiveproducer-image-container img {
+.nebulaexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.nebulaexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.nebulaexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.nebulaexecutiveproducer-text-1,
-.nebulaexecutiveproducer-text-2,
-.nebulaexecutiveproducer-text-3,
-.nebulaexecutiveproducer-text-4 {
+.nebulaexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.nebulaexecutiveproducer-columns-grid-text-1,
+.nebulaexecutiveproducer-columns-grid-text-2,
+.nebulaexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.nebulaexecutiveproducer-price-buttons-container {
+.nebulaexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.nebulaexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -4875,57 +4868,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.nebulaexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.nebulaexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.nebulaexecutiveproducer-button-addtocart,
-.nebulaexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.nebulaexecutiveproducer-button-addtocart:hover,
-.nebulaexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.nebulaexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.nebulaexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.nebulaexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.nebulaexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.nebulaexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.nebulaexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.nebulaexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.nebulaexecutiveproducer-text-1,
+.nebulaexecutiveproducer-text-2,
+.nebulaexecutiveproducer-text-3,
+.nebulaexecutiveproducer-text-4,
 .nebulaexecutiveproducer-text-5,
 .nebulaexecutiveproducer-text-6,
 .nebulaexecutiveproducer-text-7,
@@ -4934,11 +4936,7 @@ margin-bottom: 0px;
 .nebulaexecutiveproducer-text-10,
 .nebulaexecutiveproducer-text-11,
 .nebulaexecutiveproducer-text-12,
-.nebulaexecutiveproducer-text-13,
-.nebulaexecutiveproducer-text-14,
-.nebulaexecutiveproducer-text-15,
-.nebulaexecutiveproducer-text-16,
-.nebulaexecutiveproducer-text-17 {
+.nebulaexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -4948,11 +4946,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.nebulaexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.nebulaexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.nebulaexecutiveproducer-buttons-2-container {
+.nebulaexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -4961,7 +4959,6 @@ margin-bottom: 0px;
 .nebulaexecutiveproducer-button-back,
 .nebulaexecutiveproducer-button-continueshopping,
 .nebulaexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5002,7 +4999,7 @@ font-weight: bold;
 .pulsarexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5015,7 +5012,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .pulsarexecutiveproducer-title {
@@ -5024,7 +5021,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -5032,53 +5029,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .pulsarexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.pulsarexecutiveproducer-columns-container {
+.pulsarexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.pulsarexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.pulsarexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.pulsarexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.pulsarexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.pulsarexecutiveproducer-image-container img {
+.pulsarexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.pulsarexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.pulsarexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.pulsarexecutiveproducer-text-1,
-.pulsarexecutiveproducer-text-2,
-.pulsarexecutiveproducer-text-3,
-.pulsarexecutiveproducer-text-4 {
+.pulsarexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.pulsarexecutiveproducer-columns-grid-text-1,
+.pulsarexecutiveproducer-columns-grid-text-2,
+.pulsarexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.pulsarexecutiveproducer-price-buttons-container {
+.pulsarexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.pulsarexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5086,57 +5095,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.pulsarexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.pulsarexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.pulsarexecutiveproducer-button-addtocart,
-.pulsarexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.pulsarexecutiveproducer-button-addtocart:hover,
-.pulsarexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.pulsarexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.pulsarexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.pulsarexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.pulsarexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.pulsarexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.pulsarexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.pulsarexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.pulsarexecutiveproducer-text-1,
+.pulsarexecutiveproducer-text-2,
+.pulsarexecutiveproducer-text-3,
+.pulsarexecutiveproducer-text-4,
 .pulsarexecutiveproducer-text-5,
 .pulsarexecutiveproducer-text-6,
 .pulsarexecutiveproducer-text-7,
@@ -5145,11 +5163,7 @@ margin-bottom: 0px;
 .pulsarexecutiveproducer-text-10,
 .pulsarexecutiveproducer-text-11,
 .pulsarexecutiveproducer-text-12,
-.pulsarexecutiveproducer-text-13,
-.pulsarexecutiveproducer-text-14,
-.pulsarexecutiveproducer-text-15,
-.pulsarexecutiveproducer-text-16,
-.pulsarexecutiveproducer-text-17 {
+.pulsarexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5159,11 +5173,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.pulsarexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.pulsarexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.pulsarexecutiveproducer-buttons-2-container {
+.pulsarexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5172,7 +5186,6 @@ margin-bottom: 0px;
 .pulsarexecutiveproducer-button-back,
 .pulsarexecutiveproducer-button-continueshopping,
 .pulsarexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5213,7 +5226,7 @@ font-weight: bold;
 .blackholeexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5226,7 +5239,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .blackholeexecutiveproducer-title {
@@ -5235,7 +5248,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -5243,53 +5256,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .blackholeexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.blackholeexecutiveproducer-columns-container {
+.blackholeexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.blackholeexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.blackholeexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.blackholeexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.blackholeexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.blackholeexecutiveproducer-image-container img {
+.blackholeexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.blackholeexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.blackholeexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.blackholeexecutiveproducer-text-1,
-.blackholeexecutiveproducer-text-2,
-.blackholeexecutiveproducer-text-3,
-.blackholeexecutiveproducer-text-4 {
+.blackholeexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.blackholeexecutiveproducer-columns-grid-text-1,
+.blackholeexecutiveproducer-columns-grid-text-2,
+.blackholeexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.blackholeexecutiveproducer-price-buttons-container {
+.blackholeexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.blackholeexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5297,57 +5322,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.blackholeexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.blackholeexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.blackholeexecutiveproducer-button-addtocart,
-.blackholeexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.blackholeexecutiveproducer-button-addtocart:hover,
-.blackholeexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.blackholeexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.blackholeexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.blackholeexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.blackholeexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.blackholeexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.blackholeexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.blackholeexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.blackholeexecutiveproducer-text-1,
+.blackholeexecutiveproducer-text-2,
+.blackholeexecutiveproducer-text-3,
+.blackholeexecutiveproducer-text-4,
 .blackholeexecutiveproducer-text-5,
 .blackholeexecutiveproducer-text-6,
 .blackholeexecutiveproducer-text-7,
@@ -5356,11 +5390,7 @@ margin-bottom: 0px;
 .blackholeexecutiveproducer-text-10,
 .blackholeexecutiveproducer-text-11,
 .blackholeexecutiveproducer-text-12,
-.blackholeexecutiveproducer-text-13,
-.blackholeexecutiveproducer-text-14,
-.blackholeexecutiveproducer-text-15,
-.blackholeexecutiveproducer-text-16,
-.blackholeexecutiveproducer-text-17 {
+.blackholeexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5370,11 +5400,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.blackholeexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.blackholeexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.blackholeexecutiveproducer-buttons-2-container {
+.blackholeexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5383,7 +5413,6 @@ margin-bottom: 0px;
 .blackholeexecutiveproducer-button-back,
 .blackholeexecutiveproducer-button-continueshopping,
 .blackholeexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5424,7 +5453,7 @@ font-weight: bold;
 .quasarexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5437,7 +5466,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .quasarexecutiveproducer-title {
@@ -5446,7 +5475,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -5454,53 +5483,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .quasarexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.quasarexecutiveproducer-columns-container {
+.quasarexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.quasarexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.quasarexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.quasarexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.quasarexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.quasarexecutiveproducer-image-container img {
+.quasarexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.quasarexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.quasarexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.quasarexecutiveproducer-text-1,
-.quasarexecutiveproducer-text-2,
-.quasarexecutiveproducer-text-3,
-.quasarexecutiveproducer-text-4 {
+.quasarexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.quasarexecutiveproducer-columns-grid-text-1,
+.quasarexecutiveproducer-columns-grid-text-2,
+.quasarexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.quasarexecutiveproducer-price-buttons-container {
+.quasarexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.quasarexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5508,57 +5549,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.quasarexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.quasarexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.quasarexecutiveproducer-button-addtocart,
-.quasarexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.quasarexecutiveproducer-button-addtocart:hover,
-.quasarexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.quasarexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.quasarexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.quasarexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.quasarexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.quasarexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.quasarexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.quasarexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.quasarexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.quasarexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.quasarexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.quasarexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.quasarexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.quasarexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.quasarexecutiveproducer-text-1,
+.quasarexecutiveproducer-text-2,
+.quasarexecutiveproducer-text-3,
+.quasarexecutiveproducer-text-4,
 .quasarexecutiveproducer-text-5,
 .quasarexecutiveproducer-text-6,
 .quasarexecutiveproducer-text-7,
@@ -5567,11 +5617,7 @@ margin-bottom: 0px;
 .quasarexecutiveproducer-text-10,
 .quasarexecutiveproducer-text-11,
 .quasarexecutiveproducer-text-12,
-.quasarexecutiveproducer-text-13,
-.quasarexecutiveproducer-text-14,
-.quasarexecutiveproducer-text-15,
-.quasarexecutiveproducer-text-16,
-.quasarexecutiveproducer-text-17 {
+.quasarexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5581,11 +5627,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.quasarexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.quasarexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.quasarexecutiveproducer-buttons-2-container {
+.quasarexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5594,7 +5640,6 @@ margin-bottom: 0px;
 .quasarexecutiveproducer-button-back,
 .quasarexecutiveproducer-button-continueshopping,
 .quasarexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5635,7 +5680,7 @@ font-weight: bold;
 .galaxyexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5648,7 +5693,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .galaxyexecutiveproducer-title {
@@ -5657,7 +5702,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -5665,53 +5710,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .galaxyexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.galaxyexecutiveproducer-columns-container {
+.galaxyexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.galaxyexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.galaxyexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.galaxyexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.galaxyexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.galaxyexecutiveproducer-image-container img {
+.galaxyexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.galaxyexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.galaxyexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.galaxyexecutiveproducer-text-1,
-.galaxyexecutiveproducer-text-2,
-.galaxyexecutiveproducer-text-3,
-.galaxyexecutiveproducer-text-4 {
+.galaxyexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.galaxyexecutiveproducer-columns-grid-text-1,
+.galaxyexecutiveproducer-columns-grid-text-2,
+.galaxyexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.galaxyexecutiveproducer-price-buttons-container {
+.galaxyexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.galaxyexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5719,57 +5776,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.galaxyexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.galaxyexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.galaxyexecutiveproducer-button-addtocart,
-.galaxyexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.galaxyexecutiveproducer-button-addtocart:hover,
-.galaxyexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.galaxyexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.galaxyexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.galaxyexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.galaxyexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.galaxyexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.galaxyexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.galaxyexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.galaxyexecutiveproducer-text-1,
+.galaxyexecutiveproducer-text-2,
+.galaxyexecutiveproducer-text-3,
+.galaxyexecutiveproducer-text-4,
 .galaxyexecutiveproducer-text-5,
 .galaxyexecutiveproducer-text-6,
 .galaxyexecutiveproducer-text-7,
@@ -5778,11 +5844,7 @@ margin-bottom: 0px;
 .galaxyexecutiveproducer-text-10,
 .galaxyexecutiveproducer-text-11,
 .galaxyexecutiveproducer-text-12,
-.galaxyexecutiveproducer-text-13,
-.galaxyexecutiveproducer-text-14,
-.galaxyexecutiveproducer-text-15,
-.galaxyexecutiveproducer-text-16,
-.galaxyexecutiveproducer-text-17 {
+.galaxyexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -5792,11 +5854,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.galaxyexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.galaxyexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.galaxyexecutiveproducer-buttons-2-container {
+.galaxyexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -5805,7 +5867,6 @@ margin-bottom: 0px;
 .galaxyexecutiveproducer-button-back,
 .galaxyexecutiveproducer-button-continueshopping,
 .galaxyexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -5846,7 +5907,7 @@ font-weight: bold;
 .cosmosexecutiveproducer-container {
 position: relative;
 width: 1000px;
-background-color: #9900CC; /* purpura neon */
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5859,7 +5920,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8; /* purpura intenso */
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;  
 }
 .cosmosexecutiveproducer-title {
@@ -5868,7 +5929,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -5876,53 +5937,65 @@ margin-top: 0;
 margin-bottom: 16px; 
 }
 .cosmosexecutiveproducer-title a {
-color: white;
+color: white !important;
 text-decoration: none;
 }
 /* CONTENEDOR DE COLUMNAS */
-.cosmosexecutiveproducer-columns-container {
+.cosmosexecutiveproducer-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE TRES COLUMNAS */
-.cosmosexecutiveproducer-grid-container {
+/* CONTENEDOR DE GRID */
+.cosmosexecutiveproducer-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-/* IMAGEN */
-.cosmosexecutiveproducer-image-container {
+/* CONTENEDOR DE IMAGEN */
+.cosmosexecutiveproducer-columns-grid-image {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-image-container img {
+.cosmosexecutiveproducer-columns-grid-image img {
 width: 100%;
 border-radius: 15px;
 }
-/* CONTENEDOR DE TEXTO SINOPSIS */
-.cosmosexecutiveproducer-text-1-container {
+/* CONTENEDOR DE TEXTO */
+.cosmosexecutiveproducer-columns-grid-text {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-text-1,
-.cosmosexecutiveproducer-text-2,
-.cosmosexecutiveproducer-text-3,
-.cosmosexecutiveproducer-text-4 {
+.cosmosexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cosmosexecutiveproducer-columns-grid-text-1,
+.cosmosexecutiveproducer-columns-grid-text-2,
+.cosmosexecutiveproducer-columns-grid-text-3 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE PRECIO Y BOTONES */
-.cosmosexecutiveproducer-price-buttons-container {
+.cosmosexecutiveproducer-columns-grid-text-1 {
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE ADQUIRIR */
+.cosmosexecutiveproducer-columns-grid-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5930,57 +6003,66 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* PRECIO */
-.cosmosexecutiveproducer-price {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white;
-margin-top: 0px;
-margin-bottom: 10px;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-}
-/* BOTONES ADD TO CART Y SHARE */
-.cosmosexecutiveproducer-buttons-1-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
-.cosmosexecutiveproducer-button-addtocart,
-.cosmosexecutiveproducer-button-share {
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-color: white;
-text-decoration: none;
-margin-top: 0px;
-margin-bottom: 15px;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
-}
-.cosmosexecutiveproducer-button-addtocart:hover,
-.cosmosexecutiveproducer-button-share:hover {
-transform: scale(1.05);
-}
-.cosmosexecutiveproducer-button-addtocart {
-background-color: #ff1493 !important;
-font-size: 1.2rem;
-}
-.cosmosexecutiveproducer-button-share {
-background-color: #39ff14 !important;
-font-size: 1rem;
-}
-/* CONTENEDOR DE TEXTO LARGO */
-.cosmosexecutiveproducer-text-2-container {
+/* CONTENEDOR DE PRECIO */
+.cosmosexecutiveproducer-columns-grid-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
+.cosmosexecutiveproducer-columns-grid-acquire-price-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+/* CONTENEDOR DE BOTONES */
+.cosmosexecutiveproducer-columns-grid-acquire-price-buttons {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart,
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-share {
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+color: white !important;
+text-decoration: none;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-share:hover {
+transform: scale(1.05);
+}
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-price-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
+.cosmosexecutiveproducer-text {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 0px;
+}
+.cosmosexecutiveproducer-text-1,
+.cosmosexecutiveproducer-text-2,
+.cosmosexecutiveproducer-text-3,
+.cosmosexecutiveproducer-text-4,
 .cosmosexecutiveproducer-text-5,
 .cosmosexecutiveproducer-text-6,
 .cosmosexecutiveproducer-text-7,
@@ -5989,11 +6071,7 @@ margin-bottom: 0px;
 .cosmosexecutiveproducer-text-10,
 .cosmosexecutiveproducer-text-11,
 .cosmosexecutiveproducer-text-12,
-.cosmosexecutiveproducer-text-13,
-.cosmosexecutiveproducer-text-14,
-.cosmosexecutiveproducer-text-15,
-.cosmosexecutiveproducer-text-16,
-.cosmosexecutiveproducer-text-17 {
+.cosmosexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -6003,11 +6081,11 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.cosmosexecutiveproducer-text-17 {
-margin-bottom: 20px;
+.cosmosexecutiveproducer-text-13 {
+margin-bottom: 30px;
 }
 /* CONTENEDOR DE BOTONES */
-.cosmosexecutiveproducer-buttons-2-container {
+.cosmosexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
 margin-top: 0px;
@@ -6016,7 +6094,6 @@ margin-bottom: 0px;
 .cosmosexecutiveproducer-button-back,
 .cosmosexecutiveproducer-button-continueshopping,
 .cosmosexecutiveproducer-button-gotocart {
-background-color: #00CED1;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -6049,6 +6126,24 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
