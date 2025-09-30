@@ -5953,10 +5953,13 @@ z-index: 2;
 /* CONTENEDOR DE GRID */
 .cosmosexecutiveproducer-columns-grid {
 display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap: 20px;
-margin-top: 0px;
-margin-bottom: 15px;
+grid-template-columns: 30% 45% 25%;
+    gap: 20px;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    /* EVITAR COLUMNAS EXTRAS */
+    grid-auto-columns: 0;
+    grid-auto-flow: row;
 }
 /* CONTENEDOR DE IMAGEN */
 .cosmosexecutiveproducer-columns-grid-image {
@@ -6042,6 +6045,8 @@ padding-left: 20px;
 padding-right: 20px;
 margin-top: 0px;
 margin-bottom: 20px;
+margin-left: 0px;
+margin-right: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
