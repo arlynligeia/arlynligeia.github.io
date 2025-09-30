@@ -2532,80 +2532,63 @@ ADD TO CART
 <div class="cart-full-buttons">
 <button class="cart-full-button-back" onclick="history.back()">BACK</button>
 <a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
-<a class="cart-full-button-buy" id="cart-full-buy" href="#cart-shippinginformation">BUY</a>
 <button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
+<a class="cart-full-button-buy" id="cart-full-buy" href="#cart-shippinginformation">BUY</a>
 </div>
 </div>
 </div>
 </section>
 <!-- FIN CART -->
-
-  
-
-  
-  
-  
-  
-  
  
-
-
-
-
-
-
-
-
-
-
-
-
-  
 <!-- SHIPPING INFORMATION -->
-<section id="shippinginformation" class="shippinginformation-section main-section">
+<section class="shippinginformation-section main-section" id="shippinginformation">
 <div class="shippinginformation-container">
 <h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
-<!-- RESUMEN DEL PEDIDO -->
+<!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
 <div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">
-<p class="shippinginformation-ordersummary-subtitle">ORDER SUMMARY</p>
-<div id="shippinginformation-ordersummary-totals"></div> 
-<div class="shippinginformation-ordersummary-totals-subtotal"><span>Subtotal:</span>
-<span id="shippinginformation-ordersummary-totals-subtotal">$ 0.00</span>
+<h3 class="shippinginformation-ordersummary-title">ORDER SUMMARY</h3>
+<div class="shippinginformation-ordersummary-subtotal">
+<span>Subtotal:</span>
+<span>$</span> 
+<span id="shippinginformation-ordersummary-subtotal-amount">0.00</span>
 </div>  
-<div class="shippinginformation-ordersummary-totals-shipping"><span>Shipping:</span>
-<span id="shippinginformation-ordersummary-totals-shipping">$ 0.00</span>
-</div>
+<div class="shippinginformation-ordersummary-shipping">
+<span>Shipping:</span>
+<span>$</span> 
+<span id="shippinginformation-ordersummary-shipping-amount">0.00</span>
+</div>  
 <!-- LÍNEA DIVISORIA -->
 <div class="shippinginformation-ordersummary-divider"></div>
-<div class="shippinginformation-ordersummary-totals-total"><span>TOTAL:</span>
-<span id="shippinginformation-ordersummary-totals-total">$ 0.00</span>
+<div class="shippinginformation-ordersummary-total">
+<span>TOTAL:</span>
+<span>$</span> 
+<span id="shippinginformation-ordersummary-total-amount">0.00</span>
 </div>
-</div> 
-<!-- FORMULARIO DE ENVÍO -->
+</div>
+<!-- CONTENEDOR DE FORMULARIO DE ENVÍO -->
 <form id="shippinginformation-form">
 <div class="shippinginformation-form-columns">
-<div class="shippinginformation-form-grid">
-<!-- COLUMNA 1: INFORMACIÓN PERSONAL -->
-<div class="shippinginformation-form-grid-column">
-<p class="shippinginformation-form-grid-column-subtitle">PERSONAL INFORMATION</p>
-<label for="email" class="shippinginformation-form-grid-column-label">EMAIL</label>
-<input type="email" id="email" name="email" class="shippinginformation-form-grid-column-input" required>
-<label for="firstname" class="shippinginformation-form-grid-column-label">FIRST NAME</label>
-<input type="text" id="firstname" name="firstname" class="shippinginformation-form-grid-column-input" required>
-<label for="lastname" class="shippinginformation-form-grid-column-label">LAST NAME</label>
-<input type="text" id="lastname" name="lastname" class="shippinginformation-form-grid-column-input" required>
-<label for="idnumber" class="shippinginformation-form-grid-column-label">ID NUMBER</label>
-<input type="text" id="idnumber" name="idnumber" class="shippinginformation-form-grid-column-input" required>
-<label for="mobilephone" class="shippinginformation-form-grid-column-label">MOBILE PHONE</label>
-<input type="tel" id="mobilephone" name="mobilephone" class="shippinginformation-form-grid-column-input" required>
+<div class="shippinginformation-form-columns-grid">
+<!-- CONTENEDOR DE COLUMNA 1: INFORMACIÓN PERSONAL -->
+<div class="shippinginformation-form-columns-grid-column">
+<h3 class="shippinginformation-form-columns-grid-column-title">PERSONAL INFORMATION</h3>
+<label class="shippinginformation-form-columns-grid-column-label" for="email">EMAIL</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="email" id="email" name="email" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="firstname">FIRST NAME</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="firstname" name="firstname" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="lastname">LAST NAME</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="lastname" name="lastname" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="idnumber">ID NUMBER</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="idnumber" name="idnumber" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="mobilephone">MOBILE PHONE</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="tel" id="mobilephone" name="mobilephone" required>
 </div>
-<!-- COLUMNA 2: DIRECCIÓN DE ENVÍO -->
-<div class="shippinginformation-form-grid-column">
-<p class="shippinginformation-form-grid-column-subtitle">SHIPPING ADDRESS</p>
-<label for="country" class="shippinginformation-form-grid-column-label">COUNTRY</label>
-<select id="country" name="country" class="shippinginformation-form-grid-column-input" required>
+<!-- CONTENEDOR DE COLUMNA 2: DIRECCIÓN DE ENVÍO -->
+<div class="shippinginformation-form-columns-grid-column">
+<h3 class="shippinginformation-form-columns-grid-column-title">SHIPPING ADDRESS</h3>
+<label class="shippinginformation-form-columns-grid-column-label" for="country">COUNTRY</label>
+<select class="shippinginformation-form-columns-grid-column-input" id="country" name="country" required>
 <option value="">Select Country</option>
-<!-- PRINCIPALES MERCADOS -->
 <option value="US">United States</option>
 <option value="PE">Peru</option>     
 <option value="MX">Mexico</option>
@@ -2621,8 +2604,6 @@ ADD TO CART
 <option value="CO">Colombia</option>
 <option value="CN">China</option>
 <option value="JP">Japan</option>  
-<!-- AMÉRICA -->
-<!-- América del Norte -->
 <option value="BZ">Belize</option>
 <option value="CR">Costa Rica</option>
 <option value="SV">El Salvador</option>
@@ -2630,7 +2611,6 @@ ADD TO CART
 <option value="HN">Honduras</option>
 <option value="NI">Nicaragua</option>
 <option value="PA">Panama</option>
-<!-- Caribe -->
 <option value="AG">Antigua and Barbuda</option>
 <option value="BS">Bahamas</option>
 <option value="BB">Barbados</option>
@@ -2643,14 +2623,12 @@ ADD TO CART
 <option value="LC">Saint Lucia</option>
 <option value="VC">Saint Vincent and the Grenadines</option>
 <option value="TT">Trinidad and Tobago</option>
-<!-- América del Sur -->
 <option value="BO">Bolivia</option>
 <option value="EC">Ecuador</option>
 <option value="GY">Guyana</option>
 <option value="PY">Paraguay</option>
 <option value="SR">Suriname</option>
 <option value="UY">Uruguay</option>
-<!-- EUROPA -->
 <option value="AL">Albania</option>
 <option value="AD">Andorra</option>
 <option value="AT">Austria</option>
@@ -2689,7 +2667,6 @@ ADD TO CART
 <option value="CH">Switzerland</option>
 <option value="UA">Ukraine</option>
 <option value="VA">Vatican City</option>
-<!-- ASIA -->
 <option value="AM">Armenia</option>
 <option value="AZ">Azerbaijan</option>
 <option value="BH">Bahrain</option>
@@ -2732,7 +2709,6 @@ ADD TO CART
 <option value="AE">United Arab Emirates</option>
 <option value="UZ">Uzbekistan</option>
 <option value="VN">Vietnam</option>
-<!-- ÁFRICA -->
 <option value="DZ">Algeria</option>
 <option value="AO">Angola</option>
 <option value="BJ">Benin</option>
@@ -2770,7 +2746,7 @@ ADD TO CART
 <option value="MA">Morocco</option>
 <option value="MZ">Mozambique</option>
 <option value="NA">Namibia</option>
-<option value="NE">Niber</option>
+<option value="NE">Niger</option>
 <option value="NG">Nigeria</option>
 <option value="RW">Rwanda</option>
 <option value="ST">Sao Tome and Principe</option>
@@ -2785,7 +2761,6 @@ ADD TO CART
 <option value="UG">Uganda</option>
 <option value="ZM">Zambia</option>
 <option value="ZW">Zimbabwe</option>
-<!-- OCEANÍA -->
 <option value="AS">American Samoa</option>
 <option value="AU">Australia</option>
 <option value="CK">Cook Islands</option>
@@ -2812,43 +2787,66 @@ ADD TO CART
 <option value="VU">Vanuatu</option>
 <option value="WF">Wallis and Futuna</option>
 </select>
-<label for="state" class="shippinginformation-form-grid-column-label">STATE/PROVINCE/REGION</label>
-<input type="text" id="state" name="state" class="shippinginformation-form-grid-column-input" required>
-<label for="city" class="shippinginformation-form-grid-column-label">CITY</label>
-<input type="text" id="city" name="city" class="shippinginformation-form-grid-column-input" required>
-<label for="zipcode" class="shippinginformation-form-grid-column-label">ZIP CODE</label>
-<input type="text" id="zipcode" name="zipcode" class="shippinginformation-form-grid-column-input" required>
-<label for="address" class="shippinginformation-form-grid-column-label">ADDRESS</label>
-<input type="text" id="address" name="address" class="shippinginformation-form-grid-column-input" required>
-<label for="apartment" class="shippinginformation-form-grid-column-label">APARTMENT/SUITE/ETC</label>
-<input type="text" id="apartment" name="apartment" class="shippinginformation-form-grid-column-input">
+<label class="shippinginformation-form-columns-grid-column-label" for="state">STATE/PROVINCE/REGION</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="state" name="state" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="city">CITY</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="city" name="city" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="zipcode">ZIP CODE</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="zipcode" name="zipcode" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="address">ADDRESS</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="address" name="address" required>
+<label class="shippinginformation-form-columns-grid-column-label" for="apartment">APARTMENT/SUITE/ETC</label>
+<input class="shippinginformation-form-columns-grid-column-input" type="text" id="apartment" name="apartment">
 </div>
 </div>
 <!-- CAMPOS OCULTOS PARA LOS DATOS DEL CARRITO -->
-<input type="hidden" name="cart_details" id="cartDetails">
-<input type="hidden" name="cart_total" id="cartTotal">
-<input type="hidden" name="cart_items" id="cartItems">
-<input type="hidden" name="shipping_cost" id="shippingCost">
-</div>  
-</form>  
-<!-- BOTONES -->
+<input type="hidden" id="cart-items" name="cart_items">
+<input type="hidden" id="cart-subtotal" name="cart_subtotal">
+<input type="hidden" id="cart-shipping" name="cart_shipping">
+<input type="hidden" id="cart-total" name="cart_total">
+</div>
+</form>
+<!-- CONTENEDOR DE BOTONES -->
 <div class="shippinginformation-buttons">
-<a href="#cart" class="shippinginformation-button-back">BACK</a>
-<a href="#store" class="shippinginformation-button-continueshopping">CONTINUE SHOPPING</a>
+<a class="shippinginformation-button-back" href="#cart">BACK</a>
+<a class="shippinginformation-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="shippinginformation-button-proceedpayment" id="shippinginformation-button-proceedpayment">PROCEED PAYMENT</button>
 </div>
 <!-- FORMULARIO PAYPAL (OCULTO) -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="arlynligeia@gmail.com">
-<input type="hidden" name="item_name" value="Order from Arlyn Ligeia Store">
-<input type="hidden" name="amount" value="0" id="paypalAmount">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
 <input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="custom" id="paypalCustom">
+<input type="hidden" name="business" value="arlynligeia@gmail.com">
+<input type="hidden" name="item_name_1" value="Planet Sponsor">
+<input type="hidden" name="amount_1" value="1000000.00">
+<input type="hidden" name="quantity_1" value="1">
+<input type="hidden" name="item_name_2" value="Shipping">
+<input type="hidden" name="amount_2" value="50.00">
 </form>
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION -->
+  
+
+
+
+  
+
+  
+
+  
+  
+
+ 
+
+
+
+
+
+
+
+
 
 
 
