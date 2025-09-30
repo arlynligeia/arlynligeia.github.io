@@ -6601,13 +6601,6 @@ margin-right: 5px;
 text-align: right;
 min-width: 130px;
 }
-/* LINEA DIVISORA */
-.shippinginformation-ordersummary-divider {
-width: 100%;
-border-top: 3px solid #39ff14 !important;
-margin-top: 0px;
-margin-bottom: 10px;
-}
 /* CONTENEDOR DE COLUMNAS */
 .shippinginformation-form-columns {
 position: relative;
@@ -6701,26 +6694,6 @@ background-color: #ff1493 !important;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    ELECTRONIC SALES RECEIPT
 ====================================== */
@@ -6800,7 +6773,7 @@ text-decoration: none;
 line-height: 1.5; 
 text-align: center;  
 margin-top: 0px;
-margin-bottom: 5px;
+margin-bottom: 0px;
 }
 .electronicsalesreceipt-receipt-issuer-text {
 font-family: 'Share Tech Mono', monospace;
@@ -6820,6 +6793,16 @@ border: 3px solid #39ff14 !important;
 padding: 15px;
 margin-top: 0px;
 margin-bottom: 15px;
+}
+.electronicsalesreceipt-receipt-customer-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin-top: 0px;
+margin-bottom: 0px;
 }
 .electronicsalesreceipt-receipt-customer-text {
 font-family: 'Share Tech Mono', monospace;
@@ -6868,7 +6851,7 @@ padding-left: 0;
 /* ANCHO DE COLUMNAS */
 .electronicsalesreceipt-receipt-orderdetails-table th:nth-child(1),
 .electronicsalesreceipt-receipt-orderdetails-table td:nth-child(1) {
-width: 52%;
+width: 56%;
 }
 .electronicsalesreceipt-receipt-orderdetails-table th:nth-child(2),
 .electronicsalesreceipt-receipt-orderdetails-table td:nth-child(2) {
@@ -6876,11 +6859,11 @@ width: 8%;
 }
 .electronicsalesreceipt-receipt-orderdetails-table th:nth-child(3),
 .electronicsalesreceipt-receipt-orderdetails-table td:nth-child(3) {
-width: 20%;
+width: 18%;
 }
 .electronicsalesreceipt-receipt-orderdetails-table th:nth-child(4),
 .electronicsalesreceipt-receipt-orderdetails-table td:nth-child(4) {
-width: 20%;
+width: 18%;
 }
 /* ENCABEZADOS DE TABLA */
 .electronicsalesreceipt-receipt-orderdetails-table-head-row {
@@ -7055,12 +7038,6 @@ margin-right: 5px;
 text-align: right;
 min-width: 130px;
 }
-.electronicsalesreceipt-receipt-tax-divider {
-width: 100%;
-border-top: 3px solid #39ff14 !important;
-margin-top: 0px;
-margin-bottom: 10px;
-}
 /* CONTENEDOR: INFORMACIÓN DE PAGO */
 .electronicsalesreceipt-receipt-payment {
 background-color: rgba(255, 255, 255, 0.1);
@@ -7107,7 +7084,7 @@ text-decoration: none;
 line-height: 1.5; 
 text-align: center;  
 margin-top: 0px;
-margin-bottom: 20px;
+margin-bottom: 0px;
 }
 .electronicsalesreceipt-receipt-legal-link {
 color: #39ff14 !important;
