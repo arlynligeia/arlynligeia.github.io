@@ -2430,7 +2430,7 @@ ADD TO CART
 
   
 <!-- CART -->
-<section id="cart" class="cart-section main-section">
+<section class="cart-section main-section" id="cart">
 <div class="cart-container">
 <h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
 <!-- CARRITO VACIO -->
@@ -2442,13 +2442,13 @@ ADD TO CART
 <!-- CONTENEDOR DE BOTONES -->    
 <div class="cart-empty-buttons">
 <button class="cart-full-button-back" onclick="history.back()">BACK</button>
-<a href="#store" class="cart-full-button-continueshopping">CONTINUE SHOPPING</a>
+<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 </div>
 </div>
 <!-- CARRITO LLENO -->
 <div class="cart-full" id="cart-full">  
 <!-- CONTENEDOR DE TABLA -->
-<div class="cart-full-table-container">
+<div class="cart-full-table">
 <table class="cart-full-table-full">   
 <!-- ENCABEZADO DE TABLA -->
 <thead class="cart-full-table-full-head"> 
@@ -2464,13 +2464,13 @@ ADD TO CART
 <!-- CUERPO DE TABLA -->
 <tbody class="cart-full-table-full-body">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="cart-full-table-full-body-divider-1"><td colspan="6" class="cart-full-table-full-body-divider-1"></td></tr>
+<tr class="cart-full-table-full-body-divider-1"><td colspan="6"></td></tr>
 <!-- PRODUCTOS (SE AGREGARAN CON JS) -->
-<tr id="cart-full-table-full-body-noitems" class="cart-full-table-full-body-noitems">
-<td colspan="6" class="cart-full-table-full-body-noitems-text">No products added yet</td>
+<tr class="cart-full-table-full-body-noitems" id="cart-full-table-full-body-noitems">
+<td class="cart-full-table-full-body-noitems-text" colspan="6">No products added yet</td>
 </tr>
 <!-- LÍNEA DIVISORIA INFERIOR -->
-<tr class="cart-full-table-full-body-divider-2"><td colspan="6" class="cart-full-table-full-body-divider-2"></td></tr>
+<tr class="cart-full-table-full-body-divider-2"><td colspan="6"></td></tr>
 <!-- FILA SUBTOTAL -->
 <tr class="cart-full-table-full-body-row-subtotal">
 <td class="cart-full-table-full-body-row-subtotal-image"></td>
@@ -2531,15 +2531,14 @@ ADD TO CART
 <!-- CONTENEDOR DE BOTONES FINALES -->
 <div class="cart-full-buttons">
 <button class="cart-full-button-back" onclick="history.back()">BACK</button>
-<a href="#store" class="cart-full-button-continueshopping">CONTINUE SHOPPING</a>
-<a href="#cart-shippinginformation" class="cart-full-button-buy" id="cart-full-buy">BUY</a>
+<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
+<a class="cart-full-button-buy" id="cart-full-buy" href="#cart-shippinginformation">BUY</a>
 <button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
 </div>
 </div>
 </div>
 </section>
-<!-- FIN CART -->  
-
+<!-- FIN CART -->
 
   
 
