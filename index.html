@@ -2484,7 +2484,7 @@ ADD TO CART
 <td class="cart-full-table-full-body-row-subtotal-total">
 <div class="cart-full-table-full-body-row-subtotal-total-price">
 <span class="cart-full-table-full-body-row-subtotal-total-price-symbol">$</span>
-<span class="cart-full-table-full-body-row-subtotal-total-price-amount" id="cart-full-subtotal">0.00</span>
+<span class="cart-full-table-full-body-row-subtotal-total-price-amount" id="cart-subtotal">0.00</span>
 </div>
 </td>
 <td class="cart-full-table-full-body-row-subtotal-remove"></td>
@@ -2502,7 +2502,7 @@ ADD TO CART
 <td class="cart-full-table-full-body-row-shipping-total">
 <div class="cart-full-table-full-body-row-shipping-total-price">
 <span class="cart-full-table-full-body-row-shipping-total-price-symbol">$</span>
-<span class="cart-full-table-full-body-row-shipping-total-price-amount" id="cart-full-shipping-price">0.00</span>
+<span class="cart-full-table-full-body-row-shipping-total-price-amount" id="cart-shipping">0.00</span>
 </div>
 </td>
 <td class="cart-full-table-full-body-row-shipping-remove"></td>
@@ -2520,7 +2520,7 @@ ADD TO CART
 <td class="cart-full-table-full-body-row-total-total">
 <div class="cart-full-table-full-body-row-total-total-price">
 <span class="cart-full-table-full-body-row-total-total-price-symbol">$</span>
-<span class="cart-full-table-full-body-row-total-total-price-amount" id="cart-full-total-price">0.00</span>
+<span class="cart-full-table-full-body-row-total-total-price-amount" id="cart-total">0.00</span>
 </div>
 </td>
 <td class="cart-full-table-full-body-row-total-remove"></td>
@@ -2550,19 +2550,19 @@ ADD TO CART
 <div class="shippinginformation-ordersummary-subtotal">
 <span>Subtotal:</span>
 <span>$</span> 
-<span id="shippinginformation-ordersummary-subtotal-amount">1,000,000.00</span>
+<span id="cart-subtotal">0.00</span>
 </div>  
 <div class="shippinginformation-ordersummary-shipping">
 <span>Shipping:</span>
 <span>$</span> 
-<span id="shippinginformation-ordersummary-shipping-amount">0.00</span>
+<span id="cart-shipping">0.00</span>
 </div>  
 <!-- LÍNEA DIVISORIA -->
 <div class="shippinginformation-ordersummary-divider"></div>
 <div class="shippinginformation-ordersummary-total">
 <span>TOTAL:</span>
 <span>$</span> 
-<span id="shippinginformation-ordersummary-total-amount">0.00</span>
+<span id="cart-total">0.00</span>
 </div>
 </div>
 <!-- CONTENEDOR DE FORMULARIO DE ENVÍO -->
@@ -2801,18 +2801,18 @@ ADD TO CART
 </div>
 </div>
 <!-- CAMPOS OCULTOS PARA LOS DATOS DEL CARRITO -->
-<input type="hidden" id="cart-items" name="cart_items">
+<input type="hidden" id="cart-items" name="cart_items" value="">
 <input type="hidden" id="cart-subtotal" name="cart_subtotal">
 <input type="hidden" id="cart-shipping" name="cart_shipping">
 <input type="hidden" id="cart-total" name="cart_total">
 </div>
-</form>
 <!-- CONTENEDOR DE BOTONES -->
 <div class="shippinginformation-buttons">
 <a class="shippinginformation-button-back" href="#cart">BACK</a>
 <a class="shippinginformation-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="shippinginformation-button-proceedpayment" id="shippinginformation-button-proceedpayment">PROCEED PAYMENT</button>
 </div>
+</form>
 <!-- FORMULARIO PAYPAL (OCULTO) -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
 <input type="hidden" name="cmd" value="_cart">
