@@ -2828,99 +2828,82 @@ ADD TO CART
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION -->
-  
-
-
-
-  
-
-  
-
-  
-  
-
- 
-
-
-
-
-
-
-
-
-
-
 
 
 
   
 <!-- ELECTRONIC SALES RECEIPT -->
-<section id="electronicsalesreceipt" class="electronicsalesreceipt-section main-section">
+<section class="electronicsalesreceipt-section main-section" id="electronicsalesreceipt">
 <div class="electronicsalesreceipt-container">
 <h2 class="electronicsalesreceipt-title"><a href="#electronicsalesreceipt">ELECTRONIC SALES RECEIPT</a></h2>
-<!-- CONTENEDOR DEL RECIBO (7 SECCIONES DENTRO) -->
+<!-- CONTENEDOR DE RECIBO (8 SECCIONES DENTRO) -->
 <div class="electronicsalesreceipt-receipt">
 <!-- 1. SERIES - ORDER - DATE -->
 <div class="electronicsalesreceipt-receipt-series"> 
 <div class="electronicsalesreceipt-receipt-series-serie">
 <span>Serie:</span>  
-<span id="electronicsalesreceipt-receipt-series-serie">B001 - </span> 
-<span id="electronicsalesreceipt-receipt-series-serie-number">N°00000001</span>   
+<span id="electronicsalesreceipt-serie">B001 - </span> 
+<span id="electronicsalesreceipt-number">N°00000001</span>  
 </div>  
 <div class="electronicsalesreceipt-receipt-series-order">
-<span>Order:</span>  
-<span id="electronicsalesreceipt-receipt-series-order">N°AL2500000001</span>   
-</div>  
+<span>Order:</span>
+<span id="electronicsalesreceipt-year">N°AL25</span>  
+<span id="electronicsalesreceipt-order">00000001</span>   
+</div> 
 <div class="electronicsalesreceipt-receipt-series-date">        
 <span>Date:</span>  
-<span id="electronicsalesreceipt-receipt-series-date">January 8, 2025</span>    
+<span id="electronicsalesreceipt-date">January 8, 2025</span>    
 </div>  
 </div>
 <!-- 2. INFORMACIÓN DEL EMISOR -->
-<div class="electronicsalesreceipt-receipt-issuer">  
-<div class="electronicsalesreceipt-receipt-issuer-subtitle">ISSUER</div>  
-<div class="electronicsalesreceipt-receipt-issuer-text">  
-<div class="electronicsalesreceipt-receipt-issuer-text-line">
-<span class="electronicsalesreceipt-receipt-issuer-text-line-label">RUC:</span> 
-<span id="electronicsalesreceipt-receipt-issuer-text-line-ruc">0000000000</span>
+<div class="electronicsalesreceipt-receipt-issuer">
+<h3 class="electronicsalesreceipt-receipt-issuer-title">ISSUER</h3>
+<div class="electronicsalesreceipt-receipt-issuer-text">
+<span>RUC:</span>
+<span>0000000000</span>
 </div>
-<div class="electronicsalesreceipt-receipt-issuer-text-line">
-<span class="electronicsalesreceipt-receipt-issuer-text-line-label">Business Name:</span> 
-<span id="electronicsalesreceipt-receipt-issuer-text-line-name">Arlyn Ligeia</span>
+<div class="electronicsalesreceipt-receipt-issuer-text">
+<span>Bussines Name:</span>
+<span>Arlyn Ligeia</span>
 </div>
-<div class="electronicsalesreceipt-receipt-issuer-text-line">
-<span class="electronicsalesreceipt-receipt-issuer-text-line-label">Address:</span> 
-<span id="electronicsalesreceipt-receipt-issuer-text-line-address">mmmmmmmmmmmmmmmm</span>
+<div class="electronicsalesreceipt-receipt-issuer-text">
+<span>Address:</span>
+<span>New York</span>
 </div>  
-</div> 
 </div>
 <!-- 3. INFORMACIÓN DEL CLIENTE -->
 <div class="electronicsalesreceipt-receipt-customer">
-<div class="electronicsalesreceipt-receipt-customer-subtitle">CUSTOMER</div> 
-<div class="electronicsalesreceipt-receipt-customer-text">  
-<div class="electronicsalesreceipt-receipt-customer-text-line">
-<span class="electronicsalesreceipt-receipt-customer-text-line-label">Name:</span> 
-<span id="electronicsalesreceipt-receipt-customer-text-line-name">John Doe</span>
-</div>  
-<div class="electronicsalesreceipt-receipt-customer-text-line">
-<span class="electronicsalesreceipt-receipt-customer-text-line-label">Email:</span> 
-<span id="electronicsalesreceipt-receipt-customer-text-line-email">john@example.com</span>
-</div>  
-<div class="electronicsalesreceipt-receipt-customer-text-line">
-<span class="electronicsalesreceipt-receipt-customer-text-line-label">Phone:</span> 
-<span id="electronicsalesreceipt-receipt-customer-text-line-phone">+1 234 567 890</span>
-</div> 
-<div class="electronicsalesreceipt-receipt-customer-text-line">
-<span class="electronicsalesreceipt-receipt-customer-text-line-label">Address:</span> 
-<span id="electronicsalesreceipt-receipt-customer-text-line-address">123 Main St, City, Country 12345</span>
+<h3 class="electronicsalesreceipt-receipt-issuer-title">CUSTOMER</h3>
+<div class="electronicsalesreceipt-receipt-customer-text">
+<span>Full Name:</span>
+<span id="firstname"><!-- Se llenará con firstname --></span>
+<span id="lastname"><!-- Se llenará con lastname --></span>
 </div>
+<div class="electronicsalesreceipt-receipt-customer-text">
+<span>ID Number:</span>
+<span id="idnumber"><!-- Se llenará con idnumber --></span>
+</div>
+<div class="electronicsalesreceipt-receipt-customer-text">
+<span>Address:</span>
+<span id="address"><!-- Se llenará con address --></span>
+<span id="address2"><!-- Se llenará con address2 --></span>
+<span id="apartment"><!-- Se llenará con apartment --></span>
+<span id="city"><!-- Se llenará con city --></span>
+<span id="country"><!-- Se llenará con country --></span>
+</div>
+<div class="electronicsalesreceipt-receipt-customer-text">
+<span>Mobile Phone:</span>
+<span id="mobilephone"><!-- Se llenará con mobilephone --></span>
+</div>  
+<div class="electronicsalesreceipt-receipt-customer-text">
+<span>Email:</span>
+<span id="email"><!-- Se llenará con email --></span>
 </div>
 </div>
 <!-- 4. DETALLES DE LA ORDEN CON TABLA -->
-<div class="electronicsalesreceipt-receipt-orderdetails"> 
-<div class="electronicsalesreceipt-receipt-orderdetails-subtitle">
-<span>ORDER DETAILS</span>  
-</div>   
+<div class="electronicsalesreceipt-receipt-orderdetails">
+<h3 class="electronicsalesreceipt-receipt-orderdetails-title">ORDER DETAILS</h3>
+<!-- TABLA -->  
 <table class="electronicsalesreceipt-receipt-orderdetails-table">   
 <!-- ENCABEZADO DE TABLA -->
 <thead class="electronicsalesreceipt-receipt-orderdetails-table-head"> 
@@ -2934,144 +2917,168 @@ ADD TO CART
 <!-- CUERPO DE TABLA -->
 <tbody class="electronicsalesreceipt-receipt-orderdetails-table-body">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-1"><td colspan="4" class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-1"></td></tr>
-<!-- AQUÍ SE INSERTARÁN LOS PRODUCTOS DINÁMICAMENTE DESPUÉS DEL PAGO -->
-<!-- Los productos se generarán automáticamente con JavaScript/PHP -->
-<!-- basándose en los items que estaban en el carrito al momento del pago -->
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-1"><td colspan="4"></td></tr>
+<!-- PRODUCTOS (SE AGREGARAN CON JS) -->
+
+<!-- PRUEBA PARA EDITAR STYLE -->
 <!-- FILA 1: PRODUCTO 1 -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-line">
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-row">
 <!-- CONTENEDOR DE NOMBRE DE PRODUCTO -->
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-name">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-name-text">Planet Sponsor</span>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-name"> 
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-name-text">Planet Sponsor</span>
 </div>
 </td>
 <!-- CONTENEDOR DE CANTIDAD -->
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-quantity">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-quantity-number">1</span>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-quantity">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-quantity-number">1</span>
 </div>
 </td>
 <!-- CONTENEDOR DE PRECIO UNITARIO -->
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice-symbol">$</span>
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-unitprice-amount">1,000,000.00</span>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-unitprice">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-unitprice-symbol">$</span>
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-unitprice-amount">1,000,000.00</span>
 </div>
 </td>
 <!-- CONTENEDOR DE PRECIO TOTAL-->
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice-symbol">$</span>
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-product-totalprice-amount">1,000,000.00</span>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-totalprice">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-totalprice-symbol">$</span>
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-product-totalprice-amount">1,000,000.00</span>
 </div>
 </td>  
 </tr>
+<!-- FIN PRUEBA PARA EDITAR STYLE -->
+
 <!-- LÍNEA DIVISORIA INFERIOR -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-2"><td colspan="4" class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-2"></td></tr>
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-divider-2"><td colspan="4"></td></tr>
 <!-- FILA SUBTOTAL -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal">
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-name"></td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-quantity"></td>  
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-unitprice">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-unitprice-label">  
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-unitprice-label-text">Subtotal</span>
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal">
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-name"></td>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-quantity"></td>  
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-unitprice">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-unitprice-label">  
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-unitprice-label-text">Subtotal</span>
 </div>
 </td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price-symbol">$</span>
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-subtotal-total-price-amount" id="subtotal-amount">0.00</span>  
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-total">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-total-price">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-total-price-symbol">$</span>
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-subtotal-total-price-amount" id="subtotal-amount">0.00</span>  
 </div>
 </td>
 </tr>
 <!-- FILA SHIPPING -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping">
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-name"></td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-quantity"></td>  
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-unitprice">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-unitprice-label">  
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-unitprice-label-text">Shipping</span>
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping">
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-name"></td>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-quantity"></td>  
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-unitprice">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-unitprice-label">  
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-unitprice-label-text">Shipping</span>
 </div>
 </td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price-symbol">$</span>
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-shipping-total-price-amount" id="shipping-amount">0.00</span>  
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-total">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-total-price">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-total-price-symbol">$</span>
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-shipping-total-price-amount" id="shipping-amount">0.00</span>  
 </div>
 </td>
 </tr>
 <!-- FILA TOTAL -->
-<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total">
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-name"></td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-quantity"></td>    
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-unitprice">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-unitprice-label">  
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-unitprice-label-text">TOTAL</span>
+<tr class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total">
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-name"></td>
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-quantity"></td>    
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-unitprice">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-unitprice-label">  
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-unitprice-label-text">TOTAL</span>
 </div>
 </td>
-<td class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total">
-<div class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price">
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price-symbol">$</span>
-<span class="electronicsalesreceipt-receipt-orderdetails-table-body-line-total-total-price-amount" id="total-amount">0.00</span>  
+<td class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-total">
+<div class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-total-price">
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-total-price-symbol">$</span>
+<span class="electronicsalesreceipt-receipt-orderdetails-table-body-row-total-total-price-amount" id="total-amount">0.00</span>  
 </div>
 </td>
 </tr>
 </tbody>
 </table>
-</div>     
+</div>
 <!-- 5. DESGLOSE DE IMPUESTOS -->
-<div class="electronicsalesreceipt-receipt-tax">
+<div class="electronicsalesreceipt-receipt-tax" id="electronicsalesreceipt-receipt-tax">
 <div class="electronicsalesreceipt-receipt-tax-subtotal">
-<span>Subtotal: </span>
-<span class="electronicsalesreceipt-receipt-tax-subtotal-currency">$</span>
-<span id="electronicsalesreceipt-receipt-tax-subtotal-amount">847,457.63</span>
-</div>
+<span>Subtotal:</span>
+<span>$</span> 
+<span id="electronicsalesreceipt-subtotal-no-tax">0.00</span>
+</div>  
 <div class="electronicsalesreceipt-receipt-tax-vat">
-<span>VAT: </span>
-<span class="electronicsalesreceipt-receipt-tax-vat-currency">$</span>
-<span id="electronicsalesreceipt-receipt-tax-vat-amount">152,542.37</span>
-</div>
+<span>VAT:</span>
+<span>$</span> 
+<span id="electronicsalesreceipt-vat">0.00</span>
+</div>  
+<!-- LÍNEA DIVISORIA -->
+<div class="electronicsalesreceipt-receipt-tax-divider"></div>
 <div class="electronicsalesreceipt-receipt-tax-total">
-<span>Total: </span>
-<span class="electronicsalesreceipt-receipt-tax-total-currency">$</span>
-<span id="electronicsalesreceipt-receipt-tax-total-amount">1,000,000.00</span>
+<span>TOTAL:</span>
+<span>$</span> 
+<span id="cart-total">0.00</span>
 </div>
 </div>
 <!-- 6. INFORMACIÓN DE PAGO -->
 <div class="electronicsalesreceipt-receipt-payment">
-<div class="electronicsalesreceipt-receipt-payment-subtitle">PAYMENT INFORMATION</div>  
-<div class="electronicsalesreceipt-receipt-payment-text">  
-<div class="electronicsalesreceipt-receipt-payment-text-line">
-<span class="electronicsalesreceipt-receipt-payment-text-line-label">Payment Method:</span> 
-<span id="electronicsalesreceipt-receipt-payment-text-line-method">PayPal</span>
+<h3 class="electronicsalesreceipt-receipt-payment-title">PAYMENT INFORMATION</h3>
+<div class="electronicsalesreceipt-receipt-payment-text">
+<span>Payment Method:</span>
+<span>Paypal - </span>
+<span id="payment-method">Mastercard</span>
 </div>
-<div class="electronicsalesreceipt-receipt-payment-text-line">
-<span class="electronicsalesreceipt-receipt-payment-text-line-label">Transaction ID:</span> 
-<span id="electronicsalesreceipt-receipt-payment-text-line-transactionid">PAYPAL123456789</span>
+<div class="electronicsalesreceipt-receipt-payment-text">
+<span>Transaction ID:</span> 
+<span id="transaction-id"><!-- Se llenará con ID de PayPal --></span>
 </div>
-<div class="electronicsalesreceipt-receipt-payment-text-line">
-<span class="electronicsalesreceipt-receipt-payment-text-line-label">Payment Date:</span> 
-<span id="electronicsalesreceipt-receipt-payment-text-line-date">January 8, 2025</span>
-</div>
+<div class="electronicsalesreceipt-receipt-payment-text">
+<span>Payment Date:</span> 
+<span id="payment-date"><!-- Se llenará con fecha de PayPal --></span>
 </div>
 </div>
 <!-- 7. INFORMACIÓN LEGAL -->
 <div class="electronicsalesreceipt-receipt-legal">
-<div class="electronicsalesreceipt-receipt-legal-text">Printed representation of the electronic sales receipt.</div>
-<div class="electronicsalesreceipt-receipt-legal-text">Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span></div>
-<div class="electronicsalesreceipt-receipt-legal-text">Authorized by Intendancy Resolution N°</div>
+<p class="electronicsalesreceipt-receipt-legal-text">
+Printed representation of the electronic sales receipt.<br>
+Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span><br>
+Authorized by Intendancy Resolution N°</p>
+</div>
+<!-- 8. AGRADECIMIENTO-->
+<div class="electronicsalesreceipt-receipt-thanks">
+<span>THANKS FOR YOU PURCHASE</span>
 </div>
 </div>
-<!-- BOTONES (FUERA del contenedor del recibo) -->
+<!-- CONTENEDOR DE BOTONES -->
 <div class="electronicsalesreceipt-buttons">
-<a href="#store" class="electronicsalesreceipt-button-continueshopping">CONTINUE SHOPPING</a>
+<a class="electronicsalesreceipt-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="electronicsalesreceipt-button-print" onclick="window.print()">PRINT RECEIPT</button>
 <button class="electronicsalesreceipt-button-download" id="electronicsalesreceipt-button-download-pdf">DOWNLOAD PDF</button>
 </div>
 </div>
 </section>
 <!-- FIN ELECTRONIC SALES RECEIPT -->
+
+
+
+  
+
+ 
+
+
+
+
+
+  
+
+
+
+
 
 
 
