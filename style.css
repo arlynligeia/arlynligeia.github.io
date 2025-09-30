@@ -6586,23 +6586,21 @@ margin-bottom: 0px;
 .shippinginformation-ordersummary-subtotal span:first-child,
 .shippinginformation-ordersummary-shipping span:first-child,
 .shippinginformation-ordersummary-total span:first-child {
-    text-align: left;
-    flex: 1;
+text-align: left;
+flex: 1;
 }
 /* Contenedor para símbolo + monto alineados a la derecha */
 .shippinginformation-ordersummary-subtotal span:nth-child(2),
 .shippinginformation-ordersummary-shipping span:nth-child(2),
 .shippinginformation-ordersummary-total span:nth-child(2) {
-    margin-right: 5px; /* Espacio entre $ y monto */
+margin-right: 5px;
 }
 .shippinginformation-ordersummary-subtotal span:nth-child(3),
 .shippinginformation-ordersummary-shipping span:nth-child(3),
 .shippinginformation-ordersummary-total span:nth-child(3) {
-    text-align: right;
-    min-width: 120px; /* Espacio fijo para montos hasta 1 millón */
+text-align: right;
+min-width: 122px;
 }
-
-
 /* LINEA DIVISORA */
 .shippinginformation-ordersummary-divider {
 width: 100%;
@@ -6684,6 +6682,8 @@ padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 20px;
 padding-right: 20px;
+margin-top: 0px;
+margin-bottom: 0px;   
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
