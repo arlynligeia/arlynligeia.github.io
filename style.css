@@ -6300,7 +6300,7 @@ margin-top: 0;
 margin-bottom: 0px; 
 }
 /* LÍNEA DIVISORIA */
-.cart-full-table-full-body-divider-1 {
+.cart-full-table-full-body-divider-1 td {
 width: 100%;
 border-top: 3px solid #39ff14 !important;
 height: 0;
@@ -6313,10 +6313,14 @@ vertical-align: middle;
 }
 /* CONTENEDORES DE CONTENIDO */
 .cart-full-table-full-body-noitems-text {
+display: flex;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
+text-decoration: none;    
+justify-content: center;
 align-items: center;
+text-align: center;
 }
 /* CONTENEDOR DE IMAGEN */
 .cart-full-table-full-body-row-product-image {
@@ -6402,7 +6406,7 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 /* LÍNEA DIVISORIA INFERIOR */
-.cart-full-table-full-body-divider-2 {
+.cart-full-table-full-body-divider-2 td {
 width: 100%;
 border-top: 3px solid #39ff14 !important;
 height: 0;
