@@ -6319,7 +6319,7 @@ color: white !important;
 text-decoration: none;    
 text-align: center;
 padding-top: 0px;
-padding-bottom: 5px; 
+padding-bottom: 10px; 
 }
 /* CONTENEDOR DE IMAGEN */
 .cart-full-table-full-body-row-product-image {
@@ -6474,8 +6474,8 @@ margin-bottom: 0px;
 }
 .cart-full-button-back,
 .cart-full-button-continueshopping,
-.cart-full-button-buy,
-.cart-full-button-clear {
+.cart-full-button-clear,
+.cart-full-button-buy {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -6506,39 +6506,13 @@ background-color: #39ff14 !important;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SHIPPING INFORMATION
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .shippinginformation-container {
 position: relative;
-width: 1000px;
+width: 900px;
 background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
@@ -6572,7 +6546,7 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
-/* RESUMEN DEL PEDIDO */
+/* CONTENEDOR RESUMEN DEL PEDIDO */
 .shippinginformation-ordersummary {
 background-color: rgba(255, 255, 255, 0.1);
 border-radius: 15px;
@@ -6581,8 +6555,7 @@ margin-top: 0px;
 margin-bottom: 15px;
 padding: 20px;
 }
-/* TEXTOS */
-.shippinginformation-ordersummary-subtitle {
+.shippinginformation-ordersummary-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #39ff14 !important;
@@ -6592,11 +6565,9 @@ text-align: center;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.shippinginformation-ordersummary-totals {
-margin-bottom: 10px;
-}
-.shippinginformation-ordersummary-totals-subtotal,
-.shippinginformation-ordersummary-totals-shipping {
+.shippinginformation-ordersummary-subtotal,
+.shippinginformation-ordersummary-shipping,
+.shippinginformation-ordersummary-total {
 display: flex;
 justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
@@ -6607,38 +6578,53 @@ line-height: 1.5;
 margin-top: 0px;
 margin-bottom: 10px;
 }
+.shippinginformation-ordersummary-total {
+color: #39ff14 !important;
+margin-bottom: 0px;
+}
+/* Etiqueta a la izquierda */
+.shippinginformation-ordersummary-subtotal span:first-child,
+.shippinginformation-ordersummary-shipping span:first-child,
+.shippinginformation-ordersummary-total span:first-child {
+    text-align: left;
+    flex: 1;
+}
+/* Contenedor para símbolo + monto alineados a la derecha */
+.shippinginformation-ordersummary-subtotal span:nth-child(2),
+.shippinginformation-ordersummary-shipping span:nth-child(2),
+.shippinginformation-ordersummary-total span:nth-child(2) {
+    margin-right: 5px; /* Espacio entre $ y monto */
+}
+.shippinginformation-ordersummary-subtotal span:nth-child(3),
+.shippinginformation-ordersummary-shipping span:nth-child(3),
+.shippinginformation-ordersummary-total span:nth-child(3) {
+    text-align: right;
+    min-width: 120px; /* Espacio fijo para montos hasta 1 millón */
+}
+
+
+/* LINEA DIVISORA */
 .shippinginformation-ordersummary-divider {
 width: 100%;
 border-top: 3px solid #39ff14 !important;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-.shippinginformation-ordersummary-totals-total {
-display: flex;
-justify-content: space-between; 
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: #39ff14 !important;
-text-decoration: none;
-line-height: 1.5;
-margin-top: 0px;
-margin-bottom: 0px;
-}
 /* CONTENEDOR DE COLUMNAS */
 .shippinginformation-form-columns {
 position: relative;
 z-index: 2;
 }
-/* GRID DE DOS COLUMNAS */
-.shippinginformation-form-grid {
+/* CONTENEDOR DE GRID */
+.shippinginformation-form-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-/* TEXTOS */
-.shippinginformation-form-grid-column-subtitle {
+/* TÍTULOS */
+.shippinginformation-form-columns-grid-column-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #39ff14 !important;
@@ -6649,7 +6635,7 @@ margin-top: 0px;
 margin-bottom: 10px;
 }
 /* TEXTOS SOBRE LOS RECUADROS */
-.shippinginformation-form-grid-column-label {
+.shippinginformation-form-columns-grid-column-label {
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -6661,7 +6647,7 @@ margin-top: 0px;
 margin-bottom: 5px; 
 }
 /* RECUADROS Y TEXTOS DENTRO */
-.shippinginformation-form-grid-column-input {
+.shippinginformation-form-columns-grid-column-input {
 width: 100%;
 height: 40px;
 background-color: white !important;
@@ -6676,10 +6662,10 @@ margin-bottom: 15px;
 border: none;
 box-sizing: border-box;
 }
-.shippinginformation-form-grid-column-input#apartment {
+.shippinginformation-form-columns-grid-column-input#apartment {
 margin-bottom: 20px;   
 }
-/* BOTONES FINALES */
+/* CONTENEDOR DE BOTONES FINALES */
 .shippinginformation-buttons {
 display: flex;
 justify-content: space-between;
@@ -6692,7 +6678,7 @@ margin-bottom: 0px;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: white !important;
 text-decoration: none;
 padding-top: 10px;
 padding-bottom: 10px;
@@ -6714,6 +6700,21 @@ background-color: #ff1493 !important;
 .shippinginformation-button-proceedpayment:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
