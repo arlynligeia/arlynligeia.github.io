@@ -5905,6 +5905,14 @@ font-weight: bold;
 
 
 
+
+
+
+
+
+
+
+
 /* ======================================
    COSMOS EXECUTIVE PRODUCER
 ====================================== */
@@ -5945,39 +5953,58 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR DE COLUMNAS */
-.cosmosexecutiveproducer-columns {
-position: relative;
-z-index: 2;
+/* CONTENEDOR: TABLA */
+.cosmosexecutiveproducer-table {
+width: 100%;
+margin-top: 0px;
+margin-bottom: 20px;
 }
-/* CONTENEDOR DE GRID */
-.cosmosexecutiveproducer-columns-grid {
-display: grid;
-grid-template-columns: 30% 45% 25%;
-    gap: 20px;
-    margin-top: 0px;
-    margin-bottom: 15px;
-    /* EVITAR COLUMNAS EXTRAS */
-    grid-auto-columns: 0;
-    grid-auto-flow: row;
+.cosmosexecutiveproducer-table-body {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
 }
-/* CONTENEDOR DE IMAGEN */
-.cosmosexecutiveproducer-columns-grid-image {
+.cosmosexecutiveproducer-table-body td + td {
+padding-left: 5px;
+}
+.cosmosexecutiveproducer-table-body td:first-child {
+padding-left: 0;
+}
+/* ANCHO DE COLUMNAS EXACTO */
+.cosmosexecutiveproducer-table-body td:nth-child(1) {
+width: 30%;
+}
+.cosmosexecutiveproducer-table-body td:nth-child(2) {
+width: 45%;
+}
+.cosmosexecutiveproducer-table-body td:nth-child(3) {
+width: 25%;
+}
+/* CONTENEDOR: IMAGEN */
+.cosmosexecutiveproducer-table-body-row-product-image {
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 0px;
+margin-bottom: 5px; 
+}
+.cosmosexecutiveproducer-table-body-row-product-image img {
+max-width: 100%;
+max-height: 100%; 
+border-radius: 6px;
+object-fit: contain;
+margin-top: 0px;
+margin-bottom: 5px; 
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cosmosexecutiveproducer-table-body-row-product-information {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-columns-grid-image img {
-width: 100%;
-border-radius: 15px;
-}
-/* CONTENEDOR DE TEXTO */
-.cosmosexecutiveproducer-columns-grid-text {
-width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
-}
-.cosmosexecutiveproducer-columns-grid-text-subtitle {
+.cosmosexecutiveproducer-table-body-row-product-information-subtitle-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -5987,9 +6014,7 @@ text-align: center;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-columns-grid-text-1,
-.cosmosexecutiveproducer-columns-grid-text-2,
-.cosmosexecutiveproducer-columns-grid-text-3 {
+.cosmosexecutiveproducer-table-body-row-product-information-subtitle-2 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -5999,11 +6024,19 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-columns-grid-text-1 {
-margin-bottom: 10px;
+.cosmosexecutiveproducer-table-body-row-product-information-text-1,
+.cosmosexecutiveproducer-table-body-row-product-information-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 0px;
 }
-/* CONTENEDOR DE ADQUIRIR */
-.cosmosexecutiveproducer-columns-grid-acquire {
+/* CONTENEDOR: ADQUIRIR (PRECIO Y BOTONES) */
+.cosmosexecutiveproducer-table-body-row-product-acquire {
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -6011,13 +6044,12 @@ align-items: center;
 height: 100%;
 min-height: 300px;
 }
-/* CONTENEDOR DE PRECIO */
-.cosmosexecutiveproducer-columns-grid-acquire-price {
+.cosmosexecutiveproducer-table-body-row-product-acquire-price {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-columns-grid-acquire-price-amount {
+.cosmosexecutiveproducer-table-body-row-product-acquire-price span {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -6027,14 +6059,13 @@ text-align: center;
 margin-top: 0px;
 margin-bottom: 10px;
 }
-/* CONTENEDOR DE BOTONES */
-.cosmosexecutiveproducer-columns-grid-acquire-price-buttons {
+.cosmosexecutiveproducer-table-body-row-product-acquire-buttons {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart,
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-share {
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-addtocart,
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-share {
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 color: white !important;
@@ -6045,43 +6076,32 @@ padding-left: 20px;
 padding-right: 20px;
 margin-top: 0px;
 margin-bottom: 20px;
-margin-left: 0px;
-margin-right: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart:hover,
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-share:hover {
-transform: scale(1.05);
-}
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-addtocart {
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-addtocart {
 background-color: #ff1493 !important;
 font-size: 1.2rem;
 }
-.cosmosexecutiveproducer-columns-grid-acquire-price-button-share{
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-share{
 background-color: #39ff14 !important;
 font-size: 1rem;
 }
-/* CONTENEDOR DE TEXTO DEBAJO DE LAS COLUMNAS */
-.cosmosexecutiveproducer-text {
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-addtocart:hover,
+.cosmosexecutiveproducer-table-body-row-product-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.cosmosexecutiveproducer-information {
 width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-text-1,
-.cosmosexecutiveproducer-text-2,
-.cosmosexecutiveproducer-text-3,
-.cosmosexecutiveproducer-text-4,
-.cosmosexecutiveproducer-text-5,
-.cosmosexecutiveproducer-text-6,
-.cosmosexecutiveproducer-text-7,
-.cosmosexecutiveproducer-text-8,
-.cosmosexecutiveproducer-text-9,
-.cosmosexecutiveproducer-text-10,
-.cosmosexecutiveproducer-text-11,
-.cosmosexecutiveproducer-text-12,
-.cosmosexecutiveproducer-text-13 {
+.cosmosexecutiveproducer-information-subtitle-1,
+.cosmosexecutiveproducer-information-subtitle-2,
+.cosmosexecutiveproducer-information-subtitle-3,
+.cosmosexecutiveproducer-information-subtitle-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -6091,10 +6111,28 @@ text-align: justify;
 margin-top: 0px;
 margin-bottom: 15px;
 }
-.cosmosexecutiveproducer-text-13 {
+.cosmosexecutiveproducer-information-text-1,
+.cosmosexecutiveproducer-information-text-2,
+.cosmosexecutiveproducer-information-text-3,
+.cosmosexecutiveproducer-information-text-4,
+.cosmosexecutiveproducer-information-text-5,
+.cosmosexecutiveproducer-information-text-6,
+.cosmosexecutiveproducer-information-text-7,
+.cosmosexecutiveproducer-information-text-8,
+.cosmosexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin-top: 0px;
+margin-bottom: 10px;
+}
+.cosmosexecutiveproducer-information-text-9 {
 margin-bottom: 20px;
 }
-/* CONTENEDOR DE BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .cosmosexecutiveproducer-buttons {
 display: flex;
 justify-content: space-between;
