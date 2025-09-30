@@ -5900,13 +5900,18 @@ color: #39FF14;
 font-weight: bold;
 }
 
+
+
+
+
+
 /* ======================================
    COSMOS EXECUTIVE PRODUCER
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .cosmosexecutiveproducer-container {
 position: relative;
-width: 1000px;
+width: 900px;
 background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
@@ -5971,28 +5976,28 @@ margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-columns-grid-text-subtitle {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
 margin-top: 0px;
-margin-bottom: 10px;
+margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-columns-grid-text-1,
 .cosmosexecutiveproducer-columns-grid-text-2,
 .cosmosexecutiveproducer-columns-grid-text-3 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 10px;
+margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-columns-grid-text-1 {
-margin-bottom: 20px;
+margin-bottom: 10px;
 }
 /* CONTENEDOR DE ADQUIRIR */
 .cosmosexecutiveproducer-columns-grid-acquire {
@@ -6011,7 +6016,7 @@ margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-columns-grid-acquire-price-amount {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
+font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
@@ -6073,16 +6078,16 @@ margin-bottom: 0px;
 .cosmosexecutiveproducer-text-12,
 .cosmosexecutiveproducer-text-13 {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 10px;
+margin-bottom: 15px;
 }
 .cosmosexecutiveproducer-text-13 {
-margin-bottom: 30px;
+margin-bottom: 20px;
 }
 /* CONTENEDOR DE BOTONES */
 .cosmosexecutiveproducer-buttons {
@@ -6126,30 +6131,6 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    CART
@@ -6842,7 +6823,7 @@ border-spacing: 0;
 }
 .electronicsalesreceipt-receipt-orderdetails-table td + td,
 .electronicsalesreceipt-receipt-orderdetails-table th + th {
-padding-left: 10px;
+padding-left: 20px;
 }
 .electronicsalesreceipt-receipt-orderdetails-table td:first-child,
 .electronicsalesreceipt-receipt-orderdetails-table th:first-child {
@@ -7715,47 +7696,43 @@ text-align: left;
 margin-top: 0;
 margin-bottom: 16px; 
 }
-/* CONTENEDOR DE LA TABLA */
-.prueba-table {
-width: 100%;
-}
-.prueba-table {
+/* CONTENEDOR: TABLA */
+.prueba-table-full {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
 border-spacing: 0;
 }
-/* GAP ENTRE COLUMNAS - 5px EXACTO */
-.prueba-table td + td,
-.prueba-table th + th {
-padding-left: 5px;
+.prueba-table-full td + td,
+.prueba-table-full th + th {
+padding-left: 20px;
 }
-.prueba-table td:first-child,
-.prueba-table th:first-child {
+.prueba-table-full td:first-child,
+.prueba-table-full th:first-child {
 padding-left: 0;
 }
-/* ANCHO DE COLUMNAS EXACTO */
-.prueba-table th:nth-child(1),
-.prueba-table td:nth-child(1) { /* PRODUCT NAME - 52% */
-width: 52%;
+/* ANCHO DE COLUMNAS */
+.prueba-table-full th:nth-child(1),
+.prueba-table-full td:nth-child(1) {
+width: 56%;
 }
-.prueba-table th:nth-child(2),
-.prueba-table td:nth-child(2) { /* QTY - 8% */
+.prueba-table-full th:nth-child(2),
+.prueba-table-full td:nth-child(2) {
 width: 8%;
 }
-.prueba-table th:nth-child(3),
-.prueba-table td:nth-child(3) { /* UNIT PRICE - 20% */
-width: 20%;
+.prueba-table-full th:nth-child(3),
+.prueba-table-full td:nth-child(3) {
+width: 18%;
 }
-.prueba-table th:nth-child(4),
-.prueba-table td:nth-child(4) { /* TOTAL - 20% */
-width: 20%;
+.prueba-table-full th:nth-child(4),
+.prueba-table-full td:nth-child(4) {
+width: 18%;
 }
 /* ENCABEZADOS DE TABLA */
-.prueba-table-head-row {
+.prueba-table-full-head-row {
 width: 100%;
 }
-.prueba-table-head-row-subtitle {
+.prueba-table-full-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39ff14 !important;
@@ -7763,32 +7740,29 @@ text-decoration: none;
 line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
-padding-top: 10px;
-padding-botton: 10px;  
+padding-top: 0px;
+padding-bottom: 0px;  
 margin-top: 0;
 margin-bottom: 0px; 
 }
 /* LÍNEA DIVISORIA */
-.prueba-table-body-divider-1 {
+.prueba-table-full-body-divider-1 td {
 width: 100%;
-}
-.prueba-table-body-divider-1 {
 border-top: 3px solid #39ff14 !important;
 height: 0;
 padding-top: 0px;
-padding-bottom: 5px;  
+padding-bottom: 10px;  
 }
-/* CELDAS DE TABLA - ALINEACIÓN GENERAL */
-.prueba-table-body-line-product {
+/* ALINEACIÓN GENERAL */
+.prueba-table-full-body-row-product {
 vertical-align: middle;
 }
-/* CONTENEDORES DE CONTENIDO - ALTURA FIJA 40px */
-
-/* CONTENEDOR DE NOMBRE DE PRODUCTO - RECUADRO BLANCO */
-.prueba-table-body-line-product-name,
-.prueba-table-body-line-product-quantity,
-.prueba-table-body-line-product-unitprice,
-.prueba-table-body-line-product-totalprice {
+/* CONTENEDORES DE CONTENIDO */
+/* CONTENEDOR: NOMBRE DE PRODUCTO */
+.prueba-table-full-body-row-product-name,
+.prueba-table-full-body-row-product-quantity,
+.prueba-table-full-body-row-product-unitprice,
+.prueba-table-full-body-row-product-totalprice {
 width: 100%;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
@@ -7798,42 +7772,40 @@ text-decoration: none;
 align-items: center;
 justify-content: space-between;   
 padding-top: 0px;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
+padding-bottom: 10px;
+padding-left: 0px;
+padding-right: 0px;
 margin-top: 0px;
 margin-bottom: 0px;
 box-sizing: border-box;
 }
-.prueba-table-body-line-product-name {
+.prueba-table-full-body-row-product-name {
 text-align: left;
 }
-.prueba-table-body-line-product-quantity {
+.prueba-table-full-body-row-product-quantity {
 justify-content: center; 
 text-align: center;
 }
-.prueba-table-body-line-product-unitprice-symbol,
-.prueba-table-body-line-product-totalprice-symbol {
+.prueba-table-full-body-row-product-unitprice-symbol,
+.prueba-table-full-body-row-product-totalprice-symbol {
 text-align: left;
 }
-.prueba-table-body-line-product-unitprice-amount,
-.prueba-table-body-line-product-totalprice-amount {
+.prueba-table-full-body-row-product-unitprice-amount,
+.prueba-table-full-body-row-product-totalprice-amount {
 text-align: right;
 }
 /* LÍNEA DIVISORIA */
-.prueba-table-body-divider-2 {
+.prueba-table-full-body-divider-2 td {
 width: 100%;
-}
-.prueba-table-body-divider-2 {
 border-top: 3px solid #39ff14 !important;
 height: 0;
 padding-top: 0px;
-padding-bottom: 5px;
+padding-bottom: 10px;
 }
 /* FILAS ESPECIALES (SUBTOTAL, SHIPPING Y TOTAL) */
-.prueba-table-body-line-subtotal-unitprice-label,
-.prueba-table-body-line-shipping-unitprice-label,
-.prueba-table-body-line-total-unitprice-label {
+.prueba-table-full-body-row-subtotal-unitprice-label,
+.prueba-table-full-body-row-shipping-unitprice-label,
+.prueba-table-full-body-row-total-unitprice-label {
 width: 100%;
 display: flex;
 align-items: center;
@@ -7843,22 +7815,21 @@ font-size: 1.25rem;
 color: white !important;
 text-decoration: none;   
 padding-top: 0px;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
 margin-top: 0px;
 margin-bottom: 0px;
 box-sizing: border-box;  
 }
-.prueba-table-body-line-subtotal-unitprice-label-text,
-.prueba-table-body-line-shipping-unitprice-label-text,
-.prueba-table-body-line-total-unitprice-label-text {
+.prueba-table-full-body-row-subtotal-unitprice-label-text,
+.prueba-table-full-body-row-shipping-unitprice-label-text,
+.prueba-table-full-body-row-total-unitprice-label-text {
 text-align: right;
 }
-/* SUBTOTAL PRICE - CON RECUADRO BLANCO */
-.prueba-table-body-line-subtotal-total-price,
-.prueba-table-body-line-shipping-total-price,
-.prueba-table-body-line-total-total-price {
+.prueba-table-full-body-row-subtotal-total-price,
+.prueba-table-full-body-row-shipping-total-price,
+.prueba-table-full-body-row-total-total-price {
 width: 100%;
 display: flex;
 font-family: 'Share Tech Mono', monospace;
@@ -7868,21 +7839,21 @@ text-decoration: none;
 align-items: center;
 justify-content: space-between; 
 padding-top: 0px;
-padding-bottom: 5px;
-padding-left: 5px;
-padding-right: 5px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
 margin-top: 0px;
 margin-bottom: 0px;
 box-sizing: border-box;
 }
-.prueba-table-body-line-subtotal-total-price-symbol,
-.prueba-table-body-line-shipping-total-price-symbol,
-.prueba-table-body-line-total-total-price-symbol {
+.prueba-table-full-body-row-subtotal-total-price-symbol,
+.prueba-table-full-body-row-shipping-total-price-symbol,
+.prueba-table-full-body-row-total-total-price-symbol {
 text-align: left;
 }
-.prueba-table-body-line-subtotal-total-price-amount,
-.prueba-table-body-line-shipping-total-price-amount,
-.prueba-table-body-line-total-total-price-amount {
+.prueba-table-full-body-row-subtotal-total-price-amount,
+.prueba-table-full-body-row-shipping-total-price-amount,
+.prueba-table-full-body-row-total-total-price-amount {
 text-align: right;
 }
 
