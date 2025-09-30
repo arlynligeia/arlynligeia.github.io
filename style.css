@@ -5966,20 +5966,20 @@ border-collapse: separate;
 border-spacing: 0;
 }
 .cosmosexecutiveproducer-table-body td + td {
-padding-left: 5px;
+padding-left: 20px;
 }
 .cosmosexecutiveproducer-table-body td:first-child {
 padding-left: 0;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .cosmosexecutiveproducer-table-body td:nth-child(1) {
-width: 30%;
+width: 35%;
 }
 .cosmosexecutiveproducer-table-body td:nth-child(2) {
 width: 45%;
 }
 .cosmosexecutiveproducer-table-body td:nth-child(3) {
-width: 25%;
+width: 20%;
 }
 /* CONTENEDOR: IMAGEN */
 .cosmosexecutiveproducer-table-body-row-product-image {
@@ -5988,15 +5988,15 @@ display: flex;
 align-items: center;
 justify-content: center;
 margin-top: 0px;
-margin-bottom: 5px; 
+margin-bottom: 0px; 
 }
 .cosmosexecutiveproducer-table-body-row-product-image img {
 max-width: 100%;
 max-height: 100%; 
-border-radius: 6px;
+border-radius: 15px;
 object-fit: contain;
 margin-top: 0px;
-margin-bottom: 5px; 
+margin-bottom: 0px; 
 }
 /* CONTENEDOR: INFORMACIÓN */
 .cosmosexecutiveproducer-table-body-row-product-information {
@@ -6004,7 +6004,8 @@ width: 100%;
 margin-top: 0px;
 margin-bottom: 0px;
 }
-.cosmosexecutiveproducer-table-body-row-product-information-subtitle-1 {
+.cosmosexecutiveproducer-table-body-row-product-information-subtitle-1,
+.cosmosexecutiveproducer-table-body-row-product-information-subtitle-2 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -6015,14 +6016,7 @@ margin-top: 0px;
 margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-table-body-row-product-information-subtitle-2 {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
 text-align: justify;
-margin-top: 0px;
-margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-table-body-row-product-information-text-1,
 .cosmosexecutiveproducer-table-body-row-product-information-text-2 {
@@ -6051,11 +6045,12 @@ margin-bottom: 0px;
 }
 .cosmosexecutiveproducer-table-body-row-product-acquire-price span {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
+align-items: center;
 margin-top: 0px;
 margin-bottom: 10px;
 }
@@ -6109,7 +6104,7 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin-top: 0px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
 .cosmosexecutiveproducer-information-text-1,
 .cosmosexecutiveproducer-information-text-2,
