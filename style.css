@@ -2274,18 +2274,21 @@ margin-top: 0px;
 margin-bottom: 0px; 
 }
 /* LÍNEA DIVISORA */
-.shippingdetails-table-full-body-divider-1 {
+.shippingdetails-table-full-body-divider-1 td{
 width: 100%;
 border-top: 3px solid #39ff14;
 height: 0;
 padding-top: 0px;
 padding-bottom: 10px;
 }
+/* ALINEACIÓN GENERAL */
+.shippingdetails-table-full-body-row {
+vertical-align: middle;
+}
 /* CELDAS */
 .shippingdetails-table-full-body-row-text {
 width: 100%;
 height: 40px;
-vertical-align: middle;
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
@@ -2297,8 +2300,6 @@ padding-top: 10px;
 padding-bottom: 10px;
 padding-left: 5px;
 padding-right: 5px;
-margin-top: 0px;
-margin-bottom: 0px;
 box-sizing: border-box;
 }
 /* CONTENEDOR: INFORMACIÓN DEBAJO DE LA TABLA*/
