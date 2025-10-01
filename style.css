@@ -2188,8 +2188,8 @@ position: relative;
 width: 800px;
 background-color: #9900CC !important;
 border-radius: 20px;
-margin: 40px auto;
 padding: 30px;
+margin: 40px auto;
 }
 .shippingdetails-container::before {
 content: "";
@@ -2208,7 +2208,7 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white;
+color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
@@ -2219,25 +2219,18 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
+
+
 /* CONTENEDOR: TABLA */
 .shippingdetails-table {
 width: 100%;
-margin-top: 0px;
-margin-bottom: 15px;
+margin: 0 0 20px 0;
 }
 .shippingdetails-table-full {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 0;
-}
-.shippingdetails-table-full td + td,
-.shippingdetails-table-full th + th {
-padding-left: 5px;
-}
-.shippingdetails-table-full td:first-child,
-.shippingdetails-table-full th:first-child {
-padding-left: 0;
+border-spacing: 10px 10px;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .shippingdetails-table-full th:nth-child(1),
@@ -2268,18 +2261,15 @@ text-decoration: none;
 line-height: 1.5;
 text-align: center;
 text-transform: uppercase;
-padding-top: 0px;
-padding-bottom: 0px;
-margin-top: 0px;
-margin-bottom: 0px; 
+padding: 0px;
+margin: 0px;  
 }
 /* LÍNEA DIVISORA */
 .shippingdetails-table-full-body-divider-1 td{
 width: 100%;
 border-top: 3px solid #39ff14;
 height: 0;
-padding-top: 0px;
-padding-bottom: 10px;
+padding: 0 0 10px 0;
 }
 /* ALINEACIÓN GENERAL */
 .shippingdetails-table-full-body-row {
@@ -2299,32 +2289,30 @@ text-decoration: none;
 text-align: center;  
 justify-content: center;
 align-items: center; 
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 5px;
-padding-right: 5px;
-margin-top: 0px;
-margin-bottom: 5px; 
+padding: 10px 5px 10px 5px;
+margin: 0px;
 box-sizing: border-box;
 }
+
+
+
+
 /* CONTENEDOR: INFORMACIÓN DEBAJO DE LA TABLA*/
 .shippingdetails-information {
 background-color: rgba(255, 255, 255, 0.1);
 border-radius: 15px;
 border: 3px solid #39ff14 !important;
 padding: 15px;
-margin-top: 0px;
-margin-bottom: 0;
+margin: 0px;
 }
 .shippingdetails-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
+color: #39ff14 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0;
-margin-bottom: 10px;
+margin: 0 0 10px 0;
 }
 .shippingdetails-information-text-2 {
 font-family: 'Share Tech Mono', monospace;
@@ -2333,8 +2321,7 @@ color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0;
-margin-bottom: 0;
+margin: 0;
 }
 
 
