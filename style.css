@@ -2359,13 +2359,13 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR: GRID */
+/* CONTENEDOR: GRID DE 2 */
 .digitalfilm-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-auto-rows: 250px;
 gap: 20px;
-margin: 0 0 20px 0;
+margin: 0px;
 }
 /* CONTENEDOR: TARJETA DE PRODUCTOS */
 .digitalfilm-columns-grid-card {
@@ -2403,7 +2403,7 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .digitalfilm-buttons {
 display: flex;
 justify-content: space-between;
-margin: 0px;
+margin: 15px 0 0 0;
 }
 .digitalfilm-button-back,
 .digitalfilm-button-continueshopping {
@@ -2473,7 +2473,7 @@ display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-auto-rows: 250px;
 gap: 20px;
-margin: 0 0 20px 0;
+margin: 0px;
 }
 /* CONTENEDOR: TARJETA DE PRODUCTOS */
 .digitalmusic-columns-grid-card {
@@ -2511,8 +2511,7 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .digitalmusic-buttons {
 display: flex;
 justify-content: space-between;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 15px 0 0 0;
 }
 .digitalmusic-button-back,
 .digitalmusic-button-continueshopping {
@@ -2531,26 +2530,6 @@ transition: transform 0.3s ease;
 .digitalmusic-button-continueshopping:hover {
 transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-/* ======================================
-   DIGITAL FASHION
-====================================== */
-
-/* ======================================
-   PHYSICAL FILM
-====================================== */
-
-/* ======================================
-   PHYSICAL MUSIC
-====================================== */
 
 /* ======================================
    PHYSICAL FASHION
@@ -2585,36 +2564,34 @@ color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
-margin-top: 0px;
-margin-bottom: 16px;
+margin: 0 0 16px 0;
 }
 .physicalfashion-title a {
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR DE COLUMNAS */
+/* CONTENEDOR: COLUMNAS */
 .physicalfashion-columns {
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR DE GRID */
+/* CONTENEDOR: GRID DE 2 */
 .physicalfashion-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 grid-auto-rows: 250px;
 gap: 20px;
-margin-top: 0px;
-margin-bottom: 20px;
+margin-top: 0;
 }
-/* TARJETAS DE PRODUCTOS */
+/* CONTENEDOR: TARJETA DE PRODUCTOS */
 .physicalfashion-columns-grid-card {
 position: relative;
 overflow: hidden;
 display: block;
-border-radius: 15px;
-color: white;
-text-decoration: none;
 height: 100%;
+border-radius: 15px;
+border: 2px solid white !important;
+text-decoration: none;
 }
 .physicalfashion-columns-grid-card img {
 width: 100%;
@@ -2633,6 +2610,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
+color: white !important;
 text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
@@ -2641,8 +2619,7 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .physicalfashion-buttons {
 display: flex;
 justify-content: space-between;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 15px 0 0 0;
 }
 .physicalfashion-button-back,
 .physicalfashion-button-continueshopping {
@@ -2652,10 +2629,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none; 
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
+padding-top: 10px 20px 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
@@ -2664,6 +2638,19 @@ transition: transform 0.3s ease;
 .physicalfashion-button-continueshopping:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    PHYSICAL ART
