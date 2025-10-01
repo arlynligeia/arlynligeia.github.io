@@ -2212,25 +2212,21 @@ color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
+margin: 0 0 16px 0;
 }
 .shippingdetails-title a {
 color: white !important;
 text-decoration: none;
 }
-
-
 /* CONTENEDOR: TABLA */
 .shippingdetails-table {
 width: 100%;
-margin: 0 0 20px 0;
 }
 .shippingdetails-table-full {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 10px 10px;
+border-spacing: 5px 5px;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .shippingdetails-table-full th:nth-child(1),
@@ -2269,7 +2265,6 @@ margin: 0px;
 width: 100%;
 border-top: 3px solid #39ff14;
 height: 0;
-padding: 0 0 10px 0;
 }
 /* ALINEACIÓN GENERAL */
 .shippingdetails-table-full-body-row {
@@ -2293,10 +2288,6 @@ padding: 10px 5px 10px 5px;
 margin: 0px;
 box-sizing: border-box;
 }
-
-
-
-
 /* CONTENEDOR: INFORMACIÓN DEBAJO DE LA TABLA*/
 .shippingdetails-information {
 background-color: rgba(255, 255, 255, 0.1);
