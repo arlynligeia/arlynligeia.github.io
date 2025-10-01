@@ -3139,14 +3139,6 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
-
-
-
-
-
-
-
-
 /* ======================================
    COMET SPONSOR
 ====================================== */
@@ -3180,8 +3172,7 @@ color: white !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
+margin: 0 0 16px 0;
 }
 .cometsponsor-title a {
 color: white !important;
@@ -3190,20 +3181,13 @@ text-decoration: none;
 /* CONTENEDOR: TABLA */
 .cometsponsor-table {
 width: 100%;
-margin-top: 0px;
-margin-bottom: 20px;
+margin: 0px;
 }
 .cometsponsor-table-body {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 0;
-}
-.cometsponsor-table-body td + td {
-padding-left: 20px;
-}
-.cometsponsor-table-body td:first-child {
-padding-left: 0;
+border-spacing: 5px 5px;
 }
 /* ANCHO DE COLUMNAS EXACTO */
 .cometsponsor-table-body td:nth-child(1) {
@@ -3221,22 +3205,18 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-top: 0px;
-margin-bottom: 0px; 
+margin: 0px;
 }
 .cometsponsor-table-body-row-product-image img {
 max-width: 100%;
 max-height: 100%; 
 border-radius: 15px;
 object-fit: contain;
-margin-top: 0px;
-margin-bottom: 0px; 
 }
 /* CONTENEDOR: INFORMACIÓN */
 .cometsponsor-table-body-row-product-information {
 width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-table-body-row-product-information-subtitle-1,
 .cometsponsor-table-body-row-product-information-subtitle-2 {
@@ -3246,8 +3226,7 @@ color: #39ff14 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-table-body-row-product-information-subtitle-2 {
 text-align: justify;
@@ -3260,8 +3239,7 @@ color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-table-body-row-product-information-text-1 {
 margin-bottom: 20px;
@@ -3277,8 +3255,7 @@ min-height: 300px;
 }
 .cometsponsor-table-body-row-product-acquire-price {
 width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-table-body-row-product-acquire-price div {
 display: flex;
@@ -3290,8 +3267,7 @@ line-height: 1.5;
 text-align: center;
 align-items: center;
 justify-content: center;
-margin-top: 0px;
-margin-bottom: 10px;
+margin-top: 0 0 10px 0;
 }
 .cometsponsor-table-body-row-product-acquire-buttons {
 display: flex;
@@ -3304,12 +3280,8 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 color: white !important;
 text-decoration: none;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-margin-top: 0px;
-margin-bottom: 20px;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
@@ -3329,8 +3301,7 @@ transform: scale(1.05);
 /* CONTENEDOR: DEBAJO DE LA TABLA */
 .cometsponsor-information {
 width: 100%;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-information-subtitle-1,
 .cometsponsor-information-subtitle-2,
@@ -3341,8 +3312,7 @@ color:  #39ff14 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0px;
-margin-bottom: 10px;
+margin: 0 0 10px 0;
 }
 .cometsponsor-information-subtitle-1 {
 font-size: 1.5rem;
@@ -3359,18 +3329,13 @@ color: white;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin-top: 0px;
-margin-bottom: 10px;
-}
-.cometsponsor-information-text-5 {
-margin-bottom: 20px;
+margin: 0 0 10px 0;
 }
 /* CONTENEDOR: BOTONES FINALES */
 .cometsponsor-buttons {
 display: flex;
 justify-content: space-between;
-margin-top: 0px;
-margin-bottom: 0px;
+margin: 0px;
 }
 .cometsponsor-button-back,
 .cometsponsor-button-continueshopping,
@@ -3380,10 +3345,8 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white;
 text-decoration: none;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
+padding-top: 10px 20px 10px 20px;
+margin: 30px 0 0 0;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
@@ -3407,6 +3370,22 @@ font-size: 1.2rem;
 color: #39FF14;
 font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    PLANET SPONSOR
