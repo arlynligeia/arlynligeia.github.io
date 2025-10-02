@@ -480,7 +480,7 @@ z-index: 2;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
-margin: 0px;
+margin: 0 0 15px 0;
 }
 /* CONTENEDOR: IMAGEN*/
 .alone-columns-grid-image {
@@ -559,9 +559,127 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 
+/* ======================================
+   SHORT FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shortfilm-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.shortfilm-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.shortfilm-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.shortfilm-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.shortfilm-information {
+width: 100%;
+margin: 0px;
+}
+.shortfilm-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
 
-
-
+/* ======================================
+   EL INFIERNO DE OZUL
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.elinfiernodeozul-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.elinfiernodeozul-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.elinfiernodeozul-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.elinfiernodeozul-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: VIDEO */
+.elinfiernodeozul-video {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.elinfiernodeozul-video iframe {
+width: 100%;
+border-radius: 15px;
+height: 400px;
+}
+/* CONTENEDOR: INFORMACION DEBAJO DEL VIDEO */
+.elinfiernodeozul-information {
+width: 100%;
+margin: 0px;
+}
+.elinfiernodeozul-information-text,
+.elinfiernodeozul-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.elinfiernodeozul-information-text-end {
+margin-bottom: 0px;
+}
 
 
 
