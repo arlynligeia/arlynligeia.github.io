@@ -350,11 +350,214 @@ border-radius: 15px;
 margin: 0px;
 }
 
+/* ======================================
+   FILM
+====================================== */
+.film-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+/* CONTENEDOR: BANNER */
+.film-banner {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white !important;
+overflow: hidden;
+}
+.film-banner img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
 
+/* ======================================
+   FEATURE FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featurefilm-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.featurefilm-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.featurefilm-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.featurefilm-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.featurefilm-information {
+width: 100%;
+margin: 0px;
+}
+.featurefilm-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
 
-
-
-
+/* ======================================
+   ALONE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.alone-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.alone-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.alone-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.alone-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.alone-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.alone-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN*/
+.alone-columns-grid-image {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.alone-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACION */
+.alone-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.alone-columns-grid-information-subtitle-1,
+.alone-columns-grid-information-subtitle-2 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin: 0px;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.alone-columns-grid-information-subtitle-2 {
+text-align: justify;
+}
+.alone-columns-grid-information-text-1,
+.alone-columns-grid-information-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.alone-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: INFORMACION DEBAJO DE LAS COLUMNAS */
+.alone-information {
+width: 100%;
+margin: 0px;
+}
+.alone-information-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.alone-information-text,
+.alone-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.alone-information-text-end {
+margin-bottom: 0px;
+}
 
 
 
