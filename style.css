@@ -119,6 +119,253 @@ transform: scaleX(1);
 
 
 
+/* ======================================
+   SOCIAL MEDIA CONTENT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.socialmediacontent-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+padding: 30px;
+margin: 40px auto;
+}
+.socialmediacontent-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.socialmediacontent-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.socialmediacontent-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.socialmediacontent-table {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
+background-color: transparent;
+}
+.socialmediacontent-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 5px;
+background-color: transparent;
+}
+/* ANCHO DE COLUMNAS*/
+.socialmediacontent-table-wrapper th:nth-child(1),
+.socialmediacontent-table-wrapper td:nth-child(1) {
+width: 20%;
+}
+.socialmediacontent-table-wrapper th:nth-child(2),
+.socialmediacontent-table-wrapper td:nth-child(2) {
+width: 45%;
+}
+.socialmediacontent-table-wrapper th:nth-child(3),
+.socialmediacontent-table-wrapper td:nth-child(3) {
+width: 35%;
+}
+/* ENCABEZADOS */
+.socialmediacontent-table-wrapper-head-row {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #ff1493 !important;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+padding: 0px;
+margin: 0px;  
+}
+/* CUERPO DE LA TABLA */
+.socialmediacontent-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+/* LÍNEA DIVISORA */
+.socialmediacontent-table-wrapper-body-divider td {
+width: 100%;
+border-top: 3px solid #ff1493 !important;
+height: 0;
+}
+.socialmediacontent-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CONTENEDOR: BOTONES TIKTOK-YOUTUBE */
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0px; 
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok:hover,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube:hover {
+transform: scale(1.05);
+}
+/* CELDAS */
+.socialmediacontent-table-wrapper-body-row-cell span {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 10px 10px 10px;
+margin: 0px;
+}
+
+/* ======================================
+   BIOGRAPHY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.biography-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.biography-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.biography-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.biography-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.biography-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.biography-colums-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: TEXTO */
+.biography-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.biography-information-text,
+.biography-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.biography-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTENEDOR: IMAGEN*/
+.biography-image {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.biography-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
