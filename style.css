@@ -1178,6 +1178,198 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 
+/* ======================================
+   SCIENCE
+====================================== */
+.science-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+/* CONTENERDOR: CARRUSEL*/
+.science-carousel {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white;
+overflow: hidden;
+}
+.science-carousel-image.active {
+opacity: 1;
+}
+.science-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+
+/* ======================================
+   RESEARCH ARTICLE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.researcharticle-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.researcharticle-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+/* CONTENEDOR TÍTULO + BOTÓN */
+.researcharticle-header {
+position: relative;
+z-index: 2;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0px;
+}
+.researcharticle-header-title {
+position: relative;
+z-index: 2;
+display: block;  
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0; 
+}
+.researcharticle-header-title a {
+color: white !important;
+text-decoration: none;
+}
+.researcharticle-header-button {
+z-index: 2; 
+display: inline-block;
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 10px 20px 10px 20px;  
+margin: 0 0 16px 0;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.researcharticle-header-button:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: INFORMACION */
+.researcharticle-information {
+width: 100%;
+margin: 0px;
+}
+.researcharticle-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+
+/* ======================================
+   PSYCHOLOGY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.psychology-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.psychology-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.psychology-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.psychology-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTONES */
+.psychology-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.psychology-button,
+.psychology-button-end {
+display: block;
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 20px 20px 20px 20px;
+margin: 0 0 20px 0;    
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+} 
+.psychology-button-end {
+margin-bottom: 0px;
+}
+.psychology-button:hover,
+.psychology-button-end:hover {
+transform: scale(1.05);
+ }
+
+
+
+
+
+
+
+
 
 
 
