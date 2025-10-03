@@ -2437,3 +2437,266 @@ text-decoration: none;
 color: white;
 text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+/* ======================================
+   📱 RESPONSIVE DESIGN - MÓVILES
+====================================== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .biography-container,
+  .alone-container,
+  .album1969-container,
+  .fw2627-container,
+  .shippingdetails-container,
+  .contact-container,
+  .contactforfans-container,
+  .directcontact-container,
+  .supportmywork-container,
+  .supportmystudies-container,
+  .gifts-container,
+  .researcharticle-container,
+  .psychology-container,
+  .socialmediacontent-container,
+  .featurefilm-container,
+  .shortfilm-container,
+  .musicvideodirection-container,
+  .elinfiernodeozul-container,
+  .despertar-container,
+  .album-container,
+  .fwcollection-container {
+    width: 95% !important;
+    padding: 20px;
+  }
+  
+  .digitalproducts-container,
+  .physicalproducts-container {
+    width: 95% !important;
+  }
+  
+  .film-container,
+  .music-container,
+  .fashion-container,
+  .science-container,
+  .bemypatron-container,
+  .store-container {
+    height: 60vh;
+  }
+}
+
+/* Móviles */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2.5em;
+    margin: 10px 0;
+  }
+  
+  .menu {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .menu-button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  
+  .submenu {
+    position: static;
+    width: 100%;
+  }
+  
+  /* Todos los contenedores principales */
+  .biography-container,
+  .alone-container,
+  .album1969-container,
+  .fw2627-container,
+  .shippingdetails-container,
+  .contact-container,
+  .contactforfans-container,
+  .directcontact-container,
+  .supportmywork-container,
+  .supportmystudies-container,
+  .gifts-container,
+  .researcharticle-container,
+  .psychology-container,
+  .socialmediacontent-container,
+  .featurefilm-container,
+  .shortfilm-container,
+  .musicvideodirection-container,
+  .elinfiernodeozul-container,
+  .despertar-container,
+  .album-container,
+  .fwcollection-container {
+    width: 95% !important;
+    padding: 15px;
+    margin: 20px auto;
+  }
+  
+  .digitalproducts-container,
+  .physicalproducts-container {
+    width: 95% !important;
+    padding: 15px;
+  }
+  
+  /* Grids a una columna */
+  .biography-columns-grid,
+  .alone-columns-grid,
+  .album1969-columns-grid,
+  .gridtres-columns-grid {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+  
+  /* Grids de productos a 2 columnas */
+  .digitalproducts-columns-grid,
+  .physicalproducts-columns-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    grid-auto-rows: 200px;
+  }
+  
+  /* Tablas responsivas */
+  .socialmediacontent-table-wrapper,
+  .shippingdetails-table-wrapper,
+  .directcontact-table-wrapper {
+    font-size: 0.9rem;
+  }
+  
+  .socialmediacontent-table-wrapper-body-row-cell span,
+  .shippingdetails-table-wrapper-body-row-cell span,
+  .directcontact-table-wrapper-body-row-cell span {
+    font-size: 1rem;
+    height: 35px;
+    padding: 8px 3px;
+  }
+  
+  /* Formularios */
+  .contact-form-input,
+  .contact-form-textarea,
+  .contactforfans-form-input,
+  .contactforfans-form-textarea {
+    font-size: 1.1rem;
+  }
+  
+  /* Títulos más pequeños */
+  .biography-title,
+  .alone-title,
+  .album1969-title,
+  .fw2627-title,
+  .shippingdetails-title,
+  .contact-title,
+  .contactforfans-title,
+  .directcontact-title,
+  .supportmywork-title,
+  .supportmystudies-title,
+  .gifts-title,
+  .researcharticle-header-title,
+  .psychology-title,
+  .socialmediacontent-title,
+  .featurefilm-title,
+  .shortfilm-title,
+  .musicvideodirection-title,
+  .elinfiernodeozul-title,
+  .despertar-title,
+  .album-title,
+  .fwcollection-title,
+  .digitalproducts-title,
+  .physicalproducts-title {
+    font-size: 2rem !important;
+  }
+  
+  /* Banners más pequeños */
+  .film-container,
+  .music-container,
+  .fashion-container,
+  .science-container,
+  .bemypatron-container,
+  .store-container {
+    height: 50vh;
+    margin-top: 15px;
+  }
+  
+  /* Videos responsivos */
+  .elinfiernodeozul-video iframe,
+  .despertar-video iframe {
+    height: 300px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .site-title {
+    font-size: 2em;
+  }
+  
+  .menu-button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+  
+  /* Grids de productos a 1 columna */
+  .digitalproducts-columns-grid,
+  .physicalproducts-columns-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  /* Textos más pequeños */
+  .biography-information-text,
+  .alone-information-text,
+  .album1969-information-text,
+  .fw2627-information-text,
+  .shippingdetails-information-text,
+  .contact-form-label,
+  .contactforfans-form-label,
+  .supportmywork-informartion-text,
+  .supportmystudies-information-text,
+  .gifts-information-text,
+  .researcharticle-information-text,
+  .psychology-button,
+  .socialmediacontent-table-wrapper-body-row-cell span,
+  .shippingdetails-table-wrapper-body-row-cell span,
+  .directcontact-table-wrapper-body-row-cell span {
+    font-size: 0.9rem;
+  }
+  
+  /* Botones más pequeños */
+  .contact-button-submit,
+  .contactforfans-button-submit,
+  .supportmywork-button-donatewithpaypal,
+  .supportmystudies-button-donatewithpaypal,
+  .gifts-button-donatewithpaypal,
+  .researcharticle-header-button,
+  .psychology-button,
+  .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+  .socialmediacontent-table-wrapper-body-row-cell-button-youtube,
+  .directcontact-table-wrapper-body-row-cell-button-film,
+  .directcontact-table-wrapper-body-row-cell-button-music,
+  .directcontact-table-wrapper-body-row-cell-button-fashion {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+  
+  /* Videos más pequeños */
+  .elinfiernodeozul-video iframe,
+  .despertar-video iframe {
+    height: 250px;
+  }
+  
+  /* Footer más compacto */
+  .footer-end-name {
+    font-size: 1.2rem;
+  }
+  
+  .footer-end-allrightreserved,
+  .footer-end-privacypolicy,
+  .footer-end-termsandconditions {
+    font-size: 0.8rem;
+  }
+}
