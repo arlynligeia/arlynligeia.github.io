@@ -1674,6 +1674,103 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 transform: scale(1.05);
 }
 
+/* ======================================
+   CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.contact-container {
+position: relative;
+width: 550px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.contact-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.contact-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.contact-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: FORMULARIO */
+.contact-form {
+width: 100%;
+margin: 0px;
+}
+.contact-form-label {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;   
+margin: 0 0 5px 0;
+}
+/* RECUADROS BLANCOS */
+.contact-form-input,
+.contact-form-textarea {
+width: 100%;
+height: 40px;
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: left;
+box-sizing: border-box;   
+padding: 10px 10px 10px 10px;
+margin: 0 0 15px 0;
+border: none;
+}
+.contact-form-textarea {
+height: 150px;
+resize: vertical;
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE BOTÓN */
+.contact-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.contact-button-submit {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;  
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.contact-button-submit:hover {
+transform: scale(1.05);
+}
+
 
 
 
