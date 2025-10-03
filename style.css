@@ -1363,9 +1363,164 @@ margin-bottom: 0px;
 transform: scale(1.05);
  }
 
+/* ======================================
+   BE MY PATRON
+====================================== */
+.bemypatron-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+/* CONTENERDOR: CARRUSEL */
+.bemypatron-carousel {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white;
+overflow: hidden;
+}
+.bemypatron-carousel-image.active {
+opacity: 1;
+}
+.bemypatron-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+/* CONTENERDOR: PRINCIPAL */
+.bemypatron-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.bemypatron-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.bemypatron-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.bemypatron-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.bemypatron-information {
+width: 100%;
+margin: 0px;
+}
+.bemypatron-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
 
-
-
+/* ======================================
+   SUPPORT MY WORK
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.supportmywork-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.supportmywork-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.supportmywork-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.supportmywork-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.supportmywork-information {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.supportmywork-informartion-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTÓN */
+.supportmywork-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.supportmywork-button-donatewithpaypal {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;  
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.supportmywork-button-donatewithpaypal:hover {
+transform: scale(1.05);
+}
 
 
 
