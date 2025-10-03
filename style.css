@@ -681,8 +681,127 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 
+/* ======================================
+   MUSIC VIDEO DIRECTION
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.musicvideodirection-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.musicvideodirection-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.musicvideodirection-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.musicvideodirection-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.musicvideodirection-information {
+width: 100%;
+margin: 0px;
+}
+.musicvideodirection-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
 
-
+/* ======================================
+   DESPERTAR
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.despertar-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.despertar-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.despertar-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.despertar-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: VIDEO */
+.despertar-video {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.despertar-video iframe {
+width: 100%;
+border-radius: 15px;
+height: 400px;
+}
+/* CONTENEDOR: INFORMACION DEBAJO DEL VIDEO */
+.despertar-information {
+width: 100%;
+margin: 0px;
+}
+.despertar-information-text,
+.despertar-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.despertar-information-text-end {
+margin-bottom: 0px;
+}
 
 
 
