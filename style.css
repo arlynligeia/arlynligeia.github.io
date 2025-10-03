@@ -1522,6 +1522,157 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 transform: scale(1.05);
 }
 
+/* ======================================
+   SUPPORT MY STUDIES
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.supportmystudies-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.supportmystudies-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.supportmystudies-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.supportmystudies-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.supportmystudies-information {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.supportmystudies-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTÓN */
+.supportmystudies-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.supportmystudies-button-donatewithpaypal {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;  
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.supportmystudies-button-donatewithpaypal:hover {
+transform: scale(1.05);
+}
+
+/* ======================================
+   GIFTS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.gifts-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.gifts-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.gifts-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.gifts-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.gifts-information {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.gifts-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTÓN */
+.gifts-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.gifts-button-donatewithpaypal {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;  
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.gifts-button-donatewithpaypal:hover {
+transform: scale(1.05);
+}
 
 
 
