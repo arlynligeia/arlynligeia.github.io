@@ -1771,6 +1771,245 @@ transition: transform 0.3s ease;
 transform: scale(1.05);
 }
 
+/* ======================================
+  DIRECT CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.directcontact-container {
+position: relative;
+width: 550px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.directcontact-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.directcontact-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.directcontact-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.directcontact-table {
+width: 100%;
+margin: 0px;
+}
+.directcontact-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
+background-color: transparent;
+}
+.directcontact-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 5px;
+background-color: transparent;
+}
+/* ANCHO DE COLUMNAS*/
+.directcontact-table-wrapper th:nth-child(1),
+.directcontact-table-wrapper td:nth-child(1) {
+width: 25%;
+}
+.directcontact-table-wrapper th:nth-child(2),
+.directcontact-table-wrapper td:nth-child(2) {
+width: 75%;
+}
+/* ENCABEZADOS */
+.directcontact-table-wrapper-head-row {
+width: 100%;
+margin: 0px;
+}
+.directcontact-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14 !important;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+padding: 0px;
+margin: 0px;  
+}
+/* CUERPO DE LA TABLA */
+.directcontact-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+/* LÍNEA DIVISORA */
+.directcontact-table-wrapper-body-divider td {
+width: 100%;
+border-top: 3px solid #39ff14;
+height: 0;
+}
+.directcontact-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CONTENEDOR: BOTONES */
+.directcontact-table-wrapper-body-row-cell-button-film,
+.directcontact-table-wrapper-body-row-cell-button-music,
+.directcontact-table-wrapper-body-row-cell-button-fashion {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;  
+background-color: #39ff14 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 5px 10px 5px;
+margin: 0px; 
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.directcontact-table-wrapper-body-row-cell-button-film:hover,
+.directcontact-table-wrapper-body-row-cell-button-music:hover,
+.directcontact-table-wrapper-body-row-cell-button-fashion:hover {
+transform: scale(1.05);
+}
+/* CELDAS */
+.directcontact-table-wrapper-body-row-cell span {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 5px 10px 5px;
+margin: 0px;
+}
+
+/* ======================================
+   CONTACT FOR FANS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.contactforfans-container {
+position: relative;
+width: 550px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.contactforfans-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.contactforfans-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.contactforfans-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: FORMULARIO */
+.contactforfans-form {
+width: 100%;
+margin: 0px;
+}
+.contactforfans-form-label {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;   
+margin: 0 0 5px 0;
+}
+/* RECUADROS BLANCOS */
+.contactforfans-form-input,
+.contactforfans-form-textarea {
+width: 100%;
+height: 40px;
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: left;
+box-sizing: border-box;   
+padding: 10px 10px 10px 10px;
+margin: 0 0 15px 0;
+border: none;
+}
+.contactforfans-form-textarea {
+height: 150px;
+resize: vertical;
+margin-bottom: 20px;
+}
+/* CONTENEDOR DE BOTÓN */
+.contactforfans-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.contactforfans-button-submit {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;  
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.contactforfans-button-submit:hover {
+transform: scale(1.05);
+}
 
 
 
