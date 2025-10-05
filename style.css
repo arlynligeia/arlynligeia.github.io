@@ -4792,6 +4792,1607 @@ color: #39FF14;
 font-weight: bold;
 }
 
+/* ======================================
+   NEBULA EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.nebulaexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.nebulaexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.nebulaexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.nebulaexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.nebulaexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.nebulaexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.nebulaexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.nebulaexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-information-subtitle-1,
+.nebulaexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.nebulaexecutiveproducer-columns-grid-information-text-1,
+.nebulaexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.nebulaexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.nebulaexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.nebulaexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-button-addtocart,
+.nebulaexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.nebulaexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.nebulaexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.nebulaexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.nebulaexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.nebulaexecutiveproducer-information-subtitle-1,
+.nebulaexecutiveproducer-information-subtitle-2,
+.nebulaexecutiveproducer-information-subtitle-3,
+.nebulaexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-text-1,
+.nebulaexecutiveproducer-information-text-2,
+.nebulaexecutiveproducer-information-text-3,
+.nebulaexecutiveproducer-information-text-4,
+.nebulaexecutiveproducer-information-text-5,
+.nebulaexecutiveproducer-information-text-6,
+.nebulaexecutiveproducer-information-text-7,
+.nebulaexecutiveproducer-information-text-8,
+.nebulaexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.nebulaexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.nebulaexecutiveproducer-button-back,
+.nebulaexecutiveproducer-button-continueshopping,
+.nebulaexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.nebulaexecutiveproducer-button-back:hover,
+.nebulaexecutiveproducer-button-continueshopping:hover,
+.nebulaexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.nebulaexecutiveproducer-button-back,
+.nebulaexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.nebulaexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   PULSAR EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.pulsarexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.pulsarexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.pulsarexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.pulsarexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.pulsarexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.pulsarexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.pulsarexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.pulsarexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-information-subtitle-1,
+.pulsarexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.pulsarexecutiveproducer-columns-grid-information-text-1,
+.pulsarexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.pulsarexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.pulsarexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.pulsarexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-button-addtocart,
+.pulsarexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.pulsarexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.pulsarexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.pulsarexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.pulsarexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.pulsarexecutiveproducer-information-subtitle-1,
+.pulsarexecutiveproducer-information-subtitle-2,
+.pulsarexecutiveproducer-information-subtitle-3,
+.pulsarexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.pulsarexecutiveproducer-information-text-1,
+.pulsarexecutiveproducer-information-text-2,
+.pulsarexecutiveproducer-information-text-3,
+.pulsarexecutiveproducer-information-text-4,
+.pulsarexecutiveproducer-information-text-5,
+.pulsarexecutiveproducer-information-text-6,
+.pulsarexecutiveproducer-information-text-7,
+.pulsarexecutiveproducer-information-text-8,
+.pulsarexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.pulsarexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.pulsarexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.pulsarexecutiveproducer-button-back,
+.pulsarexecutiveproducer-button-continueshopping,
+.pulsarexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.pulsarexecutiveproducer-button-back:hover,
+.pulsarexecutiveproducer-button-continueshopping:hover,
+.pulsarexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.pulsarexecutiveproducer-button-back,
+.pulsarexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.pulsarexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   BLACK HOLE EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.blackholeexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.blackholeexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.blackholeexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.blackholeexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.blackholeexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.blackholeexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.blackholeexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.blackholeexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-information-subtitle-1,
+.blackholeexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.blackholeexecutiveproducer-columns-grid-information-text-1,
+.blackholeexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.blackholeexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.blackholeexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.blackholeexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-button-addtocart,
+.blackholeexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.blackholeexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.blackholeexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.blackholeexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.blackholeexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.blackholeexecutiveproducer-information-subtitle-1,
+.blackholeexecutiveproducer-information-subtitle-2,
+.blackholeexecutiveproducer-information-subtitle-3,
+.blackholeexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.blackholeexecutiveproducer-information-text-1,
+.blackholeexecutiveproducer-information-text-2,
+.blackholeexecutiveproducer-information-text-3,
+.blackholeexecutiveproducer-information-text-4,
+.blackholeexecutiveproducer-information-text-5,
+.blackholeexecutiveproducer-information-text-6,
+.blackholeexecutiveproducer-information-text-7,
+.blackholeexecutiveproducer-information-text-8,
+.blackholeexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.blackholeexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.blackholeexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.blackholeexecutiveproducer-button-back,
+.blackholeexecutiveproducer-button-continueshopping,
+.blackholeexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.blackholeexecutiveproducer-button-back:hover,
+.blackholeexecutiveproducer-button-continueshopping:hover,
+.blackholeexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.blackholeexecutiveproducer-button-back,
+.blackholeexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.blackholeexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   QUASAR EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.quasarexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.quasarexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.quasarexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.quasarexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.quasarexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.quasarexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.quasarexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.quasarexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-information-subtitle-1,
+.quasarexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.quasarexecutiveproducer-columns-grid-information-text-1,
+.quasarexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.quasarexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.quasarexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.quasarexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.quasarexecutiveproducer-columns-grid-acquire-button-addtocart,
+.quasarexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.quasarexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.quasarexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.quasarexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.quasarexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.quasarexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.quasarexecutiveproducer-information-subtitle-1,
+.quasarexecutiveproducer-information-subtitle-2,
+.quasarexecutiveproducer-information-subtitle-3,
+.quasarexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.quasarexecutiveproducer-information-text-1,
+.quasarexecutiveproducer-information-text-2,
+.quasarexecutiveproducer-information-text-3,
+.quasarexecutiveproducer-information-text-4,
+.quasarexecutiveproducer-information-text-5,
+.quasarexecutiveproducer-information-text-6,
+.quasarexecutiveproducer-information-text-7,
+.quasarexecutiveproducer-information-text-8,
+.quasarexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.quasarexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.quasarexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.quasarexecutiveproducer-button-back,
+.quasarexecutiveproducer-button-continueshopping,
+.quasarexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.quasarexecutiveproducer-button-back:hover,
+.quasarexecutiveproducer-button-continueshopping:hover,
+.quasarexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.quasarexecutiveproducer-button-back,
+.quasarexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.quasarexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   GALAXY EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.galaxyexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.galaxyexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.galaxyexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.galaxyexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.galaxyexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.galaxyexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.galaxyexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.galaxyexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-information-subtitle-1,
+.galaxyexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.galaxyexecutiveproducer-columns-grid-information-text-1,
+.galaxyexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.galaxyexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.galaxyexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.galaxyexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-button-addtocart,
+.galaxyexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.galaxyexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.galaxyexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.galaxyexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.galaxyexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.galaxyexecutiveproducer-information-subtitle-1,
+.galaxyexecutiveproducer-information-subtitle-2,
+.galaxyexecutiveproducer-information-subtitle-3,
+.galaxyexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.galaxyexecutiveproducer-information-text-1,
+.galaxyexecutiveproducer-information-text-2,
+.galaxyexecutiveproducer-information-text-3,
+.galaxyexecutiveproducer-information-text-4,
+.galaxyexecutiveproducer-information-text-5,
+.galaxyexecutiveproducer-information-text-6,
+.galaxyexecutiveproducer-information-text-7,
+.galaxyexecutiveproducer-information-text-8,
+.galaxyexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.galaxyexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.galaxyexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.galaxyexecutiveproducer-button-back,
+.galaxyexecutiveproducer-button-continueshopping,
+.galaxyexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.galaxyexecutiveproducer-button-back:hover,
+.galaxyexecutiveproducer-button-continueshopping:hover,
+.galaxyexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.galaxyexecutiveproducer-button-back,
+.galaxyexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.galaxyexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
+
+/* ======================================
+   COSMOS EXECUTIVE PRODUCER
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.cosmosexecutiveproducer-container {
+position: relative;
+width: 900px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.cosmosexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.cosmosexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.cosmosexecutiveproducer-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.cosmosexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.cosmosexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN*/
+.cosmosexecutiveproducer-columns-grid-image {
+width: 100%;
+min-width: 0;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cosmosexecutiveproducer-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-information-subtitle-1,
+.cosmosexecutiveproducer-columns-grid-information-subtitle-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-information-subtitle-1{
+text-align: center;  
+}
+.cosmosexecutiveproducer-columns-grid-information-text-1,
+.cosmosexecutiveproducer-columns-grid-information-text-2 {
+justify-content: space-between;
+align-items: center;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;  
+box-sizing: border-box;
+padding: 0px;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-information-text-1 {
+margin-bottom: 30px;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.cosmosexecutiveproducer-columns-grid-acquire {
+width: 100%;
+max-width: 100%;
+height: 100%;
+min-height: 300px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+/* CONTENEDOR: PRECIO */
+.cosmosexecutiveproducer-columns-grid-acquire-price {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-price div {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+box-sizing: border-box;
+padding: 0px;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: BOTONES */
+.cosmosexecutiveproducer-columns-grid-acquire-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin: 0px;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-button-addtocart,
+.cosmosexecutiveproducer-columns-grid-acquire-button-share {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0 0 20px 0;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.cosmosexecutiveproducer-columns-grid-acquire-button-addtocart {
+background-color: #ff1493 !important;
+font-size: 1.2rem;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-button-share{
+background-color: #39ff14 !important;
+font-size: 1rem;
+}
+.cosmosexecutiveproducer-columns-grid-acquire-button-addtocart:hover,
+.cosmosexecutiveproducer-columns-grid-acquire-button-share:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: DEBAJO DE LA TABLA */
+.cosmosexecutiveproducer-information {
+width: 100%;
+margin: 0 0 30px 0;
+}
+.cosmosexecutiveproducer-information-subtitle-1,
+.cosmosexecutiveproducer-information-subtitle-2,
+.cosmosexecutiveproducer-information-subtitle-3,
+.cosmosexecutiveproducer-information-subtitle-4 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.cosmosexecutiveproducer-information-text-1,
+.cosmosexecutiveproducer-information-text-2,
+.cosmosexecutiveproducer-information-text-3,
+.cosmosexecutiveproducer-information-text-4,
+.cosmosexecutiveproducer-information-text-5,
+.cosmosexecutiveproducer-information-text-6,
+.cosmosexecutiveproducer-information-text-7,
+.cosmosexecutiveproducer-information-text-8,
+.cosmosexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.cosmosexecutiveproducer-information-text-9 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cosmosexecutiveproducer-buttons {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.cosmosexecutiveproducer-button-back,
+.cosmosexecutiveproducer-button-continueshopping,
+.cosmosexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white;
+text-decoration: none;
+padding: 10px 20px 10px 20px;
+margin: 0px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cosmosexecutiveproducer-button-back:hover,
+.cosmosexecutiveproducer-button-continueshopping:hover,
+.cosmosexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+.cosmosexecutiveproducer-button-back,
+.cosmosexecutiveproducer-button-continueshopping {
+background-color: #00CED1 !important;
+}
+.cosmosexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important;
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39FF14;
+font-weight: bold;
+}
 
 
 
