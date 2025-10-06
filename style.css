@@ -7529,6 +7529,24 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 
+
+
+/* Ocultar todas las secciones por defecto */
+.main-section,
+.subsection {
+display: none !important;
+}
+
+/* Mostrar solo HOME y sus subsecciones por defecto */
+#home,
+#home-socialmediacontent,
+#home-tiktokhighlight, 
+#home-youtubehighlight {
+display: block !important;
+}
+
+
+
 /* ================================
    🔻 FOOTER PERSONALIZADO
 =================================== */
