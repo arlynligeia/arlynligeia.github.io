@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -3264,6 +3264,15 @@ console.log('📍 Botón VIEW - Navegando a:', targetId);
 navigateToTarget(targetId);
 });
 });
+// 4. BOTONES "BUY" 
+document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('🛒 Botón BUY - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+}); 
 // AGREGAR MÁS BOTONES
 console.log('✅ Navegación de tienda configurada correctamente');
 });
