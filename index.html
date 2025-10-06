@@ -3177,57 +3177,111 @@ document.addEventListener('DOMContentLoaded', function() {
 
  
 
-<!-- SCRIP: NAVEGACIÓN COMPLETA DE TIENDA -->  
+<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->  
 <script>
-// NAVEGACIÓN PARA TODOS LOS ELEMENTOS DE LA TIENDA
+// NAVEGACIÓN JERÁRQUICA PARA TIENDA
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🛍️ Navegación de tienda iniciada');
+    console.log('🛍️ Navegación jerárquica de tienda iniciada');
     
-    // ========== FUNCIÓN PRINCIPAL DE NAVEGACIÓN ==========
+    // ========== FUNCIÓN PRINCIPAL CORREGIDA ==========
     function navigateToSection(targetId) {
         console.log('Navegando a:', targetId);
         
-        // Ocultar todas las secciones primero
-        document.querySelectorAll('.main-section, .subsection').forEach(section => {
+        const targetSection = document.getElementById(targetId);
+        if (!targetSection) {
+            console.warn('❌ Sección no encontrada:', targetId);
+            return;
+        }
+        
+        // Obtener la sección principal (padre) de la sección objetivo
+        let mainSection = targetSection;
+        
+        // Si es una subsección, encontrar su sección principal
+        if (targetSection.classList.contains('subsection')) {
+            // Buscar la sección principal por el prefijo del ID
+            const mainSectionId = targetId.split('-').slice(0, 2).join('-');
+            mainSection = document.getElementById(mainSectionId) || targetSection;
+        }
+        
+        // Ocultar TODAS las secciones principales primero
+        document.querySelectorAll('.main-section').forEach(section => {
             section.style.display = 'none';
         });
         
-        // Mostrar la sección objetivo
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.style.display = 'block';
+        // Mostrar la sección principal
+        if (mainSection) {
+            mainSection.style.display = 'block';
+            
+            // Mostrar TODAS las subsecciones de esta sección principal
+            const mainSectionPrefix = mainSection.id + '-';
+            document.querySelectorAll('.subsection').forEach(subsection => {
+                if (subsection.id.startsWith(mainSectionPrefix)) {
+                    subsection.style.display = 'block';
+                } else {
+                    subsection.style.display = 'none';
+                }
+            });
+            
+            // Hacer scroll a la sección objetivo
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             
             // Actualizar la URL
             history.pushState(null, null, `#${targetId}`);
-        } else {
-            console.warn('❌ Sección no encontrada:', targetId);
         }
     }
     
-    // ========== CATEGORÍAS PRINCIPALES ==========
+    // ========== FUNCIÓN PARA SECCIONES PRINCIPALES ==========
+    function navigateToMainSection(mainSectionId) {
+        console.log('Navegando a sección principal:', mainSectionId);
+        
+        const mainSection = document.getElementById(mainSectionId);
+        if (!mainSection) return;
+        
+        // Ocultar TODAS las secciones principales
+        document.querySelectorAll('.main-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Mostrar esta sección principal
+        mainSection.style.display = 'block';
+        
+        // Mostrar TODAS sus subsecciones
+        const mainSectionPrefix = mainSectionId + '-';
+        document.querySelectorAll('.subsection').forEach(subsection => {
+            if (subsection.id.startsWith(mainSectionPrefix)) {
+                subsection.style.display = 'block';
+            } else {
+                subsection.style.display = 'none';
+            }
+        });
+        
+        // Hacer scroll al inicio de la sección principal
+        mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        
+        // Actualizar la URL
+        history.pushState(null, null, `#${mainSectionId}`);
+    }
     
-    // 1. TARJETAS DE PRODUCTOS DIGITALES (Store → Digital Products)
+    // ========== CONFIGURACIÓN DE EVENT LISTENERS ==========
+    
+    // 1. TARJETAS QUE DEBEN MOSTRAR SECCIÓN + SUBSECCIONES
     document.querySelectorAll('.digitalproducts-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            navigateToMainSection(targetId); // Usar función de sección principal
         });
     });
     
-    // 2. TARJETAS DE PRODUCTOS FÍSICOS (Store → Physical Products)  
     document.querySelectorAll('.physicalproducts-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            navigateToMainSection(targetId); // Usar función de sección principal
         });
     });
     
-    // ========== SUBCATEGORÍAS ==========
-    
-    // 3. TARJETAS DE FILM DIGITAL (Digital Film → Feature Film / Short Film)
+    // 2. TARJETAS DE SUBCATEGORÍAS (deben mantener la sección principal visible)
     document.querySelectorAll('.digitalfilm-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3236,7 +3290,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 4. TARJETAS DE MUSIC DIGITAL (Digital Music → Singles / Album)
     document.querySelectorAll('.digitalmusic-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3245,7 +3298,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 5. TARJETAS DE FASHION FÍSICO (Physical Fashion → Jewelry / Clothing / etc)
     document.querySelectorAll('.physicalfashion-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3254,9 +3306,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ========== PRODUCTOS INDIVIDUALES ==========
-    
-    // 6. BOTONES "VIEW" DE PRODUCTOS (Feature Film → productos individuales)
+    // 3. BOTONES "VIEW" DE PRODUCTOS (van a subsecciones específicas)
     document.querySelectorAll('.digitalfeaturefilm-columns-grid-product-button-view').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3265,39 +3315,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // ========== BOTONES DE NAVEGACIÓN ==========
-    
-    // 7. TODOS LOS BOTONES "BACK" (Regresar a sección anterior)
+    // 4. BOTONES "BACK" (regresan a secciones principales)
     document.querySelectorAll('[class*="-button-back"]').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            navigateToMainSection(targetId); // Usar función de sección principal
         });
     });
 
-    // 8. TODOS LOS BOTONES "CONTINUE SHOPPING" (Volver al Store principal)
+    // 5. BOTONES "CONTINUE SHOPPING" (van al store principal)
     document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            navigateToMainSection(targetId); // Usar función de sección principal
         });
     });
     
-    console.log('✅ Navegación completa de tienda configurada');
-    console.log('📊 Elementos configurados:');
-    console.log('   - Tarjetas Digital Products:', document.querySelectorAll('.digitalproducts-columns-grid-card').length);
-    console.log('   - Tarjetas Physical Products:', document.querySelectorAll('.physicalproducts-columns-grid-card').length);
-    console.log('   - Tarjetas Digital Film:', document.querySelectorAll('.digitalfilm-columns-grid-card').length);
-    console.log('   - Tarjetas Digital Music:', document.querySelectorAll('.digitalmusic-columns-grid-card').length);
-    console.log('   - Tarjetas Physical Fashion:', document.querySelectorAll('.physicalfashion-columns-grid-card').length);
-    console.log('   - Botones VIEW:', document.querySelectorAll('.digitalfeaturefilm-columns-grid-product-button-view').length);
-    console.log('   - Botones BACK:', document.querySelectorAll('[class*="-button-back"]').length);
-    console.log('   - Botones CONTINUE SHOPPING:', document.querySelectorAll('[class*="-button-continueshopping"]').length);
+    console.log('✅ Navegación jerárquica de tienda configurada');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN COMPLETA DE TIENDA -->
+<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
 
 
