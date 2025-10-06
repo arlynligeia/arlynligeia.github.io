@@ -3324,30 +3324,19 @@ navigateToSection(targetId);
 });
 });
     
-// 4. BOTONES "BACK" - CORREGIDO
+// 4. BOTONES "BACK" - SOLO SCROLL
 document.querySelectorAll('[class*="-button-back"]').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').replace('#', '');
-        console.log('↩️ Botón BACK - Navegando a:', targetId);
         
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
-            // Mostrar la sección principal si es una subsección
-            if (targetSection.classList.contains('subsection')) {
-                const mainSectionId = targetId.split('-')[0];
-                const mainSection = document.getElementById(mainSectionId);
-                if (mainSection) {
-                    mainSection.style.display = 'block';
-                }
-            }
-            
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             history.pushState(null, null, `#${targetId}`);
         }
     });
 });
-
 
 
 
