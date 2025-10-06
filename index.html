@@ -3078,36 +3078,6 @@ Authorized by Intendancy Resolution N°</p>
 </div>
 </section>
 <!-- FIN TERMS AND CONDITIONS --> 
- 
-
-
-
-
-
-
-
-
-
-
- 
- 
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  
 </main>
 
 <!-- FOOTER -->   
@@ -3122,7 +3092,94 @@ Authorized by Intendancy Resolution N°</p>
 </div>
 </footer>
 <!-- FIN FOOTER -->   
-  
+
+
+<script>
+// navigation.js
+class NavigationManager {
+constructor() {
+this.currentSection = 'home';
+this.init();
+}
+init() {
+this.setupMenuListeners();
+this.setupHashNavigation();
+this.showSection('home');
+}
+setupMenuListeners() {
+const menuButtons = document.querySelectorAll('.menu-button');
+const submenuButtons = document.querySelectorAll('.submenu-button');  
+menuButtons.forEach(button => {
+button.addEventListener('click', (e) => {
+e.preventDefault();
+const targetId = button.getAttribute('href').replace('#', '');
+this.showSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+submenuButtons.forEach(button => {
+button.addEventListener('click', (e) => {
+e.preventDefault();
+const targetId = button.getAttribute('href').replace('#', '');
+this.showSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+}
+setupHashNavigation() {
+window.addEventListener('hashchange', () => {
+const hash = window.location.hash.replace('#', '') || 'home';
+if (hash.includes('-')) {
+this.showSubsection(hash);
+} else {
+this.showSection(hash);
+}
+});
+window.addEventListener('popstate', () => {
+const hash = window.location.hash.replace('#', '') || 'home';
+if (hash.includes('-')) {
+this.showSubsection(hash);
+} else {
+this.showSection(hash);
+}
+});
+}
+showSection(sectionId) {
+document.querySelectorAll('.main-section').forEach(section => {
+section.style.display = 'none';
+});  
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+this.currentSection = sectionId;
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+showSubsection(subsectionId) {
+const mainSectionId = subsectionId.split('-')[0];
+this.showSection(mainSectionId);    
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+}
+document.addEventListener('DOMContentLoaded', () => {
+new NavigationManager();
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+ 
 </body>
   
 </html>
