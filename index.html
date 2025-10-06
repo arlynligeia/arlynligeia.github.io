@@ -3098,41 +3098,27 @@ Authorized by Intendancy Resolution N°</p>
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔧 Navegación iniciada');
     
-    // Función para mostrar SOLO UNA sección y ocultar TODAS las demás
     function showOnlyOneSection(sectionId) {
         console.log('Mostrando SOLO:', sectionId);
-        
-        // 1. OCULTAR TODAS las secciones principales y subsecciones
         document.querySelectorAll('.main-section, .subsection').forEach(section => {
             section.style.display = 'none';
         });
         
-        // 2. Mostrar SOLO la sección principal seleccionada
         const mainSection = document.getElementById(sectionId);
         if (mainSection) {
             mainSection.style.display = 'block';
-            
-            // 3. Mostrar SOLO las subsecciones de ESTA sección
             document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
                 subsection.style.display = 'block';
             });
-            
-            // Scroll al inicio de la sección
             mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
     
-    // Función para ir a una subsección específica (dentro de la misma sección)
     function goToSubsection(subsectionId) {
         console.log('Yendo a subsección:', subsectionId);
-        
-        // Encontrar la sección principal
         const mainSectionId = subsectionId.split('-')[0];
-        
-        // Mostrar SOLO esa sección (oculta todas las demás)
         showOnlyOneSection(mainSectionId);
         
-        // Después hacer scroll a la subsección específica
         setTimeout(() => {
             const subsection = document.getElementById(subsectionId);
             if (subsection) {
@@ -3141,7 +3127,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
     
-    // Configurar clicks del menú principal
     document.querySelectorAll('.menu-button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3151,7 +3136,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Configurar clicks del submenú
     document.querySelectorAll('.submenu-button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3160,6 +3144,20 @@ document.addEventListener('DOMContentLoaded', function() {
             history.pushState(null, null, `#${targetId}`);
         });
     });
+
+    // ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
+    function checkInitialHash() {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            if (hash.includes('-')) {
+                goToSubsection(hash);
+            } else {
+                showOnlyOneSection(hash);
+            }
+        }
+    }
+    
+    checkInitialHash();
     
     console.log('✅ Navegación configurada correctamente');
 });
