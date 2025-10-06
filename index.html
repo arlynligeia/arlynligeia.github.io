@@ -3314,9 +3314,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-// 3. BOTONES "VIEW" DE PRODUCTOS - CORREGIDO
-// Esto captura TODOS los botones VIEW en TODAS las secciones de feature film
-document.querySelectorAll('[class*="-columns-grid-product-button-view"]').forEach(button => {
+/// 3. BOTONES "VIEW" DE PRODUCTOS - PARA TODAS LAS SECCIONES
+document.querySelectorAll('[class*="-button-view"]').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
@@ -3325,26 +3324,13 @@ navigateToSection(targetId);
 });
 });
     
- // 4. BOTONES "BACK" - VERSIÓN ESPECÍFICA
+// 4. BOTONES "BACK" - EXACTAMENTE IGUAL QUE LOS BOTONES VIEW
 document.querySelectorAll('[class*="-button-back"]').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
-// Identificar EXACTAMENTE el botón BACK del carrito
-const isCartBackButton = (
-this.classList.contains('cart-full-button-back') || 
-this.classList.contains('cart-empty-button-back') ||
-this.closest('#cart') !== null
-);
-if (isCartBackButton) {
-// 🛒 Botón BACK del carrito - volver atrás en el historial
-console.log('🛒 Botón BACK del carrito - Volviendo atrás en historial');
-history.back();
-} else {
-// ↩️ Botones BACK normales - ir a destino específico
-console.log('↩️ Botón BACK normal - Navegando a:', targetId);
-navigateToMainSection(targetId);
-}
+console.log('↩️ Botón BACK clickeado - Navegando a:', targetId);
+navigateToSection(targetId);
 });
 });
 
