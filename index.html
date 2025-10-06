@@ -2440,7 +2440,7 @@ ADD TO CART
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-full" id="cart-full">  
+<div class="cart-full" id="cart-full" style="display: block;">
 <!-- CONTENEDOR: TABLA -->  
 <div class="cart-full-table">
 <table class="cart-full-table-wrapper">
@@ -2459,14 +2459,24 @@ ADD TO CART
 <tbody class="cart-full-table-wrapper-body" id="cart-items-container">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
 <tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
-<!-- LOS PRODUCTOS SE AGREGARÁN AQUÍ DINÁMICAMENTE -->
+<!-- FILA EJEMPLO (esto se generará dinámicamente después) -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell">
+<img src="assets/assets/Primer Afiche Alone Cuadrado.png" alt="Product" style="width: 50px; height: 50px;">
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">COMET SPONSOR</td>
+<td class="cart-full-table-wrapper-body-row-cell">1</td>  
+<td class="cart-full-table-wrapper-body-row-cell">$50.00</td>
+<td class="cart-full-table-wrapper-body-row-cell">$50.00</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<button class="remove-item">×</button>
+</td>
+</tr>
 <!-- LÍNEA DIVISORIA INFERIOR -->
 <tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
 <!-- RESUMEN DE PRECIOS -->
 <tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell" colspan="3"></td>
 <td class="cart-full-table-wrapper-body-row-cell">
 <div class="cart-full-table-wrapper-body-row-cell-subtotal">
 <span>Subtotal</span>
@@ -2476,13 +2486,13 @@ ADD TO CART
 <div class="cart-full-table-wrapper-body-row-cell-subtotalprice">
 <span class="cart-full-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
 <span class="cart-full-table-wrapper-body-row-cell-subtotalprice-amount" id="cart-subtotal">0.00</span>
+</div>
 </td>
 <td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
+
 <tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell" colspan="3"></td>
 <td class="cart-full-table-wrapper-body-row-cell">
 <div class="cart-full-table-wrapper-body-row-cell-shipping">
 <span>Shipping</span>
@@ -2492,13 +2502,12 @@ ADD TO CART
 <div class="cart-full-table-wrapper-body-row-cell-shippingprice">
 <span class="cart-full-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
 <span class="cart-full-table-wrapper-body-row-cell-shippingprice-amount" id="cart-shipping">0.00</span>
+</div>
 </td>
 <td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
 <tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell" colspan="3"></td>
 <td class="cart-full-table-wrapper-body-row-cell">
 <div class="cart-full-table-wrapper-body-row-cell-total">
 <span>TOTAL</span>
@@ -2508,6 +2517,7 @@ ADD TO CART
 <div class="cart-full-table-wrapper-body-row-cell-totalprice">
 <span class="cart-full-table-wrapper-body-row-cell-totalprice-symbol">$</span>
 <span class="cart-full-table-wrapper-body-row-cell-totalprice-amount" id="cart-total">0.00</span>
+</div>
 </td>
 <td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
