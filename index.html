@@ -3095,56 +3095,59 @@ Authorized by Intendancy Resolution N°</p>
 
 
 <script>
-// SIMPLE NAVIGATION - VERSIÓN CORREGIDA
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔧 Navegación iniciada');
     
-    // Función para mostrar una sección
-    function showSection(sectionId) {
-        console.log('Mostrando:', sectionId);
+    // Función para mostrar una sección COMPLETA con todos sus hijos
+    function showCompleteSection(sectionId) {
+        console.log('Mostrando sección completa:', sectionId);
         
         // Ocultar TODAS las secciones principales
         document.querySelectorAll('.main-section').forEach(section => {
             section.style.display = 'none';
         });
         
-        // Ocultar TODAS las subsecciones  
-        document.querySelectorAll('.subsection').forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        // Mostrar la sección principal
+        // Mostrar la sección principal seleccionada
         const mainSection = document.getElementById(sectionId);
         if (mainSection) {
             mainSection.style.display = 'block';
+            
+            // Mostrar TODAS las subsecciones de esta sección
+            document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+                subsection.style.display = 'block';
+            });
+            
+            // Scroll al inicio de la sección principal (al banner)
             mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
     
-    // Función para mostrar subsección
-    function showSubsection(subsectionId) {
-        console.log('Mostrando subsección:', subsectionId);
+    // Función para ir a una subsección específica
+    function goToSubsection(subsectionId) {
+        console.log('Yendo a subsección:', subsectionId);
         
         // Encontrar la sección principal (ej: "film" de "film-featurefilm")
         const mainSectionId = subsectionId.split('-')[0];
         
-        // Mostrar la sección principal primero
-        showSection(mainSectionId);
+        // Mostrar la sección principal COMPLETA primero
+        showCompleteSection(mainSectionId);
         
-        // Mostrar la subsección específica
-        const subsection = document.getElementById(subsectionId);
-        if (subsection) {
-            subsection.style.display = 'block';
-            subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        // Después hacer scroll a la subsección específica
+        setTimeout(() => {
+            const subsection = document.getElementById(subsectionId);
+            if (subsection) {
+                subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }, 100);
     }
     
-    // Configurar clicks del menú
+    // Configurar clicks del menú principal
     document.querySelectorAll('.menu-button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            showSection(targetId);
+            showCompleteSection(targetId);
+            history.pushState(null, null, `#${targetId}`);
         });
     });
     
@@ -3153,14 +3156,14 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            showSubsection(targetId);
+            goToSubsection(targetId);
+            history.pushState(null, null, `#${targetId}`);
         });
     });
     
     console.log('✅ Navegación configurada correctamente');
 });
 </script>
-
 
 
 
