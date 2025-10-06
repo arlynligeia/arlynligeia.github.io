@@ -3098,39 +3098,39 @@ Authorized by Intendancy Resolution N°</p>
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔧 Navegación iniciada');
     
-    // Función para mostrar una sección COMPLETA con todos sus hijos
-    function showCompleteSection(sectionId) {
-        console.log('Mostrando sección completa:', sectionId);
+    // Función para mostrar SOLO UNA sección y ocultar TODAS las demás
+    function showOnlyOneSection(sectionId) {
+        console.log('Mostrando SOLO:', sectionId);
         
-        // Ocultar TODAS las secciones principales
-        document.querySelectorAll('.main-section').forEach(section => {
+        // 1. OCULTAR TODAS las secciones principales y subsecciones
+        document.querySelectorAll('.main-section, .subsection').forEach(section => {
             section.style.display = 'none';
         });
         
-        // Mostrar la sección principal seleccionada
+        // 2. Mostrar SOLO la sección principal seleccionada
         const mainSection = document.getElementById(sectionId);
         if (mainSection) {
             mainSection.style.display = 'block';
             
-            // Mostrar TODAS las subsecciones de esta sección
+            // 3. Mostrar SOLO las subsecciones de ESTA sección
             document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
                 subsection.style.display = 'block';
             });
             
-            // Scroll al inicio de la sección principal (al banner)
+            // Scroll al inicio de la sección
             mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     }
     
-    // Función para ir a una subsección específica
+    // Función para ir a una subsección específica (dentro de la misma sección)
     function goToSubsection(subsectionId) {
         console.log('Yendo a subsección:', subsectionId);
         
-        // Encontrar la sección principal (ej: "film" de "film-featurefilm")
+        // Encontrar la sección principal
         const mainSectionId = subsectionId.split('-')[0];
         
-        // Mostrar la sección principal COMPLETA primero
-        showCompleteSection(mainSectionId);
+        // Mostrar SOLO esa sección (oculta todas las demás)
+        showOnlyOneSection(mainSectionId);
         
         // Después hacer scroll a la subsección específica
         setTimeout(() => {
@@ -3146,7 +3146,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            showCompleteSection(targetId);
+            showOnlyOneSection(targetId);
             history.pushState(null, null, `#${targetId}`);
         });
     });
