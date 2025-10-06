@@ -7531,17 +7531,20 @@ margin-bottom: 0px;
 
 
 
-/* Ocultar todas las secciones por defecto */
-.main-section,
-.subsection {
-display: none !important;
+/* REEMPLAZA CON ESTO: */
+.main-section:not(#home) {
+    display: none;
 }
-/* Mostrar solo HOME y sus subsecciones por defecto */
-#home,
+.subsection:not([id^="home-"]) {
+    display: none;
+}
+#home {
+    display: block;
+}
 #home-socialmediacontent,
 #home-tiktokhighlight, 
 #home-youtubehighlight {
-display: block !important;
+    display: block;
 }
 
 
