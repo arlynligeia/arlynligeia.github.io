@@ -3324,16 +3324,19 @@ navigateToSection(targetId);
 });
 });
     
-// 4. BOTONES "BACK" - USAR LA MISMA FUNCIÓN QUE VIEW
+// 4. BOTONES "BACK" - SOLO ESTO
 document.querySelectorAll('[class*="-button-back"]').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').replace('#', '');
-        console.log('↩️ Botón BACK - Navegando a:', targetId);
-        navigateToSection(targetId); // MISMA FUNCIÓN EXACTA QUE VIEW
+        
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            history.pushState(null, null, `#${targetId}`);
+        }
     });
 });
-
  
     // 5. BOTONES "CONTINUE SHOPPING" (van al store principal)
     document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
