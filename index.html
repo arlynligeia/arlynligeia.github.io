@@ -3174,13 +3174,16 @@ document.addEventListener('DOMContentLoaded', function() {
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
 
 
-<!-- SCRIP: NAVEGACIÓN TARJETAS DE TIENDA -->  
+
+ 
+
+<!-- SCRIP: NAVEGACIÓN COMPLETA DE TIENDA -->  
 <script>
- // NAVEGACIÓN PARA TARJETAS DE PRODUCTOS EN STORE
+// NAVEGACIÓN PARA TODOS LOS ELEMENTOS DE LA TIENDA
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🛍️ Navegación de tienda iniciada');
     
-    // Función para navegar a secciones desde las tarjetas
+    // ========== FUNCIÓN PRINCIPAL DE NAVEGACIÓN ==========
     function navigateToSection(targetId) {
         console.log('Navegando a:', targetId);
         
@@ -3202,7 +3205,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Agregar event listeners a todas las tarjetas de productos digitales
+    // ========== CATEGORÍAS PRINCIPALES ==========
+    
+    // 1. TARJETAS DE PRODUCTOS DIGITALES (Store → Digital Products)
     document.querySelectorAll('.digitalproducts-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3211,7 +3216,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Agregar event listeners a todas las tarjetas de productos físicos
+    // 2. TARJETAS DE PRODUCTOS FÍSICOS (Store → Physical Products)  
     document.querySelectorAll('.physicalproducts-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
@@ -3220,10 +3225,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    console.log('✅ Navegación de tienda configurada correctamente');
+    // ========== SUBCATEGORÍAS ==========
+    
+    // 3. TARJETAS DE FILM DIGITAL (Digital Film → Feature Film / Short Film)
+    document.querySelectorAll('.digitalfilm-columns-grid-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+
+    // 4. TARJETAS DE MUSIC DIGITAL (Digital Music → Singles / Album)
+    document.querySelectorAll('.digitalmusic-columns-grid-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+
+    // 5. TARJETAS DE FASHION FÍSICO (Physical Fashion → Jewelry / Clothing / etc)
+    document.querySelectorAll('.physicalfashion-columns-grid-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+    
+    // ========== PRODUCTOS INDIVIDUALES ==========
+    
+    // 6. BOTONES "VIEW" DE PRODUCTOS (Feature Film → productos individuales)
+    document.querySelectorAll('.digitalfeaturefilm-columns-grid-product-button-view').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+    
+    // ========== BOTONES DE NAVEGACIÓN ==========
+    
+    // 7. TODOS LOS BOTONES "BACK" (Regresar a sección anterior)
+    document.querySelectorAll('[class*="-button-back"]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+
+    // 8. TODOS LOS BOTONES "CONTINUE SHOPPING" (Volver al Store principal)
+    document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+    
+    console.log('✅ Navegación completa de tienda configurada');
+    console.log('📊 Elementos configurados:');
+    console.log('   - Tarjetas Digital Products:', document.querySelectorAll('.digitalproducts-columns-grid-card').length);
+    console.log('   - Tarjetas Physical Products:', document.querySelectorAll('.physicalproducts-columns-grid-card').length);
+    console.log('   - Tarjetas Digital Film:', document.querySelectorAll('.digitalfilm-columns-grid-card').length);
+    console.log('   - Tarjetas Digital Music:', document.querySelectorAll('.digitalmusic-columns-grid-card').length);
+    console.log('   - Tarjetas Physical Fashion:', document.querySelectorAll('.physicalfashion-columns-grid-card').length);
+    console.log('   - Botones VIEW:', document.querySelectorAll('.digitalfeaturefilm-columns-grid-product-button-view').length);
+    console.log('   - Botones BACK:', document.querySelectorAll('[class*="-button-back"]').length);
+    console.log('   - Botones CONTINUE SHOPPING:', document.querySelectorAll('[class*="-button-continueshopping"]').length);
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN TARJETAS DE TIENDA -->  
+<!-- FIN SCRIP: NAVEGACIÓN COMPLETA DE TIENDA -->
 
 
 
