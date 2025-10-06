@@ -3191,8 +3191,8 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🛍️ Navegación jerárquica de tienda iniciada');
     
-    // ========== FUNCIÓN PRINCIPAL CORREGIDA ==========
-    function navigateToSection(targetId) {
+    // ========== FUNCIÓN ÚNICA PARA TODAS LAS NAVEGACIONES ==========
+    function navigateToTarget(targetId) {
         console.log('Navegando a:', targetId);
         
         const targetSection = document.getElementById(targetId);
@@ -3201,35 +3201,31 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
         
-        // Obtener la sección principal (padre) de la sección objetivo
-        let mainSection = targetSection;
-        
-        // Si es una subsección, encontrar su sección principal
-        if (targetSection.classList.contains('subsection')) {
-            // Buscar la sección principal por el prefijo del ID
-         const mainSectionId = targetId.split('-')[0];
-
-
-   
-            mainSection = document.getElementById(mainSectionId) || targetSection;
-        }
-        
-        // Ocultar TODAS las secciones principales primero
-        document.querySelectorAll('.main-section').forEach(section => {
+        // Ocultar TODAS las secciones principales y subsecciones
+        document.querySelectorAll('.main-section, .subsection').forEach(section => {
             section.style.display = 'none';
         });
         
-        // Mostrar la sección principal
+        // Determinar la sección principal a mostrar
+        let mainSectionId;
+        if (targetSection.classList.contains('subsection')) {
+            // Si es subsección, mostrar su sección principal
+            mainSectionId = targetId.split('-')[0];
+        } else {
+            // Si es sección principal, mostrar esa misma
+            mainSectionId = targetId;
+        }
+        
+        const mainSection = document.getElementById(mainSectionId);
         if (mainSection) {
+            // Mostrar la sección principal
             mainSection.style.display = 'block';
             
-            // Mostrar TODAS las subsecciones de esta sección principal
-            const mainSectionPrefix = mainSection.id + '-';
+            // Mostrar TODAS sus subsecciones
+            const mainSectionPrefix = mainSectionId + '-';
             document.querySelectorAll('.subsection').forEach(subsection => {
                 if (subsection.id.startsWith(mainSectionPrefix)) {
                     subsection.style.display = 'block';
-                } else {
-                    subsection.style.display = 'none';
                 }
             });
             
@@ -3241,122 +3237,59 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // ========== FUNCIÓN PARA SECCIONES PRINCIPALES ==========
-    function navigateToMainSection(mainSectionId) {
-        console.log('Navegando a sección principal:', mainSectionId);
-        
-        const mainSection = document.getElementById(mainSectionId);
-        if (!mainSection) return;
-        
-        // Ocultar TODAS las secciones principales
-        document.querySelectorAll('.main-section').forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        // Mostrar esta sección principal
-        mainSection.style.display = 'block';
-        
-        // Mostrar TODAS sus subsecciones
-        const mainSectionPrefix = mainSectionId + '-';
-        document.querySelectorAll('.subsection').forEach(subsection => {
-            if (subsection.id.startsWith(mainSectionPrefix)) {
-                subsection.style.display = 'block';
-            } else {
-                subsection.style.display = 'none';
-            }
-        });
-        
-        // Hacer scroll al inicio de la sección principal
-        mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        
-        // Actualizar la URL
-        history.pushState(null, null, `#${mainSectionId}`);
-    }
-    
     // ========== CONFIGURACIÓN DE EVENT LISTENERS ==========
     
-    // 1. TARJETAS QUE DEBEN MOSTRAR SECCIÓN + SUBSECCIONES
-    document.querySelectorAll('.digitalproducts-columns-grid-card').forEach(card => {
+    // 1. TARJETAS PRINCIPALES
+    document.querySelectorAll('.digitalproducts-columns-grid-card, .physicalproducts-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToMainSection(targetId); // Usar función de sección principal
+            navigateToTarget(targetId);
         });
     });
     
-    document.querySelectorAll('.physicalproducts-columns-grid-card').forEach(card => {
+    // 2. TARJETAS DE SUBCATEGORÍAS
+    document.querySelectorAll('.digitalfilm-columns-grid-card, .digitalmusic-columns-grid-card, .physicalfashion-columns-grid-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToMainSection(targetId); // Usar función de sección principal
+            navigateToTarget(targetId);
         });
     });
     
-    // 2. TARJETAS DE SUBCATEGORÍAS (deben mantener la sección principal visible)
-    document.querySelectorAll('.digitalfilm-columns-grid-card').forEach(card => {
-        card.addEventListener('click', function(e) {
+    // 3. BOTONES "VIEW" 
+    document.querySelectorAll('[class*="-button-view"]').forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            console.log('📍 Botón VIEW - Navegando a:', targetId);
+            navigateToTarget(targetId);
         });
     });
-
-    document.querySelectorAll('.digitalmusic-columns-grid-card').forEach(card => {
-        card.addEventListener('click', function(e) {
+    
+    // 4. BOTONES "BACK"
+    document.querySelectorAll('[class*="-button-back"]').forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
+            console.log('↩️ Botón BACK - Navegando a:', targetId);
+            navigateToTarget(targetId);
         });
     });
-
-    document.querySelectorAll('.physicalfashion-columns-grid-card').forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').replace('#', '');
-            navigateToSection(targetId);
-        });
-    });
-    
-/// 3. BOTONES "VIEW" DE PRODUCTOS - PARA TODAS LAS SECCIONES
-document.querySelectorAll('[class*="-button-view"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('📍 Botón VIEW clickeado - Navegando a:', targetId);
-navigateToSection(targetId);
-});
-});
-    
-    
-/// 3. BOTONES "VIEW" DE PRODUCTOS - PARA TODAS LAS SECCIONES
-document.querySelectorAll('[class*="-button-back"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('📍 Botón BACK clickeado - Navegando a:', targetId);
-navigateToSection(targetId);
-});
-});
-
-
-
-
-
-
  
-    // 5. BOTONES "CONTINUE SHOPPING" (van al store principal)
+    // 5. BOTONES "CONTINUE SHOPPING"
     document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
-            navigateToMainSection(targetId); // Usar función de sección principal
+            console.log('🛍️ CONTINUE SHOPPING - Navegando a:', targetId);
+            navigateToTarget(targetId);
         });
     });
     
-    console.log('✅ Navegación jerárquica de tienda configurada');
+    console.log('✅ Navegación de tienda configurada correctamente');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
 
 
