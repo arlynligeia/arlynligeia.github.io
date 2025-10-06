@@ -3095,81 +3095,71 @@ Authorized by Intendancy Resolution N°</p>
 
 
 <script>
-// navigation.js
-class NavigationManager {
-constructor() {
-this.currentSection = 'home';
-this.init();
-}
-init() {
-this.setupMenuListeners();
-this.setupHashNavigation();
-this.showSection('home');
-}
-setupMenuListeners() {
-const menuButtons = document.querySelectorAll('.menu-button');
-const submenuButtons = document.querySelectorAll('.submenu-button');  
-menuButtons.forEach(button => {
-button.addEventListener('click', (e) => {
-e.preventDefault();
-const targetId = button.getAttribute('href').replace('#', '');
-this.showSection(targetId);
-history.pushState(null, null, `#${targetId}`);
-});
-});
-submenuButtons.forEach(button => {
-button.addEventListener('click', (e) => {
-e.preventDefault();
-const targetId = button.getAttribute('href').replace('#', '');
-this.showSubsection(targetId);
-history.pushState(null, null, `#${targetId}`);
-});
-});
-}
-setupHashNavigation() {
-window.addEventListener('hashchange', () => {
-const hash = window.location.hash.replace('#', '') || 'home';
-if (hash.includes('-')) {
-this.showSubsection(hash);
-} else {
-this.showSection(hash);
-}
-});
-window.addEventListener('popstate', () => {
-const hash = window.location.hash.replace('#', '') || 'home';
-if (hash.includes('-')) {
-this.showSubsection(hash);
-} else {
-this.showSection(hash);
-}
-});
-}
-showSection(sectionId) {
-document.querySelectorAll('.main-section').forEach(section => {
-section.style.display = 'none';
-});  
-const mainSection = document.getElementById(sectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-this.currentSection = sectionId;
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-}
-showSubsection(subsectionId) {
-const mainSectionId = subsectionId.split('-')[0];
-this.showSection(mainSectionId);    
-const subsection = document.getElementById(subsectionId);
-if (subsection) {
-subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
-}
-}
-document.addEventListener('DOMContentLoaded', () => {
-new NavigationManager();
+// SIMPLE NAVIGATION - VERSIÓN CORREGIDA
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔧 Navegación iniciada');
+    
+    // Función para mostrar una sección
+    function showSection(sectionId) {
+        console.log('Mostrando:', sectionId);
+        
+        // Ocultar TODAS las secciones principales
+        document.querySelectorAll('.main-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Ocultar TODAS las subsecciones  
+        document.querySelectorAll('.subsection').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Mostrar la sección principal
+        const mainSection = document.getElementById(sectionId);
+        if (mainSection) {
+            mainSection.style.display = 'block';
+            mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    // Función para mostrar subsección
+    function showSubsection(subsectionId) {
+        console.log('Mostrando subsección:', subsectionId);
+        
+        // Encontrar la sección principal (ej: "film" de "film-featurefilm")
+        const mainSectionId = subsectionId.split('-')[0];
+        
+        // Mostrar la sección principal primero
+        showSection(mainSectionId);
+        
+        // Mostrar la subsección específica
+        const subsection = document.getElementById(subsectionId);
+        if (subsection) {
+            subsection.style.display = 'block';
+            subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    // Configurar clicks del menú
+    document.querySelectorAll('.menu-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            showSection(targetId);
+        });
+    });
+    
+    // Configurar clicks del submenú
+    document.querySelectorAll('.submenu-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            showSubsection(targetId);
+        });
+    });
+    
+    console.log('✅ Navegación configurada correctamente');
 });
 </script>
-
-<script src="navigation.js"></script>
 
 
 
