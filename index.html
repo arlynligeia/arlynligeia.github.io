@@ -3324,22 +3324,21 @@ navigateToSection(targetId);
 });
 });
     
-// 4. BOTONES "BACK" - SOLO LLEVAR A DONDE DICE EL HREF
+// 4. BOTONES "BACK" - SOLUCIÓN FINAL
 document.querySelectorAll('[class*="-button-back"]').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').replace('#', '');
         
-        // SOLO esto - ir a la sección que indica el href
         const targetSection = document.getElementById(targetId);
         if (targetSection) {
+            // SOLO hacer scroll a la sección - NO OCULTAR NADA
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             history.pushState(null, null, `#${targetId}`);
             console.log('✅ Botón BACK - Llegó a:', targetId);
         }
     });
 });
-
 
  
     // 5. BOTONES "CONTINUE SHOPPING" (van al store principal)
