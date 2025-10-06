@@ -3012,15 +3012,9 @@ Authorized by Intendancy Resolution N°</p>
 </div>
 </section>
 <!-- FIN ELECTRONIC SALES RECEIPT -->
-
-
-
-
-
-
  
 <!-- PRIVACY POLICY -->
-<section id="privacypolicy" class="privacypolicy-section main-section">
+<section class="privacypolicy-section main-section" id="privacypolicy">
 <div class="privacypolicy-container">
 <h2 class="privacypolicy-title"><a href="#privacypolicy">PRIVACY POLICY</a></h2>
 <!-- CONTENEDOR DE TEXTO -->
@@ -3060,7 +3054,7 @@ Authorized by Intendancy Resolution N°</p>
 <!-- FIN PRIVACY POLICY -->
 
 <!-- TERMS AND CONDITIONS -->
-<section id="termsandconditions" class="termsandconditions-section main-section">
+<section class="termsandconditions-section main-section" id="termsandconditions">
 <div class="termsandconditions-container">
 <h2 class="termsandconditions-title"><a href="#termsandconditions">TERMS AND CONDITIONS</a></h2>
 <!-- CONTENEDOR DE TEXTO -->
@@ -3105,6 +3099,10 @@ Authorized by Intendancy Resolution N°</p>
 <!-- FIN FOOTER -->   
 
 
+
+
+
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     console.log('🔧 Navegación iniciada');
@@ -3173,10 +3171,59 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('✅ Navegación configurada correctamente');
 });
 </script>
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
 
 
-
-
+<!-- SCRIP: NAVEGACIÓN TARJETAS DE TIENDA -->  
+<script>
+ // NAVEGACIÓN PARA TARJETAS DE PRODUCTOS EN STORE
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🛍️ Navegación de tienda iniciada');
+    
+    // Función para navegar a secciones desde las tarjetas
+    function navigateToSection(targetId) {
+        console.log('Navegando a:', targetId);
+        
+        // Ocultar todas las secciones primero
+        document.querySelectorAll('.main-section, .subsection').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Mostrar la sección objetivo
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Actualizar la URL
+            history.pushState(null, null, `#${targetId}`);
+        } else {
+            console.warn('❌ Sección no encontrada:', targetId);
+        }
+    }
+    
+    // Agregar event listeners a todas las tarjetas de productos digitales
+    document.querySelectorAll('.digitalproducts-columns-grid-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+    
+    // Agregar event listeners a todas las tarjetas de productos físicos
+    document.querySelectorAll('.physicalproducts-columns-grid-card').forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').replace('#', '');
+            navigateToSection(targetId);
+        });
+    });
+    
+    console.log('✅ Navegación de tienda configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN TARJETAS DE TIENDA -->  
 
 
 
