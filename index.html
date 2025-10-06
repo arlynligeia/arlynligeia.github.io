@@ -2894,70 +2894,96 @@ ADD TO CART
 <!-- 4. DETALLES DE LA ORDEN CON TABLA -->
 <div class="electronicsalesreceipt-receipt-orderdetails">
 <h3 class="electronicsalesreceipt-receipt-orderdetails-title">ORDER DETAILS</h3>
+<!-- CARRITO LLENO -->
+<div class="cart-full" id="cart-full" style="display: block;">
 <!-- CONTENEDOR: TABLA -->  
-<div class="electronicsalesreceipt-table">
-<table class="electronicsalesreceipt-table-wrapper">
+<div class="cart-full-table">
+<table class="cart-full-table-wrapper">
 <!-- ENCABEZADOS -->    
-<thead class="electronicsalesreceipt-table-wrapper-head"> 
-<tr class="electronicsalesreceipt-table-wrapper-head-row">
-<th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">PRODUCT/SERVICE</th>
-<th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">QTY</th>   
-<th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">UNIT PRICE</th>  
-<th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">TOTAL</th>
+<thead class="cart-full-table-wrapper-head"> 
+<tr class="cart-full-table-wrapper-head-row">
+<th class="cart-full-table-wrapper-head-row-subtitle">IMAGE</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">PRODUCT/SERVICE</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">QTY</th>   
+<th class="cart-full-table-wrapper-head-row-subtitle">UNIT PRICE</th>  
+<th class="cart-full-table-wrapper-head-row-subtitle">TOTAL</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">RMV</th>
 </tr>
 </thead> 
 <!-- CUERPO -->  
-<tbody class="electronicsalesreceipt-table-wrapper-body" id="electronicsalesreceipt-items-container">
+<tbody class="cart-full-table-wrapper-body" id="cart-items-container">
 <!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="electronicsalesreceipt-table-wrapper-body-divider"><td colspan="4"></td></tr>
-<!-- LOS PRODUCTOS DEL CARRITO SE MOSTRARÁN AQUÍ DESPUÉS DEL PAGO -->
+<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
+
+<!-- LOS PRODUCTOS SE AGREGARÁN AQUÍ DINÁMICAMENTE -->
+
 <!-- LÍNEA DIVISORIA INFERIOR -->
-<tr class="electronicsalesreceipt-table-wrapper-body-divider"><td colspan="4"></td></tr>
-<!-- RESUMEN DE PRECIOS -->
-<tr class="electronicsalesreceipt-table-wrapper-body-row">
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell" colspan="2"></td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotal">
+<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
+<!-- FILA SUBTOTAL -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-subtotal">
 <span>Subtotal</span>
 </div> 
 </td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice">
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice-amount" id="electronicsalesreceipt-subtotal">0.00</span>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-subtotalprice">
+<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-amount" id="cart-subtotal">0.00</span>
 </div>
 </td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
-<tr class="electronicsalesreceipt-table-wrapper-body-row">
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell" colspan="2"></td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-shipping">
+<!-- FILA SHIPPING -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-shipping">
 <span>Shipping</span>
 </div> 
 </td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice">
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice-amount" id="electronicsalesreceipt-shipping">0.00</span>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-shippingprice">
+<span class="cart-full-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-shippingprice-amount" id="cart-shipping">0.00</span>
 </div>
 </td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
-<tr class="electronicsalesreceipt-table-wrapper-body-row">
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell" colspan="2"></td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-total">
+<!-- FILA TOTAL -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-total">
 <span>TOTAL</span>
 </div> 
 </td>
-<td class="electronicsalesreceipt-table-wrapper-body-row-cell">
-<div class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-end">
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-<span class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-amount" id="electronicsalesreceipt-total">0.00</span>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-totalprice">
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-amount" id="cart-total">0.00</span>
 </div>
 </td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
 </tbody>
 </table>
+</div>
+
+<!-- CONTENEDOR DE BOTONES FINALES -->
+<div class="cart-full-buttons">
+<button class="cart-full-button-back" onclick="history.back()">BACK</button>
+<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
+<button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
+<a class="cart-full-button-buy" id="cart-full-buy" href="#cart-shippinginformation">BUY</a>
+</div>
 </div>
 </div>
 <!-- 5. DESGLOSE DE IMPUESTOS -->
