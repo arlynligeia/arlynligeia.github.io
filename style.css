@@ -117,7 +117,123 @@ transition: transform 0.3s ease;
 transform: scaleX(1);
 }
 
+/* ======================================
+   HOME
+====================================== */
+/* ======================================
+   CARRUSEL DE INICIO Y TEXTO LATERAL
+====================================== */
+.home-container {
+  position: relative;
+  height: calc(100vh - 220px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 30px;
+  padding-right: 50px;
+  padding: 0 50px;
+  gap: 30px;
+}
+.home-carousel {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000000; 
+  border: 2px solid white;
+  border-radius: 20px;
+  position: relative;
+}
+.home-carousel-image,
+.carousel-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.home-carousel-image.active,
+.carousel-image.active {
+  opacity: 1;
+}
 
+/* ======================================
+   CONTENEDOR A LA IZQUIERDA DEL CARRUSEL
+====================================== */
+.home-side {
+  width: 500px;
+  background-color: black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.home-side-information {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.home-side-information-title {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  color: #39ff14;
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
+  text-align: center;
+}
+.home-side-information-text {
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.25rem;
+  color: white;
+  line-height: 1.5;
+  text-align: justify;
+}
+/* Contenedor principal de los iconos */
+.home-side-information-grid {
+  display: inline-flex; 
+  flex-direction: column;
+  align-items: center;
+  align-self: center;  
+  background-color: #ff1493; /* fucsia sólido */
+  border: 2px solid #ff00ff; /* borde neón */
+  border-radius: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
+  gap: 12px; /* espacio entre filas */
+  max-width: 100%; 
+}
+/* Cada fila de iconos */
+.home-side-information-grid-icons,
+.home-side-information-grid-icons-2 {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* espacio entre iconos */
+}
+/* Iconos individuales */
+.home-side-information-grid img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.home-side-information-grid img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
+}
 
 /* ======================================
    SOCIAL MEDIA CONTENT
