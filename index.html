@@ -3207,7 +3207,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Si es una subsección, encontrar su sección principal
         if (targetSection.classList.contains('subsection')) {
             // Buscar la sección principal por el prefijo del ID
-            const mainSectionId = targetId.split('-').slice(0, 2).join('-');
+         const mainSectionId = targetId.split('-')[0];
+
+
+   
             mainSection = document.getElementById(mainSectionId) || targetSection;
         }
         
@@ -3324,20 +3327,16 @@ navigateToSection(targetId);
 });
 });
     
-// 4. BOTONES "BACK" - SOLO SCROLL
+    
+/// 3. BOTONES "VIEW" DE PRODUCTOS - PARA TODAS LAS SECCIONES
 document.querySelectorAll('[class*="-button-back"]').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').replace('#', '');
-        
-        const targetSection = document.getElementById(targetId);
-        if (targetSection) {
-            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            history.pushState(null, null, `#${targetId}`);
-        }
-    });
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('📍 Botón BACK clickeado - Navegando a:', targetId);
+navigateToSection(targetId);
 });
-
+});
 
 
 
