@@ -3318,59 +3318,91 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
 
   
-<script> 
+<script>
 document.addEventListener('DOMContentLoaded', function() {
-// Agregar productos al carrito
-document.addEventListener('click', function(e) {
-if (e.target.classList.contains('button-addtocart')) {
-addToCart(e.target);
-}
-});
-// Remover producto individual
-document.addEventListener('click', function(e) {
-if (e.target.classList.contains('remove-product')) {
-removeProduct(e.target);
-}
-});
+    console.log('🛒 Carrito iniciado');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    function addToCart(button) {
-        const productData = {
-            image: button.getAttribute('data-image'),
-            product: button.getAttribute('data-product'),
-            price: button.getAttribute('data-price'),
-            quantity: 1
-        };
-
-        const tbody = document.querySelector('.cartfull-table-wrapper-body');
-        const topDivider = tbody.querySelector('.cartfull-table-wrapper-body-divider:first-child');
-        
-        const newRow = document.createElement('tr');
-        newRow.className = 'cartfull-table-wrapper-body-row product-row';
-        
-        const priceNumber = parseFloat(productData.price.replace(',', ''));
-        const total = priceNumber * productData.quantity;
-        
-        newRow.innerHTML = `
-            <td class="cartfull-table-wrapper-body-row-cell">
-                <img src="${productData.image}" alt="${productData.product}">
-            </td>
-            <td class="cartfull-table-wrapper-body-row-cell">${productData.product}</td>
-            <td class="cartfull-table-wrapper-body-row-cell">${productData.quantity}</td>
-            <td class="cartfull-table-wrapper-body-row-cell">$ ${productData.price}</td>
-            <td class="cartfull-table-wrapper-body-row-cell">$ ${total.toFixed(2)}</td>
-            <td class="cartfull-table-wrapper-body-row-cell">
-                <button class="remove-product" type="button">REMOVE</button>
-            </td>
-        `;
-        
-        tbody.insertBefore(newRow, topDivider.nextSibling);
+    function addToCart(productData) {
+        console.log('➕ Agregando al carrito:', productData);
+        const existingProduct = cart.find(item => item.product === productData.product);
+        if (existingProduct) {
+            existingProduct.quantity += 1;
+            existingProduct.total = (existingProduct.quantity * parseFloat(existingProduct.unitprice)).toFixed(2);
+        } else {
+            cart.push({
+                image: productData.image,
+                product: productData.product,
+                quantity: 1,
+                unitprice: productData.unitprice,
+                shipping: productData.shipping, 
+                total: productData.unitprice
+            });
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
     }
 
-    function removeProduct(button) {
-        const productRow = button.closest('.product-row');
-        if (productRow) {
-            productRow.remove();
-        }
+    function updateCartDisplay() {
+        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+        // Limpiar solo las filas de productos
+        const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
+        productRows.forEach(row => row.remove());
+
+        // INSERTAR PRODUCTOS
+        const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
+        cart.forEach((item) => {
+            const productRow = document.createElement('tr');
+            productRow.className = 'cartfull-table-wrapper-body-row product-row';
+            productRow.innerHTML = `
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <img src="${item.image}" alt="${item.product}">
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">${item.product}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">${item.quantity}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">$ ${item.unitprice}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">$ ${item.total}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <button class="remove-product" onclick="removeFromCart('${item.product}')">REMOVE</button>
+                </td>
+            `;
+            cartBody.insertBefore(productRow, dividers[1]);
+        });
+        updateTotals();
+    }
+
+    function updateTotals() {
+        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
+        const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
+        const total = subtotal + shipping;
+
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = subtotal.toFixed(2);
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = shipping.toFixed(2);
+        document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = total.toFixed(2);
+    }
+
+    // BOTONES "ADD TO CART"
+    document.querySelectorAll('.button-addtocart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productData = {
+                image: this.getAttribute('data-image'),
+                product: this.getAttribute('data-product'),
+                unitprice: this.getAttribute('data-price'),
+                shipping: this.getAttribute('data-shipping') || '0'
+            };
+            addToCart(productData);
+        });
+    });
+
+    window.removeFromCart = function(productName) {
+        cart = cart.filter(item => item.product !== productName);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartDisplay();
+    };
+
+    // Inicializar
+    if (cart.length > 0) {
+        updateCartDisplay();
     }
 });
 </script>
