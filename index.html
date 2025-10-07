@@ -3330,6 +3330,34 @@ document.getElementById('cartfull').style.display = 'block';
 });
 });
 });
+  // SOBREESCRIBIR EL COMPORTAMIENTO DE navigateToTarget PARA EL CARRITO
+const originalNavigateToTarget = window.navigateToTarget;
+if (originalNavigateToTarget) {
+    window.navigateToTarget = function(targetId) {
+        if (targetId === 'cart') {
+            // COMPORTAMIENTO PERSONALIZADO PARA CART
+            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                section.style.display = 'none';
+            });
+            const cartSection = document.getElementById('cart');
+            if (cartSection) {
+                cartSection.style.display = 'block';
+                cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                if (cart.length === 0) {
+                    document.getElementById('cartempty').style.display = 'block';
+                    document.getElementById('cartfull').style.display = 'none';
+                } else {
+                    document.getElementById('cartempty').style.display = 'none';
+                    document.getElementById('cartfull').style.display = 'block';
+                }
+            }
+        } else {
+            // COMPORTAMIENTO ORIGINAL PARA OTRAS SECCIONES
+            originalNavigateToTarget(targetId);
+        }
+    };
+}
 </script>
 <!-- FIN SCRIP: CARRITO -->
   
