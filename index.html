@@ -2463,7 +2463,7 @@ ADD TO CART
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-full" id="cart-full" style="display: block;">
+<div class="cart-full" id="cart-full" style="display: none;">
 <!-- CONTENEDOR: TABLA -->  
 <div class="cart-full-table">
 <table class="cart-full-table-wrapper">
@@ -3439,7 +3439,21 @@ document.addEventListener('keydown', function(e) {
 if (e.key === 'Escape') {
 document.getElementById('clearCartModal').style.display = 'none';
 }
-}); 
+});
+// BOTÓN DEL MENÚ "CART"
+document.querySelectorAll('a[href="#cart"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const cartSection = document.getElementById('cart');
+if (cartSection) {
+cartSection.style.display = 'block';
+cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+});
+});
 // Inicializar
 if (cart.length > 0) {
 updateCartDisplay();
