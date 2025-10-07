@@ -3155,9 +3155,12 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
+
+ // ✅ ESTA ES LA LÍNEA CORRECTA - REEMPLAZA TODO LO QUE HACÍA ANTES:
+    document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+        section.style.display = 'none';
+    });
+  
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
@@ -3208,6 +3211,7 @@ showOnlyOneSection(hash);
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
+ 
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
