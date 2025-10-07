@@ -2446,112 +2446,7 @@ ADD TO CART
 
 
   
-<!-- CART -->
-<section class="cart-section main-section" id="cart">
-<div class="cart-container">
-<h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
-<!-- CARRITO VACIO -->
-<div class="cart-empty" id="cartempty" style="display: none;">
-<!-- CONTENEDOR DE TEXTO -->  
-<div class="cart-empty-noitems">  
-<p class="cart-empty-noitems-text">Your cart is empty</p>
-</div>
-<!-- CONTENEDOR DE BOTONES -->    
-<div class="cart-empty-buttons">
-<button class="cart-full-button-back" onclick="history.back()">BACK</button>
-<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
-</div>
-</div>
-<!-- CARRITO LLENO -->
-<div class="cart-full" id="cartfull" style="display: none;">
-<!-- CONTENEDOR: TABLA -->  
-<div class="cart-full-table">
-<table class="cart-full-table-wrapper">
-<!-- ENCABEZADOS -->    
-<thead class="cart-full-table-wrapper-head"> 
-<tr class="cart-full-table-wrapper-head-row">
-<th class="cart-full-table-wrapper-head-row-subtitle">IMAGE</th>
-<th class="cart-full-table-wrapper-head-row-subtitle">PRODUCT/SERVICE</th>
-<th class="cart-full-table-wrapper-head-row-subtitle">QTY</th>   
-<th class="cart-full-table-wrapper-head-row-subtitle">UNIT PRICE</th>  
-<th class="cart-full-table-wrapper-head-row-subtitle">TOTAL</th>
-<th class="cart-full-table-wrapper-head-row-subtitle">RMV</th>
-</tr>
-</thead> 
-<!-- CUERPO -->  
-<tbody class="cart-full-table-wrapper-body">
-<!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
- 
-<!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
- 
-<!-- LÍNEA DIVISORIA INFERIOR -->
-<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
-<!-- FILA SUBTOTAL -->
-<tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-subtotal">
-<span>Subtotal</span>
-</div> 
-</td>
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-subtotalprice">
-<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
-<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-amount">0.00</span>
-</td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-</tr>
-<!-- FILA SHIPPING -->
-<tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-shipping">
-<span>Shipping</span>
-</div> 
-</td>
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-shippingprice">
-<span class="cart-full-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
-<span class="cart-full-table-wrapper-body-row-cell-shippingprice-amount">0.00</span>
-</td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-</tr>
-<!-- FILA TOTAL -->
-<tr class="cart-full-table-wrapper-body-row">
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>  
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-totalend">
-<span>TOTAL</span>
-</div> 
-</td>
-<td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-totalendprice">
-<span class="cart-full-table-wrapper-body-row-cell-totalendprice-symbol">$</span>
-<span class="cart-full-table-wrapper-body-row-cell-totalendprice-amount">0.00</span>
-</td>
-<td class="cart-full-table-wrapper-body-row-cell"></td>
-</tr>
-</tbody>
-</table>
-</div>
-<!-- CONTENEDOR DE BOTONES FINALES -->
-<div class="cart-full-buttons">
-<button class="cart-full-button-back" onclick="history.back()">BACK</button>
-<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
-<button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
-<a class="cart-full-button-buy" href="#shippinginformation">BUY</a>
-</div>
-</div>
-</div>
-</section>
-<!-- FIN CART -->
+
 
 <!-- SHIPPING INFORMATION -->
 <section class="shippinginformation-section main-section" id="shippinginformation">
@@ -3108,6 +3003,116 @@ Authorized by Intendancy Resolution N°</p>
 <!-- FIN TERMS AND CONDITIONS --> 
 </main>
 
+
+
+  
+<!-- CART -->
+<section class="cart-section" id="cart"> 
+<div class="cart-container">
+<h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
+<!-- CARRITO VACIO -->
+<div class="cart-empty" id="cartempty" style="display: none;">
+<!-- CONTENEDOR DE TEXTO -->  
+<div class="cart-empty-noitems">  
+<p class="cart-empty-noitems-text">Your cart is empty</p>
+</div>
+<!-- CONTENEDOR DE BOTONES -->    
+<div class="cart-empty-buttons">
+<button class="cart-full-button-back" onclick="history.back()">BACK</button>
+<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
+</div>
+</div>
+<!-- CARRITO LLENO -->
+<div class="cart-full" id="cartfull" style="display: none;">
+<!-- CONTENEDOR: TABLA -->  
+<div class="cart-full-table">
+<table class="cart-full-table-wrapper">
+<!-- ENCABEZADOS -->    
+<thead class="cart-full-table-wrapper-head"> 
+<tr class="cart-full-table-wrapper-head-row">
+<th class="cart-full-table-wrapper-head-row-subtitle">IMAGE</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">PRODUCT/SERVICE</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">QTY</th>   
+<th class="cart-full-table-wrapper-head-row-subtitle">UNIT PRICE</th>  
+<th class="cart-full-table-wrapper-head-row-subtitle">TOTAL</th>
+<th class="cart-full-table-wrapper-head-row-subtitle">RMV</th>
+</tr>
+</thead> 
+<!-- CUERPO -->  
+<tbody class="cart-full-table-wrapper-body">
+<!-- LÍNEA DIVISORIA SUPERIOR -->
+<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
+ 
+<!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
+ 
+<!-- LÍNEA DIVISORIA INFERIOR -->
+<tr class="cart-full-table-wrapper-body-divider"><td colspan="6"></td></tr>
+<!-- FILA SUBTOTAL -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-subtotal">
+<span>Subtotal</span>
+</div> 
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-subtotalprice">
+<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-subtotalprice-amount">0.00</span>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+</tr>
+<!-- FILA SHIPPING -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-shipping">
+<span>Shipping</span>
+</div> 
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-shippingprice">
+<span class="cart-full-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-shippingprice-amount">0.00</span>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+</tr>
+<!-- FILA TOTAL -->
+<tr class="cart-full-table-wrapper-body-row">
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>  
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-totalend">
+<span>TOTAL</span>
+</div> 
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-totalendprice">
+<span class="cart-full-table-wrapper-body-row-cell-totalendprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-totalendprice-amount">0.00</span>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- CONTENEDOR DE BOTONES FINALES -->
+<div class="cart-full-buttons">
+<button class="cart-full-button-back" onclick="history.back()">BACK</button>
+<a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
+<button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
+<a class="cart-full-button-buy" href="#shippinginformation">BUY</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FIN CART -->
+  
 <!-- FOOTER -->   
 <footer class="footer-end">
 <div class="footer-end-name">ARLYN LIGEIA</div>
@@ -3292,32 +3297,43 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// BOTÓN CART
-document.querySelectorAll('a.cart-button').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// OCULTAR TODAS LAS SECCIONES
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR CARRITO
-const cartSection = document.getElementById('cart');
-cartSection.style.display = 'block';
-cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-// VERIFICAR ESTADO
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-if (cart.length === 0) {
-document.getElementById('cartempty').style.display = 'block';
-document.getElementById('cartfull').style.display = 'none';
-} else {
-document.getElementById('cartempty').style.display = 'none';
-document.getElementById('cartfull').style.display = 'block';
-}
-});
-});
+    // FUNCIÓN PARA ACTUALIZAR VISUALIZACIÓN DEL CARRITO
+    function updateCartDisplay() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartEmpty = document.getElementById('cartempty');
+        const cartFull = document.getElementById('cartfull');
+        
+        if (cart.length === 0) {
+            cartEmpty.style.display = 'block';
+            cartFull.style.display = 'none';
+        } else {
+            cartEmpty.style.display = 'none';
+            cartFull.style.display = 'block';
+        }
+    }
+
+    // EJECUTAR AL CARGAR LA PÁGINA
+    updateCartDisplay();
+
+    // BOTÓN CART
+    document.querySelectorAll('a.cart-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // OCULTAR TODAS LAS SECCIONES
+            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                section.style.display = 'none';
+            });
+            // MOSTRAR CARRITO
+            const cartSection = document.getElementById('cart');
+            cartSection.style.display = 'block';
+            cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // ACTUALIZAR VISUALIZACIÓN
+            updateCartDisplay();
+        });
+    });
 });
 </script>
-
+<!-- FIN SCRIP: CARRITO -->
 
   
 
