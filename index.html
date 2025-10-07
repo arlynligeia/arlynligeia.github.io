@@ -119,7 +119,7 @@
 
 <!-- CART -->
 <li>
-<a class="cart-button" href="#cart" data-section="cart">Cart</a>
+<a class="cart-button" href="javascript:void(0)">Cart</a>
 </li>
   
 </ul>
@@ -3300,6 +3300,38 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
 
+
+
+  <!-- SCRIP: CARRITO -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // BOTÓN CART
+    document.querySelectorAll('a.cart-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
+            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // 2. VERIFICAR SI HAY PRODUCTOS EN EL CARRITO
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // 3. MOSTRAR LA SECCIÓN CORRECTA
+            if (cart.length === 0) {
+                // MOSTRAR CARRITO VACÍO
+                document.getElementById('cartempty').style.display = 'block';
+                document.getElementById('cartfull').style.display = 'none';
+            } else {
+                // MOSTRAR CARRITO LLENO  
+                document.getElementById('cartempty').style.display = 'none';
+                document.getElementById('cartfull').style.display = 'block';
+            }
+        });
+    });
+});
+</script>
 
 
   
