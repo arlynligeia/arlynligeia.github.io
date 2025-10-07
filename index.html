@@ -3289,15 +3289,6 @@ console.log('📍 Botón VIEW - Navegando a:', targetId);
 navigateToTarget(targetId);
 });
 });
-// BOTÓN BUY - Solo navegación (MISMO PATRÓN QUE VIEW)
-document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('🛍️ Botón BUY - Navegando a:', targetId);
-navigateToTarget(targetId);
-});
-});
 // AGREGAR MÁS BOTONES
 console.log('✅ Navegación de tienda configurada correctamente');
 });
@@ -3457,14 +3448,41 @@ document.getElementById('clearCartModal').style.display = 'none';
 }
 });
 
-// BOTÓN BUY - Solo navegación
-document.getElementById('cart-full-buy').addEventListener('click', function(e) {
-e.preventDefault();
-const targetId = this.getAttribute('href').replace('#', '');
-console.log('🛍️ Botón BUY - Navegando a:', targetId);
-navigateToTarget(targetId);
+// BOTÓN BUY - Con toda la funcionalidad
+document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 1. VERIFICAR CARRITO
+        if (cart.length === 0) {
+            alert('Your cart is empty. Please add products before proceeding to checkout.');
+            return;
+        }
+        
+        // 2. PASAR DATOS AL SHIPPING INFORMATION
+        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
+        const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
+        const totalFinal = subtotal + shippingTotal;
+        
+        // Actualizar resumen visible
+        document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
+        document.getElementById('cart-shipping').textContent = shippingTotal.toFixed(2);
+        document.getElementById('cart-total').textContent = totalFinal.toFixed(2);
+        
+        // Actualizar campos ocultos
+        document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
+        document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
+        document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+        document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
+        
+        console.log('📦 Datos pasados a shipping information');
+        
+        // 3. NAVEGAR
+        const targetId = this.getAttribute('href').replace('#', '');
+        console.log('🛍️ Navegando a shipping information con', cart.length, 'productos');
+        navigateToTarget(targetId);
+    });
 });
-
   
 // Inicializar
 if (cart.length > 0) {
