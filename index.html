@@ -3320,112 +3320,91 @@ console.log('✅ Navegación de tienda configurada correctamente');
   
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🛒 Carrito iniciado');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    function addToCart(productData) {
-        console.log('➕ Agregando al carrito:', productData);
-        const existingProduct = cart.find(item => item.product === productData.product);
-        if (existingProduct) {
-            existingProduct.quantity += 1;
-            existingProduct.total = (existingProduct.quantity * parseFloat(existingProduct.unitprice)).toFixed(2);
-        } else {
-            cart.push({
-                image: productData.image,
-                product: productData.product,
-                quantity: 1,
-                unitprice: productData.unitprice,
-                shipping: productData.shipping, 
-                total: productData.unitprice
-            });
-        }
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
-    }
-
-    function updateCartDisplay() {
-        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
-        // Limpiar solo las filas de productos
-        const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
-        productRows.forEach(row => row.remove());
-
-        // INSERTAR PRODUCTOS
-        const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
-        cart.forEach((item) => {
-            const productRow = document.createElement('tr');
-            productRow.className = 'cartfull-table-wrapper-body-row product-row';
-            productRow.innerHTML = `
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-image">
-                        <img src="${item.image}" alt="${item.product}">
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-name">
-                        <span>${item.product}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-quantity">
-                        <span>${item.quantity}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-unitprice">
-                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
-                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${item.unitprice}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-totalprice">
-                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.total}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-button">
-                        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
-                    </div>
-                </td>
-            `;
-            cartBody.insertBefore(productRow, dividers[1]);
-        });
-        updateTotals();
-    }
-
-    function updateTotals() {
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
-        const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
-        const total = subtotal + shipping;
-
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = subtotal.toFixed(2);
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = shipping.toFixed(2);
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = total.toFixed(2);
-    }
-
-    // BOTONES "ADD TO CART"
-    document.querySelectorAll('.button-addtocart').forEach(button => {
-        button.addEventListener('click', function() {
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                unitprice: this.getAttribute('data-price'),
-                shipping: this.getAttribute('data-shipping') || '0'
-            };
-            addToCart(productData);
-        });
-    });
-
-    window.removeFromCart = function(productName) {
-        cart = cart.filter(item => item.product !== productName);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
-    };
-
-    // Inicializar
-    if (cart.length > 0) {
-        updateCartDisplay();
-    }
+console.log('🛒 Carrito iniciado');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+function addToCart(productData) {
+console.log('➕ Agregando al carrito:', productData);
+const existingProduct = cart.find(item => item.product === productData.product);
+if (existingProduct) {
+existingProduct.quantity += 1;
+} else {
+cart.push({
+image: productData.image,
+product: productData.product,
+quantity: 1,
+price: productData.price
+});
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+}
+function updateCartDisplay() {
+const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+// Limpiar solo las filas de productos
+const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
+productRows.forEach(row => row.remove());
+// INSERTAR PRODUCTOS
+const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
+cart.forEach((item) => {
+const productRow = document.createElement('tr');
+productRow.className = 'cartfull-table-wrapper-body-row product-row';
+productRow.innerHTML = `
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-image">
+<img src="${item.image}" alt="${item.product}">
+</div>
+</td>
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-name">
+<span>${item.product}</span>
+</div>
+</td>
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-quantity">
+<span>${item.quantity}</span>
+</div>
+</td>
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-unitprice">
+<span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
+<span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${item.price}</span>
+</div>
+</td>
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-totalprice">
+<span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
+<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.price}</span>
+</div>
+</td>
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-button">
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+</div>
+</td>
+`;
+cartBody.insertBefore(productRow, dividers[1]);
+});
+}
+// BOTONES "ADD TO CART"
+document.querySelectorAll('.button-addtocart').forEach(button => {
+button.addEventListener('click', function() {
+const productData = {
+image: this.getAttribute('data-image'),
+product: this.getAttribute('data-product'),
+price: this.getAttribute('data-price')
+};
+addToCart(productData);
+});
+});
+window.removeFromCart = function(productName) {
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+};
+// Inicializar
+if (cart.length > 0) {
+updateCartDisplay();
+}
 });
 </script>
 
