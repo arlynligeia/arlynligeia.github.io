@@ -3356,14 +3356,36 @@ document.addEventListener('DOMContentLoaded', function() {
             productRow.className = 'cartfull-table-wrapper-body-row product-row';
             productRow.innerHTML = `
                 <td class="cartfull-table-wrapper-body-row-cell">
-                    <img src="${item.image}" alt="${item.product}">
+                    <div class="cartfull-table-wrapper-body-row-cell-image">
+                        <img src="${item.image}" alt="${item.product}">
+                    </div>
                 </td>
-                <td class="cartfull-table-wrapper-body-row-cell">${item.product}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">${item.quantity}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">$ ${item.unitprice}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">$ ${item.total}</td>
                 <td class="cartfull-table-wrapper-body-row-cell">
-                    <button class="remove-product" onclick="removeFromCart('${item.product}')">REMOVE</button>
+                    <div class="cartfull-table-wrapper-body-row-cell-name">
+                        <span>${item.product}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-quantity">
+                        <span>${item.quantity}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-unitprice">
+                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
+                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${item.unitprice}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-totalprice">
+                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
+                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.total}</span>
+                    </div>
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <div class="cartfull-table-wrapper-body-row-cell-button">
+                        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+                    </div>
                 </td>
             `;
             cartBody.insertBefore(productRow, dividers[1]);
