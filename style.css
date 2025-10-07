@@ -37,7 +37,8 @@ position: relative;
 }
 
 /* --- BOTONES DEL MENÚ PRINCIPAL --- */
-.menu-button {
+.menu-button,
+.cart-button {
 font-family: 'Orbitron', sans-serif;
 background: transparent;
 border: 1px solid white;
@@ -51,7 +52,8 @@ transition: all 0.3s ease;
 text-decoration: none;
 display: inline-block;
 }
-.menu-button:hover {
+.menu-button:hover,
+.cart-button:hover {
 background: rgba(255, 255, 255, 0.2);
 transform: translateY(-1px);
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
