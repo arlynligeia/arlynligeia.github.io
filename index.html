@@ -3304,6 +3304,9 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+// FORZAR ESTADO INICIAL CORRECTO
+document.getElementById('cartempty').style.display = 'none';
+document.getElementById('cartfull').style.display = 'none';
 // BOTÓN DEL MENÚ "CART"
 document.querySelectorAll('a[href="#cart"]').forEach(button => {
 button.addEventListener('click', function(e) {
