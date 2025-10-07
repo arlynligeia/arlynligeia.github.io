@@ -3324,15 +3324,19 @@ console.log('🛒 Carrito iniciado');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
-const existingProduct = cart.find(item => item.product === productData.product);
+const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
 existingProduct.quantity += 1;
-} else {
+// FÓRMULA: totalprice = unitprice * quantity
+existingProduct.totalprice = (existingProduct.quantity * parseFloat(existingProduct.price)).toFixed(2);
+    
+} else { 
 cart.push({
 image: productData.image,
 product: productData.product,
 quantity: 1,
 price: productData.price
+totalprice: productData.price // ← AÑADE ESTA LÍNEA
 });
 }
 localStorage.setItem('cart', JSON.stringify(cart));
@@ -3373,7 +3377,7 @@ productRow.innerHTML = `
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-totalprice">
 <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.price}</span>
+<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.totalprice}</span>
 </div>
 </td>
 <td class="cartfull-table-wrapper-body-row-cell">
