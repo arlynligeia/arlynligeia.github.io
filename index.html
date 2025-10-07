@@ -3272,7 +3272,7 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
 
 
-  <!-- SCRIP: CARRITO DE COMPRAS -->
+<!-- SCRIP: CARRITO DE COMPRAS CORREGIDO -->
 <script>
 // CARRITO - GESTIÓN DE PRODUCTOS
 document.addEventListener('DOMContentLoaded', function() {
@@ -3317,21 +3317,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    function updateQuantity(productName, newQuantity) {
-        if (newQuantity < 1) {
-            removeFromCart(productName);
-            return;
-        }
-        
-        const product = cart.find(item => item.product === productName);
-        if (product) {
-            product.quantity = newQuantity;
-            product.total = (newQuantity * parseFloat(product.price)).toFixed(2);
-            saveCart();
-            updateCartDisplay();
-        }
-    }
-    
     function clearCart() {
         console.log('🧹 Limpiando carrito');
         cart = [];
@@ -3340,8 +3325,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function calculateTotals() {
+        // Calcular subtotal (suma de todos los totales de productos)
         const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
+        
+        // Calcular shipping total (suma de todos los shippings)
         const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
+        
+        // Calcular total final (subtotal + shipping)
         const total = subtotal + shipping;
         
         return {
@@ -3369,17 +3359,28 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function updateCartDisplay() {
         const cartBody = document.querySelector('.cart-full-table-wrapper-body');
-        const productsContainer = cartBody.querySelector('tr:nth-child(2)'); // Encuentra donde insertar productos
         
-        // Limpiar productos existentes (excepto las filas de totales)
-        const allRows = cartBody.querySelectorAll('tr');
-        allRows.forEach((row, index) => {
-            if (index > 0 && index < allRows.length - 4) { // Excluir divisores y totales
+        // Limpiar productos existentes (mantener solo divisores y filas de totales)
+        const allRows = Array.from(cartBody.querySelectorAll('tr'));
+        
+        // Encontrar índices de las filas fijas (divisores y totales)
+        const fixedRows = allRows.filter(row => 
+            row.classList.contains('cart-full-table-wrapper-body-divider') ||
+            row.classList.contains('cart-full-table-wrapper-body-row')
+        );
+        
+        // Eliminar solo las filas de productos (las que no son divisores ni totales)
+        allRows.forEach(row => {
+            if (!row.classList.contains('cart-full-table-wrapper-body-divider') && 
+                !row.querySelector('.cart-full-table-wrapper-body-row-cell-subtotal') &&
+                !row.querySelector('.cart-full-table-wrapper-body-row-cell-shipping') &&
+                !row.querySelector('.cart-full-table-wrapper-body-row-cell-total')) {
                 row.remove();
             }
         });
         
-        // Insertar productos
+        // Insertar productos después del divisor superior
+        const topDivider = cartBody.querySelector('tr:first-child');
         cart.forEach((item, index) => {
             const productRow = document.createElement('tr');
             productRow.className = 'cart-full-table-wrapper-body-row';
@@ -3396,9 +3397,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </td>
                 <td class="cart-full-table-wrapper-body-row-cell">
                     <div class="cart-full-table-wrapper-body-row-cell-quantity">
-                        <button onclick="updateQuantity('${item.product}', ${item.quantity - 1})">-</button>
                         <span>${item.quantity}</span>
-                        <button onclick="updateQuantity('${item.product}', ${item.quantity + 1})">+</button>
                     </div>
                 </td>
                 <td class="cart-full-table-wrapper-body-row-cell">
@@ -3421,8 +3420,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </td>
             `;
             
-            // Insertar después del divisor superior
-            cartBody.insertBefore(productRow, cartBody.querySelector('tr:nth-child(2)'));
+            cartBody.insertBefore(productRow, topDivider.nextSibling);
         });
         
         // Actualizar totales
@@ -3430,6 +3428,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('.cart-full-table-wrapper-body-row-cell-subtotalprice-amount').textContent = totals.subtotal;
         document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amount').textContent = totals.shipping;
         document.querySelector('.cart-full-table-wrapper-body-row-cell-totalprice-amount').textContent = totals.total;
+        
+        console.log('📊 Totales calculados:', totals);
     }
     
     // ========== CONFIGURACIÓN DE EVENT LISTENERS ==========
@@ -3470,14 +3470,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Hacer funciones globales para los botones en el HTML
-    window.updateQuantity = updateQuantity;
     window.removeFromCart = removeFromCart;
     
     initCart();
     console.log('✅ Carrito configurado correctamente');
 });
 </script>
-
 
  
 </body>
