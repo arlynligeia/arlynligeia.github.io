@@ -3304,65 +3304,50 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-// FORZAR ESTADO INICIAL CORRECTO
-document.getElementById('cartempty').style.display = 'none';
-document.getElementById('cartfull').style.display = 'none';
-// BOTÓN DEL MENÚ "CART"
-document.querySelectorAll('a[href="#cart"]').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// OCULTAR TODAS LAS SECCIONES
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR SOLO EL CARRITO
-const cartSection = document.getElementById('cart');
-if (cartSection) {
-cartSection.style.display = 'block';
-cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-// VERIFICAR ESTADO DEL CARRITO
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-if (cart.length === 0) {
-document.getElementById('cartempty').style.display = 'block';
-document.getElementById('cartfull').style.display = 'none';
-} else {
-document.getElementById('cartempty').style.display = 'none';
-document.getElementById('cartfull').style.display = 'block';
-}
-}
-});
-});
-});
-  // SOBREESCRIBIR EL COMPORTAMIENTO DE navigateToTarget PARA EL CARRITO
-const originalNavigateToTarget = window.navigateToTarget;
-if (originalNavigateToTarget) {
-    window.navigateToTarget = function(targetId) {
-        if (targetId === 'cart') {
-            // COMPORTAMIENTO PERSONALIZADO PARA CART
+    // REMOVER TODOS LOS EVENT LISTENERS EXISTENTES DEL BOTÓN CART
+    const cartButtons = document.querySelectorAll('a[href="#cart"]');
+    
+    // CLONAR Y REEMPLAZAR LOS BOTONES PARA ELIMINAR EVENT LISTENERS
+    cartButtons.forEach(button => {
+        const newButton = button.cloneNode(true);
+        button.parentNode.replaceChild(newButton, button);
+    });
+
+    // AGREGAR UN SOLO EVENT LISTENER CONFLICT-FREE
+    document.querySelectorAll('a[href="#cart"]').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            
+            console.log('🎯 CARRITO - Mostrando estado actual');
+            
+            // OCULTAR TODO
             document.querySelectorAll('.main-section, .subsection').forEach(section => {
                 section.style.display = 'none';
             });
+            
+            // MOSTRAR CARRITO
             const cartSection = document.getElementById('cart');
-            if (cartSection) {
-                cartSection.style.display = 'block';
-                cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                let cart = JSON.parse(localStorage.getItem('cart')) || [];
-                if (cart.length === 0) {
-                    document.getElementById('cartempty').style.display = 'block';
-                    document.getElementById('cartfull').style.display = 'none';
-                } else {
-                    document.getElementById('cartempty').style.display = 'none';
-                    document.getElementById('cartfull').style.display = 'block';
-                }
+            cartSection.style.display = 'block';
+            cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // VER ESTADO ACTUAL
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            console.log('📦 Productos en carrito:', cart.length);
+            
+            if (cart.length === 0) {
+                document.getElementById('cartempty').style.display = 'block';
+                document.getElementById('cartfull').style.display = 'none';
+                console.log('🛒 Mostrando: CARRITO VACÍO');
+            } else {
+                document.getElementById('cartempty').style.display = 'none';
+                document.getElementById('cartfull').style.display = 'block';
+                console.log('🛒 Mostrando: CARRITO LLENO');
             }
-        } else {
-            // COMPORTAMIENTO ORIGINAL PARA OTRAS SECCIONES
-            originalNavigateToTarget(targetId);
-        }
-    };
-}
+        });
+    });
+});
 </script>
-<!-- FIN SCRIP: CARRITO -->
   
 
 
