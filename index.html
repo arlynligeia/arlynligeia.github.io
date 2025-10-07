@@ -3448,7 +3448,7 @@ document.getElementById('clearCartModal').style.display = 'none';
 }
 });
 
-// BOTÓN BUY - Con toda la funcionalidad
+// BOTÓN BUY - Con funcionalidad CORREGIDA
 document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
     button.addEventListener('click', function(e) {
         e.preventDefault();
@@ -3459,28 +3459,31 @@ document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
             return;
         }
         
-        // 2. PASAR DATOS AL SHIPPING INFORMATION
+        // 2. CÁLCULOS Y PREPARACIÓN DE DATOS
         const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
         const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
         const totalFinal = subtotal + shippingTotal;
         
-        // Actualizar resumen visible
+        // 3. PASAR DATOS AL SHIPPING INFORMATION (Resumen Visible)
         document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
         document.getElementById('cart-shipping').textContent = shippingTotal.toFixed(2);
         document.getElementById('cart-total').textContent = totalFinal.toFixed(2);
         
-        // Actualizar campos ocultos
+        // 4. PASAR DATOS AL FORMULARIO (Campos Ocultos para el Email/Pago)
         document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
         document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
         document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+        
+        // Campo Oculto con DETALLE DE PRODUCTOS (Importante para el correo)
         document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
         
-        console.log('📦 Datos pasados a shipping information');
+        console.log('📦 Datos transferidos. Iniciando navegación.');
         
-        // 3. NAVEGAR
+        // 5. NAVEGAR A LA SECCIÓN DE ENVÍO
+        // Se usa 'navigateToSection' porque esta es la función que tienes definida
+        // para manejar el cambio de secciones.
         const targetId = this.getAttribute('href').replace('#', '');
-        console.log('🛍️ Navegando a shipping information con', cart.length, 'productos');
-        navigateToTarget(targetId);
+        navigateToSection(targetId);
     });
 });
   
