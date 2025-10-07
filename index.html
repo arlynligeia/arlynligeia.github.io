@@ -3407,6 +3407,17 @@ document.getElementById('cart-empty').style.display = 'block';
 document.getElementById('cart-full').style.display = 'none';
 }
 };
+// BOTÓN CLEAR CART
+document.getElementById('cart-full-clear').addEventListener('click', function() {
+if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+cart = [];
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+document.getElementById('cart-empty').style.display = 'block';
+document.getElementById('cart-full').style.display = 'none';
+console.log('🗑️ Carrito vaciado');
+}
+});
 // Inicializar
 if (cart.length > 0) {
 updateCartDisplay();
@@ -3415,7 +3426,7 @@ document.getElementById('cart-full').style.display = 'block';
 }
 });
 </script>
-
+<!-- FIN SCRIP: CARRITO - SOLO AGREGAR PRODUCTOS -->
  
 </body>
   
