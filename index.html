@@ -3011,7 +3011,7 @@ Authorized by Intendancy Resolution N°</p>
 <div class="cart-container">
 <h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
 <!-- CARRITO VACIO -->
-<div class="cart-empty" id="cartempty" style="display: none;">
+<div class="cart-empty" id="cartempty">
 <!-- CONTENEDOR DE TEXTO -->  
 <div class="cart-empty-noitems">  
 <p class="cart-empty-noitems-text">Your cart is empty</p>
@@ -3023,7 +3023,7 @@ Authorized by Intendancy Resolution N°</p>
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-full" id="cartfull" style="display: none;">
+<div class="cart-full" id="cartfull">
 <!-- CONTENEDOR: TABLA -->  
 <div class="cart-full-table">
 <table class="cart-full-table-wrapper">
@@ -3112,6 +3112,10 @@ Authorized by Intendancy Resolution N°</p>
 </div>
 </section>
 <!-- FIN CART -->
+
+
+
+
   
 <!-- FOOTER -->   
 <footer class="footer-end">
@@ -3303,6 +3307,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const cartEmpty = document.getElementById('cartempty');
         const cartFull = document.getElementById('cartfull');
         
+        console.log('Carrito actual:', cart); // Para debug
+        
         if (cart.length === 0) {
             cartEmpty.style.display = 'block';
             cartFull.style.display = 'none';
@@ -3312,28 +3318,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // EJECUTAR AL CARGAR LA PÁGINA
+    // EJECUTAR INMEDIATAMENTE AL CARGAR
     updateCartDisplay();
 
     // BOTÓN CART
     document.querySelectorAll('a.cart-button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
-            // OCULTAR TODAS LAS SECCIONES
+            // OCULTAR SECCIONES PRINCIPALES SOLO
             document.querySelectorAll('.main-section, .subsection').forEach(section => {
                 section.style.display = 'none';
             });
             // MOSTRAR CARRITO
             const cartSection = document.getElementById('cart');
             cartSection.style.display = 'block';
-            cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             // ACTUALIZAR VISUALIZACIÓN
             updateCartDisplay();
         });
     });
 });
 </script>
-<!-- FIN SCRIP: CARRITO -->
 
   
 
