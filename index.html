@@ -1468,7 +1468,7 @@ Cosmic/Psychological Horror</p>
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Comet Sponsor"
 data-unitprice="50.00"
-data-shipping="0.00">
+data-shipping="10.00">
 ADD TO CART
 </button>
 <button class="cometsponsor-columns-grid-acquire-button-share">SHARE</button>  
@@ -2521,14 +2521,14 @@ ADD TO CART
 <td class="cart-full-table-wrapper-body-row-cell"></td>
 <td class="cart-full-table-wrapper-body-row-cell"></td>  
 <td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-total">
+<div class="cart-full-table-wrapper-body-row-cell-totalend">
 <span>TOTAL</span>
 </div> 
 </td>
 <td class="cart-full-table-wrapper-body-row-cell">
-<div class="cart-full-table-wrapper-body-row-cell-totalprice">
-<span class="cart-full-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-<span class="cart-full-table-wrapper-body-row-cell-totalprice-amount">0.00</span>
+<div class="cart-full-table-wrapper-body-row-cell-totalprice-end">
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-end-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-end-amount">0.00</span>
 </td>
 <td class="cart-full-table-wrapper-body-row-cell"></td>
 </tr>
@@ -3300,6 +3300,7 @@ image: productData.image,
 product: productData.product,
 quantity: 1,
 unitprice: productData.unitprice,
+shipping: productData.shipping, 
 total: productData.unitprice
 });
 }
@@ -3369,6 +3370,7 @@ const productData = {
 image: this.getAttribute('data-image'),
 product: this.getAttribute('data-product'),
 unitprice: this.getAttribute('data-unitprice')
+shipping: this.getAttribute('data-shipping')
 };
 addToCart(productData);
 });
