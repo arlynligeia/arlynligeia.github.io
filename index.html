@@ -3147,9 +3147,14 @@ section.style.display = 'none';
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
+// EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
+if (sectionId !== 'cart') {
 document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
 subsection.style.display = 'block';
 });
+}
+// FIN EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
+  
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
@@ -3166,37 +3171,33 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 document.querySelectorAll('.menu-button').forEach(button => {
 button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').replace('#', '');
-            showOnlyOneSection(targetId);
-            history.pushState(null, null, `#${targetId}`);
-        });
-    });
-    
-    document.querySelectorAll('.submenu-button').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').replace('#', '');
-            goToSubsection(targetId);
-            history.pushState(null, null, `#${targetId}`);
-        });
-    });
-
-    // ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
-    function checkInitialHash() {
-        const hash = window.location.hash.replace('#', '');
-        if (hash) {
-            if (hash.includes('-')) {
-                goToSubsection(hash);
-            } else {
-                showOnlyOneSection(hash);
-            }
-        }
-    }
-    
-    checkInitialHash();
-    
-    console.log('✅ Navegación configurada correctamente');
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+document.querySelectorAll('.submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+goToSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+checkInitialHash();
+console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
