@@ -3289,18 +3289,23 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (existingProduct) {
             existingProduct.quantity += 1;
+            // TOTAL HORIZONTAL: precio unitario × cantidad
             existingProduct.total = (existingProduct.quantity * parseFloat(existingProduct.price)).toFixed(2);
         } else {
             cart.push({
                 image: productData.image,
                 product: productData.product,
                 quantity: 1,
-                price: productData.price,
-                shipping: productData.shipping || '0.00',
-                total: productData.price
+                price: productData.price, // Precio unitario
+                shipping: productData.shipping || '0.00', // Shipping individual
+                total: productData.price // TOTAL HORIZONTAL: precio unitario × cantidad (1 × precio)
             });
         }
-        
+
+
+
+
+      
         saveCart();
         updateCartDisplay();
         showCartFull();
@@ -3325,13 +3330,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function calculateTotals() {
-        // Calcular subtotal (suma de todos los totales de productos)
+        // SUBTOTAL VERTICAL: suma de todos los totales horizontales
         const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
         
-        // Calcular shipping total (suma de todos los shippings)
+        // SHIPPING VERTICAL: suma de todos los shippings individuales
         const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
         
-        // Calcular total final (subtotal + shipping)
+        // TOTAL FINAL VERTICAL: subtotal + shipping
         const total = subtotal + shipping;
         
         return {
@@ -3360,16 +3365,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCartDisplay() {
         const cartBody = document.querySelector('.cart-full-table-wrapper-body');
         
-        // Limpiar productos existentes (mantener solo divisores y filas de totales)
+        // Limpiar solo las filas de productos
         const allRows = Array.from(cartBody.querySelectorAll('tr'));
-        
-        // Encontrar índices de las filas fijas (divisores y totales)
-        const fixedRows = allRows.filter(row => 
-            row.classList.contains('cart-full-table-wrapper-body-divider') ||
-            row.classList.contains('cart-full-table-wrapper-body-row')
-        );
-        
-        // Eliminar solo las filas de productos (las que no son divisores ni totales)
         allRows.forEach(row => {
             if (!row.classList.contains('cart-full-table-wrapper-body-divider') && 
                 !row.querySelector('.cart-full-table-wrapper-body-row-cell-subtotal') &&
@@ -3381,7 +3378,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Insertar productos después del divisor superior
         const topDivider = cartBody.querySelector('tr:first-child');
-        cart.forEach((item, index) => {
+        cart.forEach((item) => {
             const productRow = document.createElement('tr');
             productRow.className = 'cart-full-table-wrapper-body-row';
             productRow.innerHTML = `
@@ -3423,7 +3420,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cartBody.insertBefore(productRow, topDivider.nextSibling);
         });
         
-        // Actualizar totales
+        // Actualizar totales VERTICALES
         const totals = calculateTotals();
         document.querySelector('.cart-full-table-wrapper-body-row-cell-subtotalprice-amount').textContent = totals.subtotal;
         document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amount').textContent = totals.shipping;
