@@ -1434,7 +1434,9 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 
 
 
- 
+
+
+  
 <!-- COMET SPONSOR -->
 <section class="main-section" id="cometsponsor">
 <div class="cometsponsor-container">
@@ -1465,7 +1467,7 @@ Cosmic/Psychological Horror</p>
 <button class="cometsponsor-columns-grid-acquire-button-addtocart"
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Comet Sponsor"
-data-price="50.00"
+data-unitprice="50.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
@@ -1530,7 +1532,7 @@ Cosmic/Psychological Horror</p>
 <button class="planetsponsor-columns-grid-acquire-button-addtocart"
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Planet Sponsor"
-data-price="100.00"
+data-unitprice="100.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
@@ -1596,7 +1598,7 @@ Cosmic/Psychological Horror</p>
 <button class="starsponsor-columns-grid-acquire-button-addtocart"
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Star Sponsor"
-data-price="200.00"
+data-unitprice="200.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
@@ -1632,7 +1634,14 @@ ADD TO CART
 </div>
 </section>
 <!-- END STAR SPONSOR -->
- 
+
+
+
+
+
+
+
+  
 <!-- COMET SPONSOR BRAND -->
 <section class="main-section" id="cometsponsorbrand">
 <div class="cometsponsorbrand-container">
@@ -3272,205 +3281,113 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
 
 
-<!-- SCRIP: CARRITO DE COMPRAS CORREGIDO -->
+
+  
+<!-- SCRIP: CARRITO - SOLO AGREGAR PRODUCTOS -->
 <script>
-// CARRITO - GESTIÓN DE PRODUCTOS
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🛒 Carrito iniciado');
-    
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // ========== FUNCIONES DEL CARRITO ==========
-    
-    function addToCart(productData) {
-        console.log('➕ Agregando al carrito:', productData);
-        
-        const existingProduct = cart.find(item => item.product === productData.product);
-        
-        if (existingProduct) {
-            existingProduct.quantity += 1;
-            // TOTAL HORIZONTAL: precio unitario × cantidad
-            existingProduct.total = (existingProduct.quantity * parseFloat(existingProduct.price)).toFixed(2);
-        } else {
-            cart.push({
-                image: productData.image,
-                product: productData.product,
-                quantity: 1,
-                price: productData.price, // Precio unitario
-                shipping: productData.shipping || '0.00', // Shipping individual
-                total: productData.price // TOTAL HORIZONTAL: precio unitario × cantidad (1 × precio)
-            });
-        }
-
-
-
-
-      
-        saveCart();
-        updateCartDisplay();
-        showCartFull();
-    }
-    
-    function removeFromCart(productName) {
-        console.log('🗑️ Eliminando del carrito:', productName);
-        cart = cart.filter(item => item.product !== productName);
-        saveCart();
-        updateCartDisplay();
-        
-        if (cart.length === 0) {
-            showCartEmpty();
-        }
-    }
-    
-    function clearCart() {
-        console.log('🧹 Limpiando carrito');
-        cart = [];
-        saveCart();
-        showCartEmpty();
-    }
-    
-    function calculateTotals() {
-        // SUBTOTAL VERTICAL: suma de todos los totales horizontales
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
-        
-        // SHIPPING VERTICAL: suma de todos los shippings individuales
-        const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
-        
-        // TOTAL FINAL VERTICAL: subtotal + shipping
-        const total = subtotal + shipping;
-        
-        return {
-            subtotal: subtotal.toFixed(2),
-            shipping: shipping.toFixed(2),
-            total: total.toFixed(2)
-        };
-    }
-    
-    function saveCart() {
-        localStorage.setItem('cart', JSON.stringify(cart));
-    }
-    
-    function showCartEmpty() {
-        document.getElementById('cart-empty').style.display = 'block';
-        document.getElementById('cart-full').style.display = 'none';
-    }
-    
-    function showCartFull() {
-        document.getElementById('cart-empty').style.display = 'none';
-        document.getElementById('cart-full').style.display = 'block';
-    }
-    
-    // ========== ACTUALIZAR INTERFAZ ==========
-    
-    function updateCartDisplay() {
-        const cartBody = document.querySelector('.cart-full-table-wrapper-body');
-        
-        // Limpiar solo las filas de productos
-        const allRows = Array.from(cartBody.querySelectorAll('tr'));
-        allRows.forEach(row => {
-            if (!row.classList.contains('cart-full-table-wrapper-body-divider') && 
-                !row.querySelector('.cart-full-table-wrapper-body-row-cell-subtotal') &&
-                !row.querySelector('.cart-full-table-wrapper-body-row-cell-shipping') &&
-                !row.querySelector('.cart-full-table-wrapper-body-row-cell-total')) {
-                row.remove();
-            }
-        });
-        
-        // Insertar productos después del divisor superior
-        const topDivider = cartBody.querySelector('tr:first-child');
-        cart.forEach((item) => {
-            const productRow = document.createElement('tr');
-            productRow.className = 'cart-full-table-wrapper-body-row';
-            productRow.innerHTML = `
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-image">
-                        <img src="${item.image}" alt="${item.product}" width="50">
-                    </div>
-                </td>
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-name">
-                        <span>${item.product}</span>
-                    </div>
-                </td>
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-quantity">
-                        <span>${item.quantity}</span>
-                    </div>
-                </td>
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-unitprice">
-                        <span class="cart-full-table-wrapper-body-row-cell-unitprice-symbol">$</span>
-                        <span class="cart-full-table-wrapper-body-row-cell-unitprice-amount">${item.price}</span>
-                    </div>
-                </td>
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-totalprice">
-                        <span class="cart-full-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-                        <span class="cart-full-table-wrapper-body-row-cell-totalprice-amount">${item.total}</span>
-                    </div>
-                </td>
-                <td class="cart-full-table-wrapper-body-row-cell">
-                    <div class="cart-full-table-wrapper-body-row-cell-button">
-                        <button class="cart-full-table-wrapper-body-row-cell-button-remove" 
-                                onclick="removeFromCart('${item.product}')">X</button>
-                    </div>
-                </td>
-            `;
-            
-            cartBody.insertBefore(productRow, topDivider.nextSibling);
-        });
-        
-        // Actualizar totales VERTICALES
-        const totals = calculateTotals();
-        document.querySelector('.cart-full-table-wrapper-body-row-cell-subtotalprice-amount').textContent = totals.subtotal;
-        document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amount').textContent = totals.shipping;
-        document.querySelector('.cart-full-table-wrapper-body-row-cell-totalprice-amount').textContent = totals.total;
-        
-        console.log('📊 Totales calculados:', totals);
-    }
-    
-    // ========== CONFIGURACIÓN DE EVENT LISTENERS ==========
-    
-    // Botones "ADD TO CART"
-    document.querySelectorAll('[class*="-acquire-button-addtocart"]').forEach(button => {
-        button.addEventListener('click', function() {
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                price: this.getAttribute('data-price'),
-                shipping: this.getAttribute('data-shipping')
-            };
-            addToCart(productData);
-        });
-    });
-    
-    // Botón "CLEAR CART"
-    document.getElementById('cart-full-clear').addEventListener('click', clearCart);
-    
-    // Botón "BUY" - Navegación
-    document.getElementById('cart-full-buy').addEventListener('click', function(e) {
-        e.preventDefault();
-        if (cart.length > 0) {
-            navigateToTarget('cart-shippinginformation');
-        }
-    });
-    
-    // ========== INICIALIZACIÓN ==========
-    
-    function initCart() {
-        if (cart.length > 0) {
-            updateCartDisplay();
-            showCartFull();
-        } else {
-            showCartEmpty();
-        }
-    }
-    
-    // Hacer funciones globales para los botones en el HTML
-    window.removeFromCart = removeFromCart;
-    
-    initCart();
-    console.log('✅ Carrito configurado correctamente');
+console.log('🛒 Carrito iniciado');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+function addToCart(productData) {
+console.log('➕ Agregando al carrito:', productData);
+const existingProduct = cart.find(item => item.product === productData.product);
+if (existingProduct) {
+existingProduct.quantity += 1;
+existingProduct.total = (existingProduct.quantity * parseFloat(existingProduct.unitprice)).toFixed(2);
+} else {
+cart.push({
+image: productData.image,
+product: productData.product,
+quantity: 1,
+unitprice: productData.unitprice,
+total: productData.unitprice
+});
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+document.getElementById('cart-empty').style.display = 'none';
+document.getElementById('cart-full').style.display = 'block';
+}
+function updateCartDisplay() {
+const cartBody = document.querySelector('.cart-full-table-wrapper-body');
+// Limpiar solo las filas de productos
+const allRows = Array.from(cartBody.querySelectorAll('tr'));
+allRows.forEach(row => {
+if (!row.classList.contains('cart-full-table-wrapper-body-divider') && 
+!row.querySelector('.cart-full-table-wrapper-body-row-cell-subtotal') &&
+!row.querySelector('.cart-full-table-wrapper-body-row-cell-shipping') &&
+!row.querySelector('.cart-full-table-wrapper-body-row-cell-total')) {
+row.remove();
+}
+});
+// INSERTAR PRODUCTOS
+const topDivider = cartBody.querySelector('tr:first-child');
+cart.forEach((item) => {
+const productRow = document.createElement('tr');
+productRow.className = 'cart-full-table-wrapper-body-row';
+productRow.innerHTML = `
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-image">
+<img src="${item.image}" alt="${item.product}" width="50">
+</div>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-name">
+<span>${item.product}</span>
+</div>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-quantity">
+<span>${item.quantity}</span>
+</div>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-unitprice">
+<span class="cart-full-table-wrapper-body-row-cell-unitprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-unitprice-amount">${item.unitprice}</span>
+</div>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-totalprice">
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-symbol">$</span>
+<span class="cart-full-table-wrapper-body-row-cell-totalprice-amount">${item.total}</span>
+</div>
+</td>
+<td class="cart-full-table-wrapper-body-row-cell">
+<div class="cart-full-table-wrapper-body-row-cell-button">
+<button class="cart-full-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+</div>
+</td>
+`;
+cartBody.insertBefore(productRow, topDivider.nextSibling);
+});
+}
+// BOTONES "ADD TO CART"
+document.querySelectorAll('[class*="-button-addtocart"]').forEach(button => {
+button.addEventListener('click', function() {
+const productData = {
+image: this.getAttribute('data-image'),
+product: this.getAttribute('data-product'),
+unitprice: this.getAttribute('data-unitprice')
+};
+addToCart(productData);
+});
+});
+window.removeFromCart = function(productName) {
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+if (cart.length === 0) {
+document.getElementById('cart-empty').style.display = 'block';
+document.getElementById('cart-full').style.display = 'none';
+}
+};
+// Inicializar
+if (cart.length > 0) {
+updateCartDisplay();
+document.getElementById('cart-empty').style.display = 'none';
+document.getElementById('cart-full').style.display = 'block';
+}
 });
 </script>
 
