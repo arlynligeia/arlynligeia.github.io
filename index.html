@@ -3135,7 +3135,7 @@ Authorized by Intendancy Resolution N°</p>
 
 
 
-<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
@@ -3147,14 +3147,9 @@ section.style.display = 'none';
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
-// EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
-if (sectionId !== 'cart') {
 document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
 subsection.style.display = 'block';
 });
-}
-// FIN EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
-  
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
@@ -3200,13 +3195,12 @@ checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
-
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
 
  
 
-<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->  
+<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 <script>
 // NAVEGACIÓN JERÁRQUICA PARA TIENDA
 document.addEventListener('DOMContentLoaded', function() {
@@ -3238,17 +3232,11 @@ if (mainSection) {
 mainSection.style.display = 'block';
 // Mostrar TODAS sus subsecciones
 const mainSectionPrefix = mainSectionId + '-';
-  
-// EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
-if (mainSectionId !== 'cart') {
 document.querySelectorAll('.subsection').forEach(subsection => {
 if (subsection.id.startsWith(mainSectionPrefix)) {
 subsection.style.display = 'block';
 }
 });
-}
-// FIN EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
-  
 // Hacer scroll a la sección objetivo
 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // Actualizar la URL
@@ -3295,59 +3283,12 @@ navigateToTarget(targetId);
 console.log('✅ Navegación de tienda configurada correctamente');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN DE TIENDA -->  
 
 
 
 
   
-<!-- SCRIP: CARRITO -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // REMOVER TODOS LOS EVENT LISTENERS EXISTENTES DEL BOTÓN CART
-    const cartButtons = document.querySelectorAll('a[href="#cart"]');
-    
-    // CLONAR Y REEMPLAZAR LOS BOTONES PARA ELIMINAR EVENT LISTENERS
-    cartButtons.forEach(button => {
-        const newButton = button.cloneNode(true);
-        button.parentNode.replaceChild(newButton, button);
-    });
 
-    // AGREGAR UN SOLO EVENT LISTENER CONFLICT-FREE
-    document.querySelectorAll('a[href="#cart"]').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
-            
-            console.log('🎯 CARRITO - Mostrando estado actual');
-            
-            // OCULTAR TODO
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // MOSTRAR CARRITO
-            const cartSection = document.getElementById('cart');
-            cartSection.style.display = 'block';
-            cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            
-            // VER ESTADO ACTUAL
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            console.log('📦 Productos en carrito:', cart.length);
-            
-            if (cart.length === 0) {
-                document.getElementById('cartempty').style.display = 'block';
-                document.getElementById('cartfull').style.display = 'none';
-                console.log('🛒 Mostrando: CARRITO VACÍO');
-            } else {
-                document.getElementById('cartempty').style.display = 'none';
-                document.getElementById('cartfull').style.display = 'block';
-                console.log('🛒 Mostrando: CARRITO LLENO');
-            }
-        });
-    });
-});
-</script>
   
 
 
