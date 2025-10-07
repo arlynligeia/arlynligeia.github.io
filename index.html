@@ -3462,37 +3462,27 @@ function updateOrderSummary() {
     document.getElementById('cart-shipping').textContent = shippingTotal.toFixed(2);
     document.getElementById('cart-total').textContent = totalFinal.toFixed(2);
     
-    // Actualizar campos ocultos para el formulario
-    document.querySelector('input[name="cart_subtotal"]').value = subtotal.toFixed(2);
-    document.querySelector('input[name="cart_shipping"]').value = shippingTotal.toFixed(2);
-    document.querySelector('input[name="cart_total"]').value = totalFinal.toFixed(2);
-    
-    // Guardar los items del carrito como JSON en campo oculto
-    document.querySelector('input[name="cart_items"]').value = JSON.stringify(cart);
+    // ✅ CORREGIDO: Usar los IDs correctos
+    document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
+    document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
+    document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+    document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
     
     console.log('📦 Resumen de orden actualizado:', { subtotal, shippingTotal, totalFinal });
 }
 
 // BOTÓN BUY - Actualizar datos antes de navegar
 document.getElementById('cart-full-buy').addEventListener('click', function(e) {
-    // Verificar que el carrito no esté vacío
     if (cart.length === 0) {
         alert('Your cart is empty. Please add products before proceeding to checkout.');
         return;
     }
     
-    // Actualizar el resumen de la orden antes de navegar
     updateOrderSummary();
     console.log('🛍️ Pasando al checkout con', cart.length, 'productos');
     
-    // Navegar a shipping information - PRIMERO INTENTA CON SCROLL
-    const shippingSection = document.getElementById('shippinginformation');
-    if (shippingSection) {
-        shippingSection.scrollIntoView({ behavior: 'smooth' });
-    } else {
-        // Si no funciona el scroll, usa hash
-        window.location.hash = 'shippinginformation';
-    }
+    // ✅ SOLUCIÓN DEFINITIVA
+    window.location.href = '#shippinginformation';
 });
 
 // También actualizar cuando se cargue la página de shipping information
