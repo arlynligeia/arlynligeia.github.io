@@ -2365,7 +2365,7 @@ Cosmic/Psychological Horror</p>
 <button class="button-addtocart"
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Cosmos Executive Producer"
-data-unitprice="10,000.00"
+data-price="10,000.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
@@ -3312,74 +3312,65 @@ console.log('✅ Navegación de tienda configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
   
-  
 
-<script>
-// Script para agregar productos al carrito
+
+
+
+
+  
+<script> 
 document.addEventListener('DOMContentLoaded', function() {
-    const addToCartButtons = document.querySelectorAll('.button-addtocart');
-    
-    addToCartButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const productImage = this.getAttribute('data-image');
-            const productName = this.getAttribute('data-product');
-            const productPrice = this.getAttribute('data-price');
-            
-            addProductToCart(productImage, productName, productPrice);
-        });
-    });
-    
-    function addProductToCart(image, name, price) {
-        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
-        const bottomDivider = document.querySelectorAll('.cartfull-table-wrapper-body-divider')[1];
+// Agregar productos al carrito
+document.addEventListener('click', function(e) {
+if (e.target.classList.contains('button-addtocart')) {
+addToCart(e.target);
+}
+});
+// Remover producto individual
+document.addEventListener('click', function(e) {
+if (e.target.classList.contains('remove-product')) {
+removeProduct(e.target);
+}
+});
+
+    function addToCart(button) {
+        const productData = {
+            image: button.getAttribute('data-image'),
+            product: button.getAttribute('data-product'),
+            price: button.getAttribute('data-price'),
+            quantity: 1
+        };
+
+        const tbody = document.querySelector('.cartfull-table-wrapper-body');
+        const topDivider = tbody.querySelector('.cartfull-table-wrapper-body-divider:first-child');
         
         const newRow = document.createElement('tr');
-        newRow.className = 'cartfull-table-wrapper-body-row';
+        newRow.className = 'cartfull-table-wrapper-body-row product-row';
         
-        const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
+        const priceNumber = parseFloat(productData.price.replace(',', ''));
+        const total = priceNumber * productData.quantity;
         
         newRow.innerHTML = `
             <td class="cartfull-table-wrapper-body-row-cell">
-                <img src="${image}" alt="${name}">
+                <img src="${productData.image}" alt="${productData.product}">
             </td>
-            <td class="cartfull-table-wrapper-body-row-cell">${name}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">${productData.product}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">${productData.quantity}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">$ ${productData.price}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">$ ${total.toFixed(2)}</td>
             <td class="cartfull-table-wrapper-body-row-cell">
-                <input type="number" value="1" min="1" class="quantity-input">
-            </td>
-            <td class="cartfull-table-wrapper-body-row-cell">
-                $<span class="unit-price">${numericPrice.toFixed(2)}</span>
-            </td>
-            <td class="cartfull-table-wrapper-body-row-cell">
-                $<span class="product-total">${numericPrice.toFixed(2)}</span>
-            </td>
-            <td class="cartfull-table-wrapper-body-row-cell">
-                <button class="remove-product">×</button>
+                <button class="remove-product" type="button">REMOVE</button>
             </td>
         `;
         
-        cartBody.insertBefore(newRow, bottomDivider);
-        
-        const quantityInput = newRow.querySelector('.quantity-input');
-        quantityInput.addEventListener('change', function() {
-            updateProductTotal(newRow);
-        });
-        
-        const removeButton = newRow.querySelector('.remove-product');
-        removeButton.addEventListener('click', function() {
-            newRow.remove();
-        });
+        tbody.insertBefore(newRow, topDivider.nextSibling);
     }
-    
-    function updateProductTotal(row) {
-        const quantityInput = row.querySelector('.quantity-input');
-        const unitPriceElement = row.querySelector('.unit-price');
-        const productTotalElement = row.querySelector('.product-total');
-        
-        const quantity = parseInt(quantityInput.value);
-        const unitPrice = parseFloat(unitPriceElement.textContent);
-        const total = quantity * unitPrice;
-        
-        productTotalElement.textContent = total.toFixed(2);
+
+    function removeProduct(button) {
+        const productRow = button.closest('.product-row');
+        if (productRow) {
+            productRow.remove();
+        }
     }
 });
 </script>
