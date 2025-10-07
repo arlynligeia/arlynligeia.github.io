@@ -3322,6 +3322,15 @@ console.log('✅ Navegación de tienda configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+function formatNumberWithCommas(number) {
+    let parts = number.toString().split('.');
+    let integerPart = parts[0];
+    let decimalPart = parts[1] || '';
+    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
+}
+  
 function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
@@ -3331,7 +3340,8 @@ existingProduct.quantity += 1;
        const unitPrice = existingProduct.price; // "10,000.00"
         const quantity = existingProduct.quantity; // 2
         // Quitar solo la coma, mantener puntos decimales
-        existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2);
+     existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toString();
+
     
 } else { 
 cart.push({
@@ -3339,7 +3349,7 @@ image: productData.image,
 product: productData.product,
 quantity: 1,
 price: productData.price,
-totalprice: productData.price // ← AÑADE ESTA LÍNEA
+totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toString()
 });
 }
 localStorage.setItem('cart', JSON.stringify(cart));
@@ -3374,13 +3384,13 @@ productRow.innerHTML = `
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-unitprice">
 <span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
-<span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${item.price}</span>
+<span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${formatNumberWithCommas(item.price)}</span>
 </div>
 </td>
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-totalprice">
 <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${item.totalprice}</span>
+<span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${formatNumberWithCommas(item.totalprice)}</span>
 </div>
 </td>
 <td class="cartfull-table-wrapper-body-row-cell">
