@@ -3416,6 +3416,7 @@ const productData = {
 image: this.getAttribute('data-image'),
 product: this.getAttribute('data-product'),
 price: this.getAttribute('data-price')
+shipping: this.getAttribute('data-shipping') || '0' // ← AGREGAR ESTA LÍNEA
 };
 addToCart(productData);
 });
