@@ -3238,11 +3238,17 @@ if (mainSection) {
 mainSection.style.display = 'block';
 // Mostrar TODAS sus subsecciones
 const mainSectionPrefix = mainSectionId + '-';
+  
+// EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
+if (mainSectionId !== 'cart') {
 document.querySelectorAll('.subsection').forEach(subsection => {
 if (subsection.id.startsWith(mainSectionPrefix)) {
 subsection.style.display = 'block';
 }
 });
+}
+// FIN EXCLUIR CARRITO DEL COMPORTAMIENTO DE MOSTRAR SUBSECCIONES
+  
 // Hacer scroll a la sección objetivo
 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // Actualizar la URL
