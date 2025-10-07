@@ -3369,6 +3369,7 @@ productRow.innerHTML = `
 cartBody.insertBefore(productRow, topDivider.nextSibling);
 });
 updateShippingTotal();
+updateSubtotal(); 
 }
 function updateShippingTotal() {
 const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
