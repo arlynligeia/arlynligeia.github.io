@@ -3369,7 +3369,8 @@ productRow.innerHTML = `
 cartBody.insertBefore(productRow, topDivider.nextSibling);
 });
 updateShippingTotal();
-updateSubtotal(); 
+updateSubtotal();
+updateTotalEnd();
 }
 function updateShippingTotal() {
 const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
@@ -3378,6 +3379,12 @@ document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amo
 function updateSubtotal() {
 const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
 document.querySelector('.cart-full-table-wrapper-body-row-cell-subtotalprice-amount').textContent = subtotal.toFixed(2);
+}
+function updateTotalFinal() {
+const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
+const shipping = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
+const totalFinal = subtotal + shipping;
+document.querySelector('.cart-full-table-wrapper-body-row-cell-totalendprice-amount').textContent = totalEnd.toFixed(2);
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('[class*="-button-addtocart"]').forEach(button => {
