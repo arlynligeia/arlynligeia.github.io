@@ -3159,7 +3159,7 @@ function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
 
  // ✅ ESTA ES LA LÍNEA CORRECTA - REEMPLAZA TODO LO QUE HACÍA ANTES:
-    document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+    document.querySelectorAll('.main-section, .subsection').forEach(section => {
         section.style.display = 'none';
     });
   
