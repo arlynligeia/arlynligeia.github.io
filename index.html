@@ -3324,64 +3324,80 @@ document.addEventListener('DOMContentLoaded', function() {
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Obtener datos del producto desde los atributos data
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                price: this.getAttribute('data-price'),
-                shipping: this.getAttribute('data-shipping')
-            };
+            const productImage = this.getAttribute('data-image');
+            const productName = this.getAttribute('data-product');
+            const productPrice = this.getAttribute('data-price');
+            const shippingCost = this.getAttribute('data-shipping');
             
             // Agregar producto al carrito
-            addProductToCart(productData);
+            addProductToCart(productImage, productName, productPrice, shippingCost);
         });
     });
+    
+    // Función para agregar producto al carrito
+    function addProductToCart(image, name, price, shipping) {
+        // Encontrar el tbody de la tabla del carrito
+        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+        
+        // Encontrar la fila divisoria inferior (antes de subtotal)
+        const bottomDivider = document.querySelector('.cartfull-table-wrapper-body-divider:last-of-type');
+        
+        // Crear nueva fila para el producto
+        const newRow = document.createElement('tr');
+        newRow.className = 'cartfull-table-wrapper-body-row';
+        
+        // Convertir precio a número (remover comas y símbolos)
+        const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
+        
+        // Crear las celdas del producto
+        newRow.innerHTML = `
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <img src="${image}" alt="${name}">
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">${name}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <input type="number" value="1" min="1" class="quantity-input">
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                $<span class="unit-price">${numericPrice.toFixed(2)}</span>
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                $<span class="product-total">${numericPrice.toFixed(2)}</span>
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <button class="remove-product">×</button>
+            </td>
+        `;
+        
+        // Insertar la nueva fila antes del divisor inferior
+        cartBody.insertBefore(newRow, bottomDivider);
+        
+        // Agregar event listener para cambiar cantidad
+        const quantityInput = newRow.querySelector('.quantity-input');
+        quantityInput.addEventListener('change', function() {
+            updateProductTotal(newRow);
+        });
+        
+        // Agregar event listener para eliminar producto
+        const removeButton = newRow.querySelector('.remove-product');
+        removeButton.addEventListener('click', function() {
+            newRow.remove();
+        });
+    }
+    
+    // Función para actualizar el total del producto cuando cambia la cantidad
+    function updateProductTotal(row) {
+        const quantityInput = row.querySelector('.quantity-input');
+        const unitPriceElement = row.querySelector('.unit-price');
+        const productTotalElement = row.querySelector('.product-total');
+        
+        const quantity = parseInt(quantityInput.value);
+        const unitPrice = parseFloat(unitPriceElement.textContent);
+        const total = quantity * unitPrice;
+        
+        productTotalElement.textContent = total.toFixed(2);
+    }
 });
-
-function addProductToCart(productData) {
-    // Obtener la tabla del carrito
-    const cartTableBody = document.querySelector('.cartfull-table-wrapper-body');
-    
-    // Encontrar la posición donde insertar (antes de la línea divisoria inferior)
-    const bottomDivider = document.querySelector('.cartfull-table-wrapper-body-divider:last-of-type');
-    
-    // Crear nueva fila para el producto
-    const newRow = document.createElement('tr');
-    newRow.className = 'cartfull-table-wrapper-body-row';
-    
-    // Construir el HTML de la fila del producto
-    newRow.innerHTML = `
-        <td class="cartfull-table-wrapper-body-row-cell">
-            <img src="${productData.image}" alt="${productData.product}" style="width: 50px; height: 50px; object-fit: cover;">
-        </td>
-        <td class="cartfull-table-wrapper-body-row-cell">${productData.product}</td>
-        <td class="cartfull-table-wrapper-body-row-cell">
-            <input type="number" value="1" min="1" class="quantity-input" style="width: 50px; text-align: center;">
-        </td>
-        <td class="cartfull-table-wrapper-body-row-cell">$${productData.price}</td>
-        <td class="cartfull-table-wrapper-body-row-cell">$${productData.price}</td>
-        <td class="cartfull-table-wrapper-body-row-cell">
-            <button class="remove-product" style="background: none; border: none; cursor: pointer; color: red;">×</button>
-        </td>
-    `;
-    
-    // Insertar la nueva fila antes de la línea divisoria inferior
-    cartTableBody.insertBefore(newRow, bottomDivider);
-    
-    // Agregar event listener al botón de eliminar
-    const removeButton = newRow.querySelector('.remove-product');
-    removeButton.addEventListener('click', function() {
-        newRow.remove();
-    });
-    
-    // Agregar event listener al input de cantidad
-    const quantityInput = newRow.querySelector('.quantity-input');
-    quantityInput.addEventListener('change', function() {
-        const quantity = parseInt(this.value);
-        const unitPrice = parseFloat(productData.price.replace(',', ''));
-        const totalCell = newRow.querySelector('td:nth-child(5)');
-        totalCell.textContent = '$' + (unitPrice * quantity).toLocaleString('en-US', {minimumFractionDigits: 2});
-    });
-}
 </script>
 <!-- FIN SCRIP: CARRITO -->
 
