@@ -3022,7 +3022,7 @@ Authorized by Intendancy Resolution N°</p>
 </section>
 <!-- FIN CART EMPTY -->
 
-  <!-- CART EMPTY -->
+<!-- CART FULL -->
 <section class="cartfull-section" id="cartfull"> 
 <div class="cartfull-container">
 <h2 class="cartfull-title"><a href="#cartfull">YOUR CART</a></h2>   
@@ -3306,37 +3306,143 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
 
 
-  <!-- SCRIP: CARRITO -->
+<!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // BOTÓN CART
-    document.querySelectorAll('a.cart-button').forEach(button => {
+
+ // =============================================
+    // 🔥 AGREGAR ESTA FUNCIÓN - ADD TO CART
+    // =============================================
+    function addToCart(product) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Verificar si el producto ya está en el carrito
+        const existingProduct = cart.find(item => item.id === product.id);
+        
+        if (existingProduct) {
+            // Si ya existe, aumentar la cantidad
+            existingProduct.quantity += 1;
+        } else {
+            // Si no existe, agregar nuevo producto
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            });
+        }
+        
+        // Guardar en localStorage
+        localStorage.setItem('cart', JSON.stringify(cart));
+        
+        // Opcional: Mostrar mensaje
+        alert('Producto agregado: ' + product.name);
+    }
+
+    // =============================================
+    // 🔥 AGREGAR ESTA FUNCIÓN - UPDATE CART TABLE
+    // =============================================
+    function updateCartTable() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const tableBody = document.querySelector('.cartfull-table-wrapper-body');
+        
+        // Encontrar donde insertar los productos
+        const bottomDivider = document.querySelectorAll('.cartfull-table-wrapper-body-divider')[1];
+        
+        // Limpiar productos existentes
+        const allRows = tableBody.querySelectorAll('tr');
+        allRows.forEach(row => {
+            if (!row.classList.contains('cartfull-table-wrapper-body-divider') && 
+                !row.classList.contains('cartfull-table-wrapper-body-row')) {
+                row.remove();
+            }
+        });
+
+        // Agregar cada producto a la tabla
+        cart.forEach(product => {
+            const productRow = document.createElement('tr');
+            productRow.className = 'cartfull-table-wrapper-body-product';
+            
+            const total = product.price * product.quantity;
+            
+            productRow.innerHTML = `
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px;">
+                </td>
+                <td class="cartfull-table-wrapper-body-row-cell">${product.name}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">${product.quantity}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">$${product.price.toFixed(2)}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">$${total.toFixed(2)}</td>
+                <td class="cartfull-table-wrapper-body-row-cell">
+                    <button class="remove-product" data-id="${product.id}">×</button>
+                </td>
+            `;
+            
+            // Insertar antes de la línea divisoria inferior
+            tableBody.insertBefore(productRow, bottomDivider);
+        });
+    }
+
+    // =============================================
+    // 🔥 AGREGAR ESTO EN LA PARTE DEL CARRITO LLENO
+    // =============================================
+    // DENTRO DEL "else" DEL BOTÓN CART, AGREGA:
+    // updateCartTable(); // Actualizar la tabla con productos
+
+// BOTÓN CART
+document.querySelectorAll('a.cart-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// 2. VERIFICAR SI HAY PRODUCTOS EN EL CARRITO
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// 3. MOSTRAR LA SECCIÓN CORRECTA
+if (cart.length === 0) {
+// MOSTRAR CARRITO VACÍO
+document.getElementById('cartempty').style.display = 'block';
+document.getElementById('cartfull').style.display = 'none';
+} else {
+// MOSTRAR CARRITO LLENO  
+document.getElementById('cartempty').style.display = 'none';
+document.getElementById('cartfull').style.display = 'block';
+// 🔥 AGREGAR ESTA LÍNEA
+    updateCartTable(); // Actualizar la tabla con productos
+}
+});
+});
+
+  // =============================================
+    // 🔥 AGREGAR EVENT LISTENER PARA BOTONES ADD TO CART
+    // =============================================
+    document.querySelectorAll('.add-to-cart-button').forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                section.style.display = 'none';
-            });
+            // Obtener datos del producto
+            const productId = this.getAttribute('data-product-id');
+            const productName = this.getAttribute('data-product-name');
+            const productPrice = parseFloat(this.getAttribute('data-product-price'));
+            const productImage = this.getAttribute('data-product-image');
             
-            // 2. VERIFICAR SI HAY PRODUCTOS EN EL CARRITO
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // Crear objeto producto
+            const product = {
+                id: productId,
+                name: productName,
+                price: productPrice,
+                image: productImage
+            };
             
-            // 3. MOSTRAR LA SECCIÓN CORRECTA
-            if (cart.length === 0) {
-                // MOSTRAR CARRITO VACÍO
-                document.getElementById('cartempty').style.display = 'block';
-                document.getElementById('cartfull').style.display = 'none';
-            } else {
-                // MOSTRAR CARRITO LLENO  
-                document.getElementById('cartempty').style.display = 'none';
-                document.getElementById('cartfull').style.display = 'block';
-            }
-        });
+            // Agregar al carrito
+            addToCart(product);
+  });
     });
 });
 </script>
-
+<!-- FIN SCRIP: CARRITO -->
 
   
   
