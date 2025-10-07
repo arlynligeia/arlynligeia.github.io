@@ -3374,6 +3374,10 @@ function updateShippingTotal() {
 const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
 document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amount').textContent = shippingTotal.toFixed(2);
 }
+function updateSubtotal() {
+const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
+document.querySelector('.cart-full-table-wrapper-body-row-cell-subtotalprice-amount').textContent = subtotal.toFixed(2);
+}
 // BOTONES "ADD TO CART"
 document.querySelectorAll('[class*="-button-addtocart"]').forEach(button => {
 button.addEventListener('click', function() {
