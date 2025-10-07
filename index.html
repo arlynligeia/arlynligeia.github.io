@@ -3138,39 +3138,34 @@ Authorized by Intendancy Resolution N°</p>
 <!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🔧 Navegación iniciada');
-    
-    function showOnlyOneSection(sectionId) {
-        console.log('Mostrando SOLO:', sectionId);
-        document.querySelectorAll('.main-section, .subsection').forEach(section => {
-            section.style.display = 'none';
-        });
-        
-        const mainSection = document.getElementById(sectionId);
-        if (mainSection) {
-            mainSection.style.display = 'block';
-            document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
-                subsection.style.display = 'block';
-            });
-            mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-    
-    function goToSubsection(subsectionId) {
-        console.log('Yendo a subsección:', subsectionId);
-        const mainSectionId = subsectionId.split('-')[0];
-        showOnlyOneSection(mainSectionId);
-        
-        setTimeout(() => {
-            const subsection = document.getElementById(subsectionId);
-            if (subsection) {
-                subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 100);
-    }
-    
-    document.querySelectorAll('.menu-button').forEach(button => {
-        button.addEventListener('click', function(e) {
+console.log('🔧 Navegación iniciada');
+function showOnlyOneSection(sectionId) {
+console.log('Mostrando SOLO:', sectionId);
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+function goToSubsection(subsectionId) {
+console.log('Yendo a subsección:', subsectionId);
+const mainSectionId = subsectionId.split('-')[0];
+showOnlyOneSection(mainSectionId);
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+document.querySelectorAll('.menu-button').forEach(button => {
+button.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href').replace('#', '');
             showOnlyOneSection(targetId);
@@ -3446,54 +3441,7 @@ document.addEventListener('keydown', function(e) {
 if (e.key === 'Escape') {
 document.getElementById('clearCartModal').style.display = 'none';
 }
-});
-
-// BOTÓN BUY - Código completo
-document.querySelectorAll('[class*="-button-buy"]').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // 1. VERIFICAR CARRITO
-        if (cart.length === 0) {
-            alert('Your cart is empty. Please add products before proceeding to checkout.');
-            return;
-        }
-        
-        // 2. PASAR DATOS AL SHIPPING INFORMATION
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.total), 0);
-        const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
-        const totalFinal = subtotal + shippingTotal;
-        
-        // Actualizar resumen visible
-        document.getElementById('cart-subtotal').textContent = subtotal.toFixed(2);
-        document.getElementById('cart-shipping').textContent = shippingTotal.toFixed(2);
-        document.getElementById('cart-total').textContent = totalFinal.toFixed(2);
-        
-        // Actualizar campos ocultos
-        document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
-        document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
-        document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
-        document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
-        
-        console.log('📦 Datos pasados a shipping information');
-        
-        // 3. NAVEGAR
-        const targetId = this.getAttribute('href').replace('#', '');
-        console.log('🛍️ Navegando a shipping information con', cart.length, 'productos');
-        navigateToTarget(targetId);
-    });
-});
-
-// LA MALDITA FUNCIÓN QUE FALTABA
-function navigateToTarget(targetId) {
-    const targetSection = document.getElementById(targetId);
-    if (targetSection) {
-        targetSection.scrollIntoView({ 
-            behavior: 'smooth' 
-        });
-    }
-}
-  
+}); 
 // Inicializar
 if (cart.length > 0) {
 updateCartDisplay();
