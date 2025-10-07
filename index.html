@@ -3157,12 +3157,9 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-
- // ✅ ESTA ES LA LÍNEA CORRECTA - REEMPLAZA TODO LO QUE HACÍA ANTES:
-    document.querySelectorAll('.main-section, .subsection').forEach(section => {
-        section.style.display = 'none';
-    });
-  
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
