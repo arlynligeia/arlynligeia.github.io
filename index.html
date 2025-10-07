@@ -3332,13 +3332,22 @@ function formatNumberWithCommas(number) {
 }
 // FUNCION SHIPPING  
 function updateShippingTotal() {
-    const shippingTotal = cart.reduce((sum, item) => {
-        return sum + (parseFloat(item.shipping) * item.quantity);
-    }, 0);
-    
-    document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
-        formatNumberWithCommas(shippingTotal.toFixed(2));
+const shippingTotal = cart.reduce((sum, item) => {
+return sum + (parseFloat(item.shipping) * item.quantity);
+}, 0);
+document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
+formatNumberWithCommas(shippingTotal.toFixed(2));
 }
+// FUNCION SUBTOTAL
+function updateSubtotal() {
+const subtotal = cart.reduce((sum, item) => {
+return sum + parseFloat(item.totalprice);
+}, 0);
+document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
+formatNumberWithCommas(subtotal.toFixed(2));
+}
+
+  
 function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
@@ -3408,6 +3417,7 @@ productRow.innerHTML = `
 cartBody.insertBefore(productRow, dividers[1]);
 });
   updateShippingTotal();
+  updateSubtotal(); // ← AGREGAR ESTA LÍNEA
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
