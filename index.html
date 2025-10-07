@@ -3485,16 +3485,22 @@ document.getElementById('cart-full-buy').addEventListener('click', function(e) {
     updateOrderSummary();
     console.log('🛍️ Pasando al checkout con', cart.length, 'productos');
     
-    // Navegar a shipping information
-    window.location.hash = '#shippinginformation';
+    // Navegar a shipping information - PRIMERO INTENTA CON SCROLL
+    const shippingSection = document.getElementById('shippinginformation');
+    if (shippingSection) {
+        shippingSection.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        // Si no funciona el scroll, usa hash
+        window.location.hash = 'shippinginformation';
+    }
 });
 
 // También actualizar cuando se cargue la página de shipping information
-if (window.location.hash === '#shippinginformation' || 
-    window.location.hash === '#cart-shippinginformation') {
+if (window.location.hash === '#shippinginformation') {
     updateOrderSummary();
 }
 // ========== FIN DEL CÓDIGO PARA BUY BUTTON ==========
+  
 // Inicializar
 if (cart.length > 0) {
 updateCartDisplay();
