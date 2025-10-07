@@ -3312,20 +3312,15 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 
-    // =============================================
-    // 🔥 AGREGAR ESTA FUNCIÓN - ADD TO CART
-    // =============================================
+    // FUNCIÓN AGREGAR AL CARRITO
     function addToCart(product) {
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
         
-        // Verificar si el producto ya está en el carrito
         const existingProduct = cart.find(item => item.id === product.id);
         
         if (existingProduct) {
-            // Si ya existe, aumentar la cantidad
             existingProduct.quantity += 1;
         } else {
-            // Si no existe, agregar nuevo producto
             cart.push({
                 id: product.id,
                 name: product.name,
@@ -3335,56 +3330,57 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        // Guardar en localStorage
         localStorage.setItem('cart', JSON.stringify(cart));
-        
-        // Opcional: Mostrar mensaje
-        alert('Producto agregado: ' + product.name);
+        updateCartTable();
     }
 
-// BOTÓN CART
-document.querySelectorAll('a.cart-button').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        // SOLO OCULTAR SECCIONES PRINCIPALES
-        document.querySelectorAll('.main-section, .subsection').forEach(section => {
-            section.style.display = 'none';
+    // FUNCIÓN ACTUALIZAR TABLA
+    function updateCartTable() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const tableBody = document.querySelector('.cartfull-table-wrapper-body');
+        const bottomDivider = document.querySelectorAll('.cartfull-table-wrapper-body-divider')[1];
+        
+        // LIMPIAR PRODUCTOS EXISTENTES
+        const allRows = tableBody.querySelectorAll('tr');
+        allRows.forEach(row => {
+            if (!row.classList.contains('cartfull-table-wrapper-body-divider') && 
+                !row.classList.contains('cartfull-table-wrapper-body-row')) {
+                row.remove();
+            }
         });
-        // MOSTRAR AMBOS CARRITOS (PARA DEBUG)
-        document.getElementById('cartempty').style.display = 'block';
-        document.getElementById('cartfull').style.display = 'block';
-    });
-});
 
-// =============================================
-// 🔥 EVENT LISTENER PARA TODOS LOS BOTONES ADD TO CART
-// =============================================
-document.querySelectorAll('.button-addtocart').forEach(button => {
-    button.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        // Obtener datos del producto
-        const productId = this.getAttribute('data-product');
-        const productName = this.getAttribute('data-product');
-        const productPrice = parseFloat(this.getAttribute('data-unitprice'));
-        const productImage = this.getAttribute('data-image');
-        
-        // Crear objeto producto
-        const product = {
-            id: productId,
-            name: productName,
-            price: productPrice,
-            image: productImage
-        };
-        
-        // Agregar al carrito
-        addToCart(product);
+        // AGREGAR PRODUCTOS A LA TABLA
+        cart.forEach(product => {
+            const total = product.price * product.quantity;
+            const productRow = document.createElement('tr');
+            productRow.innerHTML = `
+                <td><img src="${product.image}" style="width: 50px; height: 50px;"></td>
+                <td>${product.name}</td>
+                <td>${product.quantity}</td>
+                <td>$${product.price.toFixed(2)}</td>
+                <td>$${total.toFixed(2)}</td>
+                <td><button class="remove-product">×</button></td>
+            `;
+            tableBody.insertBefore(productRow, bottomDivider);
+        });
+    }
+
+    // BOTONES ADD TO CART
+    document.querySelectorAll('.button-addtocart').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const product = {
+                id: this.getAttribute('data-product'),
+                name: this.getAttribute('data-product'),
+                price: parseFloat(this.getAttribute('data-unitprice')),
+                image: this.getAttribute('data-image')
+            };
+            addToCart(product);
+        });
     });
-});
 
 });
 </script>
-<!-- FIN SCRIP: CARRITO -->
   
   
 
