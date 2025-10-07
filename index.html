@@ -2215,6 +2215,13 @@ ADD TO CART
 </section>
 <!-- END QUASAR EXECUTIVE PRODUCER -->
 
+
+
+
+
+
+
+  
 <!-- GALAXY EXECUTIVE PRODUCER -->
 <section class="main-section" id="galaxyexecutiveproducer">
 <div class="galaxyexecutiveproducer-container">
@@ -2242,11 +2249,11 @@ Cosmic/Psychological Horror</p>
 <div>$ 7,500.00</div>
 </div> 
 <div class="galaxyexecutiveproducer-columns-grid-acquire-buttons">
-<button class="galaxyexecutiveproducer-columns-grid-acquire-button-addtocart"
+<button class="button-addtocart"
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Galaxy Executive Producer"
 data-price="7,500.00"
-data-shipping="0.00">
+data-shipping="10.00">
 ADD TO CART
 </button>
 <button class="galaxyexecutiveproducer-columns-grid-acquire-button-share">SHARE</button>  
@@ -2327,13 +2334,6 @@ ADD TO CART
 </div>
 </section>
 <!-- END GALAXY EXECUTIVE PRODUCER -->
-
-
-
-
-
-
-
   
 <!-- COSMOS EXECUTIVE PRODUCER -->
 <section class="main-section" id="cosmosexecutiveproducer">
@@ -2366,7 +2366,7 @@ Cosmic/Psychological Horror</p>
 data-image="assets/assets/Primer Afiche Alone Cuadrado.png"
 data-product="Cosmos Executive Producer"
 data-price="10,000.00"
-data-shipping="0.00">
+data-shipping="10.00">
 ADD TO CART
 </button>
 <button class="cosmosexecutiveproducer-columns-grid-acquire-button-share">SHARE</button>  
@@ -3330,26 +3330,32 @@ function formatNumberWithCommas(number) {
     integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
     return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
 }
-  
+// FUNCION SHIPPING  
+function updateShippingTotal() {
+    const shippingTotal = cart.reduce((sum, item) => {
+        return sum + (parseFloat(item.shipping) * item.quantity);
+    }, 0);
+    
+    document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
+        formatNumberWithCommas(shippingTotal.toFixed(2));
+}
 function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
 existingProduct.quantity += 1;
 // FÓRMULA SIMPLE SIN COMPLICACIONES
-       const unitPrice = existingProduct.price; // "10,000.00"
-        const quantity = existingProduct.quantity; // 2
-        // Quitar solo la coma, mantener puntos decimales
-existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();
-
-    
+const unitPrice = existingProduct.price; // "10,000.00"
+const quantity = existingProduct.quantity; // 2
+existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
 } else { 
 cart.push({
 image: productData.image,
 product: productData.product,
 quantity: 1,
 price: productData.price,
-totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString()
+totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
+shipping: productData.shipping || '0' // ← AGREGAR ESTA LÍNEA
 });
 }
 localStorage.setItem('cart', JSON.stringify(cart));
@@ -3401,6 +3407,7 @@ productRow.innerHTML = `
 `;
 cartBody.insertBefore(productRow, dividers[1]);
 });
+  updateShippingTotal();
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
