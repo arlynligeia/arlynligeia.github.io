@@ -1436,6 +1436,8 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 
 
 
+
+
   
 <!-- COMET SPONSOR -->
 <section class="main-section" id="cometsponsor">
@@ -3415,31 +3417,31 @@ document.getElementById('cartfull').style.display = 'block';
 });
 });
 
-  // =============================================
-    // 🔥 AGREGAR EVENT LISTENER PARA BOTONES ADD TO CART
-    // =============================================
-    document.querySelectorAll('.add-to-cart-button').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Obtener datos del producto
-            const productId = this.getAttribute('data-product-id');
-            const productName = this.getAttribute('data-product-name');
-            const productPrice = parseFloat(this.getAttribute('data-product-price'));
-            const productImage = this.getAttribute('data-product-image');
-            
-            // Crear objeto producto
-            const product = {
-                id: productId,
-                name: productName,
-                price: productPrice,
-                image: productImage
-            };
-            
-            // Agregar al carrito
-            addToCart(product);
-  });
+// =============================================
+// 🔥 EVENT LISTENER PARA TODOS LOS BOTONES ADD TO CART
+// =============================================
+document.querySelectorAll('.button-addtocart').forEach(button => {
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Obtener datos del producto
+        const productId = this.getAttribute('data-product');
+        const productName = this.getAttribute('data-product');
+        const productPrice = parseFloat(this.getAttribute('data-unitprice'));
+        const productImage = this.getAttribute('data-image');
+        
+        // Crear objeto producto
+        const product = {
+            id: productId,
+            name: productName,
+            price: productPrice,
+            image: productImage
+        };
+        
+        // Agregar al carrito
+        addToCart(product);
     });
+});
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
