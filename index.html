@@ -2451,7 +2451,7 @@ ADD TO CART
 <div class="cart-container">
 <h2 class="cart-title"><a href="#cart">YOUR CART</a></h2>  
 <!-- CARRITO VACIO -->
-<div class="cart-empty" id="cart-empty" style="display: none;">
+<div class="cart-empty" id="cartempty" style="display: none;">
 <!-- CONTENEDOR DE TEXTO -->  
 <div class="cart-empty-noitems">  
 <p class="cart-empty-noitems-text">Your cart is empty</p>
@@ -2463,7 +2463,7 @@ ADD TO CART
 </div>
 </div>
 <!-- CARRITO LLENO -->
-<div class="cart-full" id="cart-full" style="display: none;">
+<div class="cart-full" id="cartfull" style="display: none;">
 <!-- CONTENEDOR: TABLA -->  
 <div class="cart-full-table">
 <table class="cart-full-table-wrapper">
@@ -3313,11 +3313,11 @@ cartSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // VERIFICAR ESTADO DEL CARRITO
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 if (cart.length === 0) {
-document.getElementById('cart-empty').style.display = 'block';
-document.getElementById('cart-full').style.display = 'none';
+document.getElementById('cartempty').style.display = 'block';
+document.getElementById('cartfull').style.display = 'none';
 } else {
-document.getElementById('cart-empty').style.display = 'none';
-document.getElementById('cart-full').style.display = 'block';
+document.getElementById('cartempty').style.display = 'none';
+document.getElementById('cartfull').style.display = 'block';
 }
 }
 });
