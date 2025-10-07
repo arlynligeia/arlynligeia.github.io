@@ -3317,7 +3317,7 @@ allRows.forEach(row => {
 if (!row.classList.contains('cart-full-table-wrapper-body-divider') && 
 !row.querySelector('.cart-full-table-wrapper-body-row-cell-subtotal') &&
 !row.querySelector('.cart-full-table-wrapper-body-row-cell-shipping') &&
-!row.querySelector('.cart-full-table-wrapper-body-row-cell-total')) {
+!row.querySelector('.cart-full-table-wrapper-body-row-cell-totalend')) {
 row.remove();
 }
 });
@@ -3362,6 +3362,11 @@ productRow.innerHTML = `
 `;
 cartBody.insertBefore(productRow, topDivider.nextSibling);
 });
+updateShippingTotal();
+}
+function updateShippingTotal() {
+const shippingTotal = cart.reduce((sum, item) => sum + parseFloat(item.shipping), 0);
+document.querySelector('.cart-full-table-wrapper-body-row-cell-shippingprice-amount').textContent = shippingTotal.toFixed(2);
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('[class*="-button-addtocart"]').forEach(button => {
@@ -3369,7 +3374,7 @@ button.addEventListener('click', function() {
 const productData = {
 image: this.getAttribute('data-image'),
 product: this.getAttribute('data-product'),
-unitprice: this.getAttribute('data-unitprice')
+unitprice: this.getAttribute('data-unitprice'),
 shipping: this.getAttribute('data-shipping')
 };
 addToCart(productData);
