@@ -3340,7 +3340,7 @@ existingProduct.quantity += 1;
        const unitPrice = existingProduct.price; // "10,000.00"
         const quantity = existingProduct.quantity; // 2
         // Quitar solo la coma, mantener puntos decimales
-     existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toString();
+existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();
 
     
 } else { 
@@ -3349,7 +3349,7 @@ image: productData.image,
 product: productData.product,
 quantity: 1,
 price: productData.price,
-totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toString()
+totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString()
 });
 }
 localStorage.setItem('cart', JSON.stringify(cart));
