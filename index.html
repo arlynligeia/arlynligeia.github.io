@@ -2546,7 +2546,8 @@ ADD TO CART
 <button class="cart-full-button-back" onclick="history.back()">BACK</button>
 <a class="cart-full-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="cart-full-button-clear" id="cart-full-clear">CLEAR CART</button>
-<button class="cart-full-button-buy" id="cart-full-buy" type="button">BUY</button>
+<!-- VUELVE A SER ENLACE, NO BOTÓN -->
+<a class="cart-full-button-buy" id="cart-full-buy" href="#shippinginformation">BUY</a>
 </div>
 </div>
 </div>
@@ -3471,24 +3472,18 @@ function updateOrderSummary() {
     console.log('📦 Resumen de orden actualizado:', { subtotal, shippingTotal, totalFinal });
 }
 
-// BOTÓN BUY - Actualizar datos antes de navegar
+// BOTÓN BUY - Solo actualizar datos
 document.getElementById('cart-full-buy').addEventListener('click', function(e) {
     if (cart.length === 0) {
+        e.preventDefault();
         alert('Your cart is empty. Please add products before proceeding to checkout.');
         return;
     }
     
+    // Solo actualizar los datos, la navegación la hace tu sistema existente
     updateOrderSummary();
     console.log('🛍️ Pasando al checkout con', cart.length, 'productos');
-    
-    // ✅ SOLUCIÓN DEFINITIVA
-    window.location.href = '#shippinginformation';
 });
-
-// También actualizar cuando se cargue la página de shipping information
-if (window.location.hash === '#shippinginformation') {
-    updateOrderSummary();
-}
 // ========== FIN DEL CÓDIGO PARA BUY BUTTON ==========
   
 // Inicializar
