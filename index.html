@@ -3312,7 +3312,7 @@ console.log('✅ Navegación de tienda configurada correctamente');
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 
- // =============================================
+    // =============================================
     // 🔥 AGREGAR ESTA FUNCIÓN - ADD TO CART
     // =============================================
     function addToCart(product) {
@@ -3342,79 +3342,18 @@ document.addEventListener('DOMContentLoaded', function() {
         alert('Producto agregado: ' + product.name);
     }
 
-    // =============================================
-    // 🔥 AGREGAR ESTA FUNCIÓN - UPDATE CART TABLE
-    // =============================================
-    function updateCartTable() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const tableBody = document.querySelector('.cartfull-table-wrapper-body');
-        
-        // Encontrar donde insertar los productos
-        const bottomDivider = document.querySelectorAll('.cartfull-table-wrapper-body-divider')[1];
-        
-        // Limpiar productos existentes
-        const allRows = tableBody.querySelectorAll('tr');
-        allRows.forEach(row => {
-            if (!row.classList.contains('cartfull-table-wrapper-body-divider') && 
-                !row.classList.contains('cartfull-table-wrapper-body-row')) {
-                row.remove();
-            }
-        });
-
-        // Agregar cada producto a la tabla
-        cart.forEach(product => {
-            const productRow = document.createElement('tr');
-            productRow.className = 'cartfull-table-wrapper-body-product';
-            
-            const total = product.price * product.quantity;
-            
-            productRow.innerHTML = `
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <img src="${product.image}" alt="${product.name}" style="width: 50px; height: 50px;">
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">${product.name}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">${product.quantity}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">$${product.price.toFixed(2)}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">$${total.toFixed(2)}</td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <button class="remove-product" data-id="${product.id}">×</button>
-                </td>
-            `;
-            
-            // Insertar antes de la línea divisoria inferior
-            tableBody.insertBefore(productRow, bottomDivider);
-        });
-    }
-
-    // =============================================
-    // 🔥 AGREGAR ESTO EN LA PARTE DEL CARRITO LLENO
-    // =============================================
-    // DENTRO DEL "else" DEL BOTÓN CART, AGREGA:
-    // updateCartTable(); // Actualizar la tabla con productos
-
 // BOTÓN CART
 document.querySelectorAll('a.cart-button').forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-// 2. VERIFICAR SI HAY PRODUCTOS EN EL CARRITO
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// 3. MOSTRAR LA SECCIÓN CORRECTA
-if (cart.length === 0) {
-// MOSTRAR CARRITO VACÍO
-document.getElementById('cartempty').style.display = 'block';
-document.getElementById('cartfull').style.display = 'none';
-} else {
-// MOSTRAR CARRITO LLENO  
-document.getElementById('cartempty').style.display = 'none';
-document.getElementById('cartfull').style.display = 'block';
-// 🔥 AGREGAR ESTA LÍNEA
-    updateCartTable(); // Actualizar la tabla con productos
-}
-});
+    button.addEventListener('click', function(e) {
+        e.preventDefault();
+        // SOLO OCULTAR SECCIONES PRINCIPALES
+        document.querySelectorAll('.main-section, .subsection').forEach(section => {
+            section.style.display = 'none';
+        });
+        // MOSTRAR AMBOS CARRITOS (PARA DEBUG)
+        document.getElementById('cartempty').style.display = 'block';
+        document.getElementById('cartfull').style.display = 'block';
+    });
 });
 
 // =============================================
@@ -3442,10 +3381,10 @@ document.querySelectorAll('.button-addtocart').forEach(button => {
         addToCart(product);
     });
 });
+
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
-
   
   
 
