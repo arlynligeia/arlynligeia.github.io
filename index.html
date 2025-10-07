@@ -3314,203 +3314,78 @@ console.log('✅ Navegación de tienda configurada correctamente');
   
   
 
-
-
-
-
-
-  
 <script>
+// Script para agregar productos al carrito
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🛒 Carrito iniciado');
-    // Almacenamiento local del carrito
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Función de utilidad para parsear el precio, eliminando comas si las hubiera (ej. "10,000.00" -> 10000.00)
-    function parsePrice(priceString) {
-        return parseFloat(priceString.replace(/,/g, ''));
-    }
-
-    // Función para agregar un producto al carrito
-    function addToCart(productData) {
-        console.log('➕ Agregando al carrito:', productData.product);
-        
-        // Convertir el precio unitario a número y manejar el formato (por si viene con comas)
-        const unitPriceNum = parsePrice(productData.unitprice);
-        
-        const existingProduct = cart.find(item => item.product === productData.product);
-
-        if (existingProduct) {
-            existingProduct.quantity += 1;
-            // Recalcular el total del ítem con el nuevo precio parseado
-            existingProduct.total = (existingProduct.quantity * unitPriceNum).toFixed(2);
-        } else {
-            cart.push({
-                image: productData.image,
-                product: productData.product,
-                quantity: 1,
-                // Guardar el unitprice parseado como cadena para mantener el formato si es necesario, 
-                // o usar directamente el formato del HTML si se prefiere. Usaremos el valor parseado para cálculos.
-                unitprice: unitPriceNum.toFixed(2), 
-                shipping: productData.shipping, 
-                total: unitPriceNum.toFixed(2)
-            });
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
-        
-        // Asumiendo que tienes un ID 'cart-empty' y 'cartfull'
-        // Si no tienes 'cart-empty', estas líneas pueden causar un error de consola
-        // document.getElementById('cart-empty').style.display = 'none';
-        // document.getElementById('cartfull').style.display = 'block'; 
-    }
-
-    // Función para actualizar la tabla del carrito
-    function updateCartDisplay() {
-        // Selector corregido a .cartfull-table-wrapper-body
-        const cartBody = document.querySelector('.cartfull-table-wrapper-body'); 
-        
-        // Limpiar las filas de productos existentes (las que están entre los divisores)
-        const topDivider = cartBody.querySelector('.cartfull-table-wrapper-body-divider:first-child');
-        const bottomDivider = cartBody.querySelector('.cartfull-table-wrapper-body-divider:last-child');
-        
-        let currentRow = topDivider.nextElementSibling;
-        while (currentRow && currentRow !== bottomDivider) {
-            const nextRow = currentRow.nextElementSibling;
-            // Nos aseguramos de remover solo las filas de productos, no las de subtotales/total
-            if (!currentRow.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal')) {
-                currentRow.remove();
-            }
-            currentRow = nextRow;
-        }
-
-        // INSERTAR PRODUCTOS
-        cart.forEach((item) => {
-            const unitPriceDisplay = parsePrice(item.unitprice).toFixed(2);
-            const totalDisplay = parsePrice(item.total).toFixed(2);
-            
-            const productRow = document.createElement('tr');
-            // Clase corregida a cartfull-table-wrapper-body-row
-            productRow.className = 'cartfull-table-wrapper-body-row'; 
-            productRow.innerHTML = `
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-image">
-                        <img src="${item.image}" alt="${item.product}" width="50">
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-name">
-                        <span>${item.product}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-quantity">
-                        <span>${item.quantity}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-unitprice">
-                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-symbol">$</span>
-                        <span class="cartfull-table-wrapper-body-row-cell-unitprice-amount">${unitPriceDisplay}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-totalprice">
-                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-symbol">$</span>
-                        <span class="cartfull-table-wrapper-body-row-cell-totalprice-amount">${totalDisplay}</span>
-                    </div>
-                </td>
-                <td class="cartfull-table-wrapper-body-row-cell">
-                    <div class="cartfull-table-wrapper-body-row-cell-button">
-                        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
-                    </div>
-                </td>
-            `;
-            // Insertar la fila justo antes del divisor inferior
-            cartBody.insertBefore(productRow, bottomDivider);
-        });
-
-        // Asegurarse de que el botón "clear cart" tenga el listener correcto
-        document.getElementById('cart-full-clear').onclick = clearCart;
-        
-        updateTotals();
-    }
-
-    // Función para actualizar Subtotal, Shipping y Total general
-    function updateTotals() {
-        let subtotal = 0;
-        let shippingTotal = 0;
-
-        cart.forEach(item => {
-            // Usar parsePrice() en el total del ítem para los cálculos
-            subtotal += parsePrice(item.total); 
-            // Sumar el shipping por ítem
-            shippingTotal += parsePrice(item.shipping); 
-        });
-
-        const total = subtotal + shippingTotal;
-        
-        // Selectores corregidos para actualizar los montos
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = subtotal.toFixed(2);
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = shippingTotal.toFixed(2);
-        document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = total.toFixed(2);
-    }
+    const addToCartButtons = document.querySelectorAll('.button-addtocart');
     
-    // Función para limpiar el carrito (asociada al botón "CLEAR CART")
-    window.clearCart = function() {
-        if (confirm('¿Estás seguro de que deseas vaciar el carrito?')) {
-            cart = [];
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartDisplay();
-            // Lógica para mostrar carrito vacío si aplica
-            // document.getElementById('cart-empty').style.display = 'block';
-            // document.getElementById('cartfull').style.display = 'none';
-            console.log('🗑️ Carrito vaciado.');
-        }
-    }
-
-
-    // Lógica para escuchar los botones "ADD TO CART"
-    document.querySelectorAll('[class*="-button-addtocart"]').forEach(button => {
+    addToCartButtons.forEach(button => {
         button.addEventListener('click', function() {
-            // Asegúrate de que los atributos data- están bien definidos en el HTML del producto
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                // El HTML del producto de ejemplo usaba data-price, no data-unitprice.
-                // Lo corregimos aquí para usar data-unitprice en el HTML del producto o usar data-price.
-                // Asumo que corregirás el HTML del producto a data-unitprice para coincidir con tu script.
-                // Si tu HTML usa data-price, cámbialo aquí a this.getAttribute('data-price')
-                unitprice: this.getAttribute('data-unitprice'), 
-                shipping: this.getAttribute('data-shipping')
-            };
-            addToCart(productData);
+            const productImage = this.getAttribute('data-image');
+            const productName = this.getAttribute('data-product');
+            const productPrice = this.getAttribute('data-price');
+            
+            addProductToCart(productImage, productName, productPrice);
         });
     });
-
-    // Función para remover un producto (accesible globalmente para el onclick)
-    window.removeFromCart = function(productName) {
-        console.log('➖ Removiendo del carrito:', productName);
-        cart = cart.filter(item => item.product !== productName);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplay();
+    
+    function addProductToCart(image, name, price) {
+        const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+        const bottomDivider = document.querySelectorAll('.cartfull-table-wrapper-body-divider')[1];
         
-        // Lógica para mostrar carrito vacío si aplica
-        if (cart.length === 0) {
-            // document.getElementById('cartempty').style.display = 'block';
-            // document.getElementById('cartfull').style.display = 'none';
-        }
-    };
-
-    // Inicializar el carrito al cargar la página
-    if (cart.length > 0) {
-        updateCartDisplay();
-        // document.getElementById('cartempty').style.display = 'none';
-        // document.getElementById('cartfull').style.display = 'block';
+        const newRow = document.createElement('tr');
+        newRow.className = 'cartfull-table-wrapper-body-row';
+        
+        const numericPrice = parseFloat(price.replace('$', '').replace(',', ''));
+        
+        newRow.innerHTML = `
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <img src="${image}" alt="${name}">
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">${name}</td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <input type="number" value="1" min="1" class="quantity-input">
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                $<span class="unit-price">${numericPrice.toFixed(2)}</span>
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                $<span class="product-total">${numericPrice.toFixed(2)}</span>
+            </td>
+            <td class="cartfull-table-wrapper-body-row-cell">
+                <button class="remove-product">×</button>
+            </td>
+        `;
+        
+        cartBody.insertBefore(newRow, bottomDivider);
+        
+        const quantityInput = newRow.querySelector('.quantity-input');
+        quantityInput.addEventListener('change', function() {
+            updateProductTotal(newRow);
+        });
+        
+        const removeButton = newRow.querySelector('.remove-product');
+        removeButton.addEventListener('click', function() {
+            newRow.remove();
+        });
+    }
+    
+    function updateProductTotal(row) {
+        const quantityInput = row.querySelector('.quantity-input');
+        const unitPriceElement = row.querySelector('.unit-price');
+        const productTotalElement = row.querySelector('.product-total');
+        
+        const quantity = parseInt(quantityInput.value);
+        const unitPrice = parseFloat(unitPriceElement.textContent);
+        const total = quantity * unitPrice;
+        
+        productTotalElement.textContent = total.toFixed(2);
     }
 });
 </script>
+
+
+  
 
 
 
