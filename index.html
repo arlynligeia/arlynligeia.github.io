@@ -3300,43 +3300,6 @@ console.log('✅ Navegación de tienda configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-  // STOCK DE PRODUCTOS (interno - no visible para usuarios)
-const productStock = {
-    "Comet Sponsor": 288,
-    "Planet Sponsor": 120,
-    "Star Sponsor": 48,
-    "Comet Sponsor Brand": 24,
-    "Planet Sponsor Brand": 8,
-    "Star Sponsor Brand": 2,
-    "Nebula Executive Producer": 1,
-    "Pulsar Executive Producer": 1,
-    "Black Hole Executive Producer": 1,
-    "Quasar Executive Producer": 1,
-    "Galaxy Executive Producer": 1,
-    "Cosmos Executive Producer": 1
-};
-  // FUNCIÓN PARA ACTUALIZAR BOTONES (habilitar/deshabilitar)
-function updateAddToCartButtons() {
-    document.querySelectorAll('.button-addtocart').forEach(button => {
-        const productName = button.getAttribute('data-product');
-        const cartItem = cart.find(item => item.product === productName);
-        const currentQuantity = cartItem ? cartItem.quantity : 0;
-        const maxStock = productStock[productName] || 0;
-        
-        // Deshabilitar si no hay stock disponible
-        if (currentQuantity >= maxStock) {
-            button.disabled = true;
-            button.style.opacity = '0.5';
-            button.style.cursor = 'not-allowed';
-        } else {
-            button.disabled = false;
-            button.style.opacity = '1';
-            button.style.cursor = 'pointer';
-        }
-    });
-}
-  
 // FUNCION  
 function formatNumberWithCommas(number) {
 let parts = number.toString().split('.');
@@ -3371,23 +3334,10 @@ formatNumberWithCommas(totalFinal.toFixed(2));
 }
 // FUNCION AGREGAR PRODUCTOS
 function addToCart(productData) {
-  
-  // VALIDAR STOCK ANTES DE AGREGAR - VERSIÓN SIMPLE
-const cartItem = cart.find(item => item.product === productData.product);
-const currentQuantity = cartItem ? cartItem.quantity : 0;
-const maxStock = productStock[productData.product];
-
-// Solo validar si el producto existe en productStock
-if (maxStock !== undefined && currentQuantity >= maxStock) {
-    alert('❌ No hay stock disponible para ' + productData.product);
-    return;
-}
-    
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
-existingProduct.quantity += 1;
-  
+existingProduct.quantity += 1; 
 // FÓRMULA SIMPLE SIN COMPLICACIONES
 const unitPrice = existingProduct.price;
 const quantity = existingProduct.quantity;
@@ -3404,7 +3354,6 @@ shipping: productData.shipping || '0' // ← AGREGAR ESTA LÍNEA
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
- updateAddToCartButtons(); // ← FALTA ESTA LÍNEA - AGREGALA
 }
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -3452,10 +3401,9 @@ productRow.innerHTML = `
 `;
 cartBody.insertBefore(productRow, dividers[1]);
 });
-  updateShippingTotal();
-  updateSubtotal(); 
-    updateTotalFinal();
-     updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
+updateShippingTotal();
+updateSubtotal(); 
+updateTotalFinal();
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
@@ -3479,7 +3427,6 @@ updateCartDisplay();
 if (cart.length > 0) {
 updateCartDisplay();
 }
-  updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
 });
 </script>
 
