@@ -3164,7 +3164,7 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
 const mainSection = document.getElementById(sectionId);
