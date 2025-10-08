@@ -3217,16 +3217,7 @@ showOnlyOneSection(hash);
 }
 checkInitialHash();
 // ✅ OBLIGAR A OCULTAR CARRITO SI NO SE MOSTRÓ NINGUNA SECCIÓN
-setTimeout(() => {
-    
-  const anySectionVisible = document.querySelector('.main-section[style*="display: block"]');
-    if (!anySectionVisible) {
-        document.querySelectorAll('.cartempty-section, .cartfull-section').forEach(section => {
-            section.style.display = 'none';
-        });
-    }
-}, 100);
-  
+setTimeout(() => {  
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
