@@ -3315,7 +3315,41 @@ console.log('✅ Navegación de tienda configurada correctamente');
   
 
 
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // FUNCIÓN ÚNICA PARA EL BOTÓN CART
+    function setupCartButton() {
+        const cartButtons = document.querySelectorAll('a.cart-button');
+        
+        cartButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Ocultar todas las secciones principales
+                document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Mostrar la sección de carrito correspondiente
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartEmpty = document.getElementById('cartempty');
+                const cartFull = document.getElementById('cartfull');
+                
+                if (cart.length === 0) {
+                    cartEmpty.style.display = 'block';
+                    cartFull.style.display = 'none';
+                } else {
+                    cartEmpty.style.display = 'none';
+                    cartFull.style.display = 'block';
+                }
+            });
+        });
+    }
+    
+    // Inicializar el botón
+    setupCartButton();
+});
+</script>
 
 
 
