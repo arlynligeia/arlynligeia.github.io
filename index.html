@@ -3572,6 +3572,39 @@ if (e.target === this) {
 this.style.display = 'none';
 }
 }); 
+
+
+  // 13. BOTÓN: GO TO CART (FUNCIONALIDAD IDÉNTICA AL BOTÓN CART)
+function setupGoToCartButton() {
+    const goToCartButtons = document.querySelectorAll('a.cosmosexecutiveproducer-button-gotocart');
+    goToCartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // MISMO CÓDIGO QUE EL BOTÓN CART
+            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartEmpty = document.getElementById('cartempty');
+            const cartFull = document.getElementById('cartfull');
+            
+            if (cart.length === 0) {
+                cartEmpty.style.display = 'block';
+                cartFull.style.display = 'none';
+                window.location.hash = 'cartempty';
+            } else {
+                cartEmpty.style.display = 'none';
+                cartFull.style.display = 'block';
+                window.location.hash = 'cartfull';
+            }
+        });
+    });
+}
+
+
+  
  
 // 12. BOTÓN: CART
 function setupCartButton() {
@@ -3611,37 +3644,9 @@ updateCartDisplay();
 }
   updateAddToCartButtons();
 
-  // 13. BOTÓN: GO TO CART (FUNCIONALIDAD IDÉNTICA AL BOTÓN CART)
-function setupGoToCartButton() {
-    const goToCartButtons = document.querySelectorAll('a.cosmosexecutiveproducer-button-gotocart');
-    goToCartButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // MISMO CÓDIGO QUE EL BOTÓN CART
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartEmpty = document.getElementById('cartempty');
-            const cartFull = document.getElementById('cartfull');
-            
-            if (cart.length === 0) {
-                cartEmpty.style.display = 'block';
-                cartFull.style.display = 'none';
-                window.location.hash = 'cartempty';
-            } else {
-                cartEmpty.style.display = 'none';
-                cartFull.style.display = 'block';
-                window.location.hash = 'cartfull';
-            }
-        });
-    });
-}
 
-// INICIALIZAR EL BOTÓN GO TO CART
-setupGoToCartButton();
+
+
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
