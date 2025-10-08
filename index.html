@@ -3366,9 +3366,7 @@ shipping: productData.shipping || '0'
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-  
-      updateCartSections(); // ← AGREGAR ESTA LÍNEA
-  
+updateCartSections(); 
 // MOSTRAR NOTIFICACIÓN
 showNotification('Product added to cart successfully!');
 }
@@ -3494,44 +3492,37 @@ cart = cart.filter(item => item.product !== productName);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-
-      updateCartSections(); // ← AGREGAR ESTA LÍNEA
+updateCartSections();
 };
-
-
 // FUNCIÓN ACTUALIZAR VISUALIZACIÓN CARRITO (EMPTY/FULL)
 function updateCartSections() {
-    const cartEmpty = document.getElementById('cartempty');
-    const cartFull = document.getElementById('cartfull');
-    
-    if (cart.length === 0) {
-        // MOSTRAR CARRITO VACÍO
-        if (cartEmpty) cartEmpty.style.display = 'block';
-        if (cartFull) cartFull.style.display = 'none';
-    } else {
-        // MOSTRAR CARRITO LLENO
-        if (cartEmpty) cartEmpty.style.display = 'none';
-        if (cartFull) cartFull.style.display = 'block';
-        updateCartDisplay(); // Actualizar la tabla con productos
-    }
+const cartEmpty = document.getElementById('cartempty');
+const cartFull = document.getElementById('cartfull');
+if (cart.length === 0) {
+// MOSTRAR CARRITO VACÍO
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+} else {
+// MOSTRAR CARRITO LLENO
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+updateCartDisplay(); // Actualizar la tabla con productos
 }
-
+}
 // FUNCIÓN BOTÓN CART (TOGGLE EMPTY/FULL)
 function setupCartButton() {
-    document.querySelectorAll('a.cart-button').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            // 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
-           document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            // 2. MOSTRAR LA SECCIÓN CORRECTA DEL CARRITO
-            updateCartSections();
-        });
-    });
+document.querySelectorAll('a.cart-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// 2. MOSTRAR LA SECCIÓN CORRECTA DEL CARRITO
+updateCartSections();
+});
+});
 }
-
-  
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
 button.addEventListener('click', function() {
@@ -3563,9 +3554,7 @@ cart = [];
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-
-   updateCartSections(); // ← AGREGAR ESTA LÍNEA
-  
+updateCartSections(); // ← AGREGAR ESTA LÍNEA  
 // OCULTAR MODAL
 document.getElementById('clearCartModal').style.display = 'none';
 });
@@ -3580,11 +3569,12 @@ if (cart.length > 0) {
 updateCartDisplay();
 }
 updateAddToCartButtons();
-  updateCartSections(); // ← AGREGAR ESTA LÍNEA
-setupCartButton(); // ← AGREGAR ESTA LÍNEA
 
-   
+setupCartButton();
 
+  // OCULTAR CARRITO AL INICIAR (MANTENER ESTO)
+document.querySelectorAll('.cartempty-section, .cartfull-section').forEach(section => {
+    section.style.display = 'none';
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->  
