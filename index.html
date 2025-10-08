@@ -3569,12 +3569,8 @@ if (cart.length > 0) {
 updateCartDisplay();
 }
 updateAddToCartButtons();
-
+updateCartSections(); 
 setupCartButton();
-
-  // OCULTAR CARRITO AL INICIAR (MANTENER ESTO)
-document.querySelectorAll('.cartempty-section, .cartfull-section').forEach(section => {
-    section.style.display = 'none';
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->  
