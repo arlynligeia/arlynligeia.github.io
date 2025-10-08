@@ -3482,7 +3482,45 @@ updateCartDisplay();
 if (cart.length > 0) {
 updateCartDisplay();
 }
-  updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
+updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
+};
+  
+
+  // BOTÓN CLEAR CART CON MODAL
+document.getElementById('cart-full-clear').addEventListener('click', function() {
+    if (cart.length > 0) {
+        // Mostrar modal
+        document.getElementById('clearCartModal').style.display = 'flex';
+    } else {
+        alert('The cart is already empty');
+    }
+});
+
+// EVENTOS DEL MODAL
+document.getElementById('modalCancel').addEventListener('click', function() {
+    document.getElementById('clearCartModal').style.display = 'none';
+});
+
+document.getElementById('modalConfirm').addEventListener('click', function() {
+    // Vaciar carrito
+    cart = [];
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    updateAddToCartButtons();
+    
+    // Ocultar modal
+    document.getElementById('clearCartModal').style.display = 'none';
+    
+    // Mensaje de confirmación
+    alert('🛒 Cart cleared successfully');
+});
+
+// Cerrar modal haciendo click fuera
+document.getElementById('clearCartModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        this.style.display = 'none';
+    }
+});
 });
 </script>
 
