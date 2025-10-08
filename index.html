@@ -3212,9 +3212,19 @@ if (hash.includes('-')) {
 goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
+  
+  }
+    } else {
+        // ✅ CUANDO NO HAY HASH, OCULTAR CARRITO Y MOSTRAR SECCIÓN POR DEFECTO
+        document.querySelectorAll('.cartempty-section, .cartfull-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        // Mostrar la sección por defecto que quieras, por ejemplo:
+        showOnlyOneSection('store'); // o 'home' según tu caso
+    }
 }
-}
-}
+
+
 checkInitialHash();
 // ✅ OBLIGAR A OCULTAR CARRITO SI NO SE MOSTRÓ NINGUNA SECCIÓN
 setTimeout(() => {  
