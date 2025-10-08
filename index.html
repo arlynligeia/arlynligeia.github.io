@@ -3295,99 +3295,37 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
 
 
-  
+<!-- SCRIP: CARRITO -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-// STOCK DE PRODUCTOS (interno - no visible para usuarios)
+// STOCK DE PRODUCTOS INTERNO
 const productStock = {
-    "Comet Sponsor": 288,
-    "Planet Sponsor": 120,
-    "Star Sponsor": 48,
-    "Comet Sponsor Brand": 24,
-    "Planet Sponsor Brand": 8,
-    "Star Sponsor Brand": 2,
-    "Nebula Executive Producer": 1,
-    "Pulsar Executive Producer": 1,
-    "Black Hole Executive Producer": 1,
-    "Quasar Executive Producer": 1,
-    "Galaxy Executive Producer": 1,
-    "Cosmos Executive Producer": 1
+"Comet Sponsor": 288,
+"Planet Sponsor": 120,
+"Star Sponsor": 48,
+"Comet Sponsor Brand": 24,
+"Planet Sponsor Brand": 8,
+"Star Sponsor Brand": 2,
+"Nebula Executive Producer": 1,
+"Pulsar Executive Producer": 1,
+"Black Hole Executive Producer": 1,
+"Quasar Executive Producer": 1,
+"Galaxy Executive Producer": 1,
+"Cosmos Executive Producer": 1
 };
-
-  // FUNCIÓN PARA ACTUALIZAR BOTONES (habilitar/deshabilitar)
-function updateAddToCartButtons() {
-    document.querySelectorAll('.button-addtocart').forEach(button => {
-        const productName = button.getAttribute('data-product');
-        const cartItem = cart.find(item => item.product === productName);
-        const currentQuantity = cartItem ? cartItem.quantity : 0;
-        const maxStock = productStock[productName] || 0;
-        
-        // Deshabilitar si no hay stock disponible
-        if (currentQuantity >= maxStock) {
-            button.disabled = true;
-            button.style.opacity = '0.5';
-            button.style.cursor = 'not-allowed';
-        } else {
-            button.disabled = false;
-            button.style.opacity = '1';
-            button.style.cursor = 'pointer';
-        }
-    });
-}
-
-
-  
-// FUNCION  
-function formatNumberWithCommas(number) {
-let parts = number.toString().split('.');
-let integerPart = parts[0];
-let decimalPart = parts[1] || '';
-integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
-}
-// FUNCION SHIPPING  
-function updateShippingTotal() {
-const shippingTotal = cart.reduce((sum, item) => {
-return sum + (parseFloat(item.shipping) * item.quantity);
-}, 0);
-document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
-formatNumberWithCommas(shippingTotal.toFixed(2));
-}
-// FUNCION SUBTOTAL
-function updateSubtotal() {
-const subtotal = cart.reduce((sum, item) => {
-return sum + parseFloat(item.totalprice);
-}, 0);
-document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
-formatNumberWithCommas(subtotal.toFixed(2));
-}
-// FUNCION TOTAL FINAL
-function updateTotalFinal() {
-const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
-const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
-const totalFinal = subtotal + shipping;
-document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
-formatNumberWithCommas(totalFinal.toFixed(2));
-}
-// FUNCION AGREGAR PRODUCTOS
+// 1. FUNCIONES PRINCIPALES DEL CARRITO
+// FUNCION AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productData) {
-
-    // VALIDAR STOCK ANTES DE AGREGAR
-    const cartItem = cart.find(item => item.product === productData.product);
-    const currentQuantity = cartItem ? cartItem.quantity : 0;
-    const maxStock = productStock[productData.product] || 0;
-    
-    if (currentQuantity >= maxStock) {
-        alert('❌ No hay stock disponible para ' + productData.product);
-        return; // No agregar al carrito
-    }
-    
-
-
-  
+// VALIDAR STOCK ANTES DE AGREGAR
+const cartItem = cart.find(item => item.product === productData.product);
+const currentQuantity = cartItem ? cartItem.quantity : 0;
+const maxStock = productStock[productData.product] || 0;
+if (currentQuantity >= maxStock) {
+alert('❌ No hay stock disponible para ' + productData.product);
+return; // No agregar al carrito
+}
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
@@ -3403,12 +3341,13 @@ product: productData.product,
 quantity: 1,
 price: productData.price,
 totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
-shipping: productData.shipping || '0' // ← AGREGAR ESTA LÍNEA
+shipping: productData.shipping || '0' 
 });
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 }
+// FUNCIÓN ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 // Limpiar solo las filas de productos
@@ -3458,8 +3397,68 @@ cartBody.insertBefore(productRow, dividers[1]);
 updateShippingTotal();
 updateSubtotal(); 
 updateTotalFinal();
-      updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
+updateAddToCartButtons();
 }
+// 2. FUNCIONES DE CÁLCULO Y ACTUALIZACIÓN
+// FUNCIÓN PARA ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
+function updateAddToCartButtons() {
+document.querySelectorAll('.button-addtocart').forEach(button => {
+const productName = button.getAttribute('data-product');
+const cartItem = cart.find(item => item.product === productName);
+const currentQuantity = cartItem ? cartItem.quantity : 0;
+const maxStock = productStock[productName] || 0;
+// DESABILITAR BOTON SI NO HAY STOK
+if (currentQuantity >= maxStock) {
+button.disabled = true;
+button.style.opacity = '0.5';
+button.style.cursor = 'not-allowed';
+} else {
+button.disabled = false;
+button.style.opacity = '1';
+button.style.cursor = 'pointer';
+}
+});
+}
+// FUNCIÓN ACTUALIZAR SUBTOTAL 
+function updateSubtotal() {
+const subtotal = cart.reduce((sum, item) => {
+return sum + parseFloat(item.totalprice);
+}, 0);
+document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
+formatNumberWithCommas(subtotal.toFixed(2));
+}
+// FUNCIÓN ACTUALIZAR SHIPPING
+function updateShippingTotal() {
+const shippingTotal = cart.reduce((sum, item) => {
+return sum + (parseFloat(item.shipping) * item.quantity);
+}, 0);
+document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
+formatNumberWithCommas(shippingTotal.toFixed(2));
+}
+// FUNCIÓN ACTUALIZAR TOTAL FINAL
+function updateTotalFinal() {
+const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
+const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
+const totalFinal = subtotal + shipping;
+document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
+formatNumberWithCommas(totalFinal.toFixed(2));
+}
+// 3. FUNCIONES UTILITARIAS
+// FUNCIÓN FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+let parts = number.toString().split('.');
+let integerPart = parts[0];
+let decimalPart = parts[1] || '';
+integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
+}
+// 4. FUNCIONES GLOBALES (FUERA DEL SCOPE PRINCIPAL)
+window.removeFromCart = function(productName) {
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+};
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
 button.addEventListener('click', function() {
@@ -3471,54 +3470,43 @@ shipping: this.getAttribute('data-shipping') || '0' // ← AGREGAR ESTA LÍNEA
 };
 addToCart(productData);
 });
-});
-window.removeFromCart = function(productName) {
-cart = cart.filter(item => item.product !== productName);
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-    updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
-};
-   // BOTÓN CLEAR CART CON MODAL
+});  
+// BOTÓN CLEAR CART CON MODAL
 document.getElementById('cart-full-clear').addEventListener('click', function() {
-    if (cart.length > 0) {
-        // Mostrar modal
-        document.getElementById('clearCartModal').style.display = 'flex';
-    } else {
-        alert('The cart is already empty');
-    }
+if (cart.length > 0) {
+// MOSTRAR MODAL
+document.getElementById('clearCartModal').style.display = 'flex';
+} else {
+alert('The cart is already empty');
+}
 });
-
 // EVENTOS DEL MODAL
 document.getElementById('modalCancel').addEventListener('click', function() {
-    document.getElementById('clearCartModal').style.display = 'none';
+document.getElementById('clearCartModal').style.display = 'none';
 });
-
 document.getElementById('modalConfirm').addEventListener('click', function() {
-    // Vaciar carrito
-    cart = [];
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
-    updateAddToCartButtons();
-    
-    // Ocultar modal
-    document.getElementById('clearCartModal').style.display = 'none';
-    
+// VACIAR CARRITO
+cart = [];
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+// OCULTAR MODAL
+document.getElementById('clearCartModal').style.display = 'none';
 });
-
-// Cerrar modal haciendo click fuera
+// CERRAR MODAL HACIENDO CLICK AFUERA
 document.getElementById('clearCartModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-        this.style.display = 'none';
-    }
-});
-// Inicializar
+if (e.target === this) {
+this.style.display = 'none';
+}
+}); 
+// INICIALIZAR
 if (cart.length > 0) {
 updateCartDisplay();
 }
-updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA 
+updateAddToCartButtons();
 });
 </script>
-
+<!-- FIN SCRIP: CARRITO -->  
 
   
 
