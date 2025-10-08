@@ -3504,6 +3504,25 @@ updateAddToCartButtons();
 updateCartSections();
 };
 
+// 9. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO (EMPTY/FULL)
+function updateCartSections() {
+    const cartEmpty = document.getElementById('cartempty');
+    const cartFull = document.getElementById('cartfull');
+    
+    if (cart.length === 0) {
+        // MOSTRAR CARRITO VACÍO
+        if (cartEmpty) cartEmpty.style.display = 'block';
+        if (cartFull) cartFull.style.display = 'none';
+    } else {
+        // MOSTRAR CARRITO LLENO
+        if (cartEmpty) cartEmpty.style.display = 'none';
+        if (cartFull) cartFull.style.display = 'block';
+        updateCartDisplay();
+    }
+}
+
+
+
   
 // 10. BOTON: ADD TO CART
 document.querySelectorAll('.button-addtocart').forEach(button => {
@@ -3581,7 +3600,6 @@ setupCartButton();
 updateCartDisplay();
 }
   updateAddToCartButtons();
-updateCartSections();
   
 });
 </script>
