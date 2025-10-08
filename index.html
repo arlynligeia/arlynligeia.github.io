@@ -3164,10 +3164,9 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
- document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-        section.style.display = 'none';
-    });
-
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
@@ -3216,12 +3215,11 @@ showOnlyOneSection(hash);
 }
 }
 checkInitialHash();
-// ✅ OBLIGAR A OCULTAR CARRITO SI NO SE MOSTRÓ NINGUNA SECCIÓN
-setTimeout(() => {  
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+
 
 
 
@@ -3243,10 +3241,9 @@ console.warn('❌ Sección no encontrada:', targetId);
 return;
 }
 // Ocultar TODAS las secciones principales y subsecciones
-
-  document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-        section.style.display = 'none';
-    });
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
 // Determinar la sección principal a mostrar
 let mainSectionId;
 if (targetSection.classList.contains('subsection')) {
@@ -3314,6 +3311,7 @@ console.log('✅ Navegación de tienda configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
+
   
 
 
