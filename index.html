@@ -3521,7 +3521,7 @@ function setupCartButton() {
         button.addEventListener('click', function(e) {
             e.preventDefault();
             // 1. OCULTAR TODAS LAS SECCIONES PRINCIPALES
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+           document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
                 section.style.display = 'none';
             });
             // 2. MOSTRAR LA SECCIÓN CORRECTA DEL CARRITO
