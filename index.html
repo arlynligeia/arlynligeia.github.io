@@ -3322,13 +3322,13 @@ console.log('✅ Navegación de tienda configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
+// FUNCION  
 function formatNumberWithCommas(number) {
-    let parts = number.toString().split('.');
-    let integerPart = parts[0];
-    let decimalPart = parts[1] || '';
-    integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
+let parts = number.toString().split('.');
+let integerPart = parts[0];
+let decimalPart = parts[1] || '';
+integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
 }
 // FUNCION SHIPPING  
 function updateShippingTotal() {
@@ -3346,16 +3346,23 @@ return sum + parseFloat(item.totalprice);
 document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
 formatNumberWithCommas(subtotal.toFixed(2));
 }
-
-  
+// FUNCION TOTAL FINAL
+function updateTotalFinal() {
+const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
+const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
+const totalFinal = subtotal + shipping;
+document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
+formatNumberWithCommas(totalFinal.toFixed(2));
+}
+// FUNCION AGREGAR PRODUCTOS
 function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
 existingProduct.quantity += 1;
 // FÓRMULA SIMPLE SIN COMPLICACIONES
-const unitPrice = existingProduct.price; // "10,000.00"
-const quantity = existingProduct.quantity; // 2
+const unitPrice = existingProduct.price;
+const quantity = existingProduct.quantity;
 existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
 } else { 
 cart.push({
@@ -3417,7 +3424,8 @@ productRow.innerHTML = `
 cartBody.insertBefore(productRow, dividers[1]);
 });
   updateShippingTotal();
-  updateSubtotal(); // ← AGREGAR ESTA LÍNEA
+  updateSubtotal(); 
+    updateTotalFinal();
 }
 // BOTONES "ADD TO CART"
 document.querySelectorAll('.button-addtocart').forEach(button => {
