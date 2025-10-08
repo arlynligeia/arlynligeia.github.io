@@ -3337,7 +3337,7 @@ function addToCart(productData) {
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
-existingProduct.quantity += 1; 
+existingProduct.quantity += 1;
 // FÓRMULA SIMPLE SIN COMPLICACIONES
 const unitPrice = existingProduct.price;
 const quantity = existingProduct.quantity;
@@ -3421,7 +3421,6 @@ window.removeFromCart = function(productName) {
 cart = cart.filter(item => item.product !== productName);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-    updateAddToCartButtons(); // ← AGREGAR ESTA LÍNEA
 };
 // Inicializar
 if (cart.length > 0) {
