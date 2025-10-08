@@ -3400,6 +3400,7 @@ shipping: productData.shipping || '0' // ← AGREGAR ESTA LÍNEA
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
+ updateAddToCartButtons(); // ← FALTA ESTA LÍNEA - AGREGALA
 }
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
