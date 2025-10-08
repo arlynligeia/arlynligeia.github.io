@@ -3336,6 +3336,7 @@ function updateAddToCartButtons() {
         }
     });
 }
+  
 // FUNCION  
 function formatNumberWithCommas(number) {
 let parts = number.toString().split('.');
@@ -3370,20 +3371,23 @@ formatNumberWithCommas(totalFinal.toFixed(2));
 }
 // FUNCION AGREGAR PRODUCTOS
 function addToCart(productData) {
-    // VALIDAR STOCK ANTES DE AGREGAR
-    const cartItem = cart.find(item => item.product === productData.product);
-    const currentQuantity = cartItem ? cartItem.quantity : 0;
-    const maxStock = productStock[productData.product] || 0;
-    
-    if (currentQuantity >= maxStock) {
-        alert('❌ No hay stock disponible para ' + productData.product);
-        return; // No agregar al carrito
-    }
+  
+  // VALIDAR STOCK ANTES DE AGREGAR - VERSIÓN SIMPLE
+const cartItem = cart.find(item => item.product === productData.product);
+const currentQuantity = cartItem ? cartItem.quantity : 0;
+const maxStock = productStock[productData.product];
+
+// Solo validar si el producto existe en productStock
+if (maxStock !== undefined && currentQuantity >= maxStock) {
+    alert('❌ No hay stock disponible para ' + productData.product);
+    return;
+}
     
 console.log('➕ Agregando al carrito:', productData);
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
 existingProduct.quantity += 1;
+  
 // FÓRMULA SIMPLE SIN COMPLICACIONES
 const unitPrice = existingProduct.price;
 const quantity = existingProduct.quantity;
