@@ -3585,10 +3585,14 @@ if (cart.length === 0) {
 // MUESTRA CARRITO VACÍO
 cartEmpty.style.display = 'block';
 cartFull.style.display = 'none';
+   // ✅ ACTUALIZA URL A #cartempty
+                window.location.hash = 'cartempty';
 } else {
 // MUESTRA CARRITO LLENO
 cartEmpty.style.display = 'none';
 cartFull.style.display = 'block';
+  // ✅ ACTUALIZA URL A #cartfull  
+                window.location.hash = 'cartfull';
 }
 });
 });
