@@ -3161,9 +3161,10 @@ document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+        section.style.display = 'none';
+    });
+
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
@@ -3220,6 +3221,9 @@ console.log('✅ Navegación configurada correctamente');
 
 
 
+
+
+  
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 <script>
 // NAVEGACIÓN JERÁRQUICA PARA TIENDA
