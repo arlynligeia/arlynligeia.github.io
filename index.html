@@ -3314,46 +3314,44 @@ console.log('✅ Navegación de tienda configurada correctamente');
 
   
 
-
+<!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // FUNCIÓN ÚNICA PARA EL BOTÓN CART
-    function setupCartButton() {
-        const cartButtons = document.querySelectorAll('a.cart-button');
-        
-        cartButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Ocultar todas las secciones principales
-                document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Mostrar la sección de carrito correspondiente
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                const cartEmpty = document.getElementById('cartempty');
-                const cartFull = document.getElementById('cartfull');
-                
-                if (cart.length === 0) {
-                    cartEmpty.style.display = 'block';
-                    cartFull.style.display = 'none';
-                } else {
-                    cartEmpty.style.display = 'none';
-                    cartFull.style.display = 'block';
-                }
-            });
-        });
-    }
-    
-    // Inicializar el botón
-    setupCartButton();
+// 1. FUNCIÓN: BOTÓN CART
+function setupCartButton() {
+const cartButtons = document.querySelectorAll('a.cart-button');
+cartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// OCULTA TODAS LAS SECCIONES PRINCIPALES
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// MUESTRA CART EMPTY OCART FULL SEGÚN CORRESPONDA
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartEmpty = document.getElementById('cartempty');
+const cartFull = document.getElementById('cartfull');
+if (cart.length === 0) {
+// MUESTRA CARRITO VACÍO
+cartEmpty.style.display = 'block';
+cartFull.style.display = 'none';
+} else {
+// MUESTRA CARRITO LLENO
+cartEmpty.style.display = 'none';
+cartFull.style.display = 'block';
+}
+});
+});
+}
+// INICIALIZAR EL BOTON 
+setupCartButton();
 });
 </script>
-
+<!-- FIN SCRIP: CARRITO -->
 
 
   
+
 
 
 
