@@ -3450,7 +3450,7 @@ updateAddToCartButtons();
   
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
 function updateAddToCartButtons() {
-document.querySelectorAll('.button-addtocart').forEach(button => {
+    document.querySelectorAll('[class$="-button-addtocart"]').forEach(button => {
 const productName = button.getAttribute('data-product');
 const cartItem = cart.find(item => item.product === productName);
 const currentQuantity = cartItem ? cartItem.quantity : 0;
