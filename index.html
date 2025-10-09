@@ -3247,7 +3247,7 @@ console.warn('❌ Sección no encontrada:', targetId);
 return;
 }
 // Ocultar TODAS las secciones principales y subsecciones
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
 // Determinar la sección principal a mostrar
