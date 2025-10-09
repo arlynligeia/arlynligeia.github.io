@@ -3112,11 +3112,6 @@ Authorized by Intendancy Resolution N°</p>
 
 
 
-<!-- SECCIONES FUERA DE MAIN -->  
-  
-
-
-<!-- FIN SECCIONES FUERA DE MAIN -->  
 
 
 
@@ -3174,31 +3169,39 @@ Authorized by Intendancy Resolution N°</p>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
+// OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
+// MOSTRAR SECCIÓN
 const mainSection = document.getElementById(sectionId);
 if (mainSection) {
 mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES
 document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
 subsection.style.display = 'block';
 });
+// DESPLAZAMIENTO HACIA LA SECCIÓN
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
 const mainSectionId = subsectionId.split('-')[0];
 showOnlyOneSection(mainSectionId);
+// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
 setTimeout(() => {
 const subsection = document.getElementById(subsectionId);
-if (subsection) {
+if (subsection) {  
 subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }, 100);
 }
+// EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
 document.querySelectorAll('.menu-button').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
@@ -3207,6 +3210,7 @@ showOnlyOneSection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
+// EVENTOS PARA BOTONES DEL SUBMENÚ
 document.querySelectorAll('.submenu-button').forEach(button => {
 button.addEventListener('click', function(e) {
 e.preventDefault();
@@ -3215,7 +3219,7 @@ goToSubsection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
-// ✅ NUEVO CÓDIGO PARA MANTENER LA SECCIÓN AL RECARGAR
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
@@ -3226,11 +3230,21 @@ showOnlyOneSection(hash);
 }
 }
 }
+// INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+
+
+
+
+
+
+
+
+
   
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 <script>
@@ -3656,65 +3670,48 @@ setupGoToCartButton();
 <!-- SCRIP: FOOTER -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🦶 Footer navegación iniciada');
-    
-    // FUNCIÓN PARA NAVEGACIÓN DEL FOOTER
-    function setupFooterNavigation() {
-        // BOTÓN PRIVACY POLICY
-        document.getElementById('show-privacypolicy').addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('📄 Navegando a Privacy Policy');
-            
-            // OCULTAR TODAS LAS SECCIONES
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // MOSTRAR PRIVACY POLICY
-            const privacyPolicy = document.getElementById('privacypolicy');
-            if (privacyPolicy) {
-                privacyPolicy.style.display = 'block';
-                privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.location.hash = 'privacypolicy';
-            }
-        });
-        
-        // BOTÓN TERMS & CONDITIONS
-        document.getElementById('show-terms').addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log('📑 Navegando a Terms & Conditions');
-            
-            // OCULTAR TODAS LAS SECCIONES
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // MOSTRAR TERMS & CONDITIONS
-            const termsConditions = document.getElementById('termsandconditions');
-            if (termsConditions) {
-                termsConditions.style.display = 'block';
-                termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.location.hash = 'termsandconditions';
-            }
-        });
-    }
-    
-    // INICIALIZAR NAVEGACIÓN DEL FOOTER
-    setupFooterNavigation();
-    console.log('✅ Footer navegación configurada correctamente');
+console.log('🦶 Footer navegación iniciada');
+// FUNCIÓN: NAVEGACIÓN DEL FOOTER
+function setupFooterNavigation() {
+// 1. BOTÓN: PRIVACY POLICY
+document.getElementById('show-privacypolicy').addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📄 Navegando a Privacy Policy');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR PRIVACY POLICY
+const privacyPolicy = document.getElementById('privacypolicy');
+if (privacyPolicy) {
+privacyPolicy.style.display = 'block';
+privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'privacypolicy';
+}
+});
+// 2. BOTÓN: TERMS & CONDITIONS
+document.getElementById('show-terms').addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📑 Navegando a Terms & Conditions');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR TERMS & CONDITIONS
+const termsConditions = document.getElementById('termsandconditions');
+if (termsConditions) {
+termsConditions.style.display = 'block';
+termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'termsandconditions';
+}
+});
+}
+// INICIALIZAR
+setupFooterNavigation();
+console.log('✅ Footer navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: FOOTER -->  
-
-
-
-
-
-
-
-
-
-
   
 </body>
   
