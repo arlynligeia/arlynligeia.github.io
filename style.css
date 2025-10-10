@@ -145,8 +145,7 @@ transform: scaleX(1);
   border-radius: 20px;
   position: relative;
 }
-.home-carousel-image,
-.carousel-image {
+.home-carousel-image {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -155,7 +154,7 @@ transform: scaleX(1);
   transition: opacity 1s ease-in-out;
 }
 .home-carousel-image.active,
-.carousel-image.active {
+.home-carousel-image.active {
   opacity: 1;
 }
 
