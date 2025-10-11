@@ -3348,54 +3348,55 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
     }
 
-
- // FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
-    function setupCarouselNavigation() {
-        const images = document.querySelectorAll('.home-carousel-image');
+// FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+    const images = document.querySelectorAll('.home-carousel-image');
+    
+    // Configurar destino de cada imagen (CORREGIDO)
+    const imageDestinations = {
+        'img1': 'film-featurefilm-alone',      // Imagen 1 → Alone
+        'img2': 'music-album-album1969',       // Imagen 2 → Album 1969
+        'img3': 'fashion-fwcollection-fw2627'  // Imagen 3 → FW 2627
+    };
+    
+    // Agregar event listener a cada imagen
+    images.forEach(img => {
+        img.style.cursor = 'pointer';
         
-        // Configurar destino de cada imagen
-        const imageDestinations = {
-            'img1': 'film-featurefilm-alone',
-            'img2': 'music-album-album1969', 
-            'img3': 'fashion-fwcollection-fw2627'
-        };
-        
-        // Agregar event listener a cada imagen
-        images.forEach(img => {
-            img.style.cursor = 'pointer'; // Cambiar cursor para indicar que es clickeable
-            
-            img.addEventListener('click', function() {
-                const destinationId = imageDestinations[this.id];
-                if (destinationId) {
-                    console.log('🖱️ Click en carrusel - Navegando a:', destinationId);
+        img.addEventListener('click', function() {
+            const destinationId = imageDestinations[this.id]; // ← USAR this.id CORRECTAMENTE
+            if (destinationId) {
+                console.log('🖱️ Click en carrusel - Navegando a:', destinationId);
+                
+                // Ocultar todas las secciones
+                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Mostrar la sección destino
+                const targetSection = document.getElementById(destinationId);
+                if (targetSection) {
+                    const mainSectionId = destinationId.split('-')[0];
+                    const mainSection = document.getElementById(mainSectionId);
                     
-                    // Ocultar todas las secciones
-                    document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                        section.style.display = 'none';
-                    });
-                    
-                    // Mostrar la sección destino
-                    const targetSection = document.getElementById(destinationId);
-                    if (targetSection) {
-                        const mainSectionId = destinationId.split('-')[0];
-                        const mainSection = document.getElementById(mainSectionId);
+                    if (mainSection) {
+                        mainSection.style.display = 'block';
+                        document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+                            subsection.style.display = 'block';
+                        });
                         
-                        if (mainSection) {
-                            mainSection.style.display = 'block';
-                            document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
-                                subsection.style.display = 'block';
-                            });
-                            
-                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            window.location.hash = destinationId;
-                        }
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        window.location.hash = destinationId;
                     }
                 }
-            });
+            } else {
+                console.warn('❌ No se encontró destino para:', this.id);
+            }
         });
-        
-        console.log('✅ Navegación del carrusel configurada');
-    }
+    });
+    
+    console.log('✅ Navegación del carrusel configurada');
+}
     
     // INICIAR CARRUSEL
     startCarousel();
