@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
@@ -126,7 +126,7 @@
 </h2>
 <p class="home-side-information-text">I want a crab fishing boat and a patron to fund my delirium…</p>
 <div class="home-side-information-grid">
-<!-- Fila 1 -->
+<!-- FILA 1 -->
 <div class="home-side-information-grid-icons">
 <a href="https://www.youtube.com/@arlynligeia" target="_blank">
 <img src="assets/assets/Youtube.png" alt="YouTube">
@@ -144,7 +144,7 @@
 <img src="assets/assets/Spotify.png" alt="Spotify">
 </a>
 </div>
-<!-- Fila 2 -->
+<!-- FILA 2 -->
 <div class="home-side-information-grid-icons-2">
 <a href="https://www.instagram.com/arlynligeia/?next=%2F%40arlynligeia%2F" target="_blank">
 <img src="assets/assets/Instagram.png" alt="Instagram">
@@ -239,6 +239,72 @@
 </div>
 </section>  
 <!-- FIN SOCIAL MEDIA CONTENT -->
+
+<!-- YOUTUBE HIGHLIGHT -->
+<section class="subsection" id="home-youtubehighlight">
+<div class="youtubehighlight-container">
+<!-- CONTENEDOR: TÍTULO Y BOTÓN -->
+<div class="youtubehighlight-header">    
+<h2 class="youtubehighlight-title"><a href="#home-youtubehighlight">YOUTUBE HIGHLIGHT</a></h2>
+<a class="youtubehighlight-button-follow" href="https://www.youtube.com/@arlynligeia" target="_blank">FOLLOW</a>
+</div>
+<!-- COLUMNAS -->      
+<div class="youtubehighlight-columns">
+<!-- CONTENEDOR: GRID DE 2 -->  
+<div class="youtubehighlight-columns-grid"> 
+<!-- FILA 1 --> 
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/pBzur0uy8tI"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/qsU_B2kAtf0"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+<!-- FILA 2 --> 
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/VsOk9EXvP_A"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/jYsBKtqVrHo"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+<!-- TERCERA FILA -->
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/9YwYZ3-48S8"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+<div class="youtubehighlight-columns-grid-wrapper">
+<iframe src="https://www.youtube.com/embed/FsqRdqeAP3c"
+title="YouTube video player"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</section>
+<!-- FIN YOUTUBE HIGHLIGHT -->
+
+<!-- Fin Subsecciones de HOME -->
+
+
+
+
+
+
+
+ 
 <!-- Fin Subsecciones de HOME -->
 
 
@@ -3243,38 +3309,35 @@ if (!targetSection) {
 console.warn('❌ Sección no encontrada:', targetId);
 return;
 }
-// Ocultar TODAS las secciones principales y subsecciones
+// OCULTAR TODAS LAS SECCIONES 
 document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
 // Determinar la sección principal a mostrar
 let mainSectionId;
 if (targetSection.classList.contains('subsection')) {
-// Si es subsección, mostrar su sección principal
 mainSectionId = targetId.split('-')[0];
 } else {
-// Si es sección principal, mostrar esa misma
 mainSectionId = targetId;
 }
 const mainSection = document.getElementById(mainSectionId);
 if (mainSection) {
-// Mostrar la sección principal
+// MOSTRAR SECCIÓN PRINCIPAL
 mainSection.style.display = 'block';
-// Mostrar TODAS sus subsecciones
+// MOSTRAR SUBSECCIONES
 const mainSectionPrefix = mainSectionId + '-';
 document.querySelectorAll('.subsection').forEach(subsection => {
 if (subsection.id.startsWith(mainSectionPrefix)) {
 subsection.style.display = 'block';
 }
 });
-// Hacer scroll a la sección objetivo
+// SCROLL HASTA SECCIÓN O SUBSECCIÓN
 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-// Actualizar la URL
 history.pushState(null, null, `#${targetId}`);
 }
 }
-// ========== TARJETAS Y BOTONES ==========    
-// 1. TODAS LAS TARJETAS
+// TARJETAS Y BOTONES
+// 1. TARJETAS
 document.querySelectorAll('[class*="-columns-grid-card"]').forEach(card => {
 card.addEventListener('click', function(e) {
 e.preventDefault();
@@ -3310,101 +3373,76 @@ navigateToTarget(targetId);
 });
 });
 // AGREGAR MÁS BOTONES
+// INICIALIZACIÓN 
 console.log('✅ Navegación de tienda configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
 
-
+ 
 <!-- SCRIP: CARRUSEL HOME -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🖼️ Carrusel iniciado');
-    
-    // FUNCIÓN: CARRUSEL AUTOMÁTICO
-    function startCarousel() {
-        const images = document.querySelectorAll('.home-carousel-image');
-        let currentImageIndex = 0;
-        
-        // FUNCIÓN PARA CAMBIAR IMAGEN
-        function changeImage() {
-            // Remover clase active de todas las imágenes
-            images.forEach(img => img.classList.remove('active'));
-            
-            // Agregar clase active a la imagen actual
-            images[currentImageIndex].classList.add('active');
-            
-            // Avanzar al siguiente índice
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-        }
-        
-        // Cambiar imagen inmediatamente al cargar
-        changeImage();
-        
-        // Configurar intervalo para cambiar cada 10 segundos
-        setInterval(changeImage, 10000);
-        
-        console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
-    }
-
-// FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES (VERSIÓN CORREGIDA)
-function setupCarouselNavigation() {
-    const carousel = document.querySelector('.home-carousel');
-    
-    // Configurar destino de cada imagen
-    const imageDestinations = {
-        'img1': 'film-featurefilm-alone',      // Imagen 1 → Alone
-        'img2': 'music-album-album1969',       // Imagen 2 → Album 1969
-        'img3': 'fashion-fwcollection-fw2627'  // Imagen 3 → FW 2627
-    };
-    
-    // Agregar event listener al contenedor del carrusel
-    carousel.addEventListener('click', function() {
-        // Encontrar la imagen activa actualmente
-        const activeImage = this.querySelector('.home-carousel-image.active');
-        
-        if (activeImage) {
-            const destinationId = imageDestinations[activeImage.id];
-            
-            if (destinationId) {
-                console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
-                
-                // Ocultar todas las secciones
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Mostrar la sección destino
-                const targetSection = document.getElementById(destinationId);
-                if (targetSection) {
-                    const mainSectionId = destinationId.split('-')[0];
-                    const mainSection = document.getElementById(mainSectionId);
-                    
-                    if (mainSection) {
-                        mainSection.style.display = 'block';
-                        document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
-                            subsection.style.display = 'block';
-                        });
-                        
-                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        window.location.hash = destinationId;
-                    }
-                }
-            } else {
-                console.warn('❌ No se encontró destino para:', activeImage.id);
-            }
-        }
-    });
-    
-    // Cambiar cursor para indicar que es clickeable
-    carousel.style.cursor = 'pointer';
-    
-    console.log('✅ Navegación del carrusel configurada');
+console.log('🖼️ Carrusel iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.home-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
 }
-    // INICIAR CARRUSEL
-    startCarousel();
- setupCarouselNavigation();
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+const carousel = document.querySelector('.home-carousel');
+const imageDestinations = {
+'img1': 'film-featurefilm-alone',
+'img2': 'music-album-album1969',
+'img3': 'fashion-fwcollection-fw2627'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.home-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel configurada');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
@@ -3681,10 +3719,7 @@ if (e.target === this) {
 this.style.display = 'none';
 }
 }); 
-
-
-
-  
+ 
  
 // 12. BOTÓN: CART
 function setupCartButton() {
@@ -3755,8 +3790,6 @@ function setupGoToCartButton() {
 
 // INICIALIZAR EL BOTÓN GO TO CART
 setupGoToCartButton();
-
-
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
