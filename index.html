@@ -3347,9 +3347,59 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
     }
+
+
+ // FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+    function setupCarouselNavigation() {
+        const images = document.querySelectorAll('.home-carousel-image');
+        
+        // Configurar destino de cada imagen
+        const imageDestinations = {
+            'img1': 'film-featurefilm-alone',
+            'img2': 'music-album-album1969', 
+            'img3': 'fashion-fwcollection-fw2627'
+        };
+        
+        // Agregar event listener a cada imagen
+        images.forEach(img => {
+            img.style.cursor = 'pointer'; // Cambiar cursor para indicar que es clickeable
+            
+            img.addEventListener('click', function() {
+                const destinationId = imageDestinations[this.id];
+                if (destinationId) {
+                    console.log('🖱️ Click en carrusel - Navegando a:', destinationId);
+                    
+                    // Ocultar todas las secciones
+                    document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // Mostrar la sección destino
+                    const targetSection = document.getElementById(destinationId);
+                    if (targetSection) {
+                        const mainSectionId = destinationId.split('-')[0];
+                        const mainSection = document.getElementById(mainSectionId);
+                        
+                        if (mainSection) {
+                            mainSection.style.display = 'block';
+                            document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+                                subsection.style.display = 'block';
+                            });
+                            
+                            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            window.location.hash = destinationId;
+                        }
+                    }
+                }
+            });
+        });
+        
+        console.log('✅ Navegación del carrusel configurada');
+    }
     
     // INICIAR CARRUSEL
     startCarousel();
+ setupCarouselNavigation();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
