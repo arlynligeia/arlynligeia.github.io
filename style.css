@@ -2322,15 +2322,22 @@ transform: scale(1.05);
   position: absolute;
   z-index: 2;
   top: 50%;
-  left: 10%; /* Posicionado a la izquierda */
+  left: 10%;
   transform: translateY(-50%);
   font-family: 'Orbitron', sans-serif;
   font-size: 3rem;
   color: #39ff14 !important;
-  text-align: left; /* Alineación izquierda */
-  white-space: normal; /* Permite múltiples líneas */
+  text-align: left;
+  white-space: normal;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  line-height: 1.2; /* Espaciado entre líneas */
+  line-height: 1.2;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Mostrar texto solo cuando la primera imagen está activa */
+.store-carousel-image.active#store-carousel-image-1 ~ .store-carousel-text {
+  opacity: 1;
 }
 
 /* ======================================
