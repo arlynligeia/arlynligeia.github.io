@@ -2292,18 +2292,15 @@ transform: scale(1.05);
   height: calc(100vh - 220px);
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 30px;
-  padding-right: 50px;
-  padding: 0 50px;
-  gap: 30px;
 }
 .store-carousel {
-  width: 60%;
+  width: 95%;
   height: 100%;
   overflow: hidden;
   background-color: #000000; 
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 20px;
   position: relative;
 }
@@ -2315,7 +2312,6 @@ transform: scale(1.05);
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
-.store-carousel-image.active,
 .store-carousel-image.active {
   opacity: 1;
 }
