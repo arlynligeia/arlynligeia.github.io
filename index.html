@@ -3231,13 +3231,6 @@ console.log('✅ Navegación configurada correctamente');
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
 
-
-
-
-
-
-
-
   
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 <script>
@@ -3322,7 +3315,66 @@ console.log('✅ Navegación de tienda configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
-  
+
+
+<!-- SCRIP: CARRUSEL HOME -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🖼️ Carrusel iniciado');
+    
+    // FUNCIÓN: CARRUSEL AUTOMÁTICO
+    function startCarousel() {
+        const images = document.querySelectorAll('.home-carousel-image');
+        let currentImageIndex = 0;
+        
+        // FUNCIÓN PARA CAMBIAR IMAGEN
+        function changeImage() {
+            // Remover clase active de todas las imágenes
+            images.forEach(img => img.classList.remove('active'));
+            
+            // Agregar clase active a la imagen actual
+            images[currentImageIndex].classList.add('active');
+            
+            // Avanzar al siguiente índice
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        
+        // Cambiar imagen inmediatamente al cargar
+        changeImage();
+        
+        // Configurar intervalo para cambiar cada 10 segundos
+        setInterval(changeImage, 10000);
+        
+        console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
+    }
+    
+    // INICIAR CARRUSEL
+    startCarousel();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL HOME -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 <!-- SCRIP: CARRITO -->
 <script>
