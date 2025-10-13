@@ -3575,11 +3575,9 @@ const productStock = {
 "Quasar Executive Producer": 1,
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
-};
-  
+}; 
 // 1. FUNCION: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productData) {
-// VALIDAR STOCK ANTES DE AGREGAR
 const cartItem = cart.find(item => item.product === productData.product);
 const currentQuantity = cartItem ? cartItem.quantity : 0;
 const maxStock = productStock[productData.product] || 0;
@@ -3588,7 +3586,6 @@ alert('❌ No hay stock disponible para ' + productData.product);
 return;
 }
 console.log('➕ Agregando al carrito:', productData);
-// VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
 const existingProduct = cart.find(item => item.product === productData.product); 
 if (existingProduct) {
 // INCREMENTAR CANTIDAD SI EL PRODUCTO YA ESTÁ EN EL CARRITO
@@ -3598,7 +3595,6 @@ const unitPrice = existingProduct.price;
 const quantity = existingProduct.quantity;
 existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
 } else {
- // AGREGAR NUEVO PRODUCTO AL CARRITO
 cart.push({
 image: productData.image,
 product: productData.product,
@@ -3608,36 +3604,29 @@ totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toStrin
 shipping: productData.shipping || '0' 
 });
 }
-// GUARDAR CARRITO EN LOCALSTORAGE
 localStorage.setItem('cart', JSON.stringify(cart));
-// ACTUALIZAR INTERFAZ DEL CARRITO
 updateCartDisplay();
 // MODAL
 showNotification('Product added to cart successfully!');
 }
-// MODAL: MOSTRAR NOTIFICACIÓN
 function showNotification(message) {
 const modal = document.getElementById('notificationModal');
 const messageElement = modal.querySelector('.notification-message');
 messageElement.textContent = message;
 modal.style.display = 'flex';
-// MODAL: OCULTAR NOTIFICACIÓN AUTOMÁTICAMENTE
 setTimeout(() => {
 modal.style.display = 'none';
 }, 1000);
-} 
-  
+}  
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
-// INSERTAR PRODUCTOS
 const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-body-divider');
 cart.forEach((item) => {
 const productRow = document.createElement('tr');
 productRow.className = 'cartfull-table-wrapper-body-row product-row';
-// INSERTAR HTML CON LOS DATOS DEL PRODUCTO
 productRow.innerHTML = `
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-image">
@@ -3679,15 +3668,13 @@ updateSubtotal();
 updateTotalFinal();
 updateAddToCartButtons();
 }
-  
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
 function updateAddToCartButtons() {
-    document.querySelectorAll('[class$="-button-addtocart"]').forEach(button => {
+document.querySelectorAll('[class$="-button-addtocart"]').forEach(button => {
 const productName = button.getAttribute('data-product');
 const cartItem = cart.find(item => item.product === productName);
 const currentQuantity = cartItem ? cartItem.quantity : 0;
 const maxStock = productStock[productName] || 0;
-// DESABILITAR BOTON SI NO HAY STOK
 if (currentQuantity >= maxStock) {
 button.disabled = true;
 button.style.opacity = '0.5';
@@ -3698,8 +3685,7 @@ button.style.opacity = '1';
 button.style.cursor = 'pointer';
 }
 });
-}
-  
+}  
 // 4. FUNCIÓN: ACTUALIZAR SUBTOTAL 
 function updateSubtotal() {
 const subtotal = cart.reduce((sum, item) => {
@@ -3708,7 +3694,6 @@ return sum + parseFloat(item.totalprice);
 document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotalprice-amount').textContent = 
 formatNumberWithCommas(subtotal.toFixed(2));
 }
-  
 // 5. FUNCIÓN: ACTUALIZAR SHIPPING
 function updateShippingTotal() {
 const shippingTotal = cart.reduce((sum, item) => {
@@ -3717,7 +3702,6 @@ return sum + (parseFloat(item.shipping) * item.quantity);
 document.querySelector('.cartfull-table-wrapper-body-row-cell-shippingprice-amount').textContent = 
 formatNumberWithCommas(shippingTotal.toFixed(2));
 }
-  
 // 6. FUNCIÓN: ACTUALIZAR TOTAL FINAL
 function updateTotalFinal() {
 const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
@@ -3726,7 +3710,6 @@ const totalFinal = subtotal + shipping;
 document.querySelector('.cartfull-table-wrapper-body-row-cell-totalendprice-amount').textContent = 
 formatNumberWithCommas(totalFinal.toFixed(2));
 }
-  
 // 7: FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 let parts = number.toString().split('.');
@@ -3735,7 +3718,6 @@ let decimalPart = parts[1] || '';
 integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
 }
-  
 // 8. FUNCIONES: GLOBALES (FUERA DEL SCOPE PRINCIPAL)
 window.removeFromCart = function(productName) {
 cart = cart.filter(item => item.product !== productName);
@@ -3743,27 +3725,19 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
 };
-
 // 9. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO (EMPTY/FULL)
 function updateCartSections() {
-    const cartEmpty = document.getElementById('cartempty');
-    const cartFull = document.getElementById('cartfull');
-    
-    if (cart.length === 0) {
-        // MOSTRAR CARRITO VACÍO
-        if (cartEmpty) cartEmpty.style.display = 'block';
-        if (cartFull) cartFull.style.display = 'none';
-    } else {
-        // MOSTRAR CARRITO LLENO
-        if (cartEmpty) cartEmpty.style.display = 'none';
-        if (cartFull) cartFull.style.display = 'block';
-        updateCartDisplay();
-    }
+const cartEmpty = document.getElementById('cartempty');
+const cartFull = document.getElementById('cartfull');
+if (cart.length === 0) {
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+} else {
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+updateCartDisplay();
 }
-
-
-
-  
+}  
 // 10. BOTON: ADD TO CART
 document.querySelectorAll('[class$="-button-addtocart"]').forEach(button => {
 button.addEventListener('click', function() {
@@ -3771,43 +3745,35 @@ const productData = {
 image: this.getAttribute('data-image'),
 product: this.getAttribute('data-product'),
 price: this.getAttribute('data-price'),
-shipping: this.getAttribute('data-shipping') || '0' // ← AGREGAR ESTA LÍNEA
+shipping: this.getAttribute('data-shipping') || '0'
 };
 addToCart(productData);
 });
 });
-  
 // 11. BOTÓN: CLEAR CART CON MODAL
 document.getElementById('cart-full-clear').addEventListener('click', function() {
 if (cart.length > 0) {
-// MOSTRAR MODAL
 document.getElementById('clearCartModal').style.display = 'flex';
 } else {
 alert('The cart is already empty');
 }
 });
-// EVENTOS DEL MODAL
 document.getElementById('modalCancel').addEventListener('click', function() {
 document.getElementById('clearCartModal').style.display = 'none';
 });
 document.getElementById('modalConfirm').addEventListener('click', function() {
-// VACIAR CARRITO
 cart = [];
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-updateCartSections(); // ← AGREGAR ESTA LÍNEA  
-// OCULTAR MODAL
+updateCartSections();
 document.getElementById('clearCartModal').style.display = 'none';
 });
-// CERRAR MODAL HACIENDO CLICK AFUERA
 document.getElementById('clearCartModal').addEventListener('click', function(e) {
 if (e.target === this) {
 this.style.display = 'none';
 }
-}); 
- 
- 
+});  
 // 12. BOTÓN: CART
 function setupCartButton() {
 const cartButtons = document.querySelectorAll('a.cart-button');
@@ -3818,7 +3784,6 @@ e.preventDefault();
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
-// MUESTRA CART EMPTY OCART FULL SEGÚN CORRESPONDA
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartEmpty = document.getElementById('cartempty');
 const cartFull = document.getElementById('cartfull');
@@ -3826,60 +3791,55 @@ if (cart.length === 0) {
 // MUESTRA CARRITO VACÍO
 cartEmpty.style.display = 'block';
 cartFull.style.display = 'none';
-   // ✅ ACTUALIZA URL A #cartempty
-                window.location.hash = 'cartempty';
+window.location.hash = 'cartempty';
 } else {
 // MUESTRA CARRITO LLENO
 cartEmpty.style.display = 'none';
 cartFull.style.display = 'block';
-  // ✅ ACTUALIZA URL A #cartfull  
-                window.location.hash = 'cartfull';
+window.location.hash = 'cartfull';
 }
 });
 });
 }  
 // INICIALIZAR EL BOTON 
 setupCartButton();
-
-  if (cart.length > 0) {
+if (cart.length > 0) {
 updateCartDisplay();
 }
-  updateAddToCartButtons();
-
+updateAddToCartButtons();
 // 13. BOTÓN: GO TO CART (FUNCIONALIDAD IDÉNTICA AL BOTÓN CART)
 function setupGoToCartButton() {
- const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart"]');
-    goToCartButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // MISMO CÓDIGO QUE EL BOTÓN CART
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const cartEmpty = document.getElementById('cartempty');
-            const cartFull = document.getElementById('cartfull');
-            
-            if (cart.length === 0) {
-                cartEmpty.style.display = 'block';
-                cartFull.style.display = 'none';
-                window.location.hash = 'cartempty';
-            } else {
-                cartEmpty.style.display = 'none';
-                cartFull.style.display = 'block';
-                window.location.hash = 'cartfull';
-            }
-        });
-    });
+const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart"]');
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartEmpty = document.getElementById('cartempty');
+const cartFull = document.getElementById('cartfull');
+if (cart.length === 0) {
+cartEmpty.style.display = 'block';
+cartFull.style.display = 'none';
+window.location.hash = 'cartempty';
+} else {
+cartEmpty.style.display = 'none';
+cartFull.style.display = 'block';
+window.location.hash = 'cartfull';
 }
-
+});
+});
+}
 // INICIALIZAR EL BOTÓN GO TO CART
 setupGoToCartButton();
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
+
+
+
+
 
 
 
