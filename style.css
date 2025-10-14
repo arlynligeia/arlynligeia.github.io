@@ -6994,8 +6994,8 @@ justify-content: space-between;
 margin: 0px;
 }
 .paymentmethod-button-back,
-.paymentmethod-button-continueshopping,
-.paymentmethod-button-proceedpayment {
+.paymentmethod-button-cancel,
+.paymentmethod-button-pay {
 display: flex;
 justify-content: space-between;
 border-radius: 6px;
@@ -7010,17 +7010,24 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .paymentmethod-button-back,
-.paymentmethod-button-continueshopping {
+.paymentmethod-button-cancel {
 background-color: #00CED1 !important;
 }
-.paymentmethod-button-proceedpayment {
+.paymentmethod-button-pay{
 background-color: #ff1493 !important;
 }
 .paymentmethod-button-back:hover,
-.paymentmethod-button-continueshopping:hover,
-.paymentmethod-button-proceedpayment:hover {
+.paymentmethod-button-cancel:hover,
+.paymentmethod-button-pay:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
 
 /* CONTENEDOR RESUMEN DEL PEDIDO */
 .paymentmethod-ordersummary {
@@ -7073,6 +7080,15 @@ margin-right: 5px;
 text-align: right;
 min-width: 130px;
 }
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ELECTRONIC SALES RECEIPT
