@@ -2918,93 +2918,87 @@ ADD TO CART
 <form id="paymentmethod-form">
 <!-- OPCIÓN 1: CREDIT CARD -->
 <div class="paymentmethod-form-option">
-<div class="paymentmethod-form-option-header">
-<input class="paymentmethod-form-option-creditcard" id="credit-card" type="radio" name="payment-method" value="credit-card">
-<label class="paymentmethod-form-option-creditcard-label" for="credit-card">
-<span class="paymentmethod-form-option-creditcard-label-title">CREDIT CARD</span>
+<div class="paymentmethod-form-option-creditcard">
+<input class="paymentmethod-form-option-creditcard-header" id="creditcard" type="radio" name="payment-method" value="credit-card">
+<label class="paymentmethod-form-option-creditcard-label" for="creditcard">
+<span class="paymentmethod-form-option-creditcard-title">CREDIT CARD</span>
 </label>
-<span class="paymentmethod-form-option-creditcard-label-icons">
+<span class="paymentmethod-form-option-creditcard-icons">
 <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
 </span>
 </div>
 <!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
-<div class="paymentmethod-form" id="creditcard-form">
-<div class="paymentmethod-form-content">
-<!-- PRIMERA FILA: CARD NUMBER -->
-<div class="paymentmethod-form-row">
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" placeholder="Card Number" required>
+<div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
+<div class="paymentmethod-form-option-creditcard-card-content">  
+<div class="paymentmethod-form-option-creditcard-card-content-row">
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" placeholder="Card Number" required>
 </div>
-<!-- SEGUNDA FILA: EXPIRATION DATE + SECURITY CODE -->
-<div class="paymentmethod-form-row">
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" placeholder="MM/YY" required>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-securitycode" type="text" name="securitycode" placeholder="CVV" required>
+<div class="paymentmethod-form-option-creditcard-card-content-row">
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" placeholder="MM/YY" required>
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-securitycode" type="text" name="securitycode" placeholder="CVV" required>
 </div>
-<!-- TERCERA FILA: NAME ON CARD -->
-<div class="paymentmethod-form-row">
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="Name on Card" required>
-</div>
-
+<div class="paymentmethod-form-option-creditcard-card-content-row">
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="Name on Card" required>
+</div> 
 <!-- TIPO DE DOCUMENTO -->
 <label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documenttype">DOCUMENT TYPE</label>
 <select class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documenttype" name="documenttype" required>
+<option value="">Select ID</option>
 <option value="ID">National ID</option>
 <option value="Passport">Passport</option>
 <option value="DriverLicense">Driver's License</option>
-<option value="SocialSecurity">Social Security Card</option>
-<option value="ResidencePermit">Residence Permit</option>
-<option value="MilitaryID">Military ID</option>
-<option value="Other">Other</option>
 </select>            
-
 <label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documentnumber">DOCUMENT NUMBER</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documentnumber" type="text" name="documentnumber" required>               
-
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-emailforreceipt">EMAIL FOR RECEIPT</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-emailforreceipt" type="email" name="emailforreceipt" required>               
-
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documentnumber" type="text" name="documentnumber" required>
 <label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-phonenumber">PHONE NUMBER</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-phonenumber" type="tel" name="phonenumber" required>                  
-
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-phonenumber" type="tel" name="phonenumber" required>     
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-emailforreceipt">EMAIL FOR RECEIPT</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-emailforreceipt" type="email" name="emailforreceipt" required>                           
 </div>
 </div>
 </div>
-
 <!-- OPCIÓN 2: PAYPAL -->
 <div class="paymentmethod-form-option">
-<input class="paymentmethod-form-option-paypal" id="paypal" type="radio" name="payment-method" value="paypal">
+<div class="paymentmethod-form-option-paypal">
+<input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
 <label class="paymentmethod-form-option-paypal-label" for="paypal">
-<span class="paymentmethod-form-option-paypal-label-title">PAYPAL</span>
-<span class="paymentmethod-form-option-paypal-label-icons">
-<span class="paymentmethod-form-option-paypal-label-icon">PayPal</span>
-</span>
+<span class="paymentmethod-form-option-paypal-title">PAYPAL</span>
 </label>
-
+<span class="paymentmethod-form-option-paypal-icons">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
+</span>
+</div>
 <!-- INFORMACIÓN PAYPAL (oculto inicialmente) -->
-<div class="paymentmethod-form" id="paypal-form">
-<div class="paymentmethod-form-content">
+<div class="paymentmethod-form-option-paypal-card" id="paypal-form">
+<div class="paymentmethod-form-option-paypal-card-content">  
 <p>You will be redirected to PayPal to complete your payment securely.</p>
-<div class="paypal-info">
 <p>• Secure payment through PayPal</p>
 <p>• No need to enter card details on this site</p>
-<p>• PayPal account or credit card accepted</p>
 </div>
 </div>
 </div>
-</div>                    
-
-<!-- BOTÓN PARA PROCEDER AL PAGO -->
-<div class="paymentmethod-submit">
-<button type="submit" id="submit-payment" class="paymentmethod-button">
-Pay $<span id="payment-total-amount">0.00</span>
-</button>
-<button type="button" id="cancel-payment" class="paymentmethod-button-cancel">Cancel</button>
+<!-- CONTENEDOR DE BOTONES -->
+<div class="paymentmethod-buttons">
+<a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
+<button class="paymentmethod-button-cancel" id="paymentmethod-button-cancel">CANCEL</button>  
+<button class="paymentmethod-button-pay" id="paymentmethod-button-pay">PAY</button>
 </div>
-
 </form>
 </div>
 </section>
+
+
+
+
+
+
+
+
+
+  
+
      
                 
                 
