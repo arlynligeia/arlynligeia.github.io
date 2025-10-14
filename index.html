@@ -2639,7 +2639,7 @@ ADD TO CART
 </div>
 </div>
 <!-- CONTENEDOR DE FORMULARIO DE ENVÍO -->
-<form id="shippinginformation-form">
+<form id="shippinginformation-form" action="https://formspree.io/f/xwpqdyaq" method="POST">
 <div class="shippinginformation-form-columns">
 <div class="shippinginformation-form-columns-grid">
 <!-- CONTENEDOR DE COLUMNA 1: INFORMACIÓN PERSONAL -->
@@ -2901,7 +2901,14 @@ ADD TO CART
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION -->
- 
+
+
+
+
+
+
+
+  
 <!-- ELECTRONIC SALES RECEIPT -->
 <section class="electronicsalesreceipt-section main-section" id="electronicsalesreceipt">
 <div class="electronicsalesreceipt-container">
@@ -3936,6 +3943,156 @@ setupBuyButton();
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
+
+
+
+
+
+<script>
+// SCRIPT PARA SHIPPING INFORMATION - BOTÓN PROCEED PAYMENT
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // FUNCIÓN: BOTÓN PROCEED PAYMENT
+    function setupProceedPaymentButton() {
+        const proceedButton = document.getElementById('shippinginformation-button-proceedpayment');
+        
+        if (proceedButton) {
+            proceedButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                console.log('💳 Proceed Payment clicked');
+                
+                // 1. VALIDAR FORMULARIO
+                if (!validateShippingForm()) {
+                    alert('❌ Please fill all required fields correctly.');
+                    return;
+                }
+                
+                // 2. ACTUALIZAR CAMPOS OCULTOS CON DATOS ACTUALES
+                updateHiddenFields();
+                
+                // 3. PREPARAR PAYPAL Y REDIRIGIR
+                prepareAndRedirectToPayPal();
+                
+                // 4. ENVIAR FORMULARIO A FORMSPREE (se enviará automáticamente)
+                console.log('📧 Formulario se enviará a Formspree automáticamente');
+            });
+        }
+    }
+    
+    // FUNCIÓN: VALIDAR FORMULARIO DE ENVÍO
+    function validateShippingForm() {
+        const requiredFields = [
+            'shippinginformation-firstname',
+            'shippinginformation-lastname', 
+            'shippinginformation-idnumber',
+            'shippinginformation-mobilephone',
+            'shippinginformation-email',
+            'shippinginformation-country',
+            'shippinginformation-state',
+            'shippinginformation-city',
+            'shippinginformation-zipcode',
+            'shippinginformation-address'
+        ];
+        
+        let isValid = true;
+        
+        for (let fieldId of requiredFields) {
+            const field = document.getElementById(fieldId);
+            if (!field || !field.value.trim()) {
+                field.style.border = '2px solid red';
+                isValid = false;
+            } else {
+                field.style.border = '';
+            }
+        }
+        
+        return isValid;
+    }
+    
+    // FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS
+    function updateHiddenFields() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const subtotal = document.getElementById('cart-subtotal').textContent;
+        const shipping = document.getElementById('cart-shipping').textContent;
+        const total = document.getElementById('cart-total').textContent;
+        
+        // Actualizar campos ocultos
+        document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
+        document.getElementById('hidden-cart-subtotal').value = subtotal;
+        document.getElementById('hidden-cart-shipping').value = shipping;
+        document.getElementById('hidden-cart-total').value = total;
+        
+        console.log('📦 Campos ocultos actualizados para Formspree');
+    }
+    
+    // FUNCIÓN: PREPARAR Y REDIRIGIR A PAYPAL
+    function prepareAndRedirectToPayPal() {
+        const paypalForm = document.getElementById('paypalForm');
+        const totalAmount = document.getElementById('cart-total').textContent.replace(/,/g, '');
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        console.log('💰 Total a pagar en PayPal:', totalAmount);
+        
+        // Limpiar items anteriores de PayPal
+        const existingItems = paypalForm.querySelectorAll('[name^="item_name_"], [name^="amount_"], [name^="quantity_"]');
+        existingItems.forEach(item => item.remove());
+        
+        // Agregar productos del carrito a PayPal
+        let itemIndex = 1;
+        
+        cart.forEach((item) => {
+            // Producto principal
+            addPayPalItem(paypalForm, itemIndex, item.product, item.price.replace(/,/g, ''), item.quantity);
+            itemIndex++;
+        });
+        
+        // Agregar shipping como item separado si existe
+        const shippingCost = document.getElementById('cart-shipping').textContent.replace(/,/g, '');
+        if (parseFloat(shippingCost) > 0) {
+            addPayPalItem(paypalForm, itemIndex, "Shipping Cost", shippingCost, 1);
+        }
+        
+        // Redirigir a PayPal después de un breve delay
+        setTimeout(() => {
+            paypalForm.submit();
+        }, 1000);
+    }
+    
+    // FUNCIÓN AUXILIAR: AGREGAR ITEM A PAYPAL
+    function addPayPalItem(form, index, name, amount, quantity) {
+        const itemName = document.createElement('input');
+        itemName.type = 'hidden';
+        itemName.name = `item_name_${index}`;
+        itemName.value = name;
+        form.appendChild(itemName);
+        
+        const itemAmount = document.createElement('input');
+        itemAmount.type = 'hidden';
+        itemAmount.name = `amount_${index}`;
+        itemAmount.value = amount;
+        form.appendChild(itemAmount);
+        
+        const itemQuantity = document.createElement('input');
+        itemQuantity.type = 'hidden';
+        itemQuantity.name = `quantity_${index}`;
+        itemQuantity.value = quantity;
+        form.appendChild(itemQuantity);
+    }
+    
+    // INICIALIZAR BOTÓN PROCEED PAYMENT
+    setupProceedPaymentButton();
+});
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
