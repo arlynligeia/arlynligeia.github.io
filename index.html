@@ -2908,6 +2908,153 @@ ADD TO CART
 
 
 
+
+  
+<!-- PAYMENT METHOD -->
+<section class="paymentmethod-section main-section" id="paymentmethod">
+<div class="paymentmethod-container">
+<h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
+
+<!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
+<form id="paymentmethod-form">
+
+<!-- OPCIÓN 1: CREDIT CARD -->
+<div class="paymentmethod-form-option">
+<input class="paymentmethod-form-option-creditcard" id="credit-card" type="radio" name="payment-method" value="credit-card">
+<label class="paymentmethod-form-option-creditcard-label" for="credit-card">
+<span class="paymentmethod-form-option-creditcard-label-title">CREDIT CARD</span>
+<span class="paymentmethod-form-option-creditcard-label-icons">
+<span class="paymentmethod-form-option-creditcard-label-icon">Visa</span>
+<span class="paymentmethod-form-option-creditcard-label-icon">Mastercard</span>
+<span class="paymentmethod-form-option-creditcard-label-icon">American Express</span>
+</span>
+</label>
+
+<!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
+<div class="paymentmethod-form" id="credit-card-form">
+<div class="paymentmethod-form-content">
+
+<!-- NÚMERO DE TARJETA -->
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-cardnumber">CARD NUMBER</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" required>
+
+<!-- FECHA Y CVV -->
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-expirationdate">EXPIRATION DATE</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" required>
+
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-securitycode">SECURITY CODE</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-securitycode" type="text" name="securitycode" required>
+
+<!-- NOMBRE DEL TITULAR -->
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-nameoncard">NAME ON CARD</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="As it appears on the card" required>  
+
+<!-- TIPO DE DOCUMENTO -->
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documenttype">DOCUMENT TYPE</label>
+<select class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documenttype" name="documenttype" required>
+<option value="ID">National ID</option>
+<option value="Passport">Passport</option>
+<option value="DriverLicense">Driver's License</option>
+<option value="SocialSecurity">Social Security Card</option>
+<option value="ResidencePermit">Residence Permit</option>
+<option value="MilitaryID">Military ID</option>
+<option value="Other">Other</option>
+</select>            
+
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documentnumber">DOCUMENT NUMBER</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documentnumber" type="text" name="documentnumber" required>               
+
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-emailforreceipt">EMAIL FOR RECEIPT</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-emailforreceipt" type="email" name="emailforreceipt" required>               
+
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-phonenumber">PHONE NUMBER</label>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-phonenumber" type="tel" name="phonenumber" required>                  
+
+</div>
+</div>
+</div>
+
+<!-- OPCIÓN 2: PAYPAL -->
+<div class="paymentmethod-form-option">
+<input class="paymentmethod-form-option-paypal" id="paypal" type="radio" name="payment-method" value="paypal">
+<label class="paymentmethod-form-option-paypal-label" for="paypal">
+<span class="paymentmethod-form-option-paypal-label-title">PAYPAL</span>
+<span class="paymentmethod-form-option-paypal-label-icons">
+<span class="paymentmethod-form-option-paypal-label-icon">PayPal</span>
+</span>
+</label>
+
+<!-- INFORMACIÓN PAYPAL (oculto inicialmente) -->
+<div class="paymentmethod-form" id="paypal-form">
+<div class="paymentmethod-form-content">
+<p>You will be redirected to PayPal to complete your payment securely.</p>
+<div class="paypal-info">
+<p>• Secure payment through PayPal</p>
+<p>• No need to enter card details on this site</p>
+<p>• PayPal account or credit card accepted</p>
+</div>
+</div>
+</div>
+</div>                    
+
+<!-- BOTÓN PARA PROCEDER AL PAGO -->
+<div class="paymentmethod-submit">
+<button type="submit" id="submit-payment" class="paymentmethod-button">
+Pay $<span id="payment-total-amount">0.00</span>
+</button>
+<button type="button" id="cancel-payment" class="paymentmethod-button-cancel">Cancel</button>
+</div>
+
+</form>
+</div>
+</section>
+     
+                
+                
+             
+              
+                
+              
+                   
+              
+               
+
+
+
+
+
+
+  
+       
+                
+           
+    
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 <!-- ELECTRONIC SALES RECEIPT -->
 <section class="electronicsalesreceipt-section main-section" id="electronicsalesreceipt">
@@ -3951,86 +4098,70 @@ setupBuyButton();
 
 
 
-
+<!-- SCRIP: SHIPPING INFORMATION -->
 <script>
-// SCRIPT SIMPLE PARA ENVIAR FORMULARIO SHIPPING INFORMATION
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // FUNCIÓN: BOTÓN PROCEED PAYMENT
-    function setupProceedPaymentButton() {
-        const proceedButton = document.getElementById('shippinginformation-button-proceedpayment');
-        
-        if (proceedButton) {
-            proceedButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                console.log('📧 Enviando formulario a Formspree');
-                
-                // 1. VALIDAR FORMULARIO
-                if (!validateShippingForm()) {
-                    alert('❌ Please fill all required fields correctly.');
-                    return;
-                }
-                
-                // 2. ACTUALIZAR CAMPOS OCULTOS CON DATOS DEL CARRITO
-                updateHiddenFields();
-                
-                // 3. ENVIAR FORMULARIO A FORMSPREE
-                document.getElementById('shippinginformation-form').submit();
-                
-                console.log('✅ Formulario enviado correctamente a: https://formspree.io/f/xrblnevd');
-            });
-        }
-    }
-    
-    // FUNCIÓN: VALIDAR FORMULARIO DE ENVÍO
-    function validateShippingForm() {
-        const requiredFields = [
-            'shippinginformation-firstname',
-            'shippinginformation-lastname', 
-            'shippinginformation-idnumber',
-            'shippinginformation-mobilephone',
-            'shippinginformation-email',
-            'shippinginformation-country',
-            'shippinginformation-state',
-            'shippinginformation-city',
-            'shippinginformation-zipcode',
-            'shippinginformation-address'
-        ];
-        
-        let isValid = true;
-        
-        for (let fieldId of requiredFields) {
-            const field = document.getElementById(fieldId);
-            if (!field || !field.value.trim()) {
-                field.style.border = '2px solid red';
-                isValid = false;
-            } else {
-                field.style.border = '';
-            }
-        }
-        
-        return isValid;
-    }
-    
-    // FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS
-    function updateHiddenFields() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const subtotal = document.getElementById('cart-subtotal').textContent;
-        const shipping = document.getElementById('cart-shipping').textContent;
-        const total = document.getElementById('cart-total').textContent;
-        
-        // Actualizar campos ocultos
-        document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
-        document.getElementById('hidden-cart-subtotal').value = subtotal;
-        document.getElementById('hidden-cart-shipping').value = shipping;
-        document.getElementById('hidden-cart-total').value = total;
-        
-        console.log('📦 Carrito guardado en campos ocultos:', cart);
-    }
-    
-    // INICIALIZAR BOTÓN PROCEED PAYMENT
-    setupProceedPaymentButton();
+// FUNCIÓN: BOTÓN PROCEED PAYMENT
+function setupProceedPaymentButton() {
+const proceedButton = document.getElementById('shippinginformation-button-proceedpayment');
+if (proceedButton) {
+proceedButton.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📧 Enviando formulario a Formspree');
+// VALIDAR FORMULARIO
+if (!validateShippingForm()) {
+alert('❌ Please fill all required fields correctly.');
+return;
+}
+// ACTUALIZAR CAMPOS OCULTOS CON DATOS DEL CARRITO
+updateHiddenFields();
+// ENVIAR FORMULARIO A FORMSPREE
+document.getElementById('shippinginformation-form').submit();
+console.log('✅ Formulario enviado correctamente a: https://formspree.io/f/xrblnevd');
+});
+}
+}
+// FUNCIÓN: VALIDAR FORMULARIO DE ENVÍO
+function validateShippingForm() {
+const requiredFields = [
+'shippinginformation-firstname',
+'shippinginformation-lastname', 
+'shippinginformation-idnumber',
+'shippinginformation-mobilephone',
+'shippinginformation-email',
+'shippinginformation-country',
+'shippinginformation-state',
+'shippinginformation-city',
+'shippinginformation-zipcode',
+'shippinginformation-address'
+];
+let isValid = true;
+for (let fieldId of requiredFields) {
+const field = document.getElementById(fieldId);
+if (!field || !field.value.trim()) {
+field.style.border = '2px solid red';
+isValid = false;
+} else {
+field.style.border = '';
+}
+}
+return isValid;
+}
+// FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS
+function updateHiddenFields() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const subtotal = document.getElementById('cart-subtotal').textContent;
+const shipping = document.getElementById('cart-shipping').textContent;
+const total = document.getElementById('cart-total').textContent;
+// Actualizar campos ocultos
+document.getElementById('hidden-cart-items').value = JSON.stringify(cart);
+document.getElementById('hidden-cart-subtotal').value = subtotal;
+document.getElementById('hidden-cart-shipping').value = shipping;
+document.getElementById('hidden-cart-total').value = total;
+console.log('📦 Carrito guardado en campos ocultos:', cart);
+}
+// INICIALIZAR BOTÓN PROCEED PAYMENT
+setupProceedPaymentButton();
 });
 </script>
 
