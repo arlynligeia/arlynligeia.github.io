@@ -6900,23 +6900,16 @@ border: 3px solid #39ff14 !important;
 padding: 15px;
 margin: 0 0 15px 0;
 }
-.paymentmethod-ordersummary-total,
 .paymentmethod-ordersummary-total-amount {
-display: flex;
-justify-content: space-between; 
-font-family: 'Orbitron', sans-serif;
+display: block;
+font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
 margin: 0px;
 }
-
-
-
-
-
 /* HEADER DE OPCIONES */
 .paymentmethod-form-option-creditcard,
 .paymentmethod-form-option-paypal {
@@ -6941,7 +6934,7 @@ margin: 0;
 .paymentmethod-form-option-paypal-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: white !important;
+color: #39ff14 !important;
 margin: 0;
 }
 .paymentmethod-form-option-creditcard-icons,
@@ -7014,11 +7007,15 @@ padding: 10px;
 margin: 0 0 15px 0;
 border: none;
 }
-.paymentmethod-form-option-paypal-card-content p {
+.paymentmethod-form-option-paypal-card-content-text p,
+.paymentmethod-form-option-paypal-card-content-text-end p,{
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.1rem;
+font-size: 1.25rem;
 color: white !important;
 line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.paymentmethod-form-option-paypal-card-content-text-end p,{
 margin: 0 0 20px 0;
 }
 /* CONTENEDOR DE BOTONES FINALES */
