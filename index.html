@@ -3854,7 +3854,7 @@ function setupBuyButton() {
             console.log('🛒 Proceeding to checkout with cart:', cart);
             
             // 1. NAVEGAR A LA SECCIÓN SHIPPING INFORMATION
-            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
                 section.style.display = 'none';
             });
             
