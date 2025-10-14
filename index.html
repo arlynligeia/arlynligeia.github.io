@@ -2918,38 +2918,33 @@ ADD TO CART
 <form id="paymentmethod-form">
 <!-- OPCIÓN 1: CREDIT CARD -->
 <div class="paymentmethod-form-option">
-    <div class="paymentmethod-form-option-header">
-        <input class="paymentmethod-form-option-creditcard" id="credit-card" type="radio" name="payment-method" value="credit-card">
-        <label class="paymentmethod-form-option-creditcard-label" for="credit-card">
-            <span class="paymentmethod-form-option-creditcard-label-title">CREDIT CARD</span>
-        </label>
-      <span class="paymentmethod-form-option-creditcard-label-icons">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
+<div class="paymentmethod-form-option-header">
+<input class="paymentmethod-form-option-creditcard" id="credit-card" type="radio" name="payment-method" value="credit-card">
+<label class="paymentmethod-form-option-creditcard-label" for="credit-card">
+<span class="paymentmethod-form-option-creditcard-label-title">CREDIT CARD</span>
+</label>
+<span class="paymentmethod-form-option-creditcard-label-icons">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
 </span>
-    </div>
-
-
-
+</div>
 <!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
-<div class="paymentmethod-form" id="credit-card-form">
+<div class="paymentmethod-form" id="creditcard-form">
 <div class="paymentmethod-form-content">
-
-<!-- NÚMERO DE TARJETA -->
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-cardnumber">CARD NUMBER</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" required>
-
-<!-- FECHA Y CVV -->
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-expirationdate">EXPIRATION DATE</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" required>
-
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-securitycode">SECURITY CODE</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-securitycode" type="text" name="securitycode" required>
-
-<!-- NOMBRE DEL TITULAR -->
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-nameoncard">NAME ON CARD</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="As it appears on the card" required>  
+<!-- PRIMERA FILA: CARD NUMBER -->
+<div class="paymentmethod-form-row">
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" placeholder="Card Number" required>
+</div>
+<!-- SEGUNDA FILA: EXPIRATION DATE + SECURITY CODE -->
+<div class="paymentmethod-form-row">
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" placeholder="MM/YY" required>
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-securitycode" type="text" name="securitycode" placeholder="CVV" required>
+</div>
+<!-- TERCERA FILA: NAME ON CARD -->
+<div class="paymentmethod-form-row">
+<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="Name on Card" required>
+</div>
 
 <!-- TIPO DE DOCUMENTO -->
 <label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documenttype">DOCUMENT TYPE</label>
