@@ -2886,18 +2886,6 @@ ADD TO CART
 <button class="shippinginformation-button-proceedpayment" id="shippinginformation-button-proceedpayment">PROCEED PAYMENT</button>
 </div>
 </form>
-<!-- FORMULARIO PAYPAL (OCULTO) -->
-<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="business" value="arlynligeia@gmail.com">
-<input type="hidden" name="item_name_1" value="Planet Sponsor">
-<input type="hidden" name="amount_1" value="1000000.00">
-<input type="hidden" name="quantity_1" value="1">
-<input type="hidden" name="item_name_2" value="Shipping">
-<input type="hidden" name="amount_2" value="50.00">
-</form>
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION -->
@@ -2982,6 +2970,7 @@ ADD TO CART
 <p class="paymentmethod-form-option-paypal-card-content-text-end">• No need to enter card details on this site</p>
 </div>
 </div>
+</div>
 <!-- CONTENEDOR DE BOTONES -->
 <div class="paymentmethod-buttons">
 <a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
@@ -2989,9 +2978,21 @@ ADD TO CART
 <button class="paymentmethod-button-pay" id="paymentmethod-button-pay">PAY</button>
 </div>
 </form>
+<!-- FORMULARIO PAYPAL (OCULTO) -->
+<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="business" value="arlynligeia@gmail.com">
+<input type="hidden" name="item_name_1" value="Planet Sponsor">
+<input type="hidden" name="amount_1" value="1000000.00">
+<input type="hidden" name="quantity_1" value="1">
+<input type="hidden" name="item_name_2" value="Shipping">
+<input type="hidden" name="amount_2" value="50.00">
+</form>
 </div>
 </section>
-
+<!-- FIN: PAYMENT METHOD -->
 
 
 
