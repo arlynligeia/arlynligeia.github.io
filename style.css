@@ -6900,37 +6900,17 @@ border: 3px solid #39ff14 !important;
 padding: 15px;
 margin: 0 0 15px 0;
 }
-.paymentmethod-ordersummary-title {
+.paymentmethod-ordersummary-total,
+.paymentmethod-ordersummary-total-amount {
+display: flex;
+justify-content: space-between; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #39ff14 !important;
 text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
-margin: 0px;
-}
-.paymentmethod-ordersummary-total {
-display: flex;
-justify-content: space-between; 
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
 line-height: 1.5;
+text-align: center;
 margin: 0px;
-}
-/* Etiqueta a la izquierda */
-.paymentmethod-ordersummary-total span:first-child {
-text-align: left;
-flex: 1;
-}
-/* Contenedor para símbolo + monto alineados a la derecha */
-.paymentmethod-ordersummary-total span:nth-child(2) {
-margin-right: 5px;
-}
-.paymentmethod-ordersummary-total span:nth-child(3) {
-text-align: right;
-min-width: 130px;
 }
 
 
