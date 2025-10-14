@@ -6893,8 +6893,9 @@ color: white !important;
 text-decoration: none;
 }
 
-
-.paymentmethod-form-option-header {
+/* HEADER DE OPCIONES */
+.paymentmethod-form-option-creditcard,
+.paymentmethod-form-option-paypal {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -6902,26 +6903,29 @@ text-decoration: none;
 }
 
 /* RADIO BUTTON MÁS GRANDE */
-.paymentmethod-form-option-creditcard,
-.paymentmethod-form-option-paypal {
-    transform: scale(1.5); /* Hace el radio button 50% más grande */
+.paymentmethod-form-option-creditcard-header,
+.paymentmethod-form-option-paypal-header {
+    transform: scale(1.5);
     margin: 0 5px;
 }
 
-.paymentmethod-form-option-creditcard-label {
+.paymentmethod-form-option-creditcard-label,
+.paymentmethod-form-option-paypal-label {
     margin: 0;
     display: flex;
     align-items: center;
 }
 
-.paymentmethod-form-option-creditcard-label-title {
+.paymentmethod-form-option-creditcard-title,
+.paymentmethod-form-option-paypal-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: white !important;
     margin: 0;
 }
 
-.paymentmethod-form-option-creditcard-label-icons {
+.paymentmethod-form-option-creditcard-icons,
+.paymentmethod-form-option-paypal-icons {
     display: flex;
     gap: 10px;
     margin-left: auto;
@@ -6929,99 +6933,114 @@ text-decoration: none;
 }
 
 /* IMÁGENES MÁS GRANDES */
-.paymentmethod-form-option-creditcard-label-icons img {
-    width: 50px; /* Ancho más grande */
-    height: 35px; /* Alto más grande (similar a los inputs) */
-    object-fit: contain; /* Mantiene la proporción */
+.paymentmethod-form-option-creditcard-icons img,
+.paymentmethod-form-option-paypal-icons img {
+    width: 50px;
+    height: 35px;
+    object-fit: contain;
     border-radius: 4px;
     background: white;
     padding: 3px;
 }
 
-.paymentmethod-form-row {
+/* FILAS DEL FORMULARIO */
+.paymentmethod-form-option-creditcard-card-content-row {
     display: flex;
     gap: 15px;
     margin-bottom: 15px;
 }
 
-.paymentmethod-form-row .paymentmethod-form-option-creditcard-input {
+.paymentmethod-form-option-creditcard-card-content-row-input {
     flex: 1;
+    width: 100%;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: black !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
 }
 
 /* Para que Expiration Date y Security Code estén 50% cada uno */
-.paymentmethod-form-row:first-of-type .paymentmethod-form-option-creditcard-input,
-.paymentmethod-form-row:last-of-type .paymentmethod-form-option-creditcard-input {
+.paymentmethod-form-option-creditcard-card-content-row:first-of-type .paymentmethod-form-option-creditcard-card-content-row-input,
+.paymentmethod-form-option-creditcard-card-content-row:last-of-type .paymentmethod-form-option-creditcard-card-content-row-input {
     flex: 1;
 }
 
-.paymentmethod-form-row:nth-of-type(2) .paymentmethod-form-option-creditcard-input {
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) .paymentmethod-form-option-creditcard-card-content-row-input {
     flex: 1;
 }
-
-
 
 /* TEXTOS SOBRE LOS RECUADROS */
-.paymentmethod-form-option-creditcard-label,
-.paymentmethod-form-option-paypal-label {
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: left;  
-margin: 0 0 5px 0;
+.paymentmethod-form-option-creditcard-label {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white !important;
+    text-decoration: none;
+    line-height: 1.5; 
+    text-align: left;  
+    margin: 0 0 5px 0;
 }
+
 /* RECUADROS Y TEXTOS DENTRO */
 .paymentmethod-form-option-creditcard-input {
-width: 100%;
-height: 40px;
-background-color: white !important;
-border-radius: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: black !important;
-text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
-margin: 0 0 15px 0;
-border: none;
+    width: 100%;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: black !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 0 15px 0;
+    border: none;
 }
+
 /* CONTENEDOR DE BOTONES FINALES */
 .paymentmethod-buttons {
-display: flex;
-justify-content: space-between;
-margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
 }
+
 .paymentmethod-button-back,
 .paymentmethod-button-cancel,
 .paymentmethod-button-pay {
-display: flex;
-justify-content: space-between;
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
-text-decoration: none;
-padding: 10px 20px 10px 20px;
-margin: 0px;  
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white !important;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    margin: 0px;  
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
+
 .paymentmethod-button-back,
 .paymentmethod-button-cancel {
-background-color: #00CED1 !important;
+    background-color: #00CED1 !important;
 }
-.paymentmethod-button-pay{
-background-color: #ff1493 !important;
+
+.paymentmethod-button-pay {
+    background-color: #ff1493 !important;
 }
+
 .paymentmethod-button-back:hover,
 .paymentmethod-button-cancel:hover,
 .paymentmethod-button-pay:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
-
 
 
 
