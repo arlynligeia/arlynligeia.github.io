@@ -4113,6 +4113,10 @@ updateHiddenFields();
 // ENVIAR FORMULARIO A FORMSPREE
 document.getElementById('shippinginformation-form').submit();
 console.log('✅ Formulario enviado correctamente a: https://formspree.io/f/xrblnevd');
+
+ // NAVEGAR A PAYMENT METHOD Y PASAR EL TOTAL
+                navigateToPaymentMethod();
+  
 });
 }
 }
@@ -4155,8 +4159,59 @@ document.getElementById('hidden-cart-shipping').value = shipping;
 document.getElementById('hidden-cart-total').value = total;
 console.log('📦 Carrito guardado en campos ocultos:', cart);
 }
+
+  // FUNCIÓN: NAVEGAR A PAYMENT METHOD Y PASAR EL TOTAL
+    function navigateToPaymentMethod() {
+        // Obtener el total del carrito
+        const total = document.getElementById('cart-total').textContent;
+        
+        // Guardar el total en localStorage para que payment method lo pueda leer
+        localStorage.setItem('payment-total', total);
+        
+        // Ocultar todas las secciones principales
+        document.querySelectorAll('.main-section, .subsection').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Mostrar la sección de payment method
+        const paymentMethodSection = document.getElementById('paymentmethod');
+        if (paymentMethodSection) {
+            paymentMethodSection.style.display = 'block';
+            window.location.hash = 'paymentmethod';
+            
+            // Actualizar el total en payment method
+            updatePaymentMethodTotal(total);
+        }
+        
+        console.log('💰 Total pasado a Payment Method:', total);
+    }
+    
+    // FUNCIÓN: ACTUALIZAR TOTAL EN PAYMENT METHOD
+    function updatePaymentMethodTotal(total) {
+        const totalElement = document.querySelector('.paymentmethod-total-amount');
+        if (totalElement) {
+            totalElement.textContent = '$ ' + total;
+            console.log('✅ Total actualizado en Payment Method: $' + total);
+        }
+    }
+    
+
+  
 // INICIALIZAR BOTÓN PROCEED PAYMENT
 setupProceedPaymentButton();
+
+
+ // ACTUALIZAR PAYMENT METHOD AL CARGAR LA PÁGINA (por si se recarga)
+    function initializePaymentMethodTotal() {
+        const savedTotal = localStorage.getItem('payment-total');
+        if (savedTotal) {
+            updatePaymentMethodTotal(savedTotal);
+        }
+    }
+    
+    // Ejecutar al cargar la página
+    initializePaymentMethodTotal();
+  
 });
 </script>
 
