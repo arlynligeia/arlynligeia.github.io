@@ -6892,6 +6892,51 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
+/* CONTENEDOR RESUMEN DEL PEDIDO */
+.paymentmethod-ordersummary {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+padding: 15px;
+margin: 0 0 15px 0;
+}
+.paymentmethod-ordersummary-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+.paymentmethod-ordersummary-total {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+}
+/* Etiqueta a la izquierda */
+.paymentmethod-ordersummary-total span:first-child {
+text-align: left;
+flex: 1;
+}
+/* Contenedor para símbolo + monto alineados a la derecha */
+.paymentmethod-ordersummary-total span:nth-child(2) {
+margin-right: 5px;
+}
+.paymentmethod-ordersummary-total span:nth-child(3) {
+text-align: right;
+min-width: 130px;
+}
+
+
+
+
+
 /* HEADER DE OPCIONES */
 .paymentmethod-form-option-creditcard,
 .paymentmethod-form-option-paypal {
@@ -7037,57 +7082,7 @@ transform: scale(1.05);
 
 
 
-/* CONTENEDOR RESUMEN DEL PEDIDO */
-.paymentmethod-ordersummary {
-background-color: rgba(255, 255, 255, 0.1);
-border-radius: 15px;
-border: 3px solid #39ff14 !important;
-padding: 15px;
-margin: 0 0 15px 0;
-}
-.paymentmethod-ordersummary-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #39ff14 !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
-margin: 0px;
-}
-.paymentmethod-ordersummary-subtotal,
-.paymentmethod-ordersummary-shipping,
-.paymentmethod-ordersummary-total {
-display: flex;
-justify-content: space-between; 
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-margin: 0px;
-}
-.paymentmethod-ordersummary-total {
-color: #39ff14 !important;
-}
-/* Etiqueta a la izquierda */
-.paymentmethod-ordersummary-subtotal span:first-child,
-.paymentmethod-ordersummary-shipping span:first-child,
-.paymentmethod-ordersummary-total span:first-child {
-text-align: left;
-flex: 1;
-}
-/* Contenedor para símbolo + monto alineados a la derecha */
-.paymentmethod-ordersummary-subtotal span:nth-child(2),
-.paymentmethod-ordersummary-shipping span:nth-child(2),
-.paymentmethod-ordersummary-total span:nth-child(2) {
-margin-right: 5px;
-}
-.paymentmethod-ordersummary-subtotal span:nth-child(3),
-.paymentmethod-ordersummary-shipping span:nth-child(3),
-.paymentmethod-ordersummary-total span:nth-child(3) {
-text-align: right;
-min-width: 130px;
-}
+
 
 
 
