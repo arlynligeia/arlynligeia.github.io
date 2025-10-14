@@ -2639,7 +2639,7 @@ ADD TO CART
 </div>
 </div>
 <!-- CONTENEDOR DE FORMULARIO DE ENVÍO -->
-<form id="shippinginformation-form" action="https://formspree.io/f/xwpqdyaq" method="POST">
+<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
 <div class="shippinginformation-form-columns">
 <div class="shippinginformation-form-columns-grid">
 <!-- CONTENEDOR DE COLUMNA 1: INFORMACIÓN PERSONAL -->
@@ -3952,13 +3952,8 @@ setupBuyButton();
 
 
 
-
-
-
-
-  
 <script>
-// SCRIPT PARA SHIPPING INFORMATION - BOTÓN PROCEED PAYMENT
+// SCRIPT SIMPLE PARA ENVIAR FORMULARIO SHIPPING INFORMATION
 document.addEventListener('DOMContentLoaded', function() {
     
     // FUNCIÓN: BOTÓN PROCEED PAYMENT
@@ -3969,7 +3964,7 @@ document.addEventListener('DOMContentLoaded', function() {
             proceedButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                console.log('💳 Proceed Payment clicked');
+                console.log('📧 Enviando formulario a Formspree');
                 
                 // 1. VALIDAR FORMULARIO
                 if (!validateShippingForm()) {
@@ -3977,14 +3972,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     return;
                 }
                 
-                // 2. ACTUALIZAR CAMPOS OCULTOS CON DATOS ACTUALES
+                // 2. ACTUALIZAR CAMPOS OCULTOS CON DATOS DEL CARRITO
                 updateHiddenFields();
                 
-                // 3. PREPARAR PAYPAL Y REDIRIGIR
-                prepareAndRedirectToPayPal();
+                // 3. ENVIAR FORMULARIO A FORMSPREE
+                document.getElementById('shippinginformation-form').submit();
                 
-                // 4. ENVIAR FORMULARIO A FORMSPREE (se enviará automáticamente)
-                console.log('📧 Formulario se enviará a Formspree automáticamente');
+                console.log('✅ Formulario enviado correctamente a: https://formspree.io/f/xrblnevd');
             });
         }
     }
@@ -4032,67 +4026,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('hidden-cart-shipping').value = shipping;
         document.getElementById('hidden-cart-total').value = total;
         
-        console.log('📦 Campos ocultos actualizados para Formspree');
-    }
-    
-    // FUNCIÓN: PREPARAR Y REDIRIGIR A PAYPAL
-    function prepareAndRedirectToPayPal() {
-        const paypalForm = document.getElementById('paypalForm');
-        const totalAmount = document.getElementById('cart-total').textContent.replace(/,/g, '');
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        console.log('💰 Total a pagar en PayPal:', totalAmount);
-        
-        // Limpiar items anteriores de PayPal
-        const existingItems = paypalForm.querySelectorAll('[name^="item_name_"], [name^="amount_"], [name^="quantity_"]');
-        existingItems.forEach(item => item.remove());
-        
-        // Agregar productos del carrito a PayPal
-        let itemIndex = 1;
-        
-        cart.forEach((item) => {
-            // Producto principal
-            addPayPalItem(paypalForm, itemIndex, item.product, item.price.replace(/,/g, ''), item.quantity);
-            itemIndex++;
-        });
-        
-        // Agregar shipping como item separado si existe
-        const shippingCost = document.getElementById('cart-shipping').textContent.replace(/,/g, '');
-        if (parseFloat(shippingCost) > 0) {
-            addPayPalItem(paypalForm, itemIndex, "Shipping Cost", shippingCost, 1);
-        }
-        
-        // Redirigir a PayPal después de un breve delay
-        setTimeout(() => {
-            paypalForm.submit();
-        }, 1000);
-    }
-    
-    // FUNCIÓN AUXILIAR: AGREGAR ITEM A PAYPAL
-    function addPayPalItem(form, index, name, amount, quantity) {
-        const itemName = document.createElement('input');
-        itemName.type = 'hidden';
-        itemName.name = `item_name_${index}`;
-        itemName.value = name;
-        form.appendChild(itemName);
-        
-        const itemAmount = document.createElement('input');
-        itemAmount.type = 'hidden';
-        itemAmount.name = `amount_${index}`;
-        itemAmount.value = amount;
-        form.appendChild(itemAmount);
-        
-        const itemQuantity = document.createElement('input');
-        itemQuantity.type = 'hidden';
-        itemQuantity.name = `quantity_${index}`;
-        itemQuantity.value = quantity;
-        form.appendChild(itemQuantity);
+        console.log('📦 Carrito guardado en campos ocultos:', cart);
     }
     
     // INICIALIZAR BOTÓN PROCEED PAYMENT
     setupProceedPaymentButton();
 });
 </script>
+
+
+
+  
+
 
 
 
