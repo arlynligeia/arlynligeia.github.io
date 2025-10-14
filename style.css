@@ -6943,6 +6943,41 @@ margin-right: 5px;
 text-align: right;
 min-width: 130px;
 }
+
+
+.paymentmethod-form-option-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.paymentmethod-form-option-creditcard-label {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.paymentmethod-form-option-creditcard-label-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white !important;
+    margin: 0;
+}
+
+.paymentmethod-form-option-creditcard-label-icons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Empuja los iconos a la derecha */
+}
+
+.paymentmethod-form-option-creditcard-label-icon {
+    font-size: 1.8rem;
+}
+
+.fa-cc-visa { color: #1a1f71; }
+.fa-cc-mastercard { color: #eb001b; }
+.fa-cc-amex { color: #2e77bc; }
 /* TEXTOS SOBRE LOS RECUADROS */
 .paymentmethod-form-option-creditcard-label,
 .paymentmethod-form-option-paypal-label {
