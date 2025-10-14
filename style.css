@@ -6892,6 +6892,8 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
+
+
 .paymentmethod-form-option-header {
     display: flex;
     align-items: center;
@@ -6936,6 +6938,25 @@ text-decoration: none;
     padding: 3px;
 }
 
+.paymentmethod-form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.paymentmethod-form-row .paymentmethod-form-option-creditcard-input {
+    flex: 1;
+}
+
+/* Para que Expiration Date y Security Code estén 50% cada uno */
+.paymentmethod-form-row:first-of-type .paymentmethod-form-option-creditcard-input,
+.paymentmethod-form-row:last-of-type .paymentmethod-form-option-creditcard-input {
+    flex: 1;
+}
+
+.paymentmethod-form-row:nth-of-type(2) .paymentmethod-form-option-creditcard-input {
+    flex: 1;
+}
 
 
 
