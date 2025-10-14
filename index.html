@@ -2914,21 +2914,23 @@ ADD TO CART
 <section class="paymentmethod-section main-section" id="paymentmethod">
 <div class="paymentmethod-container">
 <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
-
 <!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
 <form id="paymentmethod-form">
-
 <!-- OPCIÓN 1: CREDIT CARD -->
 <div class="paymentmethod-form-option">
-<input class="paymentmethod-form-option-creditcard" id="credit-card" type="radio" name="payment-method" value="credit-card">
-<label class="paymentmethod-form-option-creditcard-label" for="credit-card">
+<div class="paymentmethod-form-option-header">
+<input class="paymentmethod-form-option-creditcard" id="creditcard" type="radio" name="payment-method" value="credit-card">
+<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-creditcard">
 <span class="paymentmethod-form-option-creditcard-label-title">CREDIT CARD</span>
-<span class="paymentmethod-form-option-creditcard-label-icons">
-<span class="paymentmethod-form-option-creditcard-label-icon">Visa</span>
-<span class="paymentmethod-form-option-creditcard-label-icon">Mastercard</span>
-<span class="paymentmethod-form-option-creditcard-label-icon">American Express</span>
-</span>
 </label>
+<span class="paymentmethod-form-option-creditcard-label-icons">
+<i class="fab fa-cc-visa paymentmethod-form-option-creditcard-label-icon"></i>
+<i class="fab fa-cc-mastercard paymentmethod-form-option-creditcard-label-icon"></i>
+<i class="fab fa-cc-amex paymentmethod-form-option-creditcard-label-icon"></i>
+</span>
+</div>
+
+
 
 <!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
 <div class="paymentmethod-form" id="credit-card-form">
