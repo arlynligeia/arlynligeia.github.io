@@ -2927,13 +2927,17 @@ ADD TO CART
 <!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
 <div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
 <div class="paymentmethod-form-option-creditcard-card-content">  
-<!-- CONTENEDOR PARA LOS CAMPOS DE MERCADO PAGO -->
-<div id="cardNumber-container" class="paymentmethod-form-option-creditcard-card-content-row"></div>
+<!-- CAMPOS DE TARJETA ORIGINALES - MANTENIENDO TUS INPUTS -->
 <div class="paymentmethod-form-option-creditcard-card-content-row">
-<div id="expirationDate-container" style="flex:1; margin-right:10px;"></div>
-<div id="securityCode-container" style="flex:1;"></div>
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" placeholder="Card Number" data-checkout="cardNumber" required>
 </div>
-<div id="cardholderName-container" class="paymentmethod-form-option-creditcard-card-content-row"></div>
+<div class="paymentmethod-form-option-creditcard-card-content-row">
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" placeholder="MM/YY" data-checkout="expirationDate" required>
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-securitycode" type="text" name="securitycode" placeholder="CVV" data-checkout="securityCode" required>
+</div>
+<div class="paymentmethod-form-option-creditcard-card-content-row">
+<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="Name on Card" data-checkout="cardholderName" required>
+</div>
 
 <!-- CAMPOS ADICIONALES -->
 <label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documenttype">DOCUMENT TYPE</label>
@@ -4304,7 +4308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // FUNCIÓN: MOSTRAR FORMULARIO CREDIT CARD
     function showCreditCardForm() {
         document.getElementById('creditcard-form').style.display = 'block';
-        // Esperar un momento para que el DOM se actualice
+        // Inicializar Mercado Pago cuando se muestra el formulario
         setTimeout(() => {
             initializeMercadoPagoForm();
         }, 100);
@@ -4313,13 +4317,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // FUNCIÓN: OCULTAR FORMULARIO CREDIT CARD
     function hideCreditCardForm() {
         document.getElementById('creditcard-form').style.display = 'none';
-        if (cardForm) {
-            try {
-                cardForm.unmount();
-            } catch (e) {
-                console.log('Error unmounting form:', e);
-            }
-        }
     }
 
     // FUNCIÓN: MOSTRAR FORMULARIO PAYPAL
@@ -4334,60 +4331,60 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // FUNCIÓN: INICIALIZAR FORMULARIO MERCADO PAGO
     function initializeMercadoPagoForm() {
-        // Limpiar formulario anterior si existe
-        if (cardForm) {
-            try {
-                cardForm.unmount();
-            } catch (e) {
-                console.log('Error unmounting previous form:', e);
-            }
-        }
-
         const totalAmount = getTotalAmount();
         
-        console.log('🔄 Inicializando formulario Mercado Pago con monto:', totalAmount);
+        console.log('🔄 Inicializando Mercado Pago con monto:', totalAmount);
 
+        // Verificar que los campos existan
+        const cardNumberField = document.getElementById('paymentmethod-cardnumber');
+        const expirationField = document.getElementById('paymentmethod-expirationdate');
+        const cvvField = document.getElementById('paymentmethod-securitycode');
+        const nameField = document.getElementById('paymentmethod-nameoncard');
+
+        if (!cardNumberField || !expirationField || !cvvField || !nameField) {
+            console.error('❌ Campos de tarjeta no encontrados');
+            return;
+        }
+
+        // Configurar Mercado Pago en modo simple
         cardForm = mp.cardForm({
             amount: totalAmount.toString(),
             iframe: false,
             form: {
                 id: "paymentmethod-form",
                 cardNumber: {
-                    id: "cardNumber-container",
+                    id: "paymentmethod-cardnumber",
                     placeholder: "Número de tarjeta"
                 },
                 expirationDate: {
-                    id: "expirationDate-container", 
+                    id: "paymentmethod-expirationdate",
                     placeholder: "MM/YY"
                 },
                 securityCode: {
-                    id: "securityCode-container",
+                    id: "paymentmethod-securitycode",
                     placeholder: "CVV"
                 },
                 cardholderName: {
-                    id: "cardholderName-container",
+                    id: "paymentmethod-nameoncard",
                     placeholder: "Titular de la tarjeta"
                 }
             },
             callbacks: {
                 onFormMounted: error => {
                     if (error) {
-                        console.error('❌ Error montando formulario Mercado Pago:', error);
+                        console.error('❌ Error montando formulario:', error);
                         showPaymentStatus('❌ Error loading payment form', 'error');
                     } else {
-                        console.log('✅ Formulario Mercado Pago montado correctamente');
+                        console.log('✅ Formulario Mercado Pago listo');
                     }
                 },
                 onSubmit: event => {
                     event.preventDefault();
-                    console.log('🔄 Formulario enviado - procesando pago...');
+                    console.log('🔄 Procesando pago...');
                     processMercadoPagoPayment();
                 },
-                onFetching: (resource) => {
-                    console.log('⏳ Fetching resource:', resource);
-                },
-                onError: (error) => {
-                    console.error('❌ Error en formulario Mercado Pago:', error);
+                onError: error => {
+                    console.error('❌ Error en formulario:', error);
                     showPaymentStatus('❌ Error: ' + error.message, 'error');
                 }
             }
@@ -4400,9 +4397,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (totalElement) {
             const totalText = totalElement.textContent.replace('$', '').trim();
             const total = parseFloat(totalText) || 0;
-            return total > 0 ? total : 100.00; // Valor por defecto para pruebas
+            return total > 0 ? total : 100.00;
         }
-        return 100.00; // Valor por defecto para pruebas
+        return 100.00;
     }
 
     // FUNCIÓN: PROCESAR PAGO MERCADO PAGO
@@ -4413,43 +4410,44 @@ document.addEventListener('DOMContentLoaded', function() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Processing...';
 
-        console.log('🔄 Iniciando procesamiento de pago Mercado Pago...');
+        console.log('🔄 Iniciando procesamiento de pago...');
 
         try {
             // Validar campos adicionales
-            if (!validateAdditionalFields()) {
-                throw new Error('Please fill all required fields');
+            if (!validateCreditCardForm()) {
+                throw new Error('Please fill all required fields correctly');
             }
 
             const additionalData = {
-                cardholderName: document.getElementById('cardholderName-container').querySelector('input')?.value || '',
+                cardholderName: document.getElementById('paymentmethod-nameoncard').value,
                 cardholderEmail: document.getElementById('paymentmethod-emailforreceipt').value,
                 identificationType: document.getElementById('paymentmethod-documenttype').value,
                 identificationNumber: document.getElementById('paymentmethod-documentnumber').value
             };
 
-            console.log('📦 Datos adicionales:', additionalData);
+            console.log('📦 Datos para tokenización:', additionalData);
 
+            // Crear token con Mercado Pago
             const result = await cardForm.createCardToken(additionalData);
             
-            console.log('🔑 Resultado de creación de token:', result);
+            console.log('🔑 Resultado tokenización:', result);
 
             if (result.error) {
                 throw new Error(result.error.message);
             }
 
-            console.log('✅ Token Mercado Pago creado exitosamente');
+            console.log('✅ Token creado exitosamente');
             
-            // SIMULAR PAGO EXITOSO (para pruebas sin backend)
+            // SIMULAR PAGO EXITOSO (para pruebas)
             showPaymentStatus('✅ Payment processed successfully! (Test Mode)', 'success');
             
-            // Limpiar carrito después de pago exitoso
+            // Limpiar y redirigir
             setTimeout(() => {
                 clearCartAndRedirect();
             }, 2000);
 
         } catch (error) {
-            console.error('❌ Error procesando pago Mercado Pago:', error);
+            console.error('❌ Error procesando pago:', error);
             showPaymentStatus('❌ Error: ' + error.message, 'error');
             
             submitBtn.disabled = false;
@@ -4457,9 +4455,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // FUNCIÓN: VALIDAR CAMPOS ADICIONALES
-    function validateAdditionalFields() {
+    // FUNCIÓN: VALIDAR FORMULARIO CREDIT CARD
+    function validateCreditCardForm() {
         const requiredFields = [
+            'paymentmethod-cardnumber',
+            'paymentmethod-expirationdate',
+            'paymentmethod-securitycode',
+            'paymentmethod-nameoncard',
             'paymentmethod-documenttype',
             'paymentmethod-documentnumber',
             'paymentmethod-emailforreceipt'
@@ -4489,7 +4491,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const existingItems = paypalForm.querySelectorAll('[name^="item_name_"], [name^="amount_"], [name^="quantity_"]');
         existingItems.forEach(item => item.remove());
         
-        // Obtener carrito y agregar items a PayPal
+        // Obtener carrito
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         let itemIndex = 1;
         let calculatedTotal = 0;
@@ -4503,7 +4505,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 itemIndex++;
             });
         } else {
-            // Si no hay carrito, usar un item por defecto
             addPayPalItem(paypalForm, 1, "Purchase", totalAmount, 1);
             calculatedTotal = totalAmount;
         }
@@ -4511,7 +4512,6 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('💰 Redirigiendo a PayPal con total:', calculatedTotal);
         showPaymentStatus('🔄 Redirecting to PayPal...', 'info');
         
-        // Redirigir después de un breve delay
         setTimeout(() => {
             paypalForm.submit();
         }, 1000);
@@ -4522,7 +4522,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const itemName = document.createElement('input');
         itemName.type = 'hidden';
         itemName.name = `item_name_${index}`;
-        itemName.value = name.substring(0, 127); // PayPal limita a 127 caracteres
+        itemName.value = name.substring(0, 127);
         form.appendChild(itemName);
         
         const itemAmount = document.createElement('input');
@@ -4544,7 +4544,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         payButton.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('🖱️ Botón PAY clickeado, método seleccionado:', selectedPaymentMethod);
+            console.log('🖱️ Botón PAY clickeado');
             
             if (!selectedPaymentMethod) {
                 alert('❌ Please select a payment method');
@@ -4552,18 +4552,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (selectedPaymentMethod === 'credit-card') {
-                console.log('💳 Procesando pago con tarjeta...');
-                // Mercado Pago se encarga del submit automáticamente
-                // Simulamos el click en el botón de submit de Mercado Pago
-                const mpSubmitButton = document.querySelector('.mercadopago-button');
-                if (mpSubmitButton) {
-                    mpSubmitButton.click();
-                } else {
-                    // Si no encuentra el botón, procesar directamente
-                    processMercadoPagoPayment();
-                }
+                console.log('💳 Procesando con tarjeta...');
+                // Disparar el evento submit de Mercado Pago
+                const event = new Event('submit');
+                document.getElementById('paymentmethod-form').dispatchEvent(event);
             } else if (selectedPaymentMethod === 'paypal') {
-                console.log('💰 Procesando pago con PayPal...');
+                console.log('💰 Procesando con PayPal...');
                 processPayPalPayment();
             }
         });
@@ -4586,7 +4580,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (savedTotal) {
             document.querySelector('.paymentmethod-total-amount').textContent = '$ ' + savedTotal;
         } else {
-            // Valor por defecto para pruebas
             document.querySelector('.paymentmethod-total-amount').textContent = '$ 100.00';
         }
     }
@@ -4631,10 +4624,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // INICIALIZAR
     initializePaymentMethod();
-    console.log('✅ Sistema de pago inicializado correctamente');
+    console.log('✅ Sistema de pago inicializado');
 });
 </script>
-
 
 
 
