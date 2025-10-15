@@ -4268,8 +4268,9 @@ document.addEventListener('DOMContentLoaded', function() {
         locale: 'es-PE'
     });
 
-    let cardForm;
+    let cardForm = null;
     let selectedPaymentMethod = null;
+    let isMercadoPagoInitialized = false;
 
     // INICIALIZAR
     initializePaymentMethod();
@@ -4279,9 +4280,6 @@ document.addEventListener('DOMContentLoaded', function() {
         setupPayButton();
         setupCancelButton();
         updateTotalFromStorage();
-        
-        // Inicializar Mercado Pago inmediatamente
-        initializeMercadoPagoForm();
     }
 
     // CONFIGURAR RADIO BUTTONS
@@ -4297,6 +4295,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectedPaymentMethod = 'credit-card';
                 showCreditCardForm();
                 hidePaypalForm();
+                initializeMercadoPagoForm(); // Inicializar solo cuando se selecciona
             }
         });
 
@@ -4331,64 +4330,64 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // INICIALIZAR FORMULARIO MERCADO PAGO
     function initializeMercadoPagoForm() {
+        if (isMercadoPagoInitialized) {
+            console.log('✅ Mercado Pago ya estaba inicializado');
+            return;
+        }
+
         const totalAmount = getTotalAmount();
         
         console.log('🔄 Inicializando Mercado Pago con monto:', totalAmount);
 
-        // Verificar que los campos existan
-        const cardNumberField = document.getElementById('paymentmethod-cardnumber');
-        const expirationField = document.getElementById('paymentmethod-expirationdate');
-        const cvvField = document.getElementById('paymentmethod-securitycode');
-        const nameField = document.getElementById('paymentmethod-nameoncard');
-
-        if (!cardNumberField || !expirationField || !cvvField || !nameField) {
-            console.error('❌ Campos de tarjeta no encontrados');
-            return;
-        }
-
-        // Configurar Mercado Pago
-        cardForm = mp.cardForm({
-            amount: totalAmount.toString(),
-            iframe: false,
-            form: {
-                id: "paymentmethod-form",
-                cardNumber: {
-                    id: "paymentmethod-cardnumber",
-                    placeholder: "Número de tarjeta"
-                },
-                expirationDate: {
-                    id: "paymentmethod-expirationdate",
-                    placeholder: "MM/YY"
-                },
-                securityCode: {
-                    id: "paymentmethod-securitycode",
-                    placeholder: "CVV"
-                },
-                cardholderName: {
-                    id: "paymentmethod-nameoncard",
-                    placeholder: "Titular de la tarjeta"
-                }
-            },
-            callbacks: {
-                onFormMounted: error => {
-                    if (error) {
-                        console.error('❌ Error montando formulario:', error);
-                        showPaymentStatus('❌ Error loading payment form', 'error');
-                    } else {
-                        console.log('✅ Formulario Mercado Pago listo');
+        try {
+            // Configurar Mercado Pago
+            cardForm = mp.cardForm({
+                amount: totalAmount.toString(),
+                iframe: false,
+                form: {
+                    id: "paymentmethod-form",
+                    cardNumber: {
+                        id: "paymentmethod-cardnumber",
+                        placeholder: "Número de tarjeta"
+                    },
+                    expirationDate: {
+                        id: "paymentmethod-expirationdate",
+                        placeholder: "MM/YY"
+                    },
+                    securityCode: {
+                        id: "paymentmethod-securitycode",
+                        placeholder: "CVV"
+                    },
+                    cardholderName: {
+                        id: "paymentmethod-nameoncard",
+                        placeholder: "Titular de la tarjeta"
                     }
                 },
-                onSubmit: event => {
-                    event.preventDefault();
-                    console.log('🔄 Procesando pago...');
-                    processMercadoPagoPayment();
-                },
-                onError: error => {
-                    console.error('❌ Error en formulario:', error);
-                    showPaymentStatus('❌ Error: ' + error.message, 'error');
+                callbacks: {
+                    onFormMounted: error => {
+                        if (error) {
+                            console.error('❌ Error montando formulario:', error);
+                            showPaymentStatus('❌ Error loading payment form', 'error');
+                        } else {
+                            console.log('✅ Formulario Mercado Pago montado correctamente');
+                            isMercadoPagoInitialized = true;
+                        }
+                    },
+                    onSubmit: event => {
+                        event.preventDefault();
+                        console.log('🔄 Formulario enviado - procesando pago...');
+                        processMercadoPagoPayment();
+                    },
+                    onError: error => {
+                        console.error('❌ Error en formulario:', error);
+                        showPaymentStatus('❌ Error: ' + error.message, 'error');
+                    }
                 }
-            }
-        });
+            });
+        } catch (error) {
+            console.error('❌ Error inicializando Mercado Pago:', error);
+            showPaymentStatus('❌ Error initializing payment system', 'error');
+        }
     }
 
     // OBTENER MONTO TOTAL
@@ -4413,6 +4412,11 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('🔄 Iniciando procesamiento de pago...');
 
         try {
+            // Verificar que cardForm esté inicializado
+            if (!cardForm || !isMercadoPagoInitialized) {
+                throw new Error('Payment system not ready. Please wait and try again.');
+            }
+
             // Validar campos
             if (!validateCreditCardForm()) {
                 throw new Error('Please fill all required fields correctly');
@@ -4428,6 +4432,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('📦 Datos para tokenización:', additionalData);
 
             // Crear token con Mercado Pago
+            console.log('🔑 Creando token...');
             const result = await cardForm.createCardToken(additionalData);
             
             console.log('🔑 Resultado tokenización:', result);
@@ -4479,7 +4484,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return isValid;
     }
 
-    // CONFIGURAR BOTÓN PAY - CORREGIDO
+    // CONFIGURAR BOTÓN PAY
     function setupPayButton() {
         const payButton = document.getElementById('paymentmethod-button-pay');
         
@@ -4495,12 +4500,22 @@ document.addEventListener('DOMContentLoaded', function() {
             if (selectedPaymentMethod === 'credit-card') {
                 console.log('💳 Procesando con tarjeta...');
                 
-                // EJECUTAR DIRECTAMENTE EL PROCESAMIENTO
-                processMercadoPagoPayment();
+                // Si Mercado Pago no está inicializado, inicializarlo
+                if (!isMercadoPagoInitialized) {
+                    console.log('🔄 Inicializando Mercado Pago...');
+                    initializeMercadoPagoForm();
+                    
+                    // Esperar un momento y luego procesar
+                    setTimeout(() => {
+                        processMercadoPagoPayment();
+                    }, 500);
+                } else {
+                    // Ya está inicializado, procesar directamente
+                    processMercadoPagoPayment();
+                }
                 
             } else if (selectedPaymentMethod === 'paypal') {
                 console.log('💰 Procesando con PayPal...');
-                // Temporalmente deshabilitado para concentrarnos en Mercado Pago
                 alert('PayPal temporalmente deshabilitado');
             }
         });
