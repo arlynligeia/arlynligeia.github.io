@@ -4320,9 +4320,12 @@ function initializeMercadoPagoAutoFill() {
     const docSelect = document.getElementById('identificationType-container');
     docSelect.innerHTML = `
         <option value="">Select document type</option>
-        <option value="Passport">Passport</option>
-        <option value="DriverLicense">Driver's License</option>
-        <option value="NationalID">National ID</option>
+       <option value="DNI">DNI</option>
+        <option value="CI">CI</option>
+        <option value="LC">LC</option>
+        <option value="LE">LE</option>
+        <option value="PAS">Passport</option>
+        <option value="ID">ID Card</option>
     `;
 
     // INSTALLMENTS - ESTO FALTABA
