@@ -4277,47 +4277,118 @@ setupProceedPaymentButton();
 
 
 
-
+<script src="https://sdk.mercadopago.com/js/v2"></script>
 <!-- SCRIP: METODO DE PAGO -->  
 <script>
-// Variables globales
 let selectedPaymentMethod = 'credit-card';
 
+// Configuración de Mercado Pago
+const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
+
+  
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-    initializePaymentMethods();
+initializePaymentMethods();
 });
-
 // FUNCIÓN: Control de selección única de métodos de pago
 function initializePaymentMethods() {
-    const creditCardRadio = document.getElementById('creditcard');
-    const paypalRadio = document.getElementById('paypal');
-    const creditCardForm = document.getElementById('creditcard-form');
-    const paypalForm = document.getElementById('paypal-form');
+const creditCardRadio = document.getElementById('creditcard');
+const paypalRadio = document.getElementById('paypal');
+const creditCardForm = document.getElementById('creditcard-form');
+const paypalForm = document.getElementById('paypal-form');
+// Event listeners para los radio buttons
+creditCardRadio.addEventListener('change', function() {
+if (this.checked) {
+selectedPaymentMethod = 'credit-card';
+creditCardForm.style.display = 'block';
+paypalForm.style.display = 'none';
+paypalRadio.checked = false;
+}
+});
+paypalRadio.addEventListener('change', function() {
+if (this.checked) {
+selectedPaymentMethod = 'paypal';
+paypalForm.style.display = 'block';
+creditCardForm.style.display = 'none';
+creditCardRadio.checked = false;
+}
+});
+// Seleccionar tarjeta de crédito por defecto y mostrar su formulario
+creditCardRadio.checked = true;
+creditCardForm.style.display = 'block';
+paypalForm.style.display = 'none';
+}
 
-    // Event listeners para los radio buttons
-    creditCardRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'credit-card';
-            creditCardForm.style.display = 'block';
-            paypalForm.style.display = 'none';
-            paypalRadio.checked = false;
+ // Función para inicializar Mercado Pago
+function initializeMercadoPago() {
+    // Binación automática de tarjeta
+    mp.getIdentificationTypes();
+    
+    // Autocompletar tipo de documento e instalments
+    const cardNumber = document.getElementById('cardNumber-container');
+    
+    cardNumber.addEventListener('change', function() {
+        if (this.value.length >= 6) {
+            const bin = this.value.substring(0, 6);
+            
+            // Obtener el monto automáticamente de tu resumen
+            const amountElement = document.querySelector('.paymentmethod-total-amount');
+            let amount = 0;
+            
+            if (amountElement) {
+                // Extraer el número del texto (ej: "$ 150.00" -> 150.00)
+                const amountText = amountElement.textContent.replace('$', '').trim();
+                amount = parseFloat(amountText) || 100.00;
+            }
+            
+            // Obtener métodos de pago
+            mp.getPaymentMethods({ bin: bin })
+                .then(result => {
+                    if (result.results.length > 0) {
+                        const paymentMethodId = result.results[0].id;
+                        document.getElementById('paymentMethodId').value = paymentMethodId;
+                        
+                        // Obtener issuer
+                        return mp.getIssuers({ bin: bin, paymentMethodId: paymentMethodId });
+                    }
+                })
+                .then(issuersResult => {
+                    if (issuersResult && issuersResult.results.length > 0) {
+                        const issuerSelect = document.getElementById('issuer-container');
+                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
+                        
+                        issuersResult.results.forEach(issuer => {
+                            const option = document.createElement('option');
+                            option.value = issuer.id;
+                            option.textContent = issuer.name;
+                            issuerSelect.appendChild(option);
+                        });
+                        
+                        // Obtener instalments con el monto real
+                        return mp.getInstallments({
+                            bin: bin,
+                            amount: amount
+                        });
+                    }
+                })
+                .then(installmentsResult => {
+                    if (installmentsResult && installmentsResult[0].payer_costs.length > 0) {
+                        const installmentsSelect = document.getElementById('installments-container');
+                        installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
+                        
+                        installmentsResult[0].payer_costs.forEach(cost => {
+                            const option = document.createElement('option');
+                            option.value = cost.installments;
+                            option.textContent = `${cost.installments} cuotas de $${cost.installment_amount}`;
+                            installmentsSelect.appendChild(option);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         }
     });
-
-    paypalRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'paypal';
-            paypalForm.style.display = 'block';
-            creditCardForm.style.display = 'none';
-            creditCardRadio.checked = false;
-        }
-    });
-
-    // Seleccionar tarjeta de crédito por defecto y mostrar su formulario
-    creditCardRadio.checked = true;
-    creditCardForm.style.display = 'block';
-    paypalForm.style.display = 'none';
 }
 </script>
 <!-- SCRIP: METODO DE PAGO -->  
