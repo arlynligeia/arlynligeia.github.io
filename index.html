@@ -4262,7 +4262,6 @@ setupProceedPaymentButton();
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // CONFIGURACIÓN MERCADO PAGO - MODO PRUEBA
     const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
         locale: 'es-PE'
     });
@@ -4276,7 +4275,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializePaymentMethod() {
         setupRadioButtons();
         setupPayButton();
-        setupCancelButton();
         updateTotalFromStorage();
     }
 
@@ -4306,7 +4304,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // MOSTRAR/OCULTAR FORMULARIOS
     function showCreditCardForm() {
         document.getElementById('creditcard-form').style.display = 'block';
     }
@@ -4327,12 +4324,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function initializeMercadoPagoForm() {
         const totalAmount = getTotalAmount();
         
-        console.log('🔄 Inicializando Mercado Pago con monto:', totalAmount);
-
-        // Si ya existe, destruir el anterior
-        if (cardForm) {
-            cardForm.unmount();
-        }
+        console.log('Inicializando Mercado Pago con monto:', totalAmount);
 
         try {
             cardForm = mp.cardForm({
@@ -4345,7 +4337,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         placeholder: "Número de tarjeta"
                     },
                     expirationDate: {
-                        id: "paymentmethod-expirationdate",
+                        id: "paymentmethod-expirationdate", 
                         placeholder: "MM/YY"
                     },
                     securityCode: {
@@ -4360,26 +4352,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 callbacks: {
                     onFormMounted: error => {
                         if (error) {
-                            console.error('❌ Error montando formulario:', error);
-                            showPaymentStatus('❌ Error loading payment form: ' + error.message, 'error');
+                            console.error('Error montando formulario:', error);
+                            showPaymentStatus('Error loading payment form', 'error');
                         } else {
-                            console.log('✅ Formulario Mercado Pago montado correctamente');
+                            console.log('Formulario Mercado Pago montado correctamente');
                         }
                     },
                     onSubmit: event => {
                         event.preventDefault();
-                        console.log('🔄 Formulario enviado - procesando pago...');
                         processMercadoPagoPayment();
                     },
                     onError: error => {
-                        console.error('❌ Error en formulario:', error);
-                        showPaymentStatus('❌ Error: ' + error.message, 'error');
+                        console.error('Error en formulario:', error);
+                        showPaymentStatus('Error: ' + error.message, 'error');
                     }
                 }
             });
         } catch (error) {
-            console.error('❌ Error inicializando Mercado Pago:', error);
-            showPaymentStatus('❌ Error initializing payment system: ' + error.message, 'error');
+            console.error('Error inicializando Mercado Pago:', error);
+            showPaymentStatus('Error initializing payment system', 'error');
         }
     }
 
@@ -4394,15 +4385,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return 100.00;
     }
 
-    // PROCESAR PAGO MERCADO PAGO - MODO PRUEBA
+    // PROCESAR PAGO MERCADO PAGO
     async function processMercadoPagoPayment() {
         const submitBtn = document.getElementById('paymentmethod-button-pay');
         const originalText = submitBtn.textContent;
         
         submitBtn.disabled = true;
         submitBtn.textContent = 'Processing...';
-
-        console.log('🔄 Iniciando procesamiento de pago...');
 
         try {
             if (!cardForm) {
@@ -4420,30 +4409,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 identificationNumber: document.getElementById('paymentmethod-documentnumber').value
             };
 
-            console.log('📦 Datos para tokenización:', additionalData);
-
             // CREAR TOKEN CON MERCADO PAGO
-            console.log('🔑 Creando token...');
             const tokenResult = await cardForm.createCardToken(additionalData);
             
-            console.log('🔑 Resultado tokenización:', tokenResult);
-
             if (tokenResult.error) {
                 throw new Error(tokenResult.error.message);
             }
 
-            console.log('✅ Token creado exitosamente:', tokenResult.id);
+            console.log('Token creado:', tokenResult.id);
 
-            // EN MODO PRUEBA, SIMULAMOS PAGO EXITOSO
-            showPaymentStatus('✅ Payment processed successfully! (Test Mode)', 'success');
+            // SIMULAR PAGO EXITOSO (en producción aquí enviarías el token a tu backend)
+            showPaymentStatus('Payment processed successfully!', 'success');
             
             setTimeout(() => {
                 clearCartAndRedirect();
             }, 2000);
 
         } catch (error) {
-            console.error('❌ Error procesando pago:', error);
-            showPaymentStatus('❌ Error: ' + error.message, 'error');
+            console.error('Error procesando pago:', error);
+            showPaymentStatus('Error: ' + error.message, 'error');
             
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
@@ -4454,7 +4438,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function validateCreditCardForm() {
         const requiredFields = [
             'paymentmethod-cardnumber',
-            'paymentmethod-expirationdate',
+            'paymentmethod-expirationdate', 
             'paymentmethod-securitycode',
             'paymentmethod-nameoncard',
             'paymentmethod-documenttype',
@@ -4481,10 +4465,9 @@ document.addEventListener('DOMContentLoaded', function() {
         
         payButton.addEventListener('click', function(e) {
             e.preventDefault();
-            console.log('🖱️ Botón PAY clickeado - Método:', selectedPaymentMethod);
             
             if (!selectedPaymentMethod) {
-                alert('❌ Please select a payment method');
+                alert('Please select a payment method');
                 return;
             }
             
@@ -4492,17 +4475,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 processMercadoPagoPayment();
             } else if (selectedPaymentMethod === 'paypal') {
                 alert('PayPal temporalmente deshabilitado');
-            }
-        });
-    }
-
-    // CONFIGURAR BOTÓN CANCEL
-    function setupCancelButton() {
-        const cancelButton = document.getElementById('paymentmethod-button-cancel');
-        
-        cancelButton.addEventListener('click', function() {
-            if (confirm('Are you sure you want to cancel the payment?')) {
-                window.location.href = '#store';
             }
         });
     }
@@ -4533,14 +4505,10 @@ document.addEventListener('DOMContentLoaded', function() {
             statusDiv.style.background = '#d4edda';
             statusDiv.style.color = '#155724';
             statusDiv.style.border = '1px solid #c3e6cb';
-        } else if (type === 'error') {
+        } else {
             statusDiv.style.background = '#f8d7da';
             statusDiv.style.color = '#721c24';
             statusDiv.style.border = '1px solid #f5c6cb';
-        } else {
-            statusDiv.style.background = '#d1ecf1';
-            statusDiv.style.color = '#0c5460';
-            statusDiv.style.border = '1px solid #bee5eb';
         }
     }
 
@@ -4550,7 +4518,7 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.removeItem('payment-total');
         
         setTimeout(() => {
-            alert('✅ Payment successful! Thank you for your purchase.');
+            alert('Payment successful! Thank you for your purchase.');
             window.location.href = '#store';
         }, 2000);
     }
