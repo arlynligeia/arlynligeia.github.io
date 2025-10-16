@@ -4258,19 +4258,17 @@ setupProceedPaymentButton();
 
 
 
-
 <!-- SCRIP: PAYMENT METHOD -->
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // CONFIGURACIÓN MERCADO PAGO
+    // CONFIGURACIÓN MERCADO PAGO - MODO PRUEBA
     const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
         locale: 'es-PE'
     });
 
     let cardForm = null;
     let selectedPaymentMethod = null;
-    let isMercadoPagoInitialized = false;
 
     // INICIALIZAR
     initializePaymentMethod();
@@ -4295,7 +4293,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectedPaymentMethod = 'credit-card';
                 showCreditCardForm();
                 hidePaypalForm();
-                initializeMercadoPagoForm(); // Inicializar solo cuando se selecciona
+                initializeMercadoPagoForm();
             }
         });
 
@@ -4308,39 +4306,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // MOSTRAR FORMULARIO CREDIT CARD
+    // MOSTRAR/OCULTAR FORMULARIOS
     function showCreditCardForm() {
         document.getElementById('creditcard-form').style.display = 'block';
     }
 
-    // OCULTAR FORMULARIO CREDIT CARD
     function hideCreditCardForm() {
         document.getElementById('creditcard-form').style.display = 'none';
     }
 
-    // MOSTRAR FORMULARIO PAYPAL
     function showPaypalForm() {
         document.getElementById('paypal-form').style.display = 'block';
     }
 
-    // OCULTAR FORMULARIO PAYPAL
     function hidePaypalForm() {
         document.getElementById('paypal-form').style.display = 'none';
     }
 
     // INICIALIZAR FORMULARIO MERCADO PAGO
     function initializeMercadoPagoForm() {
-        if (isMercadoPagoInitialized) {
-            console.log('✅ Mercado Pago ya estaba inicializado');
-            return;
-        }
-
         const totalAmount = getTotalAmount();
         
         console.log('🔄 Inicializando Mercado Pago con monto:', totalAmount);
 
+        // Si ya existe, destruir el anterior
+        if (cardForm) {
+            cardForm.unmount();
+        }
+
         try {
-            // Configurar Mercado Pago
             cardForm = mp.cardForm({
                 amount: totalAmount.toString(),
                 iframe: false,
@@ -4367,10 +4361,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     onFormMounted: error => {
                         if (error) {
                             console.error('❌ Error montando formulario:', error);
-                            showPaymentStatus('❌ Error loading payment form', 'error');
+                            showPaymentStatus('❌ Error loading payment form: ' + error.message, 'error');
                         } else {
                             console.log('✅ Formulario Mercado Pago montado correctamente');
-                            isMercadoPagoInitialized = true;
                         }
                     },
                     onSubmit: event => {
@@ -4386,7 +4379,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } catch (error) {
             console.error('❌ Error inicializando Mercado Pago:', error);
-            showPaymentStatus('❌ Error initializing payment system', 'error');
+            showPaymentStatus('❌ Error initializing payment system: ' + error.message, 'error');
         }
     }
 
@@ -4401,7 +4394,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return 100.00;
     }
 
-    // PROCESAR PAGO MERCADO PAGO
+    // PROCESAR PAGO MERCADO PAGO - MODO PRUEBA
     async function processMercadoPagoPayment() {
         const submitBtn = document.getElementById('paymentmethod-button-pay');
         const originalText = submitBtn.textContent;
@@ -4412,12 +4405,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('🔄 Iniciando procesamiento de pago...');
 
         try {
-            // Verificar que cardForm esté inicializado
-            if (!cardForm || !isMercadoPagoInitialized) {
-                throw new Error('Payment system not ready. Please wait and try again.');
+            if (!cardForm) {
+                throw new Error('Payment form not initialized');
             }
 
-            // Validar campos
             if (!validateCreditCardForm()) {
                 throw new Error('Please fill all required fields correctly');
             }
@@ -4431,19 +4422,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
             console.log('📦 Datos para tokenización:', additionalData);
 
-            // Crear token con Mercado Pago
+            // CREAR TOKEN CON MERCADO PAGO
             console.log('🔑 Creando token...');
-            const result = await cardForm.createCardToken(additionalData);
+            const tokenResult = await cardForm.createCardToken(additionalData);
             
-            console.log('🔑 Resultado tokenización:', result);
+            console.log('🔑 Resultado tokenización:', tokenResult);
 
-            if (result.error) {
-                throw new Error(result.error.message);
+            if (tokenResult.error) {
+                throw new Error(tokenResult.error.message);
             }
 
-            console.log('✅ Token creado exitosamente');
-            
-            // SIMULAR PAGO EXITOSO
+            console.log('✅ Token creado exitosamente:', tokenResult.id);
+
+            // EN MODO PRUEBA, SIMULAMOS PAGO EXITOSO
             showPaymentStatus('✅ Payment processed successfully! (Test Mode)', 'success');
             
             setTimeout(() => {
@@ -4498,24 +4489,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             if (selectedPaymentMethod === 'credit-card') {
-                console.log('💳 Procesando con tarjeta...');
-                
-                // Si Mercado Pago no está inicializado, inicializarlo
-                if (!isMercadoPagoInitialized) {
-                    console.log('🔄 Inicializando Mercado Pago...');
-                    initializeMercadoPagoForm();
-                    
-                    // Esperar un momento y luego procesar
-                    setTimeout(() => {
-                        processMercadoPagoPayment();
-                    }, 500);
-                } else {
-                    // Ya está inicializado, procesar directamente
-                    processMercadoPagoPayment();
-                }
-                
+                processMercadoPagoPayment();
             } else if (selectedPaymentMethod === 'paypal') {
-                console.log('💰 Procesando con PayPal...');
                 alert('PayPal temporalmente deshabilitado');
             }
         });
