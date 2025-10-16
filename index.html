@@ -4280,107 +4280,47 @@ setupProceedPaymentButton();
 
 <!-- SCRIP: METODO DE PAGO -->  
 <script>
-// Configuración de Mercado Pago
-const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
-locale: 'en-US'
-});
 // Variables globales
 let selectedPaymentMethod = 'credit-card';
+
 // Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-initializePaymentMethods();
-setupEventListeners();
+    initializePaymentMethods();
 });
-// 1. FUNCIÓN: Control de selección única de métodos de pago
+
+// FUNCIÓN: Control de selección única de métodos de pago
 function initializePaymentMethods() {
-const creditCardRadio = document.getElementById('creditcard');
-const paypalRadio = document.getElementById('paypal');
-const creditCardForm = document.getElementById('creditcard-form');
-const paypalForm = document.getElementById('paypal-form');
-// Event listeners para los radio buttons
-creditCardRadio.addEventListener('change', function() {
-if (this.checked) {
-selectedPaymentMethod = 'credit-card';
-creditCardForm.style.display = 'block';
-paypalForm.style.display = 'none';
-paypalRadio.checked = false;
-}
-});
-paypalRadio.addEventListener('change', function() {
-if (this.checked) {
-selectedPaymentMethod = 'paypal';
-paypalForm.style.display = 'block';
-creditCardForm.style.display = 'none';
-creditCardRadio.checked = false;
-}
-});
-// Seleccionar tarjeta de crédito por defecto y mostrar su formulario
-creditCardRadio.checked = true;
-creditCardForm.style.display = 'block';
-paypalForm.style.display = 'none';
-}
+    const creditCardRadio = document.getElementById('creditcard');
+    const paypalRadio = document.getElementById('paypal');
+    const creditCardForm = document.getElementById('creditcard-form');
+    const paypalForm = document.getElementById('paypal-form');
 
-// 2. FUNCIÓN: Procesar el pago
-function processPayment() {
-    const submitButton = document.getElementById('paymentmethod-button-pay');
-    
-    if (selectedPaymentMethod === 'credit-card') {
-        // SIMULACIÓN DE PAGO CON TARJETA
-        submitButton.disabled = true;
-        submitButton.textContent = 'PROCESSING...';
-        
-        // Simular procesamiento
-        setTimeout(() => {
-            submitButton.disabled = false;
-            submitButton.textContent = 'PAY';
-            alert('Payment processed successfully! (Simulation)');
-            document.getElementById('paymentmethod-form').reset();
-        }, 2000);
+    // Event listeners para los radio buttons
+    creditCardRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'credit-card';
+            creditCardForm.style.display = 'block';
+            paypalForm.style.display = 'none';
+            paypalRadio.checked = false;
+        }
+    });
 
-    } else if (selectedPaymentMethod === 'paypal') {
-        // Redirigir a PayPal
-        submitButton.disabled = true;
-        submitButton.textContent = 'REDIRECTING TO PAYPAL...';
-        
-        setTimeout(() => {
-            document.getElementById('paypalForm').submit();
-        }, 2000);
-    }
-}
+    paypalRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'paypal';
+            paypalForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            creditCardRadio.checked = false;
+        }
+    });
 
-// Configurar event listeners adicionales
-function setupEventListeners() {
-    const cancelButton = document.getElementById('paymentmethod-button-cancel');
-    const payButton = document.getElementById('paymentmethod-button-pay');
-    const mainForm = document.getElementById('paymentmethod-form');
-
-// Botón cancelar
-cancelButton.addEventListener('click', function() {
-mainForm.reset();
-document.getElementById('creditcard').checked = true;
-document.getElementById('paypal').checked = false;
-document.getElementById('creditcard-form').style.display = 'block';
-document.getElementById('paypal-form').style.display = 'none';
-selectedPaymentMethod = 'credit-card';
-        
-// Resetear el estado del botón
-const submitButton = document.getElementById('paymentmethod-button-pay');
-submitButton.disabled = false;
-submitButton.textContent = 'PAY';
-});
-// Prevenir envío normal del formulario
-mainForm.addEventListener('submit', function(event) {
-event.preventDefault();
-processPayment();
-});
-// Botón pagar (backup)
-payButton.addEventListener('click', function(event) {
-event.preventDefault();
-processPayment();
-});
+    // Seleccionar tarjeta de crédito por defecto y mostrar su formulario
+    creditCardRadio.checked = true;
+    creditCardForm.style.display = 'block';
+    paypalForm.style.display = 'none';
 }
 </script>
-
+<!-- SCRIP: METODO DE PAGO -->  
 
 
 
