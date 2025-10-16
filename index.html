@@ -4276,138 +4276,134 @@ setupProceedPaymentButton();
 
 
 
-
+<!-- SCRIP: METODO DE PAGO -->
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 let selectedPaymentMethod = 'credit-card';
 const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
-    locale: 'en-US'
+locale: 'en-US'
 });
-
 document.addEventListener('DOMContentLoaded', function() {
-    initializePaymentMethods();
-    setupPaymentProcessing();
-    initializeMercadoPagoAutoFill();
+initializePaymentMethods();
+setupPaymentProcessing();
+initializeMercadoPagoAutoFill();
 });
 
 function initializePaymentMethods() {
-    const creditCardRadio = document.getElementById('creditcard');
-    const paypalRadio = document.getElementById('paypal');
-    const creditCardForm = document.getElementById('creditcard-form');
-    const paypalForm = document.getElementById('paypal-form');
-
-    creditCardRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'credit-card';
-            creditCardForm.style.display = 'block';
-            paypalForm.style.display = 'none';
-            paypalRadio.checked = false;
-        }
-    });
-
-    paypalRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'paypal';
-            paypalForm.style.display = 'block';
-            creditCardForm.style.display = 'none';
-            creditCardRadio.checked = false;
-        }
-    });
-
-    creditCardRadio.checked = true;
-    creditCardForm.style.display = 'block';
-    paypalForm.style.display = 'none';
+const creditCardRadio = document.getElementById('creditcard');
+const paypalRadio = document.getElementById('paypal');
+const creditCardForm = document.getElementById('creditcard-form');
+const paypalForm = document.getElementById('paypal-form');
+creditCardRadio.addEventListener('change', function() {
+if (this.checked) {
+selectedPaymentMethod = 'credit-card';
+creditCardForm.style.display = 'block';
+paypalForm.style.display = 'none';
+paypalRadio.checked = false;
+}
+});
+paypalRadio.addEventListener('change', function() {
+if (this.checked) {
+selectedPaymentMethod = 'paypal';
+paypalForm.style.display = 'block';
+creditCardForm.style.display = 'none';
+creditCardRadio.checked = false;
+}
+});
+creditCardRadio.checked = true;
+creditCardForm.style.display = 'block';
+paypalForm.style.display = 'none';
 }
 
 function initializeMercadoPagoAutoFill() {
-    // Documentos verdaderamente internacionales
-    const docSelect = document.getElementById('identificationType-container');
-    docSelect.innerHTML = `
-        <option value="">Select document type</option>
-        <option value="Passport">Passport</option>
-        <option value="DriverLicense">Driver's License</option>
-        <option value="NationalID">National ID</option>
-    `;
-
-    // Installments internacionales
-    const installmentsSelect = document.getElementById('installments-container');
-    installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
-    
-    const installmentsOptions = [1, 2, 3, 4, 5, 6, 9, 12];
-    installmentsOptions.forEach(installment => {
-        const option = document.createElement('option');
-        option.value = installment;
-        option.textContent = installment === 1 ? 'Full payment' : `${installment} months`;
-        installmentsSelect.appendChild(option);
-    });
-
-    // Issuer se llenará automáticamente con la tarjeta
-    const cardNumberInput = document.getElementById('cardNumber-container');
-    cardNumberInput.addEventListener('input', function() {
-        if (this.value.length >= 6) {
-            const bin = this.value.substring(0, 6);
-            
-            mp.getPaymentMethods({ bin: bin })
-                .then(result => {
-                    if (result.results.length > 0) {
-                        const issuerSelect = document.getElementById('issuer-container');
-                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
-                        
-                        result.results.forEach(paymentMethod => {
+// Documentos verdaderamente internacionales
+const docSelect = document.getElementById('identificationType-container');
+docSelect.innerHTML = `
+<option value="">Select document type</option>
+<option value="Passport">Passport</option>
+<option value="DriverLicense">Driver's License</option>
+<option value="NationalID">National ID</option>
+`;
+// Issuer se llenará automáticamente con la tarjeta
+const cardNumberInput = document.getElementById('cardNumber-container');
+cardNumberInput.addEventListener('input', function() {
+if (this.value.length >= 6) {
+const bin = this.value.substring(0, 6);
+mp.getPaymentMethods({ bin: bin })
+.then(result => {
+if (result.results.length > 0) {
+                    const issuerSelect = document.getElementById('issuer-container');
+                    issuerSelect.innerHTML = '<option value="">Select issuer</option>';
+                    
+                    // Filtrar solo las tarjetas que aceptas
+                    const acceptedCards = ['visa', 'master', 'amex'];
+                    
+                    result.results.forEach(paymentMethod => {
+                        if (acceptedCards.includes(paymentMethod.id)) {
                             const option = document.createElement('option');
                             option.value = paymentMethod.id;
-                            option.textContent = paymentMethod.name;
+                            
+                            // Mostrar nombres amigables
+                            let cardName = paymentMethod.name;
+                            if (paymentMethod.id === 'visa') cardName = 'Visa';
+                            if (paymentMethod.id === 'master') cardName = 'Mastercard';
+                            if (paymentMethod.id === 'amex') cardName = 'American Express';
+                            
+                            option.textContent = cardName;
                             issuerSelect.appendChild(option);
-                        });
+                        }
+                    });
+                    
+                    // Si no se detectaron tarjetas aceptadas, mostrar opción genérica
+                    if (issuerSelect.options.length === 1) {
+                        const option = document.createElement('option');
+                        option.value = 'credit_card';
+                        option.textContent = 'Credit Card';
+                        issuerSelect.appendChild(option);
                     }
-                })
-                .catch(error => console.log('Auto-fill info only'));
-        }
-    });
-}
+                }
+            })
+            .catch(error => console.log('Auto-fill info only'));
+    }
+});
 
 function setupPaymentProcessing() {
-    const payButton = document.getElementById('paymentmethod-button-pay');
-    
-    payButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        
-        if (selectedPaymentMethod === 'credit-card') {
-            processCreditCardPayment();
-        } else if (selectedPaymentMethod === 'paypal') {
-            document.getElementById('paypalForm').submit();
-        }
-    });
+const payButton = document.getElementById('paymentmethod-button-pay');
+payButton.addEventListener('click', function(event) {
+event.preventDefault();
+if (selectedPaymentMethod === 'credit-card') {
+processCreditCardPayment();
+} else if (selectedPaymentMethod === 'paypal') {
+document.getElementById('paypalForm').submit();
+}
+});
 }
 
 function processCreditCardPayment() {
-    const cardData = {
-        cardNumber: document.getElementById('cardNumber-container').value.replace(/\s/g, ''),
-        expirationDate: document.getElementById('expirationDate-container').value,
-        securityCode: document.getElementById('securityCode-container').value,
-        cardholderName: document.getElementById('cardholderName-container').value,
-        identificationType: document.getElementById('identificationType-container').value,
-        identificationNumber: document.getElementById('identificationNumber-container').value
-    };
-
-    if (!cardData.cardNumber || !cardData.expirationDate || !cardData.securityCode || !cardData.cardholderName) {
-        alert('Please complete all required fields');
-        return;
-    }
-
-    mp.createCardToken(cardData)
-        .then(result => {
-            if (result.error) {
-                alert('Payment error: ' + result.error.message);
-                return;
-            }
-            
-            alert('✅ Payment processed successfully!\nToken: ' + result.id);
-            document.getElementById('paymentmethod-form').reset();
-        })
-        .catch(error => {
-            alert('Processing error: ' + error.message);
-        });
+const cardData = {
+cardNumber: document.getElementById('cardNumber-container').value.replace(/\s/g, ''),
+expirationDate: document.getElementById('expirationDate-container').value,
+securityCode: document.getElementById('securityCode-container').value,
+cardholderName: document.getElementById('cardholderName-container').value,
+identificationType: document.getElementById('identificationType-container').value,
+identificationNumber: document.getElementById('identificationNumber-container').value
+};
+if (!cardData.cardNumber || !cardData.expirationDate || !cardData.securityCode || !cardData.cardholderName) {
+alert('Please complete all required fields');
+return;
+}
+mp.createCardToken(cardData)
+.then(result => {
+if (result.error) {
+alert('Payment error: ' + result.error.message);
+return;
+}
+alert('✅ Payment processed successfully!\nToken: ' + result.id);
+document.getElementById('paymentmethod-form').reset();
+})
+.catch(error => {
+alert('Processing error: ' + error.message);
+});
 }
 </script>
 
