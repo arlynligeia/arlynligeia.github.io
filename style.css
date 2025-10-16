@@ -6953,10 +6953,11 @@ border-radius: 4px;
 background: white;
 padding: 3px;
 }
-/* CONTENEDORES DE INPUTS EN FILAS DOBLES */
-.paymentmethod-form-option-creditcard-card-content-row > div {
-    flex: 1;
+/* FILAS DEL FORMULARIO */
+.paymentmethod-form-option-creditcard-card-content-row {
     display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
 .paymentmethod-form-option-creditcard-card-content-row-input {
@@ -6974,6 +6975,19 @@ padding: 3px;
     border: none;
 }
 
+/* Para filas con inputs directos (como card number) */
+.paymentmethod-form-option-creditcard-card-content-row:first-of-type .paymentmethod-form-option-creditcard-card-content-row-input {
+    flex: 1;
+}
+
+/* Para filas con inputs dentro de divs (como MM/YY y CVV) */
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) > div {
+    flex: 1;
+}
+
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) .paymentmethod-form-option-creditcard-card-content-row-input {
+    width: 100%;
+}
 /* TEXTOS SOBRE LOS RECUADROS */
 .paymentmethod-form-option-creditcard-label {
 display: block;
