@@ -4431,7 +4431,8 @@ function processCreditCardPayment() {
                 body: JSON.stringify({
                     token: result.id,
                     amount: amount,
-                    description: 'Purchase from your store'
+                   description: 'Purchase from your store',  // ← AGREGAR COMA AL FINAL
+  paymentMethodId: document.getElementById('issuer-container').value  // ← NUEVA LÍNEA
                 })
             })
             .then(response => response.json())
