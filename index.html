@@ -4262,9 +4262,17 @@ setupProceedPaymentButton();
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
-        locale: 'es-PE'
-    });
+    // CONFIGURACIÓN MÁS ROBUSTA
+    let mp;
+    try {
+        mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
+            locale: 'es-PE'
+        });
+        console.log('✅ SDK Mercado Pago cargado correctamente');
+    } catch (error) {
+        console.error('❌ Error cargando SDK Mercado Pago:', error);
+        return;
+    }
 
     let cardForm = null;
     let selectedPaymentMethod = null;
@@ -4281,7 +4289,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // CONFIGURAR RADIO BUTTONS
     function setupRadioButtons() {
         const creditCardRadio = document.getElementById('creditcard');
-        const paypalRadio = document.getElementById('paypal');
         
         document.getElementById('creditcard-form').style.display = 'none';
         document.getElementById('paypal-form').style.display = 'none';
@@ -4291,15 +4298,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectedPaymentMethod = 'credit-card';
                 showCreditCardForm();
                 hidePaypalForm();
-                initializeMercadoPagoForm();
-            }
-        });
-
-        paypalRadio.addEventListener('change', function() {
-            if (this.checked) {
-                selectedPaymentMethod = 'paypal';
-                showPaypalForm();
-                hideCreditCardForm();
+                // Pequeño delay para asegurar que el DOM esté listo
+                setTimeout(() => {
+                    initializeMercadoPagoForm();
+                }, 100);
             }
         });
     }
@@ -4320,108 +4322,123 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('paypal-form').style.display = 'none';
     }
 
-   // INICIALIZAR FORMULARIO MERCADO PAGO - VERSIÓN MEJORADA
-function initializeMercadoPagoForm() {
-    const totalAmount = getTotalAmount();
-    
-    console.log('🔧 Inicializando Mercado Pago con monto:', totalAmount);
+    // INICIALIZAR FORMULARIO MERCADO PAGO - VERSIÓN SIMPLIFICADA
+    function initializeMercadoPagoForm() {
+        const totalAmount = getTotalAmount();
+        
+        console.log('🔄 Inicializando formulario Mercado Pago con monto:', totalAmount);
 
-    // Limpiar cualquier formulario anterior
-    if (cardForm) {
+        // Limpiar formulario anterior si existe
+        if (cardForm) {
+            try {
+                cardForm.unmount();
+            } catch (e) {
+                // Ignorar errores de unmount
+            }
+        }
+
         try {
-            cardForm.unmount();
-        } catch (e) {
-            console.log('No había formulario previo para limpiar');
+            // VERIFICACIÓN MÁS DETALLADA
+            const requiredElements = [
+                'paymentmethod-form',
+                'paymentmethod-cardnumber', 
+                'paymentmethod-expirationdate',
+                'paymentmethod-securitycode',
+                'paymentmethod-nameoncard'
+            ];
+
+            const missingElements = [];
+            requiredElements.forEach(id => {
+                const element = document.getElementById(id);
+                if (!element) {
+                    missingElements.push(id);
+                }
+            });
+
+            if (missingElements.length > 0) {
+                throw new Error(`Elementos faltantes: ${missingElements.join(', ')}`);
+            }
+
+            console.log('✅ Todos los elementos del formulario encontrados');
+
+            // INICIALIZACIÓN MÁS SIMPLE
+            cardForm = mp.cardForm({
+                amount: totalAmount.toString(),
+                iframe: false,
+                form: {
+                    id: "paymentmethod-form",
+                    cardNumber: {
+                        id: "paymentmethod-cardnumber",
+                        placeholder: "Número de tarjeta"
+                    },
+                    expirationDate: {
+                        id: "paymentmethod-expirationdate",
+                        placeholder: "MM/YY"
+                    },
+                    securityCode: {
+                        id: "paymentmethod-securitycode",
+                        placeholder: "CVV"
+                    },
+                    cardholderName: {
+                        id: "paymentmethod-nameoncard",
+                        placeholder: "Titular de la tarjeta"
+                    }
+                },
+                callbacks: {
+                    onFormMounted: error => {
+                        if (error) {
+                            // Manejar el array de error que mencionaste
+                            let errorMessage = 'Error desconocido';
+                            if (Array.isArray(error)) {
+                                errorMessage = error.map(err => err?.message || err).join(', ');
+                            } else if (error && error.message) {
+                                errorMessage = error.message;
+                            }
+                            console.error('❌ Error en onFormMounted:', errorMessage);
+                            showPaymentStatus('Error cargando formulario: ' + errorMessage, 'error');
+                        } else {
+                            console.log('✅ Formulario Mercado Pago montado exitosamente');
+                        }
+                    },
+                    onSubmit: event => {
+                        event.preventDefault();
+                        processMercadoPagoPayment();
+                    },
+                    onError: error => {
+                        let errorMessage = 'Error desconocido';
+                        if (Array.isArray(error)) {
+                            errorMessage = error.map(err => err?.message || err).join(', ');
+                        } else if (error && error.message) {
+                            errorMessage = error.message;
+                        }
+                        console.error('❌ Error en formulario:', errorMessage);
+                        showPaymentStatus('Error: ' + errorMessage, 'error');
+                    }
+                }
+            });
+
+            console.log('🎉 Formulario Mercado Pago creado exitosamente');
+
+        } catch (error) {
+            // MANEJO MEJORADO DE ERRORES
+            let errorMessage = 'Error desconocido';
+            if (Array.isArray(error)) {
+                errorMessage = error.map(err => err?.message || err).join(', ');
+            } else if (error && error.message) {
+                errorMessage = error.message;
+            } else if (error) {
+                errorMessage = error.toString();
+            }
+
+            console.error('💥 Error inicializando Mercado Pago:', {
+                message: errorMessage,
+                error: error,
+                type: typeof error
+            });
+
+            showPaymentStatus('Error inicializando pago: ' + errorMessage, 'error');
         }
     }
-
-    try {
-        console.log('🔍 Verificando elementos del DOM...');
-        
-        // Verificar que todos los elementos existan
-        const form = document.getElementById('paymentmethod-form');
-        const cardNumber = document.getElementById('paymentmethod-cardnumber');
-        const expirationDate = document.getElementById('paymentmethod-expirationdate');
-        const securityCode = document.getElementById('paymentmethod-securitycode');
-        const cardholderName = document.getElementById('paymentmethod-nameoncard');
-
-        console.log('Elementos encontrados:', {
-            form: !!form,
-            cardNumber: !!cardNumber,
-            expirationDate: !!expirationDate,
-            securityCode: !!securityCode,
-            cardholderName: !!cardholderName
-        });
-
-        if (!form) throw new Error('No se encontró el formulario con id "paymentmethod-form"');
-        if (!cardNumber) throw new Error('No se encontró el campo cardnumber');
-        if (!expirationDate) throw new Error('No se encontró el campo expirationdate');
-        if (!securityCode) throw new Error('No se encontró el campo securitycode');
-        if (!cardholderName) throw new Error('No se encontró el campo nameoncard');
-
-        console.log('🚀 Creando formulario de Mercado Pago...');
-        
-        cardForm = mp.cardForm({
-            amount: totalAmount.toString(),
-            iframe: false,
-            form: {
-                id: "paymentmethod-form",
-                cardNumber: {
-                    id: "paymentmethod-cardnumber",
-                    placeholder: "Número de tarjeta"
-                },
-                expirationDate: {
-                    id: "paymentmethod-expirationdate",
-                    placeholder: "MM/YY"
-                },
-                securityCode: {
-                    id: "paymentmethod-securitycode",
-                    placeholder: "CVV"
-                },
-                cardholderName: {
-                    id: "paymentmethod-nameoncard",
-                    placeholder: "Titular de la tarjeta"
-                }
-            },
-            callbacks: {
-                onFormMounted: error => {
-                    if (error) {
-                        console.error('❌ Error CRÍTICO montando formulario:', error);
-                        console.error('Detalles del error:', error.message, error.stack);
-                        showPaymentStatus('Error: No se pudo cargar el formulario de pago - ' + error.message, 'error');
-                    } else {
-                        console.log('✅ Formulario Mercado Pago montado correctamente');
-                    }
-                },
-                onSubmit: event => {
-                    event.preventDefault();
-                    console.log('📝 Formulario enviado - procesando pago...');
-                    processMercadoPagoPayment();
-                },
-                onError: error => {
-                    console.error('⚠️ Error en formulario:', error);
-                    showPaymentStatus('Error: ' + error.message, 'error');
-                },
-                onValidityChange: (error, field) => {
-                    if (error) {
-                        console.log(`Campo ${field} tiene error:`, error);
-                    }
-                }
-            }
-        });
-        
-        console.log('🎉 Mercado Pago inicializado aparentemente bien');
-        
-    } catch (error) {
-        console.error('💥 ERROR CATASTRÓFICO inicializando Mercado Pago:', error);
-        console.error('💥 Tipo de error:', typeof error);
-        console.error('💥 Mensaje:', error.message);
-        console.error('💥 Stack:', error.stack);
-        console.error('💥 Error completo:', error);
-        
-        showPaymentStatus('Error crítico: ' + (error.message || 'Desconocido'), 'error');
-    }
-}
 
     // OBTENER MONTO TOTAL
     function getTotalAmount() {
@@ -4444,11 +4461,11 @@ function initializeMercadoPagoForm() {
 
         try {
             if (!cardForm) {
-                throw new Error('Payment form not initialized');
+                throw new Error('El formulario de pago no está inicializado. Por favor selecciona Credit Card nuevamente.');
             }
 
             if (!validateCreditCardForm()) {
-                throw new Error('Please fill all required fields correctly');
+                throw new Error('Por favor completa todos los campos requeridos');
             }
 
             const additionalData = {
@@ -4458,36 +4475,38 @@ function initializeMercadoPagoForm() {
                 identificationNumber: document.getElementById('paymentmethod-documentnumber').value
             };
 
-            // CREAR TOKEN CON MERCADO PAGO
+            console.log('💳 Procesando pago con datos:', additionalData);
+
+            // CREAR TOKEN
             const tokenResult = await cardForm.createCardToken(additionalData);
             
             if (tokenResult.error) {
-                throw new Error(tokenResult.error.message);
+                throw new Error(tokenResult.error.message || 'Error creando token');
             }
 
-            console.log('Token creado:', tokenResult.id);
+            console.log('✅ Token creado:', tokenResult.id);
 
-            // SIMULAR PAGO EXITOSO (en producción aquí enviarías el token a tu backend)
-            showPaymentStatus('Payment processed successfully!', 'success');
+            // SIMULAR PAGO EXITOSO
+            showPaymentStatus('✅ ¡Pago procesado exitosamente!', 'success');
             
             setTimeout(() => {
                 clearCartAndRedirect();
             }, 2000);
 
         } catch (error) {
-            console.error('Error procesando pago:', error);
-            showPaymentStatus('Error: ' + error.message, 'error');
+            console.error('❌ Error procesando pago:', error);
+            showPaymentStatus('❌ Error: ' + error.message, 'error');
             
             submitBtn.disabled = false;
             submitBtn.textContent = originalText;
         }
     }
 
-    // VALIDAR FORMULARIO CREDIT CARD
+    // VALIDAR FORMULARIO (igual que antes)
     function validateCreditCardForm() {
         const requiredFields = [
             'paymentmethod-cardnumber',
-            'paymentmethod-expirationdate', 
+            'paymentmethod-expirationdate',
             'paymentmethod-securitycode',
             'paymentmethod-nameoncard',
             'paymentmethod-documenttype',
@@ -4516,14 +4535,12 @@ function initializeMercadoPagoForm() {
             e.preventDefault();
             
             if (!selectedPaymentMethod) {
-                alert('Please select a payment method');
+                alert('Por favor selecciona un método de pago');
                 return;
             }
             
             if (selectedPaymentMethod === 'credit-card') {
                 processMercadoPagoPayment();
-            } else if (selectedPaymentMethod === 'paypal') {
-                alert('PayPal temporalmente deshabilitado');
             }
         });
     }
@@ -4567,7 +4584,7 @@ function initializeMercadoPagoForm() {
         localStorage.removeItem('payment-total');
         
         setTimeout(() => {
-            alert('Payment successful! Thank you for your purchase.');
+            alert('¡Pago exitoso! Gracias por tu compra.');
             window.location.href = '#store';
         }, 2000);
     }
