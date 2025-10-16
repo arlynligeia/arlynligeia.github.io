@@ -4348,11 +4348,11 @@ document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
     }
   });
 });
-
 if (document.getElementById('creditcard').checked) {
   document.getElementById('creditcard-form').style.display = 'block';
+} else {
+  document.getElementById('creditcard-form').style.display = 'none';
 }
-
 function applyCustomStyles() {
   console.log("Aplicando estilos personalizados...");
 }
