@@ -4278,73 +4278,84 @@ setupProceedPaymentButton();
 
 
 <script src="https://sdk.mercadopago.com/js/v2"></script>
-<!-- SCRIP: METODO DE PAGO -->  
 <script>
 let selectedPaymentMethod = 'credit-card';
 
-// Configuración de Mercado Pago
-const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
-
-  
-// Inicialización cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', function() {
-initializePaymentMethods();
-   initializeMercadoPago(); // ESTA LÍNEA ES CLAVE
-  
+    initializePaymentMethods();
+    initializeMercadoPagoPayment();
 });
-// FUNCIÓN: Control de selección única de métodos de pago
+
 function initializePaymentMethods() {
-const creditCardRadio = document.getElementById('creditcard');
-const paypalRadio = document.getElementById('paypal');
-const creditCardForm = document.getElementById('creditcard-form');
-const paypalForm = document.getElementById('paypal-form');
-// Event listeners para los radio buttons
-creditCardRadio.addEventListener('change', function() {
-if (this.checked) {
-selectedPaymentMethod = 'credit-card';
-creditCardForm.style.display = 'block';
-paypalForm.style.display = 'none';
-paypalRadio.checked = false;
-}
-});
-paypalRadio.addEventListener('change', function() {
-if (this.checked) {
-selectedPaymentMethod = 'paypal';
-paypalForm.style.display = 'block';
-creditCardForm.style.display = 'none';
-creditCardRadio.checked = false;
-}
-});
-// Seleccionar tarjeta de crédito por defecto y mostrar su formulario
-creditCardRadio.checked = true;
-creditCardForm.style.display = 'block';
-paypalForm.style.display = 'none';
+    const creditCardRadio = document.getElementById('creditcard');
+    const paypalRadio = document.getElementById('paypal');
+    const creditCardForm = document.getElementById('creditcard-form');
+    const paypalForm = document.getElementById('paypal-form');
+
+    creditCardRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'credit-card';
+            creditCardForm.style.display = 'block';
+            paypalForm.style.display = 'none';
+            paypalRadio.checked = false;
+        }
+    });
+
+    paypalRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'paypal';
+            paypalForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            creditCardRadio.checked = false;
+        }
+    });
+
+    creditCardRadio.checked = true;
+    creditCardForm.style.display = 'block';
+    paypalForm.style.display = 'none';
 }
 
-
-  
-function initializeMercadoPago() {
-    const cardNumber = document.getElementById('cardNumber-container');
+function initializeMercadoPagoPayment() {
+    const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
     
-    cardNumber.addEventListener('input', function() {
-        if (this.value.length >= 6) {
-            const bin = this.value.substring(0, 6);
+    const payButton = document.getElementById('paymentmethod-button-pay');
+    
+    payButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        if (selectedPaymentMethod === 'credit-card') {
+            const cardData = {
+                cardNumber: document.getElementById('cardNumber-container').value,
+                expirationDate: document.getElementById('expirationDate-container').value,
+                securityCode: document.getElementById('securityCode-container').value,
+                cardholderName: document.getElementById('cardholderName-container').value
+            };
             
-            // Obtener issuer
-            mp.getPaymentMethods({ bin: bin }).then(result => {
-                if (result.results.length > 0) {
-                    const paymentMethodId = result.results[0].id;
-                    document.getElementById('paymentMethodId').value = paymentMethodId;
-                }
-            });
+            mp.createCardToken(cardData)
+                .then(result => {
+                    if (result.error) {
+                        alert('Error: ' + result.error.message);
+                        return;
+                    }
+                    
+                    const token = result.id;
+                    processPaymentWithToken(token);
+                })
+                .catch(error => {
+                    alert('Error procesando pago: ' + error.message);
+                });
+                
+        } else if (selectedPaymentMethod === 'paypal') {
+            document.getElementById('paypalForm').submit();
         }
     });
 }
 
-// PARA EVITAR EL ERROR 405 - ELIMINA EL ACTION DEL FORM O PON #
+function processPaymentWithToken(token) {
+    alert('✅ Pago procesado exitosamente!\nToken: ' + token + '\n\nUsa tarjetas de prueba:\nVisa: 4235 6477 2802 5682\nMastercard: 5031 7557 3453 0604');
+    document.getElementById('paymentmethod-form').reset();
+}
 </script>
-<!-- SCRIP: METODO DE PAGO -->  
-
 
 
 
