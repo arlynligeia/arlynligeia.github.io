@@ -6988,6 +6988,17 @@ padding: 3px;
 .paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) .paymentmethod-form-option-creditcard-card-content-row-input {
     width: 100%;
 }
+/* PARA LAS DOS ÚLTIMAS FILAS - DOCUMENTO E ISSUER/INSTALMENTS */
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(4) > div,
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(5) > div {
+    flex: 1;
+}
+
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(4) .paymentmethod-form-option-creditcard-input,
+.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(5) .paymentmethod-form-option-creditcard-input {
+    width: 100%;
+}
+
 /* TEXTOS SOBRE LOS RECUADROS */
 .paymentmethod-form-option-creditcard-label {
 display: block;
