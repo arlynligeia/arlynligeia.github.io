@@ -4366,7 +4366,7 @@ if (result.results.length > 0) {
             .catch(error => console.log('Auto-fill info only'));
     }
 });
-
+} // <-- ESTE CIERRE FALTABA
 function setupPaymentProcessing() {
 const payButton = document.getElementById('paymentmethod-button-pay');
 payButton.addEventListener('click', function(event) {
