@@ -4285,6 +4285,7 @@ const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
 document.addEventListener('DOMContentLoaded', function() {
     initializePaymentMethods();
     setupPaymentProcessing();
+    initializeMercadoPagoAutoFill(); // <-- NUEVA FUNCIÓN
 });
 
 function initializePaymentMethods() {
@@ -4316,6 +4317,76 @@ function initializePaymentMethods() {
     paypalForm.style.display = 'none';
 }
 
+// NUEVA FUNCIÓN: Autocompletar selects
+function initializeMercadoPagoAutoFill() {
+    // Cargar tipos de documento
+    mp.getIdentificationTypes()
+        .then(identificationTypes => {
+            const docSelect = document.getElementById('identificationType-container');
+            docSelect.innerHTML = '<option value="">Select document type</option>';
+            
+            identificationTypes.forEach(type => {
+                const option = document.createElement('option');
+                option.value = type.id;
+                option.textContent = type.name;
+                docSelect.appendChild(option);
+            });
+        });
+
+    // Detectar tarjeta y cargar issuer/installments
+    const cardNumberInput = document.getElementById('cardNumber-container');
+    
+    cardNumberInput.addEventListener('input', function() {
+        if (this.value.length >= 6) {
+            const bin = this.value.substring(0, 6);
+            
+            // Obtener métodos de pago e issuer
+            mp.getPaymentMethods({ bin: bin })
+                .then(result => {
+                    if (result.results.length > 0) {
+                        const paymentMethod = result.results[0];
+                        
+                        // Obtener issuer
+                        return mp.getIssuers({ bin: bin, paymentMethodId: paymentMethod.id });
+                    }
+                })
+                .then(issuersResult => {
+                    if (issuersResult && issuersResult.results.length > 0) {
+                        const issuerSelect = document.getElementById('issuer-container');
+                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
+                        
+                        issuersResult.results.forEach(issuer => {
+                            const option = document.createElement('option');
+                            option.value = issuer.id;
+                            option.textContent = issuer.name;
+                            issuerSelect.appendChild(option);
+                        });
+                        
+                        // Obtener installments
+                        const amount = parseFloat(document.querySelector('.paymentmethod-total-amount').textContent.replace('$', '').trim()) || 100;
+                        return mp.getInstallments({ bin: bin, amount: amount });
+                    }
+                })
+                .then(installmentsResult => {
+                    if (installmentsResult && installmentsResult[0] && installmentsResult[0].payer_costs.length > 0) {
+                        const installmentsSelect = document.getElementById('installments-container');
+                        installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
+                        
+                        installmentsResult[0].payer_costs.forEach(cost => {
+                            const option = document.createElement('option');
+                            option.value = cost.installments;
+                            option.textContent = `${cost.installments}x $${cost.installment_amount} (Total: $${cost.total_amount})`;
+                            installmentsSelect.appendChild(option);
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.log('Info: No se pudieron cargar todos los datos automáticamente');
+                });
+        }
+    });
+}
+
 function setupPaymentProcessing() {
     const payButton = document.getElementById('paymentmethod-button-pay');
     
@@ -4340,7 +4411,6 @@ function processCreditCardPayment() {
         identificationNumber: document.getElementById('identificationNumber-container').value
     };
 
-    // CREAR TOKEN CON MERCADO PAGO
     mp.createCardToken(cardData)
         .then(result => {
             if (result.error) {
@@ -4348,20 +4418,15 @@ function processCreditCardPayment() {
                 return;
             }
             
-            // TOKEN CREADO EXITOSAMENTE - PAGO PROCESADO
             const token = result.id;
-            alert('✅ PAGO PROCESADO EXITOSAMENTE\nToken: ' + token + '\n\nEste es un pago REAL en modo prueba.\nNo se cobró dinero real.');
-            
-            // Limpiar formulario
+            alert('✅ PAGO PROCESADO EXITOSAMENTE\nToken: ' + token);
             document.getElementById('paymentmethod-form').reset();
-            
         })
         .catch(error => {
             alert('Error: ' + error.message);
         });
 }
 </script>
-
 
 
 
