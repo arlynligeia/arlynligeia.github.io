@@ -17,7 +17,7 @@ app.post('/process-payment', async (req, res) => {
       token: token,
       description: description,
       installments: 1,
-      payment_method_id: 'visa',
+      payment_method_id: req.body.paymentMethodId || 'visa', // <-- DETECTA AUTOMÁTICAMENTE
       payer: {
         email: 'customer@email.com'
       }
