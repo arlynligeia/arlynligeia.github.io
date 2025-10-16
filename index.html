@@ -2900,27 +2900,29 @@ ADD TO CART
   
 <!-- PAYMENT METHOD -->
 <section class="paymentmethod-section main-section" id="paymentmethod">
-<div class="paymentmethod-container">
-<h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
-<!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
-<div class="paymentmethod-total" id="paymentmethod-total">
-<div class="paymentmethod-total-amount">$ 0.00</div>
-</div>
-<!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
-<form id="paymentmethod-form" action="/process-payment" method="POST">
-<!-- OPCIÓN 1: CREDIT CARD -->
-<div class="paymentmethod-form-option">
-<div class="paymentmethod-form-option-creditcard">
-<input class="paymentmethod-form-option-creditcard-header" id="creditcard" type="radio" name="payment-method" value="credit-card">
-<label class="paymentmethod-form-option-creditcard-label" for="creditcard">
-<span class="paymentmethod-form-option-creditcard-title">CREDIT CARD</span>
-</label>
-<span class="paymentmethod-form-option-creditcard-icons">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
-</span>
-</div>
+  <div class="paymentmethod-container">
+    <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
+    
+    <!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
+    <div class="paymentmethod-total" id="paymentmethod-total">
+      <div class="paymentmethod-total-amount">$ 0.00</div>
+    </div>
+    
+    <!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
+    <form id="paymentmethod-form" action="/process-payment" method="POST">
+      <!-- OPCIÓN 1: CREDIT CARD -->
+      <div class="paymentmethod-form-option">
+        <div class="paymentmethod-form-option-creditcard">
+          <input class="paymentmethod-form-option-creditcard-header" id="creditcard" type="radio" name="payment-method" value="credit-card">
+          <label class="paymentmethod-form-option-creditcard-label" for="creditcard">
+            <span class="paymentmethod-form-option-creditcard-title">CREDIT CARD</span>
+          </label>
+          <span class="paymentmethod-form-option-creditcard-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
+          </span>
+        </div>
 
         <!-- CONTENEDOR PARA MERCADO PAGO -->
         <div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
@@ -2929,38 +2931,38 @@ ADD TO CART
             <!-- NÚMERO DE TARJETA -->
             <div class="paymentmethod-form-option-creditcard-card-content-row">
               <label>Card number</label>
-              <div id="cardNumber-container" class="mercado-pago-field-container"></div>
+              <input type="text" id="cardNumber-container" class="paymentmethod-form-option-creditcard-card-content-row-input" placeholder="Card number">
             </div>
             
             <!-- FECHA DE EXPIRACIÓN Y CVV -->
             <div class="paymentmethod-form-option-creditcard-card-content-row">
               <div>
                 <label>MM/YY</label>
-                <div id="expirationDate-container" class="mercado-pago-field-container"></div>
+                <input type="text" id="expirationDate-container" class="paymentmethod-form-option-creditcard-card-content-row-input" placeholder="MM/YY">
               </div>
               <div>
                 <label>CVV</label>
-                <div id="securityCode-container" class="mercado-pago-field-container"></div>
+                <input type="text" id="securityCode-container" class="paymentmethod-form-option-creditcard-card-content-row-input" placeholder="CVV">
               </div>
             </div>
             
             <!-- NOMBRE EN LA TARJETA -->
             <div class="paymentmethod-form-option-creditcard-card-content-row">
               <label>Name on Card</label>
-              <input type="text" id="cardholderName-container" class="mercado-pago-field-container">
+              <input type="text" id="cardholderName-container" class="paymentmethod-form-option-creditcard-card-content-row-input" placeholder="Name on card">
             </div>
             
             <!-- DOCUMENTO -->
             <div class="paymentmethod-form-option-creditcard-card-content-row">
               <div>
                 <label>Document Type</label>
-                <select id="identificationType-container" class="mercado-pago-field-container">
+                <select id="identificationType-container" class="paymentmethod-form-option-creditcard-input">
                   <option value="">Select document type</option>
                 </select>
               </div>
               <div>
                 <label>Document Number</label>
-                <input type="text" id="identificationNumber-container" class="mercado-pago-field-container">
+                <input type="text" id="identificationNumber-container" class="paymentmethod-form-option-creditcard-input" placeholder="Document number">
               </div>
             </div>
             
@@ -2968,13 +2970,13 @@ ADD TO CART
             <div class="paymentmethod-form-option-creditcard-card-content-row">
               <div>
                 <label>Issuer</label>
-                <select id="issuer-container" class="mercado-pago-field-container">
+                <select id="issuer-container" class="paymentmethod-form-option-creditcard-input">
                   <option value="">Select issuer</option>
                 </select>
               </div>
               <div>
                 <label>Instalments</label>
-                <select id="installments-container" class="mercado-pago-field-container">
+                <select id="installments-container" class="paymentmethod-form-option-creditcard-input">
                   <option value="">Select instalments</option>
                 </select>
               </div>
@@ -2983,17 +2985,18 @@ ADD TO CART
           </div>
         </div>
       </div>
-<!-- OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-form-option">
-<div class="paymentmethod-form-option-paypal">
-<input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
-<label class="paymentmethod-form-option-paypal-label" for="paypal">
-<span class="paymentmethod-form-option-paypal-title">PAYPAL</span>
-</label>
-<span class="paymentmethod-form-option-paypal-icons">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
-</span>
-</div>
+
+      <!-- OPCIÓN 2: PAYPAL -->
+      <div class="paymentmethod-form-option">
+        <div class="paymentmethod-form-option-paypal">
+          <input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
+          <label class="paymentmethod-form-option-paypal-label" for="paypal">
+            <span class="paymentmethod-form-option-paypal-title">PAYPAL</span>
+          </label>
+          <span class="paymentmethod-form-option-paypal-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
+          </span>
+        </div>
 
         <!-- INFORMACIÓN PAYPAL -->
         <div class="paymentmethod-form-option-paypal-card" id="paypal-form">
@@ -3010,13 +3013,13 @@ ADD TO CART
       <input type="hidden" id="paymentMethodId" name="paymentMethodId">
       <input type="hidden" id="issuerId" name="issuerId">
 
-<!-- BOTONES -->
-<div class="paymentmethod-buttons">
-<a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
-<button class="paymentmethod-button-cancel" id="paymentmethod-button-cancel" type="button">CANCEL</button>  
-<button class="paymentmethod-button-pay" id="paymentmethod-button-pay" type="submit">PAY</button>
-</div>
-</form>
+      <!-- BOTONES -->
+      <div class="paymentmethod-buttons">
+        <a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
+        <button class="paymentmethod-button-cancel" id="paymentmethod-button-cancel" type="button">CANCEL</button>  
+        <button class="paymentmethod-button-pay" id="paymentmethod-button-pay" type="submit">PAY</button>
+      </div>
+    </form>
 
     <!-- FORMULARIO PAYPAL PARA REDIRECCIÓN -->
     <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
@@ -3029,8 +3032,6 @@ ADD TO CART
     </form>
   </div>
 </section>
-
-
 
 
 
