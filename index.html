@@ -4287,7 +4287,13 @@ setupProceedPaymentButton();
 
 
 
-  <script>
+
+
+
+
+
+  
+<script>
   // Configuración de Mercado Pago
 const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
     locale: 'en-US'
@@ -4311,10 +4317,6 @@ function initializePaymentMethods() {
     const creditCardForm = document.getElementById('creditcard-form');
     const paypalForm = document.getElementById('paypal-form');
 
-    // Ocultar ambos formularios inicialmente
-    creditCardForm.style.display = 'none';
-    paypalForm.style.display = 'none';
-
     // Event listeners para los radio buttons
     creditCardRadio.addEventListener('change', function() {
         if (this.checked) {
@@ -4334,9 +4336,10 @@ function initializePaymentMethods() {
         }
     });
 
-    // Seleccionar tarjeta de crédito por defecto
+    // Seleccionar tarjeta de crédito por defecto y mostrar su formulario
     creditCardRadio.checked = true;
     creditCardForm.style.display = 'block';
+    paypalForm.style.display = 'none';
 }
 
 // 2. FUNCIÓN: Inicializar formulario de Mercado Pago
@@ -4473,6 +4476,11 @@ function setupEventListeners() {
         document.getElementById('creditcard-form').style.display = 'block';
         document.getElementById('paypal-form').style.display = 'none';
         selectedPaymentMethod = 'credit-card';
+        
+        // Resetear el estado del botón
+        const submitButton = document.getElementById('paymentmethod-button-pay');
+        submitButton.disabled = false;
+        submitButton.textContent = 'PAY';
     });
 
     // Prevenir envío normal del formulario
