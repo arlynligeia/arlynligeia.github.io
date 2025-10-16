@@ -7053,7 +7053,17 @@ background-color: #ff1493 !important;
 transform: scale(1.05);
 }
 
+/* Ocultar formularios inicialmente */
+#creditcard-form, 
+#paypal-form {
+  display: none;
+}
 
+/* Mostrar solo el formulario correspondiente cuando esté seleccionado */
+#creditcard:checked ~ #creditcard-form,
+#paypal:checked ~ #paypal-form {
+  display: block;
+}
 
 
 
