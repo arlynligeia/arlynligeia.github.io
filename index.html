@@ -4283,6 +4283,11 @@ setupProceedPaymentButton();
   
 
 
+
+
+
+
+  
 <script>
 const mp = new MercadoPago('TU_PUBLIC_KEY', {
   locale: 'es-AR'
@@ -4291,7 +4296,7 @@ const mp = new MercadoPago('TU_PUBLIC_KEY', {
 // Configuración para mantener tu estilo
 const cardForm = mp.cardForm({
   amount: "100.00",
-  iframe: false, // IMPORTANTE: Desactiva iframes para aplicar tu CSS
+  iframe: false,
   form: {
     id: "form-checkout",
     cardNumber: {
@@ -4341,9 +4346,34 @@ const cardForm = mp.cardForm({
       // Tu lógica de procesamiento
     }
   }
+}); // <- ESTE CIERRE FALTABA
+
+// Mostrar/ocultar formularios según selección (FUERA de MercadoPago)
+document.querySelectorAll('input[name="payment-method"]').forEach(radio => {
+  radio.addEventListener('change', function() {
+    // Ocultar todos los formularios primero
+    document.getElementById('creditcard-form').style.display = 'none';
+    document.getElementById('paypal-form').style.display = 'none';
+    
+    // Mostrar el formulario correspondiente
+    if (this.value === 'credit-card') {
+      document.getElementById('creditcard-form').style.display = 'block';
+    } else if (this.value === 'paypal') {
+      document.getElementById('paypal-form').style.display = 'block';
+    }
+  });
 });
 
-// Función
+// Mostrar tarjeta por defecto si está seleccionada
+if (document.getElementById('creditcard').checked) {
+  document.getElementById('creditcard-form').style.display = 'block';
+}
+
+// Función para aplicar estilos (DEFINIRLA)
+function applyCustomStyles() {
+  // Tu código para aplicar estilos
+  console.log("Aplicando estilos personalizados...");
+}
 </script>
 
 
