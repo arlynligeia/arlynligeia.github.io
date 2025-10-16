@@ -4280,12 +4280,14 @@ setupProceedPaymentButton();
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 let selectedPaymentMethod = 'credit-card';
-const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
+const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
+    locale: 'en-US'
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     initializePaymentMethods();
     setupPaymentProcessing();
-    initializeMercadoPagoAutoFill(); // <-- NUEVA FUNCIÓN
+    initializeMercadoPagoAutoFill();
 });
 
 function initializePaymentMethods() {
@@ -4317,72 +4319,49 @@ function initializePaymentMethods() {
     paypalForm.style.display = 'none';
 }
 
-// NUEVA FUNCIÓN: Autocompletar selects
 function initializeMercadoPagoAutoFill() {
-    // Cargar tipos de documento
-    mp.getIdentificationTypes()
-        .then(identificationTypes => {
-            const docSelect = document.getElementById('identificationType-container');
-            docSelect.innerHTML = '<option value="">Select document type</option>';
-            
-            identificationTypes.forEach(type => {
-                const option = document.createElement('option');
-                option.value = type.id;
-                option.textContent = type.name;
-                docSelect.appendChild(option);
-            });
-        });
+    // Documentos verdaderamente internacionales
+    const docSelect = document.getElementById('identificationType-container');
+    docSelect.innerHTML = `
+        <option value="">Select document type</option>
+        <option value="Passport">Passport</option>
+        <option value="DriverLicense">Driver's License</option>
+        <option value="NationalID">National ID</option>
+    `;
 
-    // Detectar tarjeta y cargar issuer/installments
-    const cardNumberInput = document.getElementById('cardNumber-container');
+    // Installments internacionales
+    const installmentsSelect = document.getElementById('installments-container');
+    installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
     
+    const installmentsOptions = [1, 2, 3, 4, 5, 6, 9, 12];
+    installmentsOptions.forEach(installment => {
+        const option = document.createElement('option');
+        option.value = installment;
+        option.textContent = installment === 1 ? 'Full payment' : `${installment} months`;
+        installmentsSelect.appendChild(option);
+    });
+
+    // Issuer se llenará automáticamente con la tarjeta
+    const cardNumberInput = document.getElementById('cardNumber-container');
     cardNumberInput.addEventListener('input', function() {
         if (this.value.length >= 6) {
             const bin = this.value.substring(0, 6);
             
-            // Obtener métodos de pago e issuer
             mp.getPaymentMethods({ bin: bin })
                 .then(result => {
                     if (result.results.length > 0) {
-                        const paymentMethod = result.results[0];
-                        
-                        // Obtener issuer
-                        return mp.getIssuers({ bin: bin, paymentMethodId: paymentMethod.id });
-                    }
-                })
-                .then(issuersResult => {
-                    if (issuersResult && issuersResult.results.length > 0) {
                         const issuerSelect = document.getElementById('issuer-container');
                         issuerSelect.innerHTML = '<option value="">Select issuer</option>';
                         
-                        issuersResult.results.forEach(issuer => {
+                        result.results.forEach(paymentMethod => {
                             const option = document.createElement('option');
-                            option.value = issuer.id;
-                            option.textContent = issuer.name;
+                            option.value = paymentMethod.id;
+                            option.textContent = paymentMethod.name;
                             issuerSelect.appendChild(option);
                         });
-                        
-                        // Obtener installments
-                        const amount = parseFloat(document.querySelector('.paymentmethod-total-amount').textContent.replace('$', '').trim()) || 100;
-                        return mp.getInstallments({ bin: bin, amount: amount });
                     }
                 })
-                .then(installmentsResult => {
-                    if (installmentsResult && installmentsResult[0] && installmentsResult[0].payer_costs.length > 0) {
-                        const installmentsSelect = document.getElementById('installments-container');
-                        installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
-                        
-                        installmentsResult[0].payer_costs.forEach(cost => {
-                            const option = document.createElement('option');
-                            option.value = cost.installments;
-                            option.textContent = `${cost.installments}x $${cost.installment_amount} (Total: $${cost.total_amount})`;
-                            installmentsSelect.appendChild(option);
-                        });
-                    }
-                })
-                .catch(error => {
-                    console.log('Info: No se pudieron cargar todos los datos automáticamente');
-                });
+                .catch(error => console.log('Auto-fill info only'));
         }
     });
 }
@@ -4403,7 +4382,7 @@ function setupPaymentProcessing() {
 
 function processCreditCardPayment() {
     const cardData = {
-        cardNumber: document.getElementById('cardNumber-container').value,
+        cardNumber: document.getElementById('cardNumber-container').value.replace(/\s/g, ''),
         expirationDate: document.getElementById('expirationDate-container').value,
         securityCode: document.getElementById('securityCode-container').value,
         cardholderName: document.getElementById('cardholderName-container').value,
@@ -4411,19 +4390,23 @@ function processCreditCardPayment() {
         identificationNumber: document.getElementById('identificationNumber-container').value
     };
 
+    if (!cardData.cardNumber || !cardData.expirationDate || !cardData.securityCode || !cardData.cardholderName) {
+        alert('Please complete all required fields');
+        return;
+    }
+
     mp.createCardToken(cardData)
         .then(result => {
             if (result.error) {
-                alert('Error: ' + result.error.message);
+                alert('Payment error: ' + result.error.message);
                 return;
             }
             
-            const token = result.id;
-            alert('✅ PAGO PROCESADO EXITOSAMENTE\nToken: ' + token);
+            alert('✅ Payment processed successfully!\nToken: ' + result.id);
             document.getElementById('paymentmethod-form').reset();
         })
         .catch(error => {
-            alert('Error: ' + error.message);
+            alert('Processing error: ' + error.message);
         });
 }
 </script>
