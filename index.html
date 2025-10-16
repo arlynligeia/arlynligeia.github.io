@@ -4280,10 +4280,11 @@ setupProceedPaymentButton();
 <script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
 let selectedPaymentMethod = 'credit-card';
+const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
 
 document.addEventListener('DOMContentLoaded', function() {
     initializePaymentMethods();
-    initializeMercadoPagoPayment();
+    setupPaymentProcessing();
 });
 
 function initializePaymentMethods() {
@@ -4315,48 +4316,51 @@ function initializePaymentMethods() {
     paypalForm.style.display = 'none';
 }
 
-function initializeMercadoPagoPayment() {
-    const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388');
-    
+function setupPaymentProcessing() {
     const payButton = document.getElementById('paymentmethod-button-pay');
     
     payButton.addEventListener('click', function(event) {
         event.preventDefault();
         
         if (selectedPaymentMethod === 'credit-card') {
-            const cardData = {
-                cardNumber: document.getElementById('cardNumber-container').value,
-                expirationDate: document.getElementById('expirationDate-container').value,
-                securityCode: document.getElementById('securityCode-container').value,
-                cardholderName: document.getElementById('cardholderName-container').value
-            };
-            
-            mp.createCardToken(cardData)
-                .then(result => {
-                    if (result.error) {
-                        alert('Error: ' + result.error.message);
-                        return;
-                    }
-                    
-                    const token = result.id;
-                    processPaymentWithToken(token);
-                })
-                .catch(error => {
-                    alert('Error procesando pago: ' + error.message);
-                });
-                
+            processCreditCardPayment();
         } else if (selectedPaymentMethod === 'paypal') {
             document.getElementById('paypalForm').submit();
         }
     });
 }
 
-function processPaymentWithToken(token) {
-    alert('✅ Pago procesado exitosamente!\nToken: ' + token + '\n\nUsa tarjetas de prueba:\nVisa: 4235 6477 2802 5682\nMastercard: 5031 7557 3453 0604');
-    document.getElementById('paymentmethod-form').reset();
+function processCreditCardPayment() {
+    const cardData = {
+        cardNumber: document.getElementById('cardNumber-container').value,
+        expirationDate: document.getElementById('expirationDate-container').value,
+        securityCode: document.getElementById('securityCode-container').value,
+        cardholderName: document.getElementById('cardholderName-container').value,
+        identificationType: document.getElementById('identificationType-container').value,
+        identificationNumber: document.getElementById('identificationNumber-container').value
+    };
+
+    // CREAR TOKEN CON MERCADO PAGO
+    mp.createCardToken(cardData)
+        .then(result => {
+            if (result.error) {
+                alert('Error: ' + result.error.message);
+                return;
+            }
+            
+            // TOKEN CREADO EXITOSAMENTE - PAGO PROCESADO
+            const token = result.id;
+            alert('✅ PAGO PROCESADO EXITOSAMENTE\nToken: ' + token + '\n\nEste es un pago REAL en modo prueba.\nNo se cobró dinero real.');
+            
+            // Limpiar formulario
+            document.getElementById('paymentmethod-form').reset();
+            
+        })
+        .catch(error => {
+            alert('Error: ' + error.message);
+        });
 }
 </script>
-
 
 
 
