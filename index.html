@@ -2900,103 +2900,134 @@ ADD TO CART
   
 <!-- PAYMENT METHOD -->
 <section class="paymentmethod-section main-section" id="paymentmethod">
-<div class="paymentmethod-container">
-<h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
+  <div class="paymentmethod-container">
+    <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2>
 
-<!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
-<div class="paymentmethod-total" id="paymentmethod-total">
-<div class="paymentmethod-total-amount">$ 0.00</div>
-</div>
+    <!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
+    <div class="paymentmethod-total" id="paymentmethod-total">
+      <div class="paymentmethod-total-amount">$ 0.00</div>
+    </div>
 
-<!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
-<form id="paymentmethod-form">
-<!-- OPCIÓN 1: CREDIT CARD -->
-<div class="paymentmethod-form-option">
-<div class="paymentmethod-form-option-creditcard">
-<input class="paymentmethod-form-option-creditcard-header" id="creditcard" type="radio" name="payment-method" value="credit-card">
-<label class="paymentmethod-form-option-creditcard-label" for="creditcard">
-<span class="paymentmethod-form-option-creditcard-title">CREDIT CARD</span>
-</label>
-<span class="paymentmethod-form-option-creditcard-icons">
-<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
-<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
-</span>
-</div>
+    <!-- CONTENEDOR: FORMULARIO DE MÉTODOS DE PAGO -->  
+    <form id="paymentmethod-form" action="/procesar-pago" method="POST">
+      <!-- OPCIÓN 1: CREDIT CARD -->
+      <div class="paymentmethod-form-option">
+        <div class="paymentmethod-form-option-creditcard">
+          <input class="paymentmethod-form-option-creditcard-header" id="creditcard" type="radio" name="payment-method" value="credit-card" checked>
+          <label class="paymentmethod-form-option-creditcard-label" for="creditcard">
+            <span class="paymentmethod-form-option-creditcard-title">CREDIT CARD</span>
+          </label>
+          <span class="paymentmethod-form-option-creditcard-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
+          </span>
+        </div>
 
-<!-- FORMULARIO DE TARJETA (oculto inicialmente) -->
-<div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
-<div class="paymentmethod-form-option-creditcard-card-content">  
-<!-- CAMPOS DE TARJETA ORIGINALES - MANTENIENDO TUS INPUTS -->
-<div class="paymentmethod-form-option-creditcard-card-content-row">
-<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-cardnumber" type="text" name="cardnumber" placeholder="Card Number" data-checkout="cardNumber" required>
-</div>
-<div class="paymentmethod-form-option-creditcard-card-content-row">
-<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-expirationdate" type="text" name="expirationdate" placeholder="MM/YY" data-checkout="expirationDate" required>
-<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-securitycode" type="text" name="securitycode" placeholder="CVV" data-checkout="securityCode" required>
-</div>
-<div class="paymentmethod-form-option-creditcard-card-content-row">
-<input class="paymentmethod-form-option-creditcard-card-content-row-input" id="paymentmethod-nameoncard" type="text" name="nameoncard" placeholder="Name on Card" data-checkout="cardholderName" required>
-</div>
+        <!-- CONTENEDOR PARA MERCADO PAGO CON TUS CLASES -->
+        <div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
+          <div class="paymentmethod-form-option-creditcard-card-content">
+            
+            <!-- CONTENEDOR PRINCIPAL DE MERCADO PAGO -->
+            <div id="form-checkout" class="mercado-pago-container">
+              
+              <!-- NÚMERO DE TARJETA -->
+              <div class="paymentmethod-form-option-creditcard-card-content-row">
+                <div id="cardNumber-container" class="mercado-pago-field-container">
+                  <!-- Mercado Pago inyectará el input aquí -->
+                </div>
+              </div>
+              
+              <!-- FECHA DE EXPIRACIÓN Y CVV -->
+              <div class="paymentmethod-form-option-creditcard-card-content-row">
+                <div id="expirationDate-container" class="mercado-pago-field-container">
+                  <!-- Input de fecha -->
+                </div>
+                <div id="securityCode-container" class="mercado-pago-field-container">
+                  <!-- Input de CVV -->
+                </div>
+              </div>
+              
+              <!-- NOMBRE EN LA TARJETA -->
+              <div class="paymentmethod-form-option-creditcard-card-content-row">
+                <div id="cardholderName-container" class="mercado-pago-field-container">
+                  <!-- Input del titular -->
+                </div>
+              </div>
+              
+              <!-- DOCUMENTO -->
+              <div class="paymentmethod-form-option-creditcard-card-content-row">
+                <div class="mercado-pago-document-container">
+                  <div id="identificationType-container" class="mercado-pago-field-container">
+                    <!-- Tipo de documento -->
+                  </div>
+                  <div id="identificationNumber-container" class="mercado-pago-field-container">
+                    <!-- Número de documento -->
+                  </div>
+                </div>
+              </div>
+              
+              <!-- BANCO EMISOR Y CUOTAS -->
+              <div class="paymentmethod-form-option-creditcard-card-content-row">
+                <div id="issuer-container" class="mercado-pago-field-container">
+                  <!-- Banco emisor -->
+                </div>
+                <div id="installments-container" class="mercado-pago-field-container">
+                  <!-- Cuotas -->
+                </div>
+              </div>
+              
+            </div>
+            
+          </div>
+        </div>
+      </div>
 
-<!-- CAMPOS ADICIONALES -->
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documenttype">DOCUMENT TYPE</label>
-<select class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documenttype" name="documenttype" required>
-<option value="">Select ID</option>
-<option value="DNI">DNI</option>
-<option value="CI">CI</option>
-<option value="Passport">Passport</option>
-</select>            
+      <!-- OPCIÓN 2: PAYPAL -->
+      <div class="paymentmethod-form-option">
+        <div class="paymentmethod-form-option-paypal">
+          <input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
+          <label class="paymentmethod-form-option-paypal-label" for="paypal">
+            <span class="paymentmethod-form-option-paypal-title">PAYPAL</span>
+          </label>
+          <span class="paymentmethod-form-option-paypal-icons">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
+          </span>
+        </div>
 
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-documentnumber">DOCUMENT NUMBER</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-documentnumber" type="text" name="documentnumber" required>
+        <!-- INFORMACIÓN PAYPAL -->
+        <div class="paymentmethod-form-option-paypal-card" id="paypal-form">
+          <div class="paymentmethod-form-option-paypal-card-content">
+            <p class="paymentmethod-form-option-paypal-card-content-text">You will be redirected to PayPal to complete your payment securely</p>
+            <p class="paymentmethod-form-option-paypal-card-content-text">• Secure payment through PayPal</p>
+            <p class="paymentmethod-form-option-paypal-card-content-text-end">• No need to enter card details on this site</p>
+          </div>
+        </div>
+      </div>
 
-<label class="paymentmethod-form-option-creditcard-label" for="paymentmethod-emailforreceipt">EMAIL FOR RECEIPT</label>
-<input class="paymentmethod-form-option-creditcard-input" id="paymentmethod-emailforreceipt" type="email" name="emailforreceipt" required>                           
-</div>
-</div>
-</div>
+      <!-- CAMPOS OCULTOS -->
+      <input type="hidden" id="token" name="token">
+      <input type="hidden" id="paymentMethodId" name="paymentMethodId">
+      <input type="hidden" id="issuerId" name="issuerId">
 
-<!-- OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-form-option">
-<div class="paymentmethod-form-option-paypal">
-<input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
-<label class="paymentmethod-form-option-paypal-label" for="paypal">
-<span class="paymentmethod-form-option-paypal-title">PAYPAL</span>
-</label>
-<span class="paymentmethod-form-option-paypal-icons">
-<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
-</span>
-</div>
+      <!-- BOTONES -->
+      <div class="paymentmethod-buttons">
+        <a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
+        <button class="paymentmethod-button-cancel" id="paymentmethod-button-cancel" type="button">CANCEL</button>  
+        <button class="paymentmethod-button-pay" id="paymentmethod-button-pay" type="submit">PAY</button>
+      </div>
+    </form>
 
-<!-- INFORMACIÓN PAYPAL (oculto inicialmente) -->
-<div class="paymentmethod-form-option-paypal-card" id="paypal-form">
-<div class="paymentmethod-form-option-paypal-card-content">
-<p class="paymentmethod-form-option-paypal-card-content-text">You will be redirected to PayPal to complete your payment securely</p>
-<p class="paymentmethod-form-option-paypal-card-content-text">• Secure payment through PayPal</p>
-<p class="paymentmethod-form-option-paypal-card-content-text-end">• No need to enter card details on this site</p>
-</div>
-</div>
-</div>
-
-<!-- CONTENEDOR DE BOTONES -->
-<div class="paymentmethod-buttons">
-<a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
-<button class="paymentmethod-button-cancel" id="paymentmethod-button-cancel" type="button">CANCEL</button>  
-<button class="paymentmethod-button-pay" id="paymentmethod-button-pay" type="button">PAY</button>
-</div>
-</form>
-
-<!-- FORMULARIO PAYPAL (OCULTO) -->
-<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="business" value="arlynligeia@gmail.com">
-<input type="hidden" name="return" value="https://tudominio.com/success">
-<input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
-</form>
-</div>
+    <!-- FORMULARIO PAYPAL -->
+    <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+      <input type="hidden" name="cmd" value="_cart">
+      <input type="hidden" name="upload" value="1">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="business" value="arlynligeia@gmail.com">
+      <input type="hidden" name="return" value="https://tudominio.com/success">
+      <input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
+    </form>
+  </div>
 </section>
 
 
@@ -4252,344 +4283,71 @@ setupProceedPaymentButton();
   
 
 
-
-
-
-
-
-
-<!-- SCRIP: PAYMENT METHOD -->
-<script src="https://sdk.mercadopago.com/js/v2"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // CONFIGURACIÓN MÁS ROBUSTA
-    let mp;
-    try {
-        mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
-            locale: 'es-PE'
-        });
-        console.log('✅ SDK Mercado Pago cargado correctamente');
-    } catch (error) {
-        console.error('❌ Error cargando SDK Mercado Pago:', error);
-        return;
-    }
-
-    let cardForm = null;
-    let selectedPaymentMethod = null;
-
-    // INICIALIZAR
-    initializePaymentMethod();
-
-    function initializePaymentMethod() {
-        setupRadioButtons();
-        setupPayButton();
-        updateTotalFromStorage();
-    }
-
-    // CONFIGURAR RADIO BUTTONS
-    function setupRadioButtons() {
-        const creditCardRadio = document.getElementById('creditcard');
-        
-        document.getElementById('creditcard-form').style.display = 'none';
-        document.getElementById('paypal-form').style.display = 'none';
-
-        creditCardRadio.addEventListener('change', function() {
-            if (this.checked) {
-                selectedPaymentMethod = 'credit-card';
-                showCreditCardForm();
-                hidePaypalForm();
-                // Pequeño delay para asegurar que el DOM esté listo
-                setTimeout(() => {
-                    initializeMercadoPagoForm();
-                }, 100);
-            }
-        });
-    }
-
-    function showCreditCardForm() {
-        document.getElementById('creditcard-form').style.display = 'block';
-    }
-
-    function hideCreditCardForm() {
-        document.getElementById('creditcard-form').style.display = 'none';
-    }
-
-    function showPaypalForm() {
-        document.getElementById('paypal-form').style.display = 'block';
-    }
-
-    function hidePaypalForm() {
-        document.getElementById('paypal-form').style.display = 'none';
-    }
-
-    // INICIALIZAR FORMULARIO MERCADO PAGO - VERSIÓN SIMPLIFICADA
-    function initializeMercadoPagoForm() {
-        const totalAmount = getTotalAmount();
-        
-        console.log('🔄 Inicializando formulario Mercado Pago con monto:', totalAmount);
-
-        // Limpiar formulario anterior si existe
-        if (cardForm) {
-            try {
-                cardForm.unmount();
-            } catch (e) {
-                // Ignorar errores de unmount
-            }
-        }
-
-        try {
-            // VERIFICACIÓN MÁS DETALLADA
-            const requiredElements = [
-                'paymentmethod-form',
-                'paymentmethod-cardnumber', 
-                'paymentmethod-expirationdate',
-                'paymentmethod-securitycode',
-                'paymentmethod-nameoncard'
-            ];
-
-            const missingElements = [];
-            requiredElements.forEach(id => {
-                const element = document.getElementById(id);
-                if (!element) {
-                    missingElements.push(id);
-                }
-            });
-
-            if (missingElements.length > 0) {
-                throw new Error(`Elementos faltantes: ${missingElements.join(', ')}`);
-            }
-
-            console.log('✅ Todos los elementos del formulario encontrados');
-
-            // INICIALIZACIÓN MÁS SIMPLE
-            cardForm = mp.cardForm({
-                amount: totalAmount.toString(),
-                iframe: false,
-                form: {
-                    id: "paymentmethod-form",
-                    cardNumber: {
-                        id: "paymentmethod-cardnumber",
-                        placeholder: "Número de tarjeta"
-                    },
-                    expirationDate: {
-                        id: "paymentmethod-expirationdate",
-                        placeholder: "MM/YY"
-                    },
-                    securityCode: {
-                        id: "paymentmethod-securitycode",
-                        placeholder: "CVV"
-                    },
-                    cardholderName: {
-                        id: "paymentmethod-nameoncard",
-                        placeholder: "Titular de la tarjeta"
-                    }
-                },
-                callbacks: {
-                    onFormMounted: error => {
-                        if (error) {
-                            // Manejar el array de error que mencionaste
-                            let errorMessage = 'Error desconocido';
-                            if (Array.isArray(error)) {
-                                errorMessage = error.map(err => err?.message || err).join(', ');
-                            } else if (error && error.message) {
-                                errorMessage = error.message;
-                            }
-                            console.error('❌ Error en onFormMounted:', errorMessage);
-                            showPaymentStatus('Error cargando formulario: ' + errorMessage, 'error');
-                        } else {
-                            console.log('✅ Formulario Mercado Pago montado exitosamente');
-                        }
-                    },
-                    onSubmit: event => {
-                        event.preventDefault();
-                        processMercadoPagoPayment();
-                    },
-                    onError: error => {
-                        let errorMessage = 'Error desconocido';
-                        if (Array.isArray(error)) {
-                            errorMessage = error.map(err => err?.message || err).join(', ');
-                        } else if (error && error.message) {
-                            errorMessage = error.message;
-                        }
-                        console.error('❌ Error en formulario:', errorMessage);
-                        showPaymentStatus('Error: ' + errorMessage, 'error');
-                    }
-                }
-            });
-
-            console.log('🎉 Formulario Mercado Pago creado exitosamente');
-
-        } catch (error) {
-            // MANEJO MEJORADO DE ERRORES
-            let errorMessage = 'Error desconocido';
-            if (Array.isArray(error)) {
-                errorMessage = error.map(err => err?.message || err).join(', ');
-            } else if (error && error.message) {
-                errorMessage = error.message;
-            } else if (error) {
-                errorMessage = error.toString();
-            }
-
-            console.error('💥 Error inicializando Mercado Pago:', {
-                message: errorMessage,
-                error: error,
-                type: typeof error
-            });
-
-            showPaymentStatus('Error inicializando pago: ' + errorMessage, 'error');
-        }
-    }
-
-    // OBTENER MONTO TOTAL
-    function getTotalAmount() {
-        const totalElement = document.querySelector('.paymentmethod-total-amount');
-        if (totalElement) {
-            const totalText = totalElement.textContent.replace('$', '').trim();
-            const total = parseFloat(totalText) || 0;
-            return total > 0 ? total : 100.00;
-        }
-        return 100.00;
-    }
-
-    // PROCESAR PAGO MERCADO PAGO
-    async function processMercadoPagoPayment() {
-        const submitBtn = document.getElementById('paymentmethod-button-pay');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Processing...';
-
-        try {
-            if (!cardForm) {
-                throw new Error('El formulario de pago no está inicializado. Por favor selecciona Credit Card nuevamente.');
-            }
-
-            if (!validateCreditCardForm()) {
-                throw new Error('Por favor completa todos los campos requeridos');
-            }
-
-            const additionalData = {
-                cardholderName: document.getElementById('paymentmethod-nameoncard').value,
-                cardholderEmail: document.getElementById('paymentmethod-emailforreceipt').value,
-                identificationType: document.getElementById('paymentmethod-documenttype').value,
-                identificationNumber: document.getElementById('paymentmethod-documentnumber').value
-            };
-
-            console.log('💳 Procesando pago con datos:', additionalData);
-
-            // CREAR TOKEN
-            const tokenResult = await cardForm.createCardToken(additionalData);
-            
-            if (tokenResult.error) {
-                throw new Error(tokenResult.error.message || 'Error creando token');
-            }
-
-            console.log('✅ Token creado:', tokenResult.id);
-
-            // SIMULAR PAGO EXITOSO
-            showPaymentStatus('✅ ¡Pago procesado exitosamente!', 'success');
-            
-            setTimeout(() => {
-                clearCartAndRedirect();
-            }, 2000);
-
-        } catch (error) {
-            console.error('❌ Error procesando pago:', error);
-            showPaymentStatus('❌ Error: ' + error.message, 'error');
-            
-            submitBtn.disabled = false;
-            submitBtn.textContent = originalText;
-        }
-    }
-
-    // VALIDAR FORMULARIO (igual que antes)
-    function validateCreditCardForm() {
-        const requiredFields = [
-            'paymentmethod-cardnumber',
-            'paymentmethod-expirationdate',
-            'paymentmethod-securitycode',
-            'paymentmethod-nameoncard',
-            'paymentmethod-documenttype',
-            'paymentmethod-documentnumber',
-            'paymentmethod-emailforreceipt'
-        ];
-        
-        let isValid = true;
-        for (let fieldId of requiredFields) {
-            const field = document.getElementById(fieldId);
-            if (!field || !field.value.trim()) {
-                field.style.border = '2px solid red';
-                isValid = false;
-            } else {
-                field.style.border = '';
-            }
-        }
-        return isValid;
-    }
-
-    // CONFIGURAR BOTÓN PAY
-    function setupPayButton() {
-        const payButton = document.getElementById('paymentmethod-button-pay');
-        
-        payButton.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            if (!selectedPaymentMethod) {
-                alert('Por favor selecciona un método de pago');
-                return;
-            }
-            
-            if (selectedPaymentMethod === 'credit-card') {
-                processMercadoPagoPayment();
-            }
-        });
-    }
-
-    // ACTUALIZAR TOTAL DESDE STORAGE
-    function updateTotalFromStorage() {
-        const savedTotal = localStorage.getItem('payment-total');
-        if (savedTotal) {
-            document.querySelector('.paymentmethod-total-amount').textContent = '$ ' + savedTotal;
-        } else {
-            document.querySelector('.paymentmethod-total-amount').textContent = '$ 100.00';
-        }
-    }
-
-    // MOSTRAR ESTADO DEL PAGO
-    function showPaymentStatus(message, type) {
-        let statusDiv = document.getElementById('payment-status');
-        if (!statusDiv) {
-            statusDiv = document.createElement('div');
-            statusDiv.id = 'payment-status';
-            statusDiv.style.cssText = 'margin: 15px 0; padding: 15px; border-radius: 6px; text-align: center; font-family: "Share Tech Mono", monospace; font-size: 14px;';
-            document.querySelector('.paymentmethod-buttons').parentNode.insertBefore(statusDiv, document.querySelector('.paymentmethod-buttons'));
-        }
-        
-        statusDiv.textContent = message;
-        
-        if (type === 'success') {
-            statusDiv.style.background = '#d4edda';
-            statusDiv.style.color = '#155724';
-            statusDiv.style.border = '1px solid #c3e6cb';
-        } else {
-            statusDiv.style.background = '#f8d7da';
-            statusDiv.style.color = '#721c24';
-            statusDiv.style.border = '1px solid #f5c6cb';
-        }
-    }
-
-    // LIMPIAR CARRITO Y REDIRIGIR
-    function clearCartAndRedirect() {
-        localStorage.removeItem('cart');
-        localStorage.removeItem('payment-total');
-        
-        setTimeout(() => {
-            alert('¡Pago exitoso! Gracias por tu compra.');
-            window.location.href = '#store';
-        }, 2000);
-    }
+const mp = new MercadoPago('TU_PUBLIC_KEY', {
+  locale: 'es-AR'
 });
+
+// Configuración para mantener tu estilo
+const cardForm = mp.cardForm({
+  amount: "100.00",
+  iframe: false, // IMPORTANTE: Desactiva iframes para aplicar tu CSS
+  form: {
+    id: "form-checkout",
+    cardNumber: {
+      id: "cardNumber-container",
+      placeholder: "Card Number"
+    },
+    expirationDate: {
+      id: "expirationDate-container", 
+      placeholder: "MM/YY"
+    },
+    securityCode: {
+      id: "securityCode-container",
+      placeholder: "CVV"
+    },
+    cardholderName: {
+      id: "cardholderName-container",
+      placeholder: "Name on Card"
+    },
+    issuer: {
+      id: "issuer-container",
+      placeholder: "Issuer"
+    },
+    installments: {
+      id: "installments-container",
+      placeholder: "Installments"
+    },
+    identificationType: {
+      id: "identificationType-container",
+      placeholder: "Document Type"
+    },
+    identificationNumber: {
+      id: "identificationNumber-container", 
+      placeholder: "Document Number"
+    }
+  },
+  callbacks: {
+    onFormMounted: error => {
+      if (error) {
+        console.error("Error mounting form: ", error);
+        return;
+      }
+      // Aplicar estilos personalizados después de que se monte el formulario
+      applyCustomStyles();
+    },
+    onSubmit: event => {
+      event.preventDefault();
+      // Tu lógica de procesamiento
+    }
+  }
+});
+
+// Función
 </script>
+
+
+
 
 
 
