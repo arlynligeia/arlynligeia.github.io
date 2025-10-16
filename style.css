@@ -6953,11 +6953,10 @@ border-radius: 4px;
 background: white;
 padding: 3px;
 }
-/* FILAS DEL FORMULARIO */
-.paymentmethod-form-option-creditcard-card-content-row {
+/* CONTENEDORES DE INPUTS EN FILAS DOBLES */
+.paymentmethod-form-option-creditcard-card-content-row > div {
+    flex: 1;
     display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
 }
 
 .paymentmethod-form-option-creditcard-card-content-row-input {
@@ -6974,7 +6973,6 @@ padding: 3px;
     padding: 10px;
     border: none;
 }
-
 
 /* TEXTOS SOBRE LOS RECUADROS */
 .paymentmethod-form-option-creditcard-label {
