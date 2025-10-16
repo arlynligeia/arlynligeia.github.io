@@ -6955,32 +6955,27 @@ padding: 3px;
 }
 /* FILAS DEL FORMULARIO */
 .paymentmethod-form-option-creditcard-card-content-row {
-display: flex;
-gap: 10px;
-margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
 }
+
 .paymentmethod-form-option-creditcard-card-content-row-input {
-flex: 1;
-width: 100%;
-height: 40px;
-background-color: white !important;
-border-radius: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: black !important;
-text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
-border: none;
+    flex: 1;
+    width: 100%;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: black !important;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
 }
-/* Para que Expiration Date y Security Code estén 50% cada uno */
-.paymentmethod-form-option-creditcard-card-content-row:first-of-type .paymentmethod-form-option-creditcard-card-content-row-input,
-.paymentmethod-form-option-creditcard-card-content-row:last-of-type .paymentmethod-form-option-creditcard-card-content-row-input {
-flex: 1;
-}
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) .paymentmethod-form-option-creditcard-card-content-row-input {
-flex: 1;
-}
+
+
 /* TEXTOS SOBRE LOS RECUADROS */
 .paymentmethod-form-option-creditcard-label {
 display: block;
