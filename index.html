@@ -4316,57 +4316,71 @@ paypalForm.style.display = 'none';
 }
 
 function initializeMercadoPagoAutoFill() {
-// Documentos verdaderamente internacionales
-const docSelect = document.getElementById('identificationType-container');
-docSelect.innerHTML = `
-<option value="">Select document type</option>
-<option value="Passport">Passport</option>
-<option value="DriverLicense">Driver's License</option>
-<option value="NationalID">National ID</option>
-`;
-// Issuer se llenará automáticamente con la tarjeta
-const cardNumberInput = document.getElementById('cardNumber-container');
-cardNumberInput.addEventListener('input', function() {
-if (this.value.length >= 6) {
-const bin = this.value.substring(0, 6);
-mp.getPaymentMethods({ bin: bin })
-.then(result => {
-if (result.results.length > 0) {
-                    const issuerSelect = document.getElementById('issuer-container');
-                    issuerSelect.innerHTML = '<option value="">Select issuer</option>';
-                    
-                    // Filtrar solo las tarjetas que aceptas
-                    const acceptedCards = ['visa', 'master', 'amex'];
-                    
-                    result.results.forEach(paymentMethod => {
-                        if (acceptedCards.includes(paymentMethod.id)) {
+    // Documentos verdaderamente internacionales
+    const docSelect = document.getElementById('identificationType-container');
+    docSelect.innerHTML = `
+        <option value="">Select document type</option>
+        <option value="Passport">Passport</option>
+        <option value="DriverLicense">Driver's License</option>
+        <option value="NationalID">National ID</option>
+    `;
+
+    // INSTALLMENTS - ESTO FALTABA
+    const installmentsSelect = document.getElementById('installments-container');
+    installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
+    const installmentsOptions = [1, 2, 3, 4, 5, 6, 9, 12];
+    installmentsOptions.forEach(installment => {
+        const option = document.createElement('option');
+        option.value = installment;
+        option.textContent = installment === 1 ? 'Full payment' : `${installment} months`;
+        installmentsSelect.appendChild(option);
+    });
+
+    // Issuer se llenará automáticamente con la tarjeta
+    const cardNumberInput = document.getElementById('cardNumber-container');
+    cardNumberInput.addEventListener('input', function() {
+        if (this.value.length >= 6) {
+            const bin = this.value.substring(0, 6);
+            
+            mp.getPaymentMethods({ bin: bin })
+                .then(result => {
+                    if (result.results.length > 0) {
+                        const issuerSelect = document.getElementById('issuer-container');
+                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
+                        
+                        // Filtrar solo las tarjetas que aceptas
+                        const acceptedCards = ['visa', 'master', 'amex'];
+                        
+                        result.results.forEach(paymentMethod => {
+                            if (acceptedCards.includes(paymentMethod.id)) {
+                                const option = document.createElement('option');
+                                option.value = paymentMethod.id;
+                                
+                                // Mostrar nombres amigables
+                                let cardName = paymentMethod.name;
+                                if (paymentMethod.id === 'visa') cardName = 'Visa';
+                                if (paymentMethod.id === 'master') cardName = 'Mastercard';
+                                if (paymentMethod.id === 'amex') cardName = 'American Express';
+                                
+                                option.textContent = cardName;
+                                issuerSelect.appendChild(option);
+                            }
+                        });
+                        
+                        // Si no se detectaron tarjetas aceptadas, mostrar opción genérica
+                        if (issuerSelect.options.length === 1) {
                             const option = document.createElement('option');
-                            option.value = paymentMethod.id;
-                            
-                            // Mostrar nombres amigables
-                            let cardName = paymentMethod.name;
-                            if (paymentMethod.id === 'visa') cardName = 'Visa';
-                            if (paymentMethod.id === 'master') cardName = 'Mastercard';
-                            if (paymentMethod.id === 'amex') cardName = 'American Express';
-                            
-                            option.textContent = cardName;
+                            option.value = 'credit_card';
+                            option.textContent = 'Credit Card';
                             issuerSelect.appendChild(option);
                         }
-                    });
-                    
-                    // Si no se detectaron tarjetas aceptadas, mostrar opción genérica
-                    if (issuerSelect.options.length === 1) {
-                        const option = document.createElement('option');
-                        option.value = 'credit_card';
-                        option.textContent = 'Credit Card';
-                        issuerSelect.appendChild(option);
                     }
-                }
-            })
-            .catch(error => console.log('Auto-fill info only'));
-    }
-});
-} // <-- ESTE CIERRE FALTABA
+                })
+                .catch(error => console.log('Auto-fill info only'));
+        }
+    });
+}
+  
 function setupPaymentProcessing() {
 const payButton = document.getElementById('paymentmethod-button-pay');
 payButton.addEventListener('click', function(event) {
