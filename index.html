@@ -2924,60 +2924,50 @@ ADD TO CART
           </span>
         </div>
 
-        <!-- CONTENEDOR PARA MERCADO PAGO CON TUS CLASES -->
+        <!-- CONTENEDOR PARA MERCADO PAGO -->
         <div class="paymentmethod-form-option-creditcard-card" id="creditcard-form">
           <div class="paymentmethod-form-option-creditcard-card-content">
             
             <!-- CONTENEDOR PRINCIPAL DE MERCADO PAGO -->
-            <div id="form-checkout" class="mercado-pago-container">
+            <form id="form-checkout" class="mercado-pago-container">
               
               <!-- NÚMERO DE TARJETA -->
               <div class="paymentmethod-form-option-creditcard-card-content-row">
-                <div id="cardNumber-container" class="mercado-pago-field-container">
-                  <!-- Mercado Pago inyectará el input aquí -->
-                </div>
+                <input id="cardNumber-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-card-content-row-input">
               </div>
               
               <!-- FECHA DE EXPIRACIÓN Y CVV -->
               <div class="paymentmethod-form-option-creditcard-card-content-row">
-                <div id="expirationDate-container" class="mercado-pago-field-container">
-                  <!-- Input de fecha -->
-                </div>
-                <div id="securityCode-container" class="mercado-pago-field-container">
-                  <!-- Input de CVV -->
-                </div>
+                <input id="expirationDate-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-card-content-row-input">
+                <input id="securityCode-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-card-content-row-input">
               </div>
               
               <!-- NOMBRE EN LA TARJETA -->
               <div class="paymentmethod-form-option-creditcard-card-content-row">
-                <div id="cardholderName-container" class="mercado-pago-field-container">
-                  <!-- Input del titular -->
-                </div>
+                <input id="cardholderName-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-card-content-row-input">
               </div>
               
               <!-- DOCUMENTO -->
               <div class="paymentmethod-form-option-creditcard-card-content-row">
                 <div class="mercado-pago-document-container">
-                  <div id="identificationType-container" class="mercado-pago-field-container">
-                    <!-- Tipo de documento -->
-                  </div>
-                  <div id="identificationNumber-container" class="mercado-pago-field-container">
-                    <!-- Número de documento -->
-                  </div>
+                  <select id="identificationType-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-input">
+                    <option value="">Document Type</option>
+                  </select>
+                  <input id="identificationNumber-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-input">
                 </div>
               </div>
               
               <!-- BANCO EMISOR Y CUOTAS -->
               <div class="paymentmethod-form-option-creditcard-card-content-row">
-                <div id="issuer-container" class="mercado-pago-field-container">
-                  <!-- Banco emisor -->
-                </div>
-                <div id="installments-container" class="mercado-pago-field-container">
-                  <!-- Cuotas -->
-                </div>
+                <select id="issuer-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-input">
+                  <option value="">Issuer</option>
+                </select>
+                <select id="installments-container" class="mercado-pago-field-container paymentmethod-form-option-creditcard-input">
+                  <option value="">Installments</option>
+                </select>
               </div>
               
-            </div>
+            </form>
             
           </div>
         </div>
