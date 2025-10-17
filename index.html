@@ -4355,20 +4355,13 @@ function initializeMercadoPagoAutoFill() {
                         
                         const acceptedCards = ['visa', 'master', 'amex'];
                         
-                        result.results.forEach(paymentMethod => {
-                            if (acceptedCards.includes(paymentMethod.id)) {
-                                const option = document.createElement('option');
-                                option.value = paymentMethod.id;
-                                
-                                let cardName = paymentMethod.name;
-                                if (paymentMethod.id === 'visa') cardName = 'Visa';
-                                if (paymentMethod.id === 'master') cardName = 'Mastercard';
-                                if (paymentMethod.id === 'amex') cardName = 'American Express';
-                                
-                                option.textContent = cardName;
-                                issuerSelect.appendChild(option);
-                            }
-                        });
+result.results.forEach(paymentMethod => {
+    // ACEPTA CUALQUIER TARJETA, no solo visa/master/amex
+    const option = document.createElement('option');
+    option.value = paymentMethod.id;
+    option.textContent = paymentMethod.name;
+    issuerSelect.appendChild(option);
+});
                         
                         if (issuerSelect.options.length === 1) {
                             const option = document.createElement('option');
