@@ -201,13 +201,18 @@ transform: scaleX(1);
         display: none;
     }
     
-    /* Asegurar que el título esté centrado */
+    /* TÍTULO CENTRADO Y PROPORCIONAL AL CONTENEDOR DE REFERENCIA */
     .site-title {
         text-align: center;
-        margin-left: 0;
+        font-size: 3em !important; /* Más grande para móvil */
+        max-width: 800px; /* Mismo ancho que los contenedores */
+        margin: 20px auto !important; /* Centrado automático */
+        padding: 0 20px; /* Espacio a los lados */
+        line-height: 1.1;
+        width: 100%;
+        box-sizing: border-box;
     }
 }
-
 /* Mostrar menú móvil cuando está activo */
 .mobile-menu-overlay.active {
     display: flex;
