@@ -375,10 +375,13 @@ transform: scaleX(1);
     gap: 30px !important;
   }
   
- .home-carousel {
-    width: 100vw !important; /* Viewport width - ancho completo de la pantalla */
-    margin-left: calc(-50vw + 50%); /* Truco para centrarlo y que ocupe todo */
-    max-width: 100vw !important;
+.home-carousel {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    transform: translateX(-50%) !important;
+    position: relative !important;
+    left: 50% !important;
+    right: 50% !important;
   }
 }
 
