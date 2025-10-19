@@ -190,22 +190,10 @@ transform: scaleX(1);
     transform: scale(1.05);
 }
 
-/* Media Query para móvil - USANDO 800px COMO REFERENCIA */
+/* Media Query para móvil */
 @media (max-width: 768px) {
     .hamburger-btn {
         display: block;
-        position: fixed;
-        top: 25px;
-        left: 20px;
-        background: transparent;
-        border: 2px solid white;
-        border-radius: 5px;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        z-index: 1002;
-        padding: 5px 10px;
-        font-family: 'Orbitron', sans-serif;
     }
     
     /* Ocultar menú original en móvil */
@@ -213,27 +201,13 @@ transform: scaleX(1);
         display: none;
     }
     
-    /* TÍTULO - FORZAR A QUE OCUPE EL MISMO ANCHO QUE LOS CONTENEDORES */
+    /* Asegurar que el título esté centrado */
     .site-title {
-        display: block !important;
-        width: 100vw !important; /* Ancho completo de la pantalla */
-        max-width: 800px !important; /* Pero no más de 800px */
-        font-size: 4em !important; /* Más grande */
-        text-align: center !important;
-        margin: 30px auto !important; /* Centrado */
-        padding: 0 !important;
-        position: relative !important;
-        left: 0 !important;
-        transform: none !important;
-        box-sizing: border-box !important;
-    }
-    
-    /* Forzar que el viewport use nuestro tamaño */
-    body {
-        min-width: 800px;
-        overflow-x: auto;
+        text-align: center;
+        margin-left: 0;
     }
 }
+
 /* Mostrar menú móvil cuando está activo */
 .mobile-menu-overlay.active {
     display: flex;
