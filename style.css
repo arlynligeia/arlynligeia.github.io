@@ -349,43 +349,43 @@ transform: scaleX(1);
 
 
 /* ======================================
-   MEDIA QUERY PARA DISPOSITIVOS MÓVILES
-   (Basado en el ancho del contenedor social media)
+   ADAPTACIÓN BASADA EN EL CONTENEDOR SOCIAL MEDIA
 ====================================== */
-@media screen and (max-width: 900px) {
-  /* Ajustamos el contenedor principal */
-  .home-container {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 0 20px;
-    gap: 30px;
-  }
-  
-  /* Hacemos que el carrusel ocupe todo el ancho disponible */
-  .home-carousel {
-    width: 100%;
-    height: 400px; /* Altura fija para móvil */
-    order: 2; /* Coloca el carrusel después del contenido lateral */
-  }
-  
-  /* Hacemos que el contenedor lateral ocupe todo el ancho */
-  .home-side {
-    width: 100%;
-    order: 1; /* Coloca el contenido lateral primero */
-  }
-  
-  /* Ajustamos el título para móvil */
-  .home-side-information-title {
-    font-size: 2.2rem;
-  }
-  
-  /* Ajustamos el texto para móvil */
-  .home-side-information-text {
-    font-size: 1.1rem;
-  }
+/* Reset para móvil - forzar columna */
+.home-container {
+  display: flex;
+  flex-direction: row;
 }
 
+.home-carousel {
+  width: 60%;
+}
+
+.home-side {
+  width: 500px;
+}
+
+/* Cuando el contenedor social media ocupe todo el ancho (móvil) */
+@media screen and (max-width: 850px) {
+  .home-container {
+    flex-direction: column !important;
+    align-items: center !important;
+    height: auto !important;
+    padding: 0 20px !important;
+    gap: 30px !important;
+  }
+  
+  .home-carousel {
+    width: 100% !important;
+    height: 400px !important;
+    order: 2 !important;
+  }
+  
+  .home-side {
+    width: 100% !important;
+    order: 1 !important;
+  }
+}
 
 
 
