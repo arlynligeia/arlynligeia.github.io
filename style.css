@@ -367,22 +367,24 @@ transform: scaleX(1);
 
 /* Cuando el contenedor social media ocupe todo el ancho (móvil) */
 @media screen and (max-width: 850px) {
-  .home-container {
+ .home-container {
     flex-direction: column !important;
     align-items: center !important;
     height: auto !important;
-    padding: 0 20px !important;
+    padding: 0 !important; /* ELIMINAR PADDING DEL CONTENEDOR PADRE */
     gap: 30px !important;
   }
   
   .home-carousel {
-    width: 100% !important;
+    width: 800px !important; /* MEDIDA EXACTA DEL SOCIAL MEDIA CONTAINER */
+    max-width: 100vw !important; /* PERO NUNCA MÁS ANCHO QUE LA PANTALLA */
     height: 400px !important;
     order: 2 !important;
   }
   
   .home-side {
-    width: 100% !important;
+    width: 800px !important; /* MISMA MEDIDA */
+    max-width: 100vw !important;
     order: 1 !important;
   }
 }
