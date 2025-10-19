@@ -196,9 +196,7 @@ transform: scaleX(1);
         display: block;
         position: fixed;
         top: 25px;
-        left: 50%; /* Centrado horizontal */
-        transform: translateX(-400px); /* 800px / 2 = 400px */
-        margin-left: -380px; /* Ajuste para alinear con contenedor 800px */
+        left: 20px;
         background: transparent;
         border: 2px solid white;
         border-radius: 5px;
@@ -215,19 +213,19 @@ transform: scaleX(1);
         display: none;
     }
     
-    /* TÍTULO CON ANCHO FIJO DE 800px */
+    /* TÍTULO - FORZAR A QUE OCUPE EL MISMO ANCHO QUE LOS CONTENEDORES */
     .site-title {
-        text-align: center;
-        font-size: 3.5em !important;
-        width: 800px !important;
-        max-width: 800px !important;
-        margin: 25px auto !important;
-        padding: 0 20px;
-        line-height: 1.1;
-        box-sizing: border-box;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
+        display: block !important;
+        width: 100vw !important; /* Ancho completo de la pantalla */
+        max-width: 800px !important; /* Pero no más de 800px */
+        font-size: 4em !important; /* Más grande */
+        text-align: center !important;
+        margin: 30px auto !important; /* Centrado */
+        padding: 0 !important;
+        position: relative !important;
+        left: 0 !important;
+        transform: none !important;
+        box-sizing: border-box !important;
     }
     
     /* Forzar que el viewport use nuestro tamaño */
