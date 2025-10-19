@@ -375,45 +375,17 @@ transform: scaleX(1);
     gap: 30px !important;
   }
   
-.home-carousel {
-    width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
-    transform: translateX(-50%) !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
+  .home-carousel {
+    width: 100% !important;
+    height: 400px !important;
+    order: 2 !important;
   }
-}
-
-
-
-
- 
+  
   .home-side {
     width: 100% !important;
     order: 1 !important;
   }
 }
-/* Estilos para móvil activados por JavaScript */
-.home-container.mobile-layout {
-  flex-direction: column !important;
-  align-items: center !important;
-  height: auto !important;
-  padding: 0 20px !important;
-  gap: 30px !important;
-}
-
-.home-container.mobile-layout .home-carousel {
-  width: 100% !important;
-  height: 400px !important;
-  order: 2 !important;
-}
-
-.home-container.mobile-layout .home-side {
-  width: 100% !important;
-  order: 1 !important;
-}
-
 
 
 
