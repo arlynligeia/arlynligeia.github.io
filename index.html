@@ -111,26 +111,6 @@
 </nav> 
 </header>
 
-<!-- Botón Hamburguesa (solo móvil) -->
-<button class="hamburger-btn" id="hamburgerBtn">☰</button>
-
-<!-- Menú Móvil -->
-<div class="mobile-menu-overlay" id="mobileMenu">
-    <button class="close-btn" id="closeBtn">✕</button>
-    <ul class="mobile-menu">
-        <li><a href="#home" class="mobile-menu-btn">HOME</a></li>
-        <li><a href="#biography" class="mobile-menu-btn">BIOGRAPHY</a></li>
-        <li><a href="#film" class="mobile-menu-btn">FILM</a></li>
-        <li><a href="#music" class="mobile-menu-btn">MUSIC</a></li>
-        <li><a href="#fashion" class="mobile-menu-btn">FASHION</a></li>
-        <li><a href="#art" class="mobile-menu-btn">ART</a></li>
-        <li><a href="#science" class="mobile-menu-btn">SCIENCE</a></li>
-        <li><a href="#bemypatron" class="mobile-menu-btn">BE MY PATRON</a></li>
-        <li><a href="#contact" class="mobile-menu-btn">CONTACT</a></li>
-        <li><a href="#store" class="mobile-menu-btn">STORE</a></li>
-        <li><a href="javascript:void(0)" class="mobile-menu-btn cart-mobile-btn">CART</a></li>
-    </ul>
-</div>
 
 
 
@@ -3500,68 +3480,6 @@ console.log('✅ Navegación configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
-
-
-<!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const closeBtn = document.getElementById('closeBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileMenuBtns = document.querySelectorAll('.mobile-menu-btn');
-
-    // Abrir menú
-    hamburgerBtn.addEventListener('click', function() {
-        mobileMenu.classList.add('active');
-    });
-
-    // Cerrar menú
-    closeBtn.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-    });
-
-    // Cerrar menú al hacer clic en cualquier opción
-    mobileMenuBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-        });
-    });
-
-    // Cerrar menú al hacer clic fuera de él
-    mobileMenu.addEventListener('click', function(e) {
-        if (e.target === mobileMenu) {
-            mobileMenu.classList.remove('active');
-        }
-    });
-});
-</script>
-
-
-
-
-<script>
-// Detectar cuando el contenedor social media ocupe todo el ancho
-function checkContainerWidth() {
-  const socialContainer = document.querySelector('.socialmediacontent-container');
-  const homeContainer = document.querySelector('.home-container');
-  
-  if (socialContainer && homeContainer) {
-    const containerWidth = socialContainer.offsetWidth;
-    const viewportWidth = window.innerWidth;
-    
-    // Si el contenedor ocupa más del 90% del viewport, consideramos móvil
-    if (containerWidth >= viewportWidth * 0.9) {
-      homeContainer.classList.add('mobile-layout');
-    } else {
-      homeContainer.classList.remove('mobile-layout');
-    }
-  }
-}
-
-// Ejecutar al cargar y al redimensionar
-window.addEventListener('load', checkContainerWidth);
-window.addEventListener('resize', checkContainerWidth);
-</script>
 
 
 
