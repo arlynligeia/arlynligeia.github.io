@@ -293,62 +293,124 @@ console.log('✅ Navegación configurada correctamente');
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
 
-
+  
 <!-- SCRIP: MENÚ DE HAMBURGUESA -->  
 <script>
 // MENÚ HAMBURGUESA - FUNCIONALIDAD
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-    
-    // Abrir/cerrar menú hamburguesa
-    hamburgerBtn.addEventListener('click', function() {
-        mobileMenuOverlay.classList.toggle('active');
-        
-        // Animación del botón hamburguesa a X
-        const spans = this.querySelectorAll('span');
-        if (mobileMenuOverlay.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-    
-    // Cerrar menú al hacer clic en cualquier enlace
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenuOverlay.classList.remove('active');
-            
-            // Resetear animación del botón hamburguesa
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
-    });
-    
-    // Cerrar menú al hacer clic fuera del contenido
-    mobileMenuOverlay.addEventListener('click', function(e) {
-        if (e.target === mobileMenuOverlay) {
-            mobileMenuOverlay.classList.remove('active');
-            
-            // Resetear animación del botón hamburguesa
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+// Abrir/cerrar menú hamburguesa
+hamburgerBtn.addEventListener('click', function() {
+mobileMenuOverlay.classList.toggle('active');
+// Animación del botón hamburguesa a X
+const spans = this.querySelectorAll('span');
+if (mobileMenuOverlay.classList.contains('active')) {
+spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+// Cerrar menú al hacer clic en cualquier enlace
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenuOverlay.classList.remove('active');
+// Resetear animación del botón hamburguesa
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+});
+});
+// Cerrar menú al hacer clic fuera del contenido
+mobileMenuOverlay.addEventListener('click', function(e) {
+if (e.target === mobileMenuOverlay) {
+mobileMenuOverlay.classList.remove('active');
+// Resetear animación del botón hamburguesa
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
 });
 </script>
+<!-- FIN SCRIP: MENÚ DE HAMBURGUESA -->  
 
 
 
+
+
+<!-- SCRIP: CARRUSEL HOME -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🖼️ Carrusel iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.home-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+const carousel = document.querySelector('.home-carousel');
+const imageDestinations = {
+'img1': 'film-featurefilm-alone',
+'img2': 'music-album-album1969',
+'img3': 'fashion-fwcollection-fw2627'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.home-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel configurada');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL HOME -->
 
 
   
