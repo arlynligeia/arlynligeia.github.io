@@ -322,7 +322,7 @@ padding: 0 15px; /* MANTENER padding */
 ====================================== */
 .home-side {
   width: 500px;
-  background-color: black;
+  background-color: #00CED1; /* Celeste agua */
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -357,44 +357,41 @@ padding: 0 15px; /* MANTENER padding */
   line-height: 1.5;
   text-align: justify;
 }
-/* Contenedor principal de los iconos */
-.home-side-information-grid {
-  display: inline-flex; 
+
+/* CONTENEDOR DE ICONOS SIN FONDO */
+.home-side-information-icons-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  align-self: center;  
-  background-color:  #00CED1 !important;
-  border-radius: 15px;
-  margin-top: 0px;
-  margin-bottom: 0px; 
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff; /* efecto glow */
-  gap: 12px; /* espacio entre filas */
-  max-width: 100%; 
+  gap: 12px;
+  margin-top: 15px;
 }
+
 /* Cada fila de iconos */
 .home-side-information-grid-icons,
 .home-side-information-grid-icons-2 {
   display: flex;
   justify-content: center;
-  gap: 15px; /* espacio entre iconos */
+  gap: 12px; /* Espacio reducido entre iconos */
 }
-/* VECTORES DE REDES SOCIALES */
+
+/* VECTORES DE REDES SOCIALES - MÁS PEQUEÑOS Y SIN GLOW */
 .social-icon {
-  width: 36px;
-  height: 36px;
+  width: 28px; /* Más pequeños */
+  height: 28px;
   transition: all 0.3s ease;
-  color: #ff1493; /* Color fucsia por defecto */
-  filter: drop-shadow(0 0 5px #ff1493); /* Efecto neón */
+  color: #ff1493; /* Color fucsia */
+  /* SIN filter: drop-shadow - eliminado el glow borroso */
 }
+
 .social-icon:hover {
-  transform: scale(1.1);
-  color: #ff00ff; /* Color más brillante al hover */
-  filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #ff00ff); /* Doble glow al hover */
-}/* ======================================
+  transform: scale(1.15); /* Solo agrandamiento al hover */
+  color: #ff1493; /* Mantiene el mismo color */
+  /* SIN efectos de sombra/glow */
+}
+
+
+/* ======================================
    RESPONSIVE: HOME PARA MÓVIL
 ====================================== */
 @media (max-width: 768px) {
