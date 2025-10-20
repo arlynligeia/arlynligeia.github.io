@@ -819,18 +819,20 @@ box-sizing: border-box;
 padding: 20px;
 margin: 30px auto;
 }
+ .youtubehighlight-container::before {
+height: 100px;
+}
 .youtubehighlight-title {
 font-size: 2rem;
 text-align: center;
 }
 .youtubehighlight-header {
 flex-direction: column;
-gap: 15px;
 text-align: center;
 }
 .youtubehighlight-columns-grid {
 grid-template-columns: 1fr;
-gap: 15px;
+gap: 10px;
 grid-auto-rows: 200px;
 }
 }
