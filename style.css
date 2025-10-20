@@ -610,27 +610,30 @@ margin: 0px;
 .socialmediacontent-container {
 width: 100%;
 box-sizing: border-box;
-padding: 20px;
-margin: 30px auto;
+padding: 15px;
+margin: 20px auto;
 }
 .socialmediacontent-container::before {
-height: 60px;
+height: 55px;
 }
 .socialmediacontent-title {
 font-size: 1.2rem;
 text-align: left;
 }
 .socialmediacontent-table-wrapper {
-border-spacing: 0.5px;
+border-spacing: 1px;
 }
 .socialmediacontent-table-wrapper-head-row-subtitle {
 font-size: 0.6rem;
 padding: 0px;
  }
-.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-divider td {
+border-top: 1px solid #ff1493 !important;
+}
 .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-height: 35px;
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube,
+.socialmediacontent-table-wrapper-body-row-cell span {
+height: 30px;
 font-size: 0.6rem;
 padding: 5px;
 }
