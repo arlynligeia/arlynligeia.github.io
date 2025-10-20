@@ -607,6 +607,13 @@ box-sizing: border-box;
 padding: 10px 10px 10px 10px;
 margin: 0px;
 }
+
+/* ======================================
+   CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY)
+====================================== */
+.socialmediacontent-container { display: block; }
+.socialmediacontent-container-mobile { display: none; }
+
 /* ======================================
    MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
@@ -706,9 +713,6 @@ height: 0;
     .socialmediacontent-container-mobile { display: block; }
 } /* ← ¡ESTE CIERRE FALTABA! */
 
-/* ESTO VA FUERA del media query anterior */
-.socialmediacontent-container { display: block; }
-.socialmediacontent-container-mobile { display: none; }
 
 
 
