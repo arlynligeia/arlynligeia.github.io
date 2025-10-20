@@ -180,7 +180,7 @@ transition: all 0.3s ease;
 
 /* Navegación móvil */
 .mobile-nav {
-    padding: 80px 20px 20px 20px;
+    padding: 40px 20px 40px 20px;
     height: 100%;
     overflow-y: auto;
 }
@@ -225,9 +225,11 @@ transition: all 0.3s ease;
     }
     
     .site-title {
-        margin-left: 60px;
-        text-align: left;
-        font-size: 3em;
+        margin-left: 0; /* ELIMINAR esta línea */
+        text-align: center; /* CAMBIAR a center */
+        font-size: 3.5em; /* AUMENTAR tamaño */
+        margin: 20px 0; /* AGREGAR margen vertical */
+        padding: 0 20px; /* AGREGAR padding lateral */
     }
 }
 
@@ -239,11 +241,12 @@ transition: all 0.3s ease;
     }
     
     .site-title {
-        font-size: 2.5em;
-        margin-left: 50px;
+        font-size: 3em; /* AUMENTAR tamaño */
+        margin-left: 0; /* ELIMINAR esta línea */
+        text-align: center; /* MANTENER centrado */
+        padding: 0 15px; /* MANTENER padding */
     }
 }
-
 
 
 
