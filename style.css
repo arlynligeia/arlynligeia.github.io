@@ -378,7 +378,7 @@ transform: scale(1.15);
 }
 
 /* Control display fuera del media query */
-.home-container { display: flex; }
+.home-container { display: block; }
 .home-container-mobile { display: none; }
 
 /* ====================================== */
@@ -458,7 +458,7 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 .home-container { display: none; }
-.home-container-mobile { display: flex; }
+.home-container-mobile { display: block; }
 }
 
 
