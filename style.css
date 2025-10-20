@@ -383,19 +383,19 @@ padding: 0 15px; /* MANTENER padding */
   justify-content: center;
   gap: 15px; /* espacio entre iconos */
 }
-/* Iconos individuales */
-.home-side-information-grid img {
+/* VECTORES DE REDES SOCIALES */
+.social-icon {
   width: 36px;
   height: 36px;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition: all 0.3s ease;
+  color: #ff1493; /* Color fucsia por defecto */
+  filter: drop-shadow(0 0 5px #ff1493); /* Efecto neón */
 }
-.home-side-information-grid img:hover {
+.social-icon:hover {
   transform: scale(1.1);
-  filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
-}
-
-/* ======================================
+  color: #ff00ff; /* Color más brillante al hover */
+  filter: drop-shadow(0 0 10px #ff00ff) drop-shadow(0 0 20px #ff00ff); /* Doble glow al hover */
+}/* ======================================
    RESPONSIVE: HOME PARA MÓVIL
 ====================================== */
 @media (max-width: 768px) {
@@ -410,15 +410,15 @@ padding: 0 15px; /* MANTENER padding */
     
     .home-side {
         width: 100%; /* Ocupa todo el ancho */
-     box-sizing: border-box;
+        box-sizing: border-box;
         max-width: 500px; /* Máximo como el original */
         order: 1; /* Primero en el orden */
+        padding: 20px; /* Reducir padding para móvil */
     }
     
-.home-carousel {
+    .home-carousel {
         width: 100%; /* Ocupa todo el ancho */
- 
-        height: 250px; /* Altura fija para móvil */
+        height: 300px; /* Aumenté la altura para mejor visualización */
         order: 2; /* Segundo en el orden */
     }
     
@@ -428,36 +428,16 @@ padding: 0 15px; /* MANTENER padding */
     
     .home-side-information-text {
         font-size: 1.1rem; /* Ajuste texto para móvil */
-    }
-}
-
-/* Para móviles muy pequeños */
-@media (max-width: 480px) {
-    .home-container {
-        padding: 0 15px;
-        gap: 15px;
+        text-align: center; /* Centrar texto en móvil */
     }
     
-  
-    
-    .home-side-information-title {
-        font-size: 1.8rem;
-    }
-    
-    .home-side-information-text {
-        font-size: 1rem;
-    }
-    
-    .home-side-information-grid {
-        padding: 12px;
-        gap: 10px;
-    }
-    
-    .home-side-information-grid img {
+    /* AJUSTAR TAMAÑO DE ICONOS SVG EN MÓVIL */
+    .social-icon {
         width: 32px;
         height: 32px;
     }
 }
+
 
 
 
