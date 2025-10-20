@@ -111,7 +111,32 @@
 </nav> 
 </header>
 
-
+<!-- MENÚ HAMBURGUESA PARA MÓVIL -->
+<div class="mobile-menu-container">
+<button class="hamburger-btn" id="hamburgerBtn">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="mobile-menu-overlay" id="mobileMenuOverlay">
+<nav class="mobile-nav">
+<ul class="mobile-menu">
+<!-- Copia TODO tu menú actual aquí -->
+<li><a href="#home" data-section="home">Home</a></li>
+<li><a href="#biography" data-section="biography">Biography</a></li>
+<li><a href="#film" data-section="film">Film</a></li>
+<li><a href="#music" data-section="music">Music</a></li>
+<li><a href="#fashion" data-section="fashion">Fashion</a></li>
+<li><a href="#art" data-section="art">Art</a></li>
+<li><a href="#science" data-section="science">Science</a></li>
+<li><a href="#bemypatron" data-section="bemypatron">Be my Patron</a></li>
+<li><a href="#contact" data-section="contact">Contact</a></li>
+<li><a href="#store" data-section="store">Store</a></li>
+<li><a href="javascript:void(0)" class="cart-button-mobile">Cart</a></li>
+</ul>
+</nav>
+</div>
+</div>
 
 
 
@@ -129,7 +154,135 @@
 
 
 
+  
+<!-- SCRIPS -->   
 
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔧 Navegación iniciada');
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
+function showOnlyOneSection(sectionId) {
+console.log('Mostrando SOLO:', sectionId);
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+// DESPLAZAMIENTO HACIA LA SECCIÓN
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
+function goToSubsection(subsectionId) {
+console.log('Yendo a subsección:', subsectionId);
+const mainSectionId = subsectionId.split('-')[0];
+showOnlyOneSection(mainSectionId);
+// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+// EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
+document.querySelectorAll('.menu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// EVENTOS PARA BOTONES DEL SUBMENÚ
+document.querySelectorAll('.submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+goToSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+// INICIALIZACIÓN
+checkInitialHash();
+console.log('✅ Navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+
+
+
+<!-- SCRIP: MENÚ DE HAMBURGUESA -->  
+<script>
+// MENÚ HAMBURGUESA - FUNCIONALIDAD
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    
+    // Abrir/cerrar menú hamburguesa
+    hamburgerBtn.addEventListener('click', function() {
+        mobileMenuOverlay.classList.toggle('active');
+        
+        // Animación del botón hamburguesa a X
+        const spans = this.querySelectorAll('span');
+        if (mobileMenuOverlay.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+    
+    // Cerrar menú al hacer clic en cualquier enlace
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenuOverlay.classList.remove('active');
+            
+            // Resetear animación del botón hamburguesa
+            const spans = hamburgerBtn.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
+    });
+    
+    // Cerrar menú al hacer clic fuera del contenido
+    mobileMenuOverlay.addEventListener('click', function(e) {
+        if (e.target === mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+            
+            // Resetear animación del botón hamburguesa
+            const spans = hamburgerBtn.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+});
+</script>
 
 
 
