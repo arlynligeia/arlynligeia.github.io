@@ -809,29 +809,51 @@ height: 100%;
 border: none;
 border-radius: 15px;
 }
+/* CONTROL DISPLAY FUERA DEL MEDIA QUERY */
+.youtubehighlight-container { display: block; }
+.youtubehighlight-container-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: YOUTUBE HIGHLIGHT
 ====================================== */
 @media (max-width: 768px) {
-.youtubehighlight-container {
+.youtubehighlight-container-mobile {
+position: relative;
 width: 90%;
 box-sizing: border-box;
+background-color: #00CED1 !important;
+border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
+ }
+ .youtubehighlight-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
 }
- .youtubehighlight-container::before {
-height: 100px;
-}
-.youtubehighlight-title {
+ /* TÍTULO */
+.youtubehighlight-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
+color: white !important;
+text-decoration: none;
 text-align: center;
+margin: 0; 
 }
-.youtubehighlight-header {
-flex-direction: column;
-text-align: center;
+.youtubehighlight-title-mobile a {
+color: white !important;
+text-decoration: none;
 }
- /* BOTONES */
-.youtubehighlight-button-follow {
+/* BOTÓN FOLLOW */
+.youtubehighlight-button-follow-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px; 
@@ -840,20 +862,44 @@ font-size: 1rem;
 color: white !important;
 text-decoration: none;
 text-align: center;
-padding: 10px 20px 10px 20px;
+padding: 10px 20px;
 font-weight: bold;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.youtubehighlight-button-follow:hover {
+.youtubehighlight-button-follow-mobile:hover {
 transform: scale(1.05);
 }
-.youtubehighlight-columns-grid {
-grid-template-columns: 1fr;
-gap: 10px;
-grid-auto-rows: 200px;
+/* CONTENEDOR DE VIDEOS */
+.youtubehighlight-content-mobile {
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
+/* CONTENEDOR DE VIDEO INDIVIDUAL */
+.youtubehighlight-video-wrapper-mobile {
+position: relative;
+width: 100%;
+height: 200px;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+/* IFRAME DE VIDEO */
+.youtubehighlight-video-wrapper-mobile iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: none;
+border-radius: 15px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.youtubehighlight-container { display: none; }
+.youtubehighlight-container-mobile { display: block; }
 }
 
 
