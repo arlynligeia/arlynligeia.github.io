@@ -707,200 +707,132 @@ margin-bottom: 10px;
 .socialmediacontent-container-mobile { display: block; }
 } /* ← ¡ESTE CIERRE FALTABA! */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    YOUTUBE HIGHLIGHT
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .youtubehighlight-container {
-  position: relative;
-  width: 800px;
-  background-color: #00CED1; /* Celeste agua (color base) */
-  border-radius: 20px;
-  margin: 40px auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+position: relative;
+width: 800px;
+background-color: #00CED1; /* Celeste agua (color base) */
+border-radius: 20px;
+padding: 30px; 
+margin: 40px auto;
 }
 .youtubehighlight-container::before {
-  content: "";
-  position: absolute;
-  z-index: 1; /* franja encima del fondo */  
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #00B8BA; /* Turquesa */
-  border-radius: 20px 20px 0 0;
-  height: 90px;
+content: "";
+position: absolute;
+z-index: 1; /* franja encima del fondo */  
+top: 0;
+left: 0;
+width: 100%;
+background-color: #00B8BA; /* Turquesa */
+border-radius: 20px 20px 0 0;
+height: 90px;
 }
 /* TÍTULO Y BOTÓN */
 .youtubehighlight-header {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 16px;
+position: relative;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 16px;
 }
 /* TÍTULO */
 .youtubehighlight-title {
-  position: relative;
-  z-index: 2;
-  display: block;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 2.5rem;
-  color: white;
-  margin-top: 0px; 
-  margin-bottom: 16px; 
-  text-decoration: none;
-  line-height: 1.6;
-  text-align: left;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white;
+margin-top: 0px; 
+margin-bottom: 16px; 
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
 }
 .youtubehighlight-title a {
-  color: white;
-  text-decoration: none;
+color: white;
+text-decoration: none;
 }
 /* BOTÓN FOLLOW */
 .youtubehighlight-button-follow {
-  background-color: #ff1493; /* Fucsia por defecto */ 
-  z-index: 2;
-  display: inline-block;
-  border-radius: 6px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white;
-  margin-top: 0px; 
-  margin-bottom: 16px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-decoration: none;
-  text-align: center;
-  border: none;
-  cursor: pointer; 
-  transition: transform 0.3s ease, background-color 0.3s ease;  
+background-color: #ff1493; /* Fucsia por defecto */ 
+z-index: 2;
+display: inline-block;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+font-weight: bold;
+color: white;
+margin-top: 0px; 
+margin-bottom: 16px;
+padding: 10px 20px 10px 20px;
+text-decoration: none;
+text-align: center;
+border: none;
+cursor: pointer; 
+transition: transform 0.3s ease, background-color 0.3s ease;  
 }
 .youtubehighlight-button-follow:hover {
-  transform: scale(1.05);
+transform: scale(1.05);
 }
-
 /* CONTENEDOR DE COLUMNAS */
 .youtubehighlight-columns {
-  position: relative;
-  z-index: 2;
+position: relative;
+z-index: 2;
 }
-
 /* GRID DE DOS COLUMNAS */
 .youtubehighlight-columns-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  grid-auto-rows: 250px;
-  margin-top: 0;
-  margin-bottom: 20px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+grid-auto-rows: 250px;
+margin-top: 0;
+margin-bottom: 20px;
 }
-
 /* CONTENEDORES DE VIDEO */
 .youtubehighlight-columns-grid-wrapper {
-  position: relative;
-  overflow: hidden;
-  border-radius: 15px;
+position: relative;
+overflow: hidden;
+border-radius: 15px;
 }
-
 /* EL IFRAME SE AJUSTA SIN DEFORMARSE */
 .youtubehighlight-columns-grid-wrapper iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 15px;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border: none;
+border-radius: 15px;
 }
-
-
-
-
-
-
-
-
-
 /* ======================================
-   RESPONSIVE: YOUTUBE HIGHLIGHT PARA MÓVIL
+   MOVIL RESPONSIVE: YOUTUBE HIGHLIGHT
 ====================================== */
-@media (max-width: 850px) {
-    .youtubehighlight-container {
-        width: 95%;
-        padding: 20px;
-        margin: 30px auto;
-    }
-    
-    .youtubehighlight-title {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .youtubehighlight-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    .youtubehighlight-columns-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        grid-auto-rows: 200px;
-    }
+@media (max-width: 768px) {
+.youtubehighlight-container {
+width: 90%;
+box-sizing: border-box;
+padding: 20px;
+margin: 30px auto;
 }
-
-@media (max-width: 480px) {
-    .youtubehighlight-container {
-        width: 90%;
-        padding: 15px;
-        margin: 20px auto;
-    }
-    
-    .youtubehighlight-title {
-        font-size: 1.7rem;
-    }
-    
-    .youtubehighlight-columns-grid {
-        grid-auto-rows: 180px;
-        gap: 12px;
-    }
-    
-    .youtubehighlight-button-follow {
-        font-size: 1rem;
-        padding: 8px 16px;
-    }
+.youtubehighlight-title {
+font-size: 2rem;
+text-align: center;
+}
+.youtubehighlight-header {
+flex-direction: column;
+gap: 15px;
+text-align: center;
+}
+.youtubehighlight-columns-grid {
+grid-template-columns: 1fr;
+gap: 15px;
+grid-auto-rows: 200px;
+}
 }
 
 
