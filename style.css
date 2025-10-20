@@ -25,16 +25,14 @@ margin: 20px 0;
     
     body {
         background: 
-            linear-gradient(#ff1493, #ff1493) top/100% env(safe-area-inset-top),
-            linear-gradient(#ff1493, #ff1493) bottom/100% env(safe-area-inset-bottom),
             url('assets/assets/Arlyn Ligeia Background.png') no-repeat center center fixed;
         background-size: cover;
         min-height: 100vh;
         min-height: -webkit-fill-available;
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
     }
 }
-
-
 
 
 
