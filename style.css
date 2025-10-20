@@ -918,3 +918,74 @@ border: none;
 
 
 
+
+/* ================================
+   🔻 FOOTER PERSONALIZADO
+=================================== */
+.footer-end {
+text-align: center;
+font-family: 'Orbitron', sans-serif;
+color: white;
+padding: 40px 20px;
+margin-bottom: 40px;
+}
+.footer-end-name {
+font-size: 1.5rem;
+text-transform: uppercase;
+letter-spacing: 2px;
+margin-bottom: 10px;
+}
+.footer-end-allrightreserved {
+font-size: 0.9rem;
+text-transform: none;
+margin: 4px 0;
+}
+.footer-end-privacypolicy {
+font-size: 0.9rem;
+text-transform: none;
+margin: 4px 0;
+}
+.footer-end-termsandconditions {
+font-size: 0.9rem;
+text-transform: none;
+margin: 4px 0;
+}
+.footer-end-privacypolicy a,
+.footer-end-termsandconditions a {
+color: white;
+text-decoration: none;
+}
+.footer-end-privacypolicy a:hover,
+.footer-end-privacypolicy a:visited,
+.footer-end-privacypolicy a:focus,
+.footer-end-termsandconditions a:hover,
+.footer-end-termsandconditions a:visited,
+.footer-end-termsandconditions a:focus {
+color: white;
+text-decoration: underline;
+}
+
+/* ================================
+   🔻 MOVIL RESPONSIVE: FOOTER
+=================================== */
+@media (max-width: 768px) {
+.footer-end {
+padding: 30px 15px;
+margin-bottom: 30px;
+}
+.footer-end-name {
+font-size: 1.3rem;
+letter-spacing: 1.5px;
+margin-bottom: 8px;
+}
+.footer-end-allrightreserved,
+.footer-end-privacypolicy,
+.footer-end-termsandconditions {
+font-size: 0.8rem;
+margin: 3px 0;
+}
+/* Asegurar que todo esté centrado */
+.footer-end * {
+text-align: center;
+}
+}
