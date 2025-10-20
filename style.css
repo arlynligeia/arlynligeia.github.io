@@ -447,6 +447,264 @@ padding: 0 15px; /* MANTENER padding */
     }
 }
 
+/* ======================================
+   SOCIAL MEDIA CONTENT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.socialmediacontent-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+padding: 30px;
+margin: 40px auto;
+}
+.socialmediacontent-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.socialmediacontent-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.socialmediacontent-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.socialmediacontent-table {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 0;
+background-color: transparent;
+}
+.socialmediacontent-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 5px;
+background-color: transparent;
+}
+/* ANCHO DE COLUMNAS*/
+.socialmediacontent-table-wrapper th:nth-child(1),
+.socialmediacontent-table-wrapper td:nth-child(1) {
+width: 20%;
+}
+.socialmediacontent-table-wrapper th:nth-child(2),
+.socialmediacontent-table-wrapper td:nth-child(2) {
+width: 45%;
+}
+.socialmediacontent-table-wrapper th:nth-child(3),
+.socialmediacontent-table-wrapper td:nth-child(3) {
+width: 35%;
+}
+/* ENCABEZADOS */
+.socialmediacontent-table-wrapper-head-row {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #ff1493 !important;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+padding: 0px;
+margin: 0px;  
+}
+/* CUERPO DE LA TABLA */
+.socialmediacontent-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+/* LÍNEA DIVISORA */
+.socialmediacontent-table-wrapper-body-divider td {
+width: 100%;
+border-top: 3px solid #ff1493 !important;
+height: 0;
+}
+.socialmediacontent-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CONTENEDOR: BOTONES TIKTOK-YOUTUBE */
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 20px 10px 20px;
+margin: 0px; 
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok:hover,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube:hover {
+transform: scale(1.05);
+}
+/* CELDAS */
+.socialmediacontent-table-wrapper-body-row-cell span {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+box-sizing: border-box;
+padding: 10px 10px 10px 10px;
+margin: 0px;
+}
+
+/* ======================================
+   YOUTUBE HIGHLIGHT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.youtubehighlight-container {
+  position: relative;
+  width: 800px;
+  background-color: #00CED1; /* Celeste agua (color base) */
+  border-radius: 20px;
+  margin: 40px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.youtubehighlight-container::before {
+  content: "";
+  position: absolute;
+  z-index: 1; /* franja encima del fondo */  
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00B8BA; /* Turquesa */
+  border-radius: 20px 20px 0 0;
+  height: 90px;
+}
+/* TÍTULO Y BOTÓN */
+.youtubehighlight-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+/* TÍTULO */
+.youtubehighlight-title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0px; 
+  margin-bottom: 16px; 
+  text-decoration: none;
+  line-height: 1.6;
+  text-align: left;
+}
+.youtubehighlight-title a {
+  color: white;
+  text-decoration: none;
+}
+/* BOTÓN FOLLOW */
+.youtubehighlight-button-follow {
+  background-color: #ff1493; /* Fucsia por defecto */ 
+  z-index: 2;
+  display: inline-block;
+  border-radius: 6px; 
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-top: 0px; 
+  margin-bottom: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer; 
+  transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.youtubehighlight-button-follow:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENEDOR DE COLUMNAS */
+.youtubehighlight-columns {
+  position: relative;
+  z-index: 2;
+}
+
+/* GRID DE DOS COLUMNAS */
+.youtubehighlight-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  grid-auto-rows: 250px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* CONTENEDORES DE VIDEO */
+.youtubehighlight-columns-grid-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+/* EL IFRAME SE AJUSTA SIN DEFORMARSE */
+.youtubehighlight-columns-grid-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 15px;
+}
+
 
 
 
