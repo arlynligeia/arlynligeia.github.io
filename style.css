@@ -708,10 +708,9 @@ margin: 0px;
 
 
 /* ======================================
-   RESPONSIVE: SOCIAL MEDIA CONTENT Y YOUTUBE HIGHLIGHT PARA MÓVIL
+   RESPONSIVE: SOCIAL MEDIA CONTENT PARA MÓVIL
 ====================================== */
 @media (max-width: 850px) {
-    /* SOCIAL MEDIA CONTENT - MÓVIL */
     .socialmediacontent-container {
         width: 95%;
         padding: 20px;
@@ -739,8 +738,36 @@ margin: 0px;
         height: 35px;
         padding: 8px 5px;
     }
+}
+
+@media (max-width: 480px) {
+    .socialmediacontent-container {
+        width: 90%;
+        padding: 15px;
+        margin: 20px auto;
+    }
     
-    /* YOUTUBE HIGHLIGHT - MÓVIL */
+    .socialmediacontent-title {
+        font-size: 1.7rem;
+    }
+    
+    .socialmediacontent-table-wrapper-head-row-subtitle {
+        font-size: 0.9rem;
+    }
+    
+    .socialmediacontent-table-wrapper-body-row-cell span,
+    .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+    .socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+        font-size: 0.8rem;
+        height: 30px;
+        padding: 6px 3px;
+    }
+}
+
+/* ======================================
+   RESPONSIVE: YOUTUBE HIGHLIGHT PARA MÓVIL
+====================================== */
+@media (max-width: 850px) {
     .youtubehighlight-container {
         width: 95%;
         padding: 20px;
@@ -759,36 +786,21 @@ margin: 0px;
     }
     
     .youtubehighlight-columns-grid {
-        grid-template-columns: 1fr; /* Una columna en móvil */
+        grid-template-columns: 1fr;
         gap: 15px;
         grid-auto-rows: 200px;
     }
 }
 
-/* Para móviles muy pequeños */
 @media (max-width: 480px) {
-    .socialmediacontent-container,
     .youtubehighlight-container {
         width: 90%;
         padding: 15px;
         margin: 20px auto;
     }
     
-    .socialmediacontent-title,
     .youtubehighlight-title {
         font-size: 1.7rem;
-    }
-    
-    .socialmediacontent-table-wrapper-head-row-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .socialmediacontent-table-wrapper-body-row-cell span,
-    .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-    .socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-        font-size: 0.8rem;
-        height: 30px;
-        padding: 6px 3px;
     }
     
     .youtubehighlight-columns-grid {
@@ -801,7 +813,6 @@ margin: 0px;
         padding: 8px 16px;
     }
 }
-
 
 
 
