@@ -830,6 +830,25 @@ text-align: center;
 flex-direction: column;
 text-align: center;
 }
+ /* BOTONES */
+.youtubehighlight-button-follow {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 10px 20px 10px 20px;
+font-weight: bold;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.youtubehighlight-button-follow:hover {
+transform: scale(1.05);
+}
 .youtubehighlight-columns-grid {
 grid-template-columns: 1fr;
 gap: 10px;
