@@ -383,6 +383,69 @@ padding: 0 15px; /* MANTENER padding */
   filter: drop-shadow(0 0 5px #ff00ff); /* glow al pasar el mouse */
 }
 
+/* ======================================
+   RESPONSIVE: HOME PARA MÓVIL
+====================================== */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra todo */
+        height: auto; /* Altura automática */
+        margin-top: 20px;
+        padding: 0 20px;
+        gap: 20px;
+    }
+    
+    .home-side {
+        width: 100%; /* Ocupa todo el ancho */
+        max-width: 500px; /* Máximo como el original */
+        order: 1; /* Primero en el orden */
+    }
+    
+    .home-carousel {
+        width: 100%; /* Ocupa todo el ancho */
+        height: 400px; /* Altura fija para móvil */
+        order: 2; /* Segundo en el orden */
+    }
+    
+    .home-side-information-title {
+        font-size: 2.2rem; /* Ajuste tamaño para móvil */
+    }
+    
+    .home-side-information-text {
+        font-size: 1.1rem; /* Ajuste texto para móvil */
+    }
+}
+
+/* Para móviles muy pequeños */
+@media (max-width: 480px) {
+    .home-container {
+        padding: 0 15px;
+        gap: 15px;
+    }
+    
+    .home-carousel {
+        height: 350px; /* Altura un poco menor */
+    }
+    
+    .home-side-information-title {
+        font-size: 1.8rem;
+    }
+    
+    .home-side-information-text {
+        font-size: 1rem;
+    }
+    
+    .home-side-information-grid {
+        padding: 12px;
+        gap: 10px;
+    }
+    
+    .home-side-information-grid img {
+        width: 32px;
+        height: 32px;
+    }
+}
 
 
 
