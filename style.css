@@ -321,118 +321,157 @@ padding: 0 15px; /* MANTENER padding */
    CONTENEDOR A LA IZQUIERDA DEL CARRUSEL
 ====================================== */
 .home-side {
-  width: 500px;
-  background-color: #00CED1; /* Celeste agua */
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  box-sizing: border-box;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
+width: 500px;
+background-color: #00CED1; /* Celeste agua */
+border-radius: 20px;
+display: flex;
+justify-content: center;
+align-items: flex-start;
+box-sizing: border-box;
+padding: 30px;
 }
 .home-side-information {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+text-align: center;
+display: flex;
+flex-direction: column;
+gap: 12px;
 }
 .home-side-information-title {
-  margin-top: 0px;
-  margin-bottom: 0px; 
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  color: #39ff14;
-  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14;
-  text-align: center;
+font-family: 'Orbitron', sans-serif;
+font-size: 3rem;
+color: #ff1493 !important;
+text-align: center;
+margin: 0px; 
 }
-.home-side-information-text {
-  margin-top: 0px;
-  margin-bottom: 0px; 
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.25rem;
-  color: white;
-  line-height: 1.5;
-  text-align: justify;
+.home-side-information-text { 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white;
+line-height: 1.5;
+text-align: justify;
+margin: 0px; 
 }
-
 /* CONTENEDOR DE ICONOS SIN FONDO */
 .home-side-information-icons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  margin-top: 15px;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+margin-top: 15px;
 }
-
 /* Cada fila de iconos */
 .home-side-information-grid-icons,
 .home-side-information-grid-icons-2 {
-  display: flex;
-  justify-content: center;
-  gap: 12px; /* Espacio reducido entre iconos */
+display: flex;
+justify-content: center;
+gap: 12px; /* Espacio reducido entre iconos */
 }
-
 /* VECTORES DE REDES SOCIALES - MÁS PEQUEÑOS Y SIN GLOW */
 .social-icon {
-  width: 28px; /* Más pequeños */
-  height: 28px;
-  transition: all 0.3s ease;
-  color: #ff1493; /* Color fucsia */
-  /* SIN filter: drop-shadow - eliminado el glow borroso */
+width: 28px; /* Más pequeños */
+height: 28px;
+color: #ff1493 !important;
+transition: all 0.3s ease;
 }
-
 .social-icon:hover {
-  transform: scale(1.15); /* Solo agrandamiento al hover */
-  color: #ff1493; /* Mantiene el mismo color */
-  /* SIN efectos de sombra/glow */
+transform: scale(1.15);
 }
 
+/* Control display fuera del media query */
+.home-container { display: flex; }
+.home-container-mobile { display: none; }
 
-/* ======================================
-   RESPONSIVE: HOME PARA MÓVIL
-====================================== */
+
+
+/* ====================================== */
+/* HOME - MÓVIL */
+/* ====================================== */
 @media (max-width: 768px) {
-    .home-container {
-        flex-direction: column; /* Cambia a columna */
-        align-items: center; /* Centra todo */
-        height: auto; /* Altura automática */
-        margin-top: 20px;
-        padding: 0 20px;
-        gap: 20px;
-    }
-    
-    .home-side {
-        width: 100%; /* Ocupa todo el ancho */
-        box-sizing: border-box;
-        max-width: 500px; /* Máximo como el original */
-        order: 1; /* Primero en el orden */
-        padding: 20px; /* Reducir padding para móvil */
-    }
-    
-    .home-carousel {
-        width: 100%; /* Ocupa todo el ancho */
-        height: 300px; /* Aumenté la altura para mejor visualización */
-        order: 2; /* Segundo en el orden */
-    }
-    
-    .home-side-information-title {
-        font-size: 2.2rem; /* Ajuste tamaño para móvil */
-    }
-    
-    .home-side-information-text {
-        font-size: 1.1rem; /* Ajuste texto para móvil */
-        text-align: center; /* Centrar texto en móvil */
-    }
-    
-    /* AJUSTAR TAMAÑO DE ICONOS SVG EN MÓVIL */
-    .social-icon {
-        width: 32px;
-        height: 32px;
-    }
+.home-container-mobile {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+padding: 0 20px;
+margin-top: 20px;
 }
+.home-side-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #00CED1 !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;    
+order: 1;
+}
+.home-side-information-mobile {
+display: flex;
+flex-direction: column;
+text-align: center;
+gap: 12px;
+}
+.home-side-information-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff1493 !important;
+text-align: center;
+margin: 0;
+}
+.home-side-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white;
+line-height: 1.5;
+text-align: center;
+margin: 0;
+}
+.home-side-information-icons-mobile {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 12px;
+margin-top: 15px;
+}
+.home-side-information-grid-icons-mobile {
+display: flex;
+justify-content: center;
+gap: 12px;
+}
+.home-carousel-mobile {
+width: 100%;
+height: 300px;
+overflow: hidden;
+background-color: #000000;
+border: 2px solid white;
+border-radius: 20px;
+position: relative;
+order: 2;
+}
+.home-carousel-image-mobile {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.home-carousel-image-mobile.active {
+opacity: 1;
+}
+/* Control display móvil/desktop */
+.home-container { display: none; }
+.home-container-mobile { display: flex; }
+}
+
+
+
+
+
+
+
+
+
 
 
 
