@@ -386,6 +386,7 @@ flex-direction: column;
 align-items: center;
 height: auto;
 gap: 20px;
+margin: 30px auto; /* ¡AGREGA ESTA LÍNEA! */
 }
 .home-side {
 position: relative;
@@ -426,20 +427,6 @@ width: 24px;
 height: 24px;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SOCIAL MEDIA CONTENT
 ====================================== */
@@ -885,6 +872,180 @@ border: none;
 .youtubehighlight-container-mobile { display: block; }
 }
 
+/* ======================================
+   BIOGRAPHY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.biography-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.biography-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.biography-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.biography-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.biography-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.biography-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: TEXTO */
+.biography-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.biography-information-text,
+.biography-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.biography-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTENEDOR: IMAGEN*/
+.biography-image {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.biography-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
+.biography-container { display: block; }
+.biography-container-mobile { display: none; }
+
+/* ======================================
+   MOVIL RESPONSIVE: BIOGRAPHY
+====================================== */
+@media (max-width: 768px) {
+.biography-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #9900CC !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.biography-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.biography-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.biography-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS MÓVIL */
+.biography-columns-mobile {
+position: relative;
+z-index: 2;
+}
+/* GRID UNA COLUMNA - IMAGEN PRIMERO */
+.biography-columns-grid-mobile {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+/* IMAGEN PRIMERO */
+.biography-image-mobile {
+width: 100%;
+order: 1;
+}
+.biography-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+}
+/* TEXTO DESPUÉS */
+.biography-information-mobile {
+width: 100%;
+order: 2;
+}
+.biography-information-text-mobile,
+.biography-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.biography-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.biography-container { display: none; }
+.biography-container-mobile { display: block; }
+}
 
 
 
@@ -893,6 +1054,21 @@ border: none;
 
 
 
+/* REEMPLAZA CON ESTO: */
+.main-section:not(#home) {
+    display: none;
+}
+.subsection:not([id^="home-"]) {
+    display: none;
+}
+#home {
+    display: block;
+}
+#home-socialmediacontent,
+#home-tiktokhighlight, 
+#home-youtubehighlight {
+    display: block;
+}
 
 
 
