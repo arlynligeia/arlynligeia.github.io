@@ -16,7 +16,7 @@ margin: 20px 0;
 }
 
 /* ====================================== */
-/* 🌌 EFECTOS PARA MÓVIL - VERSIÓN SIMPLE */
+/* 🌌 EFECTOS PARA MÓVIL */
 /* ====================================== */
 @media (max-width: 768px) {
     html {
@@ -24,42 +24,15 @@ margin: 20px 0;
     }
     
     body {
-        /* Solo poner fucsia en las barras, no en todo el fondo */
-        padding-top: env(safe-area-inset-top, 25px);
-        padding-bottom: env(safe-area-inset-bottom, 25px);
-        /* Mantener tu fondo original */
-        background: url('assets/assets/Arlyn Ligeia Background.png') no-repeat center center fixed;
+        background: 
+            linear-gradient(#ff1493, #ff1493) top/100% env(safe-area-inset-top),
+            linear-gradient(#ff1493, #ff1493) bottom/100% env(safe-area-inset-bottom),
+            url('assets/assets/Arlyn Ligeia Background.png') no-repeat center center fixed;
         background-size: cover;
         min-height: 100vh;
         min-height: -webkit-fill-available;
-        position: relative;
-    }
-    
-    /* Barras fucsias superiores e inferiores */
-    body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: env(safe-area-inset-top, 25px);
-        background: #ff1493;
-        z-index: 9998;
-    }
-    
-    body::after {
-        content: "";
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: env(safe-area-inset-bottom, 25px);
-        background: #ff1493;
-        z-index: 9998;
     }
 }
-
-
 
 
 
