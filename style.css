@@ -711,58 +711,54 @@ margin: 0px;
    RESPONSIVE: SOCIAL MEDIA CONTENT PARA MÓVIL
 ====================================== */
 @media (max-width: 850px) {
-    .socialmediacontent-container {
-        width: 95%;
-        padding: 20px;
-        margin: 30px auto;
-    }
-    
-    .socialmediacontent-title {
-        font-size: 2rem;
-        text-align: center;
-    }
-    
-    .socialmediacontent-table-wrapper {
-        border-spacing: 3px;
-    }
-    
-    .socialmediacontent-table-wrapper-head-row-subtitle {
-        font-size: 1rem;
-        padding: 8px 5px;
-    }
-    
-    .socialmediacontent-table-wrapper-body-row-cell span,
-    .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-    .socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-        font-size: 0.9rem;
-        height: 35px;
-        padding: 8px 5px;
-    }
+.socialmediacontent-container {
+width: 100%;
+padding: 20px;
+margin: 30px auto;
+}
+.socialmediacontent-title {
+font-size: 1.5rem;
+text-align: left;
+}
+.socialmediacontent-table-wrapper {
+border-spacing: 3px;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-size: 0.8rem;
+padding: 5px 5px;
+ }
+.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-size: 0.8rem;
+height: 35px;
+padding: 5px 5px;
+}
+}
+@media (max-width: 480px) {
+.socialmediacontent-container {
+width: 100%;
+padding: 15px;
+margin: 20px auto;
+}
+.socialmediacontent-title {
+font-size: 1.5rem;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-size: 0.8rem;
+}
+.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-size: 0.8rem;
+height: 30px;
+padding: 3px 3px;
+}
 }
 
-@media (max-width: 480px) {
-    .socialmediacontent-container {
-        width: 90%;
-        padding: 15px;
-        margin: 20px auto;
-    }
-    
-    .socialmediacontent-title {
-        font-size: 1.7rem;
-    }
-    
-    .socialmediacontent-table-wrapper-head-row-subtitle {
-        font-size: 0.9rem;
-    }
-    
-    .socialmediacontent-table-wrapper-body-row-cell span,
-    .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-    .socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-        font-size: 0.8rem;
-        height: 30px;
-        padding: 6px 3px;
-    }
-}
+
+
+
 
 /* ======================================
    RESPONSIVE: YOUTUBE HIGHLIGHT PARA MÓVIL
