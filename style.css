@@ -131,9 +131,14 @@ padding: 0 10px;
 
 @media (max-width: 360px) {
 .site-title {
+ width: 100%; /* AGREGAR ESTA LÍNEA */
+ box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
  font-size: 2.2em;
 }
 }
+
+
+
 
 /* --- MENÚ HAMBURGUESA PARA MÓVIL --- */
 .mobile-menu-container {
@@ -245,6 +250,8 @@ display: none;
  display: block;
  }
 .site-title {
+width: 100%; /* AGREGAR ESTA LÍNEA */
+box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
 margin-left: 0; /* ELIMINAR esta línea */
 text-align: center; /* CAMBIAR a center */
 font-size: 3.5em; /* AUMENTAR tamaño */
@@ -259,12 +266,17 @@ font-size: 1.1rem;
 padding: 12px 15px;
 }
 .site-title {
+width: 100%; /* AGREGAR ESTA LÍNEA */
+box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
 font-size: 3em; /* AUMENTAR tamaño */
 margin-left: 0; /* ELIMINAR esta línea */
 text-align: center; /* MANTENER centrado */
 padding: 0 15px; /* MANTENER padding */
 }
 }
+
+
+
 
 /* ======================================
    HOME
