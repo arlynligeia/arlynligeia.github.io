@@ -410,12 +410,14 @@ padding: 0 15px; /* MANTENER padding */
     
     .home-side {
         width: 100%; /* Ocupa todo el ancho */
+     box-sizing: border-box;
         max-width: 500px; /* Máximo como el original */
         order: 1; /* Primero en el orden */
     }
     
 .home-carousel {
         width: 100%; /* Ocupa todo el ancho */
+ 
         height: 250px; /* Altura fija para móvil */
         order: 2; /* Segundo en el orden */
     }
@@ -436,9 +438,7 @@ padding: 0 15px; /* MANTENER padding */
         gap: 15px;
     }
     
-    .home-carousel {
-        height: 350px; /* Altura un poco menor */
-    }
+  
     
     .home-side-information-title {
         font-size: 1.8rem;
@@ -614,24 +614,24 @@ padding: 20px;
 margin: 30px auto;
 }
 .socialmediacontent-container::before {
-height: 50px;
+height: 60px;
 }
 .socialmediacontent-title {
-font-size: 1.5rem;
+font-size: 1.2rem;
 text-align: left;
 }
 .socialmediacontent-table-wrapper {
-border-spacing: 1px;
+border-spacing: 0.5px;
 }
 .socialmediacontent-table-wrapper-head-row-subtitle {
-font-size: 0.8rem;
+font-size: 0.6rem;
 padding: 0px;
  }
 .socialmediacontent-table-wrapper-body-row-cell span,
 .socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
 .socialmediacontent-table-wrapper-body-row-cell-button-youtube {
 height: 35px;
-font-size: 0.8rem;
+font-size: 0.6rem;
 padding: 5px;
 }
 }
