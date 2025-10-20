@@ -603,6 +603,87 @@ box-sizing: border-box;
 padding: 10px 10px 10px 10px;
 margin: 0px;
 }
+/* ======================================
+   MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
+====================================== */
+@media (max-width: 768px) {
+.socialmediacontent-container {
+width: 100%;
+box-sizing: border-box;
+padding: 20px;
+margin: 30px auto;
+}
+.socialmediacontent-title {
+font-size: 1.5rem;
+text-align: left;
+}
+.socialmediacontent-table-wrapper {
+border-spacing: 3px;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-size: 0.8rem;
+padding: 5px 5px;
+ }
+.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+height: 35px;
+font-size: 0.8rem;
+padding: 5px 5px;
+}
+}
+@media (max-width: 480px) {
+.socialmediacontent-container {
+width: 100%;
+box-sizing: border-box; 
+padding: 15px;
+margin: 20px auto;
+}
+.socialmediacontent-title {
+font-size: 1.2rem;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-size: 0.6rem;
+}
+.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-size: 0.6rem;
+height: 30px;
+padding: 3px 3px;
+}
+}
+@media (max-width: 360px) {
+.socialmediacontent-container {
+width: 100%;
+box-sizing: border-box; 
+padding: 10px;
+margin: 15px auto;
+}
+.socialmediacontent-title {
+font-size: 1rem;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-size: 0.6rem;
+}
+.socialmediacontent-table-wrapper-body-row-cell span,
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-size: 0.6rem;
+height: 30px;
+padding: 3px 3px;
+}
+}
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    YOUTUBE HIGHLIGHT
@@ -719,54 +800,7 @@ margin: 0px;
 
 
 
-/* ======================================
-   RESPONSIVE: SOCIAL MEDIA CONTENT PARA MÓVIL
-====================================== */
-@media (max-width: 850px) {
-.socialmediacontent-container {
-width: 100%;
-padding: 20px;
-margin: 30px auto;
-}
-.socialmediacontent-title {
-font-size: 1.5rem;
-text-align: left;
-}
-.socialmediacontent-table-wrapper {
-border-spacing: 3px;
-}
-.socialmediacontent-table-wrapper-head-row-subtitle {
-font-size: 0.8rem;
-padding: 5px 5px;
- }
-.socialmediacontent-table-wrapper-body-row-cell span,
-.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-font-size: 0.8rem;
-height: 35px;
-padding: 5px 5px;
-}
-}
-@media (max-width: 480px) {
-.socialmediacontent-container {
-width: 100%;
-padding: 15px;
-margin: 20px auto;
-}
-.socialmediacontent-title {
-font-size: 1.5rem;
-}
-.socialmediacontent-table-wrapper-head-row-subtitle {
-font-size: 0.8rem;
-}
-.socialmediacontent-table-wrapper-body-row-cell span,
-.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
-font-size: 0.8rem;
-height: 30px;
-padding: 3px 3px;
-}
-}
+
 
 
 
