@@ -1073,6 +1073,55 @@ width: 100%;
 height: 100%;
 object-fit: cover;
 }
+/* CONTENEDOR DE TEXTO FILM */
+.film-information {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.film-information::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.film-information-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.film-information-title a {
+color: white !important;
+text-decoration: none;
+}
+.film-information-text,
+.film-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 15px 0;
+}
+.film-information-text-end {
+margin-bottom: 0px;
+}
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .film-container { display: flex; }
 .film-container-mobile { display: none; }
@@ -1106,6 +1155,57 @@ overflow: hidden;
 width: 100%;
 height: 100%;
 object-fit: cover;
+}
+/* CONTENEDOR DE TEXTO FILM MÓVIL */
+.film-information-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #9900CC !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.film-information-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.film-information-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.film-information-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+.film-information-text-mobile,
+.film-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.film-information-text-end-mobile {
+margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .film-container { display: none; }
