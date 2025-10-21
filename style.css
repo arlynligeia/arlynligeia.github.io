@@ -1047,6 +1047,8 @@ margin-bottom: 0px;
 .biography-container-mobile { display: block; }
 }
 
+
+
 /* ======================================
    FILM
 ====================================== */
@@ -1127,7 +1129,6 @@ margin-bottom: 0px;
 .film-information { display: block; }
 .film-container-mobile { display: none; }
 .film-information-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: FILM
 ====================================== */
@@ -1215,6 +1216,147 @@ margin-bottom: 0px;
 .film-container-mobile { display: flex; }
 .film-information-mobile { display: block; }
 }
+
+/* ======================================
+   FEATURE FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featurefilm-container {
+position: relative;
+width: 800px;
+background-color: #001F99 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.featurefilm-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.featurefilm-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.featurefilm-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACION */
+.featurefilm-information {
+width: 100%;
+margin: 0px;
+}
+.featurefilm-information-text,
+.featurefilm-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.featurefilm-information-text-end {
+margin-botton: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.featurefilm-container { display: block; }
+.featurefilm-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FEATURE FILM
+====================================== */
+.featurefilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #001F99 !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.featurefilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #001A80 !important;
+border-radius: 20px 20px 0 0;
+}
+.featurefilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.featurefilm-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: IMAGEN MÓVIL */
+.featurefilm-image-mobile {
+width: 100%;
+margin: 0 0 20px 0;
+}
+.featurefilm-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 15px;
+}
+/* CONTENEDOR: TEXTO MÓVIL */
+.featurefilm-information-mobile {
+width: 100%;
+}
+.featurefilm-information-text-mobile,
+.featurefilm-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.featurefilm-information-text-end-mobile {
+margin-bottom: 0px;
+}
+.featurefilm-container { display: none; }
+.featurefilm-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
 
 
 
