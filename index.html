@@ -592,51 +592,102 @@ console.log('✅ Navegación configurada correctamente');
 
   
 <!-- SCRIP: MENÚ DE HAMBURGUESA -->  
+<!-- SCRIP: MENÚ DE HAMBURGUESA -->  
 <script>
 // MENÚ HAMBURGUESA - FUNCIONALIDAD
 document.addEventListener('DOMContentLoaded', function() {
-const hamburgerBtn = document.getElementById('hamburgerBtn');
-const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-// Abrir/cerrar menú hamburguesa
-hamburgerBtn.addEventListener('click', function() {
-mobileMenuOverlay.classList.toggle('active');
-// Animación del botón hamburguesa a X
-const spans = this.querySelectorAll('span');
-if (mobileMenuOverlay.classList.contains('active')) {
-spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-spans[1].style.opacity = '0';
-spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-} else {
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-}
-});
-// Cerrar menú al hacer clic en cualquier enlace
-mobileMenuLinks.forEach(link => {
-link.addEventListener('click', function() {
-mobileMenuOverlay.classList.remove('active');
-// Resetear animación del botón hamburguesa
-const spans = hamburgerBtn.querySelectorAll('span');
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-});
-});
-// Cerrar menú al hacer clic fuera del contenido
-mobileMenuOverlay.addEventListener('click', function(e) {
-if (e.target === mobileMenuOverlay) {
-mobileMenuOverlay.classList.remove('active');
-// Resetear animación del botón hamburguesa
-const spans = hamburgerBtn.querySelectorAll('span');
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-}
-});
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+    // FUNCIONES DE NAVEGACIÓN (las mismas que usa el menú principal)
+    function showOnlyOneSection(sectionId) {
+        console.log('🔧 Menú móvil: Mostrando SOLO:', sectionId);
+        // OCULTAR TODAS LAS SECCIONES  
+        document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        // MOSTRAR SECCIÓN
+        const mainSection = document.getElementById(sectionId);
+        if (mainSection) {
+            mainSection.style.display = 'block';
+            // MOSTRAR SUBSECCIONES RELACIONADAS
+            document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+                subsection.style.display = 'block';
+            });
+            // DESPLAZAMIENTO HACIA LA SECCIÓN
+            setTimeout(() => {
+                mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+        }
+    }
+
+    // Abrir/cerrar menú hamburguesa
+    hamburgerBtn.addEventListener('click', function() {
+        mobileMenuOverlay.classList.toggle('active');
+        // Animación del botón hamburguesa a X
+        const spans = this.querySelectorAll('span');
+        if (mobileMenuOverlay.classList.contains('active')) {
+            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+            spans[1].style.opacity = '0';
+            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+        } else {
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+
+    // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const href = this.getAttribute('href');
+            
+            // Si es el botón del carrito, no hacer nada especial
+            if (href === 'javascript:void(0)') {
+                // Aquí puedes agregar la lógica del carrito si es necesario
+                return;
+            }
+            
+            // Navegación normal
+            const targetId = href.replace('#', '');
+            console.log('🔧 Menú móvil: Navegando a:', targetId);
+            
+            // Usar la misma función de navegación que el menú principal
+            showOnlyOneSection(targetId);
+            
+            // Actualizar URL
+            history.pushState(null, null, `#${targetId}`);
+            
+            // Cerrar menú hamburguesa
+            mobileMenuOverlay.classList.remove('active');
+            
+            // Resetear animación del botón hamburguesa
+            const spans = hamburgerBtn.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        });
+    });
+
+    // Cerrar menú al hacer clic fuera del contenido
+    mobileMenuOverlay.addEventListener('click', function(e) {
+        if (e.target === mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+            // Resetear animación del botón hamburguesa
+            const spans = hamburgerBtn.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+    });
+
+    console.log('✅ Menú hamburguesa configurado correctamente');
 });
 </script>
+<!-- FIN SCRIP: MENÚ DE HAMBURGUESA -->
 <!-- FIN SCRIP: MENÚ DE HAMBURGUESA -->  
 
 
