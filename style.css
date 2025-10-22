@@ -1761,7 +1761,7 @@ margin-bottom: 0px;
 .elinfiernodeozul-container {
 position: relative;
 width: 800px;
-background-color: #001F99 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1774,7 +1774,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #001A80 !important;
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .elinfiernodeozul-title {
@@ -1832,7 +1832,7 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #001F99 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -1845,7 +1845,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #001A80 !important;
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .elinfiernodeozul-title-mobile {
@@ -2044,6 +2044,154 @@ margin-bottom: 0px;
 .musicvideodirection-container { display: none; }
 .musicvideodirection-container-mobile { display: block; }
 }
+
+/* ======================================
+   DESPERTAR - BLUE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.despertar-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.despertar-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.despertar-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.despertar-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: VIDEO */
+.despertar-video {
+width: 100%;
+margin: 0 0 15px 0;
+}
+.despertar-video iframe {
+width: 100%;
+border-radius: 15px;
+height: 400px;
+}
+/* CONTENEDOR: INFORMACION DEBAJO DEL VIDEO */
+.despertar-information {
+width: 100%;
+margin: 0px;
+}
+.despertar-information-text,
+.despertar-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.despertar-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.despertar-container { display: block; }
+.despertar-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DESPERTAR - BLUE
+====================================== */
+@media (max-width: 768px) {
+.despertar-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #9900CC !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.despertar-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.despertar-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.despertar-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: VIDEO MÓVIL */
+.despertar-video-mobile {
+width: 100%;
+margin: 0 0 20px 0;
+}
+.despertar-video-mobile iframe {
+width: 100%;
+border-radius: 15px;
+height: 300px;
+}
+/* CONTENEDOR: TEXTO MÓVIL */
+.despertar-information-mobile {
+width: 100%;
+}
+.despertar-information-text-mobile,
+.despertar-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.despertar-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY MÓVIL */
+.despertar-container { display: none; }
+.despertar-container-mobile { display: block; }
+}
+
+
+
+
+
 
 
 
