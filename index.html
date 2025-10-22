@@ -123,17 +123,16 @@
 <div class="mobile-menu-overlay" id="mobileMenuOverlay">
 <nav class="mobile-nav">
 <ul class="mobile-menu">
-<!-- Copia TODO tu menú actual aquí -->
 <li><a href="#home" data-section="home">Home</a></li>
 <li><a href="#biography-mobile" data-section="biography">Biography</a></li>
-<li><a href="#film" data-section="film">Film</a></li>
-<li><a href="#music" data-section="music">Music</a></li>
-<li><a href="#fashion" data-section="fashion">Fashion</a></li>
-<li><a href="#art" data-section="art">Art</a></li>
-<li><a href="#science" data-section="science">Science</a></li>
-<li><a href="#bemypatron" data-section="bemypatron">Be my Patron</a></li>
-<li><a href="#contact" data-section="contact">Contact</a></li>
-<li><a href="#store" data-section="store">Store</a></li>
+<li><a href="#film-mobile" data-section="film">Film</a></li>
+<li><a href="#music-mobile" data-section="music">Music</a></li>
+<li><a href="#fashion-mobile" data-section="fashion">Fashion</a></li>
+<li><a href="#art-mobile" data-section="art">Art</a></li>
+<li><a href="#science-mobile" data-section="science">Science</a></li>
+<li><a href="#bemypatron-mobile" data-section="bemypatron">Be my Patron</a></li>
+<li><a href="#contact-mobile" data-section="contact">Contact</a></li>
+<li><a href="#store-mobile" data-section="store">Store</a></li>
 <li><a href="javascript:void(0)" class="cart-button-mobile">Cart</a></li>
 </ul>
 </nav>
@@ -739,10 +738,6 @@ allowfullscreen>
 </div>
 </section>
 <!-- END MUSIC VIDEO DIRECTION MÓVIL -->
-
-
-
-
    
 <!-- DESPERTAR - BLUE PC -->
 <section class="subsection" id="film-musicvideodirection-despertar">
@@ -901,112 +896,86 @@ console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-
-
-  
-<!-- SCRIP: MENÚ DE HAMBURGUESA -->  
+ 
 <!-- SCRIP: MENÚ DE HAMBURGUESA -->  
 <script>
 // MENÚ HAMBURGUESA - FUNCIONALIDAD
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
-
-    // FUNCIONES DE NAVEGACIÓN (las mismas que usa el menú principal)
-    function showOnlyOneSection(sectionId) {
-        console.log('🔧 Menú móvil: Mostrando SOLO:', sectionId);
-        // OCULTAR TODAS LAS SECCIONES  
-        document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-            section.style.display = 'none';
-        });
-        // MOSTRAR SECCIÓN
-        const mainSection = document.getElementById(sectionId);
-        if (mainSection) {
-            mainSection.style.display = 'block';
-            // MOSTRAR SUBSECCIONES RELACIONADAS
-            document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
-                subsection.style.display = 'block';
-            });
-            // DESPLAZAMIENTO HACIA LA SECCIÓN
-            setTimeout(() => {
-                mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 50);
-        }
-    }
-
-    // Abrir/cerrar menú hamburguesa
-    hamburgerBtn.addEventListener('click', function() {
-        mobileMenuOverlay.classList.toggle('active');
-        // Animación del botón hamburguesa a X
-        const spans = this.querySelectorAll('span');
-        if (mobileMenuOverlay.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-
-    // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const href = this.getAttribute('href');
-            
-            // Si es el botón del carrito, no hacer nada especial
-            if (href === 'javascript:void(0)') {
-                // Aquí puedes agregar la lógica del carrito si es necesario
-                return;
-            }
-            
-            // Navegación normal
-            const targetId = href.replace('#', '');
-            console.log('🔧 Menú móvil: Navegando a:', targetId);
-            
-            // Usar la misma función de navegación que el menú principal
-            showOnlyOneSection(targetId);
-            
-            // Actualizar URL
-            history.pushState(null, null, `#${targetId}`);
-            
-            // Cerrar menú hamburguesa
-            mobileMenuOverlay.classList.remove('active');
-            
-            // Resetear animación del botón hamburguesa
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
-    });
-
-    // Cerrar menú al hacer clic fuera del contenido
-    mobileMenuOverlay.addEventListener('click', function(e) {
-        if (e.target === mobileMenuOverlay) {
-            mobileMenuOverlay.classList.remove('active');
-            // Resetear animación del botón hamburguesa
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-
-    console.log('✅ Menú hamburguesa configurado correctamente');
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+// FUNCIONES DE NAVEGACIÓN (las mismas que usa el menú principal)
+function showOnlyOneSection(sectionId) {
+console.log('🔧 Menú móvil: Mostrando SOLO:', sectionId);
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES RELACIONADAS
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+// DESPLAZAMIENTO HACIA LA SECCIÓN
+setTimeout(() => {
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}, 50);
+}
+}
+// Abrir/cerrar menú hamburguesa
+hamburgerBtn.addEventListener('click', function() {
+mobileMenuOverlay.classList.toggle('active');
+const spans = this.querySelectorAll('span');
+if (mobileMenuOverlay.classList.contains('active')) {
+spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const href = this.getAttribute('href');
+if (href === 'javascript:void(0)') {
+return;
+}
+const targetId = href.replace('#', '');
+console.log('🔧 Menú móvil: Navegando a:', targetId);
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+mobileMenuOverlay.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+});
+});
+mobileMenuOverlay.addEventListener('click', function(e) {
+if (e.target === mobileMenuOverlay) {
+mobileMenuOverlay.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+console.log('✅ Menú hamburguesa configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ DE HAMBURGUESA -->
-<!-- FIN SCRIP: MENÚ DE HAMBURGUESA -->  
 
 
 
 
-
+   
 <!-- SCRIP: CARRUSEL HOME -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -1076,7 +1045,14 @@ setupCarouselNavigation();
 
   
 
-  
+
+
+
+
+
+
+
+   
 </body>
   
 </html>
