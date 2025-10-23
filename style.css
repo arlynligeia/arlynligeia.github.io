@@ -3262,6 +3262,462 @@ margin-bottom: 0px;
 .fw2627-container-mobile { display: block; }
 }
 
+/* ======================================
+   ART
+====================================== */
+.art-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+/* CONTENEDOR: BANNER */
+.art-banner {
+position: relative; 
+width: 95%;
+height: 100%;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white !important;
+overflow: hidden;
+}
+.art-banner img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.art-container { display: flex; }
+.art-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FASHION
+====================================== */
+@media (max-width: 768px) {
+.fashion-container-mobile {
+position: relative;
+width: 90%;
+height: auto;
+min-height: 300px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 20px auto;
+}
+/* CONTENEDOR: BANNER MÓVIL */
+.fashion-banner-mobile {
+position: relative; 
+width: 100%;
+height: 500px;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white !important;
+overflow: hidden;
+}
+.fashion-banner-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.art-container { display: none; }
+.art-container-mobile { display: flex; }
+}
+
+/* ======================================
+   SCIENCE
+====================================== */
+.science-container {
+position: relative;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 30px;
+}
+.science-carousel {
+width: 95%;
+height: 100%;
+overflow: hidden;
+background-color: #000000; 
+border: 3px solid white;
+border-radius: 20px;
+position: relative;
+}
+.science-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.science-carousel-image.active {
+opacity: 1;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.science-container { display: flex; }
+.science-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SCIENCE
+====================================== */
+@media (max-width: 768px) {
+.science-container-mobile {
+position: relative;
+width: 90%;
+height: 500px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 0;
+margin: 20px auto;
+}
+.science-carousel-mobile {
+width: 100%;
+height: 100%;
+overflow: hidden;
+background-color: #000000; 
+border: 3px solid white;
+border-radius: 20px;
+position: relative;
+}
+.science-carousel-image-mobile {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.science-carousel-image-mobile.active {
+opacity: 1;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.science-container { display: none; }
+.science-container-mobile { display: flex; }
+}
+
+/* ======================================
+   RESEARCH ARTICLE
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.researcharticle-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.researcharticle-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+/* CONTENEDOR TÍTULO + BOTÓN */
+.researcharticle-header {
+position: relative;
+z-index: 2;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0px;
+}
+.researcharticle-header-title {
+position: relative;
+z-index: 2;
+display: block;  
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0; 
+}
+.researcharticle-header-title a {
+color: white !important;
+text-decoration: none;
+}
+.researcharticle-header-button {
+z-index: 2; 
+display: inline-block;
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 10px 20px 10px 20px;  
+margin: 0 0 16px 0;
+font-weight: bold;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.researcharticle-header-button:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: INFORMACION */
+.researcharticle-information {
+width: 100%;
+margin: 0px;
+}
+.researcharticle-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.researcharticle-container { display: block; }
+.researcharticle-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: RESEARCH ARTICLE
+====================================== */
+@media (max-width: 768px) {
+.researcharticle-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #00CED1 !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+ }
+ .researcharticle-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+ /* TÍTULO */
+.researcharticle-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.researcharticle-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DEL BOTÓN */
+.researcharticle-button-mobile {
+display: flex;
+justify-content: center;
+}
+/* BOTÓN FOLLOW */
+.researcharticle-button-follow-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 10px 20px;
+margin-bottom: 10px; 
+font-weight: bold;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.researcharticle-button-follow-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: INFORMACION */
+.researcharticle-information {
+width: 100%;
+margin: 0px;
+}
+.researcharticle-information-text,
+.researcharticle-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.researcharticle-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.researcharticle-container { display: none; }
+.researcharticle-container-mobile { display: block; }
+}
+
+/* ======================================
+   PSYCHOLOGY
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.psychology-container {
+position: relative;
+width: 800px;
+background-color: #00CED1 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.psychology-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+.psychology-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.psychology-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTONES */
+.psychology-buttons {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.psychology-button,
+.psychology-button-end {
+display: block;
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 20px 20px 20px 20px;
+margin: 0 0 20px 0;    
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+} 
+.psychology-button-end {
+margin-bottom: 0px;
+}
+.psychology-button:hover,
+.psychology-button-end:hover {
+transform: scale(1.05);
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.psychology-container { display: block; }
+.psychology-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: PSYCHOLOGY
+====================================== */
+@media (max-width: 768px) {
+.psychology-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #00CED1 !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.psychology-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #00B8BA !important;
+border-radius: 20px 20px 0 0;
+}
+/* TÍTULO */
+.psychology-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.psychology-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTONES */
+.psychology-buttons-mobile {
+width: 100%;
+display: flex;
+flex-direction: column;
+}
+.psychology-button-mobile,
+.psychology-button-end-mobile {
+display: block;
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 15px 15px;
+margin: 0 0 15px 0;    
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+word-break: break-word;
+overflow-wrap: break-word;
+} 
+.psychology-button-end-mobile {
+margin-bottom: 0px;
+}
+.psychology-button-mobile:hover,
+.psychology-button-end-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.psychology-container { display: none; }
+.psychology-container-mobile { display: block; }
+}
 
 
 
