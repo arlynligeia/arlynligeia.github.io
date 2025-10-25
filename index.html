@@ -1718,7 +1718,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-<!-- SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA -->
+<!-- SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA PC-->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛍️ Navegación jerárquica de tienda iniciada');
@@ -1797,27 +1797,92 @@ navigateToTarget(targetId);
 console.log('✅ Navegación de tienda configurada correctamente');
 });
 </script>
-<!-- FIN SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA -->
+<!-- FIN SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA PC-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA MÓVIL-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🛍️ Navegación jerárquica de tienda móvil iniciada');
+function navigateToTarget(targetId) {
+console.log('Navegando a:', targetId);
+const targetSection = document.getElementById(targetId);
+if (!targetSection) {
+console.warn('❌ Sección no encontrada:', targetId);
+return;
+}
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// Determinar la sección principal a mostrar
+let mainSectionId;
+if (targetSection.classList.contains('subsection')) {
+mainSectionId = targetId.split('-')[0];
+} else {
+mainSectionId = targetId;
+}
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+// MOSTRAR SECCIÓN PRINCIPAL
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES
+const mainSectionPrefix = mainSectionId + '-';
+document.querySelectorAll('.subsection').forEach(subsection => {
+if (subsection.id.startsWith(mainSectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+// SCROLL HASTA SECCIÓN O SUBSECCIÓN
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+history.pushState(null, null, `#${targetId}`);
+}
+}
+// TARJETAS Y BOTONES
+// 1. TARJETAS
+document.querySelectorAll('[class*="-card"]').forEach(card => {
+card.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+// 2. BOTONES "BACK"
+document.querySelectorAll('[class*="-button-back"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('↩️ Botón BACK - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 3. BOTONES "CONTINUE SHOPPING"
+document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('🛍️ CONTINUE SHOPPING - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 4. BOTONES "VIEW" 
+document.querySelectorAll('[class*="-button-view"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('📍 Botón VIEW - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// AGREGAR MÁS BOTONES
+// INICIALIZACIÓN 
+console.log('✅ Navegación de tienda móvil configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN DE PÁGINA Y TIENDA MÓVIL-->
 
 
   
 
-  
   
 <!-- SCRIP: CARRUSEL HOME PC-->
 <script>
