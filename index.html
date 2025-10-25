@@ -1592,6 +1592,11 @@ showOnlyOneSection(hash);
 }
 }
 }
+  // 4. MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE)
+    window.addEventListener('popstate', function(event) {
+        console.log('🔧 Navegación con flechas detectada');
+        checkInitialHash();
+    });
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
@@ -1691,6 +1696,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+// 4. MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE)
+    window.addEventListener('popstate', function(event) {
+        console.log('🔧 Navegación con flechas detectada');
+        checkInitialHash();
+    });
+
+  
     // INICIALIZACIÓN DEL HOME EN MÓVIL
     initializeMobileHome();
     console.log('✅ Menú hamburguesa configurado correctamente');
