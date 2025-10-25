@@ -365,13 +365,12 @@ object-fit: cover;
 opacity: 0;
 transition: opacity 1s ease-in-out;
 }
-.home-carousel-image.active,
 .home-carousel-image.active {
 opacity: 1;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
-.home-container { display: none; }
-.home-container-mobile { display: flex; }
+.home-container { display: flex; }
+.home-container-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
