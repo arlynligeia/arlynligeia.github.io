@@ -1526,30 +1526,6 @@ transform: scale(1.1);
 .featurefilm-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    ALONE
 ====================================== */
@@ -1690,8 +1666,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .alone-container-mobile::before {
 content: "";
@@ -1719,48 +1695,21 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.alone-columns-grid-image-mobile {
+/* CONTENEDOR: IMAGEN */
+.alone-image-mobile {
 width: 100%;
 margin: 0 0 10px 0;
 }
-.alone-columns-grid-image-mobile img {
+.alone-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACION MÓVIL */
-.alone-columns-grid-information-mobile {
-width: 100%;
-margin: 0 0 10px 0;
-}
-.alone-columns-grid-information-subtitle-1-mobile,
-.alone-columns-grid-information-subtitle-2-mobile {
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-margin: 0 0 10px 0;
-}
-.alone-columns-grid-information-text-1-mobile,
-.alone-columns-grid-information-text-2-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-}
-.alone-columns-grid-information-text-1-mobile {
-margin-bottom: 10px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO MÓVIL */
+/* CONTENEDOR: INFORMACION*/
 .alone-information-mobile {
 width: 100%;
+margin: 0 0 10px 0;
 }
 .alone-information-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
@@ -1788,6 +1737,25 @@ margin-bottom: 0px;
 .alone-container { display: none; }
 .alone-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SHORT FILM
