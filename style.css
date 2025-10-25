@@ -432,6 +432,7 @@ display: grid;
 grid-template-columns: repeat(4, 1fr);
 gap: 10px;
 margin: 0;
+  width: fit-content; /* ← AGREGA ESTA LÍNEA */
 }
 .home-grid-column-icon-mobile {
 width: 28px;
