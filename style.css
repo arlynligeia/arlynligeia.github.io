@@ -371,41 +371,29 @@ opacity: 1;
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
 .home-container { display: flex; }
 .home-container-mobile { display: none; }
+.home-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
+/* CONTENEDOR: BIENVENIDA */
 .home-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-display: flex;
-flex-direction: column;
-margin: 20px auto;
-}
-/* CONTENEDOR DE BIENVENIDA MÓVIL */
-.home-side-mobile {
-width: 100%;
-background-color: #00CED1;
+background-color: #00CED1 !important;
 border-radius: 20px;
-box-sizing: border-box;
 padding: 20px;
-margin-top: 130px;
+margin: 30px auto;
 }
-.home-side-information-mobile {
-text-align: center;
-display: flex;
-flex-direction: column;
-gap: 10px;
-}
-.home-side-information-title-mobile {
+.home-container-title-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #ff1493 !important;
 text-align: center;
 margin: 0px; 
 }
-.home-side-information-text-mobile { 
+.home-container-information-mobile { 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white;
@@ -413,38 +401,38 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0; 
 }
-/* CONTENEDOR DE ICONOS MÓVIL */
-.home-side-information-grid-mobile {
+/* CONTENEDOR: ICONOS */
+.home-container-grid-mobile {
 display: flex;
 flex-direction: column;
 align-items: center;
 gap: 12px;
 }
-.home-side-information-grid-icons-mobile,
-.home-side-information-grid-icons-2-mobile {
+.home-container-grid-icons-mobile,
+.home-container-grid-icons-2-mobile {
 display: flex;
 justify-content: center;
 gap: 12px;
 }
-.social-icon {
+.home-container-grid-icon-social-mobile {
 width: 28px;
 height: 28px;
 color: #ff1493 !important;
 transition: all 0.3s ease;
 }
-.social-icon:hover {
+.home-container-grid-icon-social-mobile:hover {
 transform: scale(1.15);
 }
-/* CARRUSEL MÓVIL */
+/* CONTENEDOR: CARRUSEL */
 .home-carousel-mobile {
-width: 100%;
+position: relative;
+width: 90%;
 height: 500px;
 overflow: hidden;
 background-color: #000000; 
-border: 2px solid white;
+border: 3px solid white;
 border-radius: 20px;
-position: relative;
-margin: 0px;  
+margin: 30px auto;
 }
 .home-carousel-image-mobile {
 position: absolute;
@@ -460,7 +448,13 @@ opacity: 1;
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .home-container { display: none; }
 .home-container-mobile { display: flex; }
+.home-carousel-mobile { display: flex; }
 }
+ 
+
+
+
+
 
 
 
