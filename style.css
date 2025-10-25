@@ -377,7 +377,7 @@ opacity: 1;
 ====================================== */
 @media (max-width: 768px) {
 /* CONTENEDOR: BIENVENIDA */
-.home-container-mobile {
+.home-container-mobile{
 position: relative;
 width: 90%;
 box-sizing: border-box;
@@ -386,7 +386,8 @@ border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
 }
-.home-container-title-mobile {
+.home-title-mobile {
+position: relative;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
@@ -396,16 +397,16 @@ line-height: 1.5;
 text-align: center;
 margin: 0px; 
 }
-.home-container-title-mobile  a {
+.home-title-mobile  a {
 color: #ff1493 !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACION */
-.featurefilm-information-mobile {
+.home-information-mobile {
 width: 100%;
 margin: 0px;
 }
-.home-container-information-text-mobile { 
+.home-information-text-mobile { 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white !important;
@@ -415,27 +416,32 @@ text-align: justify;
 margin: 0 0 10px 0; 
 }
 /* CONTENEDOR: ICONOS */
-.home-container-grid-mobile {
-display: flex;
-flex-direction: column;
+.home-grid-mobile {
+position: relative;
+z-index: 2;
+}
+/* GRID DE DOS COLUMNAS */
+.home-grid-column-mobile,
+.home-grid-column-2-mobile {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
 align-items: center;
-gap: 12px;
+gap: 10px;
+margin: 0;
 }
-.home-container-grid-icons-mobile,
-.home-container-grid-icons-2-mobile {
-display: flex;
-justify-content: center;
-gap: 12px;
-}
-.home-container-grid-icon-social-mobile {
+.home-grid-column-icon-mobile {
 width: 28px;
 height: 28px;
 color: #ff1493 !important;
 transition: all 0.3s ease;
 }
-.home-container-grid-icon-social-mobile:hover {
+.home-grid-column-icon-mobile:hover {
 transform: scale(1.15);
 }
+
+
+
+ 
 /* CONTENEDOR: CARRUSEL */
 .home-carousel-mobile {
 position: relative;
