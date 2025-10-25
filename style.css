@@ -1846,7 +1846,7 @@ margin: 0px;
 }
 .shortfilm-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
+font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
@@ -1863,16 +1863,6 @@ margin: 0px;
 .shortfilm-container { display: none; }
 .shortfilm-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    MUSIC VIDEO DIRECTION
@@ -1913,37 +1903,25 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
-.musicvideodirection-image {
-width: 100%;
-min-width: 0;
-margin: 0px;
-margin: 0 0 15px 0;
-}
-.musicvideodirection-image img {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 15px;
-margin: 0px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.musicvideodirection-information {
+/* CONTENEDOR: VIDEO */
+.musicvideodirection-video {
 width: 100%;
 margin: 0px;
 }
-.musicvideodirection-information-text,
-.musicvideodirection-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+.musicvideodirection-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
-text-align: justify;
+text-align: center;
 margin: 0 0 10px 0;
 }
-.musicvideodirection-information-text-end {
-margin-botton: 0px;
+.musicvideodirection-video iframe {
+width: 100%;
+border-radius: 15px;
+height: 400px;
+margin: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .musicvideodirection-container { display: block; }
@@ -1958,8 +1936,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .musicvideodirection-container-mobile::before {
 content: "";
@@ -1968,7 +1946,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 100px; 
+height: 60px; 
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -1987,185 +1965,30 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.musicvideodirection-image-mobile {
+/* CONTENEDOR: VIDEO MÓVIL */
+.musicvideodirection-video-mobile {
 width: 100%;
-margin: 0 0 20px 0;
+margin: 0px;
 }
-.musicvideodirection-image-mobile img {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 15px;
-}
-/* CONTENEDOR: TEXTO MÓVIL */
-.musicvideodirection-information-mobile {
-width: 100%;
-}
-.musicvideodirection-information-text-mobile,
-.musicvideodirection-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+.musicvideodirection-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
-text-align: justify;
+text-align: center;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
-.musicvideodirection-information-text-end-mobile {
-margin-bottom: 0px;
+.musicvideodirection-video-mobile iframe {
+width: 100%;
+border-radius: 15px;
+height: 200px;
+margin: 0px; 
 }
 /* CONTROL DISPLAY MÓVIL */
 .musicvideodirection-container { display: none; }
 .musicvideodirection-container-mobile { display: block; }
 }
-
-/* ======================================
-   DESPERTAR - BLUE
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.despertar-container {
-position: relative;
-width: 800px;
-background-color: #9900CC !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.despertar-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px;
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;
-}
-.despertar-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin: 0 0 16px 0;
-}
-.despertar-title a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR: VIDEO */
-.despertar-video {
-width: 100%;
-margin: 0 0 15px 0;
-}
-.despertar-video iframe {
-width: 100%;
-border-radius: 15px;
-height: 400px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DEL VIDEO */
-.despertar-information {
-width: 100%;
-margin: 0px;
-}
-.despertar-information-text,
-.despertar-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-}
-.despertar-information-text-end {
-margin-bottom: 0px;
-}
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.despertar-container { display: block; }
-.despertar-container-mobile { display: none; }
-/* ======================================
-   MOVIL RESPONSIVE: DESPERTAR - BLUE
-====================================== */
-@media (max-width: 768px) {
-.despertar-container-mobile {
-position: relative;
-width: 90%;
-box-sizing: border-box;
-background-color: #9900CC !important;
-border-radius: 20px;
-padding: 20px;
-margin: 30px auto;
-}
-.despertar-container-mobile::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 100px; 
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;
-}
-.despertar-title-mobile {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2rem;
-color: white !important;
-text-decoration: none;
-text-align: center;
-margin: 0 0 10px 0; 
-}
-.despertar-title-mobile a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR: VIDEO MÓVIL */
-.despertar-video-mobile {
-width: 100%;
-margin: 0 0 20px 0;
-}
-.despertar-video-mobile iframe {
-width: 100%;
-border-radius: 15px;
-height: 300px;
-}
-/* CONTENEDOR: TEXTO MÓVIL */
-.despertar-information-mobile {
-width: 100%;
-}
-.despertar-information-text-mobile,
-.despertar-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.despertar-information-text-end-mobile {
-margin-bottom: 0px;
-}
-/* CONTROL DISPLAY MÓVIL */
-.despertar-container { display: none; }
-.despertar-container-mobile { display: block; }
-}
-
-
 
 
 
