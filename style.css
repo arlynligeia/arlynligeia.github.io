@@ -348,7 +348,6 @@ transition: all 0.3s ease;
 .social-icon:hover {
 transform: scale(1.15);
 }
-
 .home-carousel {
 width: 60%;
 height: 100%;
@@ -371,8 +370,10 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
-.home-container { display: flex; }
-.home-container-mobile { display: none; }
+.home-container { display: none; }
+.home-container-mobile { display: flex; }
+#home-mobile { display: flex !important; }
+
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
@@ -461,10 +462,10 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.home-container { display: none; }
-.home-container-mobile { display: flex; }
+   .home-container { display: none; }
+    .home-container-mobile { display: flex; }
+    #home-mobile { display: flex !important; }
 }
-
 
 
 
