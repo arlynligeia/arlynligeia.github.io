@@ -383,8 +383,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #00CED1 !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .home-title-mobile {
 position: relative;
@@ -486,7 +486,7 @@ opacity: 1;
 .socialmediacontent-container {
 position: relative;
 width: 800px;
-background-color: #00CED1 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
 padding: 30px;
 margin: 40px auto;
@@ -499,7 +499,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #00B8BA !important;
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
 .socialmediacontent-title {
@@ -626,7 +626,6 @@ margin: 0px;
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
 .socialmediacontent-container { display: block; }
 .socialmediacontent-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
@@ -635,10 +634,10 @@ margin: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #00CED1 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .socialmediacontent-container-mobile::before {
 content: "";
@@ -648,7 +647,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #00B8BA !important;
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
 .socialmediacontent-title-mobile {
@@ -730,7 +729,7 @@ margin-bottom: 10px;
 .youtubehighlight-container {
 position: relative;
 width: 800px;
-background-color: #00CED1; /* Celeste agua (color base) */
+background-color: #9900CC !important;
 border-radius: 20px;
 padding: 30px; 
 margin: 40px auto;
@@ -742,7 +741,7 @@ z-index: 1; /* franja encima del fondo */
 top: 0;
 left: 0;
 width: 100%;
-background-color: #00B8BA; /* Turquesa */
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 height: 90px;
 }
@@ -836,11 +835,11 @@ border-radius: 15px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #00CED1 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
- }
+padding: 20px;
+}
  .youtubehighlight-container-mobile::before {
 content: "";
 position: absolute;
@@ -849,7 +848,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #00B8BA !important;
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
  /* TÍTULO */
@@ -933,7 +932,7 @@ border: none;
 .universe-container {
 position: relative;
 width: 800px;
-background-color: #FF1493 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -946,7 +945,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #E6007E !important;  
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
 .universe-title {
@@ -997,10 +996,10 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #FF1493 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .universe-container-mobile::before {
 content: "";
@@ -1010,7 +1009,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #E6007E !important;  
+background-color: #8000A8 !important;  
 border-radius: 20px 20px 0 0;
 }
 .universe-title-mobile {
@@ -1062,7 +1061,7 @@ margin-bottom: 0px;
 .about-container {
 position: relative;
 width: 800px;
-background-color: #FF1493 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1075,7 +1074,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #E6007E !important;  
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
 .about-title {
@@ -1107,13 +1106,13 @@ gap: 20px;
 margin: 0px;
 }
 /* CONTENEDOR: TEXTO */
-.about-information {
+.about-columns-grid-information {
 width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.about-information-text,
-.about-information-text-end {
+.about-columns-grid-information-text,
+.about-columns-grid-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -1124,21 +1123,20 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.about-information-text-end {
+.about-columns-grid-information-text-end {
 margin-bottom: 0px;
 }
 /* CONTENEDOR: IMAGEN*/
-.about-image {
+.about-columns-grid-image {
 width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.about-image img {
+.about-columns-grid-image img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
-margin: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
 .about-container { display: block; }
@@ -1151,10 +1149,10 @@ margin: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #FF1493 !important;
+background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .about-container-mobile::before {
 content: "";
@@ -1164,7 +1162,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #E6007E !important;  
+background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
 .about-title-mobile {
@@ -1182,21 +1180,11 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: COLUMNAS MÓVIL */
-.about-columns-mobile {
-position: relative;
-z-index: 2;
-}
-/* GRID UNA COLUMNA - IMAGEN PRIMERO */
-.about-columns-grid-mobile {
-display: flex;
-flex-direction: column;
-gap: 20px;
-}
-/* IMAGEN PRIMERO */
+/* CONTENEDOR: IMAGEN */
 .about-image-mobile {
 width: 100%;
-order: 1;
+min-width: 0;
+margin: 0 0 10px 0;
 }
 .about-image-mobile img {
 width: 100%;
@@ -1204,10 +1192,10 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* TEXTO DESPUÉS */
+/* CONTENEDOR: INFORMACIÓN */
 .about-information-mobile {
 width: 100%;
-order: 2;
+margin: 0px;
 }
 .about-information-text-mobile,
 .about-information-text-end-mobile {
@@ -1218,8 +1206,6 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .about-information-text-end-mobile {
 margin-bottom: 0px;
@@ -1234,31 +1220,25 @@ margin-bottom: 0px;
 /* ======================================
    FILM
 ====================================== */
-.film-container {
-position: relative;
-height: calc(100vh - 220px);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 30px;
-}
 /* CONTENEDOR: BANNER */
 .film-banner {
 position: relative; 
 width: 95%;
 height: 100%;
+overflow: hidden; 
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .film-banner img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
 /* CONTENEDOR DE TEXTO FILM */
-.film-information {
+.film-container {
 position: relative;
 width: 800px;
 background-color: #9900CC !important;
@@ -1266,7 +1246,7 @@ border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
 }
-.film-information::before {
+.film-container::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -1277,7 +1257,7 @@ height: 90px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.film-information-title {
+.film-title {
 position: relative;
 z-index: 2;
 display: block;
@@ -1289,9 +1269,14 @@ line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
-.film-information-title a {
+.film-title a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.film-information {
+width: 100%;
+margin: 0px; 
 }
 .film-information-text,
 .film-information-text-end {
@@ -1307,51 +1292,42 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.film-container { display: flex; }
-.film-information { display: block; }
+.film-banner { display: flex; }
+.film-container { display: block; }
+.film-banner-mobile { display: none; }
 .film-container-mobile { display: none; }
-.film-information-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: FILM
 ====================================== */
 @media (max-width: 768px) {
-.film-container-mobile {
-position: relative;
-width: 90%;
-height: auto;
-min-height: 300px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 20px auto;
-}
-/* CONTENEDOR: BANNER MÓVIL */
+/* CONTENEDOR: BANNER */
 .film-banner-mobile {
 position: relative; 
-width: 100%;
+width: 90%;
 height: 500px;
+overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .film-banner-mobile img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
 /* CONTENEDOR DE TEXTO FILM MÓVIL */
-.film-information-mobile {
+.film-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
-.film-information-mobile::before {
+.film-container-mobile::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -1362,7 +1338,7 @@ height: 60px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.film-information-title-mobile {
+.film-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
@@ -1373,9 +1349,14 @@ text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
-.film-information-title-mobile a {
+.film-title-mobile a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.film-information-mobile {
+width: 100%;
+margin: 0px;  
 }
 .film-information-text-mobile,
 .film-information-text-end-mobile {
@@ -1386,18 +1367,36 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .film-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.film-banner { display: none; }
 .film-container { display: none; }
-.film-information { display: none; }
-.film-container-mobile { display: flex; }
-.film-information-mobile { display: block; }
+.film-banner-mobile { display: flex; }
+.film-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FEATURE FILM
