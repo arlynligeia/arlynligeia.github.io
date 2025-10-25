@@ -388,6 +388,7 @@ margin: 30px auto;
 }
 .home-title-mobile {
 position: relative;
+z-index: 1;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
@@ -395,7 +396,7 @@ color: #ff1493 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
-margin: 0px; 
+margin: 0 0 10px 0; 
 }
 .home-title-mobile  a {
 color: #ff1493 !important;
@@ -404,7 +405,7 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACION */
 .home-information-mobile {
 width: 100%;
-margin: 0px;
+margin: 0 0 10px 0; 
 }
 .home-information-text-mobile { 
 font-family: 'Share Tech Mono', monospace;
@@ -418,14 +419,13 @@ margin: 0 0 10px 0;
 /* CONTENEDOR: ICONOS */
 .home-grid-mobile {
 position: relative;
-z-index: 2;
+z-index: 1;
 }
 /* GRID DE DOS COLUMNAS */
 .home-grid-column-mobile,
 .home-grid-column-2-mobile {
 display: grid;
 grid-template-columns: repeat(4, 1fr);
-align-items: center;
 gap: 10px;
 margin: 0;
 }
