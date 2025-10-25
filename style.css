@@ -1738,25 +1738,6 @@ margin-bottom: 0px;
 .alone-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SHORT FILM
 ====================================== */
@@ -1796,37 +1777,25 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
-.shortfilm-image {
-width: 100%;
-min-width: 0;
-margin: 0px;
-margin: 0 0 15px 0;
-}
-.shortfilm-image img {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 15px;
-margin: 0px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.shortfilm-information {
+/* CONTENEDOR: VIDEO */
+.shortfilm-video {
 width: 100%;
 margin: 0px;
 }
-.shortfilm-information-text,
-.shortfilm-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+.shortfilm-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
-text-align: justify;
+text-align: center;
 margin: 0 0 10px 0;
 }
-.shortfilm-information-text-end {
-margin-bottom: 0px;
+.shortfilm-video iframe {
+width: 100%;
+border-radius: 15px;
+height: 400px;
+margin: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .shortfilm-container { display: block; }
@@ -1841,8 +1810,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .shortfilm-container-mobile::before {
 content: "";
@@ -1870,183 +1839,40 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.shortfilm-image-mobile {
+/* CONTENEDOR: VIDEO MÓVIL */
+.shortfilm-video-mobile {
 width: 100%;
-margin: 0 0 20px 0;
+margin: 0px;
 }
-.shortfilm-image-mobile img {
-width: 100%;
-height: auto;
-display: block;
-border-radius: 15px;
-}
-/* CONTENEDOR: TEXTO MÓVIL */
-.shortfilm-information-mobile {
-width: 100%;
-}
-.shortfilm-information-text-mobile,
-.shortfilm-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
+.shortfilm-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
-text-align: justify;
+text-align: center;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
-.shortfilm-information-text-end-mobile {
-margin-bottom: 0px;
+.shortfilm-video-mobile iframe {
+width: 100%;
+border-radius: 15px;
+height: 200px;
+margin: 0px; 
 }
 /* CONTROL DISPLAY MÓVIL */
 .shortfilm-container { display: none; }
 .shortfilm-container-mobile { display: block; }
 }
 
-/* ======================================
-   EL INFIERNO DE OZUL
-====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
-.elinfiernodeozul-container {
-position: relative;
-width: 800px;
-background-color: #9900CC !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.elinfiernodeozul-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px;
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;
-}
-.elinfiernodeozul-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.6;
-text-align: left;
-margin: 0 0 16px 0;
-}
-.elinfiernodeozul-title a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR: VIDEO */
-.elinfiernodeozul-video {
-width: 100%;
-margin: 0 0 15px 0;
-}
-.elinfiernodeozul-video iframe {
-width: 100%;
-border-radius: 15px;
-height: 400px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DEL VIDEO */
-.elinfiernodeozul-information {
-width: 100%;
-margin: 0px;
-}
-.elinfiernodeozul-information-text,
-.elinfiernodeozul-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-}
-.elinfiernodeozul-information-text-end {
-margin-bottom: 0px;
-}
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.elinfiernodeozul-container { display: block; }
-.elinfiernodeozul-container-mobile { display: none; }
-/* ======================================
-   MOVIL RESPONSIVE: EL INFIERNO DE OZUL
-====================================== */
-@media (max-width: 768px) {
-.elinfiernodeozul-container-mobile {
-position: relative;
-width: 90%;
-box-sizing: border-box;
-background-color: #9900CC !important;
-border-radius: 20px;
-padding: 20px;
-margin: 30px auto;
-}
-.elinfiernodeozul-container-mobile::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 100px; 
-background-color: #8000A8 !important;
-border-radius: 20px 20px 0 0;
-}
-.elinfiernodeozul-title-mobile {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2rem;
-color: white !important;
-text-decoration: none;
-text-align: center;
-margin: 0 0 10px 0; 
-}
-.elinfiernodeozul-title-mobile a {
-color: white !important;
-text-decoration: none;
-}
-/* CONTENEDOR: VIDEO MÓVIL */
-.elinfiernodeozul-video-mobile {
-width: 100%;
-margin: 0 0 20px 0;
-}
-.elinfiernodeozul-video-mobile iframe {
-width: 100%;
-border-radius: 15px;
-height: 300px;
-}
-/* CONTENEDOR: TEXTO MÓVIL */
-.elinfiernodeozul-information-mobile {
-width: 100%;
-}
-.elinfiernodeozul-information-text-mobile,
-.elinfiernodeozul-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.elinfiernodeozul-information-text-end-mobile {
-margin-bottom: 0px;
-}
-/* CONTROL DISPLAY MÓVIL */
-.elinfiernodeozul-container { display: none; }
-.elinfiernodeozul-container-mobile { display: block; }
-}
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    MUSIC VIDEO DIRECTION
