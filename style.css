@@ -1225,7 +1225,11 @@ margin-bottom: 0px;
 position: relative; 
 width: 95%;
 height: 100%;
-overflow: hidden; 
+overflow: hidden;
+  height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
+    display: flex; /* ← FLEX PARA CENTRAR */
+    justify-content: center; /* ← CENTRADO HORIZONTAL */
+    align-items: center; /* ← CENTRADO VERTICAL */
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
