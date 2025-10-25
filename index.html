@@ -2020,7 +2020,7 @@ setupMobileCarouselNavigation();
   
 
 
-<!-- SCRIP: BANNER FILM -->
+<!-- SCRIP: BANNER FILM PC-->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🎬 Banner Film iniciado');
@@ -2028,20 +2028,18 @@ console.log('🎬 Banner Film iniciado');
 function setupFilmBannerNavigation() {
 const filmBanner = document.querySelector('.film-banner');
 filmBanner.addEventListener('click', function() {
-console.log('🖱️ Click en banner Film - Navegando a: film-featurefilm-alone');
+console.log('🖱️ Click en banner Film - Navegando a: alone');
 // OCULTAR TODAS LAS SECCIONES 
 document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SECCIÓN FILM Y SUBSECCIÓN ALONE
-const filmSection = document.getElementById('film');
-const aloneSection = document.getElementById('film-featurefilm-alone');
-if (filmSection && aloneSection) {
-filmSection.style.display = 'block';
+// MOSTRAR SECCIÓN ALONE
+const aloneSection = document.getElementById('alone');
+if (aloneSection) {
 aloneSection.style.display = 'block';
 // DESPLAZAMIENTO HACIA LA SECCIÓN ALONE
 aloneSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = 'film-featurefilm-alone';
+window.location.hash = 'alone';
 }
 });
 // CURSOR
@@ -2052,7 +2050,7 @@ console.log('✅ Navegación del banner Film configurada');
 setupFilmBannerNavigation();
 });
 </script>
-<!-- FIN SCRIP: BANNER FILM -->
+<!-- FIN SCRIP: BANNER FILM PC -->
 
 <!-- SCRIP: BANNER FILM MÓVIL -->
 <script>
@@ -2062,20 +2060,18 @@ console.log('🎬 Banner Film móvil iniciado');
 function setupFilmBannerMobileNavigation() {
 const filmBannerMobile = document.querySelector('.film-banner-mobile');
 filmBannerMobile.addEventListener('click', function() {
-console.log('🖱️ Click en banner Film móvil - Navegando a: film-mobile-featurefilm-alone');
+console.log('🖱️ Click en banner Film móvil - Navegando a: alone-mobile');
 // OCULTAR TODAS LAS SECCIONES 
 document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SECCIÓN FILM MÓVIL Y SUBSECCIÓN ALONE MÓVIL
-const filmSectionMobile = document.getElementById('film-mobile');
-const aloneSectionMobile = document.getElementById('film-mobile-featurefilm-alone');
-if (filmSectionMobile && aloneSectionMobile) {
-filmSectionMobile.style.display = 'block';
+// MOSTRAR SECCIÓN ALONE MÓVIL
+const aloneSectionMobile = document.getElementById('alone-mobile');
+if (aloneSectionMobile) {
 aloneSectionMobile.style.display = 'block';
 // DESPLAZAMIENTO HACIA LA SECCIÓN ALONE MÓVIL
 aloneSectionMobile.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = 'film-mobile-featurefilm-alone';
+window.location.hash = 'alone-mobile';
 }
 });
 // CURSOR
