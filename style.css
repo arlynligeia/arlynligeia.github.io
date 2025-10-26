@@ -8,12 +8,61 @@ font-family: 'Orbitron', sans-serif;
 color: white;
 margin: 0;
 }
+
 /* --- TÍTULO PRINCIPAL --- */
 .site-title {
-font-size: 4.5em;
-text-align: center;
-margin: 20px 0;
+    font-size: 4.5em;
+    text-align: center;
+    margin: 20px;
+    font-family: 'Orbitron', monospace;
+    color: #00ff00; /* Verde matriz clásico */
+    font-weight: 900;
+    text-transform: uppercase;
+    
+    /* Efecto de monitor CRT */
+    text-shadow: 
+        0 0 5px #00ff00,
+        0 0 10px #00ff00,
+        2px 2px 0px #008800;
+    
+    /* Líneas de escaneo */
+    background: 
+        linear-gradient(
+            rgba(0, 255, 0, 0.1) 50%, 
+            transparent 50%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(0, 255, 0, 0.1),
+            transparent 20%,
+            rgba(0, 255, 0, 0.1) 80%,
+            transparent
+        );
+    background-size: 100% 4px, 6px 100%;
+    
+    /* Borde de monitor */
+    border: 3px double #00ff00;
+    padding: 20px;
+    box-shadow: 
+        inset 0 0 20px rgba(0, 255, 0, 0.3),
+        0 0 30px rgba(0, 255, 0, 0.2);
+    
+    /* Efecto de parpadeo sutil */
+    animation: crtFlicker 4s infinite;
 }
+
+@keyframes crtFlicker {
+    0%, 100% { opacity: 0.95; }
+    1% { opacity: 0.8; }
+    2% { opacity: 0.9; }
+    3% { opacity: 0.85; }
+    50% { opacity: 1; }
+    97% { opacity: 0.9; }
+    98% { opacity: 0.85; }
+    99% { opacity: 0.95; }
+}
+
+
 /* --- CONTENEDOR: MENÚ --- */
 nav {
 text-align: center;
