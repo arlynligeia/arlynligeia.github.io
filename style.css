@@ -2984,76 +2984,172 @@ margin-bottom: 0px;
 
 
 
-
-
-
-
-
-
-
 /* ======================================
    ART
 ====================================== */
-.art-container {
-position: relative;
-height: calc(100vh - 220px);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 30px;
-}
 /* CONTENEDOR: BANNER */
 .art-banner {
 position: relative; 
 width: 95%;
 height: 100%;
+overflow: hidden;
+height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
+display: flex; /* ← FLEX PARA CENTRAR */
+justify-content: center; /* ← CENTRADO HORIZONTAL */
+align-items: center; /* ← CENTRADO VERTICAL */
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .art-banner img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
+/* CONTENEDOR DE TEXTO ART */
+.art-container {
+position: relative;
+width: 800px;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.art-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.art-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.art-title a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.art-information {
+width: 100%;
+margin: 0px; 
+}
+.art-information-text,
+.art-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.art-information-text-end {
+margin-bottom: 0px;
+}
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.art-container { display: flex; }
+.art-banner { display: flex; }
+.art-container { display: block; }
+.art-banner-mobile { display: none; }
 .art-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: FASHION
+   MOVIL RESPONSIVE: ART
 ====================================== */
 @media (max-width: 768px) {
+/* CONTENEDOR: BANNER */
+.art-banner-mobile {
+position: relative; 
+width: 90%;
+height: 500px;
+overflow: hidden;
+background-color: #000000 !important;
+border-radius: 20px;
+border: 3px solid white !important;
+margin: 30px auto;
+}
+.art-banner-mobile img {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+/* CONTENEDOR DE TEXTO ART MÓVIL */
 .art-container-mobile {
 position: relative;
 width: 90%;
-height: auto;
-min-height: 300px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 20px auto;
-}
-/* CONTENEDOR: BANNER MÓVIL */
-.art-banner-mobile {
-position: relative; 
-width: 100%;
-height: 500px;
-background-color: #000000 !important;
+box-sizing: border-box;
+background-color: #9900CC !important;
 border-radius: 20px;
-border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
+padding: 20px;
 }
-.art-banner-mobile img {
+.art-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
 width: 100%;
-height: 100%;
-object-fit: cover;
+height: 60px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.art-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.art-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.art-information-mobile {
+width: 100%;
+margin: 0px;  
+}
+.art-information-text-mobile,
+.art-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.art-information-text-end-mobile {
+margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.art-banner { display: none; }
 .art-container { display: none; }
-.art-container-mobile { display: flex; }
+.art-banner-mobile { display: flex; }
+.art-container-mobile { display: block; }
 }
+
+
 
 /* ======================================
    SCIENCE
@@ -3259,7 +3355,7 @@ display: flex;
 justify-content: center;
 }
 /* BOTÓN FOLLOW */
-.researcharticle-button-follow-mobile {
+.researcharticle-button-orcid-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px;
@@ -3275,7 +3371,7 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.researcharticle-button-follow-mobile:hover {
+.researcharticle-button-orcid-mobile:hover {
 transform: scale(1.05);
 }
 /* CONTENEDOR: INFORMACION */
