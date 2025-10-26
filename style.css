@@ -10,7 +10,7 @@ margin: 0;
 }
 
 /* --- TÍTULO PRINCIPAL PC --- */
-.site-title-computer {
+.site-title {
 font-family: 'Orbitron', monospace;    
 font-size: 4.5em; 
 color: #ff1493 !important; 
@@ -40,7 +40,7 @@ inset 0 0 20px rgba(255, 20, 147, 0.3),
 0 0 30px rgba(255, 20, 147, 0.2);
 animation: crtFlicker 4s infinite;
 }
-.site-title-computer { display: block; }
+.site-title { display: block; }
 .site-title-mobile  { display: none; }
 /* --- TÍTULO PRINCIPAL MOVIL --- */
 @media (max-width: 768px) {
@@ -74,7 +74,7 @@ inset 0 0 20px rgba(255, 20, 147, 0.3),
 0 0 30px rgba(255, 20, 147, 0.2);
 animation: crtFlicker 4s infinite;
 }
-.site-title-computer { display: none; }
+.site-title { display: none; }
 .site-title-mobile  { display: block; }
 }
 @keyframes crtFlicker {
