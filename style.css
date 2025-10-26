@@ -3297,14 +3297,18 @@ transform: scale(1.05);
 width: 100%;
 margin: 0px;
 }
-.researcharticle-information-text {
+.researcharticle-information-text,
+.researcharticle-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
-margin: 0px;
+margin: 0 0 10px 0;
+}
+.researcharticle-information-text-end {
+margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .researcharticle-container { display: block; }
@@ -3543,6 +3547,12 @@ transform: scale(1.05);
 .psychology-container { display: none; }
 .psychology-container-mobile { display: block; }
 }
+
+
+
+
+
+
 
 
 /* ======================================
