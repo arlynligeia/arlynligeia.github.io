@@ -9,57 +9,50 @@ color: white;
 margin: 0;
 }
 
-/* --- TÍTULO PRINCIPAL --- */
+/* --- TÍTULO PRINCIPAL - MONITOR DESGASTADO --- */
 .site-title {
     font-size: 4.5em;
     text-align: center;
     margin: 15px;
     font-family: 'Orbitron', monospace;
-    color: #00ff00; /* Verde matriz clásico */
-    font-weight: 900;
+    color: #993399; /* Fucsia desgastado */
+    font-weight: 500;
     text-transform: uppercase;
     
-    /* Efecto de monitor CRT */
+    /* Efecto de texto desgastado */
     text-shadow: 
-        0 0 5px #00ff00,
-        0 0 10px #00ff00,
-        2px 2px 0px #008800;
+        1px 1px 1px #663366,
+        -1px -1px 1px #330033;
     
-    /* Líneas de escaneo */
+    /* Fondo con patrón de ruido */
     background: 
-        linear-gradient(
-            rgba(0, 255, 0, 0.1) 50%, 
-            transparent 50%
-        ),
-        linear-gradient(
-            90deg,
-            rgba(0, 255, 0, 0.1),
-            transparent 20%,
-            rgba(0, 255, 0, 0.1) 80%,
-            transparent
+        radial-gradient(circle at 20% 50%, rgba(153, 51, 153, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(153, 51, 153, 0.05) 0%, transparent 50%),
+        repeating-linear-gradient(
+            to bottom,
+            transparent,
+            transparent 4px,
+            rgba(153, 51, 153, 0.03) 4px,
+            rgba(153, 51, 153, 0.03) 6px
         );
-    background-size: 100% 4px, 6px 100%;
     
-    /* Borde de monitor */
-    border: 3px double #00ff00;
-    padding: 10px;
-    box-shadow: 
-        inset 0 0 20px rgba(0, 255, 0, 0.3),
-        0 0 30px rgba(0, 255, 0, 0.2);
+    /* Borde desgastado */
+    border: 1px dashed #993399;
+    padding: 25px;
     
-    /* Efecto de parpadeo sutil */
-    animation: crtFlicker 4s infinite;
+    /* Sin brillos, solo estilo retro */
+    box-shadow: none;
+    
+    /* Parpadeo irregular como monitor viejo */
+    animation: oldMonitor 10s infinite;
 }
 
-@keyframes crtFlicker {
-    0%, 100% { opacity: 0.95; }
-    1% { opacity: 0.8; }
-    2% { opacity: 0.9; }
-    3% { opacity: 0.85; }
-    50% { opacity: 1; }
-    97% { opacity: 0.9; }
-    98% { opacity: 0.85; }
-    99% { opacity: 0.95; }
+@keyframes oldMonitor {
+    0%, 96% { opacity: 1; }
+    97% { opacity: 0.7; }
+    98% { opacity: 1; }
+    99% { opacity: 0.8; }
+    100% { opacity: 1; }
 }
 
 
