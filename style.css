@@ -193,69 +193,63 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
+
 /* --- MENÚ HAMBURGUESA PARA MÓVIL --- */
 .mobile-menu-container {
-    display: none;
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    z-index: 1000;
+display: none;
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 1000;
 }
-
 /* Botón hamburguesa */
 .hamburger-btn {
-    display: flex;
-    flex-direction: column;
-    background: transparent;
-    border: 2px solid #ff1493;
-    border-radius: 5px;
-    padding: 8px 10px;
-    gap: 4px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+display: flex;
+flex-direction: column;
+background: transparent;
+border: 2px solid #ff1493;
+border-radius: 5px;
+padding: 8px 10px;
+gap: 4px;
+cursor: pointer;
+transition: all 0.3s ease;
 }
-
 .hamburger-btn span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: #ff1493;
-    transition: all 0.3s ease;
+display: block;
+width: 25px;
+height: 3px;
+background: #ff1493;
+transition: all 0.3s ease;
 }
-
 .hamburger-btn:hover {
-    background: rgba(255, 20, 147, 0.1);
-    transform: scale(1.1);
+background: rgba(255, 20, 147, 0.1);
+transform: scale(1.1);
 }
-
 /* Overlay del menú móvil - MISMO COLOR QUE SUBMENÚ */
 .mobile-menu-overlay {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background: #ff1493 !important; /* MISMO COLOR QUE SUBMENÚ */
-    z-index: 999;
-    transition: left 0.4s ease;
+position: fixed;
+width: 100%;
+height: 100%;
+top: 0;
+left: -100%;
+background: #ff1493 !important; /* MISMO COLOR QUE SUBMENÚ */
+z-index: 999;
+transition: left 0.4s ease;
 }
-
 .mobile-menu-overlay.active {
-    left: 0;
+ left: 0;
 }
-
 /* Navegación móvil */
 .mobile-nav {
-    height: 100%;
-    overflow-y: auto;
-    padding: 40px 20px 40px 20px;
+height: 100%;
+overflow-y: auto;
+padding: 40px 20px 40px 20px;
 }
-
 /* Elementos del menú móvil - MISMOS ESTILOS QUE SUBMENÚ */
 .mobile-nav a {
     display: block;
     width: 100%;
-    text-align: left;
+    text-align: center; /* ← AÑADE ESTA LÍNEA */
     background: transparent;
     border: none;
     color: white !important;
@@ -322,73 +316,14 @@ border-bottom: 1px solid white !important;
     background: rgba(255, 20, 147, 0.8);
 }
 
-/* Para Firefox */
-.mobile-nav {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 20, 147, 0.6) rgba(255, 255, 255, 0.1);
-}
 
 
 
 
-.mobile-menu {
-list-style: none;
-padding: 0;
-margin: 0;
-}
-.mobile-menu li {
-margin-bottom: 10px;
-border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-.mobile-menu a {
-display: block;
-padding: 15px 20px;
-color: white;
-text-decoration: none;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-text-transform: uppercase;
-transition: all 0.3s ease;
-border-radius: 8px;
-}
-.mobile-menu a:hover {
-background: rgba(255, 255, 255, 0.2);
-transform: translateX(10px);
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-/* Ocultar menú desktop en móvil */
-@media (max-width: 768px) {
-nav:not(.mobile-nav) {
-display: none;
-}
-.mobile-menu-container {
- display: block;
- }
-.site-title {
-width: 100%; /* AGREGAR ESTA LÍNEA */
-box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
-margin-left: 0; /* ELIMINAR esta línea */
-text-align: center; /* CAMBIAR a center */
-font-size: 3.5em; /* AUMENTAR tamaño */
-margin: 20px 0; /* AGREGAR margen vertical */
-padding: 0 20px; /* AGREGAR padding lateral */
-}
-}
-/* Ajustes para móviles muy pequeños */
-@media (max-width: 480px) {
-.mobile-menu a {
-font-size: 1.1rem;
-padding: 12px 15px;
-}
-.site-title {
-width: 100%; /* AGREGAR ESTA LÍNEA */
-box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
-font-size: 3em; /* AUMENTAR tamaño */
-margin-left: 0; /* ELIMINAR esta línea */
-text-align: center; /* MANTENER centrado */
-padding: 0 15px; /* MANTENER padding */
-}
-}
+
+
+
+
 
 
 
