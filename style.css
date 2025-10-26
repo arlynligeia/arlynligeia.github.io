@@ -1430,7 +1430,7 @@ z-index: 2;
 .featurefilm-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-grid-auto-rows: 500px;
+grid-auto-rows: 250px;
 gap: 20px;
 margin: 0 0 30px 0;
 }
@@ -1946,7 +1946,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 60px; 
+height: 100px; 
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -1992,42 +1992,32 @@ margin: 0px;
 
 
 
-
-
-
-
-
-
-
-
 /* ======================================
    MUSIC
 ====================================== */
-.music-container {
-position: relative;
-height: calc(100vh - 220px);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 30px;
-}
 /* CONTENEDOR: BANNER */
 .music-banner {
 position: relative; 
 width: 95%;
 height: 100%;
+overflow: hidden;
+  height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
+    display: flex; /* ← FLEX PARA CENTRAR */
+    justify-content: center; /* ← CENTRADO HORIZONTAL */
+    align-items: center; /* ← CENTRADO VERTICAL */
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .music-banner img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.music-information {
+/* CONTENEDOR DE TEXTO MUSIC */
+.music-container {
 position: relative;
 width: 800px;
 background-color: #9900CC !important;
@@ -2035,7 +2025,7 @@ border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
 }
-.music-information::before {
+.music-container::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -2046,7 +2036,7 @@ height: 90px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.music-information-title {
+.music-title {
 position: relative;
 z-index: 2;
 display: block;
@@ -2058,9 +2048,14 @@ line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
-.music-information-title a {
+.music-title a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.music-information {
+width: 100%;
+margin: 0px; 
 }
 .music-information-text,
 .music-information-text-end {
@@ -2076,51 +2071,42 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.music-container { display: flex; }
-.music-information { display: block; }
+.music-banner { display: flex; }
+.music-container { display: block; }
+.music-banner-mobile { display: none; }
 .music-container-mobile { display: none; }
-.music-information-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: MUSIC
 ====================================== */
 @media (max-width: 768px) {
-.music-container-mobile {
-position: relative;
-width: 90%;
-height: auto;
-min-height: 300px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 20px auto;
-}
-/* CONTENEDOR: BANNER MÓVIL */
+/* CONTENEDOR: BANNER */
 .music-banner-mobile {
 position: relative; 
-width: 100%;
+width: 90%;
 height: 500px;
+overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .music-banner-mobile img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.music-information-mobile {
+/* CONTENEDOR DE TEXTO MUSIC MÓVIL */
+.music-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
-.music-information-mobile::before {
+.music-container-mobile::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -2131,7 +2117,7 @@ height: 60px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.music-information-title-mobile {
+.music-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
@@ -2142,9 +2128,14 @@ text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
-.music-information-title-mobile a {
+.music-title-mobile a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.music-information-mobile {
+width: 100%;
+margin: 0px;  
 }
 .music-information-text-mobile,
 .music-information-text-end-mobile {
@@ -2155,17 +2146,15 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .music-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.music-banner { display: none; }
 .music-container { display: none; }
-.music-information { display: none; }
-.music-container-mobile { display: flex; }
-.music-information-mobile { display: block; }
+.music-banner-mobile { display: flex; }
+.music-container-mobile { display: block; }
 }
 
 /* ======================================
@@ -2207,37 +2196,37 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
-.album-image {
-width: 100%;
-min-width: 0;
-margin: 0px;
-margin: 0 0 15px 0;
+/* CONTENEDOR: COLUMNAS */
+.album-columns {
+position: relative;
+z-index: 2;
 }
-.album-image img {
-width: 100%;
-height: auto;
+/* CONTENEDOR: GRID DE 2 */
+.album-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 250px;
+gap: 20px;
+margin: 0 0 30px 0;
+}
+/* CONTENEDOR: TARJETA DE PRODUCTOS */
+.album-columns-grid-card {
+position: relative;
+overflow: hidden;
+height: 100%;
 display: block;
 border-radius: 15px;
-margin: 0px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.album-information {
-width: 100%;
-margin: 0px;
-}
-.album-information-text,
-.album-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
+border: 2px solid white !important;
 text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
 }
-.album-information-text-end {
-margin-botton: 0px;
+.album-columns-grid-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.album-columns-grid-card img:hover { 
+transform: scale(1.1);
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .album-container { display: block; }
@@ -2252,8 +2241,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .album-container-mobile::before {
 content: "";
@@ -2263,9 +2252,10 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
+ /* TÍTULO */
 .album-title-mobile {
 position: relative;
 z-index: 2;
@@ -2281,35 +2271,30 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.album-image-mobile {
-width: 100%;
-margin: 0 0 20px 0;
+/* CONTENEDOR: TARJETA DE PRODUCTOS */
+.album-cards-mobile {
+position: relative;
+z-index: 2;
 }
-.album-image-mobile img {
+.album-cards-1969-mobile {
+position: relative;
+overflow: hidden;
 width: 100%;
-height: auto;
+height: 200px;
 display: block;
 border-radius: 15px;
-}
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.album-information-mobile {
-width: 100%;
-}
-.album-information-text-mobile,
-.album-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white !important;
+border: 2px solid white !important;
 text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.album-information-text-end-mobile {
 margin-bottom: 0px;
+}
+.album-cards-1969-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.album-cards-1969-mobile img:hover { 
+transform: scale(1.1);
 }
 /* CONTROL DISPLAY MÓVIL */
 .album-container { display: none; }
@@ -2386,8 +2371,7 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.album1969-columns-grid-information-subtitle-1,
-.album1969-columns-grid-information-subtitle-2 {
+.album1969-columns-grid-information-subtitle-1 {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
@@ -2398,11 +2382,7 @@ margin: 0px;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.album1969-columns-grid-information-subtitle-2 {
-text-align: justify;
-}
-.album1969-columns-grid-information-text-1,
-.album1969-columns-grid-information-text-2 {
+.album1969-columns-grid-information-text-1 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -2412,9 +2392,6 @@ text-align: justify;
 margin: 0px;
 word-break: break-word;
 overflow-wrap: break-word;
-}
-.album1969-columns-grid-information-text-1 {
-margin-bottom: 30px;
 }
 /* CONTENEDOR: INFORMACION DEBAJO DE LAS COLUMNAS */
 .album1969-information {
@@ -2456,8 +2433,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .album1969-container-mobile::before {
 content: "";
@@ -2500,8 +2477,7 @@ border-radius: 15px;
 .album1969-information-mobile {
 width: 100%;
 }
-.album1969-information-subtitle-1-mobile,
-.album1969-information-subtitle-2-mobile {
+.album1969-information-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
@@ -2527,6 +2503,18 @@ margin-bottom: 0px;
 .album1969-container { display: none; }
 .album1969-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FASHION
