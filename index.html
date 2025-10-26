@@ -1886,9 +1886,9 @@ console.log('✅ Carrusel móvil configurado - Cambio cada 10 segundos');
 function setupMobileCarouselNavigation() {
 const carousel = document.querySelector('.home-carousel-mobile');
 const imageDestinations = {
-'home-carousel-image-1-mobile': 'film-featurefilm-alone',
-'home-carousel-image-2-mobile': 'music-album-album1969', 
-'home-carousel-image-3-mobile': 'fashion-fwcollection-fw2627'
+'home-carousel-image-1-mobile': 'alone-mobile',
+'home-carousel-image-2-mobile': 'album1969-mobile', 
+'home-carousel-image-3-mobile': 'fw2627-mobile'
 };
 carousel.addEventListener('click', function() {
 const activeImage = this.querySelector('.home-carousel-image-mobile.active');
@@ -1900,19 +1900,12 @@ console.log('🖱️ Click en carrusel móvil - Imagen activa:', activeImage.id,
 document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
 section.style.display = 'none';
 });
-// MOSTRAR SECCIÓN O SUBSECCIÓN
+// MOSTRAR SECCIÓN
 const targetSection = document.getElementById(destinationId);
 if (targetSection) {
-const mainSectionId = destinationId.split('-')[0];
-const mainSection = document.getElementById(mainSectionId);
-if (mainSection) {
-mainSection.style.display = 'block';
-document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
-subsection.style.display = 'block';
-});
+targetSection.style.display = 'block';
 targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 window.location.hash = destinationId;
-}
 }
 } else {
 console.warn('❌ No se encontró destino para:', activeImage.id);
