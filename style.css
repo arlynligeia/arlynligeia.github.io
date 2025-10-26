@@ -10,39 +10,72 @@ margin: 0;
 }
 
 /* --- TÍTULO PRINCIPAL PC --- */
-.site-title {
+.site-title-computer {
 font-family: 'Orbitron', monospace;    
 font-size: 4.5em; 
 color: #ff1493 !important; 
 text-align: center;
 margin: 15px;
 font-weight: 900;
-text-transform: uppercase;
- 
+text-transform: uppercase; 
 /* Líneas de escaneo VISIBLES */
 background: 
-    linear-gradient(
-        rgba(255, 105, 180, 0.3) 50%,  /* Fucsia visible pero suave */
-        transparent 50%
-    ),
-    linear-gradient(
-        90deg,
-        rgba(255, 105, 180, 0.2),      /* Fucsia visible */
-        transparent 20%,
-        rgba(255, 105, 180, 0.2) 80%,  /* Fucsia visible */
-        transparent
-    );
+linear-gradient(
+rgba(255, 105, 180, 0.3) 50%,
+transparent 50%
+),
+linear-gradient(
+90deg,
+rgba(255, 105, 180, 0.2),
+transparent 20%,
+rgba(255, 105, 180, 0.2) 80%,
+transparent
+);
 background-size: 100% 4px, 6px 100%;
-
-/* Borde de monitor */
-border: 3px double #ff1493 !important; 
+border: 3px double #ff1493 !important;
+border-radius: 15px; 
 padding: 20px;
 box-shadow: 
-    inset 0 0 20px rgba(255, 20, 147, 0.3),
-    0 0 30px rgba(255, 20, 147, 0.2);
-
-/* Efecto de parpadeo sutil */
+inset 0 0 20px rgba(255, 20, 147, 0.3),
+0 0 30px rgba(255, 20, 147, 0.2);
 animation: crtFlicker 4s infinite;
+}
+.site-title-computer { display: block; }
+.site-title-mobile  { display: none; }
+/* --- TÍTULO PRINCIPAL MOVIL --- */
+@media (max-width: 768px) {
+.site-title-mobile {
+font-family: 'Orbitron', monospace;    
+font-size: 3rem; 
+color: #ff1493 !important; 
+text-align: center;
+margin: 10px;
+font-weight: 900;
+text-transform: uppercase;
+/* Líneas de escaneo VISIBLES */
+background: 
+linear-gradient(
+rgba(255, 105, 180, 0.3) 50%,
+transparent 50%
+),
+linear-gradient(
+90deg,
+rgba(255, 105, 180, 0.2),
+transparent 20%,
+rgba(255, 105, 180, 0.2) 80%,
+transparent
+);
+background-size: 100% 4px, 6px 100%;
+border: 3px double #ff1493 !important;
+border-radius: 15px; 
+padding: 15px;
+box-shadow: 
+inset 0 0 20px rgba(255, 20, 147, 0.3),
+0 0 30px rgba(255, 20, 147, 0.2);
+animation: crtFlicker 4s infinite;
+}
+.site-title-computer { display: none; }
+.site-title-mobile  { display: block; }
 }
 @keyframes crtFlicker {
 0%, 100% { opacity: 0.95; }
@@ -54,10 +87,6 @@ animation: crtFlicker 4s infinite;
 98% { opacity: 0.85; }
 99% { opacity: 0.95; }
 }
-
-
-
-
 
 
 
@@ -195,22 +224,7 @@ text-shadow: 0 0 10px white; /* Texto blanco con brillo */
 
 
 
-/* --- RESPONSIVE: TÍTULO PARA MÓVILES --- */
-@media (max-width: 480px) {
-.site-title {
-font-size: 2.8em;
-margin: 15px 0;
-padding: 0 10px;
-}
-}
 
-@media (max-width: 360px) {
-.site-title {
- width: 100%; /* AGREGAR ESTA LÍNEA */
- box-sizing: border-box; /* AGREGAR ESTA LÍNEA */
- font-size: 2.2em;
-}
-}
 
 
 
