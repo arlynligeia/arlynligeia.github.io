@@ -20,17 +20,15 @@ font-weight: 900;
 text-transform: uppercase; 
 /* Líneas de escaneo VISIBLES */
 background: 
-linear-gradient(
-rgba(255, 105, 180, 0.2) 50%,
-transparent 50%
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(255, 20, 147, 0.05) 2px,
+rgba(255, 20, 147, 0.05) 4px
 ),
-linear-gradient(
-90deg,
-rgba(255, 105, 180, 0.1),
-transparent 20%,
-rgba(255, 105, 180, 0.1) 80%,
-transparent
-);
+transparent !important;
+ 
 background-size: 100% 4px, 6px 100%;
 border: 3px double #ff1493 !important;
 border-radius: 15px; 
@@ -42,6 +40,11 @@ animation: crtFlicker 4s infinite;
 }
 .site-title { display: block; }
 .site-title-mobile  { display: none; }
+
+
+
+
+
 /* --- TÍTULO PRINCIPAL MOVIL --- */
 @media (max-width: 768px) {
 .site-title-mobile {
@@ -87,6 +90,9 @@ animation: crtFlicker 4s infinite;
 98% { opacity: 0.85; }
 99% { opacity: 0.95; }
 }
+
+
+
 /* --- CONTENEDOR: MENÚ --- */
 nav {
 text-align: center;
@@ -136,6 +142,8 @@ transform: translateY(-1px);
 box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493;
 text-shadow: 0 0 10px white;
 }
+
+
 
 
 
