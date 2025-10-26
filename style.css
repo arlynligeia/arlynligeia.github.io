@@ -8,16 +8,16 @@ font-family: 'Orbitron', sans-serif;
 color: white;
 margin: 0;
 }
-/* --- TÍTULO PRINCIPAL DEL SITIO --- */
+/* --- TÍTULO PRINCIPAL --- */
 .site-title {
-text-align: center;
 font-size: 4.5em;
+text-align: center;
 margin: 20px 0;
 }
 /* --- CONTENEDOR: MENÚ --- */
 nav {
 text-align: center;
-margin-top: 10px;
+margin: 10px;
 }
 .menu {
 list-style: none;
@@ -33,26 +33,35 @@ position: relative;
 /* --- BOTONES: MENÚ PRINCIPAL --- */
 .menu-button,
 .cart-button {
-    background: transparent;
-    border-radius: 5px; 
-    border: 1px solid #ff1493; /* CAMBIAR a fucsia */
-    display: inline-block; 
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    color: white; /* MANTENER blanco */
-    text-decoration: none; 
-    padding: 8px 14px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
+display: inline-block;     
+background: transparent;
+border-radius: 5px; 
+border: 2px solid #ff1493 !important;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #ff1493 !important; 
+text-decoration: none; 
+padding: 10px;
+cursor: pointer;
+text-transform: uppercase;
+transition: all 0.3s ease;
+box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493; /* Borde neon iluminado */
+text-shadow: 0 0 5px #ff1493; /* Texto neon */
 }
-
 .menu-button:hover,
 .cart-button:hover {
-    background: rgba(255, 20, 147, 0.2); /* CAMBIAR a fucsia */
-    transform: translateY(-1px);
-    box-shadow: 0 2px 6px rgba(255, 20, 147, 0.3); /* CAMBIAR a fucsia */
+background: #ff1493 !important; /* Fondo fucsia neon */
+color: white !important; /* Texto blanco */
+transform: translateY(-1px);
+box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493; /* Más iluminación al hover */
+text-shadow: 0 0 10px white; /* Texto blanco con brillo */
 }
+
+
+
+
+
+
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
@@ -117,6 +126,12 @@ position: relative;
 .submenu li:hover::before {
     transform: scaleX(1);
 }
+
+
+
+
+
+
 
 
 
