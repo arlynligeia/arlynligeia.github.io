@@ -3446,22 +3446,20 @@ transform: scale(1.05);
 /* ======================================
    BE MY PATRON
 ====================================== */
-.bemypatron-container {
+/* CARRUSEL */
+.bemypatron-carousel {
 position: relative;
+width: 95%;
+height: 100%;
+overflow: hidden;
 height: calc(100vh - 220px);
 display: flex;
 justify-content: center;
 align-items: center;
-margin-top: 30px;
-}
-.bemypatron-carousel {
-width: 95%;
-height: 100%;
-overflow: hidden;
 background-color: #000000; 
 border: 3px solid white;
 border-radius: 20px;
-position: relative;
+margin: 40px auto;
 }
 .bemypatron-carousel-image {
 position: absolute;
@@ -3475,7 +3473,7 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 /* CONTENEDOR, FRANJA Y TÍTULO */
-.bemypatron-container-major {
+.bemypatron-container {
 position: relative;
 width: 800px;
 background-color: #9900CC !important;
@@ -3510,11 +3508,10 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .bemypatron-image {
 width: 100%;
 min-width: 0;
-margin: 0px;
 margin: 0 0 15px 0;
 }
 .bemypatron-image img {
@@ -3522,9 +3519,8 @@ width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
-margin: 0px;
 }
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
+/* CONTENEDOR: INFORMACION */
 .bemypatron-information {
 width: 100%;
 margin: 0px;
@@ -3543,32 +3539,24 @@ margin: 0 0 10px 0;
 margin-botton: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.bemypatron-container { display: flex; }
-.bemypatron-container-major { display: block; }
+.bemypatron-carousel { display: flex; }
+.bemypatron-container { display: block; }
+.bemypatron-carousel-mobile { display: none; }
 .bemypatron-container-mobile { display: none; }
-.bemypatron-container-major-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: BE MY PATRON
 ====================================== */
 @media (max-width: 768px) {
-.bemypatron-container-mobile {
+/* CARRUSEL */
+.bemypatron-carousel-mobile {
 position: relative;
 width: 90%;
 height: 500px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 20px auto;
-}
-.bemypatron-carousel-mobile {
-width: 100%;
-height: 100%;
 overflow: hidden;
 background-color: #000000; 
 border: 3px solid white;
 border-radius: 20px;
-position: relative;
+margin: 30px auto;
 }
 .bemypatron-carousel-image-mobile {
 position: absolute;
@@ -3581,14 +3569,15 @@ transition: opacity 1s ease-in-out;
 .bemypatron-carousel-image-mobile.active {
 opacity: 1;
 }
-.bemypatron-container-major-mobile {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.bemypatron-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .bemypatron-container-major-mobile::before {
 content: "";
@@ -3616,10 +3605,10 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
+/* CONTENEDOR: IMAGEN */
 .bemypatron-image-mobile {
 width: 100%;
-margin: 0 0 20px 0;
+margin: 0 0 10px 0;
 }
 .bemypatron-image-mobile img {
 width: 100%;
@@ -3627,9 +3616,10 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
+/* CONTENEDOR: INFORMACIÓN */
 .bemypatron-information-mobile {
 width: 100%;
+margin: 0px;
 }
 .bemypatron-information-text-mobile,
 .bemypatron-information-text-end-mobile {
@@ -3640,18 +3630,36 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .bemypatron-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-  .bemypatron-container { display: none; }
-  .bemypatron-container-major { display: none; }
-  .bemypatron-container-mobile { display: flex; }
-  .bemypatron-container-major-mobile { display: block; }
+.bemypatron-carousel { display: none; }
+.bemypatron-container { display: none; }
+.bemypatron-carousel-mobile { display: flex; }
+.bemypatron-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SUPPORT MY WORK
