@@ -9,7 +9,7 @@ color: white;
 margin: 0;
 }
 
-/* --- TÍTULO PRINCIPAL --- */
+/* --- TÍTULO PRINCIPAL PC --- */
 .site-title {
 font-family: 'Orbitron', monospace;    
 font-size: 4.5em; 
@@ -18,10 +18,6 @@ text-align: center;
 margin: 15px;
 font-weight: 900;
 text-transform: uppercase;
-
- 
-
- 
 /* Líneas de escaneo */
 background: 
 linear-gradient(
@@ -37,7 +33,7 @@ transparent
 );
 background-size: 100% 4px, 6px 100%;
 /* Borde de monitor */
-border: 3px double #00ff00;
+border: 3px double #ff1493 !important; 
 padding: 20px;
 box-shadow: 
 inset 0 0 20px rgba(0, 255, 0, 0.3),
@@ -55,6 +51,13 @@ animation: crtFlicker 4s infinite;
 98% { opacity: 0.85; }
 99% { opacity: 0.95; }
 }
+
+
+
+
+
+
+
 
 
 
@@ -103,6 +106,13 @@ transform: translateY(-1px);
 box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493; /* Más iluminación al hover */
 text-shadow: 0 0 10px white; /* Texto blanco con brillo */
 }
+
+
+
+
+
+
+
 
 
 
