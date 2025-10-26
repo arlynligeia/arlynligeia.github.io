@@ -1226,10 +1226,10 @@ position: relative;
 width: 95%;
 height: 100%;
 overflow: hidden;
-  height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
-    display: flex; /* ← FLEX PARA CENTRAR */
-    justify-content: center; /* ← CENTRADO HORIZONTAL */
-    align-items: center; /* ← CENTRADO VERTICAL */
+height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
+display: flex; /* ← FLEX PARA CENTRAR */
+justify-content: center; /* ← CENTRADO HORIZONTAL */
+align-items: center; /* ← CENTRADO VERTICAL */
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
@@ -2506,44 +2506,32 @@ margin-bottom: 0px;
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FASHION
 ====================================== */
-.fashion-container {
-position: relative;
-height: calc(100vh - 220px);
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 30px;
-}
 /* CONTENEDOR: BANNER */
 .fashion-banner {
 position: relative; 
 width: 95%;
 height: 100%;
+overflow: hidden;
+height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
+display: flex; /* ← FLEX PARA CENTRAR */
+justify-content: center; /* ← CENTRADO HORIZONTAL */
+align-items: center; /* ← CENTRADO VERTICAL */
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .fashion-banner img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.fashion-information {
+/* CONTENEDOR DE TEXTO FASHION */
+.fashion-container {
 position: relative;
 width: 800px;
 background-color: #9900CC !important;
@@ -2551,7 +2539,7 @@ border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
 }
-.fashion-information::before {
+.fashion-container::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -2562,7 +2550,7 @@ height: 90px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.fashion-information-title {
+.fashion-title {
 position: relative;
 z-index: 2;
 display: block;
@@ -2574,9 +2562,14 @@ line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
-.fashion-information-title a {
+.fashion-title a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashion-information {
+width: 100%;
+margin: 0px; 
 }
 .fashion-information-text,
 .fashion-information-text-end {
@@ -2592,51 +2585,42 @@ margin: 0 0 10px 0;
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.fashion-container { display: flex; }
-.fashion-information { display: block; }
+.fashion-banner { display: flex; }
+.fashion-container { display: block; }
+.fashion-banner-mobile { display: none; }
 .fashion-container-mobile { display: none; }
-.fashion-information-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: FASHION
 ====================================== */
 @media (max-width: 768px) {
-.fashion-container-mobile {
-position: relative;
-width: 90%;
-height: auto;
-min-height: 300px;
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 0;
-margin: 20px auto;
-}
-/* CONTENEDOR: BANNER MÓVIL */
+/* CONTENEDOR: BANNER */
 .fashion-banner-mobile {
 position: relative; 
-width: 100%;
+width: 90%;
 height: 500px;
+overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
 border: 3px solid white !important;
-overflow: hidden;
+margin: 30px auto;
 }
 .fashion-banner-mobile img {
+position: absolute;
 width: 100%;
 height: 100%;
 object-fit: cover;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.fashion-information-mobile {
+/* CONTENEDOR DE TEXTO FASHION MÓVIL */
+.fashion-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
-.fashion-information-mobile::before {
+.fashion-container-mobile::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -2647,7 +2631,7 @@ height: 60px;
 background-color: #8000A8 !important;
 border-radius: 20px 20px 0 0;
 }
-.fashion-information-title-mobile {
+.fashion-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
@@ -2658,9 +2642,14 @@ text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
-.fashion-information-title-mobile a {
+.fashion-title-mobile a {
 color: white !important;
 text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashion-information-mobile {
+width: 100%;
+margin: 0px;  
 }
 .fashion-information-text-mobile,
 .fashion-information-text-end-mobile {
@@ -2671,17 +2660,15 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .fashion-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.fashion-banner { display: none; }
 .fashion-container { display: none; }
-.fashion-information { display: none; }
-.fashion-container-mobile { display: flex; }
-.fashion-information-mobile { display: block; }
+.fashion-banner-mobile { display: flex; }
+.fashion-container-mobile { display: block; }
 }
 
 /* ======================================
@@ -2723,37 +2710,37 @@ margin: 0 0 16px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
-.fwcollection-image {
-width: 100%;
-min-width: 0;
-margin: 0px;
-margin: 0 0 15px 0;
+/* CONTENEDOR: COLUMNAS */
+.fwcollection-columns {
+position: relative;
+z-index: 2;
 }
-.fwcollection-image img {
-width: 100%;
-height: auto;
+/* CONTENEDOR: GRID DE 2 */
+.fwcollection-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 250px;
+gap: 20px;
+margin: 0 0 30px 0;
+}
+/* CONTENEDOR: TARJETA DE PRODUCTOS */
+.fwcollection-columns-grid-card {
+position: relative;
+overflow: hidden;
+height: 100%;
 display: block;
 border-radius: 15px;
-margin: 0px;
-}
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.fwcollection-information {
-width: 100%;
-margin: 0px;
-}
-.fwcollection-information-text,
-.fwcollection-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
+border: 2px solid white !important;
 text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
 }
-.fwcollection-information-text-end {
-margin-botton: 0px;
+.fwcollection-columns-grid-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.fwcollection-columns-grid-card img:hover { 
+transform: scale(1.1);
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .fwcollection-container { display: block; }
@@ -2768,8 +2755,8 @@ width: 90%;
 box-sizing: border-box;
 background-color: #9900CC !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .fwcollection-container-mobile::before {
 content: "";
@@ -2779,9 +2766,10 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #8000A8 !important; 
 border-radius: 20px 20px 0 0;
 }
+ /* TÍTULO */
 .fwcollection-title-mobile {
 position: relative;
 z-index: 2;
@@ -2797,35 +2785,30 @@ margin: 0 0 10px 0;
 color: white !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.fwcollection-image-mobile {
-width: 100%;
-margin: 0 0 20px 0;
+/* CONTENEDOR: TARJETA DE PRODUCTOS */
+.fwcollection-cards-mobile {
+position: relative;
+z-index: 2;
 }
-.fwcollection-image-mobile img {
+.fwcollection-cards-2627-mobile {
+position: relative;
+overflow: hidden;
 width: 100%;
-height: auto;
+height: 200px;
 display: block;
 border-radius: 15px;
-}
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.fwcollection-information-mobile {
-width: 100%;
-}
-.fwcollection-information-text-mobile,
-.fwcollection-information-text-end-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: white !important;
+border: 2px solid white !important;
 text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
-}
-.fwcollection-information-text-end-mobile {
 margin-bottom: 0px;
+}
+.fwcollection-cards-2627-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.fwcollection-cards-2627-mobile img:hover { 
+transform: scale(1.1);
 }
 /* CONTROL DISPLAY MÓVIL */
 .fwcollection-container { display: none; }
@@ -2890,18 +2873,14 @@ margin: 0px;
 width: 100%;
 margin: 0px;
 }
-.fw2627-information-subtitle,
-.fw2627-information-subtitle-end {
+.fw2627-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
-margin: 0px;
-}
-.fw2627-information-subtitle-end {
-margin-botton: 10px;
+margin-bottom: 10px;
 }
 .fw2627-information-text,
 .fw2627-information-text-end {
@@ -2972,9 +2951,9 @@ border-radius: 15px;
 /* CONTENEDOR: INFORMACIÓN MÓVIL */
 .fw2627-information-mobile {
 width: 100%;
+margin: 0px;
 }
-.fw2627-information-subtitle-1-mobile,
-.fw2627-information-subtitle-2-mobile {
+.fw2627-information-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
@@ -3002,6 +2981,15 @@ margin-bottom: 0px;
 .fw2627-container { display: none; }
 .fw2627-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ART
