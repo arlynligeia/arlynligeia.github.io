@@ -1169,26 +1169,19 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 
 
 
-
-
-
-
-
-
-
   
 <!-- BE MY PATRON PC -->
 <section class="bemypatron-section main-section" id="bemypatron">
-<div class="bemypatron-container">
 <!-- CONTENEDOR: CARRUSEL -->
 <div class="bemypatron-carousel"> 
 <img class="bemypatron-carousel-image active" id="bemypatron-carousel-image-1" src="assets/assets/Nuevayork.png" alt="Image 1">
 <img class="bemypatron-carousel-image" id="bemypatron-carousel-image-2" src="assets/assets/Fondociudad.png" alt="Image 2">
 <img class="bemypatron-carousel-image" id="bemypatron-carousel-image-3" src="assets/assets/Nuevayork.png" alt="Image 3">
+<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-4" src="assets/assets/Nuevayork.png" alt="Image 5">
+<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-5" src="assets/assets/Fondociudad.png" alt="Image 5">
 </div>
-</div>  
-<!-- CONTENEDOR: PRINCIPAL -->
-<div class="bemypatron-container-major">
+<!-- CONTENEDOR -->
+<div class="bemypatron-container">
 <h2 class="bemypatron-title"><a href="#bemypatron">BE MY PATRON</a></h2>
 <!-- CONTENEDOR: IMAGEN -->  
 <div class="bemypatron-image">
@@ -1201,19 +1194,19 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </div>
 </section>
 <!-- FIN BE MY PATRON PC -->
-   
+  
 <!-- BE MY PATRON MÓVIL -->
 <section class="bemypatron-section main-section mobile-only" id="bemypatron-mobile">
-<div class="bemypatron-container-mobile">
 <!-- CONTENEDOR: CARRUSEL -->
 <div class="bemypatron-carousel-mobile"> 
 <img class="bemypatron-carousel-image-mobile active" id="bemypatron-carousel-image-1-mobile" src="assets/assets/Nuevayork.png" alt="Image 1">
 <img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-2-mobile" src="assets/assets/Fondociudad.png" alt="Image 2">
 <img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-3-mobile" src="assets/assets/Nuevayork.png" alt="Image 3">
+<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-4-mobile" src="assets/assets/Nuevayork.png" alt="Image 5">
+<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-5-mobile" src="assets/assets/Fondociudad.png" alt="Image 5">
 </div>
-</div>
-<!-- CONTENEDOR: PRINCIPAL -->
-<div class="bemypatron-container-major-mobile">
+<!-- CONTENEDOR -->
+<div class="bemypatron-container-mobile">
 <h2 class="bemypatron-title-mobile"><a href="#bemypatron-mobile">BE MY PATRON</a></h2>
 <!-- CONTENEDOR: IMAGEN -->  
 <div class="bemypatron-image-mobile">
@@ -1226,7 +1219,23 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </div>
 </section>
 <!-- FIN BE MY PATRON MÓVIL -->
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- SUPPORT MY WORK -->
 <section class="subsection" id="bemypatron-supportmywork">
 <div class="supportmywork-container">
@@ -2254,6 +2263,152 @@ setupScienceMobileCarouselNavigation();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL SCIENCE MÓVIL -->
+
+
+
+<!-- SCRIP: CARRUSEL BE MY PATRON PC-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🎨 Carrusel Be My Patron iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startBemypatronCarousel() {
+const images = document.querySelectorAll('.bemypatron-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Be My Patron configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupBemypatronCarouselNavigation() {
+const carousel = document.querySelector('.bemypatron-carousel');
+const imageDestinations = {
+'bemypatron-carousel-image-1': 'bemypatron',
+'bemypatron-carousel-image-2': 'bemypatron',
+'bemypatron-carousel-image-3': 'bemypatron',
+'bemypatron-carousel-image-4': 'bemypatron',
+'bemypatron-carousel-image-5': 'bemypatron'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.bemypatron-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel Be My Patron - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ targetSection.style.display = 'block';
+ targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+ window.location.hash = destinationId;
+ }
+ } else {
+ console.warn('❌ No se encontró destino para:', activeImage.id);
+ }
+ }
+ });
+ // CURSOR
+ carousel.style.cursor = 'pointer';
+ console.log('✅ Navegación del carrusel Be My Patron configurada');
+}
+// INICIALIZACIÓN 
+startBemypatronCarousel();
+setupBemypatronCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL BE MY PATRON PC -->
+
+<!-- SCRIP: CARRUSEL BE MY PATRON MÓVIL -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🎨 Carrusel Be My Patron móvil iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO PARA MÓVIL
+function startBemypatronMobileCarousel() {
+const images = document.querySelectorAll('.bemypatron-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Be My Patron móvil configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES MÓVIL
+function setupBemypatronMobileCarouselNavigation() {
+const carousel = document.querySelector('.bemypatron-carousel-mobile');
+const imageDestinations = {
+'bemypatron-carousel-image-1-mobile': 'bemypatron-mobile',
+'bemypatron-carousel-image-2-mobile': 'bemypatron-mobile', 
+'bemypatron-carousel-image-3-mobile': 'bemypatron-mobile',
+'bemypatron-carousel-image-4-mobile': 'bemypatron-mobile',
+'bemypatron-carousel-image-5-mobile': 'bemypatron-mobile'
+};
+carousel.addEventListener('click', function() {
+const activeImage = this.querySelector('.bemypatron-carousel-image-mobile.active');
+if (activeImage) {
+const destinationId = imageDestinations[activeImage.id];
+if (destinationId) {
+console.log('🖱️ Click en carrusel Be My Patron móvil - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN
+const targetSection = document.getElementById(destinationId);
+if (targetSection) {
+targetSection.style.display = 'block';
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel Be My Patron móvil configurada');
+}
+// INICIALIZACIÓN 
+startBemypatronMobileCarousel();
+setupBemypatronMobileCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL BE MY PATRON MÓVIL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </body>
   
 </html>
