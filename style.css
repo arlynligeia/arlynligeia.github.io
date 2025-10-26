@@ -13,7 +13,7 @@ margin: 0;
 .site-title {
 font-family: 'Orbitron', monospace;    
 font-size: 4.5em; 
-color: #ff00ff !important;
+color: #ff1493 !important;
 text-align: center;
 margin: 15px;
 font-weight: 900;
@@ -21,14 +21,14 @@ text-transform: uppercase;
 /* Líneas de escaneo VISIBLES */
 background: 
 linear-gradient(
-rgba(255, 105, 180, 0.3) 50%,
+rgba(255, 105, 180, 0.2) 50%,
 transparent 50%
 ),
 linear-gradient(
 90deg,
-rgba(255, 105, 180, 0.2),
+rgba(255, 105, 180, 0.1),
 transparent 20%,
-rgba(255, 105, 180, 0.2) 80%,
+rgba(255, 105, 180, 0.1) 80%,
 transparent
 );
 background-size: 100% 4px, 6px 100%;
@@ -47,7 +47,7 @@ animation: crtFlicker 4s infinite;
 .site-title-mobile {
 font-family: 'Orbitron', monospace;    
 font-size: 3rem; 
-color: #ff00ff !important;
+color: #ff1493 !important;
 text-align: center;
 margin: 10px;
 font-weight: 900;
@@ -55,14 +55,14 @@ text-transform: uppercase;
 /* Líneas de escaneo VISIBLES */
 background: 
 linear-gradient(
-rgba(255, 105, 180, 0.3) 50%,
+rgba(255, 105, 180, 0.2) 50%,
 transparent 50%
 ),
 linear-gradient(
 90deg,
-rgba(255, 105, 180, 0.2),
+rgba(255, 105, 180, 0.1),
 transparent 20%,
-rgba(255, 105, 180, 0.2) 80%,
+rgba(255, 105, 180, 0.1) 80%,
 transparent
 );
 background-size: 100% 4px, 6px 100%;
@@ -87,15 +87,6 @@ animation: crtFlicker 4s infinite;
 98% { opacity: 0.85; }
 99% { opacity: 0.95; }
 }
-
-
-
-
-
-
-
-
-
 /* --- CONTENEDOR: MENÚ --- */
 nav {
 text-align: center;
@@ -107,7 +98,6 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
-padding: 0;
 }
 .menu li {
 position: relative;
@@ -117,8 +107,8 @@ position: relative;
 .cart-button {
 display: inline-block;     
 background: transparent;
-border-radius: 5px; 
-border: 2px solid #ff1493 !important;
+border-radius: 6px;
+border: 2px double #ff1493 !important;
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: #ff1493 !important; 
@@ -127,30 +117,15 @@ padding: 10px;
 cursor: pointer;
 text-transform: uppercase;
 transition: all 0.3s ease;
-box-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493; /* Borde neon iluminado */
-text-shadow: 0 0 5px #ff1493; /* Texto neon */
 }
 .menu-button:hover,
 .cart-button:hover {
-background: #ff1493 !important; /* Fondo fucsia neon */
-color: white !important; /* Texto blanco */
+background: #ff1493 !important;
+color: white !important;
 transform: translateY(-1px);
-box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493; /* Más iluminación al hover */
-text-shadow: 0 0 10px white; /* Texto blanco con brillo */
+box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493;
+text-shadow: 0 0 10px white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
@@ -159,12 +134,13 @@ text-shadow: 0 0 10px white; /* Texto blanco con brillo */
     top: 40px;
     left: 0;
     list-style: none;
-    background: rgba(0, 0, 0, 0.9);
+    background: #ffb6c1 !important; /* ROSADO BARBIE para el fondo */
     z-index: 1000;
-    border: 1px solid #ff1493; /* CAMBIAR a fucsia */
-    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.4); /* CAMBIAR a fucsia */
+    border: 2px solid #ff1493 !important; /* Borde fucsia */
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.6); /* Sombra fucsia más intensa */
     padding: 0;
     margin: 0;
+    border-radius: 8px; /* Esquinas redondeadas para mejor look */
 }
 
 .menu li:hover .submenu {
@@ -183,22 +159,24 @@ text-shadow: 0 0 10px white; /* Texto blanco con brillo */
     text-align: left;
     background: transparent;
     border: none;
-    color: white; /* MANTENER blanco */
-    padding: 10px 15px;
+    color: white !important; /* LETRAS BLANCAS */
+    padding: 12px 15px; /* Un poco más de padding */
     font-size: 0.9rem;
     font-family: 'Rajdhani', sans-serif;
     text-transform: capitalize;
     white-space: nowrap;
     text-decoration: none;
-    transition: all 0.2s ease;
+    transition: all 0.3s ease;
+    font-weight: 600; /* Letras un poco más gruesas para mejor contraste */
 }
 
 .submenu-button:hover {
-    background: rgba(255, 20, 147, 0.1); /* CAMBIAR a fucsia */
-    padding-left: 18px;
+    background: rgba(255, 20, 147, 0.2) !important; /* Fondo fucsia al hover */
+    color: white !important; /* Mantener letras blancas */
+    padding-left: 20px; /* Efecto de desplazamiento */
 }
 
-/* --- LÍNEA FUCSIA ANIMADA --- */
+/* --- LÍNEA CELESTE AGUA ANIMADA --- */
 .submenu li::before {
     content: '';
     position: absolute;
@@ -206,7 +184,7 @@ text-shadow: 0 0 10px white; /* Texto blanco con brillo */
     bottom: 0;
     width: 100%;
     height: 3px;
-    background-color: #ff1493 !important;
+    background-color: #7ec0ee !important; /* CELESTE AGUA */
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
@@ -216,6 +194,10 @@ text-shadow: 0 0 10px white; /* Texto blanco con brillo */
     transform: scaleX(1);
 }
 
+/* --- Separadores entre items --- */
+.submenu li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separadores blancos sutiles */
+}
 
 
 
