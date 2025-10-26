@@ -1067,22 +1067,18 @@ allowfullscreen>
   
 <!-- ART -->
 <section class="art-section main-section" id="art">
-<div class="art-container">
 <!-- CONTENEDOR: BANNER -->  
 <div class="art-banner">
 <img src="assets/assets/Nuevayork.png" alt="Art Banner"/>
-</div>
 </div>
 </section>
 <!-- FIN ART -->
 
 <!-- ART MÓVIL -->
 <section class="art-section main-section mobile-only" id="art-mobile">
-<div class="art-container-mobile">
 <!-- CONTENEDOR: BANNER -->  
 <div class="art-banner-mobile">
 <img src="assets/assets/Nuevayork.png" alt="Art Banner"/>
-</div>
 </div>
 </section>
 <!-- ART FASHION MÓVIL -->   
@@ -2153,7 +2149,142 @@ setupFashionBannerMobileNavigation();
 });
 </script>
 <!-- FIN SCRIP: BANNER FASHION MÓVIL -->
-   
+
+
+
+
+
+<!-- SCRIP: CARRUSEL SCIENCE PC-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔬 Carrusel Science iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startScienceCarousel() {
+const images = document.querySelectorAll('.science-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Science configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupScienceCarouselNavigation() {
+const carousel = document.querySelector('.science-carousel');
+const imageDestinations = {
+'science-carousel-image-1': 'science-researcharticle',
+'science-carousel-image-2': 'science-researcharticle',
+'science-carousel-image-3': 'science-researcharticle'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.science-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel Science - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel Science configurada');
+}
+// INICIALIZACIÓN 
+startScienceCarousel();
+setupScienceCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL SCIENCE PC -->
+
+<!-- SCRIP: CARRUSEL SCIENCE MÓVIL -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔬 Carrusel Science móvil iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO PARA MÓVIL
+function startScienceMobileCarousel() {
+const images = document.querySelectorAll('.science-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Science móvil configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES MÓVIL
+function setupScienceMobileCarouselNavigation() {
+const carousel = document.querySelector('.science-carousel-mobile');
+const imageDestinations = {
+'science-carousel-image-1-mobile': 'science-mobile-researcharticle',
+'science-carousel-image-2-mobile': 'science-mobile-researcharticle', 
+'science-carousel-image-3-mobile': 'science-mobile-researcharticle'
+};
+carousel.addEventListener('click', function() {
+const activeImage = this.querySelector('.science-carousel-image-mobile.active');
+if (activeImage) {
+const destinationId = imageDestinations[activeImage.id];
+if (destinationId) {
+console.log('🖱️ Click en carrusel Science móvil - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN O SUBSECCIÓN
+const targetSection = document.getElementById(destinationId);
+if (targetSection) {
+const mainSectionId = destinationId.split('-')[0];
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel Science móvil configurada');
+}
+// INICIALIZACIÓN 
+startScienceMobileCarousel();
+setupScienceMobileCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL SCIENCE MÓVIL -->
 </body>
   
 </html>
