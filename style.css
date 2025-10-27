@@ -201,12 +201,12 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
-
+.nav { display: block; }
+.menu-mobile { display: none; }
 
 /* --- MENÚ HAMBURGUESA MÓVIL --- */
 @media (max-width: 768px) {
 .menu-mobile {
-    display: block;
     position: fixed;
     top: 15px;
     right: 15px;
