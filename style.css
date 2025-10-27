@@ -81,6 +81,7 @@ animation: crtFlicker 4s infinite;
 98% { opacity: 0.85; }
 99% { opacity: 0.95; }
 }
+
 /* --- CONTENEDOR: MENÚ --- */
 nav {
 text-align: center;
@@ -192,6 +193,12 @@ transform: scaleX(1);
 .submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
+
+
+
+
+
+
 
 /* --- MENÚ HAMBURGUESA PARA MÓVIL --- */
 .mobile-menu-container {
@@ -315,6 +322,18 @@ padding: 20px;
     background: rgba(255, 20, 147, 0.8);
 }
 
+/* --- MEDIA QUERY PARA MÓVIL --- */
+@media (max-width: 768px) {
+    /* OCULTAR MENÚ PC EN MÓVIL */
+    nav {
+        display: none;
+    }
+    
+    /* MOSTRAR MENÚ HAMBURGUESA EN MÓVIL */
+    .mobile-menu-container {
+        display: block;
+    }
+}
 
 
 
