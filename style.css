@@ -220,12 +220,12 @@ left: -100%;
 background: #ff00ff !important;
 transition: left 0.4s ease;
 }
-.menu-mobile-hamburger.active {
+.menu-mobile-hamburger-overlay.active {
 left: 0;
 }
 
 /* Lista del menú móvil */
-.menu-mobile-hamburger ul {
+.menu-mobile-hamburger-overlay ul {
 list-style: none;
 padding: 0;
 margin: 0;
@@ -234,7 +234,7 @@ overflow-y: auto;
 padding: 10px 20px 10px 20px;
 }
 /* Elementos del menú */
-.menu-mobile-hamburger a {
+.menu-mobile-hamburger-overlay a {
 position: relative;
 display: block;
 width: 100%;
@@ -252,12 +252,12 @@ border: none;
 transition: all 0.3s ease;
 }
 /* Efecto hover */
-.menu-mobile-hamburger a:hover {
+.menu-mobile-hamburger-overlay a:hover {
 background: rgba(255, 0, 255, 0.3) !important; /* ← Más opaco fuccia neon (30%) */
 }
 
 /* LÍNEA INFERIOR ANIMADA */
-.menu-mobile-hamburger a::before {
+.menu-mobile-hamburger-overlay a::before {
 content: '';
 position: absolute;
  left: 20px;                     /* ← Mismo margen que el padding de la lista */
@@ -274,31 +274,31 @@ transition: transform 0.3s ease;
 
 
 /* SEPARADORES BLANCOS */
-.menu-mobile-hamburger li:not(:last-child) {
+.menu-mobile-hamburger-overlay li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
 
 /* Personalizar scroll */
-.menu-mobile-hamburger ul::-webkit-scrollbar {
+.menu-mobile-hamburger-overlay ul::-webkit-scrollbar {
     width: 6px;
 }
 
-.menu-mobile-hamburger ul::-webkit-scrollbar-track {
+.menu-mobile-hamburger-overlay ul::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
 }
 
-.menu-mobile-hamburger ul::-webkit-scrollbar-thumb {
+.menu-mobile-hamburger-overlay ul::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.6);
     border-radius: 10px;
 }
 
-.menu-mobile-hamburger ul::-webkit-scrollbar-thumb:hover {
+.menu-mobile-hamburger-overlay ul::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.8);
 }
 
 /* Para Firefox */
-.menu-mobile-hamburger ul {
+.menu-mobile-hamburger-overlay ul {
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.6) rgba(255, 255, 255, 0.1);
 }
