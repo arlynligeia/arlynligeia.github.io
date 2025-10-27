@@ -5004,7 +5004,112 @@ line-height: 1.5;
 text-align: justify;
 margin: 0;
 }
-
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
+.shippingdetails-container { display: block; }
+.shippingdetails-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SHIPPING DETAILS
+====================================== */
+@media (max-width: 768px) {
+.shippingdetails-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.shippingdetails-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #8000A8 !important; 
+border-radius: 20px 20px 0 0;
+}
+.shippingdetails-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.shippingdetails-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR DE CONTENIDO */
+.shippingdetails-content-mobile {
+width: 100%;
+}
+.shippingdetails-content-group-mobile {
+margin-bottom: 10px;
+}
+.shippingdetails-content-group-row-mobile {   
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+}
+/* CAJAS DE TEXTO */
+.shippingdetails-content-group-box-mobile {
+width: 100%;
+height: 20px;
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;   
+padding: 10px;
+margin: 0px; 
+}
+/* SEPARADOR */
+.shippingdetails-content-divider-mobile {
+width: 100%;
+border-top: 3px solid #39ff14 !important;
+height: 0;
+margin-bottom: 10px; 
+}
+ /* CONTENEDOR: INFORMACIÓN */
+.shippingdetails-information-mobile {
+width: 100%;
+margin: 0px; 
+}
+.shippingdetails-information-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #39ff14 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.shippingdetails-information-text-mobile,
+.shippingdetails-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.shippingdetails-information-text-end-mobile {
+margin-bottom: 0px;
+}
+ /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.shippingdetails-container { display: none; }
+.shippingdetails-container-mobile { display: block; }
+}
 
 
 
