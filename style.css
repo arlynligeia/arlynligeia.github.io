@@ -85,9 +85,6 @@ animation: crtFlicker 4s infinite;
    MENÚ Y SUBMENUS
 ====================================== */
 nav {
-width: 100%; /* ← Añade esto */
-display: flex;
-justify-content: center;
 text-align: center;
 margin: 10px auto;
 }
@@ -97,6 +94,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
+padding: 0px;
 }
 .menu li {
 position: relative;
@@ -135,6 +133,11 @@ transform: translateY(-1px);
 box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493;
 text-shadow: 0 0 10px white;
 }
+
+
+
+
+
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
 position: absolute; 
