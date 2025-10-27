@@ -133,11 +133,6 @@ transform: translateY(-1px);
 box-shadow: 0 0 15px #ff1493, 0 0 30px #ff1493, 0 0 45px #ff1493;
 text-shadow: 0 0 10px white;
 }
-
-
-
-
-
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
 position: absolute; 
@@ -202,6 +197,157 @@ border-bottom: 1px solid white !important;
 }
 
 
+
+
+
+
+
+
+
+
+/* --- MENÚ HAMBURGUESA MÓVIL --- */
+.menu-mobile {
+    display: none;
+}
+
+/* Botón hamburguesa */
+.menu-mobile-hamburger-button {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: 2px solid #ff00ff;
+    border-radius: 6px;
+    padding: 12px 10px;
+    gap: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.menu-mobile-hamburger-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff00ff;
+    transition: all 0.3s ease;
+}
+
+.menu-mobile-hamburger-button:hover {
+    background: rgba(255, 0, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Overlay del menú móvil */
+.menu-mobile-hamburger {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #ff00ff !important; /* FUCIA NEÓN */
+    z-index: 1000;
+    transition: left 0.4s ease;
+}
+
+.menu-mobile-hamburger.active {
+    left: 0;
+}
+
+/* Lista del menú móvil */
+.menu-mobile-hamburger ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    padding: 80px 20px 40px 20px;
+}
+
+/* Elementos del menú */
+.menu-mobile-hamburger a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    border: none;
+    color: white !important;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto hover */
+.menu-mobile-hamburger a:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    padding-left: 25px;
+}
+
+/* LÍNEA INFERIOR ANIMADA */
+.menu-mobile-hamburger a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #7ec0ee !important; /* CELESTE */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.menu-mobile-hamburger a:hover::before {
+    transform: scaleX(1);
+}
+
+/* SEPARADORES BLANCOS */
+.menu-mobile-hamburger li:not(:last-child) {
+    border-bottom: 1px solid white !important;
+}
+
+/* Personalizar scroll */
+.menu-mobile-hamburger ul::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu-mobile-hamburger ul::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.menu-mobile-hamburger ul::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+.menu-mobile-hamburger ul::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Para Firefox */
+.menu-mobile-hamburger ul {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.6) rgba(255, 255, 255, 0.1);
+}
+
+/* --- MEDIA QUERY PARA MÓVIL --- */
+@media (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+    }
+}
 
 
 
