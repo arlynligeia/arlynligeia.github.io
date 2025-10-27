@@ -1518,14 +1518,14 @@ console.log('✅ Navegación configurada correctamente');
 
 
 
-  <script>
+<script>
 // MENÚ HAMBURGUESA - FUNCIONALIDAD
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
-    const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+    const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button'); // CAMBIADO
+    const mobileMenuOverlay = document.getElementById('menu-mobile-hamburger'); // CAMBIADO
+    const mobileMenuLinks = document.querySelectorAll('.menu-mobile-hamburger a'); // CAMBIADO
 
-    // FUNCIONES DE NAVEGACIÓN
+    // FUNCIONES DE NAVEGACIÓN (SIN CAMBIOS)
     function showOnlyOneSection(sectionId) {
         console.log('🔧 Menú móvil: Mostrando SOLO:', sectionId);
         // OCULTAR TODAS LAS SECCIONES  
@@ -1548,7 +1548,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // FUNCIÓN: MOSTRAR HOME-MOBILE AL CARGAR LA PÁGINA EN MÓVIL
+    // FUNCIÓN: MOSTRAR HOME-MOBILE AL CARGAR LA PÁGINA EN MÓVIL (SIN CAMBIOS)
     function initializeMobileHome() {
         const isMobile = window.innerWidth <= 768;
         
@@ -1562,7 +1562,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Abrir/cerrar menú hamburguesa
+    // Abrir/cerrar menú hamburguesa (SIN CAMBIOS)
     hamburgerBtn.addEventListener('click', function() {
         mobileMenuOverlay.classList.toggle('active');
         const spans = this.querySelectorAll('span');
@@ -1577,7 +1577,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+    // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SIN CAMBIOS)
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
@@ -1607,14 +1607,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-// 4. MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE)
+    // MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE) (SIN CAMBIOS)
     window.addEventListener('popstate', function(event) {
         console.log('🔧 Navegación con flechas detectada');
         checkInitialHash();
     });
 
-  
-    // INICIALIZACIÓN DEL HOME EN MÓVIL
+    // INICIALIZACIÓN DEL HOME EN MÓVIL (SIN CAMBIOS)
     initializeMobileHome();
     console.log('✅ Menú hamburguesa configurado correctamente');
 });
