@@ -193,7 +193,7 @@ background: transparent;
 border: 2px solid #ff1493 !important;
 border-radius: 6px;
 padding: 10px;
-gap: 4px;
+gap: 5px;
 cursor: pointer;
 transition: all 0.3s ease;
 }
@@ -205,27 +205,22 @@ background: #ff1493 !important;
 transition: all 0.3s ease;
 }
 .menu-mobile-hamburger-button:hover {
-background: #ff1493 !important;
-box-shadow: 0 0 10px #ff00ff , 0 0 20px #ff00ff, 0 0 30px #ff00ff;
 transform: scale(1);
 }
 
-/* Overlay del menú móvil */
+/* OVERLAY */
 .menu-mobile-hamburger-overlay {
 position: fixed;
 z-index: 1000; 
 width: 100%;
 height: 100%;
-top: 0;
-left: -100%;
+top: -100%;
+left: 0;
 background: #ff1493 !important;
-transition: left 0.4s ease;
 }
 .menu-mobile-hamburger-overlay.active {
-left: 0;
+top: 0;
 }
-
-/* Lista del menú móvil */
 .menu-mobile-hamburger-overlay ul {
 list-style: none;
 padding: 0;
@@ -248,17 +243,17 @@ text-align: center;
 text-transform: uppercase;
 white-space: nowrap;
 overflow: hidden;
-padding: 10px 20px 10px 20px;
+padding: 20px ;
 border: none; 
 transition: all 0.3s ease;
 }
-/* Efecto hover */
 .menu-mobile-hamburger-overlay a:hover {
-background: #ff1493 !important;
-box-shadow: 0 0 10px #ff00ff , 0 0 20px #ff00ff, 0 0 30px #ff00ff;
 transform: scale(1);
 }
-
+/* SEPARADORES BLANCOS */
+.menu-mobile-hamburger-overlay li:not(:last-child) {
+border-bottom: 2px solid white !important;
+}
 
 
 
@@ -266,8 +261,8 @@ transform: scale(1);
 .menu-mobile-hamburger-overlay a::before {
 content: '';
 position: absolute;
- left: 20px;                     /* ← Mismo margen que el padding de la lista */
-    right: 20px;                    /* ← Mismo margen del otro lado */
+left: 20px;
+right: 20px;
 bottom: 0;
 width: 100%;
 height: 3px;
@@ -279,10 +274,7 @@ transition: transform 0.3s ease;
 
 
 
-/* SEPARADORES BLANCOS */
-.menu-mobile-hamburger-overlay li:not(:last-child) {
-border-bottom: 1px solid white !important;
-}
+
 
 /* Personalizar scroll */
 .menu-mobile-hamburger-overlay ul::-webkit-scrollbar {
