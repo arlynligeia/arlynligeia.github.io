@@ -347,9 +347,20 @@ border-bottom: 1px solid white !important;
         right: 15px;
         z-index: 1000;
     }
+    /* OCULTAR MENÚ PC */
+    nav {
+        display: none !important;
+    }
+    
+    /* MOSTRAR HAMBURGUESA */
+    .menu-mobile {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+    }
 }
-
-
 
 
 
