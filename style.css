@@ -214,12 +214,13 @@ position: fixed;
 z-index: 1000; 
 width: 100%;
 height: 100%;
-top: -100%;
-left: 0;
+top: 0;
+left: -100%;
 background: #ff1493 !important;
+    transition: top 0.4s ease; /* ← AÑADE ESTO */
 }
 .menu-mobile-hamburger-overlay.active {
-top: 0;
+left: 0;
 }
 .menu-mobile-hamburger-overlay ul {
 list-style: none;
@@ -250,10 +251,7 @@ transition: all 0.3s ease;
 .menu-mobile-hamburger-overlay a:hover {
 transform: scale(1);
 }
-/* SEPARADORES BLANCOS */
-.menu-mobile-hamburger-overlay li:not(:last-child) {
-border-bottom: 2px solid white !important;
-}
+
 
 
 
@@ -274,7 +272,10 @@ transition: transform 0.3s ease;
 
 
 
-
+/* SEPARADORES BLANCOS */
+.menu-mobile-hamburger-overlay li:not(:last-child) {
+border-bottom: 2px solid white !important;
+}
 
 /* Personalizar scroll */
 .menu-mobile-hamburger-overlay ul::-webkit-scrollbar {
