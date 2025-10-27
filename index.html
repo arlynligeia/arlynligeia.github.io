@@ -1521,9 +1521,9 @@ console.log('✅ Navegación configurada correctamente');
 <script>
 // MENÚ HAMBURGUESA - FUNCIONALIDAD
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button'); // CAMBIADO
-    const mobileMenuOverlay = document.getElementById('menu-mobile-hamburger'); // CAMBIADO
-    const mobileMenuLinks = document.querySelectorAll('.menu-mobile-hamburger a'); // CAMBIADO
+    const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
+    const mobileMenuOverlay = document.getElementById('menu-mobile-hamburger');
+    const mobileMenuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a'); // ← SOLO CAMBIÉ ESTO
 
     // FUNCIONES DE NAVEGACIÓN (SIN CAMBIOS)
     function showOnlyOneSection(sectionId) {
