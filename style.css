@@ -4442,6 +4442,118 @@ transform: scale(1.05);
 
 
 
+/* ======================================
+   SHOP
+====================================== */
+.shop-carousel {
+position: relative;
+width: 95%;
+height: 100%;
+overflow: hidden;
+height: calc(100vh - 220px);
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 3px solid  #00f3ff !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+box-shadow: 
+0 0 15px #00f3ff,
+0 0 30px #00f3ff,
+inset 0 0 15px #00f3ff;
+animation: glow 2s ease-in-out infinite alternate;
+}
+@keyframes glow {
+from {
+box-shadow: 
+0 0 10px #00f3ff,
+0 0 20px #00f3ff,
+inset 0 0 10px #00f3ff;
+}
+to {
+box-shadow: 
+0 0 20px #00f3ff,
+0 0 40px #00f3ff,
+0 0 60px #00a2ff,
+inset 0 0 20px #00f3ff;
+}
+}
+.shop-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.shop-carousel-image.active {
+opacity: 1;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.shop-carousel { display: flex; }
+.shop-carousel-mobile { display: none; }
+
+
+
+
+
+
+/* ======================================
+   MOVIL RESPONSIVE: SHOP
+====================================== */
+@media (max-width: 768px) {
+/* CARRUSEL */
+.shop-carousel-mobile {
+position: relative;
+width: 90%;
+height: 500px;
+overflow: hidden;
+background-color: #000000; 
+border: 3px solid white;
+border-radius: 20px;
+margin: 30px auto;
+}
+.shop-carousel-image-mobile {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.shop-carousel-image-mobile.active {
+opacity: 1;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.shop-carousel { display: none; }
+.shop-carousel-mobile { display: flex; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
