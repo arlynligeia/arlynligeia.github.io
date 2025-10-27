@@ -92,6 +92,9 @@ animation: crtFlicker 4s infinite;
 
 /* --- CONTENEDOR: MENÚ --- */
 nav {
+width: 100%; /* ← Añade esto */
+display: flex;
+justify-content: center;
 text-align: center;
 margin: 10px;
 }
@@ -203,6 +206,9 @@ border-bottom: 1px solid white !important;
 }
 .nav { display: block; }
 .menu-mobile { display: none; }
+
+
+
 
 /* --- MENÚ HAMBURGUESA MÓVIL --- */
 @media (max-width: 768px) {
