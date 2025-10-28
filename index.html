@@ -2350,7 +2350,7 @@ history.pushState(null, null, `#${targetId}`);
 }
 // TARJETAS Y BOTONES
 // 1. TARJETAS
-document.querySelectorAll('[class*="-card"]').forEach(card => {
+document.querySelectorAll('[class*="-card-mobile"]').forEach(card => {
 card.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
