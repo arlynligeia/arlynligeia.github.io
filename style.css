@@ -5120,7 +5120,7 @@ position: relative;
 width: 800px;
 background-color: #9900CC !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .digitalfilm-container::before {
@@ -5222,7 +5222,7 @@ transition: transform 0.3s ease;
 .digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .digitalfilm-container { display: block; }
 .digitalfilm-container-mobile { display: none; }
 /* ======================================
@@ -5305,7 +5305,13 @@ text-align: center;
 white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
- /* BOTONES */
+/* CONTENEDOR: BOTON */
+.digitalfilm-buttons-mobile {
+width: 100%;
+display: flex;
+justify-content: center;
+margin: 0px;
+}
 .digitalfilm-button-continueshopping-mobile {
 display: inline-block;
 background: #ff1493 !important;
@@ -5314,9 +5320,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
-text-align: center;
-padding: 10px 20px 10px 20px;
 font-weight: bold;
+text-align: center;
+padding: 10px 20px;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
@@ -5324,7 +5330,7 @@ transition: all 0.3s ease;
 .digitalfilm-button-continueshopping-mobile:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY MÓVIL */
+/* CONTROL */
 .digitalfilm-container { display: none; }
 .digitalfilm-container-mobile { display: block; }
 }
