@@ -5222,7 +5222,112 @@ transition: transform 0.3s ease;
 .digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
-
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.digitalfilm-container { display: block; }
+.digitalfilm-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DIGITAL FILM
+====================================== */
+@media (max-width: 768px) {
+.digitalfilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #9900CC !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.digitalfilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #8000A8 !important;
+border-radius: 20px 20px 0 0;
+}
+.digitalfilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.digitalfilm-title-mobile a {
+color: white !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.digitalfilm-cards-mobile {
+position: relative;
+z-index: 2;
+}
+.digitalfilm-card-mobile {
+position: relative;
+width: 100%;
+height: 200px;
+display: block;
+border-radius: 15px;
+border: 2px solid white !important;
+overflow: hidden;
+text-decoration: none;
+margin-bottom: 20px;
+}
+.digitalfilm-card-mobile:last-child {
+margin-bottom: 0px;
+}
+.digitalfilm-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.digitalfilm-card-mobile img:hover { 
+transform: scale(1.1);
+}
+.digitalfilm-card-text-mobile {
+position: absolute;
+z-index: 2;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-align: center;
+white-space: nowrap;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+ /* BOTONES */
+.digitalfilm-button-continueshopping-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-align: center;
+padding: 10px 20px 10px 20px;
+font-weight: bold;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.digitalfilm-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DISPLAY MÓVIL */
+.digitalfilm-container { display: none; }
+.digitalfilm-container-mobile { display: block; }
+}
 
 
 
