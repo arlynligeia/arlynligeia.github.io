@@ -7003,13 +7003,18 @@ margin: 0px;
 padding: 0px;
 }
 .cometsponsor-columns-grid-synopsis-text-special {
-margin-bottom: 30px;
+margin-bottom: 20px;
 }
 /* CONTENEDOR: PRECIO Y BOTONES */
+/* CONTENEDOR: PRECIO Y BOTONES */
 .cometsponsor-columns-grid-acquire {
-width: 100%;
-display: block;
-margin: 0px;
+  width: 100%;
+  height: 100%;  
+  display: flex;                    /* Cambiado a flex */
+  flex-direction: column;          /* Mantener en columna */
+  justify-content: center;         /* Centrado vertical */
+  align-items: center;             /* Centrado horizontal */
+  margin: 0px;
 }
 .cometsponsor-columns-grid-acquire-price {
 box-sizing: border-box;
@@ -7053,6 +7058,13 @@ font-size: 1rem;
 .cometsponsor-columns-grid-acquire-button-share:hover {
 transform: scale(1.05);
 }
+/* SEPARADOR */
+.cometsponsor-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF66CC !important;
+margin: 0 0 10px 0; 
+} 
 /* CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS */
 .cometsponsor-information {
 width: 100%;
@@ -7207,7 +7219,7 @@ border-radius: 15px;
 /* CONTENEDOR: PRECIO */ 
 .cometsponsor-product-price-mobile {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.2rem;
+font-size: 1.5rem;
 color:  #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;
@@ -7250,7 +7262,7 @@ transform: scale(1.05);
 .cometsponsor-divider-mobile {
 width: 100%;
 height: 0; 
-border-top: 3px solid #ff1493 !important; 
+border-top: 3px solid #FF66CC !important;
 margin: 0 0 10px 0; 
 } 
 /* CONTENEDOR: SYNOPSIS */ 
@@ -7258,6 +7270,7 @@ margin: 0 0 10px 0;
 width: 100%;
 margin: 0px;
 }
+.cometsponsor-synopsis-subtitle-special-mobile,
 .cometsponsor-synopsis-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
@@ -7267,6 +7280,9 @@ text-transform: uppercase;
 line-height: 1.5;
 text-align: justify;
 margin: 0px;
+}
+.cometsponsor-synopsis-subtitle-special-mobile {
+text-align: center;
 }
 .cometsponsor-synopsis-text-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -7295,12 +7311,13 @@ margin: 0px ;
 }
 .cometsponsor-information-subtitle-special-mobile {
 margin-bottom: 20px;
+text-align: center;
 }
 .cometsponsor-information-text-mobile,
-.cometsponsor-information-text-mobile {
+.cometsponsor-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
@@ -7312,15 +7329,14 @@ z-index: 1;
 display: flex;
 gap: 10px;
 }
-/* CORREGIDO: Cambiado a cometsponsor-information-icon */
-.cometsponsor-information-icon {
+.cometsponsor-information-icon-mobile {
 width: 25px;
 height: 25px;
 color: #FF6B00 !important;
 transition: all 0.3s ease;
 }
-.cometsponsor-information-icon:hover {
-transform: scale(1.05);
+.cometsponsor-information-icon-mobile:hover {
+transform: scale(1.1);
 }
 /* CONTENEDOR: BOTONES FINALES */
 .cometsponsor-button-mobile {
