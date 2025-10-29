@@ -6971,7 +6971,6 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
-/* CORREGIDO: Cambiado a subtitle-special para coincidir con HTML */
 .cometsponsor-columns-grid-synopsis-subtitle-special,
 .cometsponsor-columns-grid-synopsis-subtitle {
 box-sizing: border-box;
@@ -6989,7 +6988,6 @@ padding: 0px;
 .cometsponsor-columns-grid-synopsis-subtitle-special {
 text-align: center;  
 }
-/* CORREGIDO: Cambiado a text-special para coincidir con HTML */
 .cometsponsor-columns-grid-synopsis-text-special,
 .cometsponsor-columns-grid-synopsis-text {
 box-sizing: border-box;
@@ -7015,15 +7013,13 @@ margin: 0px;
 }
 .cometsponsor-columns-grid-acquire-price {
 box-sizing: border-box;
-justify-content: space-between;
-align-items: center;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;  
-margin: 0px;
+margin: 0 0 20px 0;
 padding: 0px;
 } 
 /* CONTENEDOR: BOTONES */
@@ -7050,7 +7046,7 @@ cursor: pointer;
 transition: transform 0.3s ease;  
 }
 .cometsponsor-columns-grid-acquire-button-share {
-background-color: #39ff14 !important;
+background-color: #00FF00; !important;
 font-size: 1rem;
 }
 .cometsponsor-columns-grid-acquire-button-addtocart:hover,
@@ -7060,7 +7056,7 @@ transform: scale(1.05);
 /* CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS */
 .cometsponsor-information {
 width: 100%;
-margin: 0 0 30px 0;
+margin: 0 0 20px 0;
 }
 .cometsponsor-information-subtitle {
 font-family: 'Orbitron', sans-serif;
@@ -7072,7 +7068,8 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.cometsponsor-information-text {
+.cometsponsor-information-text,
+.cometsponsor-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white;
@@ -7080,6 +7077,9 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
+}
+.cometsponsor-information p:last-child {
+margin-bottom: 20px;
 }
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons {
@@ -7089,11 +7089,10 @@ display: flex;
 align-items: center;
 gap: 10px;
 }
-/* CORREGIDO: Cambiado a cometsponsor-information-icon para todos los iconos */
 .cometsponsor-information-icon {
 width: 28px;
 height: 28px;
-color: #ff1493 !important;
+color: #00FF00 !important;
 transition: all 0.3s ease;
 }
 .cometsponsor-information-icon:hover {
@@ -7143,6 +7142,9 @@ font-weight: bold;
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; }
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
