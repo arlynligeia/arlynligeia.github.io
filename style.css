@@ -6908,7 +6908,7 @@ position: relative;
 width: 900px;
 background-color: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .cometsponsor-container::before {
@@ -6978,7 +6978,7 @@ justify-content: space-between;
 align-items: center;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #00FF00 !important;
+color: #39FF14 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;  
@@ -7032,7 +7032,7 @@ margin: 0px;
 .cometsponsor-columns-grid-acquire-button-addtocart,
 .cometsponsor-columns-grid-acquire-button-share {
 display: inline-block;
-background-color: #ff1493 !important; 
+background: #ff1493 !important; 
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -7058,15 +7058,19 @@ transform: scale(1.05);
 width: 100%;
 margin: 0 0 20px 0;
 }
+.cometsponsor-information-subtitle-special,
 .cometsponsor-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #00FF00 !important;
+color:  #39FF14 !important;
 text-decoration: none;
 text-transform: uppercase;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
+}
+.cometsponsor-information-subtitle-special {
+margin-botton: 30px;
 }
 .cometsponsor-information-text,
 .cometsponsor-information-text-end {
@@ -7078,8 +7082,8 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.cometsponsor-information p:last-child {
-margin-bottom: 50px;
+.cometsponsor-information-text-end {
+margin-bottom: 30px;
 }
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons {
@@ -7090,8 +7094,8 @@ align-items: center;
 gap: 10px;
 }
 .cometsponsor-information-icon {
-width: 28px;
-height: 28px;
+width: 30px;
+height: 30px;
 color: #FF6B00 !important;
 transition: all 0.3s ease;
 }
@@ -7141,15 +7145,6 @@ font-weight: bold;
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; }
-
-
-
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
@@ -7159,7 +7154,7 @@ font-weight: bold;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -7172,7 +7167,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .cometsponsor-title-mobile {
@@ -7181,13 +7176,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .cometsponsor-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: PRODUCTO */
@@ -7212,8 +7207,8 @@ border-radius: 15px;
 /* CONTENEDOR: PRECIO */ 
 .cometsponsor-product-price-mobile {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color:  white !important;
+font-size: 1.2rem;
+color:  #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;
@@ -7229,7 +7224,7 @@ margin: 0px;
 .cometsponsor-product-button-addtocart-mobile,
 .cometsponsor-product-button-share-mobile {
 display: inline-block;
-background: #ff1493 !important;
+background: #ff1493 !important; 
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
@@ -7244,8 +7239,8 @@ cursor: pointer;
 transition: all 0.3s ease;  
 }
 .cometsponsor-product-button-share-mobile {
-background-color: #39ff14 !important;
-font-size: 0.6rem;
+background-color: #FF6B00 !important;
+font-size: 0.8rem;
 }
 .cometsponsor-product-button-addtocart-mobile:hover,
 .cometsponsor-product-button-share-mobile:hover {
@@ -7255,7 +7250,7 @@ transform: scale(1.05);
 .cometsponsor-divider-mobile {
 width: 100%;
 height: 0; 
-border-top: 3px solid #39ff14 !important;
+border-top: 3px solid #ff1493 !important; 
 margin: 0 0 10px 0; 
 } 
 /* CONTENEDOR: SYNOPSIS */ 
@@ -7266,17 +7261,17 @@ margin: 0px;
 .cometsponsor-synopsis-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color:  white !important;
+color: #39FF14 !important;
 text-decoration: none;
 text-transform: uppercase;
 line-height: 1.5;
 text-align: justify;
-margin: 0 0 10px 0;
+margin: 0px;
 }
 .cometsponsor-synopsis-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -7287,39 +7282,41 @@ margin: 0 0 10px 0;
 width: 100%;
 margin: 0px;
 }
-/* CORREGIDO: Añadido -mobile a las clases de información */
+.cometsponsor-information-subtitle-special-mobile,
 .cometsponsor-information-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color:  white !important;
+color:  #39FF14 !important;
 text-decoration: none;
 text-transform: uppercase;
 line-height: 1.5;
 text-align: justify;
-margin: 0 0 10px 0;
+margin: 0px ;
 }
+.cometsponsor-information-subtitle-special-mobile {
+margin-bottom: 20px;
+}
+.cometsponsor-information-text-mobile,
 .cometsponsor-information-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white !important;
-/* CORREGIDO: Quitado text-transform: uppercase para texto normal */
 line-height: 1.5;
-text-align: justify; /* CORREGIDO: Cambiado de center a justify */
+text-align: justify;
 margin: 0 0 10px 0;
 }
 /* CONTENEDOR: ICONOS */
-.cometsponsor-information-icons {
+.cometsponsor-information-icons-mobile {
 position: relative;
 z-index: 1;
 display: flex;
-align-items: center;
 gap: 10px;
 }
 /* CORREGIDO: Cambiado a cometsponsor-information-icon */
 .cometsponsor-information-icon {
-width: 28px;
-height: 28px;
-color: #ff1493 !important;
+width: 25px;
+height: 25px;
+color: #FF6B00 !important;
 transition: all 0.3s ease;
 }
 .cometsponsor-information-icon:hover {
@@ -7353,9 +7350,10 @@ transition: all 0.3s ease;
 .cometsponsor-button-back-mobile {
 background-color: #00FFFF !important; 
 } 
+.cometsponsor-button-back-mobile,
 .cometsponsor-button-continueshopping-mobile {
-background-color: #FF6B00 !important;
-margin-bottom: 0px;
+background-color: #00FFFF !important;
+color: #000000 !important;
 }
 .cometsponsor-button-back-mobile:hover,
 .cometsponsor-button-continueshopping-mobile:hover,
