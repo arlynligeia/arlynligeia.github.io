@@ -1339,7 +1339,6 @@ position: relative;
 width: 95%;
 height: calc(100vh - 220px);
 z-index: 1;
-overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -1350,32 +1349,35 @@ border-radius:
 50% 50% 50% 50%; 
 margin: 20px auto;
 }
-/* PUNTOS CON ELEMENTOS HTML */
+/* PUNTOS CON ELEMENTOS HTML - CORREGIDOS */
 .border-dot {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 16px; /* Un poco más grandes */
+    height: 16px;
     border-radius: 50%;
     z-index: 6;
     pointer-events: none;
 }
 
-/* Posiciones de los puntos */
-.dot-1 { top: -6px; left: -6px; background: #ff00ff; } /* Esquina superior izquierda */
-.dot-2 { top: -6px; right: -6px; background: #ff00ff; } /* Esquina superior derecha */
-.dot-3 { bottom: -6px; left: -6px; background: #ff00ff; } /* Esquina inferior izquierda */
-.dot-4 { bottom: -6px; right: -6px; background: #ff00ff; } /* Esquina inferior derecha */
+/* Posiciones CORREGIDAS - ahora SÍ sobre el borde */
+.dot-1 { top: -8px; left: -8px; background: #ff00ff; } /* Esquina superior izquierda */
+.dot-2 { top: -8px; right: -8px; background: #ff00ff; } /* Esquina superior derecha */
+.dot-3 { bottom: -8px; left: -8px; background: #ff00ff; } /* Esquina inferior izquierda */
+.dot-4 { bottom: -8px; right: -8px; background: #ff00ff; } /* Esquina inferior derecha */
 
-.dot-5 { top: -6px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro superior */
-.dot-6 { left: -6px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro izquierdo */
-.dot-7 { right: -6px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro derecho */
-.dot-8 { bottom: -6px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro inferior */
+.dot-5 { top: -8px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro superior */
+.dot-6 { left: -8px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro izquierdo */
+.dot-7 { right: -8px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro derecho */
+.dot-8 { bottom: -8px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro inferior */
 
-.dot-9 { top: -6px; left: 25%; background: #ff00ff; } /* Superior 25% */
-.dot-10 { top: -6px; left: 75%; background: #A855F7; } /* Superior 75% */
-.dot-11 { left: -6px; top: 25%; background: #A855F7; } /* Izquierdo 25% */
-.dot-12 { left: -6px; top: 75%; background: #ff00ff; } /* Izquierdo 75% */
+.dot-9 { top: -8px; left: 25%; background: #ff00ff; } /* Superior 25% */
+.dot-10 { top: -8px; left: 75%; background: #A855F7; } /* Superior 75% */
+.dot-11 { left: -8px; top: 25%; background: #A855F7; } /* Izquierdo 25% */
+.dot-12 { left: -8px; top: 75%; background: #ff00ff; } /* Izquierdo 75% */
 
+/* Añadir puntos para el lado derecho también */
+.dot-13 { right: -8px; top: 25%; background: #ff00ff; } /* Derecho 25% */
+.dot-14 { right: -8px; top: 75%; background: #A855F7; } /* Derecho 75% */
 
 
 
