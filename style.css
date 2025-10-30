@@ -1354,7 +1354,6 @@ margin: 20px auto;
 .film-banner::before {
 content: "";
 position: absolute;
-z-index: 2;
 top: -12px; /* Mismo grosor que el borde */
 left: -12px;
 right: -12px;
@@ -1389,7 +1388,7 @@ border-radius:
     
     background-repeat: no-repeat;
     pointer-events: none;
-    z-index: 5;
+    z-index: 6;
 }
 
 /* IMAGEN DENTRO DEL BANNER */
