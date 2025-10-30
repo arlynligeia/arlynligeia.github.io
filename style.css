@@ -1740,13 +1740,17 @@ margin: 0px;
 .alone-columns-grid-information {
 width: 100%;
 min-width: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+min-height: 100%;
 margin: 0px;
 }
 .alone-columns-grid-information-subtitle-1,
 .alone-columns-grid-information-subtitle-2 {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #39FF14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
@@ -1755,6 +1759,7 @@ word-break: break-word;
 overflow-wrap: break-word;
 }
 .alone-columns-grid-information-subtitle-2 {
+color: #00FFEF !important;
 text-align: justify;
 }
 .alone-columns-grid-information-text-1,
@@ -1772,6 +1777,16 @@ overflow-wrap: break-word;
 .alone-columns-grid-information-text-1 {
 margin-bottom: 30px;
 }
+.alone-columns-grid-information-text-2 {
+color: #00FFEF !important;
+}
+/* SEPARADOR */
+.alone-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #39ff14 !important;
+margin: 0; 
+}
 /* CONTENEDOR: INFORMACION DEBAJO DE LAS COLUMNAS */
 .alone-information {
 width: 100%;
@@ -1780,7 +1795,7 @@ margin: 0px;
 .alone-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #39FF14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
@@ -1851,20 +1866,32 @@ width: 100%;
 height: auto;
 display: block;
 }
+/* SEPARADOR */
+.alone-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #39ff14 !important;
+margin: 0; 
+}
 /* CONTENEDOR: INFORMACION*/
 .alone-information-mobile {
 width: 100%;
 margin: 0 0 10px 0;
 }
-.alone-information-subtitle-mobile {
+.alone-information-subtitle-mobile,
+.alone-information-subtitle-synopsis-mobile{
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color: #39FF14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.alone-information-subtitle-synopsis-mobile{
+color: #00FFEF !important;
+}
+.alone-information-text-synopsis-mobile,
 .alone-information-text-mobile,
 .alone-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -1875,10 +1902,13 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
+.alone-information-text-synopsis-mobile {
+color: #00FFEF !important;
+}
 .alone-information-text-end-mobile {
 margin-bottom: 0px;
 }
-/* CONTROL DISPLAY MÓVIL */
+/* CONTROL */
 .alone-container { display: none; }
 .alone-container-mobile { display: block; }
 }
@@ -1930,7 +1960,7 @@ margin: 0px;
 .shortfilm-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: #39FF14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
@@ -1992,7 +2022,7 @@ margin: 0px;
 .shortfilm-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
@@ -2056,7 +2086,7 @@ margin: 0px;
 .musicvideodirection-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: #39FF14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
@@ -2118,7 +2148,7 @@ margin: 0px;
 .musicvideodirection-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;
