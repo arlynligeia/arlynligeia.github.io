@@ -386,12 +386,15 @@ border-bottom: 2px solid white !important;
     justify-content: center;
     align-items: center;
 
-    /* Estilo Nave Espacial - Solo Borde */
+    /* Estilo Nave Espacial - Bordes múltiples */
     background-color: #000000 !important;
-    border: 8px double #A855F7 !important; /* Borde doble lila - COLOR FIJO */
+    border: 12px double #A855F7 !important; /* Borde doble lila más grueso */
     
-    /* Eliminar toda la iluminación/glow */
-    box-shadow: none;
+    /* Bordes adicionales con pseudo-elementos */
+    box-shadow: 
+        0 0 0 4px #4DF8FF,    /* Borde celeste interior */
+        0 0 0 8px #A855F7,    /* Borde lila medio */
+        0 0 0 12px #4DF8FF;   /* Borde celeste exterior */
     
     /* Mantener el redondeado que te gusta */
     border-radius: 
@@ -431,15 +434,15 @@ border-bottom: 2px solid white !important;
 /* IMAGEN DENTRO DEL CARRUSEL */
 .home-carousel-image {
     position: absolute;
-    width: 98%; /* Reducir ancho para que se vea el borde */
-    height: 98%; /* Reducir alto para que se vea el borde */
+    width: 97%; /* Reducir más para los bordes múltiples */
+    height: 97%; /* Reducir más para los bordes múltiples */
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     filter: brightness(1.2) contrast(1.1); 
     border-radius: 
-        8% 6% 8% 6% / 
-        45% 45% 45% 45%; /* Redondear menos que el contenedor */
+        7% 5% 7% 5% / 
+        42% 42% 42% 42%; /* Redondear menos que el contenedor */
 }
 .home-carousel-image.active {
     opacity: 1;
