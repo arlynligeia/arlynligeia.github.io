@@ -10,22 +10,25 @@ margin: 0;
 }
 
 
-/* --- CONTENEDOR: TÍTULO --- */
+
+/* ======================================
+   TÍTULO DE LA PÁGINA PC
+====================================== */
 .site-container {
 width: 95%;
 margin: 20px auto;
 padding: 10px;
- background: 
- repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(255, 20, 147, 0.05) 2px,
-        rgba(255, 20, 147, 0.05) 4px
-    ),
-    transparent !important;
-    border: 2px solid #ff1493 !important; /* Línea 1 - fuccia */
-    border-radius: 15px;
+background: 
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(255, 20, 147, 0.05) 2px,
+rgba(255, 20, 147, 0.05) 4px
+),
+transparent !important;
+border: 2px solid #ff1493 !important;
+border-radius: 20px;
 }
 /* --- TÍTULO --- */
 .site-title {
@@ -39,168 +42,141 @@ line-height: 1;
 margin: 0px;
 padding: 0px;
 }
-@keyframes crtFlicker {
-0%, 100% { opacity: 0.95; }
-1% { opacity: 0.8; }
-2% { opacity: 0.9; }
-3% { opacity: 0.85; }
-50% { opacity: 1; }
-97% { opacity: 0.9; }
-98% { opacity: 0.85; }
-99% { opacity: 0.95; }
-}
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
-
-
-
-
-
-/* --- TÍTULO PRINCIPAL MOVIL --- */
+/* ======================================
+   TÍTULO DE LA PÁGINA MÓVIL
+====================================== */
 @media (max-width: 768px) {
-
 .site-title-mobile {
 font-family: 'Orbitron', monospace;    
 font-size: 3rem; 
-color: #ff1493 !important;
-text-align: center;
+color:  #ff1493 !important;
+text-transform: uppercase;
+text-align: center; 
+font-weight: 900;
 margin: 20px auto;
 padding: 0px;
-font-weight: 900;
-text-transform: uppercase;
 } 
-
 .site-title { display: none; }
-..site-container { display: none; }
 .site-title-mobile { display: block; }
 }
 
-
-
-
-
 /* ======================================
-   MENÚ Y SUBMENUS - BOTONES COMANDO ESPACIAL
+   MENÚ Y SUBMENUS PC
 ====================================== */
 nav {
-    text-align: center;
+text-align: center;
 }
 .menu {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 5px auto;
-    padding: 0px;
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin: 5px auto;
+padding: 0px;
 }
 .menu li {
-    position: relative;
+position: relative;
 }
 
-/* --- BOTONES: COMANDO ESPACIAL RETROFUTURISTA --- */
+/* --- BOTONES --- */
 .menu-button,
 .cart-button {
-    display: block;     
-    background: transparent !important; /* Fondo transparente */
-    border-radius: 8px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    text-decoration: none;
-    margin: 5px auto; 
-    padding: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: all 0.3s ease;
-    position: relative;
-    /* Efecto de panel metálico sutil */
-    background: 
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 2px,
-            rgba(255, 255, 255, 0.05) 2px,
-            rgba(255, 255, 255, 0.05) 4px
-        ) !important;
+position: relative;
+display: block;     
+background: transparent !important; /* Fondo transparente */
+border-radius: 8px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+text-decoration: none;
+text-transform: uppercase; 
+margin: 5px auto; 
+padding: 10px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: 
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 2px,
+rgba(255, 255, 255, 0.05) 2px,
+rgba(255, 255, 255, 0.05) 4px
+) !important;
 }
-
-/* Botones impares - Borde fucsia con efecto LED */
+/* BOTONES: FUSCIA CON EFECTO LED */
 .menu li:nth-child(odd) .menu-button,
 .menu li:nth-child(odd) .cart-button {
-    border: 2px solid #ff1493 !important;
-    color: #ff1493 !important;
-    box-shadow: 
-        0 0 5px #ff1493,
-        inset 0 0 5px rgba(255, 0, 255, 0.3);
+border: 2px solid #ff1493 !important;
+color: #ff1493 !important;
+box-shadow: 
+0 0 5px #ff1493,
+inset 0 0 5px rgba(255, 0, 255, 0.3);
 }
-
-/* Botones pares - Borde verde neon con efecto LED */
+/* BOTONES: VERDE CON EFECTO LED */
 .menu li:nth-child(even) .menu-button,
 .menu li:nth-child(even) .cart-button {
-    border: 2px solid #39FF14 !important;
-    color: #39FF14 !important;
-    box-shadow: 
-        0 0 5px #39FF14,
-        inset 0 0 5px rgba(57, 255, 20, 0.3);
+border: 2px solid #39FF14 !important;
+color: #39FF14 !important;
+box-shadow: 
+0 0 5px #39FF14,
+inset 0 0 5px rgba(57, 255, 20, 0.3);
 }
-
+/* HOVER: FUCSIA CON EFECTO LED */
 /* Hover para botones fucsia - Efecto activación */
 .menu li:nth-child(odd) .menu-button:hover,
 .menu li:nth-child(odd) .cart-button:hover {
-    background: rgba(255, 0, 255, 0.1) !important;
-    color: #ff00ff !important;
-    transform: translateY(-2px);
-    box-shadow: 
-        0 0 15px #ff00ff,
-        0 0 25px #ff00ff,
-        inset 0 0 10px rgba(255, 0, 255, 0.5);
-    text-shadow: 0 0 10px #ff00ff;
+background: rgba(255, 0, 255, 0.1) !important;
+color: #ff00ff !important;
+transform: translateY(-2px);
+box-shadow: 
+0 0 15px #ff00ff,
+0 0 25px #ff00ff,
+inset 0 0 10px rgba(255, 0, 255, 0.5);
+text-shadow: 0 0 10px #ff00ff;
 }
-
-/* Hover para botones verde - Efecto activación */
+/* HOVER: VERDE CON EFECTO LED */
 .menu li:nth-child(even) .menu-button:hover,
 .menu li:nth-child(even) .cart-button:hover {
-    background: rgba(57, 255, 20, 0.1) !important;
-    color:  #00FF00 !important;
-    transform: translateY(-2px);
-    box-shadow: 
-        0 0 15px #00FF00,
-        0 0 25px #00FF00 ,
-        inset 0 0 10px rgba(57, 255, 20, 0.5);
-    text-shadow: 0 0 10px #00FF00;
+background: rgba(57, 255, 20, 0.1) !important;
+color:  #00FF00 !important;
+transform: translateY(-2px);
+box-shadow: 
+0 0 15px #00FF00,
+0 0 25px #00FF00 ,
+inset 0 0 10px rgba(57, 255, 20, 0.5);
+text-shadow: 0 0 10px #00FF00;
 }
-
-/* Indicador LED en esquina superior derecha */
+/* PUNTO LED */
 .menu-button::after,
 .cart-button::after {
-    content: '';
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    transition: all 0.3s ease;
+content: '';
+position: absolute;
+top: 5px;
+right: 5px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+transition: all 0.3s ease;
 }
-
 .menu li:nth-child(odd) .menu-button::after,
 .menu li:nth-child(odd) .cart-button::after {
-    background: #ff00ff;
-    box-shadow: 0 0 5px #ff00ff;
+background: #ff00ff;
+box-shadow: 0 0 5px #ff00ff;
 }
-
 .menu li:nth-child(even) .menu-button::after,
 .menu li:nth-child(even) .cart-button::after {
-    background: #39FF14;
-    box-shadow: 0 0 5px #39FF14;
+background: #39FF14;
+box-shadow: 0 0 5px #39FF14;
 }
-
-/* LED se enciende en hover */
 .menu-button:hover::after,
 .cart-button:hover::after {
-    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
 }
+
+
+
 
 
 
@@ -272,91 +248,124 @@ border-bottom: 1px solid white !important;
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
 .menu-mobile {
-display: none;
+    display: none;
 }
 .menu-mobile-hamburger-button {
-display: flex;
-flex-direction: column;
-z-index: 1001;
-background: transparent;
-border: 2px solid #ff1493 !important;
-border-radius: 6px;
-padding: 10px;
-gap: 5px;
-cursor: pointer;
-transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    background: transparent;
+    border: 2px solid #ff1493 !important;
+    border-radius: 6px;
+    padding: 10px;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .menu-mobile-hamburger-button span {
-display: block;
-width: 25px;
-height: 3px;
-background: #ff1493 !important;
-transition: all 0.3s ease;
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff1493 !important;
+    transition: all 0.3s ease;
 }
 .menu-mobile-hamburger-button:hover {
-transform: scale(1);
+    transform: scale(1);
 }
 
-/* OVERLAY */
+/* OVERLAY - CAMBIADO A MORADO */
 .menu-mobile-hamburger-overlay {
-position: fixed;
-z-index: 1000; 
-width: 100%;
-height: 100%;
-top: 0;
-left: -100%;
-background: #ff1493 !important;
+    position: fixed;
+    z-index: 1000; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #3A0052 !important;
+    transition: left 0.3s ease;
 }
 .menu-mobile-hamburger-overlay.active {
-left: 0;
+    left: 0;
 }
 .menu-mobile-hamburger-overlay ul {
-list-style: none;
-padding: 0;
-margin: 0;
-height: 100%;
-overflow-y: auto;
-padding: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow-y: auto;
+    padding: 40px 20px; /* Más padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
 }
+
 /* Elementos del menú */
 .menu-mobile-hamburger-overlay a {
-position: relative;
-display: block;
-width: 100%;
-background: transparent;
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: white !important;
-text-decoration: none; 
-text-align: center;
-text-transform: uppercase;
-white-space: nowrap;
-overflow: hidden;
-padding: 10px ;
-border: none; 
-transition: all 0.3s ease;
+    position: relative;
+    display: block;
+    width: 100%;
+    max-width: 300px; /* Ancho máximo para mejor centrado */
+    background: transparent;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem; /* Un poco más grande */
+    text-decoration: none; 
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 15px 20px; /* Más padding */
+    border: none; 
+    transition: all 0.3s ease;
+    margin: 5px 0; /* Espacio entre elementos */
 }
 
-/* LÍNEA INFERIOR ANIMADA */
+/* COLORES ALTERNADOS - FUCSIA Y VERDE */
+.menu-mobile-hamburger-overlay li:nth-child(odd) a {
+    color: #ff1493 !important; /* Fuscia para impares */
+}
+
+.menu-mobile-hamburger-overlay li:nth-child(even) a {
+    color: #00ff00 !important; /* Verde para pares */
+}
+
+/* EFECTO HOVER/PULSACIÓN - ILUMINACIÓN */
+.menu-mobile-hamburger-overlay a:hover,
+.menu-mobile-hamburger-overlay a:focus {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px currentColor;
+}
+
+/* LÍNEA INFERIOR ANIMADA - COLOR ROSADO */
 .menu-mobile-hamburger-overlay a::before {
-content: '';
-position: absolute;
-left: 20px;
-right: 20px;
-bottom: 0;
-width: 100%;
-height: 3px;
-background-color: #7ec0ee !important;
-transform: scaleX(0);
-transform-origin: left;
-transition: transform 0.3s ease;
+    content: '';
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: #FF66CC !important;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
 }
 
+.menu-mobile-hamburger-overlay a:hover::before,
+.menu-mobile-hamburger-overlay a:focus::before {
+    transform: scaleX(1);
+}
 
+/* LÍNEA SEPARADORA ENTRE OPCIONES - COLOR ROSADO */
+.menu-mobile-hamburger-overlay li {
+    width: 100%;
+    max-width: 300px;
+    border-bottom: 1px solid #FF66CC !important;
+}
 
-/* SEPARADORES BLANCOS */
-.menu-mobile-hamburger-overlay li:not(:last-child) {
-border-bottom: 2px solid white !important;
+.menu-mobile-hamburger-overlay li:last-child {
+    border-bottom: none !important;
 }
 
 /* Personalizar scroll */
@@ -383,9 +392,6 @@ border-bottom: 2px solid white !important;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.6) rgba(255, 255, 255, 0.1);
 }
-
-
-
 
 /* --- MEDIA QUERY PARA MÓVIL --- */
 @media (max-width: 768px) {
@@ -418,33 +424,94 @@ border-bottom: 2px solid white !important;
 
 
 
-
-
 /* ======================================
-    HOME - ESTILO NAVESPACIAL
+    HOME - ESTILO NAVESPACIAL RETROFUTURISTA
    ====================================== */
 .home-carousel {
-position: relative;
-width: 95%;
-height: calc(100vh - 220px); 
-z-index: 1; 
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #000000 !important;
-border: 6px double #A855F7 !important;
-box-shadow: 
-0 0 0 2px #A855F7,
-0 0 0 4px #4DF8FF,
-0 0 0 6px #A855F7;
-border-radius: 
-10% 8% 10% 8% / 
-50% 50% 50% 50%; 
-margin: 20px auto;
+    position: relative;
+    width: 95%;
+    height: calc(100vh - 220px); 
+    z-index: 1; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000 !important;
+    
+    /* BORDE RETROFUTURISTA MEJORADO */
+    border: 8px double #ff00ff !important;
+    box-shadow: 
+        /* Sombra interna morada */
+        inset 0 0 20px #A855F7,
+        inset 0 0 30px rgba(168, 85, 247, 0.3),
+        /* Sombra externa neón */
+        0 0 0 2px #ff00ff,
+        0 0 0 4px #A855F7,
+        0 0 0 6px #ff00ff,
+        0 0 20px rgba(255, 0, 255, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3);
+    
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
+    margin: 20px auto;
+    
+    /* Efecto de brillo pulsante */
+    animation: panelGlow 4s ease-in-out infinite alternate;
 }
 
-/* EFECTO DE SCANLINES (Líneas de Barrido CRT) */
+/* EFECTO DE PUNTOS DE LUCES EN EL BORDE */
+.home-carousel::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid transparent;
+    border-radius: 
+        12% 10% 12% 10% / 
+        52% 52% 52% 52%;
+    background: 
+        radial-gradient(circle at 10% 10%, #ff00ff 2px, transparent 3px),
+        radial-gradient(circle at 90% 10%, #A855F7 2px, transparent 3px),
+        radial-gradient(circle at 10% 90%, #A855F7 2px, transparent 3px),
+        radial-gradient(circle at 90% 90%, #ff00ff 2px, transparent 3px),
+        radial-gradient(circle at 50% 0%, #ff00ff 1px, transparent 2px),
+        radial-gradient(circle at 0% 50%, #A855F7 1px, transparent 2px),
+        radial-gradient(circle at 100% 50%, #ff00ff 1px, transparent 2px),
+        radial-gradient(circle at 50% 100%, #A855F7 1px, transparent 2px);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+/* ANIMACIÓN DE BRILLO PULSANTE */
+@keyframes panelGlow {
+    0% {
+        box-shadow: 
+            inset 0 0 20px #A855F7,
+            inset 0 0 30px rgba(168, 85, 247, 0.3),
+            0 0 0 2px #ff00ff,
+            0 0 0 4px #A855F7,
+            0 0 0 6px #ff00ff,
+            0 0 15px rgba(255, 0, 255, 0.4),
+            0 0 30px rgba(168, 85, 247, 0.2);
+    }
+    100% {
+        box-shadow: 
+            inset 0 0 25px #A855F7,
+            inset 0 0 35px rgba(168, 85, 247, 0.4),
+            0 0 0 2px #ff00ff,
+            0 0 0 4px #A855F7,
+            0 0 0 6px #ff00ff,
+            0 0 25px rgba(255, 0, 255, 0.6),
+            0 0 50px rgba(168, 85, 247, 0.4);
+    }
+}
+
+/* EFECTO DE SCANLINES (Líneas de Barrido CRT) MEJORADO */
 .home-carousel::before {
     content: "";
     position: absolute;
@@ -455,10 +522,17 @@ margin: 20px auto;
     background: 
         repeating-linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.2), 
-            rgba(0, 0, 0, 0.3) 1px, 
-            rgba(0, 0, 0, 0.1) 2px, 
+            rgba(0, 0, 0, 0.15), 
+            rgba(0, 0, 0, 0.25) 1px, 
+            transparent 2px, 
             transparent 3px
+        ),
+        /* Efecto de vignette para más profundidad */
+        radial-gradient(
+            ellipse at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.3) 70%,
+            rgba(0, 0, 0, 0.5) 100%
         );
     mix-blend-mode: overlay;
     pointer-events: none;
@@ -468,16 +542,31 @@ margin: 20px auto;
         50% 50% 50% 50%; 
 }
 
+/* EFECTO DE PARPADEO RETRO OCASIONAL */
+@keyframes randomFlicker {
+    0%, 100% { opacity: 1; }
+    95% { opacity: 0.98; }
+    96% { opacity: 0.7; }
+    97% { opacity: 0.98; }
+    98% { opacity: 0.9; }
+    99% { opacity: 1; }
+}
+
+.home-carousel {
+    animation: 
+        panelGlow 4s ease-in-out infinite alternate,
+        randomFlicker 20s infinite;
+}
+
 /* IMAGEN DENTRO DEL CARRUSEL */
 .home-carousel-image {
     position: absolute;
-    width: 100%; /* Imágenes completas sin bordes negros */
-    height: 100%; /* Imágenes completas sin bordes negros */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    filter: brightness(1.2) contrast(1.1); 
-    /* Sin border-radius para que las imágenes llenen todo el espacio */
+    filter: brightness(1.2) contrast(1.1) saturate(1.1);
     border-radius: 0;
 }
 .home-carousel-image.active {
@@ -492,7 +581,6 @@ margin: 20px auto;
 .home-carousel-mobile { 
     display: none; 
 }
-
 
 
 
