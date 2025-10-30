@@ -1346,16 +1346,17 @@ margin-bottom: 0px;
     align-items: center;
     background-color: #000000 !important;
     
-    /* BORDE CON FUSCIA Y LILA - LUMINOSIDAD REDUCIDA */
+    /* BORDE RETROFUTURISTA CON LUMINOSIDAD MORADA INTENSA */
+    /* BORDE CON FUSCIA Y LILA MÁS INTENSOS */
     border: 8px double #ff00ff !important;
     box-shadow: 
-        inset 0 0 20px #A855F7,
-        inset 0 0 35px rgba(168, 85, 247, 0.4),
+        inset 0 0 30px #A855F7,
+        inset 0 0 50px rgba(168, 85, 247, 0.6),
         0 0 0 2px #ff00ff,
         0 0 0 4px #A855F7,
         0 0 0 6px #ff00ff,
-        0 0 20px rgba(255, 0, 255, 0.6),
-        0 0 40px rgba(168, 85, 247, 0.4);
+        0 0 30px rgba(255, 0, 255, 0.8),
+        0 0 60px rgba(168, 85, 247, 0.6);
     
     border-radius: 
         10% 8% 10% 8% / 
@@ -1364,31 +1365,31 @@ margin-bottom: 0px;
     animation: purpleGlow 3s ease-in-out infinite alternate;
 }
 
-/* ANIMACIÓN CON LUMINOSIDAD REDUCIDA */
+/* ANIMACIÓN DE BRILLO MORADO INTENSO */
 @keyframes purpleGlow {
     0% {
         box-shadow: 
-            inset 0 0 18px #A855F7,
-            inset 0 0 30px rgba(168, 85, 247, 0.3),
-            0 0 0 2px #ff00ff,
-            0 0 0 4px #A855F7,
-            0 0 0 6px #ff00ff,
-            0 0 18px rgba(255, 0, 255, 0.5),
-            0 0 35px rgba(168, 85, 247, 0.3);
+            inset 0 0 25px #8B5CF6,
+            inset 0 0 40px rgba(139, 92, 246, 0.5),
+            0 0 0 2px #A855F7,
+            0 0 0 4px #8B5CF6,
+            0 0 0 6px #A855F7,
+            0 0 25px rgba(168, 85, 247, 0.7),
+            0 0 45px rgba(139, 92, 246, 0.5);
     }
     100% {
         box-shadow: 
-            inset 0 0 25px #A855F7,
-            inset 0 0 40px rgba(168, 85, 247, 0.5),
-            0 0 0 2px #ff00ff,
-            0 0 0 4px #A855F7,
-            0 0 0 6px #ff00ff,
-            0 0 25px rgba(255, 0, 255, 0.7),
-            0 0 50px rgba(168, 85, 247, 0.5);
+            inset 0 0 35px #8B5CF6,
+            inset 0 0 60px rgba(139, 92, 246, 0.7),
+            0 0 0 2px #A855F7,
+            0 0 0 4px #8B5CF6,
+            0 0 0 6px #A855F7,
+            0 0 35px rgba(168, 85, 247, 0.9),
+            0 0 75px rgba(139, 92, 246, 0.7);
     }
 }
 
-/* EFECTO DE PUNTOS DE LUCES - LUMINOSIDAD REDUCIDA */
+/* EFECTO DE PUNTOS DE LUCES EN EL BORDE - MORADO INTENSO */
 .film-banner::after {
     content: "";
     position: absolute;
@@ -1401,30 +1402,30 @@ margin-bottom: 0px;
         12% 10% 12% 10% / 
         52% 52% 52% 52%;
     background: 
-        radial-gradient(circle at 10% 10%, #ff00ff 2px, transparent 3px),
-        radial-gradient(circle at 90% 10%, #A855F7 2px, transparent 3px),
-        radial-gradient(circle at 10% 90%, #A855F7 2px, transparent 3px),
-        radial-gradient(circle at 90% 90%, #ff00ff 2px, transparent 3px),
-        radial-gradient(circle at 50% 0%, #ff00ff 1px, transparent 2px),
-        radial-gradient(circle at 0% 50%, #A855F7 1px, transparent 2px),
-        radial-gradient(circle at 100% 50%, #ff00ff 1px, transparent 2px),
-        radial-gradient(circle at 50% 100%, #A855F7 1px, transparent 2px);
+        radial-gradient(circle at 10% 10%, #8B5CF6 3px, transparent 4px),
+        radial-gradient(circle at 90% 10%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 10% 90%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 90% 90%, #8B5CF6 3px, transparent 4px),
+        radial-gradient(circle at 50% 0%, #8B5CF6 2px, transparent 3px),
+        radial-gradient(circle at 0% 50%, #A855F7 2px, transparent 3px),
+        radial-gradient(circle at 100% 50%, #8B5CF6 2px, transparent 3px),
+        radial-gradient(circle at 50% 100%, #A855F7 2px, transparent 3px);
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 5;
-    opacity: 0.7; /* Reducido de 0.9 a 0.7 */
+    opacity: 0.9;
     animation: lightsPulse 2s ease-in-out infinite alternate;
 }
 
-/* ANIMACIÓN DE FOCOS CON LUMINOSIDAD REDUCIDA */
+/* ANIMACIÓN DE FOCOS PULSANTES */
 @keyframes lightsPulse {
     0% {
-        opacity: 0.6;
-        filter: brightness(1.1);
+        opacity: 0.8;
+        filter: brightness(1.2);
     }
     100% {
-        opacity: 0.8;
-        filter: brightness(1.3);
+        opacity: 1;
+        filter: brightness(1.5);
     }
 }
 
@@ -1468,7 +1469,6 @@ margin-bottom: 0px;
     border-radius: 0;
     background-color: #000000 !important;
 }
-
 /* CONTENEDOR DE TEXTO FILM */
 .film-container {
 position: relative;
