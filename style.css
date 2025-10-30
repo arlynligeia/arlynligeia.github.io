@@ -24,11 +24,14 @@ rgba(255, 20, 147, 0.05) 2px,
 rgba(255, 20, 147, 0.05) 4px
 ),
 transparent !important;
-border: 3px double #4df8ff !important;
+border: 3px double #ff00ff !important;
 border-radius: 15px;
 box-shadow: 
-inset 0 0 20px rgba(255, 20, 147, 0.3),
-0 0 30px rgba(255, 20, 147, 0.2);
+0 0 0 2px #ff00ff,
+0 0 0 4px #4df8ff,
+0 0 0 6px #ff00ff,
+inset 0 0 20px rgba(255, 0, 255, 0.3),
+0 0 30px rgba(255, 0, 255, 0.4); /* Glow exterior fuccia */
 animation: crtFlicker 4s infinite;
 }
 /* --- TÍTULO --- */
@@ -44,37 +47,39 @@ margin: 0px;
 padding: 0px;
 }
 @keyframes crtFlicker {
-    0%, 100% { opacity: 0.95; }
-    1% { opacity: 0.8; }
-    2% { opacity: 0.9; }
-    3% { opacity: 0.85; }
-    50% { opacity: 1; }
-    97% { opacity: 0.9; }
-    98% { opacity: 0.85; }
-    99% { opacity: 0.95; }
+0%, 100% { opacity: 0.95; }
+1% { opacity: 0.8; }
+2% { opacity: 0.9; }
+3% { opacity: 0.85; }
+50% { opacity: 1; }
+97% { opacity: 0.9; }
+98% { opacity: 0.85; }
+99% { opacity: 0.95; }
 }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
 
 
 
+
+
+
 /* --- TÍTULO PRINCIPAL MOVIL --- */
 @media (max-width: 768px) {
-.title-container {
-padding: 8px;
-}
 
 .site-title-mobile {
 font-family: 'Orbitron', monospace;    
 font-size: 3rem; 
 color: #ff00ff !important;
 text-align: center;
-margin: 0;
+margin: 20px auto;
+padding: 0px;
 font-weight: 900;
 text-transform: uppercase;
 } 
 
 .site-title { display: none; }
+..site-container { display: none; }
 .site-title-mobile { display: block; }
 }
 
