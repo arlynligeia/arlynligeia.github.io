@@ -378,21 +378,50 @@ border-bottom: 2px solid white !important;
 .home-carousel {
     position: relative;
     width: 95%;
-    height: 100%;
-    overflow: hidden;
     height: calc(100vh - 220px);
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-background-color: #000000 !important;
-border: 3px solid  #00f3ff !important;
-box-shadow: 
-0 0 15px #00f3ff,
-0 0 20px #00f3ff,
-inset 0 0 15px #00f3ff;
-    border-radius: 20px;
+    background: 
+        linear-gradient(45deg, #000 25%, #0a0a2a 25%, #0a0a2a 50%, #000 50%, #000 75%, #0a0a2a 75%) !important;
+    background-size: 10px 10px !important;
+    border: 4px double #00f3ff !important;
+    border-radius: 10px;
     margin: 35px auto;
+    /* Efecto de pantalla de nave */
+    box-shadow: 
+        0 0 0 2px #000,
+        0 0 0 6px #00f3ff,
+        0 0 20px #00f3ff,
+        inset 0 0 20px rgba(0, 243, 255, 0.3);
 }
+
+/* Esquinas decorativas tipo nave espacial */
+.home-carousel::before,
+.home-carousel::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #00f3ff;
+    z-index: 10;
+}
+
+.home-carousel::before {
+    top: -2px;
+    left: -2px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.home-carousel::after {
+    bottom: -2px;
+    right: -2px;
+    border-left: none;
+    border-top: none;
+}
+
 .home-carousel-image {
     position: absolute;
     width: 100%;
@@ -401,14 +430,15 @@ inset 0 0 15px #00f3ff;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
+
 .home-carousel-image.active {
     opacity: 1;
 }
+
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .home-carousel { display: flex; }
 .home-container-mobile { display: none; }
 .home-carousel-mobile { display: none; }
-
 
 
 
