@@ -16,23 +16,23 @@ width: 95%;
 margin: 20px auto;
 padding: 10px;
 background: 
-repeating-linear-gradient(
-0deg,
-transparent,
-transparent 2px,
-rgba(255, 20, 147, 0.05) 2px,
-rgba(255, 20, 147, 0.05) 4px
-),
-transparent !important;
-border: 3px double #ff00ff !important;
-border-radius: 15px;
-box-shadow: 
-0 0 0 2px #ff00ff,
-0 0 0 4px #4df8ff,
-0 0 0 6px #ff00ff,
-inset 0 0 20px rgba(255, 0, 255, 0.3),
-0 0 30px rgba(255, 0, 255, 0.4); /* Glow exterior fuccia */
-animation: crtFlicker 4s infinite;
+    repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 20, 147, 0.05) 2px,
+        rgba(255, 20, 147, 0.05) 4px
+    ),
+    transparent !important;
+    border: 3px double #ff00ff !important; /* Línea 1 - fuccia */
+    border-radius: 15px;
+    /* Tres líneas con espacios transparentes */
+    box-shadow: 
+        0 0 0 4px transparent,        /* Espacio transparente */
+        0 0 0 6px #A855F7,            /* Línea 2 - lila */
+        0 0 0 10px transparent,       /* Espacio transparente */
+        0 0 0 12px #ff00ff;           /* Línea 3 - fuccia */
+    animation: crtFlicker 4s infinite;
 }
 /* --- TÍTULO --- */
 .site-title {
