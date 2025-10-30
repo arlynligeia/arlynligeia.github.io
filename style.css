@@ -1448,26 +1448,31 @@ margin-bottom: 0px;
 .film-banner-mobile {
 position: relative; 
 width: 90%;
-height: 500px;
+height: 70vh;
 overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
-border: 3px solid white !important;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
 margin: 30px auto;
 }
 .film-banner-mobile img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important; 
 }
-
-
-
-
-
- 
-/* CONTENEDOR DE TEXTO FILM MÓVIL */
+/* CONTENEDOR */
 .film-container-mobile {
 position: relative;
 width: 90%;
@@ -1485,7 +1490,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .film-title-mobile {
@@ -1528,22 +1533,6 @@ margin-bottom: 0px;
 .film-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FEATURE FILM
 ====================================== */
@@ -1551,7 +1540,7 @@ margin-bottom: 0px;
 .featurefilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1564,7 +1553,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .featurefilm-title {
@@ -1573,14 +1562,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .featurefilm-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -1626,7 +1615,7 @@ transform: scale(1.1);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -1639,7 +1628,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important; 
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
  /* TÍTULO */
@@ -1649,13 +1638,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .featurefilm-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: TARJETA DE PRODUCTOS */
@@ -1695,7 +1684,7 @@ transform: scale(1.1);
 .alone-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1708,7 +1697,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .alone-title {
@@ -1717,14 +1706,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .alone-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -1826,7 +1815,7 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -1839,7 +1828,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .alone-title-mobile {
@@ -1848,13 +1837,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .alone-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN */
@@ -1907,7 +1896,7 @@ margin-bottom: 0px;
 .shortfilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -1920,7 +1909,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .shortfilm-title {
@@ -1929,14 +1918,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .shortfilm-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: VIDEO */
@@ -1970,7 +1959,7 @@ margin: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -1983,7 +1972,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .shortfilm-title-mobile {
@@ -1992,13 +1981,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .shortfilm-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: VIDEO MÓVIL */
@@ -2033,7 +2022,7 @@ margin: 0px;
 .musicvideodirection-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2046,7 +2035,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .musicvideodirection-title {
@@ -2055,14 +2044,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .musicvideodirection-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: VIDEO */
@@ -2096,7 +2085,7 @@ margin: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -2109,7 +2098,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .musicvideodirection-title-mobile {
@@ -2118,13 +2107,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .musicvideodirection-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: VIDEO MÓVIL */
@@ -2151,6 +2140,16 @@ margin: 0px;
 .musicvideodirection-container { display: none; }
 .musicvideodirection-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
