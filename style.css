@@ -1350,60 +1350,45 @@ border-radius:
 50% 50% 50% 50%; 
 margin: 20px auto;
 }
-/* PUNTOS EN EL BORDE */
-.film-banner::before {
-content: "";
-position: absolute;
-top: -12px; /* Mismo grosor que el borde */
-left: -12px;
-right: -12px;
-bottom: -12px;
-border-radius: 
-12% 10% 12% 10% / 
-52% 52% 52% 52%;
-    
-    /* PUNTOS MÁS GRANDES - Fuscia y Lila */
-    background: 
-        /* Esquinas - Fuscia más grande */
-        radial-gradient(circle at 0% 0%, #ff00ff 8px, transparent 9px),
-        radial-gradient(circle at 100% 0%, #ff00ff 8px, transparent 9px),
-        radial-gradient(circle at 0% 100%, #ff00ff 8px, transparent 9px),
-        radial-gradient(circle at 100% 100%, #ff00ff 8px, transparent 9px),
-        
-        /* Puntos medios - Lila más grande */
-        radial-gradient(circle at 50% 0%, #A855F7 8px, transparent 9px),
-        radial-gradient(circle at 0% 50%, #A855F7 8px, transparent 9px),
-        radial-gradient(circle at 100% 50%, #A855F7 8px, transparent 9px),
-        radial-gradient(circle at 50% 100%, #A855F7 8px, transparent 9px),
-        
-        /* Puntos intermedios - Alternados más grandes */
-        radial-gradient(circle at 25% 0%, #ff00ff 7px, transparent 8px),
-        radial-gradient(circle at 75% 0%, #A855F7 7px, transparent 8px),
-        radial-gradient(circle at 0% 25%, #A855F7 7px, transparent 8px),
-        radial-gradient(circle at 0% 75%, #ff00ff 7px, transparent 8px),
-        radial-gradient(circle at 100% 25%, #ff00ff 7px, transparent 8px),
-        radial-gradient(circle at 100% 75%, #A855F7 7px, transparent 8px),
-        radial-gradient(circle at 25% 100%, #A855F7 7px, transparent 8px),
-        radial-gradient(circle at 75% 100%, #ff00ff 7px, transparent 8px);
-    
-    background-repeat: no-repeat;
-    pointer-events: none;
+/* PUNTOS CON ELEMENTOS HTML */
+.border-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
     z-index: 6;
+    pointer-events: none;
 }
+
+/* Posiciones de los puntos */
+.dot-1 { top: -6px; left: -6px; background: #ff00ff; } /* Esquina superior izquierda */
+.dot-2 { top: -6px; right: -6px; background: #ff00ff; } /* Esquina superior derecha */
+.dot-3 { bottom: -6px; left: -6px; background: #ff00ff; } /* Esquina inferior izquierda */
+.dot-4 { bottom: -6px; right: -6px; background: #ff00ff; } /* Esquina inferior derecha */
+
+.dot-5 { top: -6px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro superior */
+.dot-6 { left: -6px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro izquierdo */
+.dot-7 { right: -6px; top: 50%; transform: translateY(-50%); background: #A855F7; } /* Centro derecho */
+.dot-8 { bottom: -6px; left: 50%; transform: translateX(-50%); background: #A855F7; } /* Centro inferior */
+
+.dot-9 { top: -6px; left: 25%; background: #ff00ff; } /* Superior 25% */
+.dot-10 { top: -6px; left: 75%; background: #A855F7; } /* Superior 75% */
+.dot-11 { left: -6px; top: 25%; background: #A855F7; } /* Izquierdo 25% */
+.dot-12 { left: -6px; top: 75%; background: #ff00ff; } /* Izquierdo 75% */
 
 
 
 
 /* IMAGEN DENTRO DEL BANNER */
 .film-banner img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(1.2) contrast(1.1) saturate(1.1);
-    border-radius: 0;
-    background-color: #000000 !important;
-    z-index: 1;
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 100%;
+object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
 }
 
 
