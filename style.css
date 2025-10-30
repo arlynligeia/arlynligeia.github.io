@@ -1759,7 +1759,7 @@ word-break: break-word;
 overflow-wrap: break-word;
 }
 .alone-columns-grid-information-subtitle-2 {
-color: #00FFEF !important;
+color: #00E6D4 !important;
 text-align: justify;
 }
 .alone-columns-grid-information-text-1,
@@ -1778,15 +1778,15 @@ overflow-wrap: break-word;
 margin-bottom: 30px;
 }
 .alone-columns-grid-information-text-2 {
-color: #00FFEF !important;
+color: #00E6D4 !important;
 }
 /* SEPARADOR */
-.alone-divider {
+.cometsponsor-divider {
 width: 100%;
 height: 0; 
-border-top: 3px solid #39ff14 !important;
-margin: 0; 
-}
+border-top: 3px solid #FF66CC !important;
+margin: 0 0 10px 0; 
+} 
 /* CONTENEDOR: INFORMACION DEBAJO DE LAS COLUMNAS */
 .alone-information {
 width: 100%;
@@ -1867,12 +1867,12 @@ height: auto;
 display: block;
 }
 /* SEPARADOR */
-.alone-divider-mobile {
+.cometsponsor-divider-mobile {
 width: 100%;
 height: 0; 
-border-top: 3px solid #39ff14 !important;
-margin: 0; 
-}
+border-top: 3px solid #FF66CC !important;
+margin: 0 0 10px 0; 
+} 
 /* CONTENEDOR: INFORMACION*/
 .alone-information-mobile {
 width: 100%;
@@ -1889,7 +1889,7 @@ text-align: center;
 margin: 0 0 10px 0;
 }
 .alone-information-subtitle-synopsis-mobile{
-color: #00FFEF !important;
+color: #00E6D4 !important;
 }
 .alone-information-text-synopsis-mobile,
 .alone-information-text-mobile,
@@ -1903,7 +1903,7 @@ text-align: justify;
 margin: 0 0 10px 0;
 }
 .alone-information-text-synopsis-mobile {
-color: #00FFEF !important;
+color: #00E6D4 !important;
 }
 .alone-information-text-end-mobile {
 margin-bottom: 0px;
@@ -2165,47 +2165,61 @@ margin: 0px;
 .musicvideodirection-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   MUSIC
+   MUSIC BANNER PC
 ====================================== */
-/* CONTENEDOR: BANNER */
 .music-banner {
-position: relative; 
+position: relative;
 width: 95%;
-height: 100%;
+height: calc(100vh - 220px);
+z-index: 1;
 overflow: hidden;
-  height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
-    display: flex; /* ← FLEX PARA CENTRAR */
-    justify-content: center; /* ← CENTRADO HORIZONTAL */
-    align-items: center; /* ← CENTRADO VERTICAL */
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: #000000 !important;
-border-radius: 20px;
-border: 3px solid white !important;
-margin: 10px auto 40px auto; /* ← CAMBIA ESTO */
+border: 10px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto; 
 }
+@keyframes borderGlow {
+0% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.6),
+0 0 30px rgba(255, 0, 255, 0.4),
+inset 0 0 15px rgba(168, 85, 247, 0.3);
+}
+100% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.8),
+0 0 30px rgba(255, 0, 255, 0.6),
+inset 0 0 25px rgba(168, 85, 247, 0.5);
+}
+}
+/* IMAGEN DENTRO DEL BANNER */
 .music-banner img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
 }
 /* CONTENEDOR DE TEXTO MUSIC */
 .music-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2218,7 +2232,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .music-title {
@@ -2227,14 +2241,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .music-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -2246,7 +2260,7 @@ margin: 0px;
 .music-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -2268,25 +2282,36 @@ margin-bottom: 0px;
 .music-banner-mobile {
 position: relative; 
 width: 90%;
-height: 500px;
+height: 70vh;
 overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
-border: 3px solid white !important;
-margin: 30px auto;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
 }
 .music-banner-mobile img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important; 
 }
-/* CONTENEDOR DE TEXTO MUSIC MÓVIL */
+/* CONTENEDOR */
 .music-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -2299,7 +2324,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .music-title-mobile {
@@ -2308,13 +2333,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .music-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -2326,7 +2351,7 @@ margin: 0px;
 .music-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -2689,37 +2714,61 @@ margin-bottom: 0px;
 .album1969-container-mobile { display: block; }
 }
 
-
-
 /* ======================================
-   FASHION
+   FASHION BANNER PC
 ====================================== */
-/* CONTENEDOR: BANNER */
 .fashion-banner {
-position: relative; 
+position: relative;
 width: 95%;
-height: 100%;
+height: calc(100vh - 220px);
+z-index: 1;
 overflow: hidden;
-height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
-display: flex; /* ← FLEX PARA CENTRAR */
-justify-content: center; /* ← CENTRADO HORIZONTAL */
-align-items: center; /* ← CENTRADO VERTICAL */
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: #000000 !important;
-border-radius: 20px;
-border: 3px solid white !important;
-margin: 10px auto 40px auto; /* ← CAMBIA ESTO */
+border: 10px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto; 
 }
+@keyframes borderGlow {
+0% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.6),
+0 0 30px rgba(255, 0, 255, 0.4),
+inset 0 0 15px rgba(168, 85, 247, 0.3);
+}
+100% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.8),
+0 0 30px rgba(255, 0, 255, 0.6),
+inset 0 0 25px rgba(168, 85, 247, 0.5);
+}
+}
+/* IMAGEN DENTRO DEL BANNER */
 .fashion-banner img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
 }
 /* CONTENEDOR DE TEXTO FASHION */
 .fashion-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2732,7 +2781,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fashion-title {
@@ -2741,14 +2790,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .fashion-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -2760,7 +2809,7 @@ margin: 0px;
 .fashion-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -2782,25 +2831,36 @@ margin-bottom: 0px;
 .fashion-banner-mobile {
 position: relative; 
 width: 90%;
-height: 500px;
+height: 70vh;
 overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
-border: 3px solid white !important;
-margin: 30px auto;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
 }
 .fashion-banner-mobile img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important; 
 }
-/* CONTENEDOR DE TEXTO FASHION MÓVIL */
+/* CONTENEDOR */
 .fashion-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -2813,7 +2873,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fashion-title-mobile {
@@ -2822,13 +2882,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .fashion-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -2840,7 +2900,7 @@ margin: 0px;
 .fashion-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -3167,35 +3227,115 @@ margin-bottom: 0px;
 .fw2627-container-mobile { display: block; }
 }
 
-
-
 /* ======================================
-   ART
+   ART BANNER PC
 ====================================== */
-/* CONTENEDOR: BANNER */
 .art-banner {
-position: relative; 
+position: relative;
 width: 95%;
-height: 100%;
+height: calc(100vh - 220px);
+z-index: 1;
 overflow: hidden;
-height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
-display: flex; /* ← FLEX PARA CENTRAR */
-justify-content: center; /* ← CENTRADO HORIZONTAL */
-align-items: center; /* ← CENTRADO VERTICAL */
+display: flex;
+justify-content: center;
+align-items: center;
 background-color: #000000 !important;
-border-radius: 20px;
-border: 3px solid white !important;
-margin: 10px auto 40px auto; /* ← CAMBIA ESTO */
+border: 10px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto; 
 }
+@keyframes borderGlow {
+0% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.6),
+0 0 30px rgba(255, 0, 255, 0.4),
+inset 0 0 15px rgba(168, 85, 247, 0.3);
+}
+100% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.8),
+0 0 30px rgba(255, 0, 255, 0.6),
+inset 0 0 25px rgba(168, 85, 247, 0.5);
+}
+}
+/* IMAGEN DENTRO DEL BANNER */
 .art-banner img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
+}
+/* CONTENEDOR DE TEXTO ART */
+.art-container {
+position: relative;
+width: 800px;
+background-color: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.art-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.art-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.art-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.art-information {
+width: 100%;
+margin: 0px; 
+}
+.art-information-text,
+.art-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.art-information-text-end {
+margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .art-banner { display: flex; }
+.art-container { display: block; }
 .art-banner-mobile { display: none; }
+.art-container-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: ART
 ====================================== */
@@ -3204,23 +3344,104 @@ object-fit: cover;
 .art-banner-mobile {
 position: relative; 
 width: 90%;
-height: 500px;
+height: 70vh;
 overflow: hidden;
 background-color: #000000 !important;
 border-radius: 20px;
-border: 3px solid white !important;
-margin: 30px auto;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
 }
 .art-banner-mobile img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important; 
+}
+/* CONTENEDOR */
+.art-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.art-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.art-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.art-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.art-information-mobile {
+width: 100%;
+margin: 0px;  
+}
+.art-information-text-mobile,
+.art-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.art-information-text-end-mobile {
+margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .art-banner { display: none; }
+.art-container { display: none; }
 .art-banner-mobile { display: flex; }
+.art-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
