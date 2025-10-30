@@ -1331,132 +1331,64 @@ margin-bottom: 0px;
 
 
 
-
 /* ======================================
-   FILM BANNER - ESTILO NAVESPACIAL INTENSO MORADO
+   FILM BANNER - BORDE GRUESO CON PUNTOS
 ====================================== */
 .film-banner {
-    position: relative;
-    width: 95%;
-    height: calc(100vh - 220px);
-    z-index: 1;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000 !important;
-    
-    /* BORDE RETROFUTURISTA CON LUMINOSIDAD MORADA INTENSA */
-    /* BORDE CON FUSCIA Y LILA MÁS INTENSOS */
-    border: 8px double #ff00ff !important;
-    box-shadow: 
-        inset 0 0 30px #A855F7,
-        inset 0 0 50px rgba(168, 85, 247, 0.6),
-        0 0 0 2px #ff00ff,
-        0 0 0 4px #A855F7,
-        0 0 0 6px #ff00ff,
-        0 0 30px rgba(255, 0, 255, 0.8),
-        0 0 60px rgba(168, 85, 247, 0.6);
-    
-    border-radius: 
-        10% 8% 10% 8% / 
-        50% 50% 50% 50%; 
-    margin: 20px auto;
-    animation: purpleGlow 3s ease-in-out infinite alternate;
+position: relative;
+width: 95%;
+height: calc(100vh - 220px);
+z-index: 1;
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 12px solid #4DF8FF !important; /* Celeste */
+border-radius: 
+10% 8% 10% 8% / 
+50% 50% 50% 50%; 
+margin: 20px auto;
 }
-
-/* ANIMACIÓN DE BRILLO MORADO INTENSO */
-@keyframes purpleGlow {
-    0% {
-        box-shadow: 
-            inset 0 0 25px #8B5CF6,
-            inset 0 0 40px rgba(139, 92, 246, 0.5),
-            0 0 0 2px #A855F7,
-            0 0 0 4px #8B5CF6,
-            0 0 0 6px #A855F7,
-            0 0 25px rgba(168, 85, 247, 0.7),
-            0 0 45px rgba(139, 92, 246, 0.5);
-    }
-    100% {
-        box-shadow: 
-            inset 0 0 35px #8B5CF6,
-            inset 0 0 60px rgba(139, 92, 246, 0.7),
-            0 0 0 2px #A855F7,
-            0 0 0 4px #8B5CF6,
-            0 0 0 6px #A855F7,
-            0 0 35px rgba(168, 85, 247, 0.9),
-            0 0 75px rgba(139, 92, 246, 0.7);
-    }
-}
-
-/* EFECTO DE PUNTOS DE LUCES EN EL BORDE - MORADO INTENSO */
-.film-banner::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 2px solid transparent;
-    border-radius: 
-        12% 10% 12% 10% / 
-        52% 52% 52% 52%;
+/* PUNTOS EN EL BORDE */
+.film-banner::before {
+content: "";
+position: absolute;
+top: -12px; /* Mismo grosor que el borde */
+left: -12px;
+right: -12px;
+bottom: -12px;
+border-radius: 
+12% 10% 12% 10% / 
+52% 52% 52% 52%;
+    
+    /* PUNTOS EN EL BORDE - Fuscia y Lila */
     background: 
-        radial-gradient(circle at 10% 10%, #8B5CF6 3px, transparent 4px),
-        radial-gradient(circle at 90% 10%, #A855F7 3px, transparent 4px),
-        radial-gradient(circle at 10% 90%, #A855F7 3px, transparent 4px),
-        radial-gradient(circle at 90% 90%, #8B5CF6 3px, transparent 4px),
-        radial-gradient(circle at 50% 0%, #8B5CF6 2px, transparent 3px),
-        radial-gradient(circle at 0% 50%, #A855F7 2px, transparent 3px),
-        radial-gradient(circle at 100% 50%, #8B5CF6 2px, transparent 3px),
-        radial-gradient(circle at 50% 100%, #A855F7 2px, transparent 3px);
+        /* Esquinas - Fuscia */
+        radial-gradient(circle at 0% 0%, #ff00ff 6px, transparent 7px),
+        radial-gradient(circle at 100% 0%, #ff00ff 6px, transparent 7px),
+        radial-gradient(circle at 0% 100%, #ff00ff 6px, transparent 7px),
+        radial-gradient(circle at 100% 100%, #ff00ff 6px, transparent 7px),
+        
+        /* Puntos medios - Lila */
+        radial-gradient(circle at 50% 0%, #A855F7 6px, transparent 7px),
+        radial-gradient(circle at 0% 50%, #A855F7 6px, transparent 7px),
+        radial-gradient(circle at 100% 50%, #A855F7 6px, transparent 7px),
+        radial-gradient(circle at 50% 100%, #A855F7 6px, transparent 7px),
+        
+        /* Puntos intermedios - Alternados */
+        radial-gradient(circle at 25% 0%, #ff00ff 5px, transparent 6px),
+        radial-gradient(circle at 75% 0%, #A855F7 5px, transparent 6px),
+        radial-gradient(circle at 0% 25%, #A855F7 5px, transparent 6px),
+        radial-gradient(circle at 0% 75%, #ff00ff 5px, transparent 6px),
+        radial-gradient(circle at 100% 25%, #ff00ff 5px, transparent 6px),
+        radial-gradient(circle at 100% 75%, #A855F7 5px, transparent 6px),
+        radial-gradient(circle at 25% 100%, #A855F7 5px, transparent 6px),
+        radial-gradient(circle at 75% 100%, #ff00ff 5px, transparent 6px);
+    
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 5;
-    opacity: 0.9;
-    animation: lightsPulse 2s ease-in-out infinite alternate;
-}
-
-/* ANIMACIÓN DE FOCOS PULSANTES */
-@keyframes lightsPulse {
-    0% {
-        opacity: 0.8;
-        filter: brightness(1.2);
-    }
-    100% {
-        opacity: 1;
-        filter: brightness(1.5);
-    }
-}
-
-/* EFECTO DE SCANLINES */
-.film-banner::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.2), 
-            rgba(0, 0, 0, 0.3) 1px, 
-            transparent 2px, 
-            transparent 3px
-        ),
-        radial-gradient(
-            ellipse at center,
-            transparent 0%,
-            rgba(0, 0, 0, 0.4) 70%,
-            rgba(0, 0, 0, 0.6) 100%
-        );
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 10;
-    border-radius: 
-        10% 8% 10% 8% / 
-        50% 50% 50% 50%; 
 }
 
 /* IMAGEN DENTRO DEL BANNER */
@@ -1468,7 +1400,11 @@ margin-bottom: 0px;
     filter: brightness(1.2) contrast(1.1) saturate(1.1);
     border-radius: 0;
     background-color: #000000 !important;
+    z-index: 1;
 }
+
+
+
 /* CONTENEDOR DE TEXTO FILM */
 .film-container {
 position: relative;
