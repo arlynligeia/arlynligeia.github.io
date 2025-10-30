@@ -127,13 +127,24 @@ border: 2px double #39FF14 !important;
 color: #39FF14 !important;
 }
 
-.menu-button:hover,
-.cart-button:hover {
+/* Hover para botones fucsia */
+.menu li:nth-child(odd) .menu-button:hover,
+.menu li:nth-child(odd) .cart-button:hover {
 background: #ff00ff !important;
 color: white !important;
 transform: translateY(-1px);
-box-shadow: 0 0 10px #ff00ff , 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
 text-shadow: 0 0 10px white;
+}
+
+/* Hover para botones verde */
+.menu li:nth-child(even) .menu-button:hover,
+.menu li:nth-child(even) .cart-button:hover {
+background: #39FF14 !important;
+color: black !important;
+transform: translateY(-1px);
+box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
+text-shadow: 0 0 10px black;
 }
 
 /* --- SUBMENÚS DESPLEGABLES --- */
