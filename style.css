@@ -383,7 +383,7 @@ border-bottom: 2px solid white !important;
 }
 
 /* ======================================
-   HOME - ESTILO RETRO CRT VAPORWAVE
+   HOME - ESTILO RETRO CRT VAPORWAVE (CÓDIGO CORREGIDO)
    ====================================== */
 
 /* CARRUSEL - SIMULACIÓN DE MONITOR CRT */
@@ -411,12 +411,17 @@ border-bottom: 2px solid white !important;
         inset 0 0 10px var(--color-celeste-vapor),
         inset 0 0 25px var(--color-fucsia-neon);
 
-    /* Esquinas redondeadas del monitor */
-    border-radius: 20px; 
+    /* 🔑 CORRECCIÓN CLAVE: Curvas de TV Avanzadas 🔑 */
+    /* top-left top-right bottom-right bottom-left / top-left top-right bottom-right bottom-left */
+    /* Esto crea el efecto de "Pantalla Abombada" de los viejos monitores */
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
+
     margin: 35px auto;
     
-    /* Agrega un poco de curvatura sutil (opcional) */
-    transform: perspective(1000px) rotateX(1deg);
+    /* Efecto de inclinación para simular la vista de un monitor CRT */
+    /* transform: perspective(1000px) rotateX(1deg); -> Lo he comentado, ya que el border-radius avanzado es más efectivo. */
     
     /* Asegura que los efectos visuales se queden dentro del marco */
     z-index: 1; 
@@ -443,7 +448,10 @@ border-bottom: 2px solid white !important;
     mix-blend-mode: overlay;
     pointer-events: none; /* Asegura que no interfiera con la interactividad */
     z-index: 10;
-    border-radius: 15px; /* Para que las líneas no salgan del marco interno */
+    /* 💡 CORRECCIÓN MENOR: Usa los mismos valores de border-radius avanzados para el efecto */
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
 }
 
 
@@ -457,8 +465,10 @@ border-bottom: 2px solid white !important;
     transition: opacity 1s ease-in-out;
     /* Aplica un filtro de brillo y contraste retro a la imagen */
     filter: brightness(1.2) contrast(1.1); 
-    /* Las imágenes deben tener esquinas internas más cerradas que el marco exterior */
-    border-radius: 15px; 
+    /* 💡 CORRECCIÓN MENOR: Usa los mismos valores de border-radius avanzados para que la imagen encaje */
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%;
 }
 .home-carousel-image.active {
     opacity: 1;
@@ -473,7 +483,6 @@ border-bottom: 2px solid white !important;
 .home-carousel-mobile { 
     display: none; 
 }
-
 
 
 
