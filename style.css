@@ -287,69 +287,39 @@ border-bottom: 1px solid white !important;
     padding: 0;
     margin: 0;
     height: 100%;
-    overflow-y: auto;
-    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-/* Elementos del menú */
-.menu-mobile-hamburger-overlay a {
-    display: block;
-    width: 100%;
-    max-width: 300px;
-    background: transparent;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.1rem;
-    text-decoration: none; 
-    text-align: center;
-    text-transform: uppercase;
-    white-space: nowrap;
-    padding: 15px 20px;
-    margin: 0;
-}
-
-/* COLORES ALTERNADOS - FUCSIA Y VERDE */
-.menu-mobile-hamburger-overlay li:nth-child(odd) a {
-    color: #ff1493 !important;
-}
-
-.menu-mobile-hamburger-overlay li:nth-child(even) a {
-    color: #00ff00 !important;
-}
-
-/* LÍNEA SEPARADORA ENTRE OPCIONES - COLOR ROSADO */
+/* Elementos del menú - SOLO TEXTO */
 .menu-mobile-hamburger-overlay li {
-    width: 100%;
-    max-width: 300px;
+    text-align: center;
     border-bottom: 1px solid #FF66CC !important;
+    padding: 12px 0;
 }
 
 .menu-mobile-hamburger-overlay li:last-child {
     border-bottom: none !important;
 }
 
-/* Personalizar scroll */
-.menu-mobile-hamburger-overlay ul::-webkit-scrollbar {
-    width: 6px;
+.menu-mobile-hamburger-overlay a {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none; 
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: block;
 }
 
-.menu-mobile-hamburger-overlay ul::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
+/* COLORES ALTERNADOS */
+.menu-mobile-hamburger-overlay li:nth-child(odd) a {
+    color: #ff1493 !important;
 }
 
-.menu-mobile-hamburger-overlay ul::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-}
-
-/* Para Firefox */
-.menu-mobile-hamburger-overlay ul {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(255, 255, 255, 0.6) rgba(255, 255, 255, 0.1);
+.menu-mobile-hamburger-overlay li:nth-child(even) a {
+    color: #00ff00 !important;
 }
 
 /* --- MEDIA QUERY PARA MÓVIL --- */
@@ -362,12 +332,10 @@ border-bottom: 1px solid white !important;
         z-index: 1000;
     }
     
-    /* OCULTAR MENÚ PC */
     nav {
         display: none !important;
     }
 }
-
 
 
 
