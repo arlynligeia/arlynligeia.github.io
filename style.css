@@ -13,7 +13,7 @@ margin: 0;
 /* --- CONTENEDOR: TÍTULO --- */
 .site-container {
 width: 95%;
-margin: 10px auto;
+margin: 20px auto;
 padding: 5px;
 background: 
 repeating-linear-gradient(
@@ -90,7 +90,6 @@ text-transform: uppercase;
 ====================================== */
 nav {
 text-align: center;
-margin: 5px auto;
 }
 .menu {
 list-style: none;
@@ -98,6 +97,7 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
+margin: 5px auto;
 padding: 0px;
 }
 .menu li {
@@ -111,7 +111,8 @@ background: transparent;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-text-decoration: none; 
+text-decoration: none;
+margin: 5px auto; 
 padding: 10px;
 cursor: pointer;
 text-transform: uppercase;
@@ -161,6 +162,10 @@ transform: translateY(-1px);
 box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
 text-shadow: 0 0 10px black;
 }
+
+
+
+
 
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
