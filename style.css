@@ -400,10 +400,14 @@ height: calc(100vh - 220px);
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #000000; 
-border: 3px solid white;
+background-color: #000000 !important;
+border: 3px solid  #00f3ff !important;
+box-shadow: 
+0 0 15px #00f3ff,
+0 0 20px #00f3ff,
+inset 0 0 15px #00f3ff;
 border-radius: 20px;
-margin: 40px auto; /* ← CAMBIA ESTO */
+margin: 35px auto;
 }
 .home-carousel-image {
 position: absolute;
