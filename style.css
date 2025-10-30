@@ -370,41 +370,28 @@ border-bottom: 2px solid white !important;
 
 
 
-
 /* ======================================
-   HOME - ESTILO NAVESPACIAL
+    HOME - ESTILO NAVESPACIAL
    ====================================== */
-
-/* CARRUSEL - BORDE DE NAVE ESPACIAL */
 .home-carousel {
-    /* Base del Contenedor */
-    position: relative;
-    width: 95%;
-    height: calc(100vh - 220px); 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    /* Estilo Nave Espacial - Bordes múltiples */
-    background-color: #000000 !important;
-    border: 12px double #A855F7 !important; /* Borde doble lila más grueso */
-    
-    /* Bordes adicionales con pseudo-elementos */
-    box-shadow: 
-        0 0 0 4px #4DF8FF,    /* Borde celeste interior */
-        0 0 0 8px #A855F7,    /* Borde lila medio */
-        0 0 0 12px #4DF8FF;   /* Borde celeste exterior */
-    
-    /* Mantener el redondeado que te gusta */
-    border-radius: 
-        10% 8% 10% 8% / 
-        50% 50% 50% 50%; 
-
-    margin: 20px auto;
-    
-    /* Asegura que los efectos visuales se queden dentro del marco */
-    z-index: 1; 
+position: relative;
+width: 95%;
+height: calc(100vh - 220px); 
+z-index: 1; 
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 6px double #A855F7 !important;
+box-shadow: 
+0 0 0 2px #A855F7,
+0 0 0 4px #4DF8FF,
+0 0 0 6px #A855F7;
+border-radius: 
+10% 8% 10% 8% / 
+50% 50% 50% 50%; 
+margin: 20px auto;
 }
 
 /* EFECTO DE SCANLINES (Líneas de Barrido CRT) */
@@ -434,15 +421,14 @@ border-bottom: 2px solid white !important;
 /* IMAGEN DENTRO DEL CARRUSEL */
 .home-carousel-image {
     position: absolute;
-    width: 97%; /* Reducir más para los bordes múltiples */
-    height: 97%; /* Reducir más para los bordes múltiples */
+    width: 100%; /* Imágenes completas sin bordes negros */
+    height: 100%; /* Imágenes completas sin bordes negros */
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     filter: brightness(1.2) contrast(1.1); 
-    border-radius: 
-        7% 5% 7% 5% / 
-        42% 42% 42% 42%; /* Redondear menos que el contenedor */
+    /* Sin border-radius para que las imágenes llenen todo el espacio */
+    border-radius: 0;
 }
 .home-carousel-image.active {
     opacity: 1;
@@ -456,7 +442,6 @@ border-bottom: 2px solid white !important;
 .home-carousel-mobile { 
     display: none; 
 }
-
 
 
 
