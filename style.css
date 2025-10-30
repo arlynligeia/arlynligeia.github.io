@@ -1346,8 +1346,13 @@ align-items: center;
 background-color: #000000 !important;
  /* BORDE SIMPLE CON PUNTOS */
     border: 6px solid #4DF8FF !important; /* Borde celeste más delgado */
-  outline: 12px dashed #ff00ff; /* Puntos fuscia MUY ANCHOS */
-outline-offset: 8px; /* Espacio entre borde y puntos */
+ border-image: 
+        repeating-radial-gradient(circle at 0 0, 
+            #ff00ff, 
+            #ff00ff 5px, 
+            transparent 5px, 
+            transparent 10px
+        ) 1;
 
     border-radius: 
         10% 8% 10% 8% / 
