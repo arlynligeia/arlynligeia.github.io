@@ -372,56 +372,33 @@ border-bottom: 2px solid white !important;
 
 
 /* ======================================
-   VARIABLES DE COLOR (¡IMPORTANTE INCLUIR!)
-   ====================================== */
-:root {
-  --color-fondo-oscuro: #1F0B46;      /* Púrpura Profundo (Fondo TV) */
-  --color-lila-suave: #A855F7;        /* Lila / Morado Claro (Marco/Bisel) */
-  --color-fucsia-neon: #FF0099;       /* Fucsia Neón (Acento y Brillo) */
-  --color-celeste-vapor: #4DF8FF;     /* Celeste Vaporwave (Contraste y Brillo) */
-  --color-verde-datos: #00FF80;       /* Verde Neón */
-}
-
-/* ======================================
-   HOME - ESTILO RETRO CRT VAPORWAVE (CÓDIGO CORREGIDO)
+   HOME - ESTILO NAVESPACIAL
    ====================================== */
 
-/* CARRUSEL - SIMULACIÓN DE MONITOR CRT */
+/* CARRUSEL - BORDE DE NAVE ESPACIAL */
 .home-carousel {
-    /* Base del Contenedor (La TV) */
+    /* Base del Contenedor */
     position: relative;
     width: 95%;
-    /* Ajusta la altura para que el efecto sea visible */
     height: calc(100vh - 220px); 
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    /* Estilo Retro CRT */
-    background-color: var(--color-fondo-oscuro); /* Fondo oscuro profundo */
-    border: 5px solid var(--color-lila-suave);  /* Borde/Bisel Sólido */
+    /* Estilo Nave Espacial - Solo Borde */
+    background-color: #000000 !important;
+    border: 4px double var(--color-lila-suave) !important; /* Borde doble lila */
     
-    /* Box-Shadow para el 'Glow' Neón */
-    box-shadow: 
-        /* Sombra externa (Bisel brillante) */
-        0 0 15px var(--color-lila-suave),
-        0 0 30px var(--color-fucsia-neon),
-        /* Sombra interna (Brillo de pantalla) */
-        inset 0 0 10px var(--color-celeste-vapor),
-        inset 0 0 25px var(--color-fucsia-neon);
-
-    /* 🔑 CORRECCIÓN CLAVE: Curvas de TV Avanzadas 🔑 */
-    /* top-left top-right bottom-right bottom-left / top-left top-right bottom-right bottom-left */
-    /* Esto crea el efecto de "Pantalla Abombada" de los viejos monitores */
+    /* Eliminar toda la iluminación/glow */
+    box-shadow: none;
+    
+    /* Mantener el redondeado que te gusta */
     border-radius: 
         10% 8% 10% 8% / 
         50% 50% 50% 50%; 
 
-    margin: 35px auto;
-    
-    /* Efecto de inclinación para simular la vista de un monitor CRT */
-    /* transform: perspective(1000px) rotateX(1deg); -> Lo he comentado, ya que el border-radius avanzado es más efectivo. */
+    margin: 20px auto;
     
     /* Asegura que los efectos visuales se queden dentro del marco */
     z-index: 1; 
@@ -435,7 +412,6 @@ border-bottom: 2px solid white !important;
     left: 0;
     width: 100%;
     height: 100%;
-    /* Crea un patrón de líneas horizontales transparentes/oscuras */
     background: 
         repeating-linear-gradient(
             0deg,
@@ -444,16 +420,13 @@ border-bottom: 2px solid white !important;
             rgba(0, 0, 0, 0.1) 2px, 
             transparent 3px
         );
-    /* Mezcla el patrón con el contenido para que se vea la imagen debajo */
     mix-blend-mode: overlay;
-    pointer-events: none; /* Asegura que no interfiera con la interactividad */
+    pointer-events: none;
     z-index: 10;
-    /* 💡 CORRECCIÓN MENOR: Usa los mismos valores de border-radius avanzados para el efecto */
     border-radius: 
         10% 8% 10% 8% / 
         50% 50% 50% 50%; 
 }
-
 
 /* IMAGEN DENTRO DEL CARRUSEL */
 .home-carousel-image {
@@ -463,9 +436,7 @@ border-bottom: 2px solid white !important;
     object-fit: cover;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    /* Aplica un filtro de brillo y contraste retro a la imagen */
     filter: brightness(1.2) contrast(1.1); 
-    /* 💡 CORRECCIÓN MENOR: Usa los mismos valores de border-radius avanzados para que la imagen encaje */
     border-radius: 
         10% 8% 10% 8% / 
         50% 50% 50% 50%;
@@ -475,7 +446,6 @@ border-bottom: 2px solid white !important;
 }
 
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-/* Esto asegura que tu carrusel se muestre y los móviles se oculten */
 .home-carousel { 
     display: flex; 
 }
@@ -483,7 +453,6 @@ border-bottom: 2px solid white !important;
 .home-carousel-mobile { 
     display: none; 
 }
-
 
 
 
