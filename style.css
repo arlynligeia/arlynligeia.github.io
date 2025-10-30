@@ -24,15 +24,15 @@ margin: 0;
         rgba(255, 20, 147, 0.05) 4px
     ),
     transparent !important;
-    border: 3px double #4df8ff !important;
+    border: 3px double #39FF14 !important; /* VERDE NEON */
     border-radius: 15px;
     box-shadow: 
     inset 0 0 20px rgba(255, 20, 147, 0.3),
     0 0 30px rgba(255, 20, 147, 0.2),
-    /* GLOW LUMINOSO DEL BORDE */
-    0 0 15px #4df8ff,
-    0 0 30px #4df8ff,
-    inset 0 0 15px #4df8ff;
+    /* GLOW LUMINOSO DEL BORDE - VERDE NEON */
+    0 0 15px #39FF14,
+    0 0 30px #39FF14,
+    inset 0 0 15px #39FF14;
     animation: crtFlicker 4s infinite;
 }
 /* --- TÍTULO --- */
@@ -59,8 +59,6 @@ margin: 0;
 }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
-
 
 
 
@@ -392,39 +390,38 @@ border-bottom: 2px solid white !important;
 ====================================== */
 /* CARRUSEL */
 .home-carousel {
-position: relative;
-width: 95%;
-height: 100%;
-overflow: hidden;
-height: calc(100vh - 220px);
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: #000000 !important;
-border: 3px solid  #00f3ff !important;
-box-shadow: 
-0 0 15px #00f3ff,
-0 0 20px #00f3ff,
-inset 0 0 15px #00f3ff;
-border-radius: 20px;
-margin: 35px auto;
+    position: relative;
+    width: 95%;
+    height: 100%;
+    overflow: hidden;
+    height: calc(100vh - 220px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000 !important;
+    border: 3px solid #39FF14 !important; /* VERDE NEON */
+    box-shadow: 
+    0 0 15px #39FF14,
+    0 0 20px #39FF14,
+    inset 0 0 15px #39FF14;
+    border-radius: 20px;
+    margin: 35px auto;
 }
 .home-carousel-image {
-position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
-opacity: 0;
-transition: opacity 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 .home-carousel-image.active {
-opacity: 1;
+    opacity: 1;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .home-carousel { display: flex; }
 .home-container-mobile { display: none; }
 .home-carousel-mobile { display: none; }
-
 
 
 
@@ -542,7 +539,7 @@ width: 800px;
 background-color: #3A0052 !important;
 border-radius: 20px;
 padding: 30px;
-margin: 40px auto;
+margin: 35px auto;
 }
 .socialmediacontent-container::before {
 content: "";
@@ -787,7 +784,7 @@ width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
 padding: 30px; 
-margin: 40px auto;
+margin: 35px auto;
 }
 .youtubehighlight-container::before {
 content: "";
