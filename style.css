@@ -1339,7 +1339,7 @@ margin-bottom: 0px;
 
 
 /* ======================================
-   FILM BANNER - ESTILO NAVESPACIAL CON FOCOS
+   FILM BANNER - BORDE SÓLIDO CON FOCOS INCORPORADOS
 ====================================== */
 .film-banner {
     position: relative;
@@ -1352,108 +1352,87 @@ margin-bottom: 0px;
     align-items: center;
     background-color: #000000 !important;
     
-    /* BORDE CON EFECTO DE FOCOS */
-    border: 4px solid transparent !important;
+    /* BORDE SÓLIDO LUMINOSO */
+    border: 4px solid #ff00ff !important;
     border-radius: 
         10% 8% 10% 8% / 
         50% 50% 50% 50%; 
     margin: 20px auto;
     
-    /* SOMBRA PRINCIPAL PARA EL EFECTO DE LUZ */
+    /* EFECTO DE NEÓN EN EL BORDE */
     box-shadow: 
-        /* Luz interna */
-        inset 0 0 30px #ff00ff,
-        inset 0 0 60px rgba(255, 0, 255, 0.4),
-        /* Borde luminoso */
-        0 0 0 2px #ff00ff,
+        0 0 10px #ff00ff,
         0 0 20px #ff00ff,
-        0 0 40px rgba(255, 0, 255, 0.6);
+        0 0 40px rgba(255, 0, 255, 0.6),
+        inset 0 0 10px #ff00ff;
+    
+    animation: borderGlow 2s ease-in-out infinite alternate;
 }
 
-/* EFECTO DE FOCOS INDIVIDUALES EN EL BORDE */
+/* FOCOS INCORPORADOS EN EL BORDE */
 .film-banner::before {
     content: "";
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: -4px;  /* Mismo grosor que el borde */
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
     border-radius: 
         12% 10% 12% 10% / 
         52% 52% 52% 52%;
+    
+    /* FOCOS DIRECTAMENTE EN EL BORDE - posicionados en el perímetro */
     background: 
-        /* Focos en las esquinas - más grandes y brillantes */
-        radial-gradient(circle at 0% 0%, #ff00ff 8px, transparent 12px),
-        radial-gradient(circle at 100% 0%, #ff00ff 8px, transparent 12px),
-        radial-gradient(circle at 0% 100%, #ff00ff 8px, transparent 12px),
-        radial-gradient(circle at 100% 100%, #ff00ff 8px, transparent 12px),
+        /* Esquinas */
+        radial-gradient(circle at 0% 0%, #ffffff 3px, transparent 4px),
+        radial-gradient(circle at 100% 0%, #ffffff 3px, transparent 4px),
+        radial-gradient(circle at 0% 100%, #ffffff 3px, transparent 4px),
+        radial-gradient(circle at 100% 100%, #ffffff 3px, transparent 4px),
         
-        /* Focos en los puntos medios - tamaño mediano */
-        radial-gradient(circle at 50% 0%, #ff00ff 6px, transparent 10px),
-        radial-gradient(circle at 0% 50%, #ff00ff 6px, transparent 10px),
-        radial-gradient(circle at 100% 50%, #ff00ff 6px, transparent 10px),
-        radial-gradient(circle at 50% 100%, #ff00ff 6px, transparent 10px),
+        /* Puntos medios de cada lado */
+        radial-gradient(circle at 50% 0%, #ff00ff 4px, transparent 5px),
+        radial-gradient(circle at 0% 50%, #ff00ff 4px, transparent 5px),
+        radial-gradient(circle at 100% 50%, #ff00ff 4px, transparent 5px),
+        radial-gradient(circle at 50% 100%, #ff00ff 4px, transparent 5px),
         
-        /* Focos intermedios - más pequeños */
-        radial-gradient(circle at 25% 0%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 75% 0%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 0% 25%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 0% 75%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 100% 25%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 100% 75%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 25% 100%, #A855F7 4px, transparent 8px),
-        radial-gradient(circle at 75% 100%, #A855F7 4px, transparent 8px);
+        /* Puntos intermedios */
+        radial-gradient(circle at 25% 0%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 75% 0%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 0% 25%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 0% 75%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 100% 25%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 100% 75%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 25% 100%, #A855F7 3px, transparent 4px),
+        radial-gradient(circle at 75% 100%, #A855F7 3px, transparent 4px);
     
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 5;
-    animation: lightsPulse 3s ease-in-out infinite alternate;
 }
 
-/* ANIMACIÓN DE FOCOS PULSANTES */
-@keyframes lightsPulse {
+/* ANIMACIÓN DEL BORDE LUMINOSO */
+@keyframes borderGlow {
     0% {
-        opacity: 0.7;
-        filter: brightness(1);
+        box-shadow: 
+            0 0 5px #ff00ff,
+            0 0 15px #ff00ff,
+            0 0 30px rgba(255, 0, 255, 0.4),
+            inset 0 0 5px #ff00ff;
+        border-color: #ff00ff;
     }
     100% {
-        opacity: 1;
-        filter: brightness(1.5);
+        box-shadow: 
+            0 0 15px #ff00ff,
+            0 0 25px #ff00ff,
+            0 0 50px rgba(255, 0, 255, 0.8),
+            inset 0 0 15px #ff00ff;
+        border-color: #ff66cc;
     }
 }
 
-/* EFECTO DE RESPLANDOR EXTERNO */
+/* EFECTO DE SCANLINES (opcional) */
 .film-banner::after {
     content: "";
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    border-radius: 
-        14% 12% 14% 12% / 
-        54% 54% 54% 54%;
-    background: 
-        radial-gradient(circle at 0% 0%, rgba(255, 0, 255, 0.3) 0px, transparent 50px),
-        radial-gradient(circle at 100% 0%, rgba(255, 0, 255, 0.3) 0px, transparent 50px),
-        radial-gradient(circle at 0% 100%, rgba(255, 0, 255, 0.3) 0px, transparent 50px),
-        radial-gradient(circle at 100% 100%, rgba(255, 0, 255, 0.3) 0px, transparent 50px);
-    pointer-events: none;
-    z-index: 4;
-    animation: glowPulse 4s ease-in-out infinite alternate;
-}
-
-@keyframes glowPulse {
-    0% {
-        opacity: 0.3;
-    }
-    100% {
-        opacity: 0.6;
-    }
-}
-
-/* EFECTO DE SCANLINES (opcional - puedes quitarlo si prefieres) */
-.film-banner .scanlines {
     position: absolute;
     top: 0;
     left: 0;
@@ -1462,8 +1441,8 @@ margin-bottom: 0px;
     background: 
         repeating-linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.1), 
-            rgba(0, 0, 0, 0.2) 1px, 
+            rgba(0, 0, 0, 0.15), 
+            rgba(0, 0, 0, 0.25) 1px, 
             transparent 2px, 
             transparent 3px
         );
@@ -1486,7 +1465,6 @@ margin-bottom: 0px;
     background-color: #000000 !important;
     z-index: 1;
 }
-
 
 /* CONTENEDOR DE TEXTO FILM */
 .film-container {
