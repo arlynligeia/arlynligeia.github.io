@@ -1341,27 +1341,108 @@ margin-bottom: 0px;
 /* ======================================
    FILM
 ====================================== */
-/* CONTENEDOR: BANNER */
+/* ======================================
+   FILM BANNER - ESTILO NAVESPACIAL
+====================================== */
 .film-banner {
-position: relative; 
-width: 95%;
-height: 100%;
-overflow: hidden;
-height: calc(100vh - 220px); /* ← ALTURA CALCULADA */
-display: flex; /* ← FLEX PARA CENTRAR */
-justify-content: center; /* ← CENTRADO HORIZONTAL */
-align-items: center; /* ← CENTRADO VERTICAL */
-background-color: #000000 !important;
-border-radius: 20px;
-border: 3px solid white !important;
-margin: 10px auto 40px auto; /* ← CAMBIA ESTO */
+    position: relative;
+    width: 95%;
+    height: calc(100vh - 220px);
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000 !important;
+    
+    /* MISMO BORDE RETROFUTURISTA QUE EL CARRUSEL */
+    border: 8px double #ff00ff !important;
+    box-shadow: 
+        inset 0 0 20px #A855F7,
+        inset 0 0 30px rgba(168, 85, 247, 0.3),
+        0 0 0 2px #ff00ff,
+        0 0 0 4px #A855F7,
+        0 0 0 6px #ff00ff,
+        0 0 20px rgba(255, 0, 255, 0.5),
+        0 0 40px rgba(168, 85, 247, 0.3);
+    
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
+    margin: 20px auto;
+    animation: panelGlow 4s ease-in-out infinite alternate;
 }
+
+/* EFECTO DE PUNTOS DE LUCES EN EL BORDE */
+.film-banner::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid transparent;
+    border-radius: 
+        12% 10% 12% 10% / 
+        52% 52% 52% 52%;
+    background: 
+        radial-gradient(circle at 10% 10%, #ff00ff 2px, transparent 3px),
+        radial-gradient(circle at 90% 10%, #A855F7 2px, transparent 3px),
+        radial-gradient(circle at 10% 90%, #A855F7 2px, transparent 3px),
+        radial-gradient(circle at 90% 90%, #ff00ff 2px, transparent 3px),
+        radial-gradient(circle at 50% 0%, #ff00ff 1px, transparent 2px),
+        radial-gradient(circle at 0% 50%, #A855F7 1px, transparent 2px),
+        radial-gradient(circle at 100% 50%, #ff00ff 1px, transparent 2px),
+        radial-gradient(circle at 50% 100%, #A855F7 1px, transparent 2px);
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.8;
+}
+
+/* EFECTO DE SCANLINES */
+.film-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.15), 
+            rgba(0, 0, 0, 0.25) 1px, 
+            transparent 2px, 
+            transparent 3px
+        ),
+        radial-gradient(
+            ellipse at center,
+            transparent 0%,
+            rgba(0, 0, 0, 0.3) 70%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 10;
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
+}
+
+/* IMAGEN DENTRO DEL BANNER */
 .film-banner img {
-position: absolute;
-width: 100%;
-height: 100%;
-object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1.2) contrast(1.1) saturate(1.1);
+    border-radius: 0;
+    background-color: #000000 !important;
 }
+
+
+
 /* CONTENEDOR DE TEXTO FILM */
 .film-container {
 position: relative;
