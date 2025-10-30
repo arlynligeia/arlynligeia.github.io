@@ -346,159 +346,150 @@ border-bottom: 1px solid white !important;
     HOME - ESTILO NAVESPACIAL RETROFUTURISTA
    ====================================== */
 .home-carousel {
-    position: relative;
-    width: 95%;
-    height: calc(100vh - 220px); 
-    z-index: 1; 
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #000000 !important;
-    
-    /* BORDE RETROFUTURISTA MEJORADO */
-    border: 8px double #ff00ff !important;
-    box-shadow: 
-        /* Sombra interna morada */
-        inset 0 0 20px #A855F7,
-        inset 0 0 30px rgba(168, 85, 247, 0.3),
-        /* Sombra externa neón */
-        0 0 0 2px #ff00ff,
-        0 0 0 4px #A855F7,
-        0 0 0 6px #ff00ff,
-        0 0 20px rgba(255, 0, 255, 0.5),
-        0 0 40px rgba(168, 85, 247, 0.3);
-    
-    border-radius: 
-        10% 8% 10% 8% / 
-        50% 50% 50% 50%; 
-    margin: 20px auto;
-    
-    /* Efecto de brillo pulsante */
-    animation: panelGlow 4s ease-in-out infinite alternate;
+position: relative;
+width: 95%;
+height: calc(100vh - 220px); 
+z-index: 1; 
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 8px double #ff00ff !important;
+box-shadow: 
+inset 0 0 20px #A855F7,
+inset 0 0 30px rgba(168, 85, 247, 0.3),
+/* Sombra externa neón */
+0 0 0 2px #ff00ff,
+0 0 0 4px #A855F7,
+0 0 0 6px #ff00ff,
+0 0 20px rgba(255, 0, 255, 0.5),
+0 0 40px rgba(168, 85, 247, 0.3);
+border-radius: 
+10% 8% 10% 8% / 
+50% 50% 50% 50%; 
+margin: 20px auto;
+animation: panelGlow 4s ease-in-out infinite alternate;
 }
-
 /* EFECTO DE PUNTOS DE LUCES EN EL BORDE */
 .home-carousel::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 2px solid transparent;
-    border-radius: 
-        12% 10% 12% 10% / 
-        52% 52% 52% 52%;
-    background: 
-        radial-gradient(circle at 10% 10%, #ff00ff 2px, transparent 3px),
-        radial-gradient(circle at 90% 10%, #A855F7 2px, transparent 3px),
-        radial-gradient(circle at 10% 90%, #A855F7 2px, transparent 3px),
-        radial-gradient(circle at 90% 90%, #ff00ff 2px, transparent 3px),
-        radial-gradient(circle at 50% 0%, #ff00ff 1px, transparent 2px),
-        radial-gradient(circle at 0% 50%, #A855F7 1px, transparent 2px),
-        radial-gradient(circle at 100% 50%, #ff00ff 1px, transparent 2px),
-        radial-gradient(circle at 50% 100%, #A855F7 1px, transparent 2px);
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 5;
-    opacity: 0.8;
+content: "";
+position: absolute;
+top: -4px;
+left: -4px;
+right: -4px;
+bottom: -4px;
+border: 2px solid transparent;
+border-radius: 
+12% 10% 12% 10% / 
+52% 52% 52% 52%;
+background: 
+radial-gradient(circle at 10% 10%, #ff00ff 2px, transparent 3px),
+radial-gradient(circle at 90% 10%, #A855F7 2px, transparent 3px),
+radial-gradient(circle at 10% 90%, #A855F7 2px, transparent 3px),
+radial-gradient(circle at 90% 90%, #ff00ff 2px, transparent 3px),
+radial-gradient(circle at 50% 0%, #ff00ff 1px, transparent 2px),
+radial-gradient(circle at 0% 50%, #A855F7 1px, transparent 2px),
+radial-gradient(circle at 100% 50%, #ff00ff 1px, transparent 2px),
+radial-gradient(circle at 50% 100%, #A855F7 1px, transparent 2px);
+background-repeat: no-repeat;
+pointer-events: none;
+z-index: 5;
+opacity: 0.8;
 }
-
 /* ANIMACIÓN DE BRILLO PULSANTE */
 @keyframes panelGlow {
-    0% {
-        box-shadow: 
-            inset 0 0 20px #A855F7,
-            inset 0 0 30px rgba(168, 85, 247, 0.3),
-            0 0 0 2px #ff00ff,
-            0 0 0 4px #A855F7,
-            0 0 0 6px #ff00ff,
-            0 0 15px rgba(255, 0, 255, 0.4),
-            0 0 30px rgba(168, 85, 247, 0.2);
-    }
-    100% {
-        box-shadow: 
-            inset 0 0 25px #A855F7,
-            inset 0 0 35px rgba(168, 85, 247, 0.4),
-            0 0 0 2px #ff00ff,
-            0 0 0 4px #A855F7,
-            0 0 0 6px #ff00ff,
-            0 0 25px rgba(255, 0, 255, 0.6),
-            0 0 50px rgba(168, 85, 247, 0.4);
-    }
+0% {
+box-shadow: 
+inset 0 0 20px #A855F7,
+inset 0 0 30px rgba(168, 85, 247, 0.3),
+0 0 0 2px #ff00ff,
+0 0 0 4px #A855F7,
+0 0 0 6px #ff00ff,
+0 0 15px rgba(255, 0, 255, 0.4),
+0 0 30px rgba(168, 85, 247, 0.2);
 }
-
-/* EFECTO DE SCANLINES (Líneas de Barrido CRT) MEJORADO */
+100% {
+box-shadow: 
+inset 0 0 25px #A855F7,
+inset 0 0 35px rgba(168, 85, 247, 0.4),
+0 0 0 2px #ff00ff,
+0 0 0 4px #A855F7,
+0 0 0 6px #ff00ff,
+0 0 25px rgba(255, 0, 255, 0.6),
+0 0 50px rgba(168, 85, 247, 0.4);
+}
+}
+/* EFECTO DE SCANLINES */
 .home-carousel::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            rgba(0, 0, 0, 0.15), 
-            rgba(0, 0, 0, 0.25) 1px, 
-            transparent 2px, 
-            transparent 3px
-        ),
-        /* Efecto de vignette para más profundidad */
-        radial-gradient(
-            ellipse at center,
-            transparent 0%,
-            rgba(0, 0, 0, 0.3) 70%,
-            rgba(0, 0, 0, 0.5) 100%
-        );
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 10;
-    border-radius: 
-        10% 8% 10% 8% / 
-        50% 50% 50% 50%; 
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.15), 
+rgba(0, 0, 0, 0.25) 1px, 
+transparent 2px, 
+transparent 3px
+),
+/* Efecto de vignette para más profundidad */
+radial-gradient(
+ellipse at center,
+transparent 0%,
+rgba(0, 0, 0, 0.3) 70%,
+rgba(0, 0, 0, 0.5) 100%
+);
+mix-blend-mode: overlay;
+pointer-events: none;
+z-index: 10;
+border-radius: 
+10% 8% 10% 8% / 
+50% 50% 50% 50%; 
 }
-
 /* EFECTO DE PARPADEO RETRO OCASIONAL */
 @keyframes randomFlicker {
-    0%, 100% { opacity: 1; }
-    95% { opacity: 0.98; }
-    96% { opacity: 0.7; }
-    97% { opacity: 0.98; }
-    98% { opacity: 0.9; }
-    99% { opacity: 1; }
+0%, 100% { opacity: 1; }
+95% { opacity: 0.98; }
+96% { opacity: 0.7; }
+97% { opacity: 0.98; }
+98% { opacity: 0.9; }
+99% { opacity: 1; }
 }
-
 .home-carousel {
-    animation: 
-        panelGlow 4s ease-in-out infinite alternate,
-        randomFlicker 20s infinite;
+animation: 
+panelGlow 4s ease-in-out infinite alternate,
+randomFlicker 20s infinite;
 }
-
 /* IMAGEN DENTRO DEL CARRUSEL */
 .home-carousel-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    filter: brightness(1.2) contrast(1.1) saturate(1.1);
-    border-radius: 0;
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
 }
 .home-carousel-image.active {
-    opacity: 1;
+opacity: 1;
 }
-
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .home-carousel { 
-    display: flex; 
+display: flex; 
 }
 .home-container-mobile,
 .home-carousel-mobile { 
-    display: none; 
+display: none; 
 }
+
+
+
 
 
 
@@ -634,14 +625,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: #FF66CC !important;
+color: #ff1493 !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .socialmediacontent-title a {
-color: #FF66CC !important;
+color: #ff1493 !important;
 text-decoration: none;
 }
 /* CONTENEDOR: TABLA */
