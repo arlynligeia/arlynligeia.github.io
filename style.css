@@ -104,7 +104,6 @@ position: relative;
 .menu-button,
 .cart-button {
 display: block;     
-background: transparent;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
@@ -114,30 +113,22 @@ padding: 10px;
 cursor: pointer;
 text-transform: uppercase;
 transition: all 0.3s ease;
-/* --- SOLO LÍNEAS DE ESCANEO COMO EL TÍTULO --- */
-background: 
-repeating-linear-gradient(
-0deg,
-transparent,
-transparent 2px,
-rgba(255, 20, 147, 0.05) 2px,
-rgba(255, 20, 147, 0.05) 4px
-),
-transparent !important;
 }
 
-/* Botones impares - Fuchsia */
+/* Botones impares - Fuchsia con blanco */
 .menu li:nth-child(odd) .menu-button,
 .menu li:nth-child(odd) .cart-button {
+background: #ff00ff !important;
+color: white !important;
 border: 2px double #ff00ff !important;
-color: #ff00ff !important;
 }
 
-/* Botones pares - Verde neon */
+/* Botones pares - Verde neon con negro */
 .menu li:nth-child(even) .menu-button,
 .menu li:nth-child(even) .cart-button {
+background: #39FF14 !important;
+color: black !important;
 border: 2px double #39FF14 !important;
-color: #39FF14 !important;
 }
 
 /* Hover para botones fucsia */
@@ -159,7 +150,6 @@ transform: translateY(-1px);
 box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
 text-shadow: 0 0 10px black;
 }
-
 
 
 
