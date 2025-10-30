@@ -1344,49 +1344,19 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-color: #000000 !important;
-border: 12px solid #4DF8FF !important;
-border-radius: 
-10% 8% 10% 8% / 
-50% 50% 50% 50%; 
+ /* BORDE SIMPLE CON PUNTOS */
+    border: 6px solid #4DF8FF !important; /* Borde celeste más delgado */
+    outline: 2px dotted #ff00ff; /* Puntos fuscia alrededor */
+    outline-offset: 4px; /* Espacio entre borde y puntos */
+    
+    border-radius: 
+        10% 8% 10% 8% / 
+        50% 50% 50% 50%; 
+    margin: 20px auto;
+
 margin: 20px auto;
 }
-/* CONTENEDOR PARA LOS PUNTOS - SIN overflow hidden */
-.film-banner-dots {
-    position: absolute;
-    top: -12px;
-    left: -12px;
-    right: -12px;
-    bottom: -12px;
-    pointer-events: none;
-    z-index: 6;
-}
 
-/* PUNTOS QUE SIGUEN LA FORMA CURVA */
-.border-dot {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    pointer-events: none;
-}
-
-/* Puntos ajustados a la forma curva del borde */
-.dot-1 { top: 5%; left: 5%; background: #ff00ff; }
-.dot-2 { top: 5%; right: 5%; background: #ff00ff; }
-.dot-3 { bottom: 5%; left: 5%; background: #ff00ff; }
-.dot-4 { bottom: 5%; right: 5%; background: #ff00ff; }
-
-.dot-5 { top: 5%; left: 50%; transform: translateX(-50%); background: #A855F7; }
-.dot-6 { left: 5%; top: 50%; transform: translateY(-50%); background: #A855F7; }
-.dot-7 { right: 5%; top: 50%; transform: translateY(-50%); background: #A855F7; }
-.dot-8 { bottom: 5%; left: 50%; transform: translateX(-50%); background: #A855F7; }
-
-.dot-9 { top: 5%; left: 25%; background: #ff00ff; }
-.dot-10 { top: 5%; left: 75%; background: #A855F7; }
-.dot-11 { left: 5%; top: 25%; background: #A855F7; }
-.dot-12 { left: 5%; top: 75%; background: #ff00ff; }
-.dot-13 { right: 5%; top: 25%; background: #ff00ff; }
-.dot-14 { right: 5%; top: 75%; background: #A855F7; }
 
 /* IMAGEN DENTRO DEL BANNER */
 .film-banner img {
