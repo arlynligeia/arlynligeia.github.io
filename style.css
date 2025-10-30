@@ -371,14 +371,29 @@ border-bottom: 2px solid white !important;
 
 
 
+/* ======================================
+   VARIABLES DE COLOR (¡IMPORTANTE INCLUIR!)
+   ====================================== */
+:root {
+  --color-fondo-oscuro: #1F0B46;      /* Púrpura Profundo (Fondo TV) */
+  --color-lila-suave: #A855F7;        /* Lila / Morado Claro (Marco/Bisel) */
+  --color-fucsia-neon: #FF0099;       /* Fucsia Neón (Acento y Brillo) */
+  --color-celeste-vapor: #4DF8FF;     /* Celeste Vaporwave (Contraste y Brillo) */
+  --color-verde-datos: #00FF80;       /* Verde Neón */
+}
+
+/* ======================================
+   HOME - ESTILO RETRO CRT VAPORWAVE
+   ====================================== */
+
 /* CARRUSEL - SIMULACIÓN DE MONITOR CRT */
 .home-carousel {
     /* Base del Contenedor (La TV) */
     position: relative;
     width: 95%;
-    height: 100%;
+    /* Ajusta la altura para que el efecto sea visible */
+    height: calc(100vh - 220px); 
     overflow: hidden;
-    height: calc(100vh - 220px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,6 +417,9 @@ border-bottom: 2px solid white !important;
     
     /* Agrega un poco de curvatura sutil (opcional) */
     transform: perspective(1000px) rotateX(1deg);
+    
+    /* Asegura que los efectos visuales se queden dentro del marco */
+    z-index: 1; 
 }
 
 /* EFECTO DE SCANLINES (Líneas de Barrido CRT) */
@@ -416,15 +434,16 @@ border-bottom: 2px solid white !important;
     background: 
         repeating-linear-gradient(
             0deg,
-            rgba(0, 0, 0, 0.2), /* Línea más oscura */
-            rgba(0, 0, 0, 0.3) 1px, /* Línea más oscura */
-            rgba(0, 0, 0, 0.1) 2px, /* Línea semitransparente */
+            rgba(0, 0, 0, 0.2), 
+            rgba(0, 0, 0, 0.3) 1px, 
+            rgba(0, 0, 0, 0.1) 2px, 
             transparent 3px
         );
     /* Mezcla el patrón con el contenido para que se vea la imagen debajo */
     mix-blend-mode: overlay;
     pointer-events: none; /* Asegura que no interfiera con la interactividad */
     z-index: 10;
+    border-radius: 15px; /* Para que las líneas no salgan del marco interno */
 }
 
 
@@ -446,9 +465,21 @@ border-bottom: 2px solid white !important;
 }
 
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.home-carousel { display: flex; }
-.home-container-mobile { display: none; }
-.home-carousel-mobile { display: none; }
+/* Esto asegura que tu carrusel se muestre y los móviles se oculten */
+.home-carousel { 
+    display: flex; 
+}
+.home-container-mobile,
+.home-carousel-mobile { 
+    display: none; 
+}
+
+
+
+
+
+
+
 
 
 /* ======================================
