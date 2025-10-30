@@ -12,36 +12,36 @@ margin: 0;
 
 /* --- CONTENEDOR: TÍTULO --- */
 .site-container {
-    width: 95%;
-    margin: 20px auto;
-    padding: 10px;
-    background: 
-    repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(255, 20, 147, 0.05) 2px,
-        rgba(255, 20, 147, 0.05) 4px
-    ),
-    transparent !important;
-    border: 3px double #4df8ff !important; /* CELESTE VAPORWAVE */
-    border-radius: 15px;
-    box-shadow: 
-    inset 0 0 20px rgba(255, 20, 147, 0.3),
-    0 0 30px rgba(255, 20, 147, 0.2);
-    animation: crtFlicker 4s infinite;
+width: 95%;
+margin: 20px auto;
+padding: 10px;
+background: 
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(255, 20, 147, 0.05) 2px,
+rgba(255, 20, 147, 0.05) 4px
+),
+transparent !important;
+border: 3px double #4df8ff !important;
+border-radius: 15px;
+box-shadow: 
+inset 0 0 20px rgba(255, 20, 147, 0.3),
+0 0 30px rgba(255, 20, 147, 0.2);
+animation: crtFlicker 4s infinite;
 }
 /* --- TÍTULO --- */
 .site-title {
-    font-family: 'Orbitron', monospace;    
-    font-size: 4.5rem; 
-    color: #ff0099 !important;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 900;
-    line-height: 1; 
-    margin: 0px;
-    padding: 0px;
+font-family: 'Orbitron', monospace;    
+font-size: 4rem; 
+color: #ff0099 !important;
+text-transform: uppercase;
+text-align: center;
+font-weight: 900;
+line-height: 1; 
+margin: 0px;
+padding: 0px;
 }
 @keyframes crtFlicker {
     0%, 100% { opacity: 0.95; }
@@ -83,74 +83,126 @@ text-transform: uppercase;
 
 
 /* ======================================
-   MENÚ Y SUBMENUS
+   MENÚ Y SUBMENUS - BOTONES COMANDO ESPACIAL
 ====================================== */
 nav {
-text-align: center;
+    text-align: center;
 }
 .menu {
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-margin: 5px auto;
-padding: 0px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 5px auto;
+    padding: 0px;
 }
 .menu li {
-position: relative;
+    position: relative;
 }
-/* --- BOTONES: MENÚ PRINCIPAL --- */
+
+/* --- BOTONES: COMANDO ESPACIAL RETROFUTURISTA --- */
 .menu-button,
 .cart-button {
-display: block;     
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-text-decoration: none;
-margin: 5px auto; 
-padding: 10px;
-cursor: pointer;
-text-transform: uppercase;
-transition: all 0.3s ease;
+    display: block;     
+    background: transparent !important; /* Fondo transparente */
+    border-radius: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+    margin: 5px auto; 
+    padding: 12px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    position: relative;
+    /* Efecto de panel metálico sutil */
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.05) 2px,
+            rgba(255, 255, 255, 0.05) 4px
+        ) !important;
 }
 
-/* Botones impares - Fuchsia con blanco */
+/* Botones impares - Borde fucsia con efecto LED */
 .menu li:nth-child(odd) .menu-button,
 .menu li:nth-child(odd) .cart-button {
-background: #ff00ff !important;
-color: white !important;
-border: 2px double #ff00ff !important;
+    border: 2px solid #ff00ff !important;
+    color: #ff00ff !important;
+    box-shadow: 
+        0 0 5px #ff00ff,
+        inset 0 0 5px rgba(255, 0, 255, 0.3);
 }
 
-/* Botones pares - Verde neon con negro */
+/* Botones pares - Borde verde neon con efecto LED */
 .menu li:nth-child(even) .menu-button,
 .menu li:nth-child(even) .cart-button {
-background: #39FF14 !important;
-color: black !important;
-border: 2px double #39FF14 !important;
+    border: 2px solid #39FF14 !important;
+    color: #39FF14 !important;
+    box-shadow: 
+        0 0 5px #39FF14,
+        inset 0 0 5px rgba(57, 255, 20, 0.3);
 }
 
-/* Hover para botones fucsia */
+/* Hover para botones fucsia - Efecto activación */
 .menu li:nth-child(odd) .menu-button:hover,
 .menu li:nth-child(odd) .cart-button:hover {
-background: #ff00ff !important;
-color: white !important;
-transform: translateY(-1px);
-box-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
-text-shadow: 0 0 10px white;
+    background: rgba(255, 0, 255, 0.1) !important;
+    color: #ff00ff !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 15px #ff00ff,
+        0 0 25px #ff00ff,
+        inset 0 0 10px rgba(255, 0, 255, 0.5);
+    text-shadow: 0 0 10px #ff00ff;
 }
 
-/* Hover para botones verde */
+/* Hover para botones verde - Efecto activación */
 .menu li:nth-child(even) .menu-button:hover,
 .menu li:nth-child(even) .cart-button:hover {
-background: #39FF14 !important;
-color: black !important;
-transform: translateY(-1px);
-box-shadow: 0 0 10px #39FF14, 0 0 20px #39FF14, 0 0 30px #39FF14;
-text-shadow: 0 0 10px black;
+    background: rgba(57, 255, 20, 0.1) !important;
+    color: #39FF14 !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 15px #39FF14,
+        0 0 25px #39FF14,
+        inset 0 0 10px rgba(57, 255, 20, 0.5);
+    text-shadow: 0 0 10px #39FF14;
 }
 
+/* Indicador LED en esquina superior derecha */
+.menu-button::after,
+.cart-button::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.menu li:nth-child(odd) .menu-button::after,
+.menu li:nth-child(odd) .cart-button::after {
+    background: #ff00ff;
+    box-shadow: 0 0 5px #ff00ff;
+}
+
+.menu li:nth-child(even) .menu-button::after,
+.menu li:nth-child(even) .cart-button::after {
+    background: #39FF14;
+    box-shadow: 0 0 5px #39FF14;
+}
+
+/* LED se enciende en hover */
+.menu-button:hover::after,
+.cart-button:hover::after {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
 
 
 
@@ -559,7 +611,7 @@ width: 800px;
 background-color: #3A0052 !important;
 border-radius: 20px;
 padding: 30px;
-margin: 35px auto;
+margin: 40px auto;
 }
 .socialmediacontent-container::before {
 content: "";
@@ -804,7 +856,7 @@ width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
 padding: 30px; 
-margin: 35px auto;
+margin: 40px auto;
 }
 .youtubehighlight-container::before {
 content: "";
