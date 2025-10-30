@@ -1362,34 +1362,37 @@ border-radius:
 12% 10% 12% 10% / 
 52% 52% 52% 52%;
     
-    /* PUNTOS EN EL BORDE - Fuscia y Lila */
+    /* PUNTOS MÁS GRANDES - Fuscia y Lila */
     background: 
-        /* Esquinas - Fuscia */
-        radial-gradient(circle at 0% 0%, #ff00ff 6px, transparent 7px),
-        radial-gradient(circle at 100% 0%, #ff00ff 6px, transparent 7px),
-        radial-gradient(circle at 0% 100%, #ff00ff 6px, transparent 7px),
-        radial-gradient(circle at 100% 100%, #ff00ff 6px, transparent 7px),
+        /* Esquinas - Fuscia más grande */
+        radial-gradient(circle at 0% 0%, #ff00ff 8px, transparent 9px),
+        radial-gradient(circle at 100% 0%, #ff00ff 8px, transparent 9px),
+        radial-gradient(circle at 0% 100%, #ff00ff 8px, transparent 9px),
+        radial-gradient(circle at 100% 100%, #ff00ff 8px, transparent 9px),
         
-        /* Puntos medios - Lila */
-        radial-gradient(circle at 50% 0%, #A855F7 6px, transparent 7px),
-        radial-gradient(circle at 0% 50%, #A855F7 6px, transparent 7px),
-        radial-gradient(circle at 100% 50%, #A855F7 6px, transparent 7px),
-        radial-gradient(circle at 50% 100%, #A855F7 6px, transparent 7px),
+        /* Puntos medios - Lila más grande */
+        radial-gradient(circle at 50% 0%, #A855F7 8px, transparent 9px),
+        radial-gradient(circle at 0% 50%, #A855F7 8px, transparent 9px),
+        radial-gradient(circle at 100% 50%, #A855F7 8px, transparent 9px),
+        radial-gradient(circle at 50% 100%, #A855F7 8px, transparent 9px),
         
-        /* Puntos intermedios - Alternados */
-        radial-gradient(circle at 25% 0%, #ff00ff 5px, transparent 6px),
-        radial-gradient(circle at 75% 0%, #A855F7 5px, transparent 6px),
-        radial-gradient(circle at 0% 25%, #A855F7 5px, transparent 6px),
-        radial-gradient(circle at 0% 75%, #ff00ff 5px, transparent 6px),
-        radial-gradient(circle at 100% 25%, #ff00ff 5px, transparent 6px),
-        radial-gradient(circle at 100% 75%, #A855F7 5px, transparent 6px),
-        radial-gradient(circle at 25% 100%, #A855F7 5px, transparent 6px),
-        radial-gradient(circle at 75% 100%, #ff00ff 5px, transparent 6px);
+        /* Puntos intermedios - Alternados más grandes */
+        radial-gradient(circle at 25% 0%, #ff00ff 7px, transparent 8px),
+        radial-gradient(circle at 75% 0%, #A855F7 7px, transparent 8px),
+        radial-gradient(circle at 0% 25%, #A855F7 7px, transparent 8px),
+        radial-gradient(circle at 0% 75%, #ff00ff 7px, transparent 8px),
+        radial-gradient(circle at 100% 25%, #ff00ff 7px, transparent 8px),
+        radial-gradient(circle at 100% 75%, #A855F7 7px, transparent 8px),
+        radial-gradient(circle at 25% 100%, #A855F7 7px, transparent 8px),
+        radial-gradient(circle at 75% 100%, #ff00ff 7px, transparent 8px);
     
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 6;
 }
+
+
+
 
 /* IMAGEN DENTRO DEL BANNER */
 .film-banner img {
