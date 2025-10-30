@@ -15,7 +15,7 @@ margin: 0;
 width: 95%;
 margin: 20px auto;
 padding: 10px;
-     background: 
+ background: 
  repeating-linear-gradient(
         0deg,
         transparent,
@@ -24,14 +24,14 @@ padding: 10px;
         rgba(255, 20, 147, 0.05) 4px
     ),
     transparent !important;
-    border: 2px solid #ff00ff !important; /* Línea 1 - fuccia */
+    border: 2px solid #ff1493 !important; /* Línea 1 - fuccia */
     border-radius: 15px;
 }
 /* --- TÍTULO --- */
 .site-title {
 font-family: 'Orbitron', monospace;    
 font-size: 4rem; 
-color: #ff0099 !important;
+color: #ff1493 !important;
 text-transform: uppercase;
 text-align: center;
 font-weight: 900;
@@ -63,7 +63,7 @@ padding: 0px;
 .site-title-mobile {
 font-family: 'Orbitron', monospace;    
 font-size: 3rem; 
-color: #ff00ff !important;
+color: #ff1493 !important;
 text-align: center;
 margin: 20px auto;
 padding: 0px;
@@ -128,10 +128,10 @@ nav {
 /* Botones impares - Borde fucsia con efecto LED */
 .menu li:nth-child(odd) .menu-button,
 .menu li:nth-child(odd) .cart-button {
-    border: 2px solid #ff00ff !important;
-    color: #ff00ff !important;
+    border: 2px solid #ff1493 !important;
+    color: #ff1493 !important;
     box-shadow: 
-        0 0 5px #ff00ff,
+        0 0 5px #ff1493,
         inset 0 0 5px rgba(255, 0, 255, 0.3);
 }
 
@@ -162,13 +162,13 @@ nav {
 .menu li:nth-child(even) .menu-button:hover,
 .menu li:nth-child(even) .cart-button:hover {
     background: rgba(57, 255, 20, 0.1) !important;
-    color: #39FF14 !important;
+    color:  #00FF00 !important;
     transform: translateY(-2px);
     box-shadow: 
-        0 0 15px #39FF14,
-        0 0 25px #39FF14,
+        0 0 15px #00FF00,
+        0 0 25px #00FF00 ,
         inset 0 0 10px rgba(57, 255, 20, 0.5);
-    text-shadow: 0 0 10px #39FF14;
+    text-shadow: 0 0 10px #00FF00;
 }
 
 /* Indicador LED en esquina superior derecha */
@@ -694,7 +694,7 @@ margin: 0px;
 .socialmediacontent-table-wrapper-body-divider td {
 width: 100%;
 height: 0; 
-border-top: 3px solid #FF66CC !important;
+border-top: 3px solid #39ff14 !important;
 margin: 0; 
 }
 .socialmediacontent-table-wrapper-body-row {
