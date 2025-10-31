@@ -5561,8 +5561,13 @@ background: #FF66CC !important;
 background: #ff1493 !important;
 color: white !important;
 }
+/* Recuadros de Estimated delivery time - más altos */
+.shippingdetails-content-group-mobile:nth-child(1) .shippingdetails-content-group-row-mobile:nth-child(4) .shippingdetails-content-group-box-mobile,
+.shippingdetails-content-group-mobile:nth-child(3) .shippingdetails-content-group-row-mobile:nth-child(4) .shippingdetails-content-group-box-mobile {
+height: 30px !important;
+}
 /* SEPARADOR */
-.shippingdetails-divider-mobile {
+.shippingdetails-content-divider-mobile {
 width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
