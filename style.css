@@ -7601,6 +7601,9 @@ padding: 0px;
 .cometsponsor-columns-grid-synopsis-subtitle-1 {
 text-align: center;  
 }
+.cometsponsor-columns-grid-synopsis-subtitle-2 {
+color: #00FFFF !important;
+}
 .cometsponsor-columns-grid-synopsis-text-1,
 .cometsponsor-columns-grid-synopsis-text-2 {
 box-sizing: border-box;
@@ -7615,6 +7618,19 @@ padding: 0px;
 }
 .cometsponsor-columns-grid-synopsis-text-1 {
 margin-bottom: 20px;
+}
+.cometsponsor-columns-grid-synopsis-text-2 {
+color: #00FFFF !important;
+}
+/* CONTENEDOR: PRECIO Y BOTONES */
+.cometsponsor-columns-grid-action {
+width: 100%;
+height: 100%;  
+display: flex;                   
+flex-direction: column;      
+justify-content: center;    
+align-items: center;      
+margin: 0px;
 }
 /* CONTENEDOR: PRECIO */
 .cometsponsor-columns-grid-price {
@@ -7631,7 +7647,6 @@ padding: 0px;
 /* CONTENEDOR: BOTONES */
 .cometsponsor-columns-grid-button {
 width: 100%;
-display: block;
 text-align: center; 
 margin: 0px;
 }
@@ -7839,7 +7854,7 @@ margin: 0 0 10px 0;
 .cometsponsor-product-button-mobile {
 width: 100%;
 display: block;
-justify-content: center;   
+text-align: center;
 margin: 0px;
 }
 .cometsponsor-product-button-addtocart-mobile,
@@ -7895,7 +7910,7 @@ margin: 0px;
 text-align: center;
 }
 .cometsponsor-synopsis-subtitle-2-mobile {
-color: #00D9C0 !important;
+color: #00FFFF !important;
 }
 .cometsponsor-synopsis-text-1-mobile,
 .cometsponsor-synopsis-text-2-mobile {
@@ -7908,7 +7923,7 @@ text-align: justify;
 margin: 0 0 10px 0;
 }
 .cometsponsor-synopsis-text-2-mobile {
-color: #00D9C0 !important;
+color: #00FFFF !important;
 }
 /* CONTENEDOR: INFORMACIÓN */ 
 .cometsponsor-information-mobile {
