@@ -6663,29 +6663,6 @@ transform: scale(1.05);
 .digitalfeaturefilm-container-mobile { display: block; }
 }
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
 /* ======================================
    ALONE SPONSORSHIP
 ====================================== */
@@ -6695,7 +6672,7 @@ position: relative;
 width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .alonesponsorship-container::before {
@@ -6706,8 +6683,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #320046 !important;
-border-radius: 20px 20px 0 0;  
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
 }
 .alonesponsorship-title {
 position: relative;
@@ -6717,7 +6694,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -6731,7 +6707,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR GRID DE 3 */
+/* CONTENEDOR: GRID DE 3 */
 .alonesponsorship-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -6741,7 +6717,9 @@ margin: 0 0 20px 0;
 /* CONTENEDOR: PRODUCTOS */
 .alonesponsorship-columns-grid-product {
 width: 100%;
-margin: 0 0 10px 0;
+display: block;
+justify-content: center; 
+margin: 0px;
 }
 .alonesponsorship-columns-grid-product-image {
 width: 100%;
@@ -6749,19 +6727,27 @@ margin: 0 0 10px 0;
 }
 .alonesponsorship-columns-grid-product-image img {
 width: 100%;
+display: block;
+height: auto;
 border-radius: 15px;
 }
-.alonesponsorship-columns-grid-product-information div {
+.alonesponsorship-columns-grid-product-name,
+.alonesponsorship-columns-grid-product-price {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
-text-decoration: none; 
-text-transform: uppercase; 
+text-decoration: none;   
+text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.alonesponsorship-columns-grid-product-price {
+font-size: 1.5rem;
+}
 .alonesponsorship-columns-grid-product-button {
+width: 100%;
+display: block;
 text-align: center;
 margin: 0px;
 }
@@ -6772,9 +6758,8 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none; 
-text-transform: uppercase;
-font-weight: bold; 
+text-decoration: none;
+font-weight: bold;
 text-align: center;
 margin: 0px;
 padding: 10px 20px;
@@ -6801,9 +6786,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
 font-weight: bold;
-margin: 0px; 
+text-align: center;
+margin: 0px;
 padding: 10px 20px;
 border: none;
 cursor: pointer;
@@ -6816,6 +6801,7 @@ transform: scale(1.05);
  /* CONTROL */
 .alonesponsorship-container { display: block; }
 .alonesponsorship-container-mobile { display: none; }
+
 /* ======================================
    MOVIL RESPONSIVE: ALONE SPONSORSHIP
 ====================================== */
@@ -6827,7 +6813,7 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 30px auto;
+margin: 20px auto 30px auto;
 padding: 20px;
 }
 .alonesponsorship-container-mobile::before {
@@ -6837,7 +6823,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 100px; 
+height: 60px; 
 background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -6849,7 +6835,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase;  
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -6857,33 +6842,34 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: CONTENIDO */
-.alonesponsorship-content-mobile {
+/* SEPARADOR */
+.alonesponsorship-divider-mobile {
 width: 100%;
-margin: 0px;
-}
-.alonesponsorship-content-product-mobile  {   
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: PRODUCTO */ 
+.alonesponsorship-product-mobile  {
+width: 100%; 
 display: block;
 justify-content: center;
 margin: 0px;
 }
 /* CONTENEDOR: IMAGEN */ 
-.alonesponsorship-content-product-image-mobile {
+.alonesponsorship-product-image-mobile {
 width: 100%;
 margin: 0 0 10px 0;
 }
-.alonesponsorship-content-product-image-mobile img {
+.alonesponsorship-product-image-mobile img {
 width: 100%;
 height: 200px;
-display: block; 
+display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN */ 
-.alonesponsorship-content-product-information-mobile {
-width: 100%;
-margin: 0px;
-}
-.alonesponsorship-content-product-information-mobile div {
+/* CONTENEDOR: NOMBRE Y PRECIO */ 
+.alonesponsorship-product-name-mobile,
+.alonesponsorship-product-price-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -6893,14 +6879,17 @@ line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.alonesponsorship-product-price-mobile {
+font-size: 1.2rem;
+}
 /* CONTENEDOR: BOTÓN */ 
-.alonesponsorship-content-product-button-mobile {
+.alonesponsorship-product-button-mobile {
 width: 100%;
 display: block;
 text-align: center; 
 margin: 0px;
 }
-.alonesponsorship-content-product-button-view-mobile {
+.alonesponsorship-product-button-view-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px; 
@@ -6917,15 +6906,8 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.alonesponsorship-content-product-button-view-mobile:hover {
+.alonesponsorship-product-button-view-mobile:hover {
 transform: scale(1.05);
-} 
-/* SEPARADOR */
-.alonesponsorship-content-divider-mobile {
-width: 100%;
-height: 0; 
-border-top: 3px solid #FF6B00 !important;
-margin: 0 0 10px 0; 
 } 
 /* CONTENEDOR: BOTONES FINALES */
 .alonesponsorship-buttons-mobile {
@@ -6946,12 +6928,15 @@ text-decoration: none;
 text-transform: uppercase;  
 font-weight: bold;
 text-align: center;
-margin: 0px; 
+margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
+.alonesponsorship-button-continueshopping-mobile {
+margin: 0px; 
+} 
 .alonesponsorship-button-back-mobile:hover,
 .alonesponsorship-button-continueshopping-mobile:hover {
 transform: scale(1.05);
@@ -6970,7 +6955,7 @@ position: relative;
 width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .aloneexecutiveproducers-container::before {
@@ -6981,8 +6966,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #320046 !important;
-border-radius: 20px 20px 0 0;  
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
 }
 .aloneexecutiveproducers-title {
 position: relative;
@@ -6992,7 +6977,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -7006,7 +6990,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR GRID DE 3 */
+/* CONTENEDOR: GRID DE 3 */
 .aloneexecutiveproducers-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -7016,7 +7000,9 @@ margin: 0 0 20px 0;
 /* CONTENEDOR: PRODUCTOS */
 .aloneexecutiveproducers-columns-grid-product {
 width: 100%;
-margin: 0 0 10px 0;
+display: block;
+justify-content: center; 
+margin: 0px;
 }
 .aloneexecutiveproducers-columns-grid-product-image {
 width: 100%;
@@ -7024,19 +7010,27 @@ margin: 0 0 10px 0;
 }
 .aloneexecutiveproducers-columns-grid-product-image img {
 width: 100%;
+display: block;
+height: auto;
 border-radius: 15px;
 }
-.aloneexecutiveproducers-columns-grid-product-information div {
+.aloneexecutiveproducers-columns-grid-product-name,
+.aloneexecutiveproducers-columns-grid-product-price {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
-text-decoration: none; 
-text-transform: uppercase; 
+text-decoration: none;   
+text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.aloneexecutiveproducers-columns-grid-product-price {
+font-size: 1.5rem;
+}
 .aloneexecutiveproducers-columns-grid-product-button {
+width: 100%;
+display: block;
 text-align: center;
 margin: 0px;
 }
@@ -7047,9 +7041,8 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none; 
-text-transform: uppercase;
-font-weight: bold; 
+text-decoration: none;
+font-weight: bold;
 text-align: center;
 margin: 0px;
 padding: 10px 20px;
@@ -7076,9 +7069,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
 font-weight: bold;
-margin: 0px; 
+text-align: center;
+margin: 0px;
 padding: 10px 20px;
 border: none;
 cursor: pointer;
@@ -7103,7 +7096,7 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 30px auto;
+margin: 20px auto 30px auto;
 padding: 20px;
 }
 .aloneexecutiveproducers-container-mobile::before {
@@ -7113,7 +7106,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 100px; 
+height: 60px; 
 background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -7125,7 +7118,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase;  
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -7133,33 +7125,34 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: CONTENIDO */
-.aloneexecutiveproducers-content-mobile {
+/* SEPARADOR */
+.aloneexecutiveproducers-divider-mobile {
 width: 100%;
-margin: 0px;
-}
-.aloneexecutiveproducers-content-product-mobile  {   
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: PRODUCTO */ 
+.aloneexecutiveproducers-product-mobile  {
+width: 100%; 
 display: block;
 justify-content: center;
 margin: 0px;
 }
 /* CONTENEDOR: IMAGEN */ 
-.aloneexecutiveproducers-content-product-image-mobile {
+.aloneexecutiveproducers-product-image-mobile {
 width: 100%;
 margin: 0 0 10px 0;
 }
-.aloneexecutiveproducers-content-product-image-mobile img {
+.aloneexecutiveproducers-product-image-mobile img {
 width: 100%;
 height: 200px;
-display: block; 
+display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN */ 
-.aloneexecutiveproducers-content-product-information-mobile {
-width: 100%;
-margin: 0px;
-}
-.aloneexecutiveproducers-content-product-information-mobile div {
+/* CONTENEDOR: NOMBRE Y PRECIO */ 
+.aloneexecutiveproducers-product-name-mobile,
+.aloneexecutiveproducers-product-price-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -7169,14 +7162,17 @@ line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.aloneexecutiveproducers-product-price-mobile {
+font-size: 1.2rem;
+}
 /* CONTENEDOR: BOTÓN */ 
-.aloneexecutiveproducers-content-product-button-mobile {
+.aloneexecutiveproducers-product-button-mobile {
 width: 100%;
 display: block;
 text-align: center; 
 margin: 0px;
 }
-.aloneexecutiveproducers-content-product-button-view-mobile {
+.aloneexecutiveproducers-product-button-view-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px; 
@@ -7193,15 +7189,8 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.aloneexecutiveproducers-content-product-button-view-mobile:hover {
+.aloneexecutiveproducers-product-button-view-mobile:hover {
 transform: scale(1.05);
-} 
-/* SEPARADOR */
-.aloneexecutiveproducers-content-divider-mobile {
-width: 100%;
-height: 0; 
-border-top: 3px solid #FF6B00 !important;
-margin: 0 0 10px 0; 
 } 
 /* CONTENEDOR: BOTONES FINALES */
 .aloneexecutiveproducers-buttons-mobile {
@@ -7222,12 +7211,15 @@ text-decoration: none;
 text-transform: uppercase;  
 font-weight: bold;
 text-align: center;
-margin: 0px; 
+margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
+.aloneexecutiveproducers-button-continueshopping-mobile {
+margin: 0px; 
+} 
 .aloneexecutiveproducers-button-back-mobile:hover,
 .aloneexecutiveproducers-button-continueshopping-mobile:hover {
 transform: scale(1.05);
@@ -7246,7 +7238,7 @@ position: relative;
 width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .alonedigitalproducts-container::before {
@@ -7257,8 +7249,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #320046 !important;
-border-radius: 20px 20px 0 0;  
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
 }
 .alonedigitalproducts-title {
 position: relative;
@@ -7268,7 +7260,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -7282,7 +7273,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR GRID DE 3 */
+/* CONTENEDOR: GRID DE 3 */
 .alonedigitalproducts-columns-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -7292,7 +7283,9 @@ margin: 0 0 20px 0;
 /* CONTENEDOR: PRODUCTOS */
 .alonedigitalproducts-columns-grid-product {
 width: 100%;
-margin: 0 0 10px 0;
+display: block;
+justify-content: center; 
+margin: 0px;
 }
 .alonedigitalproducts-columns-grid-product-image {
 width: 100%;
@@ -7300,19 +7293,27 @@ margin: 0 0 10px 0;
 }
 .alonedigitalproducts-columns-grid-product-image img {
 width: 100%;
+display: block;
+height: auto;
 border-radius: 15px;
 }
-.alonedigitalproducts-columns-grid-product-information div {
+.alonedigitalproducts-columns-grid-product-name,
+.alonedigitalproducts-columns-grid-product-price {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
-text-decoration: none; 
-text-transform: uppercase; 
+text-decoration: none;   
+text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.alonedigitalproducts-columns-grid-product-price {
+font-size: 1.5rem;
+}
 .alonedigitalproducts-columns-grid-product-button {
+width: 100%;
+display: block;
 text-align: center;
 margin: 0px;
 }
@@ -7323,9 +7324,8 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none; 
-text-transform: uppercase;
-font-weight: bold; 
+text-decoration: none;
+font-weight: bold;
 text-align: center;
 margin: 0px;
 padding: 10px 20px;
@@ -7352,9 +7352,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
 font-weight: bold;
-margin: 0px; 
+text-align: center;
+margin: 0px;
 padding: 10px 20px;
 border: none;
 cursor: pointer;
@@ -7379,7 +7379,7 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 30px auto;
+margin: 20px auto 30px auto;
 padding: 20px;
 }
 .alonedigitalproducts-container-mobile::before {
@@ -7389,7 +7389,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 100px; 
+height: 60px; 
 background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -7401,7 +7401,6 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase;  
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -7409,33 +7408,34 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: CONTENIDO */
-.alonedigitalproducts-content-mobile {
+/* SEPARADOR */
+.alonedigitalproducts-divider-mobile {
 width: 100%;
-margin: 0px;
-}
-.alonedigitalproducts-content-product-mobile  {   
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: PRODUCTO */ 
+.alonedigitalproducts-product-mobile  {
+width: 100%; 
 display: block;
 justify-content: center;
 margin: 0px;
 }
 /* CONTENEDOR: IMAGEN */ 
-.alonedigitalproducts-content-product-image-mobile {
+.alonedigitalproducts-product-image-mobile {
 width: 100%;
 margin: 0 0 10px 0;
 }
-.alonedigitalproducts-content-product-image-mobile img {
+.alonedigitalproducts-product-image-mobile img {
 width: 100%;
 height: 200px;
-display: block; 
+display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN */ 
-.alonedigitalproducts-content-product-information-mobile {
-width: 100%;
-margin: 0px;
-}
-.alonedigitalproducts-content-product-information-mobile div {
+/* CONTENEDOR: NOMBRE Y PRECIO */ 
+.alonedigitalproducts-product-name-mobile,
+.alonedigitalproducts-product-price-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -7445,14 +7445,17 @@ line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
+.alonedigitalproducts-product-price-mobile {
+font-size: 1.2rem;
+}
 /* CONTENEDOR: BOTÓN */ 
-.alonedigitalproducts-content-product-button-mobile {
+.alonedigitalproducts-product-button-mobile {
 width: 100%;
 display: block;
 text-align: center; 
 margin: 0px;
 }
-.alonedigitalproducts-content-product-button-view-mobile {
+.alonedigitalproducts-product-button-view-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px; 
@@ -7469,15 +7472,8 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.alonedigitalproducts-content-product-button-view-mobile:hover {
+.alonedigitalproducts-product-button-view-mobile:hover {
 transform: scale(1.05);
-} 
-/* SEPARADOR */
-.alonedigitalproducts-content-divider-mobile {
-width: 100%;
-height: 0; 
-border-top: 3px solid #FF6B00 !important;
-margin: 0 0 10px 0; 
 } 
 /* CONTENEDOR: BOTONES FINALES */
 .alonedigitalproducts-buttons-mobile {
@@ -7498,12 +7494,15 @@ text-decoration: none;
 text-transform: uppercase;  
 font-weight: bold;
 text-align: center;
-margin: 0px; 
+margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
+.alonedigitalproducts-button-continueshopping-mobile {
+margin: 0px; 
+} 
 .alonedigitalproducts-button-back-mobile:hover,
 .alonedigitalproducts-button-continueshopping-mobile:hover {
 transform: scale(1.05);
@@ -7512,7 +7511,6 @@ transform: scale(1.05);
 .alonedigitalproducts-container { display: none; }
 .alonedigitalproducts-container-mobile { display: block; }
 }
-
 
 
 
