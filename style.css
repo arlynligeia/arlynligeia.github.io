@@ -6347,13 +6347,6 @@ transform: scale(1.05);
 .physicalfashion-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
 /* ======================================
    DIGITAL FEATURE FILM
 ====================================== */
@@ -6361,7 +6354,7 @@ transform: scale(1.05);
 .digitalfeaturefilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 10px auto 40px auto;
 padding: 30px;
@@ -6374,7 +6367,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title {
@@ -6383,14 +6376,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .digitalfeaturefilm-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -6403,7 +6396,7 @@ margin: 0 0 20px 0;
 .digitalfeaturefilm-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: justify;
@@ -6437,7 +6430,7 @@ border-radius: 15px;
 .digitalfeaturefilm-columns-grid-product-information div {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
@@ -6456,8 +6449,8 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none; 
-padding: 10px 20px 10px 20px;
 margin: 0px;
+padding: 10px 20px;
 border: none;  
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -6479,16 +6472,13 @@ background-color: #00FFFF !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
-text-decoration: none; 
-padding: 10px 20px 10px 20px;
-margin: 0;
+color: black !important;
+text-decoration: none;
+margin: 0; 
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
-}
-.digitalfeaturefilm-button-continueshopping {
-background-color: #FF6B00 !important;
 }
 .digitalfeaturefilm-button-back:hover,
 .digitalfeaturefilm-button-continueshopping:hover {
@@ -6498,7 +6488,7 @@ transform: scale(1.05);
 .digitalfeaturefilm-container { display: block; }
 .digitalfeaturefilm-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: PHYSICAL FASHION
+   MOVIL RESPONSIVE: DIGITAL FEATURE FILM
 ====================================== */
 @media (max-width: 768px) {
 /* CONTENEDOR, FRANJA, TÍTULO*/ 
@@ -6506,7 +6496,7 @@ transform: scale(1.05);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -6519,7 +6509,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title-mobile {
@@ -6528,13 +6518,13 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .digitalfeaturefilm-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: CONTENIDO */
@@ -6566,7 +6556,7 @@ margin: 0px;
 .digitalfeaturefilm-content-product-information-mobile div {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
@@ -6619,7 +6609,7 @@ background: #00FFFF !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
-color: white !important;
+color: black !important;
 text-decoration: none;
 font-weight: bold;
 text-align: center;
@@ -6629,10 +6619,6 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.digitalfeaturefilm-button-continueshopping-mobile {
-background-color: #FF6B00 !important;
-margin-bottom: 0px;  
-} 
 .digitalfeaturefilm-button-back-mobile:hover,
 .digitalfeaturefilm-button-continueshopping-mobile:hover {
 transform: scale(1.05);
@@ -6641,6 +6627,26 @@ transform: scale(1.05);
 .digitalfeaturefilm-container { display: none; }
 .digitalfeaturefilm-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ALONE SPONSORSHIP
