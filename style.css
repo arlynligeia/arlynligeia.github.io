@@ -6427,7 +6427,6 @@ margin: 0px;
 }
 .digitalfeaturefilm-columns-grid-product-image {
 width: 100%;
-display: block; 
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-columns-grid-product-image img {
@@ -6557,7 +6556,7 @@ font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
-text-align: center;
+text-align: justify;
 margin: 0 0 10px 0;
 }
 /* SEPARADOR */
@@ -6577,14 +6576,12 @@ margin: 0px;
 /* CONTENEDOR: IMAGEN */ 
 .digitalfeaturefilm-product-image-mobile {
 width: 100%;
-display: block; 
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-product-image-mobile img {
 width: 100%;
 height: 200px;
 display: block;
-object-fit: cover;
 border-radius: 15px;
 }
 /* CONTENEDOR: NOMBRE Y PRECIO */ 
@@ -6654,6 +6651,9 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
+.digitalfeaturefilm-button-continueshopping-mobile {
+margin: 0px; 
+} 
 .digitalfeaturefilm-button-back-mobile:hover,
 .digitalfeaturefilm-button-continueshopping-mobile:hover {
 transform: scale(1.05);
