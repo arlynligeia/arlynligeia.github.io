@@ -10896,6 +10896,23 @@ margin-bottom: 0px;
     display: block;
 }
 
+/* PARA MÓVIL - MOSTRAR SOLO HOME Y SUS SUBSECCIONES */
+.mobile-only.main-section:not(#home-mobile) {
+    display: none;
+}
+
+.mobile-only.subsection:not([id^="home-mobile-"]) {
+    display: none;
+}
+
+#home-mobile {
+    display: block;
+}
+
+#home-mobile-socialmediacontent,
+#home-mobile-youtubehighlight {
+    display: block;
+}
 
 
 
