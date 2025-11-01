@@ -5265,13 +5265,12 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
 <!-- SCRIPS TIENDA -->
 
-<!-- SCRIP: CARRUSEL STORE PC-->
+<!-- SCRIP: CARRUSEL SHOP PC-->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🖼️ Carrusel SHOP iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('#shop .shop-carousel-image');
+console.log('🎨 Carrusel Shop iniciado');
+function startShopCarousel() {
+const images = document.querySelectorAll('.shop-carousel-image');
 let currentImageIndex = 0;
 function changeImage() {
 images.forEach(img => img.classList.remove('active'));
@@ -5280,37 +5279,50 @@ currentImageIndex = (currentImageIndex + 1) % images.length;
 }
 changeImage();
 setInterval(changeImage, 10000);
-console.log('✅ Carrusel SHOP configurado - Cambio cada 10 segundos');
+console.log('✅ Carrusel Shop configurado - Cambio cada 10 segundos');
 }
-// 2. FUNCIÓN: NAVEGACIÓN SOLO PARA IMAGEN 2 (ALONE)
-function setupCarouselNavigation() {
-const aloneImage = document.getElementById('shop-carousel-image-2');
-aloneImage.style.cursor = 'pointer';
-aloneImage.addEventListener('click', function() {
-console.log('🖱️ Click en imagen ALONE - Navegando a sponsorship');
-// SOLO DESPLAZARSE A LA SUBSECCIÓN SIN OCULTAR HERMANOS
-const targetSubsection = document.getElementById('digitalfeaturefilm-alonesponsorship');
-if (targetSubsection) {
-targetSubsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function setupShopCarouselNavigation() {
+const carousel = document.querySelector('.shop-carousel');
+carousel.addEventListener('click', function() {
+const activeImage = this.querySelector('.shop-carousel-image.active');
+if (activeImage && activeImage.id === 'shop-carousel-image-2') {
+console.log('🖱️ Click en imagen 2 - Navegando a Alone Sponsorship');
+const targetSection = document.getElementById('digitalfeaturefilm-alonesponsorship');
+if (targetSection) {
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 window.location.hash = 'digitalfeaturefilm-alonesponsorship';
 }
-});
-console.log('✅ Navegación del carrusel SHOP configurada - Solo imagen ALONE es clickeable');
 }
-// INICIALIZACIÓN 
-startCarousel();
-setupCarouselNavigation();
+});
+const updateCursor = () => {
+const activeImage = carousel.querySelector('.shop-carousel-image.active');
+if (activeImage && activeImage.id === 'shop-carousel-image-2') {
+carousel.style.cursor = 'pointer';
+} else {
+carousel.style.cursor = 'default';
+}
+};
+const observer = new MutationObserver(updateCursor);
+observer.observe(carousel, { 
+attributes: true, 
+attributeFilter: ['class'],
+subtree: true 
+});
+updateCursor();
+console.log('✅ Navegación del carrusel Shop configurada - Solo imagen 2 clickeable');
+}
+startShopCarousel();
+setupShopCarouselNavigation();
 });
 </script>
-<!-- FIN SCRIP: CARRUSEL STORE PC -->
-
-<!-- SCRIP: CARRUSEL STORE MÓVIL -->
+<!-- FIN SCRIP: CARRUSEL SHOP PC -->
+  
+<!-- SCRIP: CARRUSEL SHOP MÓVIL -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🖼️ Carrusel SHOP MOBILE iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('#shop-mobile .shop-carousel-image-mobile');
+console.log('🎨 Carrusel Shop móvil iniciado');
+function startShopMobileCarousel() {
+const images = document.querySelectorAll('.shop-carousel-image-mobile');
 let currentImageIndex = 0;
 function changeImage() {
 images.forEach(img => img.classList.remove('active'));
@@ -5319,29 +5331,44 @@ currentImageIndex = (currentImageIndex + 1) % images.length;
 }
 changeImage();
 setInterval(changeImage, 10000);
-console.log('✅ Carrusel SHOP MOBILE configurado - Cambio cada 10 segundos');
+console.log('✅ Carrusel Shop móvil configurado - Cambio cada 10 segundos');
 }
-// 2. FUNCIÓN: NAVEGACIÓN SOLO PARA IMAGEN 2 (ALONE)
-function setupCarouselNavigation() {
-const aloneImage = document.getElementById('shop-carousel-image-2-mobile');
-aloneImage.style.cursor = 'pointer';
-aloneImage.addEventListener('click', function() {
-console.log('🖱️ Click en imagen ALONE MOBILE - Navegando a sponsorship');
-// SOLO DESPLAZARSE A LA SUBSECCIÓN SIN OCULTAR HERMANOS
-const targetSubsection = document.getElementById('digitalfeaturefilm-mobile-alonesponsorship');
-if (targetSubsection) {
-targetSubsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+function setupShopMobileCarouselNavigation() {
+const carousel = document.querySelector('.shop-carousel-mobile');
+carousel.addEventListener('click', function() {
+const activeImage = this.querySelector('.shop-carousel-image-mobile.active');
+if (activeImage && activeImage.id === 'shop-carousel-image-2-mobile') {
+console.log('🖱️ Click en imagen 2 móvil - Navegando a Alone Sponsorship móvil');
+const targetSection = document.getElementById('digitalfeaturefilm-mobile-alonesponsorship');
+if (targetSection) {
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 window.location.hash = 'digitalfeaturefilm-mobile-alonesponsorship';
 }
-});
-console.log('✅ Navegación del carrusel SHOP MOBILE configurada - Solo imagen ALONE es clickeable');
 }
-// INICIALIZACIÓN 
-startCarousel();
-setupCarouselNavigation();
+});
+const updateCursor = () => {
+const activeImage = carousel.querySelector('.shop-carousel-image-mobile.active');
+if (activeImage && activeImage.id === 'shop-carousel-image-2-mobile') {
+carousel.style.cursor = 'pointer';
+} else {
+carousel.style.cursor = 'default';
+}
+};
+const observer = new MutationObserver(updateCursor);
+observer.observe(carousel, { 
+attributes: true, 
+attributeFilter: ['class'],
+subtree: true 
+});
+updateCursor();
+console.log('✅ Navegación del carrusel Shop móvil configurada - Solo imagen 2 clickeable');
+}
+startShopMobileCarousel();
+setupShopMobileCarouselNavigation();
 });
 </script>
-<!-- FIN SCRIP: CARRUSEL STORE MÓVIL -->
+<!-- FIN SCRIP: CARRUSEL SHOP MÓVIL -->
+
 
 
 
