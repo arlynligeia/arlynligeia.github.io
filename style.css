@@ -9884,19 +9884,6 @@ box-sizing: border-box;
     transform: scale(1.02);
 }
 
-@media (max-width: 768px) {
-    /* SOLO mostrar secciones mobile del carrito cuando sean activadas por JavaScript */
-    .cartempty-section.mobile-only,
-    .cartfull-section.mobile-only {
-        /* display se controla por JavaScript */
-    }
-    
-    /* Ocultar versiones de escritorio en móviles */
-    .cartempty-section:not(.mobile-only),
-    .cartfull-section:not(.mobile-only) {
-        display: none !important;
-    }
-}
 
 
 /* ======================================
