@@ -6,15 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARLYN LIGEIA</title>
 <link rel="stylesheet" href="style.css">
+<!-- FUENTES -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">   
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
 </head>
   
 <body>
      
 <header>
-<h1 class="site-title">ARLYN LIGEIA</h1>
+<h1 class="site-title">ARLYN LIGEIA</h1>     
 <nav>    
 <ul class="menu" id="menu">     
 <!-- HOME -->
@@ -25,14 +26,10 @@
 <li><a class="submenu-button" href="#home-tiktokhighlight">Tiktok Highlight</a></li>
 <li><a class="submenu-button" href="#home-youtubehighlight">Youtube Highlight</a></li>
 </ul>
-</li>
-<!-- UNIVERSE -->
-<li>
-<a class="menu-button" href="#universe" data-section="universe">Universe</a>
 </li> 
-<!-- ABOUT -->
+<!-- BIOGRAPHY -->
 <li>
-<a class="menu-button" href="#about" data-section="about">About</a>
+<a class="menu-button" href="#biography" data-section="biography">Biography</a>
 </li>              
 <!-- FILM -->
 <li>
@@ -97,13 +94,13 @@
 <li><a class="submenu-button" href="#contact-contactforfans">Contact for Fans</a></li>
 </ul>
 </li>               
-<!-- SHOP -->
+<!-- STORE -->
 <li>
-<a class="menu-button" href="#shop" data-section="shop">Shop</a>
+<a class="menu-button" href="#store" data-section="store">Store</a>
 <ul class="submenu">
-<li><a class="submenu-button" href="#shop-digitalproducts">Digital Products</a></li>
-<li><a class="submenu-button" href="#shop-physicalproducts">Physical Products</a></li>
-<li><a class="submenu-button" href="#shop-shippingdetails">Shipping Details</a></li>
+<li><a class="submenu-button" href="#store-digitalproducts">Digital Products</a></li>
+<li><a class="submenu-button" href="#store-physicalproducts">Physical Products</a></li>
+<li><a class="submenu-button" href="#store-shippingdetails">Shipping Details</a></li>
 </ul>
 </li>
 <!-- CART -->
@@ -114,53 +111,56 @@
 </nav> 
 </header>
 
+    
 <main>
-  
+
 <!-- TIENDA --> 
   
-<!-- SHOP PC -->
-<section class="shop-section main-section" id="shop">
-<div class="shop-carousel">
-<img class="shop-carousel-image active" id="shop-carousel-image-1"src="assets/assets/Arlyn Ligeia Banner Store.png" alt=" Image 1">
-<img class="shop-carousel-image" id="shop-carousel-image-2" src="assets/assets/ALCP. Store (Promotion) Alone.png" alt="Image 2">
-<img class="shop-carousel-image" id="shop-carousel-image-3" src="assets/assets/Fondo galactico.png" alt="Image 3">
+<!-- STORE -->
+<section class="store-section main-section" id="store">
+<div class="store-container">  
+<!-- CONTENEDOR: CARRUSEL -->
+<div class="store-carousel">
+<img class="store-carousel-image active" id="store-carousel-image-1"src="assets/assets/Arlyn Ligeia Banner Store.png" alt=" Image 1">
+<img class="store-carousel-image" id="store-carousel-image-2" src="assets/assets/ALCP. Store (Promotion) Alone.png" alt="Image 2">
+<img class="store-carousel-image" id="store-carousel-image-3" src="assets/assets/Fondo galactico.png" alt="Image 3">
+</div>  
 </div>  
 </section>
-<!-- FIN SHOP PC -->
- 
-<!-- DIGITAL PRODUCTS PC -->
-<section class="subsection" id="shop-digitalproducts">
+<!-- FIN STORE -->
+
+<!-- Subsecciones de STORE -->
+<!-- DIGITAL PRODUCTS -->
+<section class="subsection" id="store-digitalproducts">
 <div class="digitalproducts-container">
-<h2 class="digitalproducts-title"><a href="#shop-digitalproducts">DIGITAL PRODUCTS</a></h2> 
+<h2 class="digitalproducts-title"><a href="#store-digitalproducts">DIGITAL PRODUCTS</a></h2> 
 <!-- CONTENEDOR: COLUMNAS -->
 <div class="digitalproducts-columns">
 <!-- CONTENEDOR: GRID DE 3 -->  
 <div class="digitalproducts-columns-grid">
+<!-- CONTENEDOR: TAJETA FILM -->
 <a class="digitalproducts-columns-grid-card" href="#digitalfilm">
 <img src="assets/assets/Tienda.png" alt="Film">
-<div class="digitalproducts-columns-grid-card-label">  
-<span class="digitalproducts-columns-grid-card-label-text">FILM</span>
-</div> 
+<span class="digitalproducts-columns-grid-card-text">FILM</span>
 </a> 
+<!-- CONTENEDOR: TAJETA MUSIC -->
 <a class="digitalproducts-columns-grid-card" href="#digitalmusic">
 <img src="assets/assets/Tienda.png" alt="Music">
-<div class="digitalproducts-columns-grid-card-label"> 
-<span class="digitalproducts-columns-grid-card-label-text">MUSIC</span>
-</div>   
+<span class="digitalproducts-columns-grid-card-text">MUSIC</span>
 </a>
+<!-- CONTENEDOR: TAJETA FASHION -->
 <a class="digitalproducts-columns-grid-card" href="#digitalfashion">
 <img src="assets/assets/Tienda.png" alt="Fashion">
-<div class="digitalproducts-columns-grid-card-label"> 
-<span class="digitalproducts-columns-grid-card-label-text">FASHION</span>
-</div>  
+<span class="digitalproducts-columns-grid-card-text">FASHION</span>
 </a>
 </div>
 </div>
 </div>
 </section>
-<!-- FIN DIGITAL PRODUCTS PC -->
+<!-- FIN DIGITAL PRODUCTS -->
 
-<!-- DIGITAL FILM PC -->
+
+  <!-- DIGITAL FILM -->
 <section class="main-section" id="digitalfilm">
 <div class="digitalfilm-container">
 <h2 class="digitalfilm-title"><a href="#digitalfilm">FILM</a></h2>
@@ -171,30 +171,26 @@
 <!-- CONTENEDOR: TARJETA FEATURE FILM -->
 <a class="digitalfilm-columns-grid-card" href="#digitalfeaturefilm">
 <img src="assets/assets/Nuevayork.png" alt="Feature Film">
-<div class="digitalfilm-columns-grid-card-label">  
-<span class="digitalfilm-columns-grid-card-label-text">FEATURE FILM</span>
-</div> 
+<span class="digitalfilm-columns-grid-card-text">FEATURE FILM</span>
 </a> 
 <!-- CONTENEDOR: TARJETA SHORT FILM -->
 <a class="digitalfilm-columns-grid-card" href="#digitalshortfilm">
 <img src="assets/assets/Nuevayork.png" alt="Short Film">
-<div class="digitalfilm-columns-grid-card-label"> 
-<span class="digitalfilm-columns-grid-card-label-text">SHORT FILM</span>
-</div>   
+<span class="digitalfilm-columns-grid-card-text">SHORT FILM</span>
 </a>
 </div>
 </div>  
 <!-- CONTENEDOR: BOTONES FINALES -->
 <div class="digitalfilm-buttons">
-<a class="digitalfilm-button-back" href="#shop-digitalproducts">BACK</a>
-<a class="digitalfilm-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<a class="digitalfilm-button-back" href="#store-digitalproducts">BACK</a>
+<a class="digitalfilm-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 </div>
 </div>
 </section>
-<!-- FIN DIGITAL FILM PC -->
+<!-- FIN DIGITAL FILM -->
 
-<!-- DIGITAL FEATURE FILM PC -->
-<section class="digitalfeaturefilm-section main-section" id="digitalfeaturefilm">
+  <!-- DIGITAL FEATURE FILM -->
+<section class="main-section" id="digitalfeaturefilm">
 <div class="digitalfeaturefilm-container">
 <h2 class="digitalfeaturefilm-title"><a href="#digitalfeaturefilm">FEATURE FILM</a></h2>
 <!-- CONTENEDOR: INFORMACIÓN -->
@@ -207,13 +203,16 @@
 <div class="digitalfeaturefilm-columns">
 <!-- CONTENEDOR: GRID DE 3 -->  
 <div class="digitalfeaturefilm-columns-grid">
+<!-- FILA 1 -->  
 <!-- CONTENEDOR: PRODUCTO COMET SPONSOR -->
 <div class="digitalfeaturefilm-columns-grid-product">
 <div class="digitalfeaturefilm-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Comet Sponsor">
 </div>
-<div class="digitalfeaturefilm-columns-grid-product-name">COMET SPONSOR</div>
-<div class="digitalfeaturefilm-columns-grid-product-price">$ 50.00</div>
+<div class="digitalfeaturefilm-columns-grid-product-information">
+<div>COMET SPONSOR</div>
+<div>$ 50.00</div>
+</div>
 <div class="digitalfeaturefilm-columns-grid-product-button">  
 <a class="digitalfeaturefilm-columns-grid-product-button-view" href="#cometsponsor">VIEW</a>
 </div>
@@ -223,8 +222,10 @@
 <div class="digitalfeaturefilm-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Alone Online Premiere">
 </div>
-<div class="digitalfeaturefilm-columns-grid-product-name">ONLINE PREMIERE</div>
-<div class="digitalfeaturefilm-columns-grid-product-price">$ 3.00</div>
+<div class="digitalfeaturefilm-columns-grid-product-information">
+<div>ONLINE PREMIERE</div>
+<div>$ 3.00</div>
+</div>
 <div class="digitalfeaturefilm-columns-grid-product-button">  
 <a class="digitalfeaturefilm-columns-grid-product-button-view" href="#aloneonlinepremiere">VIEW</a>
 </div>
@@ -233,9 +234,11 @@
 <div class="digitalfeaturefilm-columns-grid-product">
 <div class="digitalfeaturefilm-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Alone Standar Package">
-</div>  
-<div class="digitalfeaturefilm-columns-grid-product-name">STANDAR PACKAGE</div>
-<div class="digitalfeaturefilm-columns-grid-product-price">$ 0.00</div>
+</div>
+<div class="digitalfeaturefilm-columns-grid-product-information">
+<div>STANDAR PACKAGE</div>
+<div>$ 0.00</div>
+</div>
 <div class="digitalfeaturefilm-columns-grid-product-button">  
 <a class="digitalfeaturefilm-columns-grid-product-button-view" href="#alonestandarpackage">VIEW</a>
 </div>
@@ -245,28 +248,31 @@
 <!-- CONTENEDOR: BOTONES FINALES -->
 <div class="digitalfeaturefilm-buttons">
 <a class="digitalfeaturefilm-button-back" href="#digitalfilm">BACK</a>
-<a class="digitalfeaturefilm-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<a class="digitalfeaturefilm-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 </div>
 </div>
 </section>
-<!-- END DIGITAL FEATURE FILM PC -->
-
-<!-- ALONE SPONSORSHIP PC -->
+<!-- END DIGITAL FEATURE FILM -->
+ 
+<!-- ALONE SPONSORSHIP -->
 <section class="subsection" id="digitalfeaturefilm-alonesponsorship">
 <div class="alonesponsorship-container">
 <h2 class="alonesponsorship-title"><a href="#digitalfeaturefilm-alonesponsorship">ALONE SPONSORSHIP</a></h2>
 <!-- CONTENEDOR: COLUMNAS -->
 <div class="alonesponsorship-columns">
-<!-- CONTENEDOR: GRID DE 3 -->  
+<!-- CONTENEDOR: GRID DE 3 -->
 <div class="alonesponsorship-columns-grid">
+<!-- FILA 1 -->
 <!-- CONTENEDOR: PRODUCTO COMET SPONSOR -->
 <div class="alonesponsorship-columns-grid-product">
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Comet Sponsor">
 </div>
-<div class="alonesponsorship-columns-grid-product-name">COMET SPONSOR</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 50.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+<div class="alonesponsorship-columns-grid-product-information">
+<div>COMET SPONSOR</div>
+<div>$ 50.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#cometsponsor">VIEW</a>
 </div>
 </div>
@@ -275,9 +281,11 @@
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Planet Sponsor">
 </div>
-<div class="alonesponsorship-columns-grid-product-name">PLANET SPONSOR</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 100.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+<div class="alonesponsorship-columns-grid-product-information">
+<div>PLANET SPONSOR</div>
+<div>$ 100.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#planetsponsor">VIEW</a>
 </div>
 </div>
@@ -285,21 +293,26 @@
 <div class="alonesponsorship-columns-grid-product">
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Star Sponsor">
-</div>  
-<div class="alonesponsorship-columns-grid-product-name">STAR SPONSOR</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 200.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+</div>
+<div class="alonesponsorship-columns-grid-product-information">
+<div>STAR SPONSOR</div>
+<div>$ 200.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#starsponsor">VIEW</a>
 </div>
 </div>
+<!-- FILA 2 -->
 <!-- CONTENEDOR: PRODUCTO COMET SPONSOR BRAND -->
 <div class="alonesponsorship-columns-grid-product">
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Comet Sponsor Brand">
 </div>
-<div class="alonesponsorship-columns-grid-product-name">COMET SPONSOR BRAND</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 400.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+<div class="alonesponsorship-columns-grid-product-information">
+<div>COMET SPONSOR BRAND</div>
+<div>$ 400.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#cometsponsorbrand">VIEW</a>
 </div>
 </div>
@@ -308,9 +321,11 @@
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Planet Sponsor Brand">
 </div>
-<div class="alonesponsorship-columns-grid-product-name">PLANET SPONSOR BRAND</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 800.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+<div class="alonesponsorship-columns-grid-product-information">
+<div>PLANET SPONSOR BRAND</div>
+<div>$ 800.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#planetsponsorbrand">VIEW</a>
 </div>
 </div>
@@ -319,9 +334,11 @@
 <div class="alonesponsorship-columns-grid-product-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Star Sponsor Brand">
 </div>
-<div class="alonesponsorship-columns-grid-product-name">STAR SPONSOR BRAND</div>
-<div class="alonesponsorship-columns-grid-product-price">$ 1,600.00</div>
-<div class="alonesponsorship-columns-grid-product-button">  
+<div class="alonesponsorship-columns-grid-product-information">
+<div>STAR SPONSOR BRAND</div>
+<div>$ 1,600.00</div>
+</div>
+<div class="alonesponsorship-columns-grid-product-button">
 <a class="alonesponsorship-columns-grid-product-button-view" href="#starsponsorbrand">VIEW</a>
 </div>
 </div>
@@ -330,190 +347,144 @@
 <!-- CONTENEDOR: BOTONES FINALES -->
 <div class="alonesponsorship-buttons">
 <a class="alonesponsorship-button-back" href="#digitalfeaturefilm">BACK</a>
-<a class="alonesponsorship-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<a class="alonesponsorship-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 </div>
 </div>
 </section>
-<!-- END ALONE SPONSORSHIP PC -->
+<!-- END ALONE SPONSORSHIP -->
 
-<!-- COMET SPONSOR PC -->
-<section class="cometsponsor-section main-section" id="cometsponsor">
+  <!-- COMET SPONSOR -->
+<section class="main-section" id="cometsponsor">
 <div class="cometsponsor-container">
 <h2 class="cometsponsor-title"><a href="#cometsponsor">COMET SPONSOR</a></h2> 
 <!-- CONTENEDOR: COLUMNAS -->
-<div class="cometsponsor-columns"> 
+<div class="cometsponsor-columns">
 <!-- CONTENEDOR: GRID DE 3 -->
-<div class="cometsponsor-columns-grid">  
-<!-- COLUMNA1-CONTENEDOR: IMAGEN -->
+<div class="cometsponsor-columns-grid">
+<!-- CONTENEDOR: IMAGEN -->
 <div class="cometsponsor-columns-grid-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Comet Sponsor">
 </div>
-<!-- COLUMNA 2- CONTENEDOR: SYNOPSIS -->  
-<div class="cometsponsor-columns-grid-synopsis">
-<h3 class="cometsponsor-columns-grid-synopsis-subtitle-1">COMING SOON</h3>
-<p class="cometsponsor-columns-grid-synopsis-text-1">Science Fiction<br>Cosmic/Psychological Horror</p>
-<h3 class="cometsponsor-columns-grid-synopsis-subtitle-2">SYNOPSIS</h3>
-<p class="cometsponsor-columns-grid-synopsis-text-2">A horror content creator tests a retrocausal protocol. What seemed like a simple experiment becomes sinister when the rules of reality begin to break down around her.</p>  
-</div>  
-<!-- COLUMN 3-CONTENEDOR: PRECIO Y BOTONES -->
-<div class="cometsponsor-columns-grid-action">
-<div class="cometsponsor-columns-grid-action-price">$ 50.00</div> 
-<div class="cometsponsor-columns-grid-action-button">
-<button class="cometsponsor-columns-grid-action-button-addtocart"
+<!-- CONTENEDOR: INFORMACIÓN -->  
+<div class="cometsponsor-columns-grid-information">
+<h3 class="cometsponsor-columns-grid-information-subtitle-1">COMING SOON</h3>
+<p class="cometsponsor-columns-grid-information-text-1">
+Science Fiction<br>
+Cosmic/Psychological Horror</p>
+<h3 class="cometsponsor-columns-grid-information-subtitle-2">SYNOPSIS</h3>
+<p class="cometsponsor-columns-grid-information-text-2">A horror content creator tests a retrocausal protocol. What seemed like a simple experiment becomes sinister when the rules of reality begin to break down around her.</p>  
+</div>
+<!-- CONTENEDOR: ADQUIRIR (PRECIO Y BOTONES) -->    
+<div class="cometsponsor-columns-grid-acquire">
+<div class="cometsponsor-columns-grid-acquire-price">
+<div>$ 50.00</div>
+</div> 
+<div class="cometsponsor-columns-grid-acquire-buttons">
+<button class="cometsponsor-columns-grid-acquire-button-addtocart"
 data-image="assets/assets/Alone Teaser Poster (Square).png"
 data-product="Comet Sponsor"
 data-price="50.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
+<button class="cometsponsor-columns-grid-acquire-button-share">SHARE</button>  
 </div>
-<div class="cometsponsor-columns-grid-action-button">  
-<button class="cometsponsor-columns-grid-action-button-share">SHARE</button>  
 </div>
-</div> 
-</div> 
-</div>  
-<!-- SEPARADOR -->
-<div class="cometsponsor-divider"></div> 
-<!-- CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS -->
+</div>
+</div>
+<!-- CONTENEDOR: DEBAJO DE LAS COLUMNAS -->
 <div class="cometsponsor-information">
 <h3 class="cometsponsor-information-subtitle-1">BE PART OF THE FILM ALONE!</h3>  
-<h3 class="cometsponsor-information-subtitle">INCLUDES:</h3> 
-<p class="cometsponsor-information-text">
+<h3 class="cometsponsor-information-subtitle-2">INCLUDES:</h3> 
+<p class="cometsponsor-information-text-1">
 • Appearance of your name in the "Planet Sponsors" section in the closing credits.<br>
 • Shared screen: there are 6 screens available, each with 48 names distributed in 3 columns.<br>
 • Appearance order in the section: you will occupy a position determined by the purchase order.<br>
 • Order of sections: Film credits – Star sponsor brands – Planet sponsor brands – Comet sponsor brands – Star Sponsors – Planet Sponsors – Comet Sponsors.</p>
-<h3 class="cometsponsor-information-subtitle">DIGITAL ADDITIONALS:</h3> 
-<p class="cometsponsor-information-text">Will be sent to your email when the release date is set:</p>  
-<p class="cometsponsor-information-text-end">  
+<h3 class="cometsponsor-information-subtitle-3">DIGITAL ADDITIONALS:</h3> 
+<p class="cometsponsor-information-text-2">Will be sent to your email when the release date is set:</p>  
+<p class="cometsponsor-information-text-3">  
 • Access to the online premiere of the film via Vimeo.</p>    
-<p class="cometsponsor-information-text">Your name will be immortalized in this cinematographic project.</p>
-<!-- SEPARADOR -->
-<div class="cometsponsor-divider"></div> 
-<p class="cometsponsor-information-text">Follow Arlyn Ligeia on social media for the latest news!</p>
-<!-- CONTENEDOR: ICONOS -->
-<div class="cometsponsor-information-icons">
-<a href="https://www.tiktok.com/@arlynligeia" target="_blank">
-<svg class="cometsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg>
-</a>
-<a href="https://www.instagram.com/arlynligeia/?next=%2F%40arlynligeia%2F" target="_blank">
-<svg class="cometsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-</a>
-<a href="https://www.facebook.com/@arlynligeia" target="_blank">
-<svg class="cometsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-</a>
-<a href="https://www.threads.net/@arlynligeia" target="_blank">
-<svg class="cometsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3C4.355 3 3 4.355 3 6v12c0 1.645 1.355 3 3 3h12c1.645 0 3-1.355 3-3V6c0-1.645-1.355-3-3-3H6zm0 2h12c.565 0 1 .435 1 1v12c0 .565-.435 1-1 1H6c-.565 0-1-.435-1-1V6c0-.565.435-1 1-1zm3.5 2a1.5 1.5 0 0 0-1.5 1.5v7a1.5 1.5 0 0 0 3 0v-7A1.5 1.5 0 0 0 9.5 7zm5 0a1.5 1.5 0 0 0-1.5 1.5v4a1.5 1.5 0 0 0 3 0v-4A1.5 1.5 0 0 0 14.5 7z"/></svg>
-</a>  
-<a href="https://www.twitter.com/@arlynligeia" target="_blank">
-<svg class="cometsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-</a>
-</div> 
+<p class="cometsponsor-information-text-4">Your name will be immortalized in this cinematographic project.</p>      
+<p class="cometsponsor-information-text-5">Follow Arlyn Ligeia on social media for the latest news!</p>   
 </div>
-<!-- SEPARADOR -->
-<div class="cometsponsor-divider"></div> 
 <!-- CONTENEDOR: BOTONES FINALES -->
-<div class="cometsponsor-button">
-<a class="cometsponsor-button-back" href="#digitalfeaturefilm-alonesponsorship">BACK</a> 
-<a class="cometsponsor-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<div class="cometsponsor-buttons">
+<a class="cometsponsor-button-back" href="#digitalfeaturefilm-alonesponsorship">BACK</a>
+<a class="cometsponsor-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <a class="cometsponsor-button-gotocart" href="javascript:void(0)">GO TO CART</a>
 </div>
-</div>  
+</div>
 </section>
-<!-- FIN COMET SPONSOR PC -->
-
-<!-- PLANET SPONSOR PC -->
-<section class="planetsponsor-section main-section" id="planetsponsor">
+<!-- END COMET SPONSOR -->
+ 
+<!-- PLANET SPONSOR -->
+<section class="main-section" id="planetsponsor">
 <div class="planetsponsor-container">
 <h2 class="planetsponsor-title"><a href="#planetsponsor">PLANET SPONSOR</a></h2> 
 <!-- CONTENEDOR: COLUMNAS -->
-<div class="planetsponsor-columns"> 
+<div class="planetsponsor-columns">
 <!-- CONTENEDOR: GRID DE 3 -->
-<div class="planetsponsor-columns-grid">  
-<!-- COLUMNA1-CONTENEDOR: IMAGEN -->
+<div class="planetsponsor-columns-grid">
+<!-- CONTENEDOR: IMAGEN -->
 <div class="planetsponsor-columns-grid-image">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Planet Sponsor">
 </div>
-<!-- COLUMNA 2- CONTENEDOR: SYNOPSIS -->  
-<div class="planetsponsor-columns-grid-synopsis">
-<h3 class="planetsponsor-columns-grid-synopsis-subtitle-1">COMING SOON</h3>
-<p class="planetsponsor-columns-grid-synopsis-text-1">Science Fiction<br>Cosmic/Psychological Horror</p>
-<h3 class="planetsponsor-columns-grid-synopsis-subtitle-2">SYNOPSIS</h3>
-<p class="planetsponsor-columns-grid-synopsis-text-2">A horror content creator tests a retrocausal protocol. What seemed like a simple experiment becomes sinister when the rules of reality begin to break down around her.</p>  
-</div>  
-<!-- COLUMN 3-CONTENEDOR: PRECIO Y BOTONES -->
-<div class="planetsponsor-columns-grid-action">
-<div class="planetsponsor-columns-grid-action-price">$ 100.00</div> 
-<div class="planetsponsor-columns-grid-action-button">
-<button class="planetsponsor-columns-grid-action-button-addtocart"
+<!-- CONTENEDOR: INFORMACIÓN -->  
+<div class="planetsponsor-columns-grid-information">
+<h3 class="planetsponsor-columns-grid-information-subtitle-1">COMING SOON</h3>
+<p class="planetsponsor-columns-grid-information-text-1">
+Science Fiction<br>
+Cosmic/Psychological Horror</p>
+<h3 class="planetsponsor-columns-grid-information-subtitle-2">SYNOPSIS</h3>
+<p class="planetsponsor-columns-grid-information-text-2">A horror content creator tests a retrocausal protocol. What seemed like a simple experiment becomes sinister when the rules of reality begin to break down around her.</p>  
+</div>
+<!-- CONTENEDOR: ADQUIRIR (PRECIO Y BOTONES) -->    
+<div class="planetsponsor-columns-grid-acquire">
+<div class="planetsponsor-columns-grid-acquire-price">
+<div>$ 100.00</div>
+</div> 
+<div class="planetsponsor-columns-grid-acquire-buttons">
+<button class="planetsponsor-columns-grid-acquire-button-addtocart"
 data-image="assets/assets/Alone Teaser Poster (Square).png"
 data-product="Planet Sponsor"
 data-price="100.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
+<button class="planetsponsor-columns-grid-acquire-button-share">SHARE</button>  
 </div>
-<div class="planetsponsor-columns-grid-action-button">  
-<button class="planetsponsor-columns-grid-action-button-share">SHARE</button>  
 </div>
-</div> 
-</div> 
-</div>  
-<!-- SEPARADOR -->
-<div class="planetsponsor-divider"></div> 
-<!-- CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS -->
+</div>
+</div>
+<!-- CONTENEDOR: DEBAJO DE LAS COLUMNAS -->
 <div class="planetsponsor-information">
 <h3 class="planetsponsor-information-subtitle-1">BE PART OF THE FILM ALONE!</h3>  
-<h3 class="planetsponsor-information-subtitle">INCLUDES:</h3> 
-<p class="planetsponsor-information-text">
-• Appearance of your name in the "Planet Sponsors" section in the closing credits.<br>
+<h3 class="planetsponsor-information-subtitle-2">INCLUDES:</h3> 
+<p class="planetsponsor-information-text-1">
+• Appearance of your name in the "Comet Sponsors" section in the closing credits.<br>
 • Shared screen: there are 5 screens available, each with 24 names distributed in 2 columns.<br>
 • Appearance order in the section: you will occupy a position determined by the purchase order.<br>
 • Order of sections: Film credits – Star sponsor brands – Planet sponsor brands – Comet sponsor brands – Star Sponsors – Planet Sponsors – Comet Sponsors.<br>
-• Official teaser poster (HD digital format).</p>
-<h3 class="planetsponsor-information-subtitle">DIGITAL ADDITIONALS:</h3> 
-<p class="planetsponsor-information-text">Will be sent to your email when the release date is set:</p>  
-<p class="planetsponsor-information-text-end">  
+• Official teaser poster (digital HD format).</p>
+<h3 class="planetsponsor-information-subtitle-3">DIGITAL ADDITIONALS:</h3> 
+<p class="planetsponsor-information-text-2">Will be sent to your email when the release date is set:</p>  
+<p class="planetsponsor-information-text-3">  
 • Access to the online premiere of the film via Vimeo.</p>    
-<p class="planetsponsor-information-text">Your name will be immortalized in this cinematographic project.</p>
-<!-- SEPARADOR -->
-<div class="planetsponsor-divider"></div> 
-<p class="planetsponsor-information-text">Follow Arlyn Ligeia on social media for the latest news!</p>
-<!-- CONTENEDOR: ICONOS -->
-<div class="planetsponsor-information-icons">
-<a href="https://www.tiktok.com/@arlynligeia" target="_blank">
-<svg class="planetsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.245V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.51v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.831 4.831 0 0 1-1.003-.104z"/></svg>
-</a>
-<a href="https://www.instagram.com/arlynligeia/?next=%2F%40arlynligeia%2F" target="_blank">
-<svg class="planetsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-</a>
-<a href="https://www.facebook.com/@arlynligeia" target="_blank">
-<svg class="planetsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
-</a>
-<a href="https://www.threads.net/@arlynligeia" target="_blank">
-<svg class="planetsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M6 3C4.355 3 3 4.355 3 6v12c0 1.645 1.355 3 3 3h12c1.645 0 3-1.355 3-3V6c0-1.645-1.355-3-3-3H6zm0 2h12c.565 0 1 .435 1 1v12c0 .565-.435 1-1 1H6c-.565 0-1-.435-1-1V6c0-.565.435-1 1-1zm3.5 2a1.5 1.5 0 0 0-1.5 1.5v7a1.5 1.5 0 0 0 3 0v-7A1.5 1.5 0 0 0 9.5 7zm5 0a1.5 1.5 0 0 0-1.5 1.5v4a1.5 1.5 0 0 0 3 0v-4A1.5 1.5 0 0 0 14.5 7z"/></svg>
-</a>  
-<a href="https://www.twitter.com/@arlynligeia" target="_blank">
-<svg class="planetsponsor-information-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-</a>
-</div> 
+<p class="planetsponsor-information-text-4">Your name will be immortalized in this cinematographic project.</p>      
+<p class="planetsponsor-information-text-5">Follow Arlyn Ligeia on social media for the latest news!</p>   
 </div>
-<!-- SEPARADOR -->
-<div class="planetsponsor-divider"></div> 
 <!-- CONTENEDOR: BOTONES FINALES -->
-<div class="planetsponsor-button">
-<a class="planetsponsor-button-back" href="#digitalfeaturefilm-alonesponsorship">BACK</a> 
-<a class="planetsponsor-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<div class="planetsponsor-buttons">
+<a class="planetsponsor-button-back" href="#digitalfeaturefilm-alonesponsorship">BACK</a>
+<a class="planetsponsor-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <a class="planetsponsor-button-gotocart" href="javascript:void(0)">GO TO CART</a>
 </div>
-</div>  
+</div>
 </section>
-<!-- FIN PLANET SPONSOR PC -->
+<!-- END PLANET SPONSOR -->
 
-
-
-<!-- CART EMPTY -->
+  <!-- CART EMPTY -->
 <section class="cartempty-section" id="cartempty"> 
 <div class="cartempty-container">
 <h2 class="cartempty-title"><a href="#cartempty">YOUR CART</a></h2>  
@@ -623,31 +594,9 @@ ADD TO CART
 </section>
 <!-- FIN CART -->
 
-</main>
+  </main>
 
-
-
-
-  
-<!-- FOOTER -->   
-<footer class="footer-end">
-<div class="footer-end-name">ARLYN LIGEIA</div>
-<div class="footer-end-allrightreserved">© 2025 Arlyn Ligeia. All rights reserved.</div>
-<div class="footer-end-privacypolicy">
-<a href="#privacypolicy" id="privacypolicy">Privacy Policy</a>
-</div>
-<div class="footer-end-termsandconditions">  
-<a href="#termsandconditions" id="termsandconditions">Terms & Conditions</a>
-</div>
-</footer>
-<!-- FIN FOOTER -->   
-
-
-
-
-  <!-- SCRIPS -->   
-
-<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+  <!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
@@ -809,8 +758,7 @@ console.log('✅ Navegación de tienda configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
-
-  <!-- SCRIP: CARRITO -->
+<!-- SCRIP: CARRITO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');  
@@ -1190,7 +1138,18 @@ setupBuyButton();
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
-  
+
+
 </body>
   
 </html>
+
+
+
+
+
+
+
+
+
+  
