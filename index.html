@@ -5263,6 +5263,125 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
   
 
+<!-- SCRIPS TIENDA -->
+
+<!-- SCRIP: CARRUSEL STORE PC-->
+<script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🖼️ Carrusel SHOP iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('#shop .shop-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel SHOP configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN SOLO PARA IMAGEN 2 (ALONE)
+function setupCarouselNavigation() {
+const carousel = document.querySelector('#shop .shop-carousel');
+const aloneImage = document.getElementById('shop-carousel-image-2');
+// SOLO la imagen 2 es clickeable
+aloneImage.style.cursor = 'pointer';
+aloneImage.addEventListener('click', function() {
+console.log('🖱️ Click en imagen ALONE - Navegando a sponsorship');
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN DIGITALFEATUREFILM Y SUBSECCIÓN
+const mainSection = document.getElementById('digitalfeaturefilm');
+const targetSubsection = document.getElementById('digitalfeaturefilm-alonesponsorship');
+if (mainSection && targetSubsection) {
+mainSection.style.display = 'block';
+// MOSTRAR TODAS LAS SUBSECCIONES DE DIGITALFEATUREFILM
+document.querySelectorAll('[id^="digitalfeaturefilm-"]').forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSubsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'digitalfeaturefilm-alonesponsorship';
+}
+});
+console.log('✅ Navegación del carrusel SHOP configurada - Solo imagen ALONE es clickeable');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL STORE PC -->
+
+<!-- SCRIP: CARRUSEL STORE MÓVIL -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🖼️ Carrusel SHOP MOBILE iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('#shop-mobile .shop-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel SHOP MOBILE configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN SOLO PARA IMAGEN 2 (ALONE)
+function setupCarouselNavigation() {
+const aloneImage = document.getElementById('shop-carousel-image-2-mobile');
+// SOLO la imagen 2 es clickeable
+aloneImage.style.cursor = 'pointer';
+aloneImage.addEventListener('click', function() {
+console.log('🖱️ Click en imagen ALONE MOBILE - Navegando a sponsorship');
+// OCULTAR TODAS LAS SECCIONES MOBILE
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN DIGITALFEATUREFILM MOBILE Y SUBSECCIÓN
+const mainSection = document.getElementById('digitalfeaturefilm-mobile');
+const targetSubsection = document.getElementById('digitalfeaturefilm-mobile-alonesponsorship');
+if (mainSection && targetSubsection) {
+mainSection.style.display = 'block';
+// MOSTRAR TODAS LAS SUBSECCIONES DE DIGITALFEATUREFILM MOBILE
+document.querySelectorAll('[id^="digitalfeaturefilm-mobile-"]').forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSubsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'digitalfeaturefilm-mobile-alonesponsorship';
+}
+});
+console.log('✅ Navegación del carrusel SHOP MOBILE configurada - Solo imagen ALONE es clickeable');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL STORE MÓVIL -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 </body>
   
