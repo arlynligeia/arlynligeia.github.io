@@ -10897,11 +10897,11 @@ margin-bottom: 0px;
 }
 
 /* PARA MÓVIL - MOSTRAR SOLO HOME Y SUS SUBSECCIONES */
-.mobile-only.main-section:not(#home-mobile) {
+.mainsection.mobile-only:not(#home-mobile) {
     display: none;
 }
 
-.mobile-only.subsection:not([id^="home-mobile-"]) {
+.subsection.mobile-only:not([id^="home-mobile-"]) {
     display: none;
 }
 
