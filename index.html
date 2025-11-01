@@ -5474,11 +5474,7 @@ showOnlyOneSection(hash);
 }
 }
 }
-  // 4. MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE)
-    window.addEventListener('popstate', function(event) {
-        console.log('🔧 Navegación con flechas detectada');
-        checkInitialHash();
-    });
+
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
@@ -5494,7 +5490,7 @@ console.log('✅ Navegación configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
     const mobileMenuOverlay = document.getElementById('menu-mobile-hamburger');
-    const mobileMenuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a'); // ← SOLO CAMBIÉ ESTO
+    const mobileMenuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 
     // FUNCIONES DE NAVEGACIÓN (SIN CAMBIOS)
     function showOnlyOneSection(sectionId) {
@@ -5576,12 +5572,6 @@ document.addEventListener('DOMContentLoaded', function() {
             spans[1].style.opacity = '1';
             spans[2].style.transform = 'none';
         }
-    });
-
-    // MANEJAR LAS FLECHAS DE NAVEGACIÓN (RETROCESO/AVANCE) (SIN CAMBIOS)
-    window.addEventListener('popstate', function(event) {
-        console.log('🔧 Navegación con flechas detectada');
-        checkInitialHash();
     });
 
     // INICIALIZACIÓN DEL HOME EN MÓVIL (SIN CAMBIOS)
