@@ -6,16 +6,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ARLYN LIGEIA</title>
 <link rel="stylesheet" href="style.css">
-<!-- FUENTES -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">   
 </head>
   
 <body>
      
 <header>
-<h1 class="site-title">ARLYN LIGEIA</h1>     
+<div class="site-container">
+<h1 class="site-title">ARLYN LIGEIA</h1>
 <nav>    
 <ul class="menu" id="menu">     
 <!-- HOME -->
@@ -26,10 +26,14 @@
 <li><a class="submenu-button" href="#home-tiktokhighlight">Tiktok Highlight</a></li>
 <li><a class="submenu-button" href="#home-youtubehighlight">Youtube Highlight</a></li>
 </ul>
-</li> 
-<!-- BIOGRAPHY -->
+</li>
+<!-- UNIVERSE -->
 <li>
-<a class="menu-button" href="#biography" data-section="biography">Biography</a>
+<a class="menu-button" href="#universe" data-section="universe">Universe</a>
+</li> 
+<!-- ABOUT -->
+<li>
+<a class="menu-button" href="#about" data-section="about">About</a>
 </li>              
 <!-- FILM -->
 <li>
@@ -94,9 +98,9 @@
 <li><a class="submenu-button" href="#contact-contactforfans">Contact for Fans</a></li>
 </ul>
 </li>               
-<!-- STORE -->
+<!-- SHOP -->
 <li>
-<a class="menu-button" href="#shop" data-section="store">Store</a>
+<a class="menu-button" href="#shop" data-section="shop">Shop</a>
 <ul class="submenu">
 <li><a class="submenu-button" href="#shop-digitalproducts">Digital Products</a></li>
 <li><a class="submenu-button" href="#shop-physicalproducts">Physical Products</a></li>
@@ -108,8 +112,35 @@
 <a class="cart-button" href="javascript:void(0)">Cart</a>
 </li> 
 </ul>  
-</nav> 
+</nav>
+</div>  
 </header>
+
+<h1 class="site-title-mobile">ARLYN<br>LIGEIA</h1> 
+  
+<!-- MENÚ HAMBURGUESA PARA MÓVIL -->
+<div class="menu-mobile">
+<button class="menu-mobile-hamburger-button" id="menu-mobile-hamburger-button">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="menu-mobile-hamburger-overlay" id="menu-mobile-hamburger"> 
+<ul>
+<li><a href="#home-mobile" data-section="home">Home</a></li>
+<li><a href="#universe-mobile" data-section="universe">Universe</a></li>  
+<li><a href="#about-mobile" data-section="about">about</a></li>
+<li><a href="#film-mobile" data-section="film">Film</a></li>
+<li><a href="#music-mobile" data-section="music">Music</a></li>
+<li><a href="#fashion-mobile" data-section="fashion">Fashion</a></li>
+<li><a href="#art-mobile" data-section="art">Art</a></li>
+<li><a href="#science-mobile" data-section="science">Science</a></li>
+<li><a href="#bemypatron-mobile" data-section="bemypatron">Be my Patron</a></li>
+<li><a href="#contact-mobile" data-section="contact">Contact</a></li>
+<li><a href="#shop-mobile" data-section="shop">Store</a></li>
+</ul>
+</div>
+</div>
 
 
 
