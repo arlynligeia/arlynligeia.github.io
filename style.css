@@ -10,22 +10,67 @@ margin: 0;
 }
 
 
-
-
-
-
-
-
-/* --- TÍTULO PRINCIPAL DEL SITIO --- */
-.site-title {
-text-align: center;
-font-size: 4.5em;
-margin: 20px 0;
+/* ======================================
+   TÍTULO DE LA PÁGINA PC
+====================================== */
+.site-container {
+width: 95%;
+margin: 20px auto;
+padding: 10px;
+background: 
+repeating-linear-gradient(
+0deg,
+transparent,
+transparent 2px,
+rgba(255, 20, 147, 0.05) 2px,
+rgba(255, 20, 147, 0.05) 4px
+),
+transparent !important;
+border: 2px solid #ff1493 !important;
+border-radius: 20px;
 }
-/* --- CONTENEDOR: MENÚ --- */
+/* --- TÍTULO --- */
+.site-title {
+font-family: 'Orbitron', monospace;    
+font-size: 4rem; 
+color: #ff1493 !important;
+text-transform: uppercase;
+text-align: center;
+font-weight: 900;
+line-height: 1; 
+margin: 0px;
+padding: 0px;
+}
+.site-container { display: block; }
+.site-title { display: block; }
+.site-title-mobile { display: none; }
+/* ======================================
+   TÍTULO DE LA PÁGINA MÓVIL
+====================================== */
+@media (max-width: 768px) {
+ .site-container { 
+display: none !important; 
+}
+.site-title-mobile {
+font-family: 'Orbitron', monospace;    
+font-size: 3rem; 
+color:  #ff1493 !important;
+text-transform: uppercase;
+text-align: center; 
+font-weight: 900;
+margin: 15px auto;
+padding: 0px;
+}
+.site-container { display: none; }
+.site-title { display: none; }
+.site-title-mobile { display: block; }
+}
+
+/* ======================================
+   MENÚ Y SUBMENUS PC
+====================================== */
 nav {
 text-align: center;
-margin-top: 10px;
 }
 .menu {
 list-style: none;
@@ -33,33 +78,112 @@ display: flex;
 flex-wrap: wrap;
 justify-content: center;
 gap: 10px;
-padding: 0;
+margin: 5px auto;
+padding: 0px;
 }
 .menu li {
 position: relative;
 }
-/* --- BOTONES: MENÚ PRINCIPAL --- */
+
+/* --- BOTONES --- */
 .menu-button,
 .cart-button {
-background: transparent;
-border-radius: 5px; 
-border: 1px solid white;
-display: inline-block; 
+position: relative;
+display: block;     
+background: transparent !important; /* Fondo transparente */
+border-radius: 8px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color: white;
-text-decoration: none; 
-padding: 8px 14px;
+text-decoration: none;
+text-transform: uppercase; 
+margin: 5px auto; 
+padding: 10px;
 cursor: pointer;
-text-transform: uppercase;
+transition: all 0.3s ease;
+background: 
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 2px,
+rgba(255, 255, 255, 0.05) 2px,
+rgba(255, 255, 255, 0.05) 4px
+) !important;
+}
+/* BOTONES: FUSCIA CON EFECTO LED */
+.menu li:nth-child(odd) .menu-button,
+.menu li:nth-child(odd) .cart-button {
+border: 2px solid #ff1493 !important;
+color: #ff1493 !important;
+box-shadow: 
+0 0 5px #ff1493,
+inset 0 0 5px rgba(255, 0, 255, 0.3);
+}
+/* BOTONES: VERDE CON EFECTO LED */
+.menu li:nth-child(even) .menu-button,
+.menu li:nth-child(even) .cart-button {
+border: 2px solid #39FF14 !important;
+color: #39FF14 !important;
+box-shadow: 
+0 0 5px #39FF14,
+inset 0 0 5px rgba(57, 255, 20, 0.3);
+}
+/* HOVER: FUCSIA CON EFECTO LED */
+/* Hover para botones fucsia - Efecto activación */
+.menu li:nth-child(odd) .menu-button:hover,
+.menu li:nth-child(odd) .cart-button:hover {
+background: rgba(255, 0, 255, 0.1) !important;
+color: #ff00ff !important;
+transform: translateY(-2px);
+box-shadow: 
+0 0 15px #ff00ff,
+0 0 25px #ff00ff,
+inset 0 0 10px rgba(255, 0, 255, 0.5);
+text-shadow: 0 0 10px #ff00ff;
+}
+/* HOVER: VERDE CON EFECTO LED */
+.menu li:nth-child(even) .menu-button:hover,
+.menu li:nth-child(even) .cart-button:hover {
+background: rgba(57, 255, 20, 0.1) !important;
+color:  #00FF00 !important;
+transform: translateY(-2px);
+box-shadow: 
+0 0 15px #00FF00,
+0 0 25px #00FF00 ,
+inset 0 0 10px rgba(57, 255, 20, 0.5);
+text-shadow: 0 0 10px #00FF00;
+}
+/* PUNTO LED */
+.menu-button::after,
+.cart-button::after {
+content: '';
+position: absolute;
+top: 5px;
+right: 5px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
 transition: all 0.3s ease;
 }
-.menu-button:hover,
-.cart-button:hover {
-background: rgba(255, 255, 255, 0.2);
-transform: translateY(-1px);
-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+.menu li:nth-child(odd) .menu-button::after,
+.menu li:nth-child(odd) .cart-button::after {
+background: #ff00ff;
+box-shadow: 0 0 5px #ff00ff;
 }
+.menu li:nth-child(even) .menu-button::after,
+.menu li:nth-child(even) .cart-button::after {
+background: #39FF14;
+box-shadow: 0 0 5px #39FF14;
+}
+.menu-button:hover::after,
+.cart-button:hover::after {
+box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+
+
+
+
+
 /* --- SUBMENÚS DESPLEGABLES --- */
 .submenu {
 position: absolute; 
@@ -67,12 +191,11 @@ display: none;
 top: 40px;
 left: 0;
 list-style: none;
-background: rgba(0, 0, 0, 0.9);
+background: #ff00ff !important;
 z-index: 1000;
-border: 1px solid white;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-padding: 0;
+border: 2px solid #ff1493 !important;
 margin: 0;
+padding: 0;
 }
 .menu li:hover .submenu {
 display: block;
@@ -88,20 +211,22 @@ width: 100%;
 text-align: left;
 background: transparent;
 border: none;
-color: white;
-padding: 10px 15px;
+color: white !important;
+padding: 12px 15px;
 font-size: 0.9rem;
 font-family: 'Rajdhani', sans-serif;
 text-transform: capitalize;
 white-space: nowrap;
 text-decoration: none;
-transition: all 0.2s ease;
+transition: all 0.3s ease;
+font-weight: 600;
 }
 .submenu-button:hover {
-background: rgba(255, 255, 255, 0.1);
-padding-left: 18px;
+background: rgba(255, 20, 147, 0.2) !important;
+color: white !important;
+padding-left: 20px;
 }
-/* --- LÍNEA FUCSIA ANIMADA --- */
+/* --- LÍNEA CELESTE AGUA ANIMADA --- */
 .submenu li::before {
 content: '';
 position: absolute;
@@ -109,7 +234,7 @@ left: 0;
 bottom: 0;
 width: 100%;
 height: 3px;
-background-color: #ff1493 !important;
+background-color: #7ec0ee !important;
 transform: scaleX(0);
 transform-origin: left;
 transition: transform 0.3s ease;
@@ -117,6 +242,105 @@ transition: transform 0.3s ease;
 .submenu li:hover::before {
 transform: scaleX(1);
 }
+/* --- Separadores entre items --- */
+.submenu li:not(:last-child) {
+border-bottom: 1px solid white !important;
+}
+
+
+/* ======================================
+   MENÚ HAMBURGUESA MOVIL
+====================================== */
+.menu-mobile {
+    display: none;
+}
+.menu-mobile-hamburger-button {
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+    background: transparent;
+    border: 2px solid #ff1493 !important;
+    border-radius: 6px;
+    padding: 10px;
+    gap: 5px;
+    cursor: pointer;
+}
+.menu-mobile-hamburger-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #ff1493 !important;
+}
+
+/* OVERLAY - MORADO */
+.menu-mobile-hamburger-overlay {
+    position: fixed;
+    z-index: 1000; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #3A0052 !important;
+    display: none;
+}
+.menu-mobile-hamburger-overlay.active {
+    display: block;
+}
+.menu-mobile-hamburger-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Elementos del menú - SOLO TEXTO */
+.menu-mobile-hamburger-overlay li {
+    text-align: center;
+    border-bottom: 1px solid #FF66CC !important;
+    padding: 12px 0;
+}
+
+.menu-mobile-hamburger-overlay li:last-child {
+    border-bottom: none !important;
+}
+
+.menu-mobile-hamburger-overlay a {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none; 
+    text-transform: uppercase;
+    padding: 0 20px;
+    display: block;
+}
+
+/* COLORES ALTERNADOS */
+.menu-mobile-hamburger-overlay li:nth-child(odd) a {
+    color: #ff1493 !important;
+}
+
+.menu-mobile-hamburger-overlay li:nth-child(even) a {
+    color: #00ff00 !important;
+}
+
+/* --- MEDIA QUERY PARA MÓVIL --- */
+@media (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        z-index: 1000;
+    }
+    
+    nav {
+        display: none !important;
+    }
+}
+
 
 
 
