@@ -9204,7 +9204,8 @@ transition: transform 0.3s ease;
 .cartempty-button-continueshopping:hover {
 transform: scale(1.05);
 }
-
+.cartempty-container { display: block; }
+.cartempty-container-mobile { display: none; }
 
 
 /* ======================================
@@ -9484,10 +9485,14 @@ transform: scale(1.05);
 display: none;
 }
 
+.cartfull-container { display: block; }
+.cartfull-container-mobile { display: none; }
+
 /* ======================================
    CART EMPTY MOBILE
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
+@media (max-width: 768px) {
 .cartempty-container-mobile {
     position: relative;
     width: 95%;
@@ -9583,7 +9588,9 @@ box-sizing: border-box;
 .cartempty-button-continueshopping-mobile:hover {
     transform: scale(1.02);
 }
-
+.cartempty-container { display: none; }
+.cartempty-container-mobile { display: block; }
+}
 
 
 
@@ -9593,6 +9600,7 @@ box-sizing: border-box;
    CART FULL MOBILE
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
+@media (max-width: 768px) {   
 .cartfull-container-mobile {
     position: relative;
     width: 95%;
@@ -9883,6 +9891,21 @@ box-sizing: border-box;
 .cartfull-button-buy-mobile:hover {
     transform: scale(1.02);
 }
+.cartempty-section.mobile-only, 
+.cartfull-section.mobile-only {
+display: none;
+}
+.cartfull-container { display: none; }
+.cartfull-container-mobile { display: block; }
+
+}
+
+
+
+
+
+
+
 
 
 
