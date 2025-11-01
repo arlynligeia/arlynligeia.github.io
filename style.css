@@ -9163,8 +9163,18 @@ color: #00FF00 !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: center;
-margin: 100px 0 100px 0;
+margin: 110px 0 110px 0;
 }
+.cartempty-information-text::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 /* CONTENEDOR: BOTONES FINALES */
 .cartempty-button {
 display: flex;
@@ -9194,6 +9204,8 @@ transition: transform 0.3s ease;
 .cartempty-button-continueshopping:hover {
 transform: scale(1.05);
 }
+
+
 
 /* ======================================
    CART FULL
