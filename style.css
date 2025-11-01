@@ -9884,21 +9884,16 @@ box-sizing: border-box;
     transform: scale(1.02);
 }
 
-/* MEDIA QUERIES PARA VISIBILIDAD */
 @media (max-width: 768px) {
-    .mobile-only {
-        display: block !important;
+    /* SOLO mostrar secciones mobile del carrito cuando sean activadas por JavaScript */
+    .cartempty-section.mobile-only,
+    .cartfull-section.mobile-only {
+        /* display se controla por JavaScript */
     }
     
     /* Ocultar versiones de escritorio en móviles */
     .cartempty-section:not(.mobile-only),
     .cartfull-section:not(.mobile-only) {
-        display: none !important;
-    }
-}
-
-@media (min-width: 769px) {
-    .mobile-only {
         display: none !important;
     }
 }
@@ -10896,22 +10891,22 @@ margin-bottom: 0px;
     display: block;
 }
 
+/* PARA MÓVIL - MOSTRAR SOLO HOME Y SUS SUBSECCIONES */
+.mobile-only.main-section:not(#home-mobile) {
+    display: none;
+}
 
+.mobile-only.subsection:not([id^="home-mobile-"]) {
+    display: none;
+}
 
-/* FORZAR OCULTAMIENTO INICIAL EN MOBILE */
-@media (max-width: 768px) {
-    .main-section.mobile-only:not(#home-mobile),
-    .subsection.mobile-only:not([id*="home-mobile-"]) {
-        display: none !important;
-    }
-    
-    #home-mobile {
-        display: block !important;
-    }
-   #home-mobile-socialmediacontent,
-#home-mobile-youtubehighlight {
+#home-mobile {
     display: block;
 }
+
+#home-mobile-socialmediacontent,
+#home-mobile-youtubehighlight {
+    display: block;
 }
 
 
