@@ -10896,27 +10896,23 @@ margin-bottom: 0px;
     display: block;
 }
 
-/* PARA MÓVIL - MOSTRAR SOLO HOME Y SUS SUBSECCIONES */
-.mainsection.mobile-only:not(#home-mobile) {
-    display: none;
-}
 
-.subsection.mobile-only:not([id^="home-mobile-"]) {
-    display: none;
-}
 
-#home-mobile {
-    display: block;
-}
-
-#home-mobile-socialmediacontent,
+/* FORZAR OCULTAMIENTO INICIAL EN MOBILE */
+@media (max-width: 768px) {
+    .main-section.mobile-only:not(#home-mobile),
+    .subsection.mobile-only:not([id*="-mobile"]) {
+        display: none !important;
+    }
+    
+    #home-mobile {
+        display: block !important;
+    }
+   #home-mobile-socialmediacontent,
 #home-mobile-youtubehighlight {
     display: block;
 }
-
-
-
-
+}
 
 
 
