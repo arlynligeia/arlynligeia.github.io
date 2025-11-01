@@ -3951,7 +3951,7 @@ Cosmic/Psychological Horror</p>
 <h2 class="cartempty-title"><a href="#cartempty">YOUR CART</a></h2>  
 <!-- CONTENEDOR: INFORMACIÓN -->  
 <div class="cartempty-information">  
-<p class="cartempty-information-text">Your cart is empty</p>
+<p class="cartempty-information-text" id="typing-text"></p>
 </div>
 <!-- CONTENEDOR: BOTONES FINALES -->    
 <div class="cartempty-button">
@@ -5334,33 +5334,62 @@ if (e.target === this) {
 this.style.display = 'none';
 }
 });  
-// 12. BOTÓN: CART
+// 12. BOTÓN: CART (VERSIÓN CON TIPEO)
 function setupCartButton() {
-const cartButtons = document.querySelectorAll('a.cart-button');
-cartButtons.forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// OCULTA TODAS LAS SECCIONES PRINCIPALES
-document.querySelectorAll('.main-section, .subsection').forEach(section => {
-section.style.display = 'none';
-});
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const cartEmpty = document.getElementById('cartempty');
-const cartFull = document.getElementById('cartfull');
-if (cart.length === 0) {
-// MUESTRA CARRITO VACÍO
-cartEmpty.style.display = 'block';
-cartFull.style.display = 'none';
-window.location.hash = 'cartempty';
-} else {
-// MUESTRA CARRITO LLENO
-cartEmpty.style.display = 'none';
-cartFull.style.display = 'block';
-window.location.hash = 'cartfull';
-}
-});
-});
+    const cartButtons = document.querySelectorAll('a.cart-button');
+    cartButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            // OCULTA TODAS LAS SECCIONES PRINCIPALES
+            document.querySelectorAll('.main-section, .subsection').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartEmpty = document.getElementById('cartempty');
+            const cartFull = document.getElementById('cartfull');
+            
+            if (cart.length === 0) {
+                // MUESTRA CARRITO VACÍO
+                cartEmpty.style.display = 'block';
+                cartFull.style.display = 'none';
+                window.location.hash = 'cartempty';
+                
+                // INICIA EL EFECTO DE TIPEO
+                setTimeout(startTypingEffect, 300);
+            } else {
+                // MUESTRA CARRITO LLENO
+                cartEmpty.style.display = 'none';
+                cartFull.style.display = 'block';
+                window.location.hash = 'cartfull';
+            }
+        });
+    });
 }  
+
+// FUNCIÓN: EFECTO DE TIPEO AUTOMÁTICO
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
+}
+
+// FUNCIÓN: INICIAR TIPEO CUANDO SE MUESTRA EL CARRITO VACÍO
+function startTypingEffect() {
+    const typingElement = document.getElementById('typing-text');
+    if (typingElement) {
+        typeWriter(typingElement, 'Your cart is empty', 80);
+    }
+}
+  
 // INICIALIZAR EL BOTON 
 setupCartButton();
 if (cart.length > 0) {
