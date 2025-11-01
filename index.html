@@ -211,7 +211,7 @@
 <!-- FIN DIGITAL PRODUCTS PC -->
 
 <!-- DIGITAL PRODUCTS MÓVIL -->
-<section class="subsection" id="shop-mobile-digitalproducts">
+<section class="subsection mobile-only" id="shop-mobile-digitalproducts">
 <div class="digitalproducts-container-mobile">
 <h2 class="digitalproducts-title-mobile"><a href="#shop-mobile-digitalproducts">DIGITAL PRODUCTS</a></h2>
 <!-- CONTENEDOR: TARJETAS -->  
@@ -292,7 +292,7 @@
 <!-- FIN PHYSICAL PRODUCTS PC -->
 
 <!-- PHYSICAL PRODUCTS MÓVIL -->
-<section class="subsection" id="shop-mobile-physicalproducts">
+<section class="subsection mobile-only" id="shop-mobile-physicalproducts">
 <div class="physicalproducts-container-mobile">
 <h2 class="physicalproducts-title-mobile"><a href="#shop-mobile-physicalproducts">PHYSICAL PRODUCTS</a></h2>
 <!-- CONTENEDOR: TARJETAS -->  
@@ -458,6 +458,14 @@
 </section>
 <!-- FIN SHIPPING DETAILS MOVIL -->
 
+
+
+
+
+
+
+
+  
 <!-- DIGITAL FILM PC -->
 <section class="digitalfilm-section main-section" id="digitalfilm">
 <div class="digitalfilm-container">
@@ -4933,6 +4941,22 @@ showOnlyOneSection(hash);
 }
 }
 }
+// 4. FUNCIÓN: MANEJAR NAVEGACIÓN CON FLECHAS DEL NAVEGADOR
+function handleBrowserNavigation() {
+window.addEventListener('popstate', function(event) {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+} else {
+// Si no hay hash, mostrar la sección por defecto (home)
+showOnlyOneSection('home');
+}
+});
+}
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
@@ -5032,6 +5056,26 @@ const mobileSectionId = hash + '-mobile';
 showOnlyOneSection(mobileSectionId);
 }
 }
+}
+// 4. FUNCIÓN: MANEJAR NAVEGACIÓN CON FLECHAS DEL NAVEGADOR (MOBILE)
+function handleBrowserNavigation() {
+window.addEventListener('popstate', function(event) {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+// Es una subsección
+const mobileSubsectionId = hash + '-mobile';
+goToSubsection(mobileSubsectionId);
+} else {
+// Es una sección principal
+const mobileSectionId = hash + '-mobile';
+showOnlyOneSection(mobileSectionId);
+}
+} else {
+// Si no hay hash, mostrar la sección por defecto (home-mobile)
+showOnlyOneSection('home-mobile');
+}
+});
 }
 // Cerrar menú al hacer clic fuera
 hamburgerMenu.addEventListener('click', function(e) {
