@@ -4864,7 +4864,9 @@ Authorized by Intendancy Resolution N°</p>
   
 
   
-<!-- SCRIPS -->   
+<!-- SCRIPS -->
+
+<!-- SCRIPS NAVEGACIÓN -->   
 
 <!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 <script>
@@ -4938,120 +4940,280 @@ console.log('✅ Navegación configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 
-
-
 <!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📱 Menú hamburguesa móvil iniciado');
-    
-    const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
-    const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
-    const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
-
-    // FUNCIONES DE NAVEGACIÓN (las mismas que el menú principal)
-    function showOnlyOneSection(sectionId) {
-        console.log('📱 Menú móvil: Mostrando SOLO:', sectionId);
-        // OCULTAR TODAS LAS SECCIONES  
-        document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-            section.style.display = 'none';
-        });
-        // MOSTRAR SECCIÓN
-        const mainSection = document.getElementById(sectionId);
-        if (mainSection) {
-            mainSection.style.display = 'block';
-            // MOSTRAR SUBSECCIONES
-            document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
-                subsection.style.display = 'block';
-            });
-            // DESPLAZAMIENTO HACIA LA SECCIÓN
-            mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
-    function goToSubsection(subsectionId) {
-        console.log('📱 Menú móvil: Yendo a subsección:', subsectionId);
-        const mainSectionId = subsectionId.split('-')[0];
-        showOnlyOneSection(mainSectionId);
-        // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
-        setTimeout(() => {
-            const subsection = document.getElementById(subsectionId);
-            if (subsection) {  
-                subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }, 100);
-    }
-
-    // Abrir/cerrar menú hamburguesa
-    hamburgerBtn.addEventListener('click', function() {
-        hamburgerMenu.classList.toggle('active');
-        const spans = this.querySelectorAll('span');
-        if (hamburgerMenu.classList.contains('active')) {
-            spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-            spans[1].style.opacity = '0';
-            spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
-        } else {
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-
-    // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.getAttribute('href');
-            
-            if (href === 'javascript:void(0)') {
-                // Manejar el carrito por separado
-                if (this.classList.contains('cart-mobile')) {
-                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                    const targetId = cart.length === 0 ? 'cartempty-mobile' : 'cartfull-mobile';
-                    showOnlyOneSection(targetId);
-                    history.pushState(null, null, `#${targetId}`);
-                }
-                return;
-            }
-            
-            const targetId = href.replace('#', '');
-            console.log('📱 Menú móvil: Navegando a:', targetId);
-            
-            // Usar las mismas funciones de navegación
-            if (targetId.includes('-')) {
-                goToSubsection(targetId);
-            } else {
-                showOnlyOneSection(targetId);
-            }
-            
-            history.pushState(null, null, `#${targetId}`);
-            
-            // Cerrar menú después de navegar
-            hamburgerMenu.classList.remove('active');
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        });
-    });
-
-    // Cerrar menú al hacer clic fuera
-    hamburgerMenu.addEventListener('click', function(e) {
-        if (e.target === hamburgerMenu) {
-            hamburgerMenu.classList.remove('active');
-            const spans = hamburgerBtn.querySelectorAll('span');
-            spans[0].style.transform = 'none';
-            spans[1].style.opacity = '1';
-            spans[2].style.transform = 'none';
-        }
-    });
-
-    console.log('✅ Menú hamburguesa móvil configurado correctamente');
+console.log('📱 Menú hamburguesa móvil iniciado');
+const hamburgerBtn = document.getElementById('menu-mobile-hamburger-button');
+const hamburgerMenu = document.getElementById('menu-mobile-hamburger');
+const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
+function showOnlyOneSection(sectionId) {
+console.log('📱 Mostrando SOLO:', sectionId);
+// OCULTAR TODAS LAS SECCIONES MOBILE  
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN PRINCIPAL MOBILE
+const mainSection = document.getElementById(sectionId);
+if (mainSection && mainSection.classList.contains('mobile-only')) {
+mainSection.style.display = 'block';
+// MOSTRAR TODAS SUS SUBSECCIONES MOBILE (igual que en PC)
+const sectionPrefix = sectionId.replace('-mobile', '') + '-';
+document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
+if (subsection.id.startsWith(sectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+// DESPLAZAMIENTO HACIA LA SECCIÓN
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
+function goToSubsection(subsectionId) {
+console.log('📱 Yendo a subsección:', subsectionId);
+const mainSectionId = subsectionId.split('-')[0] + '-mobile';
+showOnlyOneSection(mainSectionId);
+// DESPLAZAMIENTO HACIA LA SUBSECCIÓN
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+// ABRIR/CERRAR MENÚ HAMBURGUESA
+hamburgerBtn.addEventListener('click', function() {
+hamburgerMenu.classList.toggle('active');
+const spans = this.querySelectorAll('span');
+if (hamburgerMenu.classList.contains('active')) {
+spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SOLO SECCIONES PRINCIPALES)
+menuLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+e.preventDefault();
+const href = this.getAttribute('href');
+if (href.startsWith('#')) {
+const targetId = href.replace('#', '');
+console.log('📱 Menú móvil: Navegando a:', targetId);
+// Convertir a ID mobile (ej: #home → #home-mobile)
+const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
+// Navegar a la sección principal mobile
+showOnlyOneSection(mobileSectionId);
+history.pushState(null, null, `#${targetId}`);
+// Cerrar menú después de navegar
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+});
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+// Es una subsección (ej: home-socialmediacontent)
+const mobileSubsectionId = hash + '-mobile';
+goToSubsection(mobileSubsectionId);
+} else {
+// Es una sección principal (ej: home)
+const mobileSectionId = hash + '-mobile';
+showOnlyOneSection(mobileSectionId);
+}
+}
+}
+// Cerrar menú al hacer clic fuera
+hamburgerMenu.addEventListener('click', function(e) {
+if (e.target === hamburgerMenu) {
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+// INICIALIZACIÓN
+checkInitialHash();
+console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
 
 
+
+<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🛍️ Navegación jerárquica de tienda iniciada');
+function navigateToTarget(targetId) {
+console.log('Navegando a:', targetId);
+const targetSection = document.getElementById(targetId);
+if (!targetSection) {
+console.warn('❌ Sección no encontrada:', targetId);
+return;
+}
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// Determinar la sección principal a mostrar
+let mainSectionId;
+if (targetSection.classList.contains('subsection')) {
+mainSectionId = targetId.split('-')[0];
+} else {
+mainSectionId = targetId;
+}
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+// MOSTRAR SECCIÓN PRINCIPAL
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES
+const mainSectionPrefix = mainSectionId + '-';
+document.querySelectorAll('.subsection').forEach(subsection => {
+if (subsection.id.startsWith(mainSectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+// SCROLL HASTA SECCIÓN O SUBSECCIÓN
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+history.pushState(null, null, `#${targetId}`);
+}
+}
+// TARJETAS Y BOTONES
+// 1. TARJETAS
+document.querySelectorAll('[class*="-card"]').forEach(card => {
+card.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+// 2. BOTONES "BACK"
+document.querySelectorAll('[class*="-button-back"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('↩️ Botón BACK - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 3. BOTONES "CONTINUE SHOPPING"
+document.querySelectorAll('[class*="-button-continueshopping"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('🛍️ CONTINUE SHOPPING - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 4. BOTONES "VIEW" 
+document.querySelectorAll('[class*="-button-view"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('📍 Botón VIEW - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// AGREGAR MÁS BOTONES
+// INICIALIZACIÓN 
+console.log('✅ Navegación de tienda configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
+
+<!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🛍️ Navegación jerárquica de tienda MOBILE iniciada');
+function navigateToTarget(targetId) {
+console.log('Navegando a:', targetId);
+const targetSection = document.getElementById(targetId);
+if (!targetSection) {
+console.warn('❌ Sección MOBILE no encontrada:', targetId);
+return;
+}
+// OCULTAR TODAS LAS SECCIONES MOBILE
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+// Determinar la sección principal a mostrar
+let mainSectionId;
+if (targetSection.classList.contains('subsection')) {
+mainSectionId = targetId.split('-')[0] + '-mobile';
+} else {
+mainSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
+}
+const mainSection = document.getElementById(mainSectionId);
+if (mainSection) {
+// MOSTRAR SECCIÓN PRINCIPAL MOBILE
+mainSection.style.display = 'block';
+// MOSTRAR SUBSECCIONES MOBILE
+const mainSectionPrefix = mainSectionId.replace('-mobile', '') + '-';
+document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
+if (subsection.id.startsWith(mainSectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+// SCROLL HASTA SECCIÓN O SUBSECCIÓN MOBILE
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+history.pushState(null, null, `#${targetId}`);
+}
+}
+// TARJETAS Y BOTONES MOBILE
+// 1. TARJETAS MOBILE
+document.querySelectorAll('[class*="-card-mobile"]').forEach(card => {
+card.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+navigateToTarget(targetId);
+});
+});
+// 2. BOTONES "BACK" MOBILE
+document.querySelectorAll('[class*="-button-back-mobile"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('↩️ Botón BACK MOBILE - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 3. BOTONES "CONTINUE SHOPPING" MOBILE
+document.querySelectorAll('[class*="-button-continueshopping-mobile"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('🛍️ CONTINUE SHOPPING MOBILE - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// 4. BOTONES "VIEW" MOBILE
+document.querySelectorAll('[class*="-button-view-mobile"]').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+console.log('📍 Botón VIEW MOBILE - Navegando a:', targetId);
+navigateToTarget(targetId);
+});
+});
+// INICIALIZACIÓN 
+console.log('✅ Navegación de tienda MOBILE configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
+
+<!-- FIN SCRIPS NAVEGACIÓN -->   
 
   
 
