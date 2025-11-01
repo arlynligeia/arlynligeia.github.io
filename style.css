@@ -124,61 +124,113 @@ transform: scaleX(1);
 
 
 /* ======================================
-   STORE
+    SHOP PC
 ====================================== */
+.shop-carousel {
+position: relative;
+width: 95%;
+height: calc(100vh - 220px); 
+z-index: 1; 
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 10px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
+}
+@keyframes borderGlow {
+0% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.6),
+0 0 30px rgba(255, 0, 255, 0.4),
+inset 0 0 15px rgba(168, 85, 247, 0.3);
+}
+100% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.8),
+0 0 30px rgba(255, 0, 255, 0.6),
+inset 0 0 25px rgba(168, 85, 247, 0.5);
+}
+}
+/* CONTENEDOR: IMÁGENES */
+.shop-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
+}
+.shop-carousel-image.active {
+opacity: 1;
+}
+/* CONTROL */
+.shop-carousel { display: flex; }
+.shop-carousel-mobile { display: none; }
 /* ======================================
-   CARRUSEL: BIENVENIDA
+   MOVIL RESPONSIVE: SHOP
 ====================================== */
-.store-container {
-  position: relative;
-  height: calc(100vh - 220px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-.store-carousel {
-  width: 95%;
-  height: 100%;
-  overflow: hidden;
-  background-color: #000000; 
-  border: 3px solid white;
-  border-radius: 20px;
-  position: relative;
-}
-.store-carousel-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-.store-carousel-image.active {
-  opacity: 1;
-}
-/* TEXTO AL LADO IZQUIERDO EN DOS LÍNEAS */
-.store-carousel-text {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  left: 10%;
-  transform: translateY(-50%);
-  font-family: 'Orbitron', sans-serif;
-  font-size: 3rem;
-  color: #39ff14 !important;
-  text-align: left;
-  white-space: normal;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-  line-height: 1.2;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+@media (max-width: 768px) {
+.shop-carousel-mobile {
+position: relative; 
+width: 90%;
+height: 70vh;
+overflow: hidden;
+background-color: #000000 !important;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-/* Mostrar texto solo cuando la primera imagen está activa */
-.store-carousel-image.active#store-carousel-image-1 ~ .store-carousel-text {
-  opacity: 1;
+/* CONTENEDOR: IMÁGENES */
+.shop-carousel-image-mobile {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
 }
+.shop-carousel-image-mobile.active {
+opacity: 1;
+}
+/* CONTROL */
+.shop-carousel { display: none; }
+.shop-carousel-mobile { display: flex; }
+}
+
+
+
+
+
+
+
+
 
 /* ======================================
    DIGITAL PRODUCTS
