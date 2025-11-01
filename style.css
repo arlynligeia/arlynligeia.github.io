@@ -10901,7 +10901,7 @@ margin-bottom: 0px;
 /* FORZAR OCULTAMIENTO INICIAL EN MOBILE */
 @media (max-width: 768px) {
     .main-section.mobile-only:not(#home-mobile),
-    .subsection.mobile-only:not([id*="-mobile"]) {
+    .subsection.mobile-only:not([id*="home-mobile-"]) {
         display: none !important;
     }
     
