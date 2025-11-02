@@ -3989,7 +3989,6 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN CART EMPTY MOBILE -->
-
   
 <!-- CART FULL -->
 <section class="cartfull-section" id="cartfull"> 
@@ -4086,67 +4085,49 @@ Cosmic/Psychological Horror</p>
 
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
-  <div class="cartfull-container-mobile">
-    <h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>   
-    
-    <!-- CONTENEDOR: PRODUCTOS -->
-    <div class="cartfull-products-mobile" id="cartfull-products-mobile">
-      <!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
-    </div>
-    
-    <!-- SEPARADOR -->
-    <div class="cartfull-divider-mobile"></div>
-    
-    <!-- CONTENEDOR: RESUMEN DE COMPRA -->
-    <div class="cartfull-summary-mobile">
-      <!-- GRUPO SUBTOTAL -->
-      <div class="cartfull-summary-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>Subtotal</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="subtotal-amount-mobile">0.00</span>
-        </div>
-      </div>
-      
-      <!-- GRUPO SHIPPING -->
-      <div class="cartfull-summary-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>Shipping</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="shipping-amount-mobile">0.00</span>
-        </div>
-      </div>
-      
-      <!-- SEPARADOR -->
-      <div class="cartfull-divider-mobile"></div>
-      
-      <!-- GRUPO TOTAL -->
-      <div class="cartfull-summary-group-mobile cartfull-total-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>TOTAL</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="total-amount-mobile">0.00</span>
-        </div>
-      </div>
-    </div>
-    
-    <!-- SEPARADOR -->
-    <div class="cartfull-divider-mobile"></div>
-    
-    <!-- CONTENEDOR DE BOTONES FINALES -->
-    <div class="cartfull-buttons-mobile">
-      <button class="cartfull-button-back-mobile" onclick="history.back()">BACK</button>
-      <a class="cartfull-button-continueshopping-mobile" href="#store-mobile">CONTINUE SHOPPING</a>
-      <button class="cartfull-button-clear-mobile" id="cart-full-clear-mobile">CLEAR CART</button>
-      <a class="cartfull-button-buy-mobile" href="#shippinginformation-mobile">BUY</a>
-    </div>
-  </div>
+<div class="cartfull-container-mobile">
+<h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>   
+<!-- SEPARADOR -->
+<div class="cartfull-divider-mobile"></div>
+<!-- CONTENEDOR: PRODUCTOS --> 
+<div class="cartfull-products-mobile" id="cartfull-products-mobile">
+<!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
+</div>
+<!-- SEPARADOR -->
+<div class="cartfull-divider-mobile"></div>
+<!-- CONTENEDOR: RESUMEN DE COMPRA -->
+<div class="cartfull-summary-mobile">
+<!-- SUBTOTAL -->
+<div class="cartfull-summary-subtotal-mobile">
+<span class="cartfull-summary-subtotal-label-mobile">Subtotal:</span>
+<span class="cartfull-summary-subtotal-amount-mobile" id="subtotal-amount-mobile">0.00</span>
+</div>
+<!-- SHIPPING -->
+<div class="cartfull-summary-shipping-mobile">
+<span class="cartfull-summary-shipping-label-mobile">Shipping:</span>
+<span class="cartfull-summary-shipping-amount-mobile" id="shipping-amount-mobile">0.00</span>
+</div>
+<!-- TOTAL -->
+<div class="cartfull-summary-total-mobile">
+<span class="cartfull-summary-total-label-mobile">TOTAL:</span>
+<span class="cartfull-summary-total-amount-mobile" id="total-amount-mobile">0.00</span>
+</div>
+</div>
+<!-- SEPARADOR -->
+<div class="cartfull-divider-mobile"></div>   
+<!-- CONTENEDOR DE BOTONES FINALES -->
+<div class="cartfull-button-mobile">
+<button class="cartfull-button-clear-mobile" id="cart-full-clear-mobile">CLEAR CART</button>
+</div>  
+<div class="cartfull-button-mobile">
+<button class="cartfull-button-back-mobile" onclick="history.back()">BACK</button>
+</div>
+<div class="cartfull-buttons-mobile">  
+<a class="cartfull-button-continueshopping-mobile" href="#store-mobile">CONTINUE SHOPPING</a>
+</div>  
+<div class="cartfull-buttons-mobile">  
+<a class="cartfull-button-buy-mobile" href="#shippinginformation-mobile">BUY</a>
+</div>  
 </section>
 <!-- FIN CART FULL MOBILE -->  
 
@@ -5794,7 +5775,6 @@ setupBuyButton();
 
 
 
-
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -5870,36 +5850,36 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <!-- INFORMACIÓN DEL PRODUCTO -->
                 <div class="cartfull-product-info-mobile">
+                    <!-- NOMBRE -->
                     <div class="cartfull-product-name-mobile">
                         <span>${item.product}</span>
                     </div>
                     
-                    <div class="cartfull-product-price-mobile">
-                        <span>Unit Price: </span>
-                        <span class="cartfull-product-price-symbol-mobile">$</span>
-                        <span class="cartfull-product-price-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+                    <!-- PRECIO UNITARIO -->
+                    <div class="cartfull-product-unitprice-mobile">
+                        <span class="cartfull-product-unitprice-label-mobile">Unit Price:</span>
+                        <span class="cartfull-product-unitprice-amount-mobile">$ ${formatNumberWithCommas(item.price)}</span>
                     </div>
                     
                     <!-- CANTIDAD -->
                     <div class="cartfull-product-quantity-mobile">
-                        <span>QTY:</span>
-                        <div class="cartfull-quantity-controls-mobile">
-                            <button class="cartfull-quantity-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
-                            <span class="cartfull-quantity-value-mobile">${item.quantity}</span>
-                            <button class="cartfull-quantity-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
+                        <span class="cartfull-product-quantity-label-mobile">QTY:</span>
+                        <div class="cartfull-product-quantity-controls-mobile">
+                            <button class="cartfull-product-quantity-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
+                            <span class="cartfull-product-quantity-value-mobile">${item.quantity}</span>
+                            <button class="cartfull-product-quantity-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
                         </div>
                     </div>
                     
                     <!-- TOTAL POR PRODUCTO -->
                     <div class="cartfull-product-total-mobile">
-                        <span>Total: </span>
-                        <span class="cartfull-product-total-symbol-mobile">$</span>
-                        <span class="cartfull-product-total-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+                        <span class="cartfull-product-total-label-mobile">Total:</span>
+                        <span class="cartfull-product-total-amount-mobile">$ ${formatNumberWithCommas(item.totalprice)}</span>
                     </div>
                     
                     <!-- BOTÓN ELIMINAR -->
                     <div class="cartfull-product-remove-mobile">
-                        <button class="cartfull-remove-button-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+                        <button class="cartfull-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
                     </div>
                 </div>
             </div>
@@ -5927,38 +5907,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (cart.length === 0) {
             if (cartEmptyMobile) cartEmptyMobile.style.display = 'block';
             if (cartFullMobile) cartFullMobile.style.display = 'none';
-            
-            // Iniciar efecto de tipeo en mobile
-            setTimeout(startTypingEffectMobile, 300);
         } else {
             if (cartEmptyMobile) cartEmptyMobile.style.display = 'none';
             if (cartFullMobile) cartFullMobile.style.display = 'block';
         }
     }
 
-    // 5. FUNCIÓN: EFECTO DE TIPEO PARA MOBILE
-    function startTypingEffectMobile() {
-        const typingElement = document.getElementById('typing-text-mobile');
-        if (typingElement) {
-            typeWriterMobile(typingElement, 'Your cart is empty', 80);
-        }
-    }
-
-    function typeWriterMobile(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
-    }
-
-    // 6. FUNCIÓN: AGREGAR AL CARRITO DESDE MOBILE
+    // 5. FUNCIÓN: AGREGAR AL CARRITO DESDE MOBILE
     function addToCartMobile(productData) {
         const cartItem = cart.find(item => item.product === productData.product);
         const currentQuantity = cartItem ? cartItem.quantity : 0;
@@ -5994,7 +5949,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showNotificationMobile('Product added to cart successfully!');
     }
 
-    // 7. FUNCIÓN: NOTIFICACIÓN MOBILE
+    // 6. FUNCIÓN: NOTIFICACIÓN MOBILE
     function showNotificationMobile(message) {
         // Crear modal de notificación si no existe
         let modal = document.getElementById('notificationModalMobile');
@@ -6028,7 +5983,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 1000);
     }
 
-    // 8. FUNCIONES GLOBALES PARA MOBILE
+    // 7. FUNCIONES GLOBALES PARA MOBILE
     window.increaseQuantityMobile = function(productName) {
         const cartItem = cart.find(item => item.product === productName);
         if (cartItem) {
@@ -6061,9 +6016,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCartDisplayMobile();
     };
 
-    // 9. FUNCIÓN: ACTUALIZAR BOTONES ADD TO CART EN MOBILE
+    // 8. FUNCIÓN: ACTUALIZAR BOTONES ADD TO CART EN MOBILE
     function updateAddToCartButtonsMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
         const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
         
         addToCartButtons.forEach(button => {
@@ -6084,7 +6038,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 10. BOTÓN: CLEAR CART MOBILE
+    // 9. BOTÓN: CLEAR CART MOBILE
     document.getElementById('cart-full-clear-mobile').addEventListener('click', function() {
         if (cart.length > 0) {
             showClearCartModalMobile();
@@ -6147,118 +6101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'flex';
     }
 
-    // 11. BOTÓN: ADD TO CART EN MOBILE - CORREGIDO
-    function setupAddToCartButtonsMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
-        const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
-        
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                const productData = {
-                    image: this.getAttribute('data-image'),
-                    product: this.getAttribute('data-product'),
-                    price: this.getAttribute('data-price'),
-                    shipping: this.getAttribute('data-shipping') || '0'
-                };
-                addToCartMobile(productData);
-            });
-        });
-    }
-
-    // 12. BOTÓN: GO TO CART EN MOBILE - CORREGIDO
-    function setupGoToCartButtonMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-gotocart-mobile
-        const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart-mobile"]');
-        
-        goToCartButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Ocultar todas las secciones
-                document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Mostrar la sección de carrito correspondiente
-                updateCartSectionsMobile();
-                
-                if (cart.length === 0) {
-                    window.location.hash = 'cartempty-mobile';
-                } else {
-                    window.location.hash = 'cartfull-mobile';
-                }
-            });
-        });
-    }
-
-    // 13. BOTÓN: BUY EN MOBILE - CORREGIDO
-    function setupBuyButtonMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-buy-mobile
-        const buyButtons = document.querySelectorAll('[class$="-button-buy-mobile"]');
-        
-        buyButtons.forEach(buyButton => {
-            buyButton.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                if (cart.length === 0) {
-                    alert('❌ Your cart is empty. Please add products before proceeding to buy.');
-                    return;
-                }
-                
-                console.log('📱🛒 Proceeding to checkout from mobile');
-                
-                // Navegar a shipping information
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                const shippingSection = document.getElementById('shippinginformation-mobile');
-                if (shippingSection) {
-                    shippingSection.style.display = 'block';
-                    window.location.hash = 'shippinginformation-mobile';
-                }
-                
-                // Actualizar totales en shipping information
-                updateShippingInformationTotalsMobile();
-                saveCartToHiddenFieldsMobile();
-            });
-        });
-    }
-
-    function updateShippingInformationTotalsMobile() {
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
-        const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
-        const total = subtotal + shipping;
-        
-        const subtotalElement = document.getElementById('cart-subtotal-mobile');
-        const shippingElement = document.getElementById('cart-shipping-mobile');
-        const totalElement = document.getElementById('cart-total-mobile');
-        
-        if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
-        if (shippingElement) shippingElement.textContent = formatNumberWithCommas(shipping.toFixed(2));
-        if (totalElement) totalElement.textContent = formatNumberWithCommas(total.toFixed(2));
-    }
-
-    function saveCartToHiddenFieldsMobile() {
-        const cartItemsField = document.getElementById('hidden-cart-items-mobile');
-        const cartSubtotalField = document.getElementById('hidden-cart-subtotal-mobile');
-        const cartShippingField = document.getElementById('hidden-cart-shipping-mobile');
-        const cartTotalField = document.getElementById('hidden-cart-total-mobile');
-        
-        if (cartItemsField) {
-            cartItemsField.value = JSON.stringify(cart);
-        }
-        
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
-        const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
-        const total = subtotal + shipping;
-        
-        if (cartSubtotalField) cartSubtotalField.value = subtotal.toFixed(2);
-        if (cartShippingField) cartShippingField.value = shipping.toFixed(2);
-        if (cartTotalField) cartTotalField.value = total.toFixed(2);
-    }
-
-    // 14. FUNCIÓN: FORMATEAR NÚMEROS (compartida con desktop)
+    // 10. FUNCIÓN: FORMATEAR NÚMEROS
     function formatNumberWithCommas(number) {
         let parts = number.toString().split('.');
         let integerPart = parts[0];
@@ -6268,9 +6111,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // INICIALIZACIÓN
-    setupAddToCartButtonsMobile(); // ← CORREGIDO
-    setupGoToCartButtonMobile();   // ← CORREGIDO  
-    setupBuyButtonMobile();        // ← CORREGIDO
     updateCartDisplayMobile();
 });
 </script>
