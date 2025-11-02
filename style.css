@@ -9602,6 +9602,7 @@ display: none;
    CART FULL MOBILE
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
+@media (max-width: 768px) {
 .cartfull-container-mobile {
 position: relative;
 width: 90%;
@@ -9881,7 +9882,7 @@ margin: 0px;
 transform: scale(1.05);
 }
 .cartempty-section.mobile-only, 
-.cartfull-section.mobile-only { display: none;}
+.cartfull-section.mobile-only { display: none; }
 
 .cartfull-container { display: none; }
 .cartfull-container-mobile { display: block; }
