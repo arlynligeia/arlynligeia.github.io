@@ -5802,25 +5802,23 @@ setupBuyButton();
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📱 Carrito Mobile iniciado');
-    
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // STOCK DE PRODUCTOS INTERNO (mismo que desktop)
-    const productStock = {
-        "Comet Sponsor": 288,
-        "Planet Sponsor": 120,
-        "Star Sponsor": 48,
-        "Comet Sponsor Brand": 24,
-        "Planet Sponsor Brand": 8,
-        "Star Sponsor Brand": 2,
-        "Nebula Executive Producer": 1,
-        "Pulsar Executive Producer": 1,
-        "Black Hole Executive Producer": 1,
-        "Quasar Executive Producer": 1,
-        "Galaxy Executive Producer": 1,
-        "Cosmos Executive Producer": 1
-    };
+console.log('📱 Carrito Mobile iniciado');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// STOCK DE PRODUCTOS INTERNO
+const productStock = {
+"Comet Sponsor": 288,
+"Planet Sponsor": 120,
+"Star Sponsor": 48,
+"Comet Sponsor Brand": 24,
+"Planet Sponsor Brand": 8,
+"Star Sponsor Brand": 2,
+"Nebula Executive Producer": 1,
+"Pulsar Executive Producer": 1,
+"Black Hole Executive Producer": 1,
+"Quasar Executive Producer": 1,
+"Galaxy Executive Producer": 1,
+"Cosmos Executive Producer": 1
+};
 
     // 1. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
     function updateCartDisplayMobile() {
@@ -5839,7 +5837,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p>Your cart is empty</p>
                 </div>
             `;
-            updateCartSectionsMobile();
             return;
         }
         
@@ -5923,22 +5920,37 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('total-amount-mobile').textContent = formatNumberWithCommas(total.toFixed(2));
     }
 
-    // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE
-    function updateCartSectionsMobile() {
-        const cartEmptyMobile = document.getElementById('cartempty-mobile');
-        const cartFullMobile = document.getElementById('cartfull-mobile');
-        
-        if (cart.length === 0) {
-            if (cartEmptyMobile) cartEmptyMobile.style.display = 'block';
-            if (cartFullMobile) cartFullMobile.style.display = 'none';
-            
-            // Iniciar efecto de tipeo en mobile
+  // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE - SOLO PARA NAVEGACIÓN
+function updateCartSectionsMobile() {
+    // ESTA FUNCIÓN NO DEBE HACER NADA CUANDO SE AGREGAN PRODUCTOS
+    // SOLO SE USA CUANDO EL USUARIO NAVEGA AL CARRITO
+    console.log('📱 Estado del carrito actualizado:', cart.length, 'productos');
+}
+
+// NUEVA FUNCIÓN: MOSTRAR CARRITO SOLO CUANDO EL USUARIO LO PIDE
+function showCartSectionMobile() {
+    const cartEmptyMobile = document.getElementById('cartempty-mobile');
+    const cartFullMobile = document.getElementById('cartfull-mobile');
+    
+    // OCULTAR TODAS LAS SECCIONES
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // MOSTRAR SOLO EL CARRITO CORRESPONDIENTE
+    if (cart.length === 0) {
+        if (cartEmptyMobile) {
+            cartEmptyMobile.style.display = 'block';
+            window.location.hash = 'cartempty-mobile';
             setTimeout(startTypingEffectMobile, 300);
-        } else {
-            if (cartEmptyMobile) cartEmptyMobile.style.display = 'none';
-            if (cartFullMobile) cartFullMobile.style.display = 'block';
+        }
+    } else {
+        if (cartFullMobile) {
+            cartFullMobile.style.display = 'block';
+            window.location.hash = 'cartfull-mobile';
         }
     }
+}
 
     // 5. FUNCIÓN: EFECTO DE TIPEO PARA MOBILE
     function startTypingEffectMobile() {
@@ -5998,40 +6010,40 @@ document.addEventListener('DOMContentLoaded', function() {
         showNotificationMobile('Product added to cart successfully!');
     }
 
-    // 7. FUNCIÓN: NOTIFICACIÓN MOBILE
-    function showNotificationMobile(message) {
-        // Crear modal de notificación si no existe
-        let modal = document.getElementById('notificationModalMobile');
-        if (!modal) {
-            modal = document.createElement('div');
-            modal.id = 'notificationModalMobile';
-            modal.style.cssText = `
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background: rgba(58, 0, 82, 0.95);
-                border: 2px solid #00FFFF;
-                border-radius: 10px;
-                padding: 20px;
-                z-index: 10000;
-                display: none;
-                align-items: center;
-                justify-content: center;
-                color: #00FF00;
-                font-family: 'Share Tech Mono', monospace;
-                font-size: 1.1rem;
-            `;
-            modal.innerHTML = `<div class="notification-message-mobile">${message}</div>`;
-            document.body.appendChild(modal);
-        }
-        
-        modal.style.display = 'flex';
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 1000);
-    }
+ // 7. FUNCIÓN: NOTIFICACIÓN MOBILE
+function showNotificationMobile(message) {
+let modal = document.getElementById('notificationModalMobile');
+if (!modal) {
+modal = document.createElement('div');
+modal.id = 'notificationModalMobile';
+modal.style.cssText = `
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 10000;      
+display: none;
+justify-content: center;
+align-items: center;
+background: rgba(58, 0, 82, 0.95);                
+border: 3px solid #00FFFF;                
+border-radius: 10px;                
+font-family: 'Share Tech Mono', monospace;                
+font-size: 1.1rem;  
+color: #00FF00;
+padding: 20px;
+`;
+modal.innerHTML = `<div class="notification-message-mobile">${message}</div>`;
+document.body.appendChild(modal);
+}
+modal.style.display = 'flex';
+setTimeout(() => {
+modal.style.display = 'none';
+}, 1000);
+}
 
+
+  
     // 8. FUNCIONES GLOBALES PARA MOBILE
     window.increaseQuantityMobile = function(productName) {
         const cartItem = cart.find(item => item.product === productName);
