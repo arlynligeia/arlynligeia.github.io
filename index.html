@@ -5802,23 +5802,25 @@ setupBuyButton();
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('📱 Carrito Mobile iniciado');
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// STOCK DE PRODUCTOS INTERNO
-const productStock = {
-"Comet Sponsor": 288,
-"Planet Sponsor": 120,
-"Star Sponsor": 48,
-"Comet Sponsor Brand": 24,
-"Planet Sponsor Brand": 8,
-"Star Sponsor Brand": 2,
-"Nebula Executive Producer": 1,
-"Pulsar Executive Producer": 1,
-"Black Hole Executive Producer": 1,
-"Quasar Executive Producer": 1,
-"Galaxy Executive Producer": 1,
-"Cosmos Executive Producer": 1
-};
+    console.log('📱 Carrito Mobile iniciado');
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // STOCK DE PRODUCTOS INTERNO (mismo que desktop)
+    const productStock = {
+        "Comet Sponsor": 288,
+        "Planet Sponsor": 120,
+        "Star Sponsor": 48,
+        "Comet Sponsor Brand": 24,
+        "Planet Sponsor Brand": 8,
+        "Star Sponsor Brand": 2,
+        "Nebula Executive Producer": 1,
+        "Pulsar Executive Producer": 1,
+        "Black Hole Executive Producer": 1,
+        "Quasar Executive Producer": 1,
+        "Galaxy Executive Producer": 1,
+        "Cosmos Executive Producer": 1
+    };
 
     // 1. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
     function updateCartDisplayMobile() {
@@ -5837,7 +5839,7 @@ const productStock = {
                     <p>Your cart is empty</p>
                 </div>
             `;
-            return;
+            return; // QUITÉ updateCartSectionsMobile() de aquí
         }
         
         // Agregar cada producto al contenedor
@@ -5848,7 +5850,6 @@ const productStock = {
         
         // Actualizar totales
         updateCartTotalsMobile();
-        updateCartSectionsMobile();
         updateAddToCartButtonsMobile();
     }
 
@@ -5920,37 +5921,36 @@ const productStock = {
         document.getElementById('total-amount-mobile').textContent = formatNumberWithCommas(total.toFixed(2));
     }
 
-  // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE - SOLO PARA NAVEGACIÓN
-function updateCartSectionsMobile() {
-    // ESTA FUNCIÓN NO DEBE HACER NADA CUANDO SE AGREGAN PRODUCTOS
-    // SOLO SE USA CUANDO EL USUARIO NAVEGA AL CARRITO
-    console.log('📱 Estado del carrito actualizado:', cart.length, 'productos');
-}
+    // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE - CORREGIDA
+    function updateCartSectionsMobile() {
+        console.log('📱 Estado del carrito actualizado:', cart.length, 'productos');
+        // SOLO LOG - NO CAMBIA LA VISIBILIDAD
+    }
 
-// NUEVA FUNCIÓN: MOSTRAR CARRITO SOLO CUANDO EL USUARIO LO PIDE
-function showCartSectionMobile() {
-    const cartEmptyMobile = document.getElementById('cartempty-mobile');
-    const cartFullMobile = document.getElementById('cartfull-mobile');
-    
-    // OCULTAR TODAS LAS SECCIONES
-    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
-        section.style.display = 'none';
-    });
-    
-    // MOSTRAR SOLO EL CARRITO CORRESPONDIENTE
-    if (cart.length === 0) {
-        if (cartEmptyMobile) {
-            cartEmptyMobile.style.display = 'block';
-            window.location.hash = 'cartempty-mobile';
-            setTimeout(startTypingEffectMobile, 300);
-        }
-    } else {
-        if (cartFullMobile) {
-            cartFullMobile.style.display = 'block';
-            window.location.hash = 'cartfull-mobile';
+    // FUNCIÓN NUEVA: MOSTRAR CARRITO SOLO CUANDO EL USUARIO LO PIDE
+    function showCartSectionMobile() {
+        const cartEmptyMobile = document.getElementById('cartempty-mobile');
+        const cartFullMobile = document.getElementById('cartfull-mobile');
+        
+        // OCULTAR TODAS LAS SECCIONES MOBILE
+        document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // MOSTRAR SOLO EL CARRITO CORRESPONDIENTE
+        if (cart.length === 0) {
+            if (cartEmptyMobile) {
+                cartEmptyMobile.style.display = 'block';
+                window.location.hash = 'cartempty-mobile';
+                setTimeout(startTypingEffectMobile, 300);
+            }
+        } else {
+            if (cartFullMobile) {
+                cartFullMobile.style.display = 'block';
+                window.location.hash = 'cartfull-mobile';
+            }
         }
     }
-}
 
     // 5. FUNCIÓN: EFECTO DE TIPEO PARA MOBILE
     function startTypingEffectMobile() {
@@ -5974,7 +5974,7 @@ function showCartSectionMobile() {
         type();
     }
 
-    // 6. FUNCIÓN: AGREGAR AL CARRITO DESDE MOBILE
+    // 6. FUNCIÓN: AGREGAR AL CARRITO DESDE MOBILE - CORREGIDA
     function addToCartMobile(productData) {
         const cartItem = cart.find(item => item.product === productData.product);
         const currentQuantity = cartItem ? cartItem.quantity : 0;
@@ -6008,42 +6008,43 @@ function showCartSectionMobile() {
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartDisplayMobile();
         showNotificationMobile('Product added to cart successfully!');
+        
+        // QUITÉ updateCartSectionsMobile() de aquí - NO MOSTRAR CARRITO AUTOMÁTICAMENTE
     }
 
- // 7. FUNCIÓN: NOTIFICACIÓN MOBILE
-function showNotificationMobile(message) {
-let modal = document.getElementById('notificationModalMobile');
-if (!modal) {
-modal = document.createElement('div');
-modal.id = 'notificationModalMobile';
-modal.style.cssText = `
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 10000;      
-display: none;
-justify-content: center;
-align-items: center;
-background: rgba(58, 0, 82, 0.95);                
-border: 3px solid #00FFFF;                
-border-radius: 10px;                
-font-family: 'Share Tech Mono', monospace;                
-font-size: 1.1rem;  
-color: #00FF00;
-padding: 20px;
-`;
-modal.innerHTML = `<div class="notification-message-mobile">${message}</div>`;
-document.body.appendChild(modal);
-}
-modal.style.display = 'flex';
-setTimeout(() => {
-modal.style.display = 'none';
-}, 1000);
-}
+    // 7. FUNCIÓN: NOTIFICACIÓN MOBILE
+    function showNotificationMobile(message) {
+        let modal = document.getElementById('notificationModalMobile');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'notificationModalMobile';
+            modal.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(58, 0, 82, 0.95);
+                border: 2px solid #00FFFF;
+                border-radius: 10px;
+                padding: 20px;
+                z-index: 10000;
+                display: none;
+                align-items: center;
+                justify-content: center;
+                color: #00FF00;
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 1.1rem;
+            `;
+            modal.innerHTML = `<div class="notification-message-mobile">${message}</div>`;
+            document.body.appendChild(modal);
+        }
+        
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            modal.style.display = 'none';
+        }, 1000);
+    }
 
-
-  
     // 8. FUNCIONES GLOBALES PARA MOBILE
     window.increaseQuantityMobile = function(productName) {
         const cartItem = cart.find(item => item.product === productName);
@@ -6079,7 +6080,6 @@ modal.style.display = 'none';
 
     // 9. FUNCIÓN: ACTUALIZAR BOTONES ADD TO CART EN MOBILE
     function updateAddToCartButtonsMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
         const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
         
         addToCartButtons.forEach(button => {
@@ -6110,7 +6110,6 @@ modal.style.display = 'none';
     });
 
     function showClearCartModalMobile() {
-        // Crear modal de confirmación si no existe
         let modal = document.getElementById('clearCartModalMobile');
         if (!modal) {
             modal = document.createElement('div');
@@ -6141,7 +6140,6 @@ modal.style.display = 'none';
             
             document.body.appendChild(modal);
             
-            // Event listeners para los botones del modal
             document.getElementById('modalCancelMobile').addEventListener('click', function() {
                 modal.style.display = 'none';
             });
@@ -6163,9 +6161,8 @@ modal.style.display = 'none';
         modal.style.display = 'flex';
     }
 
-    // 11. BOTÓN: ADD TO CART EN MOBILE - CORREGIDO
+    // 11. BOTÓN: ADD TO CART EN MOBILE
     function setupAddToCartButtonsMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
         const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
         
         addToCartButtons.forEach(button => {
@@ -6183,33 +6180,18 @@ modal.style.display = 'none';
 
     // 12. BOTÓN: GO TO CART EN MOBILE - CORREGIDO
     function setupGoToCartButtonMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-gotocart-mobile
         const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart-mobile"]');
         
         goToCartButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                // Ocultar todas las secciones
-                document.querySelectorAll('.main-section, .subsection').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Mostrar la sección de carrito correspondiente
-                updateCartSectionsMobile();
-                
-                if (cart.length === 0) {
-                    window.location.hash = 'cartempty-mobile';
-                } else {
-                    window.location.hash = 'cartfull-mobile';
-                }
+                showCartSectionMobile(); // ← USA LA NUEVA FUNCIÓN
             });
         });
     }
 
-    // 13. BOTÓN: BUY EN MOBILE - CORREGIDO
+    // 13. BOTÓN: BUY EN MOBILE
     function setupBuyButtonMobile() {
-        // Seleccionar TODOS los botones que terminen en -button-buy-mobile
         const buyButtons = document.querySelectorAll('[class$="-button-buy-mobile"]');
         
         buyButtons.forEach(buyButton => {
@@ -6223,8 +6205,7 @@ modal.style.display = 'none';
                 
                 console.log('📱🛒 Proceeding to checkout from mobile');
                 
-                // Navegar a shipping information
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
                     section.style.display = 'none';
                 });
                 
@@ -6234,7 +6215,6 @@ modal.style.display = 'none';
                     window.location.hash = 'shippinginformation-mobile';
                 }
                 
-                // Actualizar totales en shipping information
                 updateShippingInformationTotalsMobile();
                 saveCartToHiddenFieldsMobile();
             });
@@ -6274,7 +6254,7 @@ modal.style.display = 'none';
         if (cartTotalField) cartTotalField.value = total.toFixed(2);
     }
 
-    // 14. FUNCIÓN: FORMATEAR NÚMEROS (compartida con desktop)
+    // 14. FUNCIÓN: FORMATEAR NÚMEROS
     function formatNumberWithCommas(number) {
         let parts = number.toString().split('.');
         let integerPart = parts[0];
@@ -6284,14 +6264,13 @@ modal.style.display = 'none';
     }
 
     // INICIALIZACIÓN
-    setupAddToCartButtonsMobile(); // ← CORREGIDO
-    setupGoToCartButtonMobile();   // ← CORREGIDO  
-    setupBuyButtonMobile();        // ← CORREGIDO
+    setupAddToCartButtonsMobile();
+    setupGoToCartButtonMobile();  
+    setupBuyButtonMobile();
     updateCartDisplayMobile();
 });
 </script>
 <!-- FIN SCRIP: CARRITO MOBILE -->
-
 
 
 
