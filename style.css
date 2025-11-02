@@ -9606,18 +9606,20 @@ display: none;
 /* ======================================
    CART FULL MOBILE
 ====================================== */
+/* ======================================
+   CART FULL MOBILE
+====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 @media (max-width: 768px) {   
 .cartfull-container-mobile {
     position: relative;
-    width: 95%;
-    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;   
     background: #3A0052 !important;
-    border-radius: 15px;
-    margin: 20px auto;
+    border-radius: 20px;
+    margin: 10px auto 30px auto;
     padding: 20px;
 }
-
 .cartfull-container-mobile::before {
     content: "";
     position: absolute;
@@ -9625,56 +9627,48 @@ display: none;
     top: 0;
     left: 0;
     width: 100%;
-    height: 70px; 
+    height: 60px; 
     background: #320046 !important;
-    border-radius: 15px 15px 0 0;  
+    border-radius: 20px 20px 0 0;  
 }
-
 .cartfull-title-mobile {
     position: relative;
     z-index: 2;
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #FF66CC !important;
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 1.4;
     text-align: center;
-    margin: 0 0 12px 0;
+    margin: 0 0 10px 0;
 }
-
 .cartfull-title-mobile a {
     color: #FF66CC !important;
     text-decoration: none;
 }
-
 /* SEPARADOR */
 .cartfull-divider-mobile {
     width: 100%;
-    height: 2px;
-    background: #FF6B00 !important;
-    margin: 15px 0;
+    height: 0; 
+    border-top: 3px solid #FF6B00 !important;
+    margin: 0 0 10px 0; 
 }
-
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
     width: 100%;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
-
 /* PRODUCTO INDIVIDUAL - ESTRUCTURA PARA JS */
 .cartfull-product-item-mobile {
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
-
 .cartfull-product-group-mobile {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: center;    
     align-items: center;
 }
-
 .cartfull-product-image-mobile {
     width: 120px;
     height: 120px;
@@ -9682,66 +9676,53 @@ display: none;
     justify-content: center;
     align-items: center;
 }
-
 .cartfull-product-image-mobile img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
     object-fit: cover;
 }
-
-.cartfull-product-info-mobile {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cartfull-product-name-mobile {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.2rem;
-    color: #00FFFF !important;
-    text-align: center;
-    margin: 0;
-    padding: 8px;
-    background: rgba(0, 255, 255, 0.1);
-    border-radius: 6px;
-}
-
-.cartfull-product-price-mobile,
+/* CAJAS DE INFORMACIÓN DEL PRODUCTO */
+.cartfull-product-name-mobile,
+.cartfull-product-quantity-mobile,
+.cartfull-product-unitprice-mobile,
 .cartfull-product-total-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: #00FF00 !important;
-    padding: 8px;
-    background: rgba(0, 255, 0, 0.1);
+    width: 100%;
+    height: 20px;
+    background: #00FFFF !important;
     border-radius: 6px;
-}
-
-.cartfull-product-quantity-mobile {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: black !important;
+    text-decoration: none;
+    margin: 0px; 
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: #00FFFF !important;
-    padding: 8px;
-    background: rgba(0, 255, 255, 0.1);
-    border-radius: 6px;
 }
 
-.cartfull-quantity-controls-mobile {
+/* NOMBRE DEL PRODUCTO */
+.cartfull-product-name-mobile {
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* CANTIDAD CON CONTROLES + Y - */
+.cartfull-product-quantity-mobile {
+    text-align: left;
+} 
+.cartfull-product-quantity-controls-mobile {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-left: auto;
 }
-
-.cartfull-quantity-decrease-mobile,
-.cartfull-quantity-increase-mobile {
+.cartfull-product-quantity-decrease-mobile,
+.cartfull-product-quantity-increase-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #FF6B00 !important;
     border: none;
     border-radius: 4px;
@@ -9750,47 +9731,78 @@ display: none;
     font-size: 1.2rem;
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: none;
     cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
-
-.cartfull-quantity-decrease-mobile:hover,
-.cartfull-quantity-increase-mobile:hover {
-    transform: scale(1.1);
+.cartfull-product-quantity-decrease-mobile:hover,
+.cartfull-product-quantity-increase-mobile:hover {
+    transform: scale(1.05);
 }
-
-.cartfull-quantity-value-mobile {
+.cartfull-product-quantity-value-mobile {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: #00FF00 !important;
     min-width: 30px;
     text-align: center;
 }
 
-.cartfull-product-remove-mobile {
+/* PRECIO UNITARIO CON SÍMBOLO FIJO */
+.cartfull-product-unitprice-mobile {
     display: flex;
-    justify-content: center;
-    margin: 5px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+} 
+.cartfull-product-unitprice-label-mobile {
+    text-align: left;
+    flex-shrink: 0;
+}
+.cartfull-product-unitprice-amount-mobile {
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    min-width: 120px; /* Espacio para 1,000,000.00 */
 }
 
-.cartfull-remove-button-mobile {
+/* TOTAL DEL PRODUCTO */
+.cartfull-product-total-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cartfull-product-total-label-mobile {
+    text-align: left;
+    flex-shrink: 0;
+}
+.cartfull-product-total-amount-mobile {
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    min-width: 120px; /* Espacio para 1,000,000.00 */
+}
+
+/* CONTENEDOR: BOTÓN REMOVER */  
+.cartfull-product-remove-mobile {
+    width: 100%;
+    display: block;
+    text-align: center; 
+    margin: 0px;
+}
+.cartfull-product-button-remove-mobile {
+    display: inline-block;
     background: #FF6B00 !important;
-    border: none;
     border-radius: 6px;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
     color: white !important;
+    text-decoration: none;   
     text-transform: uppercase;
     font-weight: bold;
+    margin: 0 0 10px 0; 
     padding: 10px 20px;
+    border: none;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-
-.cartfull-remove-button-mobile:hover {
+.cartfull-product-button-remove-mobile:hover {
     transform: scale(1.05);
 }
 
@@ -9800,103 +9812,106 @@ display: none;
     margin: 0 0 15px 0;
 }
 
-.cartfull-summary-group-mobile {
+/* CAJAS DEL RESUMEN - ROSADO SUAVE */
+.cartfull-summary-subtotal-mobile,
+.cartfull-summary-shipping-mobile {
+    width: 100%;
+    height: 20px;
+    background: #FFB6C1 !important; /* Rosado suave */
+    border-radius: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: black !important;
+    margin: 0 0 5px 0; 
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 0 12px 0;
-    padding: 10px;
-    background: rgba(0, 255, 255, 0.1);
+}
+
+.cartfull-summary-subtotal-label-mobile,
+.cartfull-summary-shipping-label-mobile {
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.cartfull-summary-subtotal-amount-mobile,
+.cartfull-summary-shipping-amount-mobile {
+    text-align: right;
+    font-family: 'Share Tech Mono', monospace;
+    min-width: 120px; /* Espacio para 1,000,000.00 */
+}
+
+/* TOTAL FINAL - FUCCIA */
+.cartfull-summary-total-mobile {
+    width: 100%;
+    height: 20px;
+    background: #FF66CC !important; /* Fuccia */
     border-radius: 6px;
-}
-
-.cartfull-total-group-mobile {
-    background: rgba(255, 20, 147, 0.2) !important;
-}
-
-.cartfull-summary-label-mobile {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: #00FF00 !important;
-}
-
-.cartfull-summary-value-mobile {
+    font-family: 'Share Tech Mono', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white !important;
+    margin: 5px 0 15px 0; 
+    padding: 10px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 3px;
+}
+
+.cartfull-summary-total-label-mobile {
+    text-align: left;
+    flex-shrink: 0;
+}
+
+.cartfull-summary-total-amount-mobile {
+    text-align: right;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
+    min-width: 120px; /* Espacio para 1,000,000.00 */
 }
-
-.cartfull-summary-symbol-mobile {
-    color: #FF66CC !important;
-}
-
-.cartfull-summary-amount-mobile {
-    color: #00FFFF !important;
-}
-
-.cartfull-total-group-mobile .cartfull-summary-label-mobile {
-    color: #FF66CC !important;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.cartfull-total-group-mobile .cartfull-summary-amount-mobile {
-    color: #ff1493 !important;
-    font-weight: bold;
-}
-
+  
 /* CONTENEDOR DE BOTONES FINALES */
 .cartfull-buttons-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 20px 0 0 0;
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
 }
 
 .cartfull-button-back-mobile,
 .cartfull-button-continueshopping-mobile,
 .cartfull-button-clear-mobile,
 .cartfull-button-buy-mobile {
-    display: block;
-   box-sizing: border-box;
-    width: 100%;
-    border-radius: 6px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 12px 15px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
 }
-
-.cartfull-button-back-mobile,
-.cartfull-button-continueshopping-mobile {
-    background: #00FFFF !important;
-    color: black !important;
-}
-
 .cartfull-button-clear-mobile {
-    background: #FF6B00 !important;
-    color: white !important;
+background: #FF6B00 !important;
+color: white !important;
 }
-
 .cartfull-button-buy-mobile {
-    background: #ff1493 !important;
-    color: white !important;
+background: #ff1493 !important;
+color: white !important;
+margin-bottom: 0px;
 }
-
 .cartfull-button-back-mobile:hover,
 .cartfull-button-continueshopping-mobile:hover,
 .cartfull-button-clear-mobile:hover,
 .cartfull-button-buy-mobile:hover {
-    transform: scale(1.02);
+transform: scale(1.05);
 }
 .cartempty-section.mobile-only, 
 .cartfull-section.mobile-only {
@@ -9904,7 +9919,6 @@ display: none;
 }
 .cartfull-container { display: none; }
 .cartfull-container-mobile { display: block; }
-
 }
 
 
