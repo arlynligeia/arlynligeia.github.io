@@ -6061,7 +6061,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 9. FUNCIÓN: ACTUALIZAR BOTONES ADD TO CART EN MOBILE
     function updateAddToCartButtonsMobile() {
-        document.querySelectorAll('[class$="-button-addtocart-mobile"]').forEach(button => {
+        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
+        const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
+        
+        addToCartButtons.forEach(button => {
             const productName = button.getAttribute('data-product');
             const cartItem = cart.find(item => item.product === productName);
             const currentQuantity = cartItem ? cartItem.quantity : 0;
@@ -6142,22 +6145,29 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'flex';
     }
 
-    // 11. BOTÓN: ADD TO CART EN MOBILE
-    document.querySelectorAll('[class$="-button-addtocart-mobile"]').forEach(button => {
-        button.addEventListener('click', function() {
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                price: this.getAttribute('data-price'),
-                shipping: this.getAttribute('data-shipping') || '0'
-            };
-            addToCartMobile(productData);
+    // 11. BOTÓN: ADD TO CART EN MOBILE - CORREGIDO
+    function setupAddToCartButtonsMobile() {
+        // Seleccionar TODOS los botones que terminen en -button-addtocart-mobile
+        const addToCartButtons = document.querySelectorAll('[class$="-button-addtocart-mobile"]');
+        
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productData = {
+                    image: this.getAttribute('data-image'),
+                    product: this.getAttribute('data-product'),
+                    price: this.getAttribute('data-price'),
+                    shipping: this.getAttribute('data-shipping') || '0'
+                };
+                addToCartMobile(productData);
+            });
         });
-    });
+    }
 
-    // 12. BOTÓN: GO TO CART EN MOBILE
+    // 12. BOTÓN: GO TO CART EN MOBILE - CORREGIDO
     function setupGoToCartButtonMobile() {
+        // Seleccionar TODOS los botones que terminen en -button-gotocart-mobile
         const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart-mobile"]');
+        
         goToCartButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -6179,11 +6189,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 13. BOTÓN: BUY EN MOBILE
+    // 13. BOTÓN: BUY EN MOBILE - CORREGIDO
     function setupBuyButtonMobile() {
-        const buyButton = document.querySelector('.cartfull-button-buy-mobile');
+        // Seleccionar TODOS los botones que terminen en -button-buy-mobile
+        const buyButtons = document.querySelectorAll('[class$="-button-buy-mobile"]');
         
-        if (buyButton) {
+        buyButtons.forEach(buyButton => {
             buyButton.addEventListener('click', function(e) {
                 e.preventDefault();
                 
@@ -6209,7 +6220,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateShippingInformationTotalsMobile();
                 saveCartToHiddenFieldsMobile();
             });
-        }
+        });
     }
 
     function updateShippingInformationTotalsMobile() {
@@ -6255,8 +6266,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // INICIALIZACIÓN
-    setupGoToCartButtonMobile();
-    setupBuyButtonMobile();
+    setupAddToCartButtonsMobile(); // ← CORREGIDO
+    setupGoToCartButtonMobile();   // ← CORREGIDO  
+    setupBuyButtonMobile();        // ← CORREGIDO
     updateCartDisplayMobile();
 });
 </script>
