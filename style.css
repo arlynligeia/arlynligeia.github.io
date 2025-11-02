@@ -9594,13 +9594,8 @@ transform: scale(1.05);
 .cartfull-section {
 display: none;
 }
-
 .cartfull-container { display: block; }
 .cartfull-container-mobile { display: none; }
-
-
-
-
 
 
 /* ======================================
@@ -9608,45 +9603,42 @@ display: none;
 ====================================== */
 /* CONTENEDOR, FRANJA Y TÍTULO */
 .cartfull-container-mobile {
-    position: relative;
-    width: 95%;
-    max-width: 400px;
-    background: #3A0052 !important;
-    border-radius: 15px;
-    margin: 20px auto;
-    padding: 20px;
+position: relative;
+width: 90%;
+box-sizing: border-box;   
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 30px auto;
+padding: 20px;
 }
-
 .cartfull-container-mobile::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 70px; 
-    background: #320046 !important;
-    border-radius: 15px 15px 0 0;  
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
 }
-
 .cartfull-title-mobile {
-    position: relative;
-    z-index: 2;
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    color: #FF66CC !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    line-height: 1.4;
-    text-align: center;
-    margin: 0 0 12px 0;
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.cartfull-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
 }
 
-.cartfull-title-mobile a {
-    color: #FF66CC !important;
-    text-decoration: none;
-}
 
 /* SEPARADOR */
 .cartfull-divider-mobile {
@@ -9846,61 +9838,51 @@ display: none;
     font-weight: bold;
 }
 
-/* CONTENEDOR DE BOTONES FINALES */
+/* CONTENEDOR: BOTONES FINALES */
 .cartfull-buttons-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 20px 0 0 0;
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
 }
-
+.cartfull-button-clear-mobile,
 .cartfull-button-back-mobile,
 .cartfull-button-continueshopping-mobile,
-.cartfull-button-clear-mobile,
 .cartfull-button-buy-mobile {
-    display: block;
-    width: 100%;
-    border-radius: 6px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    margin: 0;
-    padding: 12px 15px;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
 }
-
-.cartfull-button-back-mobile,
-.cartfull-button-continueshopping-mobile {
-    background: #00FFFF !important;
-    color: black !important;
-}
-
 .cartfull-button-clear-mobile {
-    background: #FF6B00 !important;
-    color: white !important;
+background: #FF6B00 !important;
+color: white !important;
 }
-
 .cartfull-button-buy-mobile {
-    background: #ff1493 !important;
-    color: white !important;
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
 }
-
+.cartfull-button-clear-mobile:hover,
 .cartfull-button-back-mobile:hover,
 .cartfull-button-continueshopping-mobile:hover,
-.cartfull-button-clear-mobile:hover,
 .cartfull-button-buy-mobile:hover {
-    transform: scale(1.02);
+transform: scale(1.05);
 }
-
 .cartempty-section.mobile-only, 
-.cartfull-section.mobile-only {
-display: none;
-}
+.cartfull-section.mobile-only { display: none;}
+
 .cartfull-container { display: none; }
 .cartfull-container-mobile { display: block; }
 }
@@ -9919,7 +9901,6 @@ display: none;
     font-size: 1.5rem;
     color: #00FF00;
 }
-
 
 
 
