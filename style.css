@@ -9598,6 +9598,10 @@ display: none;
 .cartfull-container-mobile { display: none; }
 
 
+
+
+
+
 /* ======================================
    CART FULL MOBILE
 ====================================== */
@@ -9639,100 +9643,95 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-
-
 /* SEPARADOR */
 .cartfull-products-divider-mobile {
-    width: 100%;
-    height: 2px;
-    background: #FF6B00 !important;
-    margin: 15px 0;
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
 }
-
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
-    width: 100%;
-    margin: 0 0 15px 0;
+width: 100%;
+margin: 0px;
 }
-
-/* PRODUCTO INDIVIDUAL - ESTRUCTURA PARA JS */
-.cartfull-product-item-mobile {
-    margin: 0 0 20px 0;
-}
-
+/* PRODUCTO INDIVIDUAL */
 .cartfull-products-product-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
+width: 100%;
+display: block;
+margin: 0px;
 }
-
+/* IMAGEN */
 .cartfull-products-product-image-mobile {
-    width: 120px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+width: 120px;
+height: 120px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0 auto 10px auto;
+}  
 .cartfull-products-product-image-mobile img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+max-width: 100%;
+max-height: 100%;
+border-radius: 6px;
+object-fit: cover;
 }
-
+/* CAJAS DE INFORMACIÓN */
 .cartfull-products-product-name-mobile,
 .cartfull-products-product-quantity-mobile,
 .cartfull-products-product-price-mobile,
 .cartfull-products-product-total-mobile {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+width: 100%;
+height: 40px;
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;
+margin: 0px; 
+padding: 10px;
+box-sizing: border-box;
+position: relative;
 }
 
-.cartfull-products-product-name-label-mobile {
+/* ETIQUETAS A LA IZQUIERDA */
+.cartfull-products-product-name-label-mobile,
+.cartfull-products-product-quantity-label-mobile,
+.cartfull-products-product-price-label-mobile,
+.cartfull-products-product-total-label-mobile {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.2rem;
-    color: #00FFFF !important;
-    text-align: center;
-    margin: 0;
-    padding: 8px;
-    background: rgba(0, 255, 255, 0.1);
-    border-radius: 6px;
+    font-size: 1rem;
+    color: black !important;
+    text-align: left;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+/* VALORES A LA DERECHA */
 .cartfull-products-product-price-label-value-mobile,
 .cartfull-products-product-total-label-value-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: #00FF00 !important;
-    padding: 8px;
-    background: rgba(0, 255, 0, 0.1);
-    border-radius: 6px;
+    font-size: 1rem;
+    color: black !important;
+    text-align: right;
+    min-width: 120px;
 }
 
-.cartfull-products-product-quantity-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: #00FFFF !important;
-    padding: 8px;
-    background: rgba(0, 255, 255, 0.1);
-    border-radius: 6px;
-}
-
+/* CONTROLES DE CANTIDAD A LA DERECHA */
 .cartfull-products-product-quantity-label-control-mobile {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
 }
 
 .cartfull-products-product-quantity-label-control-decrease-mobile,
@@ -9745,30 +9744,25 @@ text-decoration: none;
     font-size: 1.2rem;
     width: 30px;
     height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
     cursor: pointer;
-    transition: transform 0.2s ease;
-}
-
-.cartfull-products-product-quantity-label-control-decrease-mobile:hover,
-.cartfull-products-product-quantity-label-control-increase-mobile:hover {
-    transform: scale(1.1);
 }
 
 .cartfull-products-product-quantity-label-control-value-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.2rem;
-    color: #00FF00 !important;
-    min-width: 30px;
-    text-align: center;
+    color: black !important;
+    margin: 0 10px;
+    display: inline-block;
 }
 
+/* BOTÓN REMOVER */
 .cartfull-products-product-button-mobile {
     display: flex;
     justify-content: center;
-    margin: 5px 0 0 0;
+    margin: 10px 0 0 0;
 }
 
 .cartfull-products-product-button-remove-mobile {
@@ -9798,59 +9792,61 @@ text-decoration: none;
 .cartfull-products-summary-subtotal-mobile,
 .cartfull-products-summary-shipping-mobile,
 .cartfull-products-summary-total-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: block;
     margin: 0 0 12px 0;
-    padding: 10px;
-    background: rgba(0, 255, 255, 0.1);
+    padding: 15px;
+    background: #00FFFF !important;
     border-radius: 6px;
+    height: 50px;
+    box-sizing: border-box;
+    position: relative;
 }
 
 .cartfull-products-total-group-mobile {
-    background: rgba(255, 20, 147, 0.2) !important;
+    background: #00FFFF !important;
 }
 
+/* ETIQUETAS A LA IZQUIERDA */
 .cartfull-products-summary-subtotal-label-mobile,
 .cartfull-products-summary-shipping-label-mobile,
 .cartfull-products-summary-total-label-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1rem;
-    color: #00FF00 !important;
+    color: black !important;
+    text-align: left;
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
+/* VALORES A LA DERECHA */
 .cartfull-products-summary-subtotal-label-value-mobile,
 .cartfull-products-summary-shipping-label-value-mobile,
 .cartfull-products-summary-total-label-value-mobile {
-    display: flex;
-    align-items: center;
-    gap: 3px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1rem;
+    color: black !important;
+    text-align: right;
+    min-width: 120px;
 }
 
 .cartfull-products-summary-subtotal-label-symbol-mobile,
 .cartfull-products-summary-shipping-label-symbol-mobile,
-.cartfull-products-summary-total-label-value-symbol-mobile {
-    color: #FF66CC !important;
-}
-
+.cartfull-products-summary-total-label-value-symbol-mobile,
 .cartfull-products-summary-subtotal-label-amount-mobile,
 .cartfull-products-summary-shipping-label-amount-mobile,
 .cartfull-products-summary-total-label-value-amount-mobile {
-    color: #00FFFF !important;
+    color: black !important;
 }
 
-.cartfull-products-total-group-mobile .cartfull-products-summary-total-label-mobile {
-    color: #FF66CC !important;
-    font-weight: bold;
-    text-transform: uppercase;
-}
 
-.cartfull-products-total-group-mobile .cartfull-products-summary-total-label-value-amount-mobile {
-    color: #ff1493 !important;
-    font-weight: bold;
-}
+
+   
 
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button-mobile {
