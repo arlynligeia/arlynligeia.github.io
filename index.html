@@ -5825,9 +5825,9 @@ const productStock = {
 // 1. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
 function updateCartDisplayMobile() {
 const cartProductsContainer = document.getElementById('cartfull-products-mobile');
-const subtotalAmount = document.getElementById('subtotal-amount-mobile');
-const shippingAmount = document.getElementById('shipping-amount-mobile');
-const totalAmount = document.getElementById('total-amount-mobile');
+const subtotalAmount = document.getElementById('cartfull-subtotal-amount-mobile');
+const shippingAmount = document.getElementById('cartfull-shipping-amount-mobile');
+const totalAmount = document.getElementById('cartfull-total-amount-mobile');
 // Limpiar contenedor de productos
 cartProductsContainer.innerHTML = '';
 // Si el carrito está vacío, mostrar mensaje
@@ -5857,7 +5857,6 @@ productDiv.setAttribute('data-product-id', item.product);
 productDiv.innerHTML = `
 <!-- SEPARADOR -->
 <div class="cartfull-products-divider-mobile"></div>
-
 <!-- GRUPO: PRODUCTO INDIVIDUAL -->
 <div class="cartfull-products-product-mobile">
 <!-- IMAGEN -->
@@ -5916,9 +5915,9 @@ return productDiv;
         const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
         const total = subtotal + shipping;
         
-        document.getElementById('subtotal-amount-mobile').textContent = formatNumberWithCommas(subtotal.toFixed(2));
-        document.getElementById('shipping-amount-mobile').textContent = formatNumberWithCommas(shipping.toFixed(2));
-        document.getElementById('total-amount-mobile').textContent = formatNumberWithCommas(total.toFixed(2));
+        document.getElementById('cartfull-subtotal-amount-mobile').textContent = formatNumberWithCommas(subtotal.toFixed(2));
+        document.getElementById('cartfull-shipping-amount-mobile').textContent = formatNumberWithCommas(shipping.toFixed(2));
+        document.getElementById('cartfull-total-amount-mobile').textContent = formatNumberWithCommas(total.toFixed(2));
     }
 
     // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE - CORREGIDA
@@ -6101,7 +6100,7 @@ return productDiv;
     }
 
     // 10. BOTÓN: CLEAR CART MOBILE
-    document.getElementById('cart-full-clear-mobile').addEventListener('click', function() {
+    document.getElementById('-button-clear-mobile').addEventListener('click', function() {
         if (cart.length > 0) {
             showClearCartModalMobile();
         } else {
