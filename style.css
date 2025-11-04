@@ -9642,7 +9642,7 @@ text-decoration: none;
 
 
 /* SEPARADOR */
-.cartfull-divider-mobile {
+.cartfull-products-divider-mobile {
     width: 100%;
     height: 2px;
     background: #FF6B00 !important;
@@ -9660,14 +9660,14 @@ text-decoration: none;
     margin: 0 0 20px 0;
 }
 
-.cartfull-product-group-mobile {
+.cartfull-products-product-mobile {
     display: flex;
     flex-direction: column;
     gap: 12px;
     align-items: center;
 }
 
-.cartfull-product-image-mobile {
+.cartfull-products-product-image-mobile {
     width: 120px;
     height: 120px;
     display: flex;
@@ -9675,21 +9675,24 @@ text-decoration: none;
     align-items: center;
 }
 
-.cartfull-product-image-mobile img {
+.cartfull-products-product-image-mobile img {
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
     object-fit: cover;
 }
 
-.cartfull-product-info-mobile {
+.cartfull-products-product-name-mobile,
+.cartfull-products-product-quantity-mobile,
+.cartfull-products-product-price-mobile,
+.cartfull-products-product-total-mobile {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.cartfull-product-name-mobile {
+.cartfull-products-product-name-label-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.2rem;
     color: #00FFFF !important;
@@ -9700,8 +9703,8 @@ text-decoration: none;
     border-radius: 6px;
 }
 
-.cartfull-product-price-mobile,
-.cartfull-product-total-mobile {
+.cartfull-products-product-price-label-value-mobile,
+.cartfull-products-product-total-label-value-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9714,7 +9717,7 @@ text-decoration: none;
     border-radius: 6px;
 }
 
-.cartfull-product-quantity-mobile {
+.cartfull-products-product-quantity-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9726,14 +9729,14 @@ text-decoration: none;
     border-radius: 6px;
 }
 
-.cartfull-quantity-controls-mobile {
+.cartfull-products-product-quantity-label-control-mobile {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.cartfull-quantity-decrease-mobile,
-.cartfull-quantity-increase-mobile {
+.cartfull-products-product-quantity-label-control-decrease-mobile,
+.cartfull-products-product-quantity-label-control-increase-mobile {
     background: #FF6B00 !important;
     border: none;
     border-radius: 4px;
@@ -9749,12 +9752,12 @@ text-decoration: none;
     transition: transform 0.2s ease;
 }
 
-.cartfull-quantity-decrease-mobile:hover,
-.cartfull-quantity-increase-mobile:hover {
+.cartfull-products-product-quantity-label-control-decrease-mobile:hover,
+.cartfull-products-product-quantity-label-control-increase-mobile:hover {
     transform: scale(1.1);
 }
 
-.cartfull-quantity-value-mobile {
+.cartfull-products-product-quantity-label-control-value-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.2rem;
     color: #00FF00 !important;
@@ -9762,13 +9765,13 @@ text-decoration: none;
     text-align: center;
 }
 
-.cartfull-product-remove-mobile {
+.cartfull-products-product-button-mobile {
     display: flex;
     justify-content: center;
     margin: 5px 0 0 0;
 }
 
-.cartfull-remove-button-mobile {
+.cartfull-products-product-button-remove-mobile {
     background: #FF6B00 !important;
     border: none;
     border-radius: 6px;
@@ -9782,17 +9785,19 @@ text-decoration: none;
     transition: transform 0.3s ease;
 }
 
-.cartfull-remove-button-mobile:hover {
+.cartfull-products-product-button-remove-mobile:hover {
     transform: scale(1.05);
 }
 
 /* CONTENEDOR: RESUMEN DE COMPRA */
-.cartfull-summary-mobile {
+.cartfull-products-summary-mobile {
     width: 100%;
     margin: 0 0 15px 0;
 }
 
-.cartfull-summary-group-mobile {
+.cartfull-products-summary-subtotal-mobile,
+.cartfull-products-summary-shipping-mobile,
+.cartfull-products-summary-total-mobile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9802,17 +9807,21 @@ text-decoration: none;
     border-radius: 6px;
 }
 
-.cartfull-total-group-mobile {
+.cartfull-products-total-group-mobile {
     background: rgba(255, 20, 147, 0.2) !important;
 }
 
-.cartfull-summary-label-mobile {
+.cartfull-products-summary-subtotal-label-mobile,
+.cartfull-products-summary-shipping-label-mobile,
+.cartfull-products-summary-total-label-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.1rem;
     color: #00FF00 !important;
 }
 
-.cartfull-summary-value-mobile {
+.cartfull-products-summary-subtotal-label-value-mobile,
+.cartfull-products-summary-shipping-label-value-mobile,
+.cartfull-products-summary-total-label-value-mobile {
     display: flex;
     align-items: center;
     gap: 3px;
@@ -9820,21 +9829,25 @@ text-decoration: none;
     font-size: 1.1rem;
 }
 
-.cartfull-summary-symbol-mobile {
+.cartfull-products-summary-subtotal-label-symbol-mobile,
+.cartfull-products-summary-shipping-label-symbol-mobile,
+.cartfull-products-summary-total-label-value-symbol-mobile {
     color: #FF66CC !important;
 }
 
-.cartfull-summary-amount-mobile {
+.cartfull-products-summary-subtotal-label-amount-mobile,
+.cartfull-products-summary-shipping-label-amount-mobile,
+.cartfull-products-summary-total-label-value-amount-mobile {
     color: #00FFFF !important;
 }
 
-.cartfull-total-group-mobile .cartfull-summary-label-mobile {
+.cartfull-products-total-group-mobile .cartfull-products-summary-total-label-mobile {
     color: #FF66CC !important;
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.cartfull-total-group-mobile .cartfull-summary-amount-mobile {
+.cartfull-products-total-group-mobile .cartfull-products-summary-total-label-value-amount-mobile {
     color: #ff1493 !important;
     font-weight: bold;
 }
@@ -9902,7 +9915,6 @@ transform: scale(1.05);
     font-size: 1.5rem;
     color: #00FF00;
 }
-
 
 
 
