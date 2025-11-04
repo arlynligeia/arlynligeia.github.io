@@ -3819,12 +3819,12 @@ ADD TO CART
 <div class="cosmosexecutiveproducer-product-image-mobile">
 <img src="assets/assets/Alone Teaser Poster (Square).png" alt="Alone Online Premiere">
 </div>
-<div class="cosmosexecutiveproducer-product-price-mobile">$ 10,000.00</div>
+<div class="cosmosexecutiveproducer-product-price-mobile">$ 1,000,000.00</div>
 <div class="cosmosexecutiveproducer-product-button-mobile">
 <button class="cosmosexecutiveproducer-product-button-addtocart-mobile"
 data-image="assets/assets/Alone Teaser Poster (Square).png"
 data-product="Cosmos Executive Producer"
-data-price="10,000.00"
+data-price="1,000,000.00"
 data-shipping="0.00">
 ADD TO CART
 </button>
@@ -5871,14 +5871,21 @@ cart.forEach((item) => {
 const productDiv = document.createElement('div');
 productDiv.className = 'cartfull-products-product-mobile';
 productDiv.innerHTML = `
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
+<!-- PRODUCTO INDIVIDUAL -->
+<div class="cartfull-products-product-mobile">
+<!-- IMAGEN -->
 <div class="cartfull-products-product-image-mobile">
 <img src="${item.image}" alt="${item.product}">
 </div>
+<!-- NOMBRE -->
 <div class="cartfull-products-product-name-mobile">
 <div class="cartfull-products-product-name-label-mobile">
 <span>${item.product}</span>
 </div>
 </div>
+<!-- CANTIDAD -->
 <div class="cartfull-products-product-quantity-mobile">
 <div class="cartfull-products-product-quantity-label-mobile">
 <span>QTY:</span>
@@ -5889,6 +5896,7 @@ productDiv.innerHTML = `
 <button class="cartfull-products-product-quantity-label-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
 </div>
 </div>
+<!-- PRECIO UNITARIO -->
 <div class="cartfull-products-product-price-mobile">
 <div class="cartfull-products-product-price-label-mobile">
 <span>UNIT PRICE:</span>
@@ -5898,6 +5906,7 @@ productDiv.innerHTML = `
 <span class="cartfull-products-product-price-label-value-amount-mobile">${formatNumberWithCommasMobile(item.price)}</span>
 </div>
 </div>
+<!-- PRECIO TOTAL -->
 <div class="cartfull-products-product-total-mobile">
 <div class="cartfull-products-product-total-label-mobile">
 <span>Total: </span>
@@ -5907,6 +5916,7 @@ productDiv.innerHTML = `
 <span class="cartfull-products-product-total-label-value-amount-mobile">${formatNumberWithCommasMobile(item.totalprice)}</span>
 </div>
 </div>
+<!-- BOTÓN REMOVER -->
 <div class="cartfull-products-product-button-mobile">
 <button class="cartfull-products-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
 </div>
@@ -5918,6 +5928,8 @@ updateSubtotalMobile();
 updateTotalFinalMobile();
 updateAddToCartButtonsMobile();
 }
+
+  
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR) MÓVIL
 function updateAddToCartButtonsMobile() {
 document.querySelectorAll('[class$="-button-addtocart-mobile"]').forEach(button => {
