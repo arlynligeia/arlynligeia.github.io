@@ -4083,70 +4083,65 @@ Cosmic/Psychological Horror</p>
 </section>
 <!-- FIN CART -->
 
+
+
+  
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
-  <div class="cartfull-container-mobile">
-    <h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>   
-    
-    <!-- CONTENEDOR: PRODUCTOS -->
-    <div class="cartfull-products-mobile" id="cartfull-products-mobile">
-      <!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
-    </div>
-    
-    <!-- SEPARADOR -->
-    <div class="cartfull-divider-mobile"></div>
-    
-    <!-- CONTENEDOR: RESUMEN DE COMPRA -->
-    <div class="cartfull-summary-mobile">
-      <!-- GRUPO SUBTOTAL -->
-      <div class="cartfull-summary-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>Subtotal</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="subtotal-amount-mobile">0.00</span>
-        </div>
-      </div>
-      
-      <!-- GRUPO SHIPPING -->
-      <div class="cartfull-summary-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>Shipping</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="shipping-amount-mobile">0.00</span>
-        </div>
-      </div>
-      
-      <!-- SEPARADOR -->
-      <div class="cartfull-divider-mobile"></div>
-      
-      <!-- GRUPO TOTAL -->
-      <div class="cartfull-summary-group-mobile cartfull-total-group-mobile">
-        <div class="cartfull-summary-label-mobile">
-          <span>TOTAL</span>
-        </div>
-        <div class="cartfull-summary-value-mobile">
-          <span class="cartfull-summary-symbol-mobile">$</span>
-          <span class="cartfull-summary-amount-mobile" id="total-amount-mobile">0.00</span>
-        </div>
-      </div>
-    </div>
-    
-    <!-- SEPARADOR -->
-    <div class="cartfull-divider-mobile"></div>
-    
+<div class="cartfull-container-mobile">
+<h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>   
+<!-- CONTENEDOR: PRODUCTOS -->
+<div class="cartfull-products-mobile" id="cartfull-products-mobile">
+<!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
+</div>
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
+<!-- CONTENEDOR: RESUMEN DE COMPRA -->
+<div class="cartfull-products-summary-mobile">
+<!-- GRUPO: SUBTOTAL-->
+<div class="cartfull-products-summary-subtotal-mobile">
+<div class="cartfull-products-summary-subtotal-label-mobile">
+<span>Subtotal</span>
+</div>
+<div class="cartfull-products-summary-subtotal-label-value-mobile">
+<span class="cartfull-products-summary-subtotal-label-symbol-mobile">$</span>
+<span class="cartfull-products-summary-subtotal-label-amount-mobile" id="cartfull-subtotal-amount-mobile">0.00</span>
+</div>
+</div> 
+<!-- GRUPO SHIPPING -->
+<div class="cartfull-products-summary-shipping-mobile">
+<div class="cartfull-products-summary-shipping-label-mobile">
+<span>Shipping</span>
+</div>
+<div class="cartfull-products-summary-shipping-label-value-mobile">
+<span class="cartfull-products-summary-shipping-label-symbol-mobile">$</span>
+<span class="cartfull-products-summary-shipping-label-amount-mobile" id="cartfull-shipping-amount-mobile">0.00</span>
+</div>
+</div>   
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
+<!-- GRUPO TOTAL -->
+<div class="cartfull-products-summary-total-mobile cartfull-products-total-group-mobile">
+<div class="cartfull-products-summary-total-label-mobile">
+<span>TOTAL</span>
+</div>
+<div class="cartfull-products-summary-total-label-value-mobile">
+<span class="cartfull-products-summary-total-label-value-symbol-mobile">$</span>
+<span class="cartfull-products-summary-total-label-value-amount-mobile" id="cartfull-total-amount-mobile">0.00</span>
+</div>
+</div>
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
+</div> 
 <!-- CONTENEDOR DE BOTONES FINALES -->
 <div class="cartfull-button-mobile">
-<button class="cartfull-button-clear-mobile" id="cart-full-clear-mobile">CLEAR CART</button>
+<button class="cartfull-button-clear-mobile" id="cartfull-button-clear-mobile">CLEAR CART</button>
 </div>  
 <div class="cartfull-button-mobile">
 <button class="cartfull-button-back-mobile" onclick="history.back()">BACK</button>
 </div>
 <div class="cartfull-button-mobile">    
-<a class="cartfull-button-continueshopping-mobile" href="#store-mobile">CONTINUE SHOPPING</a>
+<a class="cartfull-button-continueshopping-mobile" href="#shop-mobile">CONTINUE SHOPPING</a>
 </div>
 <div class="cartfull-button-mobile">      
 <a class="cartfull-button-buy-mobile" href="#shippinginformation-mobile">BUY</a>
@@ -4166,6 +4161,12 @@ Cosmic/Psychological Horror</p>
 
   
 
+
+
+
+
+
+  
 <!-- SHIPPING INFORMATION -->
 <section class="shippinginformation-section main-section" id="shippinginformation">
 <div class="shippinginformation-container">
@@ -5406,7 +5407,8 @@ const productStock = {
 "Quasar Executive Producer": 1,
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
-}; 
+};
+  
 // 1. FUNCION: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productData) {
 const cartItem = cart.find(item => item.product === productData.product);
@@ -5802,113 +5804,111 @@ setupBuyButton();
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('📱 Carrito Mobile iniciado');
-    
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // STOCK DE PRODUCTOS INTERNO (mismo que desktop)
-    const productStock = {
-        "Comet Sponsor": 288,
-        "Planet Sponsor": 120,
-        "Star Sponsor": 48,
-        "Comet Sponsor Brand": 24,
-        "Planet Sponsor Brand": 8,
-        "Star Sponsor Brand": 2,
-        "Nebula Executive Producer": 1,
-        "Pulsar Executive Producer": 1,
-        "Black Hole Executive Producer": 1,
-        "Quasar Executive Producer": 1,
-        "Galaxy Executive Producer": 1,
-        "Cosmos Executive Producer": 1
-    };
+console.log('📱 Carrito Mobile iniciado');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// STOCK DE PRODUCTOS INTERNO
+const productStock = {
+"Comet Sponsor": 288,
+"Planet Sponsor": 120,
+"Star Sponsor": 48,
+"Comet Sponsor Brand": 24,
+"Planet Sponsor Brand": 8,
+"Star Sponsor Brand": 2,
+"Nebula Executive Producer": 1,
+"Pulsar Executive Producer": 1,
+"Black Hole Executive Producer": 1,
+"Quasar Executive Producer": 1,
+"Galaxy Executive Producer": 1,
+"Cosmos Executive Producer": 1
+};
+  
+// 1. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
+function updateCartDisplayMobile() {
+const cartProductsContainer = document.getElementById('cartfull-products-mobile');
+const subtotalAmount = document.getElementById('subtotal-amount-mobile');
+const shippingAmount = document.getElementById('shipping-amount-mobile');
+const totalAmount = document.getElementById('total-amount-mobile');
+// Limpiar contenedor de productos
+cartProductsContainer.innerHTML = '';
+// Si el carrito está vacío, mostrar mensaje
+if (cart.length === 0) {
+cartProductsContainer.innerHTML = `
+<div class="cartfull-empty-message-mobile">
+<p>Your cart is empty</p>
+</div>
+`;
+return;
+}
+// Agregar cada producto al contenedor
+cart.forEach((item, index) => {
+const productElement = createProductElementMobile(item, index);
+cartProductsContainer.appendChild(productElement);
+});
+// Actualizar totales
+updateCartTotalsMobile();
+updateAddToCartButtonsMobile();
+}
 
-    // 1. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
-    function updateCartDisplayMobile() {
-        const cartProductsContainer = document.getElementById('cartfull-products-mobile');
-        const subtotalAmount = document.getElementById('subtotal-amount-mobile');
-        const shippingAmount = document.getElementById('shipping-amount-mobile');
-        const totalAmount = document.getElementById('total-amount-mobile');
-        
-        // Limpiar contenedor de productos
-        cartProductsContainer.innerHTML = '';
-        
-        // Si el carrito está vacío, mostrar mensaje
-        if (cart.length === 0) {
-            cartProductsContainer.innerHTML = `
-                <div class="cartfull-empty-message-mobile">
-                    <p>Your cart is empty</p>
-                </div>
-            `;
-            return; // QUITÉ updateCartSectionsMobile() de aquí
-        }
-        
-        // Agregar cada producto al contenedor
-        cart.forEach((item, index) => {
-            const productElement = createProductElementMobile(item, index);
-            cartProductsContainer.appendChild(productElement);
-        });
-        
-        // Actualizar totales
-        updateCartTotalsMobile();
-        updateAddToCartButtonsMobile();
-    }
+// 2. FUNCIÓN: CREAR ELEMENTO DE PRODUCTO
+function createProductElementMobile(item, index) {
+const productDiv = document.createElement('div');
+productDiv.className = 'cartfull-product-item-mobile';
+productDiv.setAttribute('data-product-id', item.product);
+productDiv.innerHTML = `
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
 
-    // 2. FUNCIÓN: CREAR ELEMENTO DE PRODUCTO PARA MOBILE
-    function createProductElementMobile(item, index) {
-        const productDiv = document.createElement('div');
-        productDiv.className = 'cartfull-product-item-mobile';
-        productDiv.setAttribute('data-product-id', item.product);
-        
-        productDiv.innerHTML = `
-            <!-- SEPARADOR -->
-            <div class="cartfull-divider-mobile"></div>
-            
-            <!-- GRUPO PRODUCTO -->
-            <div class="cartfull-product-group-mobile">
-                <!-- IMAGEN -->
-                <div class="cartfull-product-image-mobile">
-                    <img src="${item.image}" alt="${item.product}">
-                </div>
-                
-                <!-- INFORMACIÓN DEL PRODUCTO -->
-                <div class="cartfull-product-info-mobile">
-                    <div class="cartfull-product-name-mobile">
-                        <span>${item.product}</span>
-                    </div>
-                    
-                    <div class="cartfull-product-price-mobile">
-                        <span>Unit Price: </span>
-                        <span class="cartfull-product-price-symbol-mobile">$</span>
-                        <span class="cartfull-product-price-amount-mobile">${formatNumberWithCommas(item.price)}</span>
-                    </div>
-                    
-                    <!-- CANTIDAD -->
-                    <div class="cartfull-product-quantity-mobile">
-                        <span>QTY:</span>
-                        <div class="cartfull-quantity-controls-mobile">
-                            <button class="cartfull-quantity-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
-                            <span class="cartfull-quantity-value-mobile">${item.quantity}</span>
-                            <button class="cartfull-quantity-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
-                        </div>
-                    </div>
-                    
-                    <!-- TOTAL POR PRODUCTO -->
-                    <div class="cartfull-product-total-mobile">
-                        <span>Total: </span>
-                        <span class="cartfull-product-total-symbol-mobile">$</span>
-                        <span class="cartfull-product-total-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
-                    </div>
-                    
-                    <!-- BOTÓN ELIMINAR -->
-                    <div class="cartfull-product-remove-mobile">
-                        <button class="cartfull-remove-button-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        return productDiv;
-    }
+<!-- GRUPO: PRODUCTO INDIVIDUAL -->
+<div class="cartfull-products-product-mobile">
+<!-- IMAGEN -->
+<div class="cartfull-products-product-image-mobile">
+<img src="${item.image}" alt="${item.product}">
+</div>
+<!-- NOMBRE -->
+<div class="cartfull-products-product-name-mobile">
+<div class="cartfull-products-product-name-label-mobile">
+<span>${item.product}</span>
+</div>
+</div>
+<!-- CANTIDAD -->
+<div class="cartfull-products-product-quantity-mobile">
+<div class="cartfull-products-product-quantity-label-mobile">
+<span>QTY:</span>
+</div>
+<div class="cartfull-products-product-quantity-label-control-mobile">
+<button class="cartfull-products-product-quantity-label-control-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
+<span class="cartfull-products-product-quantity-label-control-value-mobile">${item.quantity}</span>
+<button class="cartfull-products-product-quantity-label-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
+</div>
+</div>
+<!-- PRECIO -->
+<div class="cartfull-products-product-price-mobile">
+<div class="cartfull-products-product-price-label-mobile">
+<span>UNIT PRICE:</span>
+</div>
+<div class="cartfull-products-product-price-label-value-mobile">
+<span class="cartfull-products-product-price-label-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-price-label-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+</div>
+</div>
+<!-- TOTAL POR PRODUCTO -->
+<div class="cartfull-products-product-total-mobile">
+<div class="cartfull-products-product-total-label-mobile">
+<span>Total: </span>
+</div>
+<div class="cartfull-products-product-total-label-value-mobile">
+<span class="cartfull-products-product-total-label-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-total-label-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</div>
+<!-- BOTÓN ELIMINAR -->
+<div class="cartfull-products-product-button-mobile">
+<button class="cartfull-products-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+</div>
+</div>
+`;
+return productDiv;
+}
 
     // 3. FUNCIÓN: ACTUALIZAR TOTALES DEL CARRITO MOBILE
     function updateCartTotalsMobile() {
