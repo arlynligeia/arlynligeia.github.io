@@ -5879,8 +5879,7 @@ cart.forEach((item) => {
 const productDiv = document.createElement('div');
 productDiv.className = 'cartfull-products-product-mobile';
 productDiv.innerHTML = `
-<!-- PRODUCTO INDIVIDUAL -->
-<div class="cartfull-products-product-mobile">
+
 <!-- SEPARADOR -->
 <div class="cartfull-products-divider-mobile"></div>
 <!-- IMAGEN -->
@@ -5928,7 +5927,7 @@ productDiv.innerHTML = `
 <div class="cartfull-products-product-button-mobile">
 <button class="cartfull-products-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
 </div>
-</div>
+
 `;
 cartProductsContainer.appendChild(productDiv);
 });
@@ -6061,20 +6060,7 @@ shipping: this.getAttribute('data-shipping') || '0'
 addToCartMobile(productData);
 });
 });
-// 11. BOTÓN: CLEAR CART MÓVIL CON MODAL
-const clearCartBtnMobile = document.getElementById('cartfull-button-clear-mobile');
-if (clearCartBtnMobile) {
-clearCartBtnMobile.addEventListener('click', function() {
-if (cart.length > 0) {
-const modal = document.getElementById('clearCartModal');
-if (modal) {
-modal.style.display = 'flex';
-}
-} else {
-alert('The cart is already empty');
-}
-});
-}
+
 
 // 12. BOTÓN: CART MÓVIL
 function setupCartButtonMobile() {
