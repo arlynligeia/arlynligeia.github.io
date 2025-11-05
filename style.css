@@ -9656,7 +9656,7 @@ margin: 0 0 10px 0;
 width: 100%;
 margin: 0px;
 }
-/* PRODUCTO INDIVIDUAL */
+/* CONTENEDOR: PRODUCTO INDIVIDUAL */
 .cartfull-products-product-mobile {
 width: 100%;
 display: block;
@@ -9697,6 +9697,13 @@ text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px;
 }
+.cartfull-products-product-price-mobile {
+background: #FF66CC !important;
+}
+.cartfull-products-product-total-mobile {
+background: #ff1493 !important;
+color: white !important;   
+} 
 /* ETIQUETAS A LA IZQUIERDA */
 .cartfull-products-product-quantity-label-mobile,
 .cartfull-products-product-price-label-mobile,
@@ -9730,6 +9737,8 @@ cursor: pointer;
 }
 .cartfull-products-product-quantity-label-control-value-mobile {
 display: inline-block;
+top: 50%;
+transform: translateY(-50%);
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: black !important;
@@ -9789,77 +9798,73 @@ transition: transform 0.3s ease;
 }
 .cartfull-products-product-button-remove-mobile:hover {
 transform: scale(1.05);
-}
-
-
-
-
-   
+}  
 /* CONTENEDOR: RESUMEN DE COMPRA */
 .cartfull-products-summary-mobile {
-    width: 100%;
-    margin: 0 0 15px 0;
-}
-
+width: 100%;
+display: block;
+margin: 0px;
+} 
 .cartfull-products-summary-subtotal-mobile,
 .cartfull-products-summary-shipping-mobile,
 .cartfull-products-summary-total-mobile {
-    display: block;
-    margin: 0 0 12px 0;
-    padding: 15px;
-    background: #00FFFF !important;
-    border-radius: 6px;
-    height: 50px;
-    box-sizing: border-box;
-    position: relative;
+position: relative;
+display: block;
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #FF66CC !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px;
 }
-
-.cartfull-products-total-group-mobile {
-    background: #00FFFF !important;
-}
-
+.cartfull-products-summary-total-mobile {
+background: #ff1493 !important;
+color: white !important;   
+}   
 /* ETIQUETAS A LA IZQUIERDA */
 .cartfull-products-summary-subtotal-label-mobile,
 .cartfull-products-summary-shipping-label-mobile,
 .cartfull-products-summary-total-label-mobile {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: black !important;
-    text-align: left;
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
+position: absolute;
+text-align: left;
 }
-
 /* VALORES A LA DERECHA */
 .cartfull-products-summary-subtotal-label-value-mobile,
 .cartfull-products-summary-shipping-label-value-mobile,
 .cartfull-products-summary-total-label-value-mobile {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: black !important;
-    text-align: right;
-    min-width: 120px;
+position: absolute;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+top: 50%;
+transform: translateY(-50%);
+right: 10px;
+text-align: right;
+min-width: 140px;
+gap: 5px;
 }
-
-.cartfull-products-summary-subtotal-label-symbol-mobile,
-.cartfull-products-summary-shipping-label-symbol-mobile,
-.cartfull-products-summary-total-label-value-symbol-mobile,
-.cartfull-products-summary-subtotal-label-amount-mobile,
-.cartfull-products-summary-shipping-label-amount-mobile,
-.cartfull-products-summary-total-label-value-amount-mobile {
-    color: black !important;
+.cartfull-products-summary-subtotal-label-value-symbol-mobile,
+.cartfull-products-summary-shipping-label-value-symbol-mobile,
+.cartfull-products-summary-total-label-value-symbol-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;     
 }
-
-
-
-   
-
+.cartfull-products-summary-subtotal-label-value-amount-mobile,
+.cartfull-products-summary-shipping-label-value-amount-mobile,
+.cartfull-products-summary-total-label-value-amount-mobile   {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;      
+}    
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button-mobile {
 width: 100%;
@@ -9923,6 +9928,12 @@ transform: scale(1.05);
     font-size: 1.5rem;
     color: #00FF00;
 }
+
+
+
+
+
+
 
 
 
