@@ -4072,12 +4072,13 @@ Cosmic/Psychological Horror</p>
 </table>
 </div>
 <!-- CONTENEDOR DE BOTONES FINALES -->
-<div class="cartfull-buttons">
+<div class="cartfull-button">
 <button class="cartfull-button-back" onclick="history.back()">BACK</button>
-<a class="cartfull-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
-<button class="cartfull-button-clear" id="cart-full-clear">CLEAR CART</button>
+<a class="cartfull-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
+<button class="cartfull-button-clear" id="cartfull-button-clear">CLEAR CART</button>
 <a class="cartfull-button-buy" href="#shippinginformation">BUY</a>
 </div>
+  
 </div>
 </div>
 </section>
@@ -4089,17 +4090,15 @@ Cosmic/Psychological Horror</p>
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
 <div class="cartfull-container-mobile">
-<h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>   
+<h2 class="cartfull-title-mobile"><a href="#cartfull-mobile">YOUR CART</a></h2>
+  
 <!-- CONTENEDOR: PRODUCTOS -->
-<div class="cartfull-products-mobile" id="cartfull-products-mobile">
-<!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
-</div>  
+<div class="cartfull-products-mobile" id="cartfull-products-mobile">  
+<!-- CONTENEOR: PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
 <!-- SEPARADOR -->
-<div class="cartfull-products-divider-mobile"></div>
-  
+<div class="cartfull-products-divider-mobile"></div> 
 <!-- CONTENEDOR: RESUMEN DE COMPRA -->
-<div class="cartfull-products-summary-mobile">
-  
+<div class="cartfull-products-summary-mobile">   
 <!-- GRUPO: SUBTOTAL-->
 <div class="cartfull-products-summary-subtotal-mobile">
 <div class="cartfull-products-summary-subtotal-label-mobile">
@@ -4110,7 +4109,7 @@ Cosmic/Psychological Horror</p>
 <span class="cartfull-products-summary-subtotal-label-value-amount-mobile" id="cartfull-subtotal-amount-mobile">0.00</span>
 </div>
 </div> 
-<!-- GRUPO SHIPPING -->
+<!-- GRUPO: SHIPPING -->
 <div class="cartfull-products-summary-shipping-mobile">
 <div class="cartfull-products-summary-shipping-label-mobile">
 <span>Shipping</span>
@@ -4119,10 +4118,10 @@ Cosmic/Psychological Horror</p>
 <span class="cartfull-products-summary-shipping-label-value-symbol-mobile">$</span>
 <span class="cartfull-products-summary-shipping-label-value-amount-mobile" id="cartfull-shipping-amount-mobile">0.00</span>
 </div>
-</div>   
+</div>     
 <!-- SEPARADOR -->
-<div class="cartfull-products-divider-mobile"></div>
-<!-- GRUPO TOTAL -->
+<div class="cartfull-products-divider-mobile"></div>  
+<!-- GRUPO: TOTAL -->
 <div class="cartfull-products-summary-total-mobile cartfull-products-total-group-mobile">
 <div class="cartfull-products-summary-total-label-mobile">
 <span>TOTAL</span>
@@ -4131,10 +4130,11 @@ Cosmic/Psychological Horror</p>
 <span class="cartfull-products-summary-total-label-value-symbol-mobile">$</span>
 <span class="cartfull-products-summary-total-label-value-amount-mobile" id="cartfull-total-amount-mobile">0.00</span>
 </div>
-</div> 
+</div>  
+ <!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>    
 </div>
-  <!-- SEPARADOR -->
-<div class="cartfull-products-divider-mobile"></div>
+</div>
   
 <!-- CONTENEDOR DE BOTONES FINALES -->
 <div class="cartfull-button-mobile">
@@ -5875,10 +5875,10 @@ cart.forEach((item) => {
 const productDiv = document.createElement('div');
 productDiv.className = 'cartfull-products-product-mobile';
 productDiv.innerHTML = `
-<!-- SEPARADOR -->
-<div class="cartfull-products-divider-mobile"></div>
 <!-- PRODUCTO INDIVIDUAL -->
 <div class="cartfull-products-product-mobile">
+<!-- SEPARADOR -->
+<div class="cartfull-products-divider-mobile"></div>
 <!-- IMAGEN -->
 <div class="cartfull-products-product-image-mobile">
 <img src="${item.image}" alt="${item.product}">
