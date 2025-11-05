@@ -8654,7 +8654,7 @@ margin: 0 0 20px 0;
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 0;
+border-spacing: 5;
 background-color: transparent;
 }
 /* ANCHO DE COLUMNAS*/
@@ -8664,11 +8664,11 @@ width: 8%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(2),
 .cosmosexecutiveproducer-table-container td:nth-child(2) {
-width: 44%;
+width: 42%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(3),
 .cosmosexecutiveproducer-table-container td:nth-child(3) {
-width: 6%;
+width: 8%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(4),
 .cosmosexecutiveproducer-table-container td:nth-child(4) {
@@ -8699,13 +8699,13 @@ margin: 0px;
 padding: 0px; 
 }
 /* LÍNEA DIVISORA */
-.cosmosexecutiveproducer-table-container-divider,
-.cosmosexecutiveproducer-table-container-body-divider {
+.cosmosexecutiveproducer-table-container-divider {
 width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0;   
 }
+
 /* CUERPO */
 .cosmosexecutiveproducer-table-container-body {
 width: 100%;
@@ -8734,7 +8734,10 @@ margin: 0;
 .cosmosexecutiveproducer-table-container-body-row-cell-total,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-subtotal,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping,
-.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal {
+.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-subtotal,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-shipping,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-totalfinal {
 width: 100%;
 height: 40px;
 display: flex;
@@ -8780,10 +8783,13 @@ font-weight: bold;
 }
 /* COLORES PARA FILAS FINALES */
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-subtotal,
-.cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping {
+.cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-subtotal,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-shipping {
 background-color: #FF66CC !important;
 }
-.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal {
+.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-totalfinal {
 background-color: #ff1493 !important;
 color: white !important;
 }
@@ -8796,7 +8802,10 @@ text-align: left;
 .cosmosexecutiveproducer-table-container-body-row-cell-total-symbol,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-subtotal-text,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping-text,
-.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal-text {
+.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal-text,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-subtotal-text,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-shipping-text,
+.cosmosexecutiveproducer-table-container-body-row-cell-total-totalfinal-text {
 text-align: left;
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-amount,
@@ -8835,10 +8844,10 @@ display: flex;
 justify-content: space-between;
 margin: 0px;
 }
-.cosmosexecutiveproducer-button-back,
-.cosmosexecutiveproducer-button-continueshopping,
-.cosmosexecutiveproducer-button-clearcart,
-.cosmosexecutiveproducer-button-checkout {
+.cosmosexecutiveproducer-buttons-button-back,
+.cosmosexecutiveproducer-buttons-button-continueshopping,
+.cosmosexecutiveproducer-buttons-button-clearcart,
+.cosmosexecutiveproducer-buttons-button-checkout {
 display: inline-block;
 background: #00FFFF !important; 
 border-radius: 6px; 
@@ -8855,25 +8864,24 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.cosmosexecutiveproducer-button-clearcart {
+.cosmosexecutiveproducer-buttons-button-clearcart {
 background-color: #FF6B00 !important;
 color: white !important;
 cursor: pointer; 
 transition: all 0.3s ease;     
 }
-.cosmosexecutiveproducer-button-checkout {
+.cosmosexecutiveproducer-buttons-button-checkout {
 background-color: #ff1493 !important;
 color: white !important;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.cosmosexecutiveproducer-button-back:hover,
-.cosmosexecutiveproducer-button-continueshopping:hover,
-.cosmosexecutiveproducer-button-clearcart:hover,
-.cosmosexecutiveproducer-button-checkout:hover {
+.cosmosexecutiveproducer-buttons-button-back:hover,
+.cosmosexecutiveproducer-buttons-button-continueshopping:hover,
+.cosmosexecutiveproducer-buttons-button-clearcart:hover,
+.cosmosexecutiveproducer-buttons-button-checkout:hover {
 transform: scale(1.05);
 }
-
 
  /* CONTROL */
 .cosmosexecutiveproducer-container { display: block; }
