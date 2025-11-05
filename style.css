@@ -9301,23 +9301,6 @@ transform: scale(1.05);
 51%, 100% { opacity: 0; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    CART FULL
 ====================================== */
@@ -9550,8 +9533,9 @@ padding: 10px 5px;
 .cartfull-table-wrapper-body-row-cell-totalend {
 text-transform: uppercase;
 }
+
 /* CONTENEDOR: BOTONES FINALES */
-.cartfull-buttons {
+.cartfull-button {
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -9579,10 +9563,14 @@ transition: all 0.3s ease;
 .cartfull-button-clear {
 background-color: #FF6B00 !important;
 color: white !important;
+cursor: pointer; 
+transition: all 0.3s ease;     
 }
 .cartfull-button-buy {
 background-color: #ff1493 !important;
-color: white !important;   
+color: white !important;
+cursor: pointer; 
+transition: all 0.3s ease;  
 }
 .cartfull-button-back:hover,
 .cartfull-button-continueshopping:hover,
@@ -9590,6 +9578,7 @@ color: white !important;
 .cartfull-button-buy:hover {
 transform: scale(1.05);
 }
+
 .cartempty-section, 
 .cartfull-section {
 display: none;
@@ -9643,25 +9632,19 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
+/* CONTENEDOR: PRODUCTO INDIVIDUAL */
+.cartfull-products-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}   
 /* SEPARADOR */
 .cartfull-products-divider-mobile {
 width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
-}
-   
-/* CONTENEDOR: PRODUCTOS */
-.cartfull-products-mobile {
-width: 100%;
-margin: 0px;
-}
-/* CONTENEDOR: PRODUCTO INDIVIDUAL */
-.cartfull-products-product-mobile {
-width: 100%;
-display: block;
-margin: 0px;
-}
+}   
 /* IMAGEN */
 .cartfull-products-product-image-mobile {
 width: 110px;
@@ -9697,11 +9680,8 @@ text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px;
 }
-.cartfull-products-product-price-mobile {
-background: #FF66CC !important;
-}
 .cartfull-products-product-total-mobile {
-background: #007FFF !important;
+background: #002288 !important;
 color: white !important;   
 } 
 /* ETIQUETAS A LA IZQUIERDA */
@@ -9920,6 +9900,8 @@ margin: 0px;
 transform: scale(1.05);
 }
 
+
+   
    
 .cartempty-section.mobile-only, 
 .cartfull-section.mobile-only { display: none; }
