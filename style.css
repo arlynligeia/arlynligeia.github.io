@@ -9771,7 +9771,13 @@ text-decoration: none;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: black !important;
-text-decoration: none;      
+text-decoration: none;
+text-align: right;
+min-width: 110px;  
+}  
+.cartfull-products-product-total-label-value-symbol-mobile,
+.cartfull-products-product-total-label-value-amount-mobile {
+color: white !important;
 }  
 /* BOTÓN: REMOVER */
 .cartfull-products-product-button-mobile {
@@ -9863,8 +9869,14 @@ text-decoration: none;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: black !important;
-text-decoration: none;      
+text-decoration: none;
+min-width: 110px;
+text-align: right;
 }    
+.cartfull-products-summary-total-label-value-symbol-mobile,
+.cartfull-products-summary-total-label-value-amount-mobile {
+color: white !important;
+} 
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button-mobile {
 width: 100%;
