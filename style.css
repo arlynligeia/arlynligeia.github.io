@@ -9062,37 +9062,49 @@ text-align: right;
 }
 /* CONTROLES DE CANTIDAD */
 .cosmosexecutiveproducer-products-product-quantity-control-mobile {
-display: inline-block;
-vertical-align: middle;   
-line-height: 40px;   
-text-align: right;   
-float: right;
+  display: inline-block;
+    vertical-align: middle;   
+    line-height: 40px;   
+    text-align: right;
+    /* Añadir esto para centrado vertical */
+    height: 40px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .cosmosexecutiveproducer-products-product-quantity-control-decrease-mobile,
 .cosmosexecutiveproducer-products-product-quantity-control-increase-mobile {
-width: 30px;
-height: 30px;
-display: inline-block;
-vertical-align: middle;
-line-height: 30px;   
-background: #FF6B00 !important;
-border-radius: 4px;
-font-size: 15px;
-color: white !important;
-text-decoration: none;
-text-transform: uppercase;
-margin: 0px; 
-padding: 0px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;  
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;   
+    background: #FF6B00 !important;
+    border-radius: 4px;
+    font-size: 15px;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px; 
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Asegurar centrado vertical de los botones */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .cosmosexecutiveproducer-products-product-quantity-control-value-mobile {
-display: inline-block;
-min-width: 20px;
-vertical-align: middle;
-line-height: 40px;
-text-align: center;
+ display: inline-block;
+    min-width: 20px;
+    vertical-align: middle;
+    line-height: 40px;
+    text-align: center;
+    /* Asegurar centrado vertical del número */
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
    
 /* CONTENEDOR: BOTONES FINALES */
