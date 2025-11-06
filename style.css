@@ -8654,7 +8654,7 @@ margin: 0 0 20px 0;
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 5;
+border-spacing: 10;
 background-color: transparent;
 }
 /* ANCHO DE COLUMNAS*/
@@ -8664,11 +8664,11 @@ width: 8%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(2),
 .cosmosexecutiveproducer-table-container td:nth-child(2) {
-width: 42%;
+width: 40%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(3),
 .cosmosexecutiveproducer-table-container td:nth-child(3) {
-width: 8%;
+width: 10%;
 }
 .cosmosexecutiveproducer-table-container th:nth-child(4),
 .cosmosexecutiveproducer-table-container td:nth-child(4) {
@@ -8705,7 +8705,6 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0;   
 }
-
 /* CUERPO */
 .cosmosexecutiveproducer-table-container-body {
 width: 100%;
@@ -8756,43 +8755,58 @@ padding: 10px;
 /* CONTROLES DE CANTIDAD */
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity {
 justify-content: center;
-gap: 8px;
+gap: 5px;
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity-decrease,
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity-increase {
 width: 30px;
 height: 30px;
-border: 1px solid #ddd;
+display: flex;
+justify-content: center;
+align-items: center;
 background: #f8f8f8;
 border-radius: 4px;
-cursor: pointer;
-display: flex;
-align-items: center;
-justify-content: center;
 font-size: 16px;
-font-weight: bold;
+text-decoration: none;
+text-transform: uppercase;  
+font-weight: bold;   
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity-decrease:hover,
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity-increase:hover {
-background: #e8e8e8;
+transform: scale(1.05);
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity-value {
 min-width: 30px;
 text-align: center;
-font-weight: bold;
 }
-/* COLORES PARA FILAS FINALES */
+
+/* COLORES DE CAJAS */
+.cosmosexecutiveproducer-table-container-body-row-cell-total {
+background-color: #0066CC !important;
+color: white !important;
+}
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-subtotal,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping,
+.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal {
+background-color: transparent !important;
+justify-content: flex-end;
+text-align: right;
+color: #00FF00 !important;
+}
 .cosmosexecutiveproducer-table-container-body-row-cell-total-subtotal,
 .cosmosexecutiveproducer-table-container-body-row-cell-total-shipping {
 background-color: #FF66CC !important;
 }
-.cosmosexecutiveproducer-table-container-body-row-cell-unit-totalfinal,
 .cosmosexecutiveproducer-table-container-body-row-cell-total-totalfinal {
 background-color: #ff1493 !important;
 color: white !important;
 }
+
+
+
 /* ALINEACIÓN DE TEXTO */
 .cosmosexecutiveproducer-table-container-body-row-cell-name-text {
 text-align: left;
@@ -8812,6 +8826,7 @@ text-align: left;
 .cosmosexecutiveproducer-table-container-body-row-cell-total-amount {
 text-align: right;
 }
+
 /* CONTENEDOR: BOTÓN REMOVER */
 .cosmosexecutiveproducer-table-container-body-row-cell-button-remove {
 width: 100%;
@@ -8886,6 +8901,10 @@ transform: scale(1.05);
  /* CONTROL */
 .cosmosexecutiveproducer-container { display: block; }
 .cosmosexecutiveproducer-container-mobile { display: none; }
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: COSMOS EXECUTIVE PRODUCER
 ====================================== */
