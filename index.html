@@ -138,7 +138,6 @@
 <li><a href="#bemypatron-mobile" data-section="bemypatron">Be my Patron</a></li>
 <li><a href="#contact-mobile" data-section="contact">Contact</a></li>
 <li><a href="#shop-mobile" data-section="shop">Store</a></li>
-<a class="cart-mobile" href="javascript:void(0)">Cart</a>
 </ul>
 </div>
 </div>
@@ -4536,17 +4535,14 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
 <!-- SCRIPS CARRITO -->
 <script>
-// CARRITO - SCRIPT CORREGIDO
+// CARRITO - SCRIPT SIMPLE Y FUNCIONAL
 document.addEventListener('DOMContentLoaded', function() {
     
     // 1. FUNCIÓN DEL BOTÓN CART
     const cartButton = document.querySelector('.cart-button');
     if (cartButton) {
         cartButton.addEventListener('click', function() {
-            console.log('Botón Cart clickeado'); // Para debug
             const cartItems = getCartItems();
-            console.log('Productos en carrito:', cartItems); // Para debug
-            
             if (cartItems.length === 0) {
                 showCartEmpty();
             } else {
@@ -4557,137 +4553,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 2. FUNCIONES PARA MOSTRAR CART EMPTY O FULL
     function showCartEmpty() {
-        console.log('Mostrando cart empty'); // Para debug
-        hideAllCartSections();
-        const cartEmptySection = document.getElementById('cartempty');
+        // Ocultar cartfull
         const cartFullSection = document.getElementById('cartfull');
-        
-        if (cartEmptySection) {
-            console.log('Cart empty encontrado, mostrando...');
-            cartEmptySection.style.display = 'block';
-        } else {
-            console.error('Cart empty NO encontrado');
-        }
-        
         if (cartFullSection) {
             cartFullSection.style.display = 'none';
         }
         
-        window.location.hash = '#cartempty';
+        // Mostrar cartempty
+        const cartEmptySection = document.getElementById('cartempty');
+        if (cartEmptySection) {
+            cartEmptySection.style.display = 'block';
+        }
     }
 
     function showCartFull() {
-        console.log('Mostrando cart full'); // Para debug
-        hideAllCartSections();
+        // Ocultar cartempty
         const cartEmptySection = document.getElementById('cartempty');
-        const cartFullSection = document.getElementById('cartfull');
-        
-        if (cartFullSection) {
-            console.log('Cart full encontrado, mostrando...');
-            cartFullSection.style.display = 'block';
-            renderCartItems();
-            updateCartTotals();
-        } else {
-            console.error('Cart full NO encontrado');
-        }
-        
         if (cartEmptySection) {
             cartEmptySection.style.display = 'none';
         }
         
-        window.location.hash = '#cartfull';
+        // Mostrar cartfull
+        const cartFullSection = document.getElementById('cartfull');
+        if (cartFullSection) {
+            cartFullSection.style.display = 'block';
+        }
     }
 
-    function hideAllCartSections() {
-        const cartEmptySection = document.getElementById('cartempty');
-        const cartFullSection = document.getElementById('cartfull');
-        
-        if (cartEmptySection) {
-            cartEmptySection.style.display = 'none';
-        }
-        if (cartFullSection) {
-            cartFullSection.style.display = 'none';
-        }
-    }
-  
-    // =============================================
-    // 3. ESTRUCTURA PARA AGREGAR PRODUCTOS AL CARRITO
-    // =============================================
     function getCartItems() {
         const cart = localStorage.getItem('cart');
         return cart ? JSON.parse(cart) : [];
     }
 
-    function renderCartItems() {
-        const cartItemsContainer = document.getElementById('cartfull-items');
-        const cartItems = getCartItems();
-        
-        cartItemsContainer.innerHTML = '';
-        
-        cartItems.forEach((item, index) => {
-            const itemTotal = item.price * item.quantity;
-            const itemRow = `
-                <tr class="cartfull-table-container-body-row">
-                    <td class="cartfull-table-container-body-row-cell">
-                        <div class="cartfull-table-container-body-row-cell-image">
-                            <img src="${item.image}" alt="${item.name}">
-                        </div>  
-                    </td>
-                    <td class="cartfull-table-container-body-row-cell">
-                        <div class="cartfull-table-container-body-row-cell-name">
-                            <span class="cartfull-table-container-body-row-cell-name-text">${item.name}</span>
-                        </div>
-                    </td>
-                    <td class="cartfull-table-container-body-row-cell">
-                        <div class="cartfull-table-container-body-row-cell-quantity">
-                            <button class="cartfull-table-container-body-row-cell-quantity-decrease">-</button>
-                            <span class="cartfull-table-container-body-row-cell-quantity-value">${item.quantity}</span>
-                            <button class="cartfull-table-container-body-row-cell-quantity-increase">+</button>
-                        </div>
-                    </td>
-                    <td class="cartfull-table-container-body-row-cell">  
-                        <div class="cartfull-table-container-body-row-cell-unit">
-                            <span class="cartfull-table-container-body-row-cell-unit-symbol">$</span>
-                            <span class="cartfull-table-container-body-row-cell-unit-amount">${item.price.toFixed(2)}</span>
-                        </div>
-                    </td> 
-                    <td class="cartfull-table-container-body-row-cell">  
-                        <div class="cartfull-table-container-body-row-cell-total">
-                            <span class="cartfull-table-container-body-row-cell-total-symbol">$</span>
-                            <span class="cartfull-table-container-body-row-cell-total-amount">${itemTotal.toFixed(2)}</span>
-                        </div>
-                    </td>
-                    <td class="cartfull-table-container-body-row-cell">
-                        <div class="cartfull-table-container-body-row-cell-button">  
-                            <button class="cartfull-table-container-body-row-cell-button-remove">X</button>
-                        </div> 
-                    </td>
-                </tr>
-                <tr class="cartfull-table-container-divider"><td colspan="6"></td></tr>
-            `;
-            cartItemsContainer.innerHTML += itemRow;
-        });
-    }
-
-    function updateCartTotals() {
-        const cartItems = getCartItems();
-        let subtotal = 0;
-        
-        cartItems.forEach(item => {
-            subtotal += item.price * item.quantity;
-        });
-        
-        const shipping = subtotal > 0 ? 10.00 : 0;
-        const total = subtotal + shipping;
-        
-        document.getElementById('subtotal-amount').textContent = subtotal.toFixed(2);
-        document.getElementById('shipping-amount').textContent = shipping.toFixed(2);
-        document.getElementById('total-amount').textContent = total.toFixed(2);
-    }
-
-// INICIALIZAR
-hideAllCartSections();
-showCartEmpty();
+    // INICIALIZAR - Mostrar cart empty al cargar
+    showCartEmpty();
 });
 </script>
 
