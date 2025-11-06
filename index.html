@@ -5722,6 +5722,252 @@ setupProceedPaymentButton();
 
 
 
+  
+
+
+
+
+
+
+
+
+
+
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+let selectedPaymentMethod = 'credit-card';
+
+// 🔴🔴🔴 AQUÍ REEMPLAZA - CLAVE PÚBLICA DE PRODUCCIÓN 🔴🔴🔴
+const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
+    locale: 'en-US'
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializePaymentMethods();
+    setupPaymentProcessing();
+    initializeMercadoPagoAutoFill();
+});
+
+function initializePaymentMethods() {
+    const creditCardRadio = document.getElementById('creditcard');
+    const paypalRadio = document.getElementById('paypal');
+    const creditCardForm = document.getElementById('creditcard-form');
+    const paypalForm = document.getElementById('paypal-form');
+
+    creditCardRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'credit-card';
+            creditCardForm.style.display = 'block';
+            paypalForm.style.display = 'none';
+            paypalRadio.checked = false;
+        }
+    });
+
+    paypalRadio.addEventListener('change', function() {
+        if (this.checked) {
+            selectedPaymentMethod = 'paypal';
+            paypalForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            creditCardRadio.checked = false;
+        }
+    });
+
+    creditCardRadio.checked = true;
+    creditCardForm.style.display = 'block';
+    paypalForm.style.display = 'none';
+}
+
+function initializeMercadoPagoAutoFill() {
+    const docSelect = document.getElementById('identificationType-container');
+    docSelect.innerHTML = `
+        <option value="">Select document type</option>
+        <option value="DNI">DNI</option>
+        <option value="CI">CI</option>
+        <option value="LC">LC</option>
+        <option value="LE">LE</option>
+        <option value="PAS">Passport</option>
+        <option value="ID">ID Card</option>
+    `;
+
+    const installmentsSelect = document.getElementById('installments-container');
+    installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
+    const installmentsOptions = [1, 2, 3, 4, 5, 6, 9, 12];
+    installmentsOptions.forEach(installment => {
+        const option = document.createElement('option');
+        option.value = installment;
+        option.textContent = installment === 1 ? 'Full payment' : `${installment} months`;
+        installmentsSelect.appendChild(option);
+    });
+
+    const cardNumberInput = document.getElementById('cardNumber-container');
+    cardNumberInput.addEventListener('input', function() {
+        if (this.value.length >= 6) {
+            const bin = this.value.substring(0, 6);
+            
+            mp.getPaymentMethods({ bin: bin })
+                .then(result => {
+                    if (result.results.length > 0) {
+                        const issuerSelect = document.getElementById('issuer-container');
+                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
+                        
+                        const acceptedCards = ['visa', 'master', 'amex'];
+                        
+result.results.forEach(paymentMethod => {
+    // ACEPTA CUALQUIER TARJETA, no solo visa/master/amex
+    const option = document.createElement('option');
+    option.value = paymentMethod.id;
+    option.textContent = paymentMethod.name;
+    issuerSelect.appendChild(option);
+});
+                        
+                        if (issuerSelect.options.length === 1) {
+                            const option = document.createElement('option');
+                            option.value = 'credit_card';
+                            option.textContent = 'Credit Card';
+                            issuerSelect.appendChild(option);
+                        }
+                    }
+                })
+                .catch(error => console.log('Auto-fill info only'));
+        }
+    });
+}
+
+function setupPaymentProcessing() {
+    const payButton = document.getElementById('paymentmethod-button-pay');
+    
+    payButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        
+        if (selectedPaymentMethod === 'credit-card') {
+            processCreditCardPayment();
+        } else if (selectedPaymentMethod === 'paypal') {
+            document.getElementById('paypalForm').submit();
+        }
+    });
+}
+
+function processCreditCardPayment() {
+    const cardData = {
+        cardNumber: document.getElementById('cardNumber-container').value.replace(/\s/g, ''),
+        expirationDate: document.getElementById('expirationDate-container').value,
+        securityCode: document.getElementById('securityCode-container').value,
+        cardholderName: document.getElementById('cardholderName-container').value,
+        identificationType: document.getElementById('identificationType-container').value,
+        identificationNumber: document.getElementById('identificationNumber-container').value
+    };
+
+    if (!cardData.cardNumber || !cardData.expirationDate || !cardData.securityCode || !cardData.cardholderName) {
+        alert('Please complete all required fields');
+        return;
+    }
+
+    // CREAR TOKEN
+    mp.createCardToken(cardData)
+        .then(result => {
+            if (result.error) {
+                alert('Payment error: ' + result.error.message);
+                return;
+            }
+            
+            // 🔴🔴🔴 AQUÍ REEMPLAZA - URL DE TU BACKEND REAL 🔴🔴🔴
+           const backendUrl = 'https://arlynligeiagithubio-production.up.railway.app/process-payment';
+            
+            const amount = parseFloat(document.querySelector('.paymentmethod-total-amount').textContent.replace('$', '').trim()) || 100;
+            
+            fetch(backendUrl, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    token: result.id,
+                    amount: amount,
+                   description: 'Purchase from your store',  // ← AGREGAR COMA AL FINAL
+  paymentMethodId: document.getElementById('issuer-container').value  // ← NUEVA LÍNEA
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('✅ REAL PAYMENT PROCESSED SUCCESSFULLY!');
+                    document.getElementById('paymentmethod-form').reset();
+                } else {
+                    alert('❌ Payment rejected: ' + data.message);
+                }
+            })
+            .catch(error => {
+                alert('Error connecting to server: ' + error.message);
+            });
+        })
+        .catch(error => {
+            alert('Processing error: ' + error.message);
+        });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+<!-- SCRIP: FOOTER -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🦶 Footer navegación iniciada');
+// FUNCIÓN: NAVEGACIÓN DEL FOOTER
+function setupFooterNavigation() {
+// 1. BOTÓN: PRIVACY POLICY
+document.getElementById('show-privacypolicy').addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📄 Navegando a Privacy Policy');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR PRIVACY POLICY
+const privacyPolicy = document.getElementById('privacypolicy');
+if (privacyPolicy) {
+privacyPolicy.style.display = 'block';
+privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'privacypolicy';
+}
+});
+// 2. BOTÓN: TERMS & CONDITIONS
+document.getElementById('show-terms').addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📑 Navegando a Terms & Conditions');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR TERMS & CONDITIONS
+const termsConditions = document.getElementById('termsandconditions');
+if (termsConditions) {
+termsConditions.style.display = 'block';
+termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'termsandconditions';
+}
+});
+}
+// INICIALIZAR
+setupFooterNavigation();
+console.log('✅ Footer navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: FOOTER --> 
+
+
+
 
 
 
