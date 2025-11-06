@@ -444,13 +444,6 @@ opacity: 1;
 .shop-carousel-mobile { display: flex; }
 }
 
-
-
-
-
-
-
-
 /* ======================================
    DIGITAL PRODUCTS
 ====================================== */
@@ -458,7 +451,7 @@ opacity: 1;
 .digitalproducts-container {
 position: relative;
 width: 90%;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -471,7 +464,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalproducts-title {
@@ -480,14 +473,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .digitalproducts-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -503,15 +496,16 @@ grid-auto-rows: 250px;
 gap: 20px;
 margin: 0px;
 }
-/* CONTENEDOR: TARJETA DE PRODUCTOS */
+/* CONTENEDOR: TARJETAS*/
 .digitalproducts-columns-grid-card {
 position: relative;
-overflow: hidden;
-height: 100%;
 display: block;
+height: 100%; 
+overflow: hidden;
 border-radius: 15px;
-border: 2px solid white !important;
+border: 3px solid #00FFFF !important;
 text-decoration: none;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
 }
 .digitalproducts-columns-grid-card img {
 width: 100%;
@@ -522,19 +516,142 @@ transition: transform 0.3s ease;
 .digitalproducts-columns-grid-card img:hover {
 transform: scale(1.1);
 }
-.digitalproducts-columns-grid-card-text {
+/* CONTENEDOR: ETIQUETAS */
+.digitalproducts-columns-grid-card-label {
 position: absolute;
 z-index: 2;
 top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+left: 0;
+width: 100%;
+height: 60px;
+background-color: #ff1493 !important;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translateY(-50%);
+}
+.digitalproducts-columns-grid-card-label-text {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-align: center;
-white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
+/* CONTROL */
+.digitalproducts-container { display: block; }
+.digitalproducts-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DIGITAL PRODUCTS
+====================================== */
+@media (max-width: 768px) {
+.digitalproducts-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.digitalproducts-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.digitalproducts-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.digitalproducts-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.digitalproducts-cards-mobile {
+position: relative;
+z-index: 2;
+margin: 0px; 
+}
+.digitalproducts-card-mobile {
+position: relative;
+display: block; 
+width: 100%;
+height: 200px;
+overflow: hidden;
+box-sizing: border-box;
+border-radius: 15px;
+border: 3px solid #00FFFF !important;
+text-decoration: none;
+margin-bottom: 20px;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
+}
+.digitalproducts-card-mobile:last-child {
+margin-bottom: 0px;
+}
+.digitalproducts-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.digitalproducts-card-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTENEDOR: ETIQUETAS MÓVIL */
+.digitalproducts-columns-grid-card-label-mobile {
+position: absolute;
+z-index: 2;
+top: 50%;
+left: 0;
+width: 100%;
+height: 50px;
+background-color: #ff1493 !important;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translateY(-50%);
+}
+.digitalproducts-card-label-text-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-align: center;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+/* CONTROL */
+.digitalproducts-container { display: none; }
+.digitalproducts-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    DIGITALFILM
@@ -647,6 +764,19 @@ transition: transform 0.3s ease;
 .digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    DIGITAL FEATURE FILM
