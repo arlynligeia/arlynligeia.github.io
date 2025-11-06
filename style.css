@@ -8655,7 +8655,7 @@ width: 100%;
 table-layout: fixed;
 border-collapse: separate;
 border-spacing: 10;
-background-color: transparent;
+background: transparent;
 }
 /* TABLA: ANCHO DE COLUMNAS*/
 .cosmosexecutiveproducer-table-container th:nth-child(1),
@@ -8771,9 +8771,6 @@ background: #FF66CC !important;
 background: #ff1493 !important;
 color: white !important;
 }
-
-
-
 /* TABLA: CONTROLES DE CANTIDAD */
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity {
 justify-content: center;
@@ -8793,7 +8790,6 @@ font-size: 1rem;
 color: white !important;   
 text-decoration: none;
 text-transform: uppercase;  
-font-weight: bold;
 border:none;
 cursor: pointer;
 transition: transform 0.3s ease;  
@@ -8807,8 +8803,6 @@ min-width: 30px;
 line-height: 30px;
 text-align: center;
 }
-
-
 /* ALINEACIÓN DE TEXTO */
 .cosmosexecutiveproducer-table-container-body-row-cell-name-text {
 text-align: left;
@@ -8843,7 +8837,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 box-sizing: border-box;   
-background-color: #FF6B00 !important;
+background: #FF6B00 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -8861,7 +8855,6 @@ transition: transform 0.3s ease;
 .cosmosexecutiveproducer-table-container-body-row-cell-button-remove:hover {
 transform: scale(1.05);
 }
-
 /* CONTENEDOR: BOTONES FINALES */
 .cosmosexecutiveproducer-buttons {
 display: flex;
@@ -8872,7 +8865,8 @@ margin: 0px;
 .cosmosexecutiveproducer-buttons-button-continueshopping,
 .cosmosexecutiveproducer-buttons-button-clearcart,
 .cosmosexecutiveproducer-buttons-button-checkout {
-display: inline-block;
+display: flex;
+justify-content: space-between;
 background: #00FFFF !important; 
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
@@ -8895,7 +8889,7 @@ cursor: pointer;
 transition: all 0.3s ease;     
 }
 .cosmosexecutiveproducer-buttons-button-checkout {
-background-: #ff1493 !important;
+background: #ff1493 !important;
 color: white !important;
 cursor: pointer; 
 transition: all 0.3s ease;  
