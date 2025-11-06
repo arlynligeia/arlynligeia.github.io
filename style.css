@@ -8752,7 +8752,7 @@ padding: 10px;
 }
 /* TABLA: COLORES DE CAJAS */
 .cosmosexecutiveproducer-table-container-body-row-cell-total {
-background: #00FF00 !important;
+background: #0044AA !important;
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-subtotal,
 .cosmosexecutiveproducer-table-container-body-row-cell-unit-shipping,
@@ -8767,7 +8767,8 @@ color: #00FF00 !important;
 background: #FF66CC !important;
 }
 .cosmosexecutiveproducer-table-container-body-row-cell-total-totalfinal {
-background: #0044AA !important;
+background: #ff1493 !important;
+color: white !important;
 }
 /* TABLA: CONTROLES DE CANTIDAD */
 .cosmosexecutiveproducer-table-container-body-row-cell-quantity {
@@ -9059,20 +9060,22 @@ display: inline-block;
 vertical-align: middle;
 text-align: right;
 }
+
+
+   
 /* CONTROLES DE CANTIDAD */
 .cosmosexecutiveproducer-products-product-quantity-control-mobile {
-display: flex;
-justify-content: center;
-align-items: right;
-text-align: right;  
+display: inline-block;
+vertical-align: middle;   
+text-align: right;
+float: right;
 }
 .cosmosexecutiveproducer-products-product-quantity-control-decrease-mobile,
 .cosmosexecutiveproducer-products-product-quantity-control-increase-mobile {
 width: 30px;
 height: 30px;
-display: flex;
-justify-content: center;
-align-items: center;
+display: inline-block;
+vertical-align: middle;
 background: #FF6B00 !important;
 border-radius: 4px;
 font-size: 15px;
@@ -9085,15 +9088,15 @@ border: none;
 cursor: pointer;
 transition: all 0.3s ease;  
 }
-.cosmosexecutiveproducer-products-product-quantity-control-decrease-mobile:hover,
-.cosmosexecutiveproducer-products-product-quantity-control-increase-mobile:hover {
-transform: scale(1.05);
-}  
 .cosmosexecutiveproducer-products-product-quantity-control-value-mobile {
-min-width: 30px;
-line-height: 30px;
+display: inline-block;
+vertical-align: middle;
 text-align: center;
-}  
+}
+
+
+
+   
 /* CONTENEDOR: BOTONES FINALES */
 .cosmosexecutiveproducer-button-mobile {
 width: 100%;
