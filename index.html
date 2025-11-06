@@ -3850,7 +3850,8 @@ Cosmic/Psychological Horror</p>
 <h2 class="cosmosexecutiveproducer-title-mobile"><a href="#cosmosexecutiveproducer-mobile">COSMOS EXECUTIVE PRODUCER</a></h2>
   
 <!-- CONTENEDOR: PRODUCTOS -->  
-<div class="cosmosexecutiveproducer-products-mobile">  
+<div class="cosmosexecutiveproducer-products-mobile">
+  
 <!-- CONTENEDOR: PRODUCTOS INDIVIDUALES -->    
 <div class="cosmosexecutiveproducer-products-product-mobile">
 <!-- DIVISOR -->
@@ -3863,7 +3864,6 @@ Cosmic/Psychological Horror</p>
 <div class="cosmosexecutiveproducer-products-product-name-mobile">
 <span class="cosmosexecutiveproducer-products-product-name-text-mobile">Comet Sponsor</span> 
 </div>
-  
 <!-- CANTIDAD -->
 <div class="cosmosexecutiveproducer-products-product-quantity-mobile">
 <span class="cosmosexecutiveproducer-products-product-quantity-text-mobile">QTY</span> 
@@ -3873,7 +3873,6 @@ Cosmic/Psychological Horror</p>
 <button class="cosmosexecutiveproducer-products-product-quantity-control-increase-mobile">+</button>
 </div>
 </div>
-  
 <!-- PRECIO UNITARIO -->
 <div class="cosmosexecutiveproducer-products-product-unit-mobile">
 <span class="cosmosexecutiveproducer-products-product-unit-text-mobile">UNIT:</span>  
@@ -3893,6 +3892,7 @@ Cosmic/Psychological Horror</p>
 <!-- DIVISOR -->
 <div class="cosmosexecutiveproducer-products-product-divider-mobile"></div>
 </div> 
+  
 <!-- CONTENEDOR: RESUMEN DE COMPRA -->  
 <div class="cosmosexecutiveproducer-products-summary-mobile">
 <!-- PRECIO SUBTOTAL -->
@@ -3921,9 +3921,15 @@ Cosmic/Psychological Horror</p>
 <span class="cosmosexecutiveproducer-products-summary-totalfinal-value-amount-mobile">1,000,000.00</span>
 </div>
 </div>
+</div> 
+  
+<!-- BOTÓN: REMOVER -->  
+<div class="cosmosexecutiveproducer-products-button-mobile">  
+<button class="cosmosexecutiveproducer-products-button-remove-mobile">REMOVE</button>
+</div>   
 <!-- DIVISOR -->
 <div class="cosmosexecutiveproducer-products-product-divider-mobile"></div>
-</div> 
+  
 </div>
   
 <!-- CONTENEDOR: BOTONES FINALES -->
@@ -3959,7 +3965,7 @@ Cosmic/Psychological Horror</p>
   
   
 <!-- CART EMPTY PC -->
-<section class="cartempty-section" id="cartempty"> 
+<section class="cartempty-section" id="cartempty" style="display: none;">
 <div class="cartempty-container">
 <h2 class="cartempty-title"><a href="#cartempty">YOUR CART</a></h2>  
 <!-- CONTENEDOR: INFORMACIÓN -->  
@@ -3976,7 +3982,7 @@ Cosmic/Psychological Horror</p>
 <!-- FIN CART EMPTY PC -->
 
 <!-- CART FULL PC -->
-<section class="cartfull-section" id="cartfull">
+<section class="cartfull-section" id="cartfull" style="display: none;">
 <div class="cartfull-container">
 <h2 class="cartfull-title"><a href="#cartfull">YOUR CART</a></h2> 
 <!-- CONTENEDOR: TABLA -->  
@@ -4530,46 +4536,80 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
 <!-- SCRIPS CARRITO -->
 <script>
-// CARRITO - SOLO LAS 3 FUNCIONES SOLICITADAS
+// CARRITO - SCRIPT CORREGIDO
 document.addEventListener('DOMContentLoaded', function() {
-// 1. FUNCIÓN DEL BOTÓN CART
-const cartButton = document.querySelector('.cart-button');
-if (cartButton) {
-cartButton.addEventListener('click', function() {
-const cartItems = getCartItems();
-if (cartItems.length === 0) {
-showCartEmpty();
-} else {
-showCartFull();
-}
-});
-}
-// 2. FUNCIONES PARA MOSTRAR CART EMPTY O FULL
-function showCartEmpty() {
-hideAllCartSections();
-const cartEmptySection = document.getElementById('cartempty');
-if (cartEmptySection) {
-cartEmptySection.style.display = 'block';
-}
-window.location.hash = '#cartempty';
-}
-function showCartFull() {
-hideAllCartSections();
-const cartFullSection = document.getElementById('cartfull');
-if (cartFullSection) {
-cartFullSection.style.display = 'block';
-renderCartItems();
-updateCartTotals();
-}
-window.location.hash = '#cartfull';
-}
-function hideAllCartSections() {
-const cartEmptySection = document.getElementById('cartempty');
-const cartFullSection = document.getElementById('cartfull');
-if (cartEmptySection) cartEmptySection.style.display = 'none';
-if (cartFullSection) cartFullSection.style.display = 'none';
-}
+    
+    // 1. FUNCIÓN DEL BOTÓN CART
+    const cartButton = document.querySelector('.cart-button');
+    if (cartButton) {
+        cartButton.addEventListener('click', function() {
+            console.log('Botón Cart clickeado'); // Para debug
+            const cartItems = getCartItems();
+            console.log('Productos en carrito:', cartItems); // Para debug
+            
+            if (cartItems.length === 0) {
+                showCartEmpty();
+            } else {
+                showCartFull();
+            }
+        });
+    }
 
+    // 2. FUNCIONES PARA MOSTRAR CART EMPTY O FULL
+    function showCartEmpty() {
+        console.log('Mostrando cart empty'); // Para debug
+        hideAllCartSections();
+        const cartEmptySection = document.getElementById('cartempty');
+        const cartFullSection = document.getElementById('cartfull');
+        
+        if (cartEmptySection) {
+            console.log('Cart empty encontrado, mostrando...');
+            cartEmptySection.style.display = 'block';
+        } else {
+            console.error('Cart empty NO encontrado');
+        }
+        
+        if (cartFullSection) {
+            cartFullSection.style.display = 'none';
+        }
+        
+        window.location.hash = '#cartempty';
+    }
+
+    function showCartFull() {
+        console.log('Mostrando cart full'); // Para debug
+        hideAllCartSections();
+        const cartEmptySection = document.getElementById('cartempty');
+        const cartFullSection = document.getElementById('cartfull');
+        
+        if (cartFullSection) {
+            console.log('Cart full encontrado, mostrando...');
+            cartFullSection.style.display = 'block';
+            renderCartItems();
+            updateCartTotals();
+        } else {
+            console.error('Cart full NO encontrado');
+        }
+        
+        if (cartEmptySection) {
+            cartEmptySection.style.display = 'none';
+        }
+        
+        window.location.hash = '#cartfull';
+    }
+
+    function hideAllCartSections() {
+        const cartEmptySection = document.getElementById('cartempty');
+        const cartFullSection = document.getElementById('cartfull');
+        
+        if (cartEmptySection) {
+            cartEmptySection.style.display = 'none';
+        }
+        if (cartFullSection) {
+            cartFullSection.style.display = 'none';
+        }
+    }
+  
     // =============================================
     // 3. ESTRUCTURA PARA AGREGAR PRODUCTOS AL CARRITO
     // =============================================
