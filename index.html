@@ -718,7 +718,7 @@ Cosmic/Psychological Horror</p>
 <button class="cartfull-button-back" onclick="history.back()">BACK</button>
 <a class="cartfull-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="cartfull-button-clear" id="cart-full-clear">CLEAR CART</button>
-<a class="cartfull-button-buy" href="#shippinginformation">BUY</a>
+<a class="cartfull-button-checkout" href="#shippinginformation">CHECKOUT</a>
 </div>
 </div>
 </div>
@@ -2215,10 +2215,10 @@ setupGoToCartButton();
 
   // 14. FUNCIÓN: BOTÓN BUY
 function setupBuyButton() {
-    const buyButton = document.querySelector('.cartfull-button-buy');
+    const buyButton = document.querySelector('.cartfull-button-checkout');
     
-    if (buyButton) {
-        buyButton.addEventListener('click', function(e) {
+    if (checkoutButton) {
+        checkoutButton.addEventListener('click', function(e) {
             e.preventDefault();
             
             // Verificar que el carrito no esté vacío
@@ -2308,7 +2308,7 @@ function saveCartToHiddenFields() {
 }
 
 // INICIALIZAR EL BOTÓN BUY AL CARGAR LA PÁGINA
-setupBuyButton();
+setupcheckoutButton();
 });
 </script>
 <!-- FIN SCRIP: CARRITO -->
