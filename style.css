@@ -3106,59 +3106,64 @@ font-size: 1.5rem;
    
 /* CONTENEDOR: OPCIONES DE PAGO */
 .paymentmethod-paymentoptions-mobile {
-position: relative;
-z-index: 2;
+    position: relative;
+    z-index: 2;
 }
+
 /* OPCIONES DE PAGO */
 .paymentmethod-paymentoptions-creditcard-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
-width: 100%;
-display: block;
-margin: 0px;
+    width: 100%;
+    display: block;
+    margin: 0px;
 }
-/* HEADER CON FLEX (radio + label + icons) */
+
+/* HEADER CON FLEX (radio + label + icons) - CORREGIDO */
 .paymentmethod-paymentoptions-creditcard-header-mobile,
 .paymentmethod-paymentoptions-paypal-header-mobile {
-width: 100%;
-display: flex;
-justify-content: space-between;  
-gap: 10px;
-margin: 0 0 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
 }
+
 /* RADIO BUTTON */
 .paymentmethod-paymentoptions-creditcard-imput-mobile,
 .paymentmethod-paymentoptions-paypal-form-imput-mobile {
-transform: scale(1.5);
-margin: 0 5px;
+    transform: scale(1.5);
+    margin: 0;
 }
-/* LABEL CON FLEX */
+
+/* LABEL CON FLEX - CORREGIDO */
 .paymentmethod-paymentoptions-creditcard-label-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-mobile {
-display: flex;
-justify-content: space-between;   
-align-items: center;
-margin: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0px;
 }
-/* TÍTULOS */
+
+/* TÍTULOS - CORREGIDO */
 .paymentmethod-paymentoptions-creditcard-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-title-mobile {
-display: flex;
-justify-content: space-between;    
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-line-height: 1.5;   
-margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    line-height: 1.5;   
+    margin: 0;
+    white-space: nowrap;
 }
- 
-/* CONTENEDORES: ÍCONOS CON FLEX */  
+
+/* CONTENEDORES: ÍCONOS CON FLEX - CORREGIDO */  
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
-display: flex;
-justify-content: space-between; 
-gap: 10px;
-margin-left: auto;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: auto;
 }
 /* ICONOS DE TARJETAS */
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile .fab {
