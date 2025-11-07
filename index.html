@@ -880,9 +880,6 @@ Cosmic/Psychological Horror</p>
 <!-- FIN SHIPPING INFORMATION -->
 
 
-
-
-
   
 <!-- SHIPPING INFORMATION MOBILE -->
 <section class="shippinginformation-section main-section mobile-only" id="shippinginformation-mobile">  
@@ -978,45 +975,6 @@ Cosmic/Psychological Horror</p>
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
 <!-- PAYMENT METHOD -->
 <section class="paymentmethod-section main-section" id="paymentmethod">
 <div class="paymentmethod-container">
@@ -1088,9 +1046,7 @@ Cosmic/Psychological Horror</p>
 </div>
 </div>
 
-
-  
-      <!-- OPCIÓN 2: PAYPAL -->
+ <!-- OPCIÓN 2: PAYPAL -->
       <div class="paymentmethod-form-option">
         <div class="paymentmethod-form-option-paypal">
           <input class="paymentmethod-form-option-paypal-header" id="paypal" type="radio" name="payment-method" value="paypal">
@@ -1138,15 +1094,126 @@ Cosmic/Psychological Horror</p>
 </section>
 
 
-
-
-
+ 
+                
+<!-- PAYMENT METHOD MOBILE -->
+<section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
+<div class="paymentmethod-container-mobile">
+<h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2>
   
+<!-- CONTENEDOR: TOTAL -->
+<div class="paymentmethod-total-mobile">
+<span class="paymentmethod-total-text-mobile">TOTAL:</span>
+<span class="paymentmethod-total-symbol-mobile">$</span>
+<span class="paymentmethod-total-amount-mobile" id="paymentmethod-total-mobile">0.00</span>
+</div>
+ 
+<!-- CONTENEDOR: PAYMENT OPTIONS --> 
+<div class="paymentmethod-paymentoptions-mobile">  
+<form id="paymentmethod-paymentoptions-mobile" method="POST">
+  
+<!-- OPCIÓN 1: CREDIT CARD -->
+<div class="paymentmethod-paymentoptions-creditcard-mobile">
+<label class="paymentmethod-paymentoptions-creditcard-label-mobile" for="creditcard-mobile">
+<span class="paymentmethod-paymentoptions-creditcard-label-title-mobile">CREDIT CARD</span>
+<span class="paymentmethod-paymentoptions-creditcard-label-icons-mobile">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa" width="40" height="25">
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" width="40" height="25">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo.svg" alt="American Express" width="40" height="25">
+</span>
+</label>  
+<input class="paymentmethod-paymentoptions-creditcard-imput-mobile" id="creditcard-mobile" type="radio" name="payment-method" value="credit-card">
+</div>
+  
+<!-- CONTENEDOR: MERCADO PAGO -->
+<div class="paymentmethod-paymentoptions-creditcard-card-mobile" id="creditcard-form-mobile">
+<!-- NÚMERO DE TARJETA -->
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="cardNumber-container-mobile" type="text" placeholder="Card number">
+</div>
+<!-- FECHA DE EXPIRACIÓN Y CVV -->
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="expirationDate-container-mobile" type="text" placeholder="MM/YY">
+</div>
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="securityCode-container-mobile" type="text" placeholder="CVV">
+</div>
+<!-- NOMBRE EN LA TARJETA -->
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="cardholderName-container-mobile" type="text" placeholder="Name on card">
+</div>
+<!-- DOCUMENTO -->
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="identificationType-container-mobile">
+<option value="">Select document type</option>
+</select>
+</div>
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="identificationNumber-container-mobile" type="text" placeholder="Document number">
+</div>
+<!-- BANCO EMISOR Y CUOTAS -->
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="issuer-container-mobile">
+<option value="">Select issuer</option>
+</select>
+</div>
+<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
+<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="installments-container-mobile">
+<option value="">Select instalments</option>
+</select>
+</div>
+</div>
 
-     
-                
-                
-             
+<!-- OPCIÓN 2: PAYPAL -->
+<div class="paymentmethod-paymentoptions-paypal-mobile">
+<div class="paymentmethod-paymentoptions-paypal-form-mobile">  
+<label class="paymentmethod-paymentoptions-paypal-form-label-mobile" for="paypal-mobile">
+<span class="paymentmethod-paymentoptions-paypal-form-label-title-mobile">PAYPAL</span>
+<span class="paymentmethod-paymentoptions-paypal-form-label-icon-mobile">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal" width="50" height="35">
+</span>
+</label>
+<input class="paymentmethod-paymentoptions-paypal-form-imput-mobile" id="paypal-mobile" type="radio" name="payment-method" value="paypal">
+</div>
+<!-- CONTENEDOR: INFORMACIÓN PAYPAL -->
+<div class="paymentmethod-paymentoptions-paypal-information-mobile" id="paypal-form-mobile">
+<p class="paymentmethod-paymentoptions-paypal-information-text-mobile">You will be redirected to PayPal to complete your payment securely</p>
+<p class="paymentmethod-paymentoptions-paypal-information-text-mobile">• Secure payment through PayPal</p>
+<p class="paymentmethod-paymentoptions-paypal-information-text-end-mobile">• No need to enter card details on this site</p>
+</div>
+</div>
+ 
+<!-- CAMPOS OCULTOS (IDs ÚNICOS) -->
+<input type="hidden" id="token-mobile" name="token">
+<input type="hidden" id="paymentMethodId-mobile" name="paymentMethodId">
+<input type="hidden" id="issuerId-mobile" name="issuerId">
+
+<!-- BOTONES -->
+<div class="paymentmethod-button-mobile">
+<a class="paymentmethod-button-back-mobile" href="#shippinginformation-mobile">BACK</a>
+</div>
+<div class="paymentmethod-button-mobile"> 
+<button class="paymentmethod-button-cancel-mobile" type="button">CANCEL</button>  
+</div>
+<div class="paymentmethod-button-mobile">   
+<button class="paymentmethod-button-pay-mobile" type="submit">PAY</button>
+</div>
+
+</form>
+</div>
+
+<!-- FORMULARIO PAYPAL PARA REDIRECCIÓN (ID ÚNICO) -->
+<form id="paypalForm-mobile" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
+<input type="hidden" name="cmd" value="_cart">
+<input type="hidden" name="upload" value="1">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="business" value="arlynligeia@gmail.com">
+<input type="hidden" name="return" value="https://tudominio.com/success">
+<input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
+</form>
+
+</div>
+</section>            
               
                 
               
@@ -2751,6 +2818,136 @@ setupProceedPaymentButton();
 </script>
 
 
+
+
+
+  <!-- SCRIP: SHIPPING INFORMATION MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// FUNCIÓN: BOTÓN PROCEED PAYMENT MOBILE
+function setupProceedPaymentButtonMobile() {
+const proceedButton = document.getElementById('shippinginformation-button-proceedpayment-mobile');
+if (proceedButton) {
+proceedButton.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📧 Enviando formulario mobile a Formspree');
+// VALIDAR FORMULARIO MOBILE
+if (!validateShippingFormMobile()) {
+alert('❌ Please fill all required fields correctly.');
+return;
+}
+// ACTUALIZAR CAMPOS OCULTOS MOBILE CON DATOS DEL CARRITO
+updateHiddenFieldsMobile();
+// ENVIAR FORMULARIO A FORMSPREE SIN REDIRECCIÓN
+submitFormWithoutRedirectMobile();
+});
+}
+}
+// FUNCIÓN: ENVIAR FORMULARIO SIN REDIRECCIÓN MOBILE
+async function submitFormWithoutRedirectMobile() {
+const form = document.getElementById('shippinginformation-form-mobile');
+const formData = new FormData(form);
+try {
+const response = await fetch(form.action, {
+method: 'POST',
+body: formData,
+headers: {
+'Accept': 'application/json'
+}
+});
+if (response.ok) {
+console.log('✅ Formulario mobile enviado correctamente a Formspree');
+// NAVEGAR A PAYMENT METHOD MOBILE INMEDIATAMENTE
+navigateToPaymentMethodMobile();
+} else {
+throw new Error('Error en el envío del formulario mobile');
+}
+} catch (error) {
+console.error('❌ Error enviando formulario mobile:', error);
+// Aún así navegar a payment method mobile
+navigateToPaymentMethodMobile();
+}
+}
+// FUNCIÓN: VALIDAR FORMULARIO DE ENVÍO MOBILE
+function validateShippingFormMobile() {
+const requiredFields = [
+'shippinginformation-firstname-mobile',
+'shippinginformation-lastname-mobile', 
+'shippinginformation-idnumber-mobile',
+'shippinginformation-mobilephone-mobile',
+'shippinginformation-email-mobile',
+'shippinginformation-country-mobile',
+'shippinginformation-state-mobile',
+'shippinginformation-city-mobile',
+'shippinginformation-zipcode-mobile',
+'shippinginformation-address-mobile'
+];
+let isValid = true;
+for (let fieldId of requiredFields) {
+const field = document.getElementById(fieldId);
+if (!field || !field.value.trim()) {
+field.style.border = '2px solid red';
+isValid = false;
+} else {
+field.style.border = '';
+}
+}
+return isValid;
+}
+// FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS MOBILE
+function updateHiddenFieldsMobile() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const subtotal = document.getElementById('cart-subtotal-mobile').textContent;
+const shipping = document.getElementById('cart-shipping-mobile').textContent;
+const total = document.getElementById('cart-total-mobile').textContent;
+// Actualizar campos ocultos mobile
+document.getElementById('hidden-cart-items-mobile').value = JSON.stringify(cart);
+document.getElementById('hidden-cart-subtotal-mobile').value = subtotal;
+document.getElementById('hidden-cart-shipping-mobile').value = shipping;
+document.getElementById('hidden-cart-total-mobile').value = total;
+console.log('📦 Carrito guardado en campos ocultos mobile:', cart);
+}
+// FUNCIÓN: NAVEGAR A PAYMENT METHOD MOBILE Y PASAR EL TOTAL
+function navigateToPaymentMethodMobile() {
+// Obtener el total del carrito mobile
+const total = document.getElementById('cart-total-mobile').textContent;
+// Guardar el total en localStorage para que payment method mobile lo pueda leer
+localStorage.setItem('payment-total-mobile', total);
+// Ocultar todas las secciones mobile
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+// Mostrar la sección de payment method mobile
+const paymentMethodSection = document.getElementById('paymentmethod-mobile');
+if (paymentMethodSection) {
+paymentMethodSection.style.display = 'block';
+window.location.hash = 'paymentmethod-mobile';
+// Actualizar el total en payment method mobile
+updatePaymentMethodTotalMobile(total);
+}
+console.log('💰 Total pasado a Payment Method Mobile:', total);
+}
+// FUNCIÓN: ACTUALIZAR TOTAL EN PAYMENT METHOD MOBILE
+function updatePaymentMethodTotalMobile(total) {
+const totalElement = document.getElementById('paymentmethod-total-mobile');
+if (totalElement) {
+totalElement.textContent = total;
+console.log('✅ Total actualizado en Payment Method Mobile: $' + total);
+}
+}
+// INICIALIZAR BOTÓN PROCEED PAYMENT MOBILE
+setupProceedPaymentButtonMobile();
+// ACTUALIZAR PAYMENT METHOD MOBILE AL CARGAR LA PÁGINA (por si se recarga)
+function initializePaymentMethodTotalMobile() {
+const savedTotal = localStorage.getItem('payment-total-mobile');
+if (savedTotal) {
+updatePaymentMethodTotalMobile(savedTotal);
+}
+}
+// Ejecutar al cargar la página
+initializePaymentMethodTotalMobile();
+});
+</script>
 
   
 
