@@ -3167,7 +3167,7 @@ color: #eb001b; /* Rojo Mastercard */
 color: #2e77bc; /* Azul American Express */
 }
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile .fab {
-font-size: 2.2rem;
+font-size: 2rem;
 color: #003087; /* Azul PayPal */
 margin: 0 8px;
 }
@@ -3193,11 +3193,16 @@ border: none;
 }
    
 /* INFORMACIÓN PAYPAL */
+.paymentmethod-paymentoptions-paypal-information-mobile {
+width: 100%;
+margin: 0 0 15px 0;
+}
 .paymentmethod-paymentoptions-paypal-information-text-mobile,
 .paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
+text-decoration: none;   
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
