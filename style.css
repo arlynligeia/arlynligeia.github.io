@@ -3028,6 +3028,13 @@ transform: scale(1.05);
 }
 .paymentmethod-container { display: block; }
 .paymentmethod-container-mobile { display: none; }
+
+
+
+
+
+
+
 /* ======================================
    PAYMENT METHOD MOBILE
 ====================================== */
@@ -3069,35 +3076,41 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
+   
 /* CONTENEDOR RESUMEN DEL PEDIDO */
 .paymentmethod-total-mobile {
-background-color: rgba(255, 255, 255, 0.1);
+background: rgba(255, 255, 255, 0.1);
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
-padding: 15px;
-margin: 0 0 15px 0;
-}
+margin: 0 0 10px 0;   
+padding: 10px;
+}  
 .paymentmethod-total-text-mobile,
 .paymentmethod-total-symbol-mobile,
 .paymentmethod-total-amount-mobile {
+display: flex;
+justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
+font-size: 1rem;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
+margin: 0px;
 }
+/* Etiqueta a la izquierda */
 .paymentmethod-total-text-mobile {
 text-align: left;
 flex: 1;
 }
-.paymentmethod-total-symbol-mobile {
-margin-right: 5px;
+.paymentmethod-total-symbol-mobile, {
+margin-right: 10px;
 }
 .paymentmethod-total-amount-mobile {
 text-align: right;
 min-width: 130px;
 }
-/* CONTENEDOR DE FORMULARIO */
+   
+/* CONTENEDOR: OPCIONES DE PAGO */
 .paymentmethod-paymentoptions-mobile {
 position: relative;
 z-index: 2;
@@ -3108,7 +3121,7 @@ z-index: 2;
 display: flex;
 align-items: center;
 gap: 10px;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
 /* RADIO BUTTON */
 .paymentmethod-paymentoptions-creditcard-imput-mobile,
@@ -3125,10 +3138,13 @@ margin: 0;
 .paymentmethod-paymentoptions-creditcard-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-title-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #FF6B00 !important;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;   
 margin: 0;
 }
+/* CONTENEDORES: ÍCONOS */  
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
 display: flex;
@@ -3136,15 +3152,26 @@ gap: 10px;
 margin-left: auto;
 align-items: center;
 }
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile img,
-.paymentmethod-paymentoptions-paypal-form-label-icon-mobile img {
-width: 50px;
-height: 35px;
-object-fit: contain;
-border-radius: 4px;
-background: white;
-padding: 3px;
+/* ICONOS DE TARJETAS */
+.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fab {
+font-size: 2rem;
+margin: 0 8px;
 }
+.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-visa {
+color: #1a1f71; /* Azul Visa */
+}
+.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-mastercard {
+color: #eb001b; /* Rojo Mastercard */
+}
+.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-amex {
+color: #2e77bc; /* Azul American Express */
+}
+.paymentmethod-paymentoptions-paypal-form-label-icon-mobile .fab {
+font-size: 2.2rem;
+color: #003087; /* Azul PayPal */
+margin: 0 8px;
+}
+   
 /* CAMPOS DE TARJETA DE CRÉDITO */
 .paymentmethod-paymentoptions-creditcard-card-label-mobile {
 width: 100%;
@@ -3156,7 +3183,7 @@ height: 40px;
 background-color: white !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: black !important;
 text-decoration: none;
 box-sizing: border-box;
@@ -3164,11 +3191,12 @@ padding: 10px;
 margin: 0;
 border: none;
 }
+   
 /* INFORMACIÓN PAYPAL */
 .paymentmethod-paymentoptions-paypal-information-text-mobile,
 .paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: white !important;
 line-height: 1.5;
 margin: 0 0 10px 0;
@@ -3176,6 +3204,8 @@ margin: 0 0 10px 0;
 .paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 margin: 0 0 20px 0;
 }
+
+   
 /* CONTENEDOR DE BOTONES FINALES */
 .paymentmethod-button-mobile {
 width: 100%;
