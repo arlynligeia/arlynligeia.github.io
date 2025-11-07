@@ -1099,8 +1099,7 @@ Cosmic/Psychological Horror</p>
 <!-- PAYMENT METHOD MOBILE -->
 <section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
 <div class="paymentmethod-container-mobile">
-<h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2>
-  
+<h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2> 
 <!-- CONTENEDOR: TOTAL -->
 <div class="paymentmethod-total-mobile">
 <span class="paymentmethod-total-text-mobile">TOTAL</span><br>
@@ -1112,79 +1111,83 @@ Cosmic/Psychological Horror</p>
 <div class="paymentmethod-paymentoptions-mobile">  
 <form id="paymentmethod-paymentoptions-mobile" method="POST">
   
-<!-- OPCIÓN 1: CREDIT CARD -->
-<div class="paymentmethod-paymentoptions-creditcard-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-imput-mobile" id="creditcard-mobile" type="radio" name="payment-method" value="credit-card">  
-<label class="paymentmethod-paymentoptions-creditcard-label-mobile" for="creditcard-mobile">
-<span class="paymentmethod-paymentoptions-creditcard-label-title-mobile">CARD</span> 
-<span class="paymentmethod-paymentoptions-creditcard-label-icons-mobile">
+<!-- CONTENEDOR: OPCIÓN 1: CARD -->
+<div class="paymentmethod-paymentoptions-card-mobile">  
+<div class="paymentmethod-paymentoptions-card-head-mobile">  
+<input class="paymentmethod-paymentoptions-card-head-imput-mobile" id="creditcard-mobile" type="radio" name="payment-method" value="credit-card">  
+<label class="paymentmethod-paymentoptions-card-head-label-mobile" for="creditcard-mobile">
+<span class="paymentmethod-paymentoptions-card-head-label-title-mobile">CARD</span> 
+<span class="paymentmethod-paymentoptions-card-head-label-icons-mobile">
 <!-- VISA -->
-<svg width="40" height="25" viewBox="0 0 40 25" class="card-icon">
+<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
 <rect width="40" height="25" fill="white" rx="4"/>
 <path fill="#1a1f71" d="M16.4 8.3h7.2v8.4h-7.2z"/>
 <path fill="#1a1f71" d="M20 12.5a8.3 8.3 0 1 0 0 16.6 8.3 8.3 0 0 0 0-16.6z"/>
 </svg>
 <!-- MASTERCARD -->
-<svg width="40" height="25" viewBox="0 0 40 25" class="card-icon">
+<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
 <rect width="40" height="25" fill="white" rx="4"/>
 <circle cx="15" cy="12.5" r="8" fill="#eb001b"/>
 <circle cx="25" cy="12.5" r="8" fill="#f79e1b"/>
 </svg>
 <!-- AMERICAN EXPRESS -->
-<svg width="40" height="25" viewBox="0 0 40 25" class="card-icon">
+<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
 <rect width="40" height="25" fill="#2e77bc" rx="4"/>
 <text x="20" y="15" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">AMEX</text>
 </svg>
 </span>
 </label> 
 </div>
-  
 <!-- CONTENEDOR: MERCADO PAGO -->
-<div class="paymentmethod-paymentoptions-creditcard-card-mobile" id="creditcard-form-mobile">
+<div class="paymentmethod-paymentoptions-card-mercadopago-mobile" id="creditcard-form-mobile">  
 <!-- NÚMERO DE TARJETA -->
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="cardNumber-container-mobile" type="text" placeholder="Card number">
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="cardNumber-container-mobile" type="text" placeholder="Card number">
 </div>
-<!-- FECHA DE EXPIRACIÓN Y CVV -->
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="expirationDate-container-mobile" type="text" placeholder="MM/YY">
+<!-- FECHA DE EXPIRACIÓN -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="expirationDate-container-mobile" type="text" placeholder="MM/YY">
 </div>
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="securityCode-container-mobile" type="text" placeholder="CVV">
-</div>
+<!-- CÓDIGO DE SEGURIDAD -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="securityCode-container-mobile" type="text" placeholder="CVV">
+</div> 
 <!-- NOMBRE EN LA TARJETA -->
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="cardholderName-container-mobile" type="text" placeholder="Name on card">
-</div>
-<!-- DOCUMENTO -->
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="identificationType-container-mobile">
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="cardholderName-container-mobile" type="text" placeholder="Name on card">
+</div> 
+<!-- SELECCIÓN DE DOCUMENTO -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="identificationType-container-mobile">
 <option value="">Select document type</option>
 </select>
 </div>
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<input class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="identificationNumber-container-mobile" type="text" placeholder="Document number">
-</div>
-<!-- BANCO EMISOR Y CUOTAS -->
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="issuer-container-mobile">
+<!-- DOCUMENTO -->  
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="identificationNumber-container-mobile" type="text" placeholder="Document number">
+</div> 
+<!-- SELECCIÓN DE TARJETA -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="issuer-container-mobile">
 <option value="">Select issuer</option>
 </select>
 </div>
-<div class="paymentmethod-paymentoptions-creditcard-card-label-mobile">
-<select class="paymentmethod-paymentoptions-creditcard-card-imput-mobile" id="installments-container-mobile">
+<!-- SELECCIÓN DE CUOTAS -->  
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
+<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="installments-container-mobile">
 <option value="">Select instalments</option>
 </select>
+</div>  
 </div>
 </div>
 
-<!-- OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal-mobile">
-<div class="paymentmethod-paymentoptions-paypal-form-mobile">
-<input class="paymentmethod-paymentoptions-paypal-form-imput-mobile" id="paypal-mobile" type="radio" name="payment-method" value="paypal">
-<label class="paymentmethod-paymentoptions-paypal-form-label-mobile" for="paypal-mobile">
-<span class="paymentmethod-paymentoptions-paypal-form-label-title-mobile">PAYPAL</span>
-<span class="paymentmethod-paymentoptions-paypal-form-label-icon-mobile">
+<!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
+<div class="paymentmethod-paymentoptions-paypal-mobile">  
+<div class="paymentmethod-paymentoptions-paypal-head-mobile">
+<input class="paymentmethod-paymentoptions-paypal-head-imput-mobile" id="paypal-mobile" type="radio" name="payment-method" value="paypal">
+<label class="paymentmethod-paymentoptions-paypal-head-label-mobile" for="paypal-mobile">
+<span class="paymentmethod-paymentoptions-paypal-head-label-title-mobile">PAYPAL</span>
+<span class="paymentmethod-paymentoptions-paypal-head-label-icon-mobile">
 <!-- PAYPAL -->
 <svg width="40" height="25" viewBox="0 0 40 25" class="card-icon">
 <rect width="40" height="25" fill="white" rx="4"/>
@@ -1199,8 +1202,8 @@ Cosmic/Psychological Horror</p>
 <div class="paymentmethod-paymentoptions-paypal-information-mobile" id="paypal-form-mobile">
 <p class="paymentmethod-paymentoptions-paypal-information-text-mobile">You will be redirected to PayPal to complete your payment securely</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text-mobile">• Secure payment through PayPal</p>
-<p class="paymentmethod-paymentoptions-paypal-information-text-end-mobile">• No need to enter card details on this site</p>
-</div>
+<p class="paymentmethod-paymentoptions-paypal-information-text-mobile">• No need to enter card details on this site</p>
+</div>  
 </div>
  
 <!-- CAMPOS OCULTOS (IDs ÚNICOS) -->
