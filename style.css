@@ -3099,10 +3099,9 @@ text-align: center;
 margin: 0px;      
 }
 .paymentmethod-total-symbol-mobile,
-.paymentmethod-total-amount-mobile{
+.paymentmethod-total-amount-mobile {
 font-size: 1.2rem;
 }
-  
 /* CONTENEDOR OPCIONES */
 .paymentmethod-paymentoptions-card-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
@@ -3215,7 +3214,7 @@ text-align: justify;
 .paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;   
 line-height: 1.5;
 text-align: justify;   
@@ -3223,10 +3222,7 @@ margin: 0 0 10px 0;
 }
 .paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 margin: 0px;
-}
-
-
-   
+}   
 /* CONTENEDOR: BOTONES FINALES */
 .paymentmethod-button-mobile {
 width: 100%;
@@ -3252,6 +3248,10 @@ padding: 10px 20px;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
+}
+.paymentmethod-button-cancel-mobile {
+background: #FF6B00 !important;
+color: white !important;
 }
 .paymentmethod-button-pay-mobile {
 background: #ff1493 !important;
