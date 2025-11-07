@@ -3096,6 +3096,7 @@ line-height: 1.5;
 text-align: center;   
 margin: 0px;
 }
+.paymentmethod-total-symbol-mobile,
 .paymentmethod-total-amount-mobile {
 font-size: 1.5rem;
 }
@@ -3117,7 +3118,7 @@ margin: 0px;
 .paymentmethod-paymentoptions-paypal-header-mobile {
 width: 100%;
 display: flex;
-align-items: center;
+justify-content: space-between;  
 gap: 10px;
 margin: 0 0 10px 0;
 }
@@ -3131,12 +3132,15 @@ margin: 0 5px;
 .paymentmethod-paymentoptions-creditcard-label-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-mobile {
 display: flex;
+justify-content: space-between;   
 align-items: center;
 margin: 0px;
 }
 /* TÍTULOS */
 .paymentmethod-paymentoptions-creditcard-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-title-mobile {
+display: flex;
+justify-content: space-between;    
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #00FF00 !important;
@@ -3144,13 +3148,14 @@ text-decoration: none;
 line-height: 1.5;   
 margin: 0;
 }
+ 
 /* CONTENEDORES: ÍCONOS CON FLEX */  
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
 display: flex;
+justify-content: space-between; 
 gap: 10px;
 margin-left: auto;
-align-items: center;
 }
 /* ICONOS DE TARJETAS */
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile .fab {
@@ -3167,10 +3172,15 @@ color: #eb001b; /* Rojo Mastercard */
 color: #2e77bc; /* Azul American Express */
 }
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile .fab {
-font-size: 2rem;
+font-size: 0.8rem;
 color: #003087; /* Azul PayPal */
 margin: 0 8px;
 }
+
+
+
+
+
    
 /* CAMPOS DE TARJETA DE CRÉDITO - BLOCK */
 .paymentmethod-paymentoptions-creditcard-card-mobile {
