@@ -2956,38 +2956,19 @@ font-size: 1.5rem;
     margin: 0px;   
     padding: 10px 15px;    
 }
-
-/* FECHA Y CVV - YA FUNCIONA */
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile),
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 4%;
+/* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
+.paymentmethod-paymentoptions-card-mercadopago-row {
+    display: flex;
+    gap: 15px;
+    margin: 0 0 15px 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-half {
+    flex: 1;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-half .paymentmethod-paymentoptions-card-mercadopago-imput-text {
+    width: 100%;
 }
 
-/* DOCUMENTO Y NÚMERO DE DOCUMENTO - NUEVO */
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationType-container-mobile),
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationNumber-container-mobile) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 4%;
-}
-
-/* TARJETA Y CUOTAS - NUEVO */
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#issuer-container-mobile),
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#installments-container-mobile) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 4%;
-}
-
-/* LIMPIAR FLOATS DESPUÉS DE CADA FILA DOBLE */
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#cardholderName-container-mobile),
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationNumber-container-mobile),
-.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#installments-container-mobile) {
-    clear: both;
-    margin-right: 0;
-}
 
 /* INFORMACIÓN PAYPAL */
 .paymentmethod-paymentoptions-paypal-information {
