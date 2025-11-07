@@ -3110,22 +3110,15 @@ font-size: 1.5rem;
     z-index: 2;
 }
 
-/* OPCIONES DE PAGO */
+/* OPCIONES DE PAGO - CONTENEDOR PRINCIPAL CON FLEX */
 .paymentmethod-paymentoptions-creditcard-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
     width: 100%;
-    display: block;
-    margin: 0px;
-}
-
-/* HEADER CON FLEX (radio + label + icons) - CORREGIDO */
-.paymentmethod-paymentoptions-creditcard-header-mobile,
-.paymentmethod-paymentoptions-paypal-header-mobile {
-    width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin: 0 0 10px 0;
+    gap: 15px;
+    margin: 0px;
+    padding: 10px 0;
 }
 
 /* RADIO BUTTON */
@@ -3133,9 +3126,10 @@ font-size: 1.5rem;
 .paymentmethod-paymentoptions-paypal-form-imput-mobile {
     transform: scale(1.5);
     margin: 0;
+    flex-shrink: 0;
 }
 
-/* LABEL CON FLEX - CORREGIDO */
+/* LABEL CON FLEX - EXPANDIDO */
 .paymentmethod-paymentoptions-creditcard-label-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-mobile {
     display: flex;
@@ -3143,9 +3137,10 @@ font-size: 1.5rem;
     justify-content: space-between;
     width: 100%;
     margin: 0px;
+    cursor: pointer;
 }
 
-/* TÍTULOS - CORREGIDO */
+/* TÍTULOS */
 .paymentmethod-paymentoptions-creditcard-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-title-mobile {
     font-family: 'Orbitron', sans-serif;
@@ -3155,36 +3150,23 @@ font-size: 1.5rem;
     line-height: 1.5;   
     margin: 0;
     white-space: nowrap;
+    flex-shrink: 0;
 }
 
-/* CONTENEDORES: ÍCONOS CON FLEX - CORREGIDO */  
+/* CONTENEDORES: ÍCONOS CON FLEX */  
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
     display: flex;
     gap: 5px;
     align-items: center;
     margin-left: auto;
-}
-/* ICONOS DE TARJETAS */
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fab {
-font-size: 2rem;
-margin: 0 8px;
-}
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-visa {
-color: #1a1f71; /* Azul Visa */
-}
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-mastercard {
-color: #eb001b; /* Rojo Mastercard */
-}
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile .fa-cc-amex {
-color: #2e77bc; /* Azul American Express */
-}
-.paymentmethod-paymentoptions-paypal-form-label-icon-mobile .fab {
-font-size: 0.8rem;
-color: #003087; /* Azul PayPal */
-margin: 0 8px;
+    flex-shrink: 0;
 }
 
+/* ICONOS DE TARJETAS */
+.card-icon {
+    flex-shrink: 0;
+}
 
 
 
