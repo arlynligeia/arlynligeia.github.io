@@ -636,23 +636,6 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .digitalproducts-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    DIGITALFILM
 ====================================== */
@@ -660,10 +643,10 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .digitalfilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background-color: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
+margin: 10px auto 40px auto;
+padding: 20px;
 }
 .digitalfilm-container::before {
 content: "";
@@ -673,7 +656,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfilm-title {
@@ -682,14 +665,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .digitalfilm-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -705,15 +688,16 @@ grid-auto-rows: 250px;
 gap: 20px;
 margin: 0 0 30px 0;
 }
-/* CONTENEDOR: TARJETA DE PRODUCTOS */
+/* CONTENEDOR: TARJETAS */
 .digitalfilm-columns-grid-card {
 position: relative;
-overflow: hidden;
+display: block; 
 height: 100%;
-display: block;
+overflow: hidden;
 border-radius: 15px;
-border: 2px solid white !important;
+border: 3px solid #00FFFF !important;
 text-decoration: none;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
 }
 .digitalfilm-columns-grid-card img {
 width: 100%;
@@ -724,21 +708,28 @@ transition: transform 0.3s ease;
 .digitalfilm-columns-grid-card img:hover { 
 transform: scale(1.1);
 }
-/* CONTENEDOR: TEXTO */
-.digitalfilm-columns-grid-card-text {
+/* CONTENEDOR: ETIQUETAS */
+.digitalfilm-columns-grid-card-label {
 position: absolute;
 z-index: 2;
 top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
+left: 0;
+width: 100%;
+height: 60px;
+background-color: #ff1493 !important;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translateY(-50%);
+}
+.digitalfilm-columns-grid-card-label-text {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-align: center;
-white-space: nowrap;
 text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
-/* CONTENEDOR: BOTONES FINALES */
+/* CONTENEDOR: BOTONES */
 .digitalfilm-buttons {
 display: flex;
 justify-content: space-between;
@@ -748,14 +739,14 @@ margin: 0px;
 .digitalfilm-button-continueshopping {
 display: flex;
 justify-content: space-between;
-background-color: #00CED1 !important;
+background-color: #00FFFF !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
-text-decoration: none; 
-padding: 10px 20px 10px 20px;
+color: #000000 !important;
+text-decoration: none;
 margin: 0px;
+padding: 10px 20px 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
@@ -764,20 +755,132 @@ transition: transform 0.3s ease;
 .digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* CONTROL */
+.digitalfilm-container { display: block; }
+.digitalfilm-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DIGITAL FILM
+====================================== */
+@media (max-width: 768px) {
+.digitalfilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto;
+padding: 20px;
+}
+.digitalfilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.digitalfilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.digitalfilm-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.digitalfilm-cards-mobile {
+position: relative;
+z-index: 2;
+margin: 0px; 
+}
+.digitalfilm-card-mobile {
+position: relative;
+display: block; 
+width: 100%;
+height: 200px;
+overflow: hidden;
+box-sizing: border-box;
+border-radius: 15px;
+border: 3px solid #00FFFF !important;
+text-decoration: none;
+margin-bottom: 20px;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
+}
+.digitalfilm-card-mobile:last-child {
+margin-bottom: 0px;
+}
+.digitalfilm-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.digitalfilm-card-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTENEDOR: ETIQUETAS MÓVIL */
+.digitalfilm-columns-grid-card-label-mobile {
+position: absolute;
+z-index: 2;
+top: 50%;
+left: 0;
+width: 100%;
+height: 50px;
+background-color: #ff1493 !important;
+display: flex;
+align-items: center;
+justify-content: center;
+transform: translateY(-50%);
+}
+.digitalfilm-card-label-text-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-align: center;
+text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+/* CONTENEDOR: BOTONES MÓVIL */
+.digitalfilm-buttons-mobile {
+width: 100%;
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.digitalfilm-button-back-mobile,
+.digitalfilm-button-continueshopping-mobile {
+display: inline-block;
+background-color: #00FFFF !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: #000000 !important;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+margin: 5px; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.digitalfilm-button-back-mobile:hover,
+.digitalfilm-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.digitalfilm-container { display: none; }
+.digitalfilm-container-mobile { display: block; }
+}
 /* ======================================
    DIGITAL FEATURE FILM
 ====================================== */
@@ -785,9 +888,9 @@ transform: scale(1.05);
 .digitalfeaturefilm-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
-margin: 40px auto;
+margin: 10px auto 40px auto;
 padding: 30px;
 }
 .digitalfeaturefilm-container::before {
@@ -798,7 +901,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title {
@@ -807,14 +910,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .digitalfeaturefilm-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
@@ -822,12 +925,10 @@ text-decoration: none;
 width: 100%;
 margin: 0 0 20px 0;
 }
-.digitalfeaturefilm-information-text,
-.digitalfeaturefilm-information-text,
 .digitalfeaturefilm-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: justify;
@@ -843,11 +944,13 @@ z-index: 2;
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 20px;
-margin: 0 0 30px 0;
+margin: 0 0 20px 0;
 }
 /* CONTENEDOR: PRODUCTOS */
 .digitalfeaturefilm-columns-grid-product {
 width: 100%;
+display: block;
+justify-content: center; 
 margin: 0px;
 }
 .digitalfeaturefilm-columns-grid-product-image {
@@ -856,32 +959,42 @@ margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-columns-grid-product-image img {
 width: 100%;
+display: block;
+height: auto;
 border-radius: 15px;
 }
-.digitalfeaturefilm-columns-grid-product-information div {
+.digitalfeaturefilm-columns-grid-product-name,
+.digitalfeaturefilm-columns-grid-product-price {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
+text-decoration: none;   
+text-transform: uppercase;
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
-text-transform: uppercase;
+}
+.digitalfeaturefilm-columns-grid-product-price {
+font-size: 1.5rem;
 }
 .digitalfeaturefilm-columns-grid-product-button {
+width: 100%;
+display: block;
 text-align: center;
 margin: 0px;
 }
 .digitalfeaturefilm-columns-grid-product-button-view {
 display: inline-block;
-text-align: center; 
 background-color: #ff1493 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none; 
-padding: 10px 20px 10px 20px;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
 margin: 0px;
+padding: 10px 20px;
 border: none;  
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -899,14 +1012,16 @@ margin: 0px;
 .digitalfeaturefilm-button-continueshopping {
 display: flex;
 justify-content: space-between;
-background-color: #00CED1 !important;
+background-color: #00FFFF !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
-text-decoration: none; 
-padding: 10px 20px 10px 20px;
-margin: 0;
+color: black !important;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+margin: 0px;
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
@@ -915,6 +1030,178 @@ transition: transform 0.3s ease;
 .digitalfeaturefilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
+ /* CONTROL */
+.digitalfeaturefilm-container { display: block; }
+.digitalfeaturefilm-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DIGITAL FEATURE FILM
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA, TÍTULO*/ 
+.digitalfeaturefilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.digitalfeaturefilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.digitalfeaturefilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.digitalfeaturefilm-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.digitalfeaturefilm-information-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.digitalfeaturefilm-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+/* SEPARADOR */
+.digitalfeaturefilm-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: PRODUCTO */ 
+.digitalfeaturefilm-product-mobile  {
+width: 100%; 
+display: block;
+justify-content: center;
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN */ 
+.digitalfeaturefilm-product-image-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.digitalfeaturefilm-product-image-mobile img {
+width: 100%;
+height: 200px;
+display: block;
+border-radius: 15px;
+}
+/* CONTENEDOR: NOMBRE Y PRECIO */ 
+.digitalfeaturefilm-product-name-mobile,
+.digitalfeaturefilm-product-price-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none; 
+text-transform: uppercase;
+line-height: 1.5;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.digitalfeaturefilm-product-price-mobile {
+font-size: 1.2rem;
+}
+/* CONTENEDOR: BOTÓN */ 
+.digitalfeaturefilm-product-button-mobile {
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.digitalfeaturefilm-product-button-view-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase; 
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.digitalfeaturefilm-content-product-button-view-mobile:hover {
+transform: scale(1.05);
+} 
+/* CONTENEDOR: BOTONES FINALES */
+.digitalfeaturefilm-buttons-mobile {
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.digitalfeaturefilm-button-back-mobile,
+.digitalfeaturefilm-button-continueshopping-mobile {
+display: inline-block;
+background: #00FFFF !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;  
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.digitalfeaturefilm-button-continueshopping-mobile {
+margin: 0px; 
+} 
+.digitalfeaturefilm-button-back-mobile:hover,
+.digitalfeaturefilm-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.digitalfeaturefilm-container { display: none; }
+.digitalfeaturefilm-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    COMET SPONSOR
