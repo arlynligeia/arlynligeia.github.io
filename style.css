@@ -2849,150 +2849,153 @@ color: white !important;
 text-decoration: none;
 }
 
-/* CONTENEDOR RESUMEN DEL PEDIDO */
+
+/* CONTENEDOR: TOTAL */
 .paymentmethod-total {
-background-color: rgba(255, 255, 255, 0.1);
-border-radius: 15px;
-border: 3px solid #39ff14 !important;
-padding: 15px;
-margin: 0 0 15px 0;
+    background-color: transparent !important;
+    border-radius: 15px;
+    border: 3px solid #FF6B00 !important;
+    padding: 15px;
+    margin: 0 0 15px 0;
+    text-align: center;
 }
+.paymentmethod-total-text,
+.paymentmethod-total-symbol,
 .paymentmethod-total-amount {
-display: block;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.5rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;
-margin: 0px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    line-height: 1.5;
+    text-align: center;   
+    margin: 0px;      
 }
-/* HEADER DE OPCIONES */
-.paymentmethod-form-option-creditcard,
-.paymentmethod-form-option-paypal {
-display: flex;
-align-items: center;
-gap: 10px;
-margin-bottom: 15px;
-}
-/* RADIO BUTTON MÁS GRANDE */
-.paymentmethod-form-option-creditcard-header,
-.paymentmethod-form-option-paypal-header {
-transform: scale(1.5);
-margin: 0 5px;
-}
-.paymentmethod-form-option-creditcard-label,
-.paymentmethod-form-option-paypal-label {
-display: flex;
-align-items: center;
-margin: 0;
-}
-.paymentmethod-form-option-creditcard-title,
-.paymentmethod-form-option-paypal-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #39ff14 !important;
-margin: 0;
-}
-.paymentmethod-form-option-creditcard-icons,
-.paymentmethod-form-option-paypal-icons {
-display: flex;
-gap: 10px;
-margin-left: auto;
-align-items: center;
-}
-.paymentmethod-form-option-creditcard-icons img,
-.paymentmethod-form-option-paypal-icons img {
-width: 50px;
-height: 35px;
-object-fit: contain;
-border-radius: 4px;
-background: white;
-padding: 3px;
-}
-/* FILAS DEL FORMULARIO */
-.paymentmethod-form-option-creditcard-card-content-row {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
+.paymentmethod-total-symbol,
+.paymentmethod-total-amount {
+    font-size: 1.8rem;
 }
 
-.paymentmethod-form-option-creditcard-card-content-row-input {
-    flex: 1;
+/* CONTENEDOR OPCIONES */
+.paymentmethod-paymentoptions-card,
+.paymentmethod-paymentoptions-paypal {
+    margin: 0 0 15px 0;
+}
+
+/* ENCABEZADO CON RADIO + LABEL + ICONOS */
+.paymentmethod-paymentoptions-card-head,
+.paymentmethod-paymentoptions-paypal-head {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 0 15px 0;
+    padding: 15px;
+}
+
+/* RADIO BUTTON */
+.paymentmethod-paymentoptions-card-head-imput,
+.paymentmethod-paymentoptions-paypal-head-imput {
+    transform: scale(1.5);
+    flex-shrink: 0;
+    margin: 0px;    
+}
+
+/* LABEL CON FLEX */
+.paymentmethod-paymentoptions-card-head-label,
+.paymentmethod-paymentoptions-paypal-head-label {
     width: 100%;
-    height: 40px;
-    background-color: white !important;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
+    margin: 0px;
+    cursor: pointer;
+}
+
+/* TÍTULOS */
+.paymentmethod-paymentoptions-card-head-label-title,
+.paymentmethod-paymentoptions-paypal-head-label-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin: 0px;
+}
+
+/* ICONOS */
+.paymentmethod-paymentoptions-card-head-label-icons,
+.paymentmethod-paymentoptions-paypal-head-label-icon {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+.paymentmethod-paymentoptions-card-head-label-icons-icon {
+    flex-shrink: 0;
+}
+
+/* FORMULARIO DE TARJETA */
+.paymentmethod-paymentoptions-card-mercadopago {
+    margin: 0 0 15px 0;
+}
+
+/* INPUTS GENERALES - UNO POR FILA */
+.paymentmethod-paymentoptions-card-mercadopago-imput {
+    width: 100%;
+    margin: 0 0 15px 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-text {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;   
+    background-color: white !important;   
     border-radius: 6px;
+    border: 2px solid #ccc;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: black !important;
     text-decoration: none;
-    box-sizing: border-box;
-    padding: 10px;
-    border: none;
+    margin: 0px;   
+    padding: 10px 15px;    
 }
 
-/* Para filas con inputs directos (como card number) */
-.paymentmethod-form-option-creditcard-card-content-row:first-of-type .paymentmethod-form-option-creditcard-card-content-row-input {
+/* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
+.paymentmethod-paymentoptions-card-mercadopago-row {
+    display: flex;
+    gap: 15px;
+    margin: 0 0 15px 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-half {
     flex: 1;
 }
-
-/* Para filas con inputs dentro de divs (como MM/YY y CVV) */
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) > div {
-    flex: 1;
-}
-
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(2) .paymentmethod-form-option-creditcard-card-content-row-input {
-    width: 100%;
-}
-/* PARA LAS DOS ÚLTIMAS FILAS - DOCUMENTO E ISSUER/INSTALMENTS */
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(4) > div,
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(5) > div {
-    flex: 1;
-}
-
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(4) .paymentmethod-form-option-creditcard-input,
-.paymentmethod-form-option-creditcard-card-content-row:nth-of-type(5) .paymentmethod-form-option-creditcard-input {
+.paymentmethod-paymentoptions-card-mercadopago-imput-half .paymentmethod-paymentoptions-card-mercadopago-imput-text {
     width: 100%;
 }
 
-/* TEXTOS SOBRE LOS RECUADROS */
-.paymentmethod-form-option-creditcard-label {
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: left;  
-margin: 0 0 5px 0;
+/* INFORMACIÓN PAYPAL */
+.paymentmethod-paymentoptions-paypal-information {
+    background-color: transparent !important;
+    border-radius: 15px;
+    border: 3px solid #FF6B00 !important;
+    margin: 0 0 15px 0;   
+    padding: 15px;
+    text-align: justify;
 }
-/* RECUADROS Y TEXTOS DENTRO */
-.paymentmethod-form-option-creditcard-input {
-width: 100%;
-height: 40px;
-background-color: white !important;
-border-radius: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: black !important;
-text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
-margin: 0 0 15px 0;
-border: none;
+.paymentmethod-paymentoptions-paypal-information-text,
+.paymentmethod-paymentoptions-paypal-information-text-end {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: #00FF00 !important;
+    text-decoration: none;   
+    line-height: 1.5;
+    text-align: justify;   
+    margin: 0 0 15px 0;
 }
-.paymentmethod-form-option-paypal-card-content-text p,
-.paymentmethod-form-option-paypal-card-content-text-end p {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-line-height: 1.5;
-margin: 0 0 10px 0;
+.paymentmethod-paymentoptions-paypal-information-text-end {
+    margin: 0px;
 }
-.paymentmethod-form-option-paypal-card-content-text-end p {
-margin: 0 0 20px 0;
-}
+
 /* CONTENEDOR DE BOTONES FINALES */
 .paymentmethod-buttons {
 display: flex;
