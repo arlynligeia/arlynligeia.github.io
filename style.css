@@ -2848,6 +2848,7 @@ margin-bottom: 16px;
 color: white !important;
 text-decoration: none;
 }
+
 /* CONTENEDOR RESUMEN DEL PEDIDO */
 .paymentmethod-total {
 background-color: rgba(255, 255, 255, 0.1);
@@ -3077,90 +3078,77 @@ color: #FF66CC !important;
 text-decoration: none;
 }
    
-/* CONTENEDOR RESUMEN DEL PEDIDO */
+/* TOTAL */
 .paymentmethod-total-mobile {
-background: rgba(255, 255, 255, 0.1);
-border-radius: 15px;
-border: 3px solid #FF6B00 !important;
-text-align: center;
-margin: 0 0 10px 0;   
-padding: 10px;
-}  
-.paymentmethod-total-text-mobile,
-.paymentmethod-total-symbol-mobile,
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 3px solid #39ff14 !important;
+    padding: 15px;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.paymentmethod-total-text-mobile {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white !important;
+}
+
 .paymentmethod-total-amount-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: #00FF00 !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: center;   
-margin: 0px;
-}
-.paymentmethod-total-symbol-mobile,
-.paymentmethod-total-amount-mobile {
-font-size: 1.5rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.5rem;
+    color: white !important;
 }
 
-
-   
-/* CONTENEDOR: OPCIONES DE PAGO */
-.paymentmethod-paymentoptions-mobile {
-    position: relative;
-    z-index: 2;
-}
-
-
-/* OPCIONES DE PAGO - MANTENER BLOCK */
-.paymentmethod-paymentoptions-creditcard-mobile,
+/* OPCIONES DE PAGO - ENCABEZADO */
+.paymentmethod-paymentoptions-card-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
-    width: 100%;
-    display: block;
-    margin: 0px;
+    margin-bottom: 20px;
 }
-/* CONTENEDOR INTERNO CON FLEX - SOLO PARA LA FILA */
-.paymentmethod-paymentoptions-creditcard-mobile {
+
+/* ENCABEZADO CON RADIO + LABEL + ICONOS */
+.paymentmethod-paymentoptions-card-head-mobile,
+.paymentmethod-paymentoptions-paypal-head-mobile {
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-bottom: 15px;
     padding: 10px 0;
 }
 
 /* RADIO BUTTON */
-.paymentmethod-paymentoptions-creditcard-imput-mobile,
-.paymentmethod-paymentoptions-paypal-form-imput-mobile {
+.paymentmethod-paymentoptions-card-head-imput-mobile,
+.paymentmethod-paymentoptions-paypal-head-imput-mobile {
     transform: scale(1.5);
     margin: 0;
     flex-shrink: 0;
 }
 
-/* LABEL CON FLEX - EXPANDIDO */
-.paymentmethod-paymentoptions-creditcard-label-mobile,
-.paymentmethod-paymentoptions-paypal-form-label-mobile {
+/* LABEL CON FLEX */
+.paymentmethod-paymentoptions-card-head-label-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-mobile {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 0px;
+    margin: 0;
     cursor: pointer;
 }
 
 /* TÍTULOS */
-.paymentmethod-paymentoptions-creditcard-label-title-mobile,
-.paymentmethod-paymentoptions-paypal-form-label-title-mobile {
+.paymentmethod-paymentoptions-card-head-label-title-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-title-mobile {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: #00FF00 !important;
-    text-decoration: none;
-    line-height: 1.5;   
     margin: 0;
     white-space: nowrap;
     flex-shrink: 0;
 }
 
-/* CONTENEDORES: ÍCONOS CON FLEX */  
-.paymentmethod-paymentoptions-creditcard-label-icons-mobile,
-.paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
+/* ICONOS */
+.paymentmethod-paymentoptions-card-head-label-icons-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-icon-mobile {
     display: flex;
     gap: 5px;
     align-items: center;
@@ -3168,59 +3156,76 @@ font-size: 1.5rem;
     flex-shrink: 0;
 }
 
-/* ICONOS DE TARJETAS */
-.card-icon {
+.paymentmethod-paymentoptions-card-head-label-icons-icon-mobile {
     flex-shrink: 0;
 }
 
-
-
-
-   
-/* CAMPOS DE TARJETA DE CRÉDITO - BLOCK */
-.paymentmethod-paymentoptions-creditcard-card-mobile {
-width: 100%;
-display: block;
-margin: 0 0 15px 0;
+/* FORMULARIO DE TARJETA */
+.paymentmethod-paymentoptions-card-mercadopago-mobile {
+    margin-top: 15px;
 }
-.paymentmethod-paymentoptions-creditcard-card-label-mobile {
-width: 100%;
-display: block;
-margin: 0 0 15px 0;
+
+/* INPUTS GENERALES - UNO POR FILA */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile {
+    width: 100%;
+    margin-bottom: 15px;
 }
-.paymentmethod-paymentoptions-creditcard-card-imput-mobile {
-width: 100%;
-height: 40px;
-background-color: white !important;
-border-radius: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: black !important;
-text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
-margin: 0;
-border: none;
+
+.paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile {
+    width: 100%;
+    height: 40px;
+    background-color: white !important;
+    border-radius: 8px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    color: black !important;
+    padding: 10px 15px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
 }
-   
-/* INFORMACIÓN PAYPAL - BLOCK */
+
+/* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+    margin-right: 0;
+}
+
+/* CONTENEDOR PARA AGRUPAR FECHA Y CVV */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile) {
+    float: left;
+}
+
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+    float: right;
+}
+
+/* LIMPIAR FLOATS DESPUÉS DE LA FILA DE FECHA/CVV */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#cardholderName-container-mobile) {
+    clear: both;
+}
+
+/* INFORMACIÓN PAYPAL */
 .paymentmethod-paymentoptions-paypal-information-mobile {
-width: 100%;
-display: block;
-margin: 0 0 10px 0;
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #39ff14 !important;
+margin: 0px;
+padding: 10px;
 }
-.paymentmethod-paymentoptions-paypal-information-text-mobile,
-.paymentmethod-paymentoptions-paypal-information-text-end-mobile {
+.paymentmethod-paymentoptions-paypal-information-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: #00FF00 !important;
+color: white !important;
 text-decoration: none;   
-line-height: 1.5;
+line-height: 1.4;
 margin: 0 0 10px 0;
 }
-
-
-
 
    
 /* CONTENEDOR DE BOTONES FINALES */
