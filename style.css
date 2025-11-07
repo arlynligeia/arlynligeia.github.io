@@ -3110,14 +3110,19 @@ font-size: 1.5rem;
     z-index: 2;
 }
 
-/* OPCIONES DE PAGO - CONTENEDOR PRINCIPAL CON FLEX */
+
+/* OPCIONES DE PAGO - MANTENER BLOCK */
 .paymentmethod-paymentoptions-creditcard-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
     width: 100%;
+    display: block;
+    margin: 0px;
+}
+/* CONTENEDOR INTERNO CON FLEX - SOLO PARA LA FILA */
+.paymentmethod-paymentoptions-creditcard-mobile {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin: 0px;
     padding: 10px 0;
 }
 
