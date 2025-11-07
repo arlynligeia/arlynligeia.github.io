@@ -3086,10 +3086,7 @@ margin: 0 0 10px 0;
 padding: 10px;
 }  
 .paymentmethod-total-text-mobile,
-.paymentmethod-total-symbol-mobile,
 .paymentmethod-total-amount-mobile {
-display: flex;
-justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -3097,6 +3094,10 @@ text-decoration: none;
 line-height: 1.5;
 margin: 0px;
 }
+.paymentmethod-total-amount-mobile {
+font-size: 1.5rem;
+}
+   
 /* Etiqueta a la izquierda */
 .paymentmethod-total-text-mobile {
 text-align: left;
