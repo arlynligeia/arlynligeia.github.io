@@ -3086,29 +3086,18 @@ margin: 0 0 10px 0;
 padding: 10px;
 }  
 .paymentmethod-total-text-mobile,
+.paymentmethod-total-symbol-mobile,
 .paymentmethod-total-amount-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
+text-align: center;   
 margin: 0px;
 }
 .paymentmethod-total-amount-mobile {
 font-size: 1.5rem;
-}
-   
-/* Etiqueta a la izquierda */
-.paymentmethod-total-text-mobile {
-text-align: left;
-flex: 1;
-}
-.paymentmethod-total-symbol-mobile, {
-margin-right: 10px;
-}
-.paymentmethod-total-amount-mobile {
-text-align: right;
-min-width: 130px;
 }
    
 /* CONTENEDOR: OPCIONES DE PAGO */
@@ -3119,10 +3108,18 @@ z-index: 2;
 /* OPCIONES DE PAGO */
 .paymentmethod-paymentoptions-creditcard-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}
+/* HEADER CON FLEX (radio + label + icons) */
+.paymentmethod-paymentoptions-creditcard-header-mobile,
+.paymentmethod-paymentoptions-paypal-header-mobile {
+width: 100%;
 display: flex;
 align-items: center;
 gap: 10px;
-margin-bottom: 10px;
+margin: 0 0 10px 0;
 }
 /* RADIO BUTTON */
 .paymentmethod-paymentoptions-creditcard-imput-mobile,
@@ -3130,12 +3127,14 @@ margin-bottom: 10px;
 transform: scale(1.5);
 margin: 0 5px;
 }
+/* LABEL CON FLEX */
 .paymentmethod-paymentoptions-creditcard-label-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-mobile {
 display: flex;
 align-items: center;
-margin: 0;
+margin: 0px;
 }
+/* TÍTULOS */
 .paymentmethod-paymentoptions-creditcard-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-title-mobile {
 font-family: 'Orbitron', sans-serif;
@@ -3145,7 +3144,7 @@ text-decoration: none;
 line-height: 1.5;   
 margin: 0;
 }
-/* CONTENEDORES: ÍCONOS */  
+/* CONTENEDORES: ÍCONOS CON FLEX */  
 .paymentmethod-paymentoptions-creditcard-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-form-label-icon-mobile {
 display: flex;
@@ -3173,9 +3172,15 @@ color: #003087; /* Azul PayPal */
 margin: 0 8px;
 }
    
-/* CAMPOS DE TARJETA DE CRÉDITO */
+/* CAMPOS DE TARJETA DE CRÉDITO - BLOCK */
+.paymentmethod-paymentoptions-creditcard-card-mobile {
+width: 100%;
+display: block;
+margin: 0 0 15px 0;
+}
 .paymentmethod-paymentoptions-creditcard-card-label-mobile {
 width: 100%;
+display: block;
 margin: 0 0 15px 0;
 }
 .paymentmethod-paymentoptions-creditcard-card-imput-mobile {
@@ -3193,7 +3198,7 @@ margin: 0;
 border: none;
 }
    
-/* INFORMACIÓN PAYPAL */
+/* INFORMACIÓN PAYPAL - BLOCK */
 .paymentmethod-paymentoptions-paypal-information-mobile {
 width: 100%;
 display: block;
@@ -3208,6 +3213,9 @@ text-decoration: none;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
+
+
+
 
    
 /* CONTENEDOR DE BOTONES FINALES */
