@@ -2312,270 +2312,265 @@ setupBuyButton();
 
 
 
-
+<!-- SCRIP: CARRITO MOBILE -->
 <script>
-// CARRITO MOBILE
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🛒 Carrito Mobile iniciado');  
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // STOCK DE PRODUCTOS INTERNO
-    const productStock = {
-        "Comet Sponsor": 288,
-        "Planet Sponsor": 120,
-        "Star Sponsor": 48,
-        "Comet Sponsor Brand": 24,
-        "Planet Sponsor Brand": 8,
-        "Star Sponsor Brand": 2,
-        "Nebula Executive Producer": 1,
-        "Pulsar Executive Producer": 1,
-        "Black Hole Executive Producer": 1,
-        "Quasar Executive Producer": 1,
-        "Galaxy Executive Producer": 1,
-        "Cosmos Executive Producer": 1
-    };
+console.log('🛒 Carrito Mobile iniciado');  
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// STOCK DE PRODUCTOS INTERNO
+const productStock = {
+"Comet Sponsor": 288,
+"Planet Sponsor": 120,
+"Star Sponsor": 48,
+"Comet Sponsor Brand": 24,
+"Planet Sponsor Brand": 8,
+"Star Sponsor Brand": 2,
+"Nebula Executive Producer": 1,
+"Pulsar Executive Producer": 1,
+"Black Hole Executive Producer": 1,
+"Quasar Executive Producer": 1,
+"Galaxy Executive Producer": 1,
+"Cosmos Executive Producer": 1
+};
+// 1. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+function addToCart(productData) {
+const cartItem = cart.find(item => item.product === productData.product);
+const currentQuantity = cartItem ? cartItem.quantity : 0;
+const maxStock = productStock[productData.product] || 0;
+if (currentQuantity >= maxStock) {
+alert('❌ No hay stock disponible para ' + productData.product);
+return;
+}
+console.log('➕ Agregando al carrito mobile:', productData);
+const existingProduct = cart.find(item => item.product === productData.product); 
+if (existingProduct) {
+existingProduct.quantity += 1;  
+const unitPrice = existingProduct.price;
+const quantity = existingProduct.quantity;
+existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
+} else {
+cart.push({
+image: productData.image,
+product: productData.product,
+quantity: 1,
+price: productData.price,
+totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
+shipping: productData.shipping || '0' 
+});
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplayMobile();
+showNotification('Product added to cart successfully!');
+}
+// 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
+function updateCartDisplayMobile() {
+const cartContainer = document.querySelector('.cartfull-products-mobile');
+if (!cartContainer) return;
+// Limpiar productos existentes
+const existingProducts = cartContainer.querySelectorAll('.cartfull-products-product-mobile');
+existingProducts.forEach(product => product.remove());
+// Agregar cada producto del carrito
+cart.forEach((item, index) => {
+const productElement = document.createElement('div');
+productElement.className = 'cartfull-products-product-mobile';
+productElement.innerHTML = `
+<!-- DIVISOR -->
+<div class="cartfull-products-product-divider-mobile"></div>
+<!-- IMAGEN -->
+<div class="cartfull-products-product-image-mobile">
+<img src="${item.image}" alt="${item.product}">
+</div>  
+<!-- NOMBRE -->
+<div class="cartfull-products-product-name-mobile">
+<span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
+</div>
+<!-- CANTIDAD -->
+<div class="cartfull-products-product-quantity-mobile">
+<span class="cartfull-products-product-quantity-text-mobile">QTY</span> 
+<div class="cartfull-products-product-quantity-control-mobile">
+<button class="cartfull-products-product-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile(${index})">-</button>
+<span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
+<button class="cartfull-products-product-quantity-control-increase-mobile" onclick="increaseQuantityMobile(${index})">+</button>
+</div>
+</div>
+<!-- PRECIO UNITARIO -->
+<div class="cartfull-products-product-unit-mobile">
+<span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
+<div class="cartfull-products-product-unit-value-mobile">  
+<span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+</div>
+</div>
+<!-- PRECIO TOTAL -->
+<div class="cartfull-products-product-total-mobile">
+<span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
+<div class="cartfull-products-product-total-value-mobile">  
+<span class="cartfull-products-product-total-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</div>
+<!-- BOTÓN: REMOVER -->  
+<div class="cartfull-products-button-mobile">  
+<button class="cartfull-products-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+</div>
+`;
+// Insertar antes del resumen
+const summary = cartContainer.querySelector('.cartfull-products-summary-mobile');
+cartContainer.insertBefore(productElement, summary);
+});
+updateCartTotalsMobile();
+updateCartSectionsMobile();
+}
+// 3. FUNCIÓN: ACTUALIZAR TOTALES MOBILE
+function updateCartTotalsMobile() {
+const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
+const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
+const total = subtotal + shipping;
+// Actualizar elementos en el resumen
+const subtotalElement = document.querySelector('.cartfull-products-summary-subtotal-value-amount-mobile');
+const shippingElement = document.querySelector('.cartfull-products-summary-shipping-value-amount-mobile');
+const totalElement = document.querySelector('.cartfull-products-summary-totalfinal-value-amount-mobile');
+if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
+if (shippingElement) shippingElement.textContent = formatNumberWithCommas(shipping.toFixed(2));
+if (totalElement) totalElement.textContent = formatNumberWithCommas(total.toFixed(2));
+}
+// 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE
+function updateCartSectionsMobile() {
+const cartEmpty = document.getElementById('cartempty-mobile');
+const cartFull = document.getElementById('cartfull-mobile');
+if (cart.length === 0) {
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+} else {
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+}
+}
+// 5. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+let parts = number.toString().split('.');
+let integerPart = parts[0];
+let decimalPart = parts[1] || '';
+integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
+}
+// 6. FUNCIONES GLOBALES PARA MOBILE
+window.removeFromCartMobile = function(productName) {
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplayMobile();
+};
+window.increaseQuantityMobile = function(index) {
+const cartItem = cart[index];
+const maxStock = productStock[cartItem.product] || 0;
+if (cartItem.quantity >= maxStock) {
+alert('❌ No hay más stock disponible');
+return;
+}
+cartItem.quantity += 1;
+cartItem.totalprice = (cartItem.quantity * parseFloat(cartItem.price.replace(/,/g, ''))).toFixed(2).toString();
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplayMobile();
+};
 
-    // 1. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
-    function addToCart(productData) {
-        const cartItem = cart.find(item => item.product === productData.product);
-        const currentQuantity = cartItem ? cartItem.quantity : 0;
-        const maxStock = productStock[productData.product] || 0;
-        
-        if (currentQuantity >= maxStock) {
-            alert('❌ No hay stock disponible para ' + productData.product);
-            return;
-        }
-        
-        console.log('➕ Agregando al carrito mobile:', productData);
-        const existingProduct = cart.find(item => item.product === productData.product); 
-        
-        if (existingProduct) {
-            existingProduct.quantity += 1;  
-            const unitPrice = existingProduct.price;
-            const quantity = existingProduct.quantity;
-            existingProduct.totalprice = (quantity * parseFloat(unitPrice.replace(/,/g, ''))).toFixed(2).toString();    
-        } else {
-            cart.push({
-                image: productData.image,
-                product: productData.product,
-                quantity: 1,
-                price: productData.price,
-                totalprice: (parseFloat(productData.price.replace(/,/g, ''))).toFixed(2).toString(),
-                shipping: productData.shipping || '0' 
-            });
-        }
-        
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplayMobile();
-        showNotification('Product added to cart successfully!');
-    }
-
-    // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
-    function updateCartDisplayMobile() {
-        const cartContainer = document.querySelector('.cartfull-products-mobile');
-        if (!cartContainer) return;
-        
-        // Limpiar productos existentes
-        const existingProducts = cartContainer.querySelectorAll('.cartfull-products-product-mobile');
-        existingProducts.forEach(product => product.remove());
-        
-        // Agregar cada producto del carrito
-        cart.forEach((item, index) => {
-            const productElement = document.createElement('div');
-            productElement.className = 'cartfull-products-product-mobile';
-            productElement.innerHTML = `
-                <!-- DIVISOR -->
-                <div class="cartfull-products-product-divider-mobile"></div>
-                <!-- IMAGEN -->
-                <div class="cartfull-products-product-image-mobile">
-                    <img src="${item.image}" alt="${item.product}">
-                </div>  
-                <!-- NOMBRE -->
-                <div class="cartfull-products-product-name-mobile">
-                    <span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
-                </div>
-                <!-- CANTIDAD -->
-                <div class="cartfull-products-product-quantity-mobile">
-                    <span class="cartfull-products-product-quantity-text-mobile">QTY</span> 
-                    <div class="cartfull-products-product-quantity-control-mobile">
-                        <button class="cartfull-products-product-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile(${index})">-</button>
-                        <span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
-                        <button class="cartfull-products-product-quantity-control-increase-mobile" onclick="increaseQuantityMobile(${index})">+</button>
-                    </div>
-                </div>
-                <!-- PRECIO UNITARIO -->
-                <div class="cartfull-products-product-unit-mobile">
-                    <span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
-                    <div class="cartfull-products-product-unit-value-mobile">  
-                        <span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
-                        <span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
-                    </div>
-                </div>
-                <!-- PRECIO TOTAL -->
-                <div class="cartfull-products-product-total-mobile">
-                    <span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
-                    <div class="cartfull-products-product-total-value-mobile">  
-                        <span class="cartfull-products-product-total-value-symbol-mobile">$</span>
-                        <span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
-                    </div>
-                </div>
-                <!-- BOTÓN: REMOVER -->  
-                <div class="cartfull-products-button-mobile">  
-                    <button class="cartfull-products-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
-                </div> 
-                <!-- DIVISOR -->
-                <div class="cartfull-products-product-divider-mobile"></div>
-            `;
-            
-            // Insertar antes del resumen
-            const summary = cartContainer.querySelector('.cartfull-products-summary-mobile');
-            cartContainer.insertBefore(productElement, summary);
-        });
-        
-        updateCartTotalsMobile();
-        updateCartSectionsMobile();
-    }
-
-    // 3. FUNCIÓN: ACTUALIZAR TOTALES MOBILE
-    function updateCartTotalsMobile() {
-        const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
-        const shipping = cart.reduce((sum, item) => sum + (parseFloat(item.shipping) * item.quantity), 0);
-        const total = subtotal + shipping;
-        
-        // Actualizar elementos en el resumen
-        const subtotalElement = document.querySelector('.cartfull-products-summary-subtotal-value-amount-mobile');
-        const shippingElement = document.querySelector('.cartfull-products-summary-shipping-value-amount-mobile');
-        const totalElement = document.querySelector('.cartfull-products-summary-totalfinal-value-amount-mobile');
-        
-        if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
-        if (shippingElement) shippingElement.textContent = formatNumberWithCommas(shipping.toFixed(2));
-        if (totalElement) totalElement.textContent = formatNumberWithCommas(total.toFixed(2));
-    }
-
-    // 4. FUNCIÓN: ACTUALIZAR SECCIONES DEL CARRITO MOBILE
-    function updateCartSectionsMobile() {
-        const cartEmpty = document.getElementById('cartempty-mobile');
-        const cartFull = document.getElementById('cartfull-mobile');
-        
-        if (cart.length === 0) {
-            if (cartEmpty) cartEmpty.style.display = 'block';
-            if (cartFull) cartFull.style.display = 'none';
-        } else {
-            if (cartEmpty) cartEmpty.style.display = 'none';
-            if (cartFull) cartFull.style.display = 'block';
-        }
-    }
-
-    // 5. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
-    function formatNumberWithCommas(number) {
-        let parts = number.toString().split('.');
-        let integerPart = parts[0];
-        let decimalPart = parts[1] || '';
-        integerPart = integerPart.replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-        return decimalPart ? `${integerPart}.${decimalPart}` : integerPart;
-    }
-
-    // 6. FUNCIONES GLOBALES PARA MOBILE
-    window.removeFromCartMobile = function(productName) {
-        cart = cart.filter(item => item.product !== productName);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplayMobile();
-    };
-
-    window.increaseQuantityMobile = function(index) {
-        const cartItem = cart[index];
-        const maxStock = productStock[cartItem.product] || 0;
-        
-        if (cartItem.quantity >= maxStock) {
-            alert('❌ No hay más stock disponible');
-            return;
-        }
-        
-        cartItem.quantity += 1;
-        cartItem.totalprice = (cartItem.quantity * parseFloat(cartItem.price.replace(/,/g, ''))).toFixed(2).toString();
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartDisplayMobile();
-    };
-
-    window.decreaseQuantityMobile = function(index) {
-        const cartItem = cart[index];
-        if (cartItem.quantity > 1) {
-            cartItem.quantity -= 1;
-            cartItem.totalprice = (cartItem.quantity * parseFloat(cartItem.price.replace(/,/g, ''))).toFixed(2).toString();
-            localStorage.setItem('cart', JSON.stringify(cart));
-            updateCartDisplayMobile();
-        }
-    };
-
-    // 7. BOTÓN: ADD TO CART MOBILE
-    document.querySelectorAll('[class$="-button-addtocart-mobile"]').forEach(button => {
-        button.addEventListener('click', function() {
-            const productData = {
-                image: this.getAttribute('data-image'),
-                product: this.getAttribute('data-product'),
-                price: this.getAttribute('data-price'),
-                shipping: this.getAttribute('data-shipping') || '0'
-            };
-            addToCart(productData);
-        });
-    });
-
-    // 8. BOTÓN: CLEAR CART MOBILE
-    document.querySelector('.cartfull-button-cleancart-mobile')?.addEventListener('click', function() {
-        if (cart.length > 0) {
-            if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
-                cart = [];
-                localStorage.setItem('cart', JSON.stringify(cart));
-                updateCartDisplayMobile();
-                updateCartSectionsMobile();
-            }
-        } else {
-            alert('The cart is already empty');
-        }
-    });
-
-    // 9. BOTÓN: CART MOBILE
-    function setupCartButtonMobile() {
-        const cartButtons = document.querySelectorAll('a.cart-button');
-        cartButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Ocultar todas las secciones
-                document.querySelectorAll('.main-section, .subsection, .mobile-only').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                const cartEmpty = document.getElementById('cartempty-mobile');
-                const cartFull = document.getElementById('cartfull-mobile');
-                
-                if (cart.length === 0) {
-                    if (cartEmpty) cartEmpty.style.display = 'block';
-                    if (cartFull) cartFull.style.display = 'none';
-                    window.location.hash = 'cartempty-mobile';
-                } else {
-                    if (cartEmpty) cartEmpty.style.display = 'none';
-                    if (cartFull) cartFull.style.display = 'block';
-                    updateCartDisplayMobile();
-                    window.location.hash = 'cartfull-mobile';
-                }
-            });
-        });
-    }
-
-    // 10. NOTIFICACIÓN
-    function showNotification(message) {
-        // Crear notificación móvil simple
-        alert(message);
-    }
-
-    // INICIALIZAR
-    setupCartButtonMobile();
-    if (cart.length > 0) {
-        updateCartDisplayMobile();
-    }
-    updateCartSectionsMobile();
+window.decreaseQuantityMobile = function(index) {
+const cartItem = cart[index];
+if (cartItem.quantity > 1) {
+cartItem.quantity -= 1;
+cartItem.totalprice = (cartItem.quantity * parseFloat(cartItem.price.replace(/,/g, ''))).toFixed(2).toString();
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplayMobile();
+}
+};
+// 7. BOTÓN: ADD TO CART MOBILE
+document.querySelectorAll('[class$="-button-addtocart-mobile"]').forEach(button => {
+button.addEventListener('click', function() {
+const productData = {
+image: this.getAttribute('data-image'),
+product: this.getAttribute('data-product'),
+price: this.getAttribute('data-price'),
+shipping: this.getAttribute('data-shipping') || '0'
+};
+addToCart(productData);
+});
+});
+// 8. BOTÓN: CLEAR CART MOBILE
+document.querySelector('.cartfull-button-cleancart-mobile')?.addEventListener('click', function() {
+if (cart.length > 0) {
+if (confirm('¿Estás seguro de que quieres vaciar el carrito?')) {
+cart = [];
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplayMobile();
+updateCartSectionsMobile();
+}
+} else {
+alert('The cart is already empty');
+}
+});
+// 9. BOTÓN: CART MOBILE
+function setupCartButtonMobile() {
+const cartButtons = document.querySelectorAll('a.cart-button-MOBILE');
+cartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// Ocultar todas las secciones
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartEmpty = document.getElementById('cartempty-mobile');
+const cartFull = document.getElementById('cartfull-mobile');
+if (cart.length === 0) {
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+window.location.hash = 'cartempty-mobile';
+} else {
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+updateCartDisplayMobile();
+window.location.hash = 'cartfull-mobile';
+}
+});
+});
+}
+// 11. BOTÓN: GO TO CART MOBILE
+function setupGoToCartButtonMobile() {
+const goToCartButtons = document.querySelectorAll('[class$="-button-gotocart-mobile"]');
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// Ocultar todas las secciones mobile
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartEmpty = document.getElementById('cartempty-mobile');
+const cartFull = document.getElementById('cartfull-mobile');
+if (cart.length === 0) {
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+window.location.hash = 'cartempty-mobile';
+} else {
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+updateCartDisplayMobile();
+window.location.hash = 'cartfull-mobile';
+}
+});
+});
+}
+// 10. NOTIFICACIÓN
+function showNotification(message) {
+// Crear notificación móvil simple
+alert(message);
+}
+// INICIALIZAR
+setupCartButtonMobile();
+setupGoToCartButtonMobile();
+if (cart.length > 0) {
+updateCartDisplayMobile();
+}
+updateCartSectionsMobile();
 });
 </script>
 
