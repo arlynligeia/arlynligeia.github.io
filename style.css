@@ -2955,21 +2955,37 @@ text-decoration: none;
 margin: 0px;   
 padding: 10px;    
 }
-/* DOCUMENTO Y NÚMERO DE DOCUMENTO */
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container),
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+/* FECHA Y CVV - FALTANTE */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
     width: 48%;
     display: inline-block;
     margin-right: 4%;
 }
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
     margin-right: 0;
 }
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container) {
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container) {
     float: left;
 }
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
     float: right;
+}
+/* DOCUMENTO Y NÚMERO DE DOCUMENTO */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+width: 48%;
+display: inline-block;
+margin-right: 4%;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+margin-right: 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container) {
+float: left;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
+float: right;
 }
 
 /* TARJETA Y CUOTAS */
