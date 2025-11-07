@@ -2815,7 +2815,7 @@ transform: scale(1.05);
 .paymentmethod-container {
 position: relative;
 width: 600px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2828,7 +2828,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;  
 }
 .paymentmethod-title {
@@ -2837,42 +2837,39 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 line-height: 1.6;
 text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
+margin: 0 0 16px 0;
 }
 .paymentmethod-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-
-
 /* CONTENEDOR: TOTAL */
 .paymentmethod-total {
-    background-color: transparent !important;
-    border-radius: 15px;
-    border: 3px solid #FF6B00 !important;
-    padding: 15px;
-    margin: 0 0 15px 0;
-    text-align: center;
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+text-align: center;   
+padding: 20px;
+margin: 0 0 05px 0;
 }
 .paymentmethod-total-text,
 .paymentmethod-total-symbol,
 .paymentmethod-total-amount {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.5rem;
-    color: #00FF00 !important;
-    text-decoration: none;
-    line-height: 1.5;
-    text-align: center;   
-    margin: 0px;      
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;   
+margin: 0px;      
 }
 .paymentmethod-total-symbol,
 .paymentmethod-total-amount {
-    font-size: 1.8rem;
+font-size: 1.5rem;
 }
 
 /* CONTENEDOR OPCIONES */
@@ -2960,17 +2957,36 @@ text-decoration: none;
     padding: 10px 15px;    
 }
 
-/* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
-.paymentmethod-paymentoptions-card-mercadopago-row {
-    display: flex;
-    gap: 15px;
-    margin: 0 0 15px 0;
+/* FECHA Y CVV - YA FUNCIONA */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
 }
-.paymentmethod-paymentoptions-card-mercadopago-imput-half {
-    flex: 1;
+
+/* DOCUMENTO Y NÚMERO DE DOCUMENTO - NUEVO */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationType-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationNumber-container-mobile) {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
 }
-.paymentmethod-paymentoptions-card-mercadopago-imput-half .paymentmethod-paymentoptions-card-mercadopago-imput-text {
-    width: 100%;
+
+/* TARJETA Y CUOTAS - NUEVO */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#issuer-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#installments-container-mobile) {
+    width: 48%;
+    display: inline-block;
+    margin-right: 4%;
+}
+
+/* LIMPIAR FLOATS DESPUÉS DE CADA FILA DOBLE */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#cardholderName-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#identificationNumber-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#installments-container-mobile) {
+    clear: both;
+    margin-right: 0;
 }
 
 /* INFORMACIÓN PAYPAL */
@@ -2995,6 +3011,7 @@ text-decoration: none;
 .paymentmethod-paymentoptions-paypal-information-text-end {
     margin: 0px;
 }
+
 
 /* CONTENEDOR DE BOTONES FINALES */
 .paymentmethod-buttons {
@@ -3030,15 +3047,9 @@ background-color: #ff1493 !important;
 .paymentmethod-button-pay:hover {
 transform: scale(1.05);
 }
+
 .paymentmethod-container { display: block; }
 .paymentmethod-container-mobile { display: none; }
-
-
-
-
-
-
-
 /* ======================================
    PAYMENT METHOD MOBILE
 ====================================== */
