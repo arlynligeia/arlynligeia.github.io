@@ -2622,6 +2622,218 @@ background-color: #ff1493 !important;
 .shippinginformation-button-proceedpayment:hover {
 transform: scale(1.05);
 }
+/* CONTROL DE VISIBILIDAD */
+.shippinginformation-container { display: block; }
+.shippinginformation-container-mobile { display: none; }
+/* ======================================
+   SHIPPING INFORMATION MOBILE
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippinginformation-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.shippinginformation-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shippinginformation-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.shippinginformation-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR RESUMEN DEL PEDIDO */
+.shippinginformation-ordersummary-mobile {
+background-color: rgba(255, 255, 255, 0.1);
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+padding: 15px;
+margin: 0 0 15px 0;
+}
+.shippinginformation-ordersummary-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal-mobile,
+.shippinginformation-ordersummary-shipping-mobile,
+.shippinginformation-ordersummary-total-mobile {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+}
+.shippinginformation-ordersummary-total-mobile {
+color: #FF6B00 !important;
+}
+/* Etiqueta a la izquierda */
+.shippinginformation-ordersummary-subtotal-text-mobile,
+.shippinginformation-ordersummary-shipping-text-mobile,
+.shippinginformation-ordersummary-total-text-mobile {
+text-align: left;
+flex: 1;
+}
+/* Símbolo y monto alineados a la derecha */
+.shippinginformation-ordersummary-subtotal-symbol-mobile,
+.shippinginformation-ordersummary-shipping-symbol-mobile,
+.shippinginformation-ordersummary-total-symbol-mobile {
+margin-right: 5px;
+}
+.shippinginformation-ordersummary-subtotal-amount-mobile,
+.shippinginformation-ordersummary-shipping-amount-mobile,
+.shippinginformation-ordersummary-total-amount-mobile {
+text-align: right;
+min-width: 130px;
+}
+/* CONTENEDOR DE FORMULARIO */
+.shippinginformation-form-mobile {
+position: relative;
+z-index: 2;
+}
+/* TÍTULOS DE SECCIONES */
+.shippinginformation-form-personalinformation-title-mobile,
+.shippinginformation-form-shippingaddress-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin: 0 0 15px 0;
+}
+/* TEXTOS SOBRE LOS RECUADROS */
+.shippinginformation-form-personalinformation-label-mobile,
+.shippinginformation-form-shippingaddress-label-mobile {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: left;  
+margin: 0 0 5px 0;
+}
+/* RECUADROS BLANCOS - 40px DE ALTO */
+.shippinginformation-form-personalinformation-imput-mobile,
+.shippinginformation-form-shippingaddress-imput-mobile {
+width: 100%;
+height: 40px;
+background-color: white !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+box-sizing: border-box;
+padding: 10px;
+margin: 0 0 15px 0;
+border: none;
+}
+/* CONTENEDOR DE BOTONES FINALES */
+.shippinginformation-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.shippinginformation-button-back-mobile,
+.shippinginformation-button-continueshopping-mobile,
+.shippinginformation-button-proceedpayment-mobile {
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.shippinginformation-button-proceedpayment-mobile {
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
+}
+.shippinginformation-button-back-mobile:hover,
+.shippinginformation-button-continueshopping-mobile:hover,
+.shippinginformation-button-proceedpayment-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DE VISIBILIDAD */
+.shippinginformation-container { display: none; }
+.shippinginformation-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
