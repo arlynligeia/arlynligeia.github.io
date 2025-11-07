@@ -3078,157 +3078,156 @@ color: #FF66CC !important;
 text-decoration: none;
 }
    
-/* TOTAL */
+/* CONTENEDOR: TOTAL */
 .paymentmethod-total-mobile {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    border: 3px solid #39ff14 !important;
-    padding: 15px;
-    margin: 0 0 20px 0;
-    text-align: center;
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0;   
+padding: 10px;
+text-align: center;
 }
-
-.paymentmethod-total-text-mobile {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    color: white !important;
-}
-
+.paymentmethod-total-text-mobile,
+.paymentmethod-total-symbol-mobile,
 .paymentmethod-total-amount-mobile {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.5rem;
-    color: white !important;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;   
+margin: 0px;      
 }
-
-/* OPCIONES DE PAGO - ENCABEZADO */
+.paymentmethod-total-symbol-mobile,
+.paymentmethod-total-amount-mobile{
+font-size: 1.2rem;
+}
+  
+/* CONTENEDOR OPCIONES */
 .paymentmethod-paymentoptions-card-mobile,
 .paymentmethod-paymentoptions-paypal-mobile {
-    margin-bottom: 20px;
+margin: 0 0 10px 0;
 }
-
 /* ENCABEZADO CON RADIO + LABEL + ICONOS */
 .paymentmethod-paymentoptions-card-head-mobile,
 .paymentmethod-paymentoptions-paypal-head-mobile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    padding: 10px 0;
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 0 0 10px 0;
+padding: 10px;
 }
-
 /* RADIO BUTTON */
 .paymentmethod-paymentoptions-card-head-imput-mobile,
 .paymentmethod-paymentoptions-paypal-head-imput-mobile {
-    transform: scale(1.5);
-    margin: 0;
-    flex-shrink: 0;
+transform: scale(1.5);
+flex-shrink: 0;
+margin: 0px;    
 }
-
 /* LABEL CON FLEX */
 .paymentmethod-paymentoptions-card-head-label-mobile,
 .paymentmethod-paymentoptions-paypal-head-label-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    cursor: pointer;
+width: 100%;
+display: flex;
+justify-content: space-between;   
+align-items: center;
+margin: 0px;
+cursor: pointer;
 }
-
 /* TÍTULOS */
 .paymentmethod-paymentoptions-card-head-label-title-mobile,
 .paymentmethod-paymentoptions-paypal-head-label-title-mobile {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
-    color: #00FF00 !important;
-    margin: 0;
-    white-space: nowrap;
-    flex-shrink: 0;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+white-space: nowrap;
+flex-shrink: 0;
+margin: 0px;
 }
-
 /* ICONOS */
 .paymentmethod-paymentoptions-card-head-label-icons-mobile,
 .paymentmethod-paymentoptions-paypal-head-label-icon-mobile {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin-left: auto;
-    flex-shrink: 0;
+display: flex;
+gap: 5px;
+align-items: center;
+flex-shrink: 0;
+margin-left: auto;
 }
-
 .paymentmethod-paymentoptions-card-head-label-icons-icon-mobile {
-    flex-shrink: 0;
+flex-shrink: 0;
 }
-
 /* FORMULARIO DE TARJETA */
 .paymentmethod-paymentoptions-card-mercadopago-mobile {
-    margin-top: 15px;
+margin: 0 0 10px 0;
 }
-
 /* INPUTS GENERALES - UNO POR FILA */
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile {
-    width: 100%;
-    margin-bottom: 15px;
+width: 100%;
+margin: 0 0 10px 0;
 }
-
 .paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile {
-    width: 100%;
-    height: 40px;
-    background-color: white !important;
-    border-radius: 8px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
-    color: black !important;
-    padding: 10px 15px;
-    border: 2px solid #ccc;
-    box-sizing: border-box;
+width: 100%;
+height: 40px;
+box-sizing: border-box;   
+background-color: white !important;   
+border-radius: 6px;
+border: 2px solid #ccc;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+margin: 0px;   
+padding: 10px;    
 }
-
 /* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile),
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
-    width: 48%;
-    display: inline-block;
-    margin-right: 4%;
+width: 48%;
+display: inline-block;
+margin-right: 4%;
 }
-
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
-    margin-right: 0;
+margin-right: 0;
 }
-
 /* CONTENEDOR PARA AGRUPAR FECHA Y CVV */
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile) {
-    float: left;
+float: left;
 }
-
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
-    float: right;
+float: right;
 }
-
 /* LIMPIAR FLOATS DESPUÉS DE LA FILA DE FECHA/CVV */
 .paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#cardholderName-container-mobile) {
-    clear: both;
+clear: both;
 }
 
 /* INFORMACIÓN PAYPAL */
 .paymentmethod-paymentoptions-paypal-information-mobile {
-background-color: rgba(255, 255, 255, 0.1);
+background-color: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
-margin: 0px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0;   
 padding: 10px;
+text-align: justify;
 }
-.paymentmethod-paymentoptions-paypal-information-text-mobile {
+.paymentmethod-paymentoptions-paypal-information-text-mobile,
+.paymentmethod-paymentoptions-paypal-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white !important;
 text-decoration: none;   
-line-height: 1.4;
+line-height: 1.5;
+text-align: justify;   
 margin: 0 0 10px 0;
 }
+.paymentmethod-paymentoptions-paypal-information-text-end-mobile {
+margin: 0px;
+}
+
 
    
-/* CONTENEDOR DE BOTONES FINALES */
+/* CONTENEDOR: BOTONES FINALES */
 .paymentmethod-button-mobile {
 width: 100%;
 display: block;
