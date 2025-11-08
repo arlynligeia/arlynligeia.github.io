@@ -2160,6 +2160,11 @@ function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
+
+// Encontrar donde insertar los productos (antes del segundo divisor)
+const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider');
+const insertPosition = dividers[1];
+
 cart.forEach((item) => {
 const productRow = document.createElement('tr');
 productRow.className = 'cartfull-table-wrapper-body-row product-row';
@@ -2206,13 +2211,18 @@ productRow.innerHTML = `
 </td>
 
 `;
-cartBody.appendChild(productRow);
+// Insertar antes del segundo divisor (donde están los totales)
+cartBody.insertBefore(productRow, insertPosition);
 });
 updateShippingTotal();
 updateSubtotal(); 
 updateTotalFinal();
 updateAddToCartButtons();
 }
+
+
+
+  
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
 function updateAddToCartButtons() {
 document.querySelectorAll('[class$="-button-addtocart"]').forEach(button => {
