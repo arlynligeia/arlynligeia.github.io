@@ -975,7 +975,7 @@ Cosmic/Psychological Horror</p>
 
 
   
-<!-- PAYMENT METHOD -->
+<!-- PAYMENT METHOD PC -->
 <section class="paymentmethod-section main-section" id="paymentmethod">
 <div class="paymentmethod-container">
 <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2> 
@@ -984,14 +984,11 @@ Cosmic/Psychological Horror</p>
 <span class="paymentmethod-total-text">TOTAL</span><br>
 <span class="paymentmethod-total-amount" id="paymentmethod-total">$ 0.00</span>
 </div>
-  
 <!-- CONTENEDOR: PAYMENT OPTIONS --> 
 <div class="paymentmethod-paymentoptions">  
 <form id="paymentmethod-paymentoptions" method="POST">
-  
 <!-- CONTENEDOR: OPCIÓN 1: CARD -->
 <div class="paymentmethod-paymentoptions-card">
-  
 <div class="paymentmethod-paymentoptions-card-head">  
 <input class="paymentmethod-paymentoptions-card-head-imput" id="creditcard" type="radio" name="payment-method" value="credit-card">  
 <label class="paymentmethod-paymentoptions-card-head-label" for="creditcard">
@@ -1023,7 +1020,6 @@ Cosmic/Psychological Horror</p>
 </span>
 </label> 
 </div>
-  
 <!-- CONTENEDOR: MERCADO PAGO -->
 <div class="paymentmethod-paymentoptions-card-mercadopago" id="creditcard-form">  
 <!-- NÚMERO DE TARJETA -->
@@ -1065,9 +1061,7 @@ Cosmic/Psychological Horror</p>
 </select>
 </div>  
 </div>
-  
 </div>
-  
 <!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
 <div class="paymentmethod-paymentoptions-paypal">  
 <div class="paymentmethod-paymentoptions-paypal-head">
@@ -1092,7 +1086,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text-end">• No need to enter card details on this site</p>
 </div>  
 </div>
-
 <!-- CONTENEDOR: OPCIÓN 3: GOOGLE PAY -->
 <div class="paymentmethod-paymentoptions-googlepay">   
 <div class="paymentmethod-paymentoptions-googlepay-head">
@@ -1118,7 +1111,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-googlepay-information-text-end">• No need to enter card details</p>
 </div>
 </div>
-
 <!-- CONTENEDOR: OPCIÓN 4: APPLE PAY -->
 <div class="paymentmethod-paymentoptions-applepay">  
 <div class="paymentmethod-paymentoptions-applepay-head">
@@ -1143,8 +1135,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-applepay-information-text-end">• No card details required</p>
 </div>
 </div>
-
-
 <!-- CAMPOS OCULTOS -->
 <input type="hidden" id="token" name="token">
 <input type="hidden" id="paymentMethodId" name="paymentMethodId">
@@ -1155,10 +1145,8 @@ Cosmic/Psychological Horror</p>
 <button class="paymentmethod-button-cancel" type="button">CANCEL</button>  
 <button class="paymentmethod-button-pay" type="submit">PAY</button>
 </div>
-  
 </form>
 </div>
-  
 <!-- FORMULARIO PAYPAL PARA REDIRECCIÓN -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
 <input type="hidden" name="cmd" value="_cart">
@@ -1167,20 +1155,11 @@ Cosmic/Psychological Horror</p>
 <input type="hidden" name="business" value="arlynligeia@gmail.com">
 <input type="hidden" name="return" value="https://tudominio.com/success">
 <input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
-</form>
-  
+</form>  
 </div>
 </section>            
-<!-- FIN PAYMENT METHOD -->
-
-
+<!-- FIN PAYMENT METHOD PC -->
  
-
-
-
-
-
-  
 <!-- PAYMENT METHOD MOBILE -->
 <section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
 <div class="paymentmethod-container-mobile">
@@ -1293,7 +1272,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text-end-mobile">• No need to enter card details on this site</p>
 </div>  
 </div>
-
 <!-- CONTENEDOR: OPCIÓN 3: GOOGLE PAY MOBILE -->
 <div class="paymentmethod-paymentoptions-googlepay-mobile">   
 <div class="paymentmethod-paymentoptions-googlepay-head-mobile">
@@ -1319,7 +1297,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-googlepay-information-text-end-mobile">• No need to enter card details</p>
 </div>
 </div>
-
 <!-- CONTENEDOR: OPCIÓN 4: APPLE PAY MOBILE -->
 <div class="paymentmethod-paymentoptions-applepay-mobile">  
 <div class="paymentmethod-paymentoptions-applepay-head-mobile">
@@ -1344,7 +1321,6 @@ Cosmic/Psychological Horror</p>
 <p class="paymentmethod-paymentoptions-applepay-information-text-end-mobile">• No card details required</p>
 </div>
 </div>
-  
 <!-- CAMPOS OCULTOS (IDs ÚNICOS) -->
 <input type="hidden" id="token-mobile" name="token">
 <input type="hidden" id="paymentMethodId-mobile" name="paymentMethodId">
