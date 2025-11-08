@@ -2007,14 +2007,13 @@ width: 100%;
 display: flex;
 justify-content: center; 
 align-items: center;
-margin: 0px;
+margin: 0 0 5px 0;
 }
 .cartfull-table-wrapper-body-row-cell-image img {
 max-width: 100%;
 max-height: 100%; 
 border-radius: 6px;
 object-fit: contain;
-margin: 0px;
 }
 /* CONTENEDOR: NOMBRES */
 .cartfull-table-wrapper-body-row-cell-name,
@@ -2029,7 +2028,6 @@ align-items: center;
 box-sizing: border-box;
 background: #00FFFF !important;
 border-radius: 6px;
-border: 2px solid #ccc;  
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
@@ -2088,7 +2086,7 @@ color: white !important;
 text-decoration: none;
 text-transform: uppercase;
 margin: 0px; 
-padding: 5px;
+padding: 10px;
 border: none;
 cursor: pointer;
 transition: all 0.3s ease;  
@@ -2139,8 +2137,7 @@ justify-content: space-between;
 align-items: center;
 box-sizing: border-box;
 background: #FF66CC !important;
-border-radius: 6px;
-border: 2px solid #ccc;  
+border-radius: 6px; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
