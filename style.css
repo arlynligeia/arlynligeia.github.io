@@ -2953,9 +2953,9 @@ padding: 10px;
 /* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-width: 50%;
+width: 48%;
 display: inline-block;
-margin-right: 1%;
+margin-right: 2%;
 }
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
 margin-right: 0;
@@ -2996,7 +2996,7 @@ clear: both;
 /* FILA ESPECIAL PARA EMISOR Y CUOTAS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
-width: 49%;
+width: 48%;
 display: inline-block;
 margin-right: 2%;
 }
