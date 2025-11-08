@@ -2524,24 +2524,30 @@ margin: 0px;
 .shippinginformation-ordersummary-total {
 color: #FF6B00 !important;
 }
-.shippinginformation-ordersummary-subtotal span:first-child,
-.shippinginformation-ordersummary-shipping span:first-child,
-.shippinginformation-ordersummary-total span:first-child {
+.shippinginformation-ordersummary-subtotal-text,
+.shippinginformation-ordersummary-shipping-text,
+.shippinginformation-ordersummary-total-text {
 text-align: left;
 flex: 1;
 }
-/* Contenedor para símbolo + monto alineados a la derecha */
-.shippinginformation-ordersummary-subtotal span:nth-child(2),
-.shippinginformation-ordersummary-shipping span:nth-child(2),
-.shippinginformation-ordersummary-total span:nth-child(2) {
+.shippinginformation-ordersummary-subtotal-symbol,
+.shippinginformation-ordersummary-shipping-symbol,
+.shippinginformation-ordersummary-total-symbol {
 margin-right: 5px;
 }
-.shippinginformation-ordersummary-subtotal span:nth-child(3),
-.shippinginformation-ordersummary-shipping span:nth-child(3),
-.shippinginformation-ordersummary-total span:nth-child(3) {
+.shippinginformation-ordersummary-subtotal-amount,
+.shippinginformation-ordersummary-shipping-amount,
+.shippinginformation-ordersummary-total-amount {
 text-align: right;
 min-width: 130px;
-}
+}  
+/* DIVISOR */
+.shippinginformation-ordersummary-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+}   
 /* CONTENEDOR: FORMULARIO */
 .shippinginformation-form {
 margin: 0px;
@@ -2724,7 +2730,14 @@ margin-right: 5px;
 .shippinginformation-ordersummary-total-amount-mobile {
 text-align: right;
 min-width: 130px;
-}  
+} 
+/* DIVISOR */
+.shippinginformation-ordersummary-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+}   
 /* CONTENEDOR: FORMULARIO */
 .shippinginformation-form-mobile {
 position: relative;
