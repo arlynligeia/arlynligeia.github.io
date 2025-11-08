@@ -1069,8 +1069,7 @@ Cosmic/Psychological Horror</p>
 </div>
   
 <!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal"> 
-  
+<div class="paymentmethod-paymentoptions-paypal">  
 <div class="paymentmethod-paymentoptions-paypal-head">
 <input class="paymentmethod-paymentoptions-paypal-head-imput" id="paypal" type="radio" name="payment-method" value="paypal">
 <label class="paymentmethod-paymentoptions-paypal-head-label" for="paypal">
@@ -1085,17 +1084,67 @@ Cosmic/Psychological Horror</p>
 </svg>
 </span>
 </label>  
-</div>
-  
+</div>  
 <!-- CONTENEDOR: INFORMACIÓN PAYPAL -->
 <div class="paymentmethod-paymentoptions-paypal-information" id="paypal-form">
 <p class="paymentmethod-paymentoptions-paypal-information-text">You will be redirected to PayPal to complete your payment securely</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text">• Secure payment through PayPal</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text-end">• No need to enter card details on this site</p>
+</div>  
 </div>
-  
+
+<!-- CONTENEDOR: OPCIÓN 3: GOOGLE PAY -->
+<div class="paymentmethod-paymentoptions-googlepay">   
+<div class="paymentmethod-paymentoptions-googlepay-head">
+<input class="paymentmethod-paymentoptions-googlepay-head-imput" id="googlepay" type="radio" name="payment-method" value="googlepay">
+<label class="paymentmethod-paymentoptions-googlepay-head-label" for="googlepay">
+<span class="paymentmethod-paymentoptions-googlepay-head-label-title">GOOGLE PAY</span>
+<span class="paymentmethod-paymentoptions-googlepay-head-label-icon">
+<!-- GOOGLE PAY -->
+<svg width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="white" rx="4"/>
+<path fill="#4285F4" d="M20 8h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H20c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2z"/>
+<path fill="#34A853" d="M32 8h8c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2h-8V8z"/>
+<path fill="#FBBC04" d="M12 20H8c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2h4v12z"/>
+<path fill="#EA4335" d="M20 20h-8V8h8v12z"/>
+</svg>
+</span>
+</label>  
 </div>
-  
+<!-- CONTENEDOR: INFORMACIÓN GOOGLE PAY -->
+<div class="paymentmethod-paymentoptions-googlepay-information" id="googlepay-form">
+<p class="paymentmethod-paymentoptions-googlepay-information-text">Pay faster with your saved payment methods</p>
+<p class="paymentmethod-paymentoptions-googlepay-information-text">• Secure payment through Google</p>
+<p class="paymentmethod-paymentoptions-googlepay-information-text-end">• No need to enter card details</p>
+</div>
+</div>
+
+<!-- CONTENEDOR: OPCIÓN 4: APPLE PAY -->
+<div class="paymentmethod-paymentoptions-applepay">  
+<div class="paymentmethod-paymentoptions-applepay-head">
+<input class="paymentmethod-paymentoptions-applepay-head-imput" id="applepay" type="radio" name="payment-method" value="applepay">
+<label class="paymentmethod-paymentoptions-applepay-head-label" for="applepay">
+<span class="paymentmethod-paymentoptions-applepay-head-label-title">APPLE PAY</span>
+<span class="paymentmethod-paymentoptions-applepay-head-label-icon">
+<!-- APPLE PAY -->
+<svg width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="black" rx="4"/>
+<path fill="white" d="M25 10c0-.6.4-1 1-1h8c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1h-8c-.6 0-1-.4-1-1V10zm2 2v8h6v-8h-6z"/>
+<path fill="white" d="M20 12h-6v6h6v2h-8V10h8v2zm-6 4v-2h4v2h-4z"/>
+<path fill="white" d="M15 18h-2v-6h2v6zm-4-6h2v6h-2v-6z"/>
+</svg>
+</span>
+</label>  
+</div>
+<!-- CONTENEDOR: INFORMACIÓN APPLE PAY -->
+<div class="paymentmethod-paymentoptions-applepay-information" id="applepay-form">
+<p class="paymentmethod-paymentoptions-applepay-information-text">Pay securely with Face ID or Touch ID</p>
+<p class="paymentmethod-paymentoptions-applepay-information-text">• Secure payment through Apple</p>
+<p class="paymentmethod-paymentoptions-applepay-information-text-end">• No card details required</p>
+</div>
+</div>
+
+
 <!-- CAMPOS OCULTOS -->
 <input type="hidden" id="token" name="token">
 <input type="hidden" id="paymentMethodId" name="paymentMethodId">
@@ -1126,6 +1175,9 @@ Cosmic/Psychological Horror</p>
 
 
  
+
+
+
 
 
   
