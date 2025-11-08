@@ -2869,10 +2869,11 @@ margin: 0px;
 .paymentmethod-total-amount {
 font-size: 1.5rem;
 }
-/* CONTENEDOR OPCIONES */
+
+/* CONTENEDOR: OPCIONES */
 .paymentmethod-paymentoptions-card,
 .paymentmethod-paymentoptions-paypal {
-margin: 0 0 10px 0;
+margin: 0px;
 }
 /* ENCABEZADO CON RADIO + LABEL + ICONOS */
 .paymentmethod-paymentoptions-card-head,
@@ -2923,9 +2924,10 @@ margin-left: auto;
 .paymentmethod-paymentoptions-card-head-label-icons-icon {
 flex-shrink: 0;
 }
+
 /* FORMULARIO DE TARJETA */
 .paymentmethod-paymentoptions-card-mercadopago {
-margin: 0 0 10px 0;
+margin: 0px;
 }
 /* INPUTS GENERALES - UNO POR FILA */
 .paymentmethod-paymentoptions-card-mercadopago-imput {
@@ -2936,7 +2938,7 @@ margin: 0 0 10px 0;
 width: 100%;
 height: 40px;
 box-sizing: border-box;   
-background-color: white !important;   
+background: white !important;   
 border-radius: 6px;
 border: 2px solid #ccc;
 font-family: 'Share Tech Mono', monospace;
@@ -2949,9 +2951,9 @@ padding: 10px;
 /* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-width: 48%;
+width: 49%;
 display: inline-block;
-margin-right: 4%;
+margin-right: 2%;
 }
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
 margin-right: 0;
