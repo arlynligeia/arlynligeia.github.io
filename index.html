@@ -2161,17 +2161,13 @@ setTimeout(() => {
 modal.style.display = 'none';
 }, 1000);
 }  
+
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
-
-// Encontrar donde insertar los productos (después del primer divider y antes del divider-2)
-const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider, .cartfull-table-wrapper-divider-2');
-const firstDivider = dividers[0]; // Primer divider
-const secondDivider = dividers[1]; // Divider-2
-
+const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider');
 cart.forEach((item) => {
 const productRow = document.createElement('tr');
 productRow.className = 'cartfull-table-wrapper-body-row product-row';
@@ -2218,8 +2214,7 @@ productRow.innerHTML = `
 </td>
 
 `;
-// Insertar después del primer divider y antes del divider-2
-cartBody.insertBefore(productRow, secondDivider);
+cartBody.insertBefore(productRow, dividers[1]);
 });
 updateShippingTotal();
 updateSubtotal(); 
@@ -2228,7 +2223,7 @@ updateAddToCartButtons();
 }
 
 
-
+  
   
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
 function updateAddToCartButtons() {
