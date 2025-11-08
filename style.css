@@ -1949,7 +1949,7 @@ margin: 0 0 30px 0;
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 0;
+border-spacing: 5;
 background-color: transparent;
 }
 /* ANCHO DE COLUMNAS */
@@ -2051,6 +2051,8 @@ padding: 10px;
 .cartfull-table-wrapper-body-row-cell-shipping,
 .cartfull-table-wrapper-body-row-cell-totalfinal {
 background: transparent !important;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;   
 color: #00FF00 !important;
 border: none !important;
 }
@@ -2122,10 +2124,6 @@ margin: 0px;
 padding: 10px;
 }
 
-
-
-
-
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button {
 display: flex;
@@ -2152,7 +2150,7 @@ border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.cartfull-button-clear {
+.cartfull-button-clearcart {
 background-color: #FF6B00 !important;
 color: white !important; 
 }
