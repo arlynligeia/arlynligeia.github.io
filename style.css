@@ -1890,6 +1890,16 @@ transform: scale(1.05);
 .cartempty-container-mobile { display: block; }
 }
 
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    CART FULL
 ====================================== */
@@ -2102,58 +2112,56 @@ box-sizing: border-box;
 padding: 10px 5px 10px 5px;
 margin: 0px;
 }
-.cartfull-table-wrapper-body-row-cell-totalend {
+.cartfull-table-wrapper-body-row-cell-totalfinal {
 color: #39ff14 !important;
 }
 
-
-
-
-
-
-/* CONTENEDOR DE BOTONES FINALES */
+/* CONTENEDOR: BOTONES FINALES */
 .cartfull-buttons {
 display: flex;
 justify-content: space-between;
 margin: 0px;
 }
-.cartfull-button-back,
+.cartfull-back,
 .cartfull-button-continueshopping,
-.cartfull-button-clear,
+.cartfull-button-clearcart,
 .cartfull-button-checkout {
 display: flex;
 justify-content: space-between;
-
-   
+background: #00CED1 !important;   
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white;
+color: black !important; 
 text-decoration: none;
-padding: 10px 20px 10px 20px;
-margin: 0px;
+text-align: center;
+font-weight: bold; 
+margin: 0px;   
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.cartfull-button-back,
-.cartfull-button-continueshopping {
-background-color: #00CED1 !important;
+.cartfull-button-clear {
+background-color: #FF6B00 !important;
+color: white !important; 
 }
 .cartfull-button-checkout {
 background-color: #ff1493 !important;
+color: white !important;    
 }
-.cartfull-button-clear {
-background-color: #39ff14 !important;
-}
-.cartfull-button-back:hover,
+.cartfull-back:hover,
 .cartfull-button-continueshopping:hover,
 .cartfull-button-checkout:hover,
-.cartfull-button-clear:hover {
+.cartfull-button-clearcart:hover {
 transform: scale(1.05);
 }
 .cartfull-container { display: block; }
 .cartfull-container-mobile { display: none; }
+
+
+
+
 
 
 
