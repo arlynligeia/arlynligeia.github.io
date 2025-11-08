@@ -2852,24 +2852,22 @@ text-decoration: none;
 background-color: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
+text-align: center;
 margin: 0 0 10px 0;   
 padding: 10px;
-text-align: center;
 }
 .paymentmethod-total-text,
-.paymentmethod-total-symbol,
 .paymentmethod-total-amount {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: center;   
 margin: 0px;      
 }
-.paymentmethod-total-symbol,
 .paymentmethod-total-amount {
-font-size: 1.2rem;
+font-size: 1.5rem;
 }
 /* CONTENEDOR OPCIONES */
 .paymentmethod-paymentoptions-card,
@@ -2906,7 +2904,7 @@ cursor: pointer;
 .paymentmethod-paymentoptions-card-head-label-title,
 .paymentmethod-paymentoptions-paypal-head-label-title {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
+font-size: 1.5rem;
 color: #00FF00 !important;
 text-decoration: none;
 white-space: nowrap;
@@ -2942,7 +2940,7 @@ background-color: white !important;
 border-radius: 6px;
 border: 2px solid #ccc;
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 margin: 0px;   
@@ -2951,7 +2949,7 @@ padding: 10px;
 /* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-width: 48%;
+width: 50%;
 display: inline-block;
 margin-right: 4%;
 }
@@ -2975,14 +2973,14 @@ clear: both;
 background-color: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
+text-align: justify;   
 margin: 0 0 10px 0;   
 padding: 10px;
-text-align: justify;
 }
 .paymentmethod-paymentoptions-paypal-information-text,
 .paymentmethod-paymentoptions-paypal-information-text-end {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;   
 line-height: 1.5;
