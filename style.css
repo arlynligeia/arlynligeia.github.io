@@ -2457,7 +2457,7 @@ transform: scale(1.05);
 .shippinginformation-container {
 position: relative;
 width: 900px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2470,7 +2470,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8 !important;
+background-color: #320046 !important;
 border-radius: 20px 20px 0 0;  
 }
 .shippinginformation-title {
@@ -2479,30 +2479,32 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.6;
 text-align: left;
 margin-top: 0;
 margin-bottom: 16px; 
 }
 .shippinginformation-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR RESUMEN DEL PEDIDO */
+/* CONTENEDOR: ORDER SUMMARY */
 .shippinginformation-ordersummary {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
 padding: 15px;
 margin: 0 0 15px 0;
 }
 .shippinginformation-ordersummary-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.5; 
 text-align: center;  
 margin: 0px;
@@ -2514,15 +2516,14 @@ display: flex;
 justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0px;
 }
 .shippinginformation-ordersummary-total {
-color: #39ff14 !important;
+color: #FF6B00 !important;
 }
-/* Etiqueta a la izquierda */
 .shippinginformation-ordersummary-subtotal span:first-child,
 .shippinginformation-ordersummary-shipping span:first-child,
 .shippinginformation-ordersummary-total span:first-child {
@@ -2541,56 +2542,62 @@ margin-right: 5px;
 text-align: right;
 min-width: 130px;
 }
-/* CONTENEDOR DE COLUMNAS */
+/* CONTENEDOR: FORMULARIO */
+.shippinginformation-form {
+margin: 0px;
+}
+/* CONTENEDOR: COLUMNAS */
 .shippinginformation-form-columns {
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR DE GRID */
+/* CONTENEDOR: GRID */
 .shippinginformation-form-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
-margin: 0 0 30px 0;
+margin: 0 0 20px 0;
 }
-/* TÍTULOS */
+/* CONTENDEDOR: TÍTULOS DE COLUMNAS */
 .shippinginformation-form-columns-grid-column-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.5; 
 text-align: center;  
 margin: 0 0 5px 0;
 }
-/* TEXTOS SOBRE LOS RECUADROS */
+/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
 .shippinginformation-form-columns-grid-column-label {
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.5; 
 text-align: left;  
 margin: 0 0 5px 0;
 }
-/* RECUADROS Y TEXTOS DENTRO */
+/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
 .shippinginformation-form-columns-grid-column-input {
 width: 100%;
 height: 40px;
-background-color: white !important;
+box-sizing: border-box;
+background: #00FFFF !important; 
 border-radius: 6px;
+border: 2px solid #ccc;  
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
 margin: 0 0 15px 0;
-border: none;
+padding: 10px;
 }
-/* CONTENEDOR DE BOTONES FINALES */
-.shippinginformation-buttons {
+/* CONTENEDOR: BOTONES FINALES */
+.shippinginformation-button {
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -2600,32 +2607,43 @@ margin: 0px;
 .shippinginformation-button-proceedpayment {
 display: flex;
 justify-content: space-between;
+background: #00CED1 !important;   
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
+color: black !important;
 text-decoration: none;
-padding: 10px 20px 10px 20px;
-margin: 0px;  
+margin: 0px;     
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.shippinginformation-button-back,
-.shippinginformation-button-continueshopping {
-background-color: #00CED1 !important;
-}
 .shippinginformation-button-proceedpayment {
-background-color: #ff1493 !important;
+background: #ff1493 !important;
+color: white !important;   
 }
 .shippinginformation-button-back:hover,
 .shippinginformation-button-continueshopping:hover,
 .shippinginformation-button-proceedpayment:hover {
 transform: scale(1.05);
 }
-/* CONTROL DE VISIBILIDAD */
+/* CONTROL */
 .shippinginformation-container { display: block; }
 .shippinginformation-container-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    SHIPPING INFORMATION MOBILE
 ====================================== */
