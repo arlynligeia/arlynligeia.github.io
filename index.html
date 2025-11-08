@@ -984,11 +984,14 @@ Cosmic/Psychological Horror</p>
 <span class="paymentmethod-total-text">TOTAL</span><br>
 <span class="paymentmethod-total-amount" id="paymentmethod-total">$ 0.00</span>
 </div>
+  
 <!-- CONTENEDOR: PAYMENT OPTIONS --> 
 <div class="paymentmethod-paymentoptions">  
 <form id="paymentmethod-paymentoptions" method="POST">
+  
 <!-- CONTENEDOR: OPCIÓN 1: CARD -->
-<div class="paymentmethod-paymentoptions-card">  
+<div class="paymentmethod-paymentoptions-card">
+  
 <div class="paymentmethod-paymentoptions-card-head">  
 <input class="paymentmethod-paymentoptions-card-head-imput" id="creditcard" type="radio" name="payment-method" value="credit-card">  
 <label class="paymentmethod-paymentoptions-card-head-label" for="creditcard">
@@ -1014,6 +1017,7 @@ Cosmic/Psychological Horror</p>
 </span>
 </label> 
 </div>
+  
 <!-- CONTENEDOR: MERCADO PAGO -->
 <div class="paymentmethod-paymentoptions-card-mercadopago" id="creditcard-form">  
 <!-- NÚMERO DE TARJETA -->
@@ -1055,9 +1059,12 @@ Cosmic/Psychological Horror</p>
 </select>
 </div>  
 </div>
+  
 </div>
+  
 <!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal">  
+<div class="paymentmethod-paymentoptions-paypal"> 
+  
 <div class="paymentmethod-paymentoptions-paypal-head">
 <input class="paymentmethod-paymentoptions-paypal-head-imput" id="paypal" type="radio" name="payment-method" value="paypal">
 <label class="paymentmethod-paymentoptions-paypal-head-label" for="paypal">
@@ -1073,13 +1080,16 @@ Cosmic/Psychological Horror</p>
 </span>
 </label>  
 </div>
+  
 <!-- CONTENEDOR: INFORMACIÓN PAYPAL -->
 <div class="paymentmethod-paymentoptions-paypal-information" id="paypal-form">
 <p class="paymentmethod-paymentoptions-paypal-information-text">You will be redirected to PayPal to complete your payment securely</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text">• Secure payment through PayPal</p>
 <p class="paymentmethod-paymentoptions-paypal-information-text-end">• No need to enter card details on this site</p>
-</div>  
 </div>
+  
+</div>
+  
 <!-- CAMPOS OCULTOS -->
 <input type="hidden" id="token" name="token">
 <input type="hidden" id="paymentMethodId" name="paymentMethodId">
@@ -1090,8 +1100,10 @@ Cosmic/Psychological Horror</p>
 <button class="paymentmethod-button-cancel" type="button">CANCEL</button>  
 <button class="paymentmethod-button-pay" type="submit">PAY</button>
 </div>
+  
 </form>
 </div>
+  
 <!-- FORMULARIO PAYPAL PARA REDIRECCIÓN -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
 <input type="hidden" name="cmd" value="_cart">
@@ -1101,13 +1113,16 @@ Cosmic/Psychological Horror</p>
 <input type="hidden" name="return" value="https://tudominio.com/success">
 <input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
 </form>
+  
 </div>
 </section>            
 <!-- FIN PAYMENT METHOD -->
 
 
  
-                
+
+
+  
 <!-- PAYMENT METHOD MOBILE -->
 <section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
 <div class="paymentmethod-container-mobile">
