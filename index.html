@@ -666,7 +666,7 @@ Cosmic/Psychological Horror</p>
 <!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
  
 <!-- DIVISOR -->
-<tr class="cartfull-table-wrapper-divider"><td colspan="6"></td></tr> 
+<tr class="cartfull-table-wrapper-divider-2"><td colspan="6"></td></tr> 
 <!-- SUBTOTAL: FILA -->
 <tr class="cartfull-table-wrapper-body-row">
 <td class="cartfull-table-wrapper-body-row-cell"></td>
@@ -2164,14 +2164,17 @@ modal.style.display = 'none';
 
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
-const cartBody = document.querySelector('.cartfull-table-wrapper-body');
-const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
-productRows.forEach(row => row.remove());
-const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider');
-cart.forEach((item) => {
-const productRow = document.createElement('tr');
-productRow.className = 'cartfull-table-wrapper-body-row product-row';
-productRow.innerHTML = `
+    const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+    const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
+    productRows.forEach(row => row.remove());
+    
+    // Encontrar el divisor-2 donde deben insertarse los productos antes de él
+    const divider2 = cartBody.querySelector('.cartfull-table-wrapper-divider-2');
+    
+    cart.forEach((item) => {
+        const productRow = document.createElement('tr');
+        productRow.className = 'cartfull-table-wrapper-body-row product-row';
+        productRow.innerHTML = `
 
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-image">
@@ -2214,14 +2217,15 @@ productRow.innerHTML = `
 </td>
 
 `;
-cartBody.insertBefore(productRow, dividers[1]);
-});
-updateShippingTotal();
-updateSubtotal(); 
-updateTotalFinal();
-updateAddToCartButtons();
+        // Insertar antes del divider-2
+        cartBody.insertBefore(productRow, divider2);
+    });
+    
+    updateShippingTotal();
+    updateSubtotal(); 
+    updateTotalFinal();
+    updateAddToCartButtons();
 }
-
 
   
   
