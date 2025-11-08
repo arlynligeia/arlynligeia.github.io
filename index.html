@@ -3065,6 +3065,7 @@ document.getElementById('hidden-cart-shipping-mobile').value = shipping;
 document.getElementById('hidden-cart-total-mobile').value = total;
 console.log('📦 Carrito guardado en campos ocultos mobile:', cart);
 }
+  
 // FUNCIÓN: NAVEGAR A PAYMENT METHOD MOBILE Y PASAR EL TOTAL
 function navigateToPaymentMethodMobile() {
 // Obtener el total del carrito mobile
@@ -3072,7 +3073,7 @@ const total = document.getElementById('cart-total-mobile').textContent;
 // Guardar el total en localStorage para que payment method mobile lo pueda leer
 localStorage.setItem('payment-total-mobile', total);
 // Ocultar todas las secciones mobile
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
 // Mostrar la sección de payment method mobile
