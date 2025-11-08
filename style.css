@@ -2839,6 +2839,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -2847,7 +2848,6 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-
 /* CONTENEDOR: TOTAL */
 .paymentmethod-total {
 background-color: transparent !important;
@@ -2855,7 +2855,7 @@ border-radius: 15px;
 border: 3px solid #FF6B00 !important;
 text-align: center;
 margin: 0 0 10px 0;   
-padding: 20px;
+padding: 15px;
 }
 .paymentmethod-total-text,
 .paymentmethod-total-amount {
@@ -2870,7 +2870,6 @@ margin: 0px;
 .paymentmethod-total-amount {
 font-size: 1.5rem;
 }
-
 /* CONTENEDOR: OPCIONES */
 .paymentmethod-paymentoptions-card,
 .paymentmethod-paymentoptions-paypal,
@@ -2878,7 +2877,7 @@ font-size: 1.5rem;
 .paymentmethod-paymentoptions-applepay {
 margin: 0px;
 }
-/* ENCABEZADO CON RADIO + LABEL + ICONOS */
+/* CONTENEDOR: OPCIONES: ENCABEZADOS */
 .paymentmethod-paymentoptions-card-head,
 .paymentmethod-paymentoptions-paypal-head,
 .paymentmethod-paymentoptions-googlepay-head,
@@ -2889,16 +2888,16 @@ gap: 15px;
 margin: 0 0 10px 0;
 padding: 10px;
 }
-/* RADIO BUTTON */
+/* CONTENEDOR: OPCIONES: RADIO BUTTON */
 .paymentmethod-paymentoptions-card-head-imput,
 .paymentmethod-paymentoptions-paypal-head-imput,
 .paymentmethod-paymentoptions-googlepay-head-imput,
 .paymentmethod-paymentoptions-applepay-head-imput {
-transform: scale(1.5);
 flex-shrink: 0;
-margin: 0px;    
+margin: 0px;     
+transform: scale(1.5);  
 }
-/* LABEL CON FLEX */
+/* CONTENEDOR: OPCIONES: LABEL */
 .paymentmethod-paymentoptions-card-head-label,
 .paymentmethod-paymentoptions-paypal-head-label,
 .paymentmethod-paymentoptions-googlepay-head-label,
@@ -2910,7 +2909,7 @@ align-items: center;
 margin: 0px;
 cursor: pointer;
 }
-/* TÍTULOS */
+/* CONTENEDOR: OPCIONES: TÍTULOS */
 .paymentmethod-paymentoptions-card-head-label-title,
 .paymentmethod-paymentoptions-paypal-head-label-title,
 .paymentmethod-paymentoptions-googlepay-head-label-title,
@@ -2923,7 +2922,7 @@ white-space: nowrap;
 flex-shrink: 0;
 margin: 0px;
 }
-/* ICONOS */
+/* CONTENEDOR: OPCIONES: ÍCONOS */
 .paymentmethod-paymentoptions-card-head-label-icons,
 .paymentmethod-paymentoptions-paypal-head-label-icon,
 .paymentmethod-paymentoptions-googlepay-head-label-icon,
@@ -2937,12 +2936,10 @@ margin-left: auto;
 .paymentmethod-paymentoptions-card-head-label-icons-icon {
 flex-shrink: 0;
 }
-
-/* FORMULARIO DE TARJETA */
+/* CONTENEDOR: OPCIONES: TARJETA */
 .paymentmethod-paymentoptions-card-mercadopago {
 margin: 0px;
 }
-/* INPUTS GENERALES - UNO POR FILA */
 .paymentmethod-paymentoptions-card-mercadopago-imput {
 width: 100%;
 margin: 0 0 10px 0;
@@ -2961,8 +2958,7 @@ text-decoration: none;
 margin: 0px;   
 padding: 10px;    
 }
-
-/* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
+/* FILA ESPECIAL PARA LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container),
@@ -2978,7 +2974,6 @@ margin-right: 1%;
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
 margin-right: 0;
 }
-/* CONTENEDOR PARA AGRUPAR FECHA Y CVV */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container) {
@@ -2989,15 +2984,12 @@ float: left;
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
 float: right;
 }
-/* LIMPIAR FLOATS DESPUÉS DE LA FILA DE FECHA/CVV */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardholderName-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardNumber-container) {
 clear: both;
 }
-
-
-/* INFORMACIÓN PAYPAL */
+/* CONTENEDOR: INFORMACIÓN PAYPAL, GOOGLE PAY, APPLE PAY */
 .paymentmethod-paymentoptions-paypal-information,
 .paymentmethod-paymentoptions-googlepay-information,
 .paymentmethod-paymentoptions-applepay-information {
@@ -3027,10 +3019,8 @@ margin: 0 0 10px 0;
 .paymentmethod-paymentoptions-applepay-information-text-end {
 margin: 0px;
 }
-
-
-/* CONTENEDOR DE BOTONES FINALES */
-.paymentmethod-buttons {
+/* CONTENEDOR: BOTONES FINALES */
+.paymentmethod-button {
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -3040,30 +3030,33 @@ margin: 0px;
 .paymentmethod-button-pay {
 display: flex;
 justify-content: space-between;
+background: #00CED1 !important;  
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
+color: black !important;
 text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+margin: 0px;     
 padding: 10px 20px;
-margin: 0px;  
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.paymentmethod-button-back,
 .paymentmethod-button-cancel {
-background-color: #00CED1 !important;
+background: #FF6B00 !important;
+color: white !important;
 }
 .paymentmethod-button-pay {
-background-color: #ff1493 !important;
+background: #ff1493 !important;
+color: white !important;
 }
 .paymentmethod-button-back:hover,
 .paymentmethod-button-cancel:hover,
 .paymentmethod-button-pay:hover {
 transform: scale(1.05);
 }
-
 .paymentmethod-container { display: block; }
 .paymentmethod-container-mobile { display: none; }
 
