@@ -2873,12 +2873,16 @@ font-size: 1.5rem;
 
 /* CONTENEDOR: OPCIONES */
 .paymentmethod-paymentoptions-card,
-.paymentmethod-paymentoptions-paypal {
+.paymentmethod-paymentoptions-paypal,
+.paymentmethod-paymentoptions-googlepay,
+.paymentmethod-paymentoptions-applepay {
 margin: 0px;
 }
 /* ENCABEZADO CON RADIO + LABEL + ICONOS */
 .paymentmethod-paymentoptions-card-head,
-.paymentmethod-paymentoptions-paypal-head {
+.paymentmethod-paymentoptions-paypal-head,
+.paymentmethod-paymentoptions-googlepay-head,
+.paymentmethod-paymentoptions-applepay-head {
 display: flex;
 align-items: center;
 gap: 15px;
@@ -2887,14 +2891,18 @@ padding: 10px;
 }
 /* RADIO BUTTON */
 .paymentmethod-paymentoptions-card-head-imput,
-.paymentmethod-paymentoptions-paypal-head-imput {
+.paymentmethod-paymentoptions-paypal-head-imput,
+.paymentmethod-paymentoptions-googlepay-head-imput,
+.paymentmethod-paymentoptions-applepay-head-imput {
 transform: scale(1.5);
 flex-shrink: 0;
 margin: 0px;    
 }
 /* LABEL CON FLEX */
 .paymentmethod-paymentoptions-card-head-label,
-.paymentmethod-paymentoptions-paypal-head-label {
+.paymentmethod-paymentoptions-paypal-head-label,
+.paymentmethod-paymentoptions-googlepay-head-label,
+.paymentmethod-paymentoptions-applepay-head-label {
 width: 100%;
 display: flex;
 justify-content: space-between;   
@@ -2904,7 +2912,9 @@ cursor: pointer;
 }
 /* TÍTULOS */
 .paymentmethod-paymentoptions-card-head-label-title,
-.paymentmethod-paymentoptions-paypal-head-label-title {
+.paymentmethod-paymentoptions-paypal-head-label-title,
+.paymentmethod-paymentoptions-googlepay-head-label-title,
+.paymentmethod-paymentoptions-applepay-head-label-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #00FF00 !important;
@@ -2915,7 +2925,9 @@ margin: 0px;
 }
 /* ICONOS */
 .paymentmethod-paymentoptions-card-head-label-icons,
-.paymentmethod-paymentoptions-paypal-head-label-icon {
+.paymentmethod-paymentoptions-paypal-head-label-icon,
+.paymentmethod-paymentoptions-googlepay-head-label-icon,
+.paymentmethod-paymentoptions-applepay-head-label-icon {
 display: flex;
 gap: 5px;
 align-items: center;
@@ -2986,7 +2998,9 @@ clear: both;
 
 
 /* INFORMACIÓN PAYPAL */
-.paymentmethod-paymentoptions-paypal-information {
+.paymentmethod-paymentoptions-paypal-information,
+.paymentmethod-paymentoptions-googlepay-information,
+.paymentmethod-paymentoptions-applepay-information {
 background-color: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -2995,7 +3009,11 @@ margin: 0 0 10px 0;
 padding: 20px;
 }
 .paymentmethod-paymentoptions-paypal-information-text,
-.paymentmethod-paymentoptions-paypal-information-text-end {
+.paymentmethod-paymentoptions-googlepay-information-text,
+.paymentmethod-paymentoptions-applepay-information-text,
+.paymentmethod-paymentoptions-paypal-information-text-end,
+.paymentmethod-paymentoptions-googlepay-information-text-end,
+.paymentmethod-paymentoptions-applepay-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -3004,11 +3022,11 @@ line-height: 1.5;
 text-align: justify;   
 margin: 0 0 10px 0;
 }
-.paymentmethod-paymentoptions-paypal-information-text-end {
+.paymentmethod-paymentoptions-paypal-information-text-end,
+.paymentmethod-paymentoptions-googlepay-information-text-end,
+.paymentmethod-paymentoptions-applepay-information-text-end {
 margin: 0px;
-}   
-
-
+}
 
 
 /* CONTENEDOR DE BOTONES FINALES */
