@@ -795,13 +795,15 @@ Cosmic/Psychological Horror</p>
 
   
 
+
+
   
 <!-- SHIPPING INFORMATION -->
-<section class="shippinginformation-section main-section" id="shippinginformation">
+<section class="shippinginformation-section  main-section" id="shippinginformation">
 <div class="shippinginformation-container">
-<h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2>
-<!-- CONTENEDOR DE RESUMEN DEL PEDIDO -->
-<div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">
+<h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2> 
+<!-- CONTENEDOR: ORDER SUMMARY  -->
+<div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">  
 <h3 class="shippinginformation-ordersummary-title">ORDER SUMMARY</h3>
 <div class="shippinginformation-ordersummary-subtotal">
 <span>Subtotal:</span>
@@ -818,30 +820,31 @@ Cosmic/Psychological Horror</p>
 <span>$</span> 
 <span id="cart-total">0.00</span>
 </div>
-</div>
+</div>  
 <!-- CONTENEDOR DE FORMULARIO DE ENVÍO -->
-<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
+<div class="shippinginformation-form">
+<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">  
 <div class="shippinginformation-form-columns">
 <div class="shippinginformation-form-columns-grid">
-<!-- CONTENEDOR DE COLUMNA 1: INFORMACIÓN PERSONAL -->
-<div class="shippinginformation-form-columns-grid-column">
-<h3 class="shippinginformation-form-columns-grid-column-title">PERSONAL INFORMATION</h3>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-firstname">FIRST NAME</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-firstname" type="text" name="firstname" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-lastname">LAST NAME</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-lastname" type="text" name="lastname" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-idnumber">ID NUMBER</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-idnumber" type="text" name="idnumber" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-mobilephone">MOBILE PHONE</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-mobilephone" type="tel" name="mobilephone" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-email">EMAIL</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-email" type="email" name="email" required>
+<!-- CONTENEDOR: COLUMNA 1: INFORMACIÓN PERSONAL -->
+<div class="shippinginformation-form-columns-grid-personalinformation"> 
+<h3 class="shippinginformation-form-columns-grid-personalinformation-title">PERSONAL INFORMATION</h3>
+<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-firstname">FIRST NAME</label>
+<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-firstname" type="text" name="firstname" required>
+<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-lastname">LAST NAME</label>
+<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-lastname" type="text" name="lastname" required>
+<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-idnumber">ID NUMBER</label>
+<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-idnumber" type="text" name="idnumber" required>
+<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-mobilephone">MOBILE PHONE</label>
+<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-mobilephone" type="tel" name="mobilephone" required>
+<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-email">EMAIL</label>
+<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-email" type="email" name="email" required>
 </div>
 <!-- CONTENEDOR DE COLUMNA 2: DIRECCIÓN DE ENVÍO -->
-<div class="shippinginformation-form-columns-grid-column">
-<h3 class="shippinginformation-form-columns-grid-column-title">SHIPPING ADDRESS</h3>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-country">COUNTRY</label>
-<select class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-country" name="country" required>
+<div class="shippinginformation-form-columns-grid-shippingaddress">
+<h3 class="shippinginformation-form-columns-grid-shippingaddress-title">SHIPPING ADDRESS</h3>
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-country">COUNTRY</label>
+<select class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-country" name="country" required>
 <option value="">Select Country</option>
 <option value="US">United States</option>
 <option value="PE">Peru</option>     
@@ -849,17 +852,17 @@ Cosmic/Psychological Horror</p>
 <option value="CA">Canada</option> 
 <option value="GB">United Kingdom</option>
 </select>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-state">STATE/PROVINCE/REGION</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-state" type="text" name="state" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-city">CITY</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-city" type="text" name="city" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-zipcode">ZIP CODE</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-zipcode" type="text" name="zipcode" required>
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-address">ADDRESS</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-address" type="text" name="address" required>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-address2" type="text" name="address2">
-<label class="shippinginformation-form-columns-grid-column-label" for="shippinginformation-apartment">APARTMENT/SUITE/ETC</label>
-<input class="shippinginformation-form-columns-grid-column-input" id="shippinginformation-apartment" type="text" name="apartment">
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-state">STATE/PROVINCE/REGION</label>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-state" type="text" name="state" required>
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-city">CITY</label>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-city" type="text" name="city" required>
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-zipcode">ZIP CODE</label>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-zipcode" type="text" name="zipcode" required>
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-address">ADDRESS</label>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-address" type="text" name="address" required>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-address2" type="text" name="address2">
+<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-apartment">APARTMENT/SUITE/ETC</label>
+<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-apartment" type="text" name="apartment">
 </div>
 </div>
 <!-- CAMPOS OCULTOS PARA LOS DATOS DEL CARRITO -->
@@ -869,15 +872,25 @@ Cosmic/Psychological Horror</p>
 <input type="hidden" id="hidden-cart-total" name="cart_total">
 </div>
 <!-- CONTENEDOR DE BOTONES -->
-<div class="shippinginformation-buttons">
+<div class="shippinginformation-button">
 <a class="shippinginformation-button-back" href="#cartfull">BACK</a>
 <a class="shippinginformation-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
-<button class="shippinginformation-button-proceedpayment" id="shippinginformation-button-proceedpayment">PROCEED PAYMENT</button>
+<button class="shippinginformation-button-proceedpayment">PROCEED PAYMENT</button>
 </div>
 </form>
+</div>  
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION -->
+
+
+
+
+
+
+
+
+
 
 
   
@@ -976,7 +989,7 @@ Cosmic/Psychological Horror</p>
 
   
 <!-- PAYMENT METHOD PC -->
-<section class="paymentmethod-section" id="paymentmethod">
+<section class="paymentmethod-section  main-section" id="paymentmethod">
 <div class="paymentmethod-container">
 <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2> 
 <!-- CONTENEDOR: TOTAL -->
@@ -1161,7 +1174,7 @@ Cosmic/Psychological Horror</p>
 <!-- FIN PAYMENT METHOD PC -->
  
 <!-- PAYMENT METHOD MOBILE -->
-<section class="paymentmethod-section mobile-only" id="paymentmethod-mobile">
+<section class="paymentmethod-section  main-section mobile-only" id="paymentmethod-mobile">
 <div class="paymentmethod-container-mobile">
 <h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2> 
 <!-- CONTENEDOR: TOTAL -->
