@@ -982,7 +982,8 @@ Cosmic/Psychological Horror</p>
 <!-- CONTENEDOR: TOTAL -->
 <div class="paymentmethod-total">
 <span class="paymentmethod-total-text">TOTAL</span><br>
-<span class="paymentmethod-total-amount" id="paymentmethod-total">$ 0.00</span>
+<span class="paymentmethod-total-symbol">$</span>
+<span class="paymentmethod-total-amount" id="paymentmethod-total">0.00</span>
 </div>
 <!-- CONTENEDOR: PAYMENT OPTIONS --> 
 <div class="paymentmethod-paymentoptions">  
@@ -1020,15 +1021,14 @@ Cosmic/Psychological Horror</p>
 <div class="paymentmethod-paymentoptions-card-mercadopago-imput">
 <input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="cardNumber-container" type="text" placeholder="Card number">
 </div>
-<!-- FECHA DE EXPIRACIÓN Y CÓDIGO DE SEGURIDAD EN LA MISMA FILA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-row">
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-half">
+<!-- FECHA DE EXPIRACIÓN -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
 <input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="expirationDate-container" type="text" placeholder="MM/YY">
 </div>
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-half">
+<!-- CÓDIGO DE SEGURIDAD -->
+<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
 <input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="securityCode-container" type="text" placeholder="CVV">
 </div> 
-</div>
 <!-- NOMBRE EN LA TARJETA -->
 <div class="paymentmethod-paymentoptions-card-mercadopago-imput">
 <input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="cardholderName-container" type="text" placeholder="Name on card">
@@ -1096,6 +1096,7 @@ Cosmic/Psychological Horror</p>
 <button class="paymentmethod-button-pay" type="submit">PAY</button>
 </div>
 </form>
+</div>
 <!-- FORMULARIO PAYPAL PARA REDIRECCIÓN -->
 <form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
 <input type="hidden" name="cmd" value="_cart">
