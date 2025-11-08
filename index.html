@@ -976,7 +976,7 @@ Cosmic/Psychological Horror</p>
 
   
 <!-- PAYMENT METHOD PC -->
-<section class="paymentmethod-section main-section" id="paymentmethod">
+<section class="paymentmethod-section" id="paymentmethod">
 <div class="paymentmethod-container">
 <h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2> 
 <!-- CONTENEDOR: TOTAL -->
@@ -1161,7 +1161,7 @@ Cosmic/Psychological Horror</p>
 <!-- FIN PAYMENT METHOD PC -->
  
 <!-- PAYMENT METHOD MOBILE -->
-<section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
+<section class="paymentmethod-section mobile-only" id="paymentmethod-mobile">
 <div class="paymentmethod-container-mobile">
 <h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2> 
 <!-- CONTENEDOR: TOTAL -->
@@ -2697,7 +2697,7 @@ return;
 }
 console.log('🛒 Proceeding to checkout with cart:', cart);
 // 1. NAVEGAR A LA SECCIÓN SHIPPING INFORMATION MOBILE
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section, .cartfull-section').forEach(section => {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
 const shippingSection = document.getElementById('shippinginformation-mobile');
@@ -2712,7 +2712,6 @@ saveCartToHiddenFieldsMobile();
 });
 }
 }
-
 // FUNCIÓN: ACTUALIZAR TOTALES EN SHIPPING INFORMATION MOBILE
 function updateShippingInformationTotalsMobile() {
 const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
