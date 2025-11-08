@@ -2855,7 +2855,7 @@ border-radius: 15px;
 border: 3px solid #FF6B00 !important;
 text-align: center;
 margin: 0 0 10px 0;   
-padding: 10px;
+padding: 20px;
 }
 .paymentmethod-total-text,
 .paymentmethod-total-amount {
@@ -2952,71 +2952,37 @@ padding: 10px;
 
 /* FILA ESPECIAL PARA FECHA Y CVV - LOS ÚNICOS QUE VAN JUNTOS */
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-width: 48%;
-display: inline-block;
-margin-right: 2%;
-}
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-margin-right: 0;
-}
-/* CONTENEDOR PARA AGRUPAR FECHA Y CVV */
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container) {
-float: left;
-}
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container) {
-float: right;
-}
-/* LIMPIAR FLOATS DESPUÉS DE LA FILA DE FECHA/CVV */
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardholderName-container) {
-clear: both;
-}
-
-/* FILA ESPECIAL PARA TIPO Y NÚMERO DE DOCUMENTO */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container),
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
-width: 48%;
-display: inline-block;
-margin-right: 2%;
-}
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
-margin-right: 0;
-}
-/* CONTENEDOR PARA AGRUPAR TIPO Y NÚMERO DE DOCUMENTO /
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
-float: left;
-}
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container) {
-float: right;
-}
-/ LIMPIAR FLOATS DESPUÉS DE LA FILA DE DOCUMENTO */
-.paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container) {
-clear: both;
-}
-/* FILA ESPECIAL PARA EMISOR Y CUOTAS */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
 width: 48%;
 display: inline-block;
 margin-right: 2%;
 }
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
 margin-right: 0;
 }
-/* CONTENEDOR PARA AGRUPAR EMISOR Y CUOTAS /
+/* CONTENEDOR PARA AGRUPAR FECHA Y CVV */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container) {
 float: left;
 }
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
 float: right;
 }
-/ LIMPIAR FLOATS DESPUÉS DE LA FILA DE EMISOR/CUOTAS */
+/* LIMPIAR FLOATS DESPUÉS DE LA FILA DE FECHA/CVV */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardholderName-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
 .paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardNumber-container) {
 clear: both;
 }
-
-
-
 
 
 /* INFORMACIÓN PAYPAL */
