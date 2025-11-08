@@ -805,22 +805,27 @@ Cosmic/Psychological Horror</p>
 <!-- CONTENEDOR: ORDER SUMMARY  -->
 <div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">  
 <h3 class="shippinginformation-ordersummary-title">ORDER SUMMARY</h3>
+<!-- SUBTOTAL -->  
 <div class="shippinginformation-ordersummary-subtotal">
-<span>Subtotal:</span>
-<span>$</span> 
-<span id="cart-subtotal">0.00</span>
+<span class="shippinginformation-ordersummary-subtotal-text">Subtotal:</span>
+<span class="shippinginformation-ordersummary-subtotal-symbol">$</span>
+<span class="shippinginformation-ordersummary-subtotal-amount" id="cart-subtotal-mobile">0.00</span>
 </div>  
+<!-- SHIPPING -->  
 <div class="shippinginformation-ordersummary-shipping">
-<span>Shipping:</span>
-<span>$</span> 
-<span id="cart-shipping">0.00</span>
+<span class="shippinginformation-ordersummary-shipping-text">Shipping:</span>
+<span class="shippinginformation-ordersummary-shipping-symbol">$</span>
+<span class="shippinginformation-ordersummary-shipping-amount" id="cart-subtotal-mobile">0.00</span>
 </div>  
+<!-- DIVISOR -->
+<div class="shippinginformation-ordersummary-divider"></div> 
+<!-- TOTAL -->  
 <div class="shippinginformation-ordersummary-total">
-<span>TOTAL:</span>
-<span>$</span> 
-<span id="cart-total">0.00</span>
-</div>
+<span class="shippinginformation-ordersummary-total-text">TOTAL:</span>
+<span class="shippinginformation-ordersummary-total-symbol">$</span>
+<span class="shippinginformation-ordersummary-total-amount" id="cart-subtotal-mobile">0.00</span>
 </div>  
+</div>   
 <!-- CONTENEDOR: FORMULARIO DE ENVÍO -->
 <div class="shippinginformation-form">
 <form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
@@ -903,7 +908,9 @@ Cosmic/Psychological Horror</p>
 <span class="shippinginformation-ordersummary-shipping-text-mobile">Shipping:</span>
 <span class="shippinginformation-ordersummary-shipping-symbol-mobile">$</span>
 <span class="shippinginformation-ordersummary-shipping-amount-mobile" id="cart-shipping-mobile">0.00</span>
-</div>  
+</div>
+<!-- DIVISOR -->
+<div class="shippinginformation-ordersummary-divider-mobile"></div> 
 <!-- TOTAL -->
 <div class="shippinginformation-ordersummary-total-mobile">
 <span class="shippinginformation-ordersummary-total-text-mobile">TOTAL:</span>
@@ -957,7 +964,7 @@ Cosmic/Psychological Horror</p>
 <input type="hidden" id="hidden-cart-subtotal-mobile" name="cart_subtotal">
 <input type="hidden" id="hidden-cart-shipping-mobile" name="cart_shipping">
 <input type="hidden" id="hidden-cart-total-mobile" name="cart_total">
-<!-- CONTENEDOR: BOTONES fINALES -->
+<!-- CONTENEDOR: BOTONES FINALES -->
 <div class="shippinginformation-button-mobile">
 <a class="shippinginformation-button-back-mobile" href="#cartfull-mobile">BACK</a>
 </div>
@@ -965,7 +972,7 @@ Cosmic/Psychological Horror</p>
 <a class="shippinginformation-button-continueshopping-mobile" href="#shop-mobile">CONTINUE SHOPPING</a>
 </div>
 <div class="shippinginformation-button-mobile">    
-<button class="shippinginformation-button-proceedpayment-mobile" id="shippinginformation-button-proceedpayment-mobile">PROCEED PAYMENT</button>
+<button class="shippinginformation-button-proceedpayment-mobile">PROCEED PAYMENT</button>
 </div>
 </form>
 </div>
