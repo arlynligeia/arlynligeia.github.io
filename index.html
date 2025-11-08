@@ -634,6 +634,12 @@ Cosmic/Psychological Horror</p>
 </section>
 <!-- FIN CART EMPTY MOBILE -->
 
+
+
+
+
+
+  
 <!-- CART FULL PC -->
 <section class="cartfull-section" id="cartfull"> 
 <div class="cartfull-container">
@@ -660,7 +666,7 @@ Cosmic/Psychological Horror</p>
 <!-- PRODUCTOS SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
  
 <!-- DIVISOR -->
-<tr class="cartfull-table-wrapper-divider"><td colspan="6"></td></tr> 
+<tr class="cartfull-table-wrapper-divider-2"><td colspan="6"></td></tr> 
 <!-- SUBTOTAL: FILA -->
 <tr class="cartfull-table-wrapper-body-row">
 <td class="cartfull-table-wrapper-body-row-cell"></td>
@@ -700,7 +706,7 @@ Cosmic/Psychological Horror</p>
 <td class="cartfull-table-wrapper-body-row-cell"></td>
 </tr>
 <!-- DIVISOR -->
-<tr class="cartfull-table-wrapper-divider"><td colspan="6"></td></tr>   
+<tr class="cartfull-table-wrapper-divider-3"><td colspan="6"></td></tr>   
 <!-- TOTAL FINAL: FILA -->
 <tr class="cartfull-table-wrapper-body-row">
 <td class="cartfull-table-wrapper-body-row-cell"></td>
@@ -2161,9 +2167,10 @@ const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
 
-// Encontrar donde insertar los productos (antes del segundo divisor)
-const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider');
-const insertPosition = dividers[1];
+// Encontrar donde insertar los productos (después del primer divider y antes del divider-2)
+const dividers = cartBody.querySelectorAll('.cartfull-table-wrapper-divider, .cartfull-table-wrapper-divider-2');
+const firstDivider = dividers[0]; // Primer divider
+const secondDivider = dividers[1]; // Divider-2
 
 cart.forEach((item) => {
 const productRow = document.createElement('tr');
@@ -2211,8 +2218,8 @@ productRow.innerHTML = `
 </td>
 
 `;
-// Insertar antes del segundo divisor (donde están los totales)
-cartBody.insertBefore(productRow, insertPosition);
+// Insertar después del primer divider y antes del divider-2
+cartBody.insertBefore(productRow, secondDivider);
 });
 updateShippingTotal();
 updateSubtotal(); 
