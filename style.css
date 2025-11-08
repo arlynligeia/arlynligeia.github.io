@@ -1765,7 +1765,7 @@ color: #00FF00 !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: center;
-margin: 100px 0;
+margin: 110px 0;
 }
 /* CONTENEDOR: BOTONES */
 .cartempty-button {
@@ -1819,7 +1819,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 100px; 
+height: 60px; 
 background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -1851,7 +1851,7 @@ color: #00FF00 !important;
 text-decoration: none;  
 line-height: 1.5;
 text-align: center;
-margin: 100px 0;
+margin: 140px 0;
 }
 /* CONTENEDOR: BOTONES FINALES */
 .cartempty-button-mobile {
@@ -1861,7 +1861,7 @@ text-align: center;
 margin: 0px;
 }
 .cartempty-back-mobile,
-.cartempty-button-continueshopping-mobile, {
+.cartempty-button-continueshopping-mobile {
 display: inline-block;
 background: #00FFFF !important; 
 border-radius: 6px; 
@@ -1878,7 +1878,7 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.cartempty-button-continueshopping-mobile, {
+.cartempty-button-continueshopping-mobile {
 margin: 0px;
 }
 .cartempty-back-mobile:hover,
@@ -1889,16 +1889,6 @@ transform: scale(1.05);
 .cartempty-container { display: none; }
 .cartempty-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    CART FULL
@@ -1943,13 +1933,13 @@ text-decoration: none;
 /* CONTENEDOR: TABLA */
 .cartfull-table {
 width: 100%;
-margin: 0 0 30px 0;
+margin: 0 0 20px 0;
 }
 .cartfull-table-wrapper {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 5;
+border-spacing: 10;
 background-color: transparent;
 }
 /* ANCHO DE COLUMNAS */
@@ -2077,6 +2067,45 @@ text-align: left;
 .cartfull-table-wrapper-body-row-cell-totalfinal-amount {
 text-align: right;
 }
+/* CONTENEDOR: CONTROLES DE CANTIDAD */
+.cartfull-table-wrapper-body-row-cell-quantity {
+display: inline-block;
+vertical-align: middle;   
+text-align: right;
+float: right;
+}
+.cartfull-table-wrapper-body-row-cell-quantity-decrease,
+.cartfull-table-wrapper-body-row-cell-quantity-increase {
+width: 30px;
+height: 30px;
+display: inline-block;
+vertical-align: middle;
+background: #FF6B00 !important;
+border-radius: 4px;
+font-size: 15px;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+margin: 0px; 
+padding: 0px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;  
+}
+.cartfull-table-wrapper-body-row-cell-quantity-value {
+display: inline-block;
+vertical-align: middle;
+text-align: center;
+}
+
+
+
+
+
+
+
+
+
 /* CONTENEDOR: BOTÓN REMOVER */
 .cartfull-table-wrapper-body-row-cell-button-remove {
 width: 100%;
@@ -2102,7 +2131,6 @@ transition: transform 0.3s ease;
 .cartfull-table-wrapper-body-row-cell-button-remove:hover {
 transform: scale(1.05);
 }
-
 /* CONTENEDOR: SUBTOTAL,SHIPPING,TOTAL */
 .cartfull-table-wrapper-body-row-cell-subtotal-value,
 .cartfull-table-wrapper-body-row-cell-shipping-value,
@@ -2123,7 +2151,6 @@ text-decoration: none;
 margin: 0px;
 padding: 10px;
 }
-
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button {
 display: flex;
