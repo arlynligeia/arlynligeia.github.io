@@ -2037,6 +2037,9 @@ text-decoration: none;
 margin: 0px;
 padding: 10px;
 }
+.cartfull-table-wrapper-body-row-cell-name {
+text-align: left;
+}
 .cartfull-table-wrapper-body-row-cell-subtotal,
 .cartfull-table-wrapper-body-row-cell-shipping,
 .cartfull-table-wrapper-body-row-cell-totalfinal {
@@ -2044,14 +2047,11 @@ background: transparent !important;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;   
 color: #00FF00 !important;
+text-decoration: none;  
+text-align: right;
+margin: 0px;
+padding: 10px;
 border: none !important;
-}
-.cartfull-table-wrapper-body-row-cell-name {
-text-align: left;
-}
-.cartfull-table-wrapper-body-row-cell-quantity {
-justify-content: center; 
-text-align: center;
 }
 .cartfull-table-wrapper-body-row-cell-unit-symbol,
 .cartfull-table-wrapper-body-row-cell-total-symbol,
@@ -2067,35 +2067,40 @@ text-align: left;
 .cartfull-table-wrapper-body-row-cell-totalfinal-amount {
 text-align: right;
 }
+
 /* CONTENEDOR: CONTROLES DE CANTIDAD */
 .cartfull-table-wrapper-body-row-cell-quantity {
-display: inline-block;
-vertical-align: middle;   
-text-align: right;
-float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
 }
+
 .cartfull-table-wrapper-body-row-cell-quantity-decrease,
 .cartfull-table-wrapper-body-row-cell-quantity-increase {
-width: 30px;
-height: 30px;
-display: inline-block;
-vertical-align: middle;
-background: #FF6B00 !important;
-border-radius: 4px;
-font-size: 15px;
-color: white !important;
-text-decoration: none;
-text-transform: uppercase;
-margin: 0px; 
-padding: 0px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;  
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF6B00 !important;
+    border-radius: 4px;
+    font-size: 15px;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px; 
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;  
 }
+
 .cartfull-table-wrapper-body-row-cell-quantity-value {
-display: inline-block;
-vertical-align: middle;
-text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
 }
 
 
