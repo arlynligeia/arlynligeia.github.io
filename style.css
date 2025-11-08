@@ -2470,7 +2470,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;  
 }
 .shippinginformation-title {
@@ -2674,46 +2674,21 @@ margin: 0 0 10px 0;
 .shippinginformation-title-mobile a {
 color: #FF66CC !important;
 text-decoration: none;
-}
-
-
-
-.shippinginformation-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: #FF66CC !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
-}
-.shippinginformation-title a {
-color: #FF66CC !important;
-text-decoration: none;
-}
-
-
-
-
-   
+}  
 /* CONTENEDOR RESUMEN DEL PEDIDO */
 .shippinginformation-ordersummary-mobile {
 background-color: rgba(255, 255, 255, 0.1);
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
-padding: 15px;
-margin: 0 0 15px 0;
-}
+margin: 0 0 10px 0;   
+padding: 10px;
+}  
 .shippinginformation-ordersummary-title-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
+font-size: 1.2rem;
 color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.5; 
 text-align: center;  
 margin: 0px;
@@ -2724,23 +2699,21 @@ margin: 0px;
 display: flex;
 justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
+font-size: 1rem;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0px;
 }
 .shippinginformation-ordersummary-total-mobile {
 color: #FF6B00 !important;
-}
-/* Etiqueta a la izquierda */
+}  
 .shippinginformation-ordersummary-subtotal-text-mobile,
 .shippinginformation-ordersummary-shipping-text-mobile,
 .shippinginformation-ordersummary-total-text-mobile {
 text-align: left;
 flex: 1;
 }
-/* Símbolo y monto alineados a la derecha */
 .shippinginformation-ordersummary-subtotal-symbol-mobile,
 .shippinginformation-ordersummary-shipping-symbol-mobile,
 .shippinginformation-ordersummary-total-symbol-mobile {
@@ -2751,52 +2724,54 @@ margin-right: 5px;
 .shippinginformation-ordersummary-total-amount-mobile {
 text-align: right;
 min-width: 130px;
-}
-/* CONTENEDOR DE FORMULARIO */
+}  
+/* CONTENEDOR: FORMULARIO */
 .shippinginformation-form-mobile {
 position: relative;
 z-index: 2;
 }
-/* TÍTULOS DE SECCIONES */
+/* CONTENEDOR: TÍTULOS */
 .shippinginformation-form-personalinformation-title-mobile,
 .shippinginformation-form-shippingaddress-title-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
+font-size: 1.2rem;
 color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;      
 line-height: 1.5; 
 text-align: center;  
-margin: 0 0 15px 0;
+margin: 0px;
 }
-/* TEXTOS SOBRE LOS RECUADROS */
+/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
 .shippinginformation-form-personalinformation-label-mobile,
 .shippinginformation-form-shippingaddress-label-mobile {
 display: block;
 font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
+font-size: 1rem;
+color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase;    
 line-height: 1.5; 
 text-align: left;  
 margin: 0 0 5px 0;
-}
-/* RECUADROS BLANCOS - 40px DE ALTO */
+}  
+/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
 .shippinginformation-form-personalinformation-imput-mobile,
 .shippinginformation-form-shippingaddress-imput-mobile {
 width: 100%;
 height: 40px;
-background-color: white !important;
+box-sizing: border-box;
+background: #00FFFF !important;
 border-radius: 6px;
+border: 2px solid #ccc;     
 font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+font-size: 1rem;
 color: black !important;
 text-decoration: none;
-box-sizing: border-box;
-padding: 10px;
 margin: 0 0 15px 0;
-border: none;
-}
-/* CONTENEDOR DE BOTONES FINALES */
+padding: 10px;
+}  
+/* CONTENEDOR: BOTONES FINALES */
 .shippinginformation-button-mobile {
 width: 100%;
 display: block;
@@ -2807,7 +2782,7 @@ margin: 0px;
 .shippinginformation-button-continueshopping-mobile,
 .shippinginformation-button-proceedpayment-mobile {
 display: inline-block;
-background: #00FFFF !important; 
+background: #00CED1 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
@@ -2836,6 +2811,11 @@ transform: scale(1.05);
 .shippinginformation-container { display: none; }
 .shippinginformation-container-mobile { display: block; }
 }
+
+
+
+
+
 
 
 
