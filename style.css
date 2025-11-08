@@ -3782,6 +3782,21 @@ transform: scale(1.05);
 }
 
 
+/* REEMPLAZA CON ESTO: */
+.main-section.mobile-only:not(#home) {
+    display: none;
+}
+.subsection.mobile-only:not([id^="home-"]) {
+    display: none;
+}
+#home-mobile {
+    display: block;
+}
+#home-socialmediacontent-mobile,
+#home-tiktokhighlight-mobile, 
+#home-youtubehighlight-mobile {
+    display: block;
+}
 
 
 
