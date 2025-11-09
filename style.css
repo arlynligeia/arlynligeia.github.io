@@ -2303,7 +2303,6 @@ color: white !important;
 text-align: center;
 flex: 1;
 }
-   
 .cartfull-products-quantity-text-mobile,   
 .cartfull-products-unit-text-mobile,
 .cartfull-products-total-text-mobile,
@@ -2313,12 +2312,13 @@ flex: 1;
 text-align: left;
 flex: 1;
 }
+   
 .cartfull-products-unit-symbol-mobile,
 .cartfull-products-total-symbol-mobile,
 .cartfull-products-subtotal-symbol-mobile,
 .cartfull-products-shipping-symbol-mobile,
 .cartfull-products-totalfinal-symbol-mobile {
-margin-right: 5px;
+text-align: right;
 min-width: 130px;   
 }
 .cartfull-products-unit-amount-mobile,
@@ -2332,7 +2332,8 @@ text-align: right;
 
 
 
-  
+
+   
 /* CONTROLES DE CANTIDAD */
 .cartfull-products-product-quantity-control-mobile {
     display: flex;
