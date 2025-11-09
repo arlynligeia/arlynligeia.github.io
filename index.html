@@ -633,12 +633,6 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN CART EMPTY MOBILE -->
-
-
-
-
-
-
   
 <!-- CART FULL PC -->
 <section class="cartfull-section" id="cartfull"> 
@@ -741,19 +735,6 @@ Cosmic/Psychological Horror</p>
 <!-- FIN CART FULL PC -->
 
 
-
-
-
-
-  
-
-
-
-
-
-
-
-  
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
 <div class="cartfull-container-mobile">
@@ -761,44 +742,34 @@ Cosmic/Psychological Horror</p>
   
 <!-- CONTENEDOR: PRODUCTOS -->  
 <div class="cartfull-products-mobile">
-    <!-- LOS PRODUCTOS SE AGREGARÁN AQUÍ DINÁMICAMENTE -->
+  
+<!-- LOS PRODUCTOS SE AGREGARÁN AQUÍ DINÁMICAMENTE (ANTES DEL DIVIDER-2) -->
     
-<!-- CONTENEDOR: RESUMEN DE COMPRA -->  
-<div class="cartfull-products-summary-mobile">
-<!-- DIVISOR -->
-<div class="cartfull-products-product-divider-mobile"></div>
+<!-- DIVISOR (RESUMEN EMPIEZA AQUÍ) -->
+<div class="cartfull-products-divider-2-mobile"></div>
 <!-- PRECIO SUBTOTAL -->
-<div class="cartfull-products-summary-subtotal-mobile">
-<span class="cartfull-products-summary-subtotal-text-mobile">SUBTOTAL:</span>
-<div class="cartfull-products-summary-subtotal-value-mobile">  
-<span class="cartfull-products-summary-subtotal-value-symbol-mobile">$</span>
-<span class="cartfull-products-summary-subtotal-value-amount-mobile">0.00</span>
-</div>
+<div class="cartfull-products-subtotal-mobile">
+<span class="cartfull-products-subtotal-text-mobile">Subtotal:</span>
+<span class="cartfull-products-subtotal-symbol-mobile">$</span>
+<span class="cartfull-products-subtotal-amount-mobile">0.00</span>
 </div>
 <!-- PRECIO SHIPPING -->
-<div class="cartfull-products-summary-shipping-mobile">
-<span class="cartfull-products-summary-shipping-text-mobile">SHIPPING:</span>
-<div class="cartfull-products-summary-shipping-value-mobile">  
-<span class="cartfull-products-summary-shipping-value-symbol-mobile">$</span>
-<span class="cartfull-products-summary-shipping-value-amount-mobile">0.00</span>
-</div>
+<div class="cartfull-products-shipping-mobile">
+<span class="cartfull-products-shipping-text-mobile">Shipping:</span>
+<span class="cartfull-products-shipping-symbol-mobile">$</span>
+<span class="cartfull-products-shipping-amount-mobile">0.00</span>
 </div>
 <!-- DIVISOR -->
-<div class="cartfull-products-product-divider-mobile"></div> 
-<!-- PRECIO TOTALFINAL -->
-<div class="cartfull-products-summary-totalfinal-mobile">
-<span class="cartfull-products-summary-totalfinal-text-mobile">TOTAL:</span>
-<div class="cartfull-products-summary-totalfinal-value-mobile">  
-<span class="cartfull-products-summary-totalfinal-value-symbol-mobile">$</span>
-<span class="cartfull-products-summary-totalfinal-value-amount-mobile">0.00</span>
+<div class="cartfull-products-divider-3-mobile"></div>
+<!-- PRECIO TOTAL -->
+<div class="cartfull-products-totalfinal-mobile">
+<span class="cartfull-products-totalfinal-text-mobile">TOTAL:</span>
+<span class="cartfull-products-totalfinal-symbol-mobile">$</span>
+<span class="cartfull-products-totalfinal-amount-mobile">0.00</span>
 </div>
-</div>  
 <!-- DIVISOR -->
-<div class="cartfull-products-product-divider-mobile"></div>
+<div class="cartfull-products-divider-mobile"></div>   
 </div> 
-  
-</div>
-  
 <!-- CONTENEDOR: BOTONES FINALES -->
 <div class="cartfull-button-mobile">  
 <button class="cartfull-button-cleancart-mobile">CLEAR CART</button>
@@ -812,12 +783,9 @@ Cosmic/Psychological Horror</p>
 <div class="cartfull-button-mobile">  
 <a class="cartfull-button-checkout-mobile" href="#shippinginformation">CHECKOUT</a>
 </div>
-
 </div>  
 </section>
-<!-- FIN CARTFULL MOVIL -->
-
-
+<!-- FIN CART FULL MOBILE -->
 
   
 
@@ -2441,65 +2409,87 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplayMobile();
 showNotification('Product added to cart successfully!');
 }
+
+  
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
 function updateCartDisplayMobile() {
-const cartContainer = document.querySelector('.cartfull-products-mobile');
-if (!cartContainer) return;
-// Limpiar productos existentes
-const existingProducts = cartContainer.querySelectorAll('.cartfull-products-product-mobile');
-existingProducts.forEach(product => product.remove());
-// Agregar cada producto del carrito
-cart.forEach((item, index) => {
-const productElement = document.createElement('div');
-productElement.className = 'cartfull-products-product-mobile';
-productElement.innerHTML = `
-<!-- DIVISOR -->
-<div class="cartfull-products-product-divider-mobile"></div>
-<!-- IMAGEN -->
-<div class="cartfull-products-product-image-mobile">
+    const cartContainer = document.querySelector('.cartfull-products-mobile');
+    if (!cartContainer) return;
+    
+    // 1. ELIMINAR TODOS LOS PRODUCTOS ANTERIORES - busca por el DIVISOR-1
+    const existingDividers = cartContainer.querySelectorAll('.cartfull-products-divider-1-mobile');
+    existingDividers.forEach(divider => {
+        // Eliminar el divisor y todos los elementos del producto hasta el siguiente divisor-1 o el divider-2
+        let nextElement = divider.nextElementSibling;
+        while (nextElement && !nextElement.classList.contains('cartfull-products-divider-1-mobile') && 
+               !nextElement.classList.contains('cartfull-products-divider-2-mobile')) {
+            const toRemove = nextElement;
+            nextElement = nextElement.nextElementSibling;
+            toRemove.remove();
+        }
+        divider.remove();
+    });
+    
+    // 2. AGREGAR NUEVOS PRODUCTOS ANTES DEL DIVIDER-2
+    const divider2 = cartContainer.querySelector('.cartfull-products-divider-2-mobile');
+    
+    cart.forEach((item, index) => {
+        // Crear el HTML del producto
+        const productHTML = `
+<!-- DIVISOR DEL PRODUCTO -->
+<div class="cartfull-products-divider-1-mobile"></div>
+<!-- IMAGEN DEL PRODUCTO -->
+<div class="cartfull-products-image-mobile">
 <img src="${item.image}" alt="${item.product}">
 </div>  
-<!-- NOMBRE -->
-<div class="cartfull-products-product-name-mobile">
-<span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
+<!-- NOMBRE DEL PRODUCTO -->
+<div class="cartfull-products-name-mobile">
+<span class="cartfull-products-name-text-mobile">${item.product}</span> 
 </div>
-<!-- CANTIDAD -->
-<div class="cartfull-products-product-quantity-mobile">
-<span class="cartfull-products-product-quantity-text-mobile">QTY</span> 
-<div class="cartfull-products-product-quantity-control-mobile">
-<button class="cartfull-products-product-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile(${index})">-</button>
-<span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
-<button class="cartfull-products-product-quantity-control-increase-mobile" onclick="increaseQuantityMobile(${index})">+</button>
-</div>
-</div>
-<!-- PRECIO UNITARIO -->
-<div class="cartfull-products-product-unit-mobile">
-<span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
-<div class="cartfull-products-product-unit-value-mobile">  
-<span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
-<span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+<!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
+<div class="cartfull-products-quantity-mobile">
+<span class="cartfull-products-quantity-text-mobile">QTY</span> 
+<div class="cartfull-products-quantity-control-mobile">
+<button class="cartfull-products-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile(${index})">-</button>
+<span class="cartfull-products-quantity-control-value-mobile">${item.quantity}</span>
+<button class="cartfull-products-quantity-control-increase-mobile" onclick="increaseQuantityMobile(${index})">+</button>
 </div>
 </div>
-<!-- PRECIO TOTAL -->
-<div class="cartfull-products-product-total-mobile">
-<span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
-<div class="cartfull-products-product-total-value-mobile">  
-<span class="cartfull-products-product-total-value-symbol-mobile">$</span>
-<span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+<!-- PRECIO UNITARIO DEL PRODUCTO -->
+<div class="cartfull-products-unit-mobile">
+<span class="cartfull-products-unit-text-mobile">UNIT:</span>  
+<div class="cartfull-products-unit-value-mobile">  
+<span class="cartfull-products-unit-value-symbol-mobile">$</span>
+<span class="cartfull-products-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
 </div>
 </div>
-<!-- BOTÓN: REMOVER -->  
+<!-- PRECIO TOTAL DEL PRODUCTO -->
+<div class="cartfull-products-total-mobile">
+<span class="cartfull-products-total-text-mobile">TOTAL:</span>  
+<div class="cartfull-products-total-value-mobile">  
+<span class="cartfull-products-total-value-symbol-mobile">$</span>
+<span class="cartfull-products-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</div>
+<!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
 <div class="cartfull-products-button-mobile">  
 <button class="cartfull-products-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
 </div>
 `;
-// Insertar antes del resumen
-const summary = cartContainer.querySelector('.cartfull-products-summary-mobile');
-cartContainer.insertBefore(productElement, summary);
-});
-updateCartTotalsMobile();
-updateCartSectionsMobile();
+
+        // INSERTAR EL PRODUCTO JUSTO ANTES DEL DIVIDER-2
+        divider2.insertAdjacentHTML('beforebegin', productHTML);
+    });
+    
+    // 3. ACTUALIZAR LOS TOTALES
+    updateCartTotalsMobile();
+    updateCartSectionsMobile();
 }
+
+
+
+
+  
 // 3. FUNCIÓN: ACTUALIZAR TOTALES MOBILE
 function updateCartTotalsMobile() {
 const subtotal = cart.reduce((sum, item) => sum + parseFloat(item.totalprice), 0);
