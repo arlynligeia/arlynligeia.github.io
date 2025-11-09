@@ -2299,7 +2299,7 @@ background: #ff1493 !important;
 color: white !important;
 }   
 /* ORDEN DE LOS TEXTOS */
-.cartfull-products-name-text-mobile,
+.cartfull-products-name-text-mobile{
 text-align: center;
 }
    
@@ -2317,10 +2317,6 @@ flex: 1;
 .cartfull-products-subtotal-symbol-mobile,
 .cartfull-products-shipping-symbol-mobile,
 .cartfull-products-totalfinal-symbol-mobile {
- position: absolute;
-   left: 15px; /* Posición fija desde la izquierda */
-    top: 50%;
-    transform: translateY(-50%);
     margin-right: 0;
 }
 .cartfull-products-unit-amount-mobile,
