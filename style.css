@@ -2235,121 +2235,95 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-
-
-   
+  
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
-    width: 100%;
-    display: block;
-    margin: 0px;
+width: 100%;
+display: block;
+margin: 0px;
 }
 /* DIVISOR */
 .cartfull-products-divider-1-mobile,
 .cartfull-products-divider-2-mobile,
 .cartfull-products-divider-3-mobile {
-    width: 100%;
-    height: 0; 
-    border-top: 3px solid #FF6B00 !important;
-    margin: 0 0 10px 0; 
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
 }   
 /* CONTENEDOR: IMAGEN */
 .cartfull-products-image-mobile {
-    width: 110px;
-    height: 110px;
-    display: block;
-    text-align: center;
-    margin: 0 auto 10px auto;
+width: 110px;
+height: 110px;
+display: block;
+text-align: center;
+margin: 0 auto 10px auto;
 }  
 .cartfull-products-image-mobile img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 6px;
-    object-fit: cover;
+max-width: 100%;
+max-height: 100%;
+border-radius: 6px;
+object-fit: cover;
 }
 
-/* CONTENEDORES DE TEXTO - ESTRUCTURA BASE CON FLEXBOX */
+/* CONTENEDORES: CAJAS CON TEXTO */
+.cartfull-products-name-mobile,
+.cartfull-products-quantity-mobile,
 .cartfull-products-unit-mobile,
 .cartfull-products-total-mobile,
 .cartfull-products-subtotal-mobile,
 .cartfull-products-shipping-mobile,
 .cartfull-products-totalfinal-mobile {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    background: #00FFFF !important;
-    border-radius: 6px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    color: black !important;
-    text-decoration: none;
-    margin: 0 0 10px 0;
-    padding: 10px;
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;   
+margin: 0 0 10px 0;
+padding: 10px;
 }
-
-.cartfull-products-name-mobile,
-.cartfull-products-quantity-mobile {
-    width: 100%;
-    height: 40px;
-    display: block;
-    box-sizing: border-box;
-    background: #00FFFF !important;
-    border-radius: 6px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
-    color: black !important;
-    text-decoration: none;
-    text-align: center;
-    margin: 0 0 10px 0;
-    padding: 10px;
-}
-
 .cartfull-products-subtotal-mobile,
 .cartfull-products-shipping-mobile {
-    background: #FF66CC !important;
+background: #FF66CC !important;
 }
-
 .cartfull-products-totalfinal-mobile {
-    background: #ff1493 !important;
-    color: white !important;
+background: #ff1493 !important;
+color: white !important;
 }   
-
-.cartfull-products-quantity-mobile {
-    padding: 5px 10px;
-}
-
-/* TEXTO A LA IZQUIERDA */
+/* ORDEN DE LOS TEXTOS */
+.cartfull-products-quantity-text-mobile,   
 .cartfull-products-unit-text-mobile,
 .cartfull-products-total-text-mobile,
 .cartfull-products-subtotal-text-mobile,
 .cartfull-products-shipping-text-mobile,
 .cartfull-products-totalfinal-text-mobile {
-    text-align: left;
-    flex: 1;
+text-align: left;
+flex: 1;
 }
-
-/* SÍMBOLO DE DÓLAR CON ESPACIO */
 .cartfull-products-unit-symbol-mobile,
 .cartfull-products-total-symbol-mobile,
 .cartfull-products-subtotal-symbol-mobile,
 .cartfull-products-shipping-symbol-mobile,
 .cartfull-products-totalfinal-symbol-mobile {
-    margin-right: 5px;
+margin-right: 5px;
 }
-
-/* MONTO CON SUFICIENTE ESPACIO PARA MILLONES */
 .cartfull-products-unit-amount-mobile,
 .cartfull-products-total-amount-mobile,
 .cartfull-products-subtotal-amount-mobile,
 .cartfull-products-shipping-amount-mobile,
 .cartfull-products-totalfinal-amount-mobile {
-    text-align: right;
-    min-width: 100px;
-    font-feature-settings: "tnum";
-    font-variant-numeric: tabular-nums;
+text-align: right;
+min-width: 130px;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
 }
 
 
@@ -2358,33 +2332,37 @@ text-decoration: none;
   
 /* CONTROLES DE CANTIDAD */
 .cartfull-products-product-quantity-control-mobile {
-display: inline-block;
-vertical-align: middle;   
-text-align: right;
-float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
 }
+
 .cartfull-products-product-quantity-control-decrease-mobile,
 .cartfull-products-product-quantity-control-increase-mobile {
-width: 30px;
-height: 30px;
-display: inline-block;
-vertical-align: middle;
-background: #FF6B00 !important;
-border-radius: 4px;
-font-size: 15px;
-color: white !important;
-text-decoration: none;
-text-transform: uppercase;
-margin: 0px; 
-padding: 0px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;  
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF6B00 !important;
+    border-radius: 4px;
+    font-size: 15px;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0px; 
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;  
 }
+
 .cartfull-products-product-quantity-control-value-mobile {
-display: inline-block;
-vertical-align: middle;
-text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 30px;
 }
 
 
