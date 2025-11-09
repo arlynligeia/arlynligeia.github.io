@@ -2238,8 +2238,8 @@ text-decoration: none;
    
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
+width: 100%;
 margin: 0px;
-padding: 0px;
 }
 /* DIVISOR */
 .cartfull-products-divider-1-mobile,
@@ -2276,6 +2276,7 @@ width: 100%;
 height: 40px;
 display: flex;
 justify-content: space-between;
+box-sizing: border-box;   
 background: #00FFFF !important;
 border-radius: 6px;
 font-family: 'Share Tech Mono', monospace;
