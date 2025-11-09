@@ -2299,30 +2299,57 @@ color: white !important;
 .cartfull-products-quantity-mobile {
 padding: 5px 10px;
 } 
+
+   
+/* TEXTO A LA IZQUIERDA */
 .cartfull-products-quantity-text-mobile,
 .cartfull-products-unit-text-mobile,
 .cartfull-products-total-text-mobile,
 .cartfull-products-subtotal-text-mobile,
 .cartfull-products-shipping-text-mobile,
 .cartfull-products-totalfinal-text-mobile {
-text-align: left;
-flex: 1;
+    text-align: left;
+    flex: 1;
 }
-.cartfull-products-unit-symbol-mobile,
-.cartfull-products-total-symbol-mobile,
-.cartfull-products-subtotal-symbol-mobile,
-.cartfull-products-shipping-symbol-mobile,
-.cartfull-products-totalfinal-symbol-mobile {
-margin-right: 5px;
-}
-.cartfull-products-unit-amount-mobile,
-.cartfull-products-total-amount-mobile,
+
+/* CONTENEDOR DE MONTO A LA DERECHA */
+.cartfull-products-unit-value-mobile,
+.cartfull-products-total-value-mobile,
 .cartfull-products-subtotal-amount-mobile,
 .cartfull-products-shipping-amount-mobile,
 .cartfull-products-totalfinal-amount-mobile {
-text-align: right;
-min-width: 130px;
-} 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    min-width: 130px;
+}
+
+/* SÍMBOLO DE DÓLAR CON ESPACIO */
+.cartfull-products-unit-value-symbol-mobile,
+.cartfull-products-total-value-symbol-mobile,
+.cartfull-products-subtotal-symbol-mobile,
+.cartfull-products-shipping-symbol-mobile,
+.cartfull-products-totalfinal-symbol-mobile {
+    margin-right: 5px;
+}
+
+/* MONTO CON SUFICIENTE ESPACIO PARA MILLONES */
+.cartfull-products-unit-value-amount-mobile,
+.cartfull-products-total-value-amount-mobile,
+.cartfull-products-subtotal-amount-mobile,
+.cartfull-products-shipping-amount-mobile,
+.cartfull-products-totalfinal-amount-mobile {
+    text-align: right;
+    min-width: 100px;
+    font-feature-settings: "tnum";
+    font-variant-numeric: tabular-nums;
+}
+
+
+
+
+   
 /* CONTROLES DE CANTIDAD */
 .cartfull-products-product-quantity-control-mobile {
 display: inline-block;
