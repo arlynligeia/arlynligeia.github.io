@@ -2318,8 +2318,8 @@ flex: 1;
 .cartfull-products-subtotal-symbol-mobile,
 .cartfull-products-shipping-symbol-mobile,
 .cartfull-products-totalfinal-symbol-mobile {
-text-align: right;
-min-width: 130px;   
+ margin-right: 5px;
+min-width: 15px; /* Espacio fijo para el símbolo */
 }
 .cartfull-products-unit-amount-mobile,
 .cartfull-products-total-amount-mobile,
@@ -2327,6 +2327,9 @@ min-width: 130px;
 .cartfull-products-shipping-amount-mobile,
 .cartfull-products-totalfinal-amount-mobile {
 text-align: right;
+min-width: 130px;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
 }
 
 
