@@ -8199,12 +8199,16 @@ transform: scale(1.05);
 
 
 /* REEMPLAZA CON ESTO: */
-.main-section:not(#home) {
-    display: none;
+.main-section:not(#home),
+#cartempty,
+#cartfull  {
+display: none;
 }
+
 .subsection:not([id^="home-"]) {
     display: none;
 }
+
 #home {
     display: block;
 }
@@ -8213,6 +8217,8 @@ transform: scale(1.05);
 #home-youtubehighlight {
     display: block;
 }
+
+
 
 
 /* REEMPLAZA CON ESTO: */
