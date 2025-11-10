@@ -2311,6 +2311,9 @@ flex: 1;
 text-align: left;
 flex: 1;
 }
+
+
+   
 .cartfull-products-unit-value-mobile,
 .cartfull-products-total-value-mobile,
 .cartfull-products-subtotal-value-mobile,
@@ -2318,8 +2321,7 @@ flex: 1;
 .cartfull-products-totalfinal-value-mobile {
 display: flex;
 justify-content: flex-end;  
-align-items: center;
-min-width: 130px;
+align-items: right;
 }
 .cartfull-products-unit-value-symbol-mobile,
 .cartfull-products-total-value-symbol-mobile,
@@ -2327,20 +2329,23 @@ min-width: 130px;
 .cartfull-products-shipping-value-symbol-mobile,
 .cartfull-products-totalfinal-value-symbol-mobile {
 display: inline-block;
-min-width: 10px;
+min-width: 130px;
+text-align: left;
 margin-right: 5px;
-text-align: center;
 }
 .cartfull-products-unit-value-amount-mobile,
 .cartfull-products-total-value-amount-mobile,
 .cartfull-products-subtotal-value-amount-mobile,
 .cartfull-products-shipping-value-amount-mobile,
 .cartfull-products-totalfinal-value-amount-mobile {
-min-width: 120px;
 text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
-}  
+}
+
+
+
+   
 /* CONTENEDOR: CONTROLES CANTIDAD */
 .cartfull-products-quantity-control-mobile {
 display: flex;
