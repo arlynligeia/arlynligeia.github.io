@@ -1265,19 +1265,6 @@ margin-bottom: 0px;
 .about-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FILM BANNER PC
 ====================================== */
@@ -1328,7 +1315,7 @@ filter: brightness(1.2) contrast(1.1) saturate(1.1);
 border-radius: 0;
 background-color: #000000 !important;
 }
-/* CONTENEDOR DE TEXTO FILM */
+/* CONTENEDOR: FILM */
 .film-container {
 position: relative;
 width: 800px;
@@ -1345,7 +1332,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .film-title {
@@ -1356,6 +1343,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -1364,13 +1352,13 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.film-information {
+/* CONTENEDOR: CONTENIDO */
+.film-content {
 width: 100%;
 margin: 0px; 
 }
-.film-information-text,
-.film-information-text-end {
+.film-content-text,
+.film-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -1379,7 +1367,7 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.film-information-text-end {
+.film-content-text-end {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
@@ -1419,12 +1407,12 @@ filter: brightness(1.2) contrast(1.1) saturate(1.1);
 border-radius: 0;
 background-color: #000000 !important; 
 }
-/* CONTENEDOR */
+/* CONTENEDOR: FILM */
 .film-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -1437,7 +1425,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .film-title-mobile {
@@ -1448,6 +1436,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;    
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -1455,13 +1444,13 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.film-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.film-content-mobile {
 width: 100%;
 margin: 0px;  
 }
-.film-information-text-mobile,
-.film-information-text-end-mobile {
+.film-content-text-mobile,
+.film-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -1470,7 +1459,7 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.film-information-text-end-mobile {
+.film-content-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
@@ -1500,7 +1489,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .featurefilm-title {
@@ -1511,6 +1500,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -1571,10 +1561,9 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
- /* TÍTULO */
 .featurefilm-title-mobile {
 position: relative;
 z-index: 2;
@@ -1583,6 +1572,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -1617,6 +1607,23 @@ transform: scale(1.1);
 .featurefilm-container { display: none; }
 .featurefilm-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ALONE
@@ -1858,6 +1865,9 @@ margin-bottom: 0px;
 .alone-container-mobile { display: block; }
 }
 
+
+
+
 /* ======================================
    SHORT FILM
 ====================================== */
@@ -1878,7 +1888,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .shortfilm-title {
@@ -1889,6 +1899,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -1907,6 +1918,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
@@ -1941,7 +1953,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .shortfilm-title-mobile {
@@ -1952,6 +1964,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -1959,7 +1972,7 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: VIDEO MÓVIL */
+/* CONTENEDOR: VIDEO */
 .shortfilm-video-mobile {
 width: 100%;
 margin: 0px;
@@ -1969,6 +1982,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
@@ -2004,7 +2018,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .musicvideodirection-title {
@@ -2015,6 +2029,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -2033,6 +2048,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
@@ -2067,7 +2083,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .musicvideodirection-title-mobile {
@@ -2078,6 +2094,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase; 
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -2095,6 +2112,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-transform: uppercase; 
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
@@ -2109,6 +2127,25 @@ margin: 0px;
 .musicvideodirection-container { display: none; }
 .musicvideodirection-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    MUSIC BANNER PC
