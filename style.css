@@ -2555,17 +2555,33 @@ margin: 0px;
 text-align: left;
 flex: 1;
 }
-.shippinginformation-ordersummary-subtotal-symbol,
-.shippinginformation-ordersummary-shipping-symbol,
-.shippinginformation-ordersummary-total-symbol {
-margin-right: 5px;
-}
-.shippinginformation-ordersummary-subtotal-amount,
-.shippinginformation-ordersummary-shipping-amount,
-.shippinginformation-ordersummary-total-amount {
-text-align: right;
+.shippinginformation-ordersummary-subtotal-value,
+.shippinginformation-ordersummary-shipping-value,
+.shippinginformation-ordersummary-total-value {
 min-width: 130px;
-}  
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol,
+.shippinginformation-ordersummary-shipping-value-symbol,
+.shippinginformation-ordersummary-total-value-symbol {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount,
+.shippinginformation-ordersummary-shipping-value-amount,
+.shippinginformation-ordersummary-total-value-amount {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}   
+
+
+
+
 /* DIVISOR */
 .shippinginformation-ordersummary-divider {
 width: 100%;
@@ -2668,12 +2684,6 @@ transform: scale(1.05);
 /* CONTROL */
 .shippinginformation-container { display: block; }
 .shippinginformation-container-mobile { display: none; }
-
-
-
-
-
-
 /* ======================================
    SHIPPING INFORMATION MOBILE
 ====================================== */
@@ -2744,9 +2754,7 @@ color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0px;
-}
-
-   
+} 
 /* ORDEN DE LOS TEXTOS */   
 .shippinginformation-ordersummary-subtotal-text-mobile,
 .shippinginformation-ordersummary-shipping-text-mobile,
@@ -2776,11 +2784,7 @@ min-width: 110px;
 text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
-}
-
-
-
-   
+}  
 /* DIVISOR */
 .shippinginformation-ordersummary-divider-mobile {
 width: 100%;
