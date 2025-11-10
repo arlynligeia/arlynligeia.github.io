@@ -3184,20 +3184,6 @@ margin-bottom: 0px;
 .fw2627-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    ART BANNER PC
 ====================================== */
@@ -3400,22 +3386,6 @@ margin-bottom: 0px;
 .art-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
     SCIENCE PC
 ====================================== */
@@ -3497,7 +3467,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 }
-
 /* CONTENEDOR: IMÁGENES MÓVIL */
 .science-carousel-image-mobile {
 position: absolute;
@@ -3518,7 +3487,6 @@ opacity: 1;
 .science-carousel-mobile { display: flex; }
 }
 
-
 /* ======================================
    RESEARCH ARTICLE
 ====================================== */
@@ -3526,7 +3494,7 @@ opacity: 1;
 .researcharticle-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3539,7 +3507,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 /* CONTENEDOR TÍTULO + BOTÓN */
@@ -3557,14 +3525,15 @@ z-index: 2;
 display: block;  
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0; 
 }
 .researcharticle-header-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 .researcharticle-header-button {
@@ -3576,10 +3545,11 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
-text-align: center;
-padding: 10px 20px 10px 20px;  
-margin: 0 0 16px 0;
+text-transform: uppercase;   
 font-weight: bold;
+text-align: center;
+margin: 0 0 16px 0; 
+padding: 10px 20px;  
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;  
@@ -3587,22 +3557,22 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .researcharticle-header-button:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: INFORMACION */
-.researcharticle-information {
+/* CONTENEDOR: CONTENIDO */
+.researcharticle-content {
 width: 100%;
 margin: 0px;
 }
-.researcharticle-information-text,
-.researcharticle-information-text-end {
+.researcharticle-content-text,
+.researcharticle-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.researcharticle-information-text-end {
+.researcharticle-content-text-end {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
@@ -3616,7 +3586,7 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color:  #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -3629,7 +3599,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
  /* TÍTULO */
@@ -3639,16 +3609,18 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;   
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .researcharticle-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR DEL BOTÓN */
+/* CONTENEDOR: BOTÓN */
 .researcharticle-button-mobile {
 display: flex;
 justify-content: center;
@@ -3662,10 +3634,11 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;  
 text-align: center;
+margin: 0 0 10px 0;    
 padding: 10px 20px;
-margin-bottom: 10px; 
-font-weight: bold;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
@@ -3673,16 +3646,16 @@ transition: all 0.3s ease;
 .researcharticle-button-orcid-mobile:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: INFORMACION */
-.researcharticle-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.researcharticle-content-mobile {
 width: 100%;
 margin: 0px;
 }
-.researcharticle-information-text-mobile,
-.researcharticle-information-text-end-mobile {
+.researcharticle-content-text-mobile,
+.researcharticle-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -3703,7 +3676,7 @@ margin-bottom: 0px;
 .psychology-container {
 position: relative;
 width: 800px;
-background-color:  #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3716,7 +3689,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .psychology-title {
@@ -3725,34 +3698,38 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .psychology-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: BOTONES */
 .psychology-buttons {
 width: 100%;
-display: flex;
-flex-direction: column;
+display: block;
+text-align: center;
+margin: 0px;    
 }
 .psychology-button,
 .psychology-button-end {
-display: block;
+display: inline-block;
+box-sizing: border-box;
 background-color: #ff1493 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
-padding: 20px 20px 20px 20px;
-margin: 0 0 20px 0;    
+margin: 0 0 20px 0;      
+padding: 20px; 
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -3775,7 +3752,7 @@ transform: scale(1.05);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color:  #9900CC !important;
+background:  #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -3788,52 +3765,53 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
-/* TÍTULO */
 .psychology-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .psychology-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: BOTONES */
 .psychology-buttons-mobile {
 width: 100%;
-display: flex;
-flex-direction: column;
+display: block;
+text-align: center;
+margin: 0px;    
 }
 .psychology-button-mobile,
 .psychology-button-end-mobile {
-display: block;
+display: inline-block;
+box-sizing: border-box;
 background-color: #ff1493 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;    
 text-align: center;
-padding: 15px 15px;
-margin: 0 0 15px 0;    
+margin: 0 0 15px 0;      
+padding: 15px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
-word-break: break-word;
-overflow-wrap: break-word;
 } 
 .psychology-button-end-mobile {
 margin-bottom: 0px;
-}
+}  
 .psychology-button-mobile:hover,
 .psychology-button-end-mobile:hover {
 transform: scale(1.05);
@@ -3842,6 +3820,13 @@ transform: scale(1.05);
 .psychology-container { display: none; }
 .psychology-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
 
 
 
