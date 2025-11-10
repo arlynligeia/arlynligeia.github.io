@@ -2322,7 +2322,7 @@ flex: 1;
 min-width: 130px;
 display: flex;
 justify-content: flex-end;  
-align-items: right;
+align-items: center;
 }
 .cartfull-products-unit-value-symbol-mobile,
 .cartfull-products-total-value-symbol-mobile,
@@ -2331,13 +2331,14 @@ align-items: right;
 .cartfull-products-totalfinal-value-symbol-mobile {
 display: inline-block;
 text-align: left;
+min-width: 5px;
 }
 .cartfull-products-unit-value-amount-mobile,
 .cartfull-products-total-value-amount-mobile,
 .cartfull-products-subtotal-value-amount-mobile,
 .cartfull-products-shipping-value-amount-mobile,
 .cartfull-products-totalfinal-value-amount-mobile {
-display: inline-block;
+min-width: 120px;
 text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
