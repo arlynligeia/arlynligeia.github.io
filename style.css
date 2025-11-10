@@ -2194,12 +2194,6 @@ transform: scale(1.05);
 }
 .cartfull-container { display: block; }
 .cartfull-container-mobile { display: none; }
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: CARTFULL
 ====================================== */
@@ -2241,7 +2235,6 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-  
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
 width: 100%;
@@ -2271,7 +2264,6 @@ max-height: 100%;
 border-radius: 6px;
 object-fit: cover;
 }
-
 /* CONTENEDORES: CAJAS CON TEXTO */
 .cartfull-products-name-mobile,
 .cartfull-products-quantity-mobile,
@@ -2318,86 +2310,72 @@ flex: 1;
 text-align: left;
 flex: 1;
 }
-/* CONTENEDORES DE VALOR A LA DERECHA */
 .cartfull-products-unit-value-mobile,
 .cartfull-products-total-value-mobile,
 .cartfull-products-subtotal-value-mobile,
 .cartfull-products-shipping-value-mobile,
 .cartfull-products-totalfinal-value-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    min-width: 150px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+min-width: 150px;
 }
-
-/* SÍMBOLO DE DÓLAR FIJO */
 .cartfull-products-unit-value-symbol-mobile,
 .cartfull-products-total-value-symbol-mobile,
 .cartfull-products-subtotal-value-symbol-mobile,
 .cartfull-products-shipping-value-symbol-mobile,
 .cartfull-products-totalfinal-value-symbol-mobile {
-    margin-right: 5px;
-    min-width: 20px;
-    display: inline-block;
-    text-align: center;
+display: inline-block;
+min-width: 10px;
+margin-right: 5px;
+text-align: center;
 }
-
-/* MONTO CON ESPACIO PARA MILLONES */
 .cartfull-products-unit-value-amount-mobile,
 .cartfull-products-total-value-amount-mobile,
 .cartfull-products-subtotal-value-amount-mobile,
 .cartfull-products-shipping-value-amount-mobile,
 .cartfull-products-totalfinal-value-amount-mobile {
-    text-align: right;
-    min-width: 120px;
-    font-feature-settings: "tnum";
-    font-variant-numeric: tabular-nums;
-}
-
-
-
-
-
-
-   
-/* CONTROLES DE CANTIDAD */
+min-width: 120px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}  
+/* CONTENEDOR: CONTROLES CANTIDAD */
 .cartfull-products-product-quantity-control-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 8px;
+display: flex;
+justify-content: flex-end;   
+align-items: center;
+gap: 8px;
 }
-
 .cartfull-products-product-quantity-control-decrease-mobile,
 .cartfull-products-product-quantity-control-increase-mobile {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FF6B00 !important;
-    border-radius: 4px;
-    font-size: 15px;
-    color: white !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    margin: 0px; 
-    padding: 0px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;  
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;   
+align-items: center;
+background: #FF6B00 !important;
+border-radius: 4px;
+font-size: 15px;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+margin: 0px; 
+padding: 5px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;  
 }
-
+.cartfull-products-product-quantity-control-decrease-mobile:hover,
+.cartfull-products-product-quantity-control-increase-mobile:hover {
+transform: scale(1.05);
+}
 .cartfull-products-product-quantity-control-value-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 30px;
-}
-
-
-
-   
+display: flex;
+justify-content: center;   
+align-items: center;
+min-width: 30px;
+} 
 /* CONTENEDOR: BOTON REMOVER */
 .cartfull-products-button-mobile {
 width: 100%;
