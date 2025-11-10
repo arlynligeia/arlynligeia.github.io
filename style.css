@@ -2310,10 +2310,7 @@ flex: 1;
 .cartfull-products-totalfinal-text-mobile {
 text-align: left;
 flex: 1;
-}
-
-
-   
+}  
 .cartfull-products-unit-value-mobile,
 .cartfull-products-total-value-mobile,
 .cartfull-products-subtotal-value-mobile,
@@ -2342,11 +2339,7 @@ min-width: 110px;
 text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
-}
-
-
-
-   
+}  
 /* CONTENEDOR: CONTROLES CANTIDAD */
 .cartfull-products-quantity-control-mobile {
 display: flex;
@@ -2480,19 +2473,6 @@ transform: scale(1.05);
         display: none;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2688,6 +2668,12 @@ transform: scale(1.05);
 /* CONTROL */
 .shippinginformation-container { display: block; }
 .shippinginformation-container-mobile { display: none; }
+
+
+
+
+
+
 /* ======================================
    SHIPPING INFORMATION MOBILE
 ====================================== */
@@ -2746,7 +2732,7 @@ text-transform: uppercase;
 line-height: 1.5; 
 text-align: center;  
 margin: 0px;
-}
+}  
 .shippinginformation-ordersummary-subtotal-mobile,
 .shippinginformation-ordersummary-shipping-mobile,
 .shippinginformation-ordersummary-total-mobile {
@@ -2759,23 +2745,42 @@ text-decoration: none;
 line-height: 1.5;
 margin: 0px;
 }
+
+   
+/* ORDEN DE LOS TEXTOS */   
 .shippinginformation-ordersummary-subtotal-text-mobile,
 .shippinginformation-ordersummary-shipping-text-mobile,
 .shippinginformation-ordersummary-total-text-mobile {
 text-align: left;
 flex: 1;
 }
-.shippinginformation-ordersummary-subtotal-symbol-mobile,
-.shippinginformation-ordersummary-shipping-symbol-mobile,
-.shippinginformation-ordersummary-total-symbol-mobile {
-margin-right: 5px;
-}
-.shippinginformation-ordersummary-subtotal-amount-mobile,
-.shippinginformation-ordersummary-shipping-amount-mobile,
-.shippinginformation-ordersummary-total-amount-mobile {
-text-align: right;
+.shippinginformation-ordersummary-subtotal-value-mobile,
+.shippinginformation-ordersummary-shipping-value-mobile,
+.shippinginformation-ordersummary-total-value-mobile {
 min-width: 130px;
-} 
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol-mobile,
+.shippinginformation-ordersummary-shipping-value-symbol-mobile,
+.shippinginformation-ordersummary-total-value-symbol-mobile {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount-mobile,
+.shippinginformation-ordersummary-shipping-value-amount-mobile,
+.shippinginformation-ordersummary-total-value-amount-mobile {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}
+
+
+
+   
 /* DIVISOR */
 .shippinginformation-ordersummary-divider-mobile {
 width: 100%;
