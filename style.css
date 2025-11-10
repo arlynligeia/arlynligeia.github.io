@@ -512,6 +512,8 @@ opacity: 1;
 
 
 
+
+
 /* ======================================
    SOCIAL MEDIA CONTENT
 ====================================== */
@@ -519,7 +521,7 @@ opacity: 1;
 .socialmediacontent-container {
 position: relative;
 width: 800px;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 30px;
 margin: 40px auto;
@@ -532,7 +534,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .socialmediacontent-title {
@@ -543,6 +545,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -560,17 +563,10 @@ margin: 0px;
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
-border-spacing: 0;
+border-spacing: 10;
 background-color: transparent;
 }
-.socialmediacontent-table-wrapper {
-width: 100%;
-table-layout: fixed;
-border-collapse: separate;
-border-spacing: 5px;
-background-color: transparent;
-}
-/* ANCHO DE COLUMNAS*/
+/* TABLA: ANCHO DE COLUMNAS*/
 .socialmediacontent-table-wrapper th:nth-child(1),
 .socialmediacontent-table-wrapper td:nth-child(1) {
 width: 20%;
@@ -583,7 +579,7 @@ width: 45%;
 .socialmediacontent-table-wrapper td:nth-child(3) {
 width: 35%;
 }
-/* ENCABEZADOS */
+/* TABLA: ENCABEZADOS */
 .socialmediacontent-table-wrapper-head-row {
 width: 100%;
 margin: 0px;
@@ -591,57 +587,61 @@ margin: 0px;
 .socialmediacontent-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #39ff14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 text-align: center;
 text-transform: uppercase;
 padding: 0px;
 margin: 0px;  
 }
-/* CUERPO DE LA TABLA */
+/* TABLA: CUERPO */
 .socialmediacontent-table-wrapper-body {
 width: 100%;
 margin: 0px;
 }
-/* SEPARADOR */
-.socialmediacontent-table-wrapper-body-divider td {
+/* DIVISOR */
+.socialmediacontent-table-wrapper-divider td {
 width: 100%;
 height: 0; 
-border-top: 3px solid #39ff14 !important;
-margin: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 10px 0; 
 }
+/* TABLA: FILAS */
 .socialmediacontent-table-wrapper-body-row {
 vertical-align: middle;
 }
-/* CONTENEDOR: BOTONES TIKTOK-YOUTUBE */
-.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+/* TABLA: CELDA DE BOTÓN */
+.socialmediacontent-table-wrapper-body-row-cell-button {
 width: 100%;
 height: 40px;
 display: flex;
 justify-content: center;
 align-items: center;
 box-sizing: border-box;
-background-color: #ff1493 !important;
+background: #ff1493 !important;
 border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
-text-decoration: none;
-text-transform: uppercase; 
-text-align: center;  
 margin: 0px; 
 padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
-.socialmediacontent-table-wrapper-body-row-cell-button-tiktok:hover,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube:hover {
+.socialmediacontent-table-wrapper-body-row-cell-button:hover {
 transform: scale(1.05);
 }
-/* CELDAS */
-.socialmediacontent-table-wrapper-body-row-cell span {
+/* TABLA: TEXTO DE BOTÓN */
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;  
+}
+/* TABLA: CELDA DE TEXTOS */
+.socialmediacontent-table-wrapper-body-row-cell {
 width: 100%;
 height: 40px;
 display: flex;
@@ -650,13 +650,17 @@ align-items: center;
 box-sizing: border-box;
 background: #00FFFF !important;
 border-radius: 6px;
+margin: 0px;
+padding: 10px;
+border: none;  
+}
+/* TABLA: TEXTOS */
+.socialmediacontent-table-wrapper-body-row-cell-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 text-align: center;  
-margin: 0px;
-padding: 10px;
 }
 /* CONTROL */
 .socialmediacontent-container { display: block; }
@@ -669,7 +673,7 @@ padding: 10px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -682,7 +686,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .socialmediacontent-title-mobile {
@@ -700,20 +704,21 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR DE CONTENIDO */
+/* CONTENEDOR: CONTENIDO */
 .socialmediacontent-content-mobile {
 width: 100%;
+display: block;
+margin: 0px;
 }
-.socialmediacontent-content-group-mobile {
-margin-bottom: 10px;
+/* CONTENEDOR: BOTON */
+.socialmediacontent-content-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
 }
-.socialmediacontent-content-group-row-mobile {   
-display: flex;
-justify-content: center;
-margin-bottom: 10px;
-}
-/* BOTONES */
-.socialmediacontent-content-group-button-mobile {
+.socialmediacontent-content-button-tiktok-mobile,
+.socialmediacontent-content-button-youtube-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px; 
@@ -721,35 +726,42 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;   
 text-align: center;
-padding: 10px 20px;
-font-weight: bold;
+margin: 0 0 10px 0; 
+padding: 10px 20px;   
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.socialmediacontent-content-group-button-mobile:hover {
+.socialmediacontent-content-button-tiktok-mobile:hover,
+.socialmediacontent-content-button-youtube-mobile:hover {
 transform: scale(1.05);
-}
-/* CAJAS DE TEXTO */
-.socialmediacontent-content-group-box-mobile {
+}  
+/* CONTENEDOR: CAJAS */
+.socialmediacontent-content-box-mobile {
 width: 100%;
-height: 20px;
+height: 40px;
 background: #00FFFF !important;
 border-radius: 6px;
+margin: 0 0 10px 0;  
+padding: 10px;
+border: none;
+}
+/* CONTENEDOR: TEXTO */
+.socialmediacontent-content-box-text-mobile {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
-text-align: center;
-margin: 0px;  
-padding: 10px;
-}
+text-align: center;  
+}   
 /* SEPARADOR */
 .socialmediacontent-content-divider-mobile {
 width: 100%;
 height: 0; 
-border-top: 3px solid #FF66CC !important;
+border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
 }
  /* CONTROL */
@@ -776,7 +788,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 height: 90px;
 }
@@ -798,6 +810,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0; 
@@ -806,20 +819,21 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* BOTÓN FOLLOW */
+/* BOTÓN: FOLLOW */
 .youtubehighlight-button-follow {
+z-index: 2;
 display: inline-block;
 background-color: #ff1493 !important;
-z-index: 2;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-font-weight: bold;
-color: white;
+color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
 text-align: center;
+margin: 0 0 16px 0;    
 padding: 10px 20px; 
-margin: 0 0 16px 0; 
 border: none;
 cursor: pointer; 
 transition: transform 0.3s ease, background-color 0.3s ease;  
@@ -832,7 +846,7 @@ transform: scale(1.05);
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR: GRID */
+/* CONTENEDOR: GRID DE 2 */
 .youtubehighlight-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
@@ -840,20 +854,20 @@ gap: 20px;
 grid-auto-rows: 250px;
 margin: 0px; 
 }
-/* CONTENEDOR VIDEO */
-.youtubehighlight-columns-grid-wrapper {
+/* CONTENEDOR: VIDEO */
+.youtubehighlight-columns-grid-video {
 position: relative;
 overflow: hidden;
 border-radius: 15px;
 }
-.youtubehighlight-columns-grid-wrapper iframe {
+.youtubehighlight-columns-grid-video iframe {
 position: absolute;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-border: none;
 border-radius: 15px;
+border: none;
 }
 /* CONTROL DISPLAY FUERA DEL MEDIA QUERY */
 .youtubehighlight-container { display: block; }
@@ -866,7 +880,7 @@ border-radius: 15px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -879,7 +893,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .youtubehighlight-title-mobile {
@@ -890,6 +904,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -897,12 +912,11 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR DEL BOTÓN */
+/* CONTENEDOR: BOTÓN FOLLOW */
 .youtubehighlight-button-mobile {
 display: flex;
 justify-content: center;
 }
-/* BOTÓN FOLLOW */
 .youtubehighlight-button-follow-mobile {
 display: inline-block;
 background: #ff1493 !important;
@@ -911,10 +925,11 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;   
 text-align: center;
+margin: 0 0 10px 0;    
 padding: 10px 20px;
-margin-bottom: 10px; 
-font-weight: bold;
 border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
@@ -922,13 +937,13 @@ transition: all 0.3s ease;
 .youtubehighlight-button-follow-mobile:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR DE VIDEOS */
+/* CONTENEDOR: VIDEOS */
 .youtubehighlight-content-mobile {
 width: 100%;
 display: block;
 margin: 0px;
 }
-.youtubehighlight-video-wrapper-mobile {
+.youtubehighlight-content-video-mobile {
 position: relative;
 width: 100%;
 height: 200px;
@@ -936,10 +951,10 @@ border-radius: 15px;
 overflow: hidden;
 margin: 0 0 10px 0;
 }
-.youtubehighlight-video-wrapper-mobile:last-child {
+.youtubehighlight-content-video-mobile:last-child {
 margin-bottom: 0;
 }
-.youtubehighlight-video-wrapper-mobile iframe {
+.youtubehighlight-content-video-mobile iframe {
 position: absolute;
 top: 0;
 left: 0;
@@ -953,10 +968,6 @@ border: none;
 .youtubehighlight-container-mobile { display: block; }
 }
 
-
-
-
-
 /* ======================================
    UNIVERSE
 ====================================== */
@@ -964,7 +975,7 @@ border: none;
 .universe-container {
 position: relative;
 width: 800px;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 20px auto;
 padding: 30px;
@@ -977,7 +988,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .universe-title {
@@ -988,6 +999,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -996,14 +1008,13 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.universe-information {
+/* CONTENEDOR: CONTENIDO */
+.universe-content {
 width: 100%;
-min-width: 0;
 margin: 0px;
 }
-.universe-information-text,
-.universe-information-text-end {
+.universe-content-text,
+.universe-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -1011,13 +1022,11 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
-.universe-information-text-end {
+.universe-content-text-end {
 margin-bottom: 0px;
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
+/* CONTROL */
 .universe-container { display: block; }
 .universe-container-mobile { display: none; }
 /* ======================================
@@ -1028,7 +1037,7 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 20px auto;
 padding: 20px;
@@ -1041,7 +1050,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;  
+background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
 .universe-title-mobile {
@@ -1052,6 +1061,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -1059,13 +1069,13 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.universe-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.universe-content-mobile {
 width: 100%;
-order: 2;
+margin: 0px;
 }
-.universe-information-text-mobile,
-.universe-information-text-end-mobile {
+.universe-content-text-mobile,
+.universe-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -1073,8 +1083,6 @@ text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
-word-break: break-word;
-overflow-wrap: break-word;
 }
 .universe-information-text-end-mobile {
 margin-bottom: 0px;
@@ -1091,7 +1099,7 @@ margin-bottom: 0px;
 .about-container {
 position: relative;
 width: 800px;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 20px auto;
 padding: 30px;
@@ -1104,7 +1112,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .about-title {
@@ -1115,6 +1123,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -1135,14 +1144,14 @@ grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin: 0px;
 }
-/* CONTENEDOR: TEXTO */
-.about-columns-grid-information {
+/* CONTENEDOR: CONTENIDO */
+.about-columns-grid-content {
 width: 100%;
 min-width: 0;
 margin: 0px;
 }
-.about-columns-grid-information-text,
-.about-columns-grid-information-text-end {
+.about-columns-grid-content-text,
+.about-columns-grid-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -1153,10 +1162,10 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.about-columns-grid-information-text-end {
+.about-columns-grid-content-text-end {
 margin-bottom: 0px;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .about-columns-grid-image {
 width: 100%;
 min-width: 0;
@@ -1168,7 +1177,7 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL (FUERA DE MEDIA QUERY) */
+/* CONTROL */
 .about-container { display: block; }
 .about-container-mobile { display: none; }
 /* ======================================
@@ -1179,7 +1188,7 @@ border-radius: 15px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 20px auto;
 padding: 20px;
@@ -1192,7 +1201,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .about-title-mobile {
@@ -1203,6 +1212,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -1210,25 +1220,30 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
+/* CONTENEDOR: CONTENIDO */
+.about-content-mobile {
+width: 100%;
+margin: 0px;
+}   
 /* CONTENEDOR: IMAGEN */
-.about-image-mobile {
+.about-content-image-mobile {
 width: 100%;
 min-width: 0;
 margin: 0 0 10px 0;
 }
-.about-image-mobile img {
+.about-content-image-mobile img {
 width: 100%;
 height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.about-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.about-content-text-mobile {
 width: 100%;
 margin: 0px;
 }
-.about-information-text-mobile,
-.about-information-text-end-mobile {
+.about-content-text-description-mobile,
+.about-content-text-description-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -1237,13 +1252,26 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.about-information-text-end-mobile {
+.about-content-text-description-endmobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .about-container { display: none; }
 .about-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FILM BANNER PC
