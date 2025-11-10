@@ -3821,20 +3821,6 @@ transform: scale(1.05);
 .psychology-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
     BE MY PATRON PC
 ====================================== */
@@ -3889,11 +3875,11 @@ background-color: #000000 !important;
 .bemypatron-carousel-image.active {
 opacity: 1;
 }
-/* CONTENEDOR, FRANJA Y TÍTULO */
+/* CONTENEDOR: BE MY PATRON */
 .bemypatron-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3906,7 +3892,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .bemypatron-title {
@@ -3915,14 +3901,15 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .bemypatron-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN */
@@ -3937,25 +3924,25 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACION */
-.bemypatron-information {
+/* CONTENEDOR: CONTENIDO */
+.bemypatron-content {
 width: 100%;
 margin: 0px;
 }
-.bemypatron-information-text,
-.bemypatron-information-text-end {
+.bemypatron-content-text,
+.bemypatron-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.bemypatron-information-text-end {
+.bemypatron-content-text-end {
 margin-botton: 0px;
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .bemypatron-carousel { display: flex; }
 .bemypatron-container { display: block; }
 .bemypatron-carousel-mobile { display: none; }
@@ -3999,12 +3986,12 @@ background-color: #000000 !important;
 .bemypatron-carousel-image-mobile.active {
 opacity: 1;
 }
-/* CONTENEDOR, FRANJA Y TÍTULO */
+/* CONTENEDOR: BE MY PATRON */
 .bemypatron-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -4017,7 +4004,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .bemypatron-title-mobile {
@@ -4026,13 +4013,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .bemypatron-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN */
@@ -4046,50 +4034,30 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.bemypatron-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.bemypatron-content-mobile {
 width: 100%;
 margin: 0px;
 }
-.bemypatron-information-text-mobile,
-.bemypatron-information-text-end-mobile {
+.bemypatron-content-text-mobile,
+.bemypatron-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.bemypatron-information-text-end-mobile {
+.bemypatron-content-text-end-mobile {
 margin-bottom: 0px;
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .bemypatron-carousel { display: none; }
 .bemypatron-container { display: none; }
 .bemypatron-carousel-mobile { display: flex; }
 .bemypatron-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    SUPPORT MY WORK
@@ -4098,7 +4066,7 @@ margin-bottom: 0px;
 .supportmywork-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4111,7 +4079,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .supportmywork-title {
@@ -4120,17 +4088,18 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;    
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .supportmywork-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .supportmywork-image {
 width: 100%;
 min-width: 0;
@@ -4144,22 +4113,22 @@ display: block;
 border-radius: 15px;
 margin: 0px;
 }
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.supportmywork-information {
+/* CONTENEDOR: CONTENIDO */
+.supportmywork-content {
 width: 100%;
 margin: 0px;
 }
-.supportmywork-information-text,
-.supportmywork-information-text-end {
+.supportmywork-content-text,
+.supportmywork-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.supportmywork-information-text-end {
+.supportmywork-content-text-end {
 margin-botton: 0px;
 }
 /* CONTENEDOR: BOTÓN */
@@ -4174,9 +4143,11 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none;  
-padding: 10px 20px 10px 20px;
-margin: 0px;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px;   
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4196,7 +4167,7 @@ transform: scale(1.05);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -4209,7 +4180,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .supportmywork-title-mobile {
@@ -4218,13 +4189,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .supportmywork-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN MÓVIL */
@@ -4238,15 +4210,15 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.supportmywork-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.supportmywork-content-mobile {
 width: 100%;
 }
-.supportmywork-information-text-mobile,
-.supportmywork-information-text-end-mobile {
+.supportmywork-content-text-mobile,
+.supportmywork-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -4254,24 +4226,28 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.supportmywork-information-text-end-mobile {
+.supportmywork-content-text-end-mobile {
 margin-bottom: 0px;
 }
-/* BOTÓN MÓVIL */
+/* CONTENEDOR: BOTÓN */
 .supportmywork-button-mobile {
-display: flex;
-justify-content: center;
+width: 100%;
+display: block;
+text-align: center; 
 margin: 0px;
 }
 .supportmywork-button-donatewithpaypal-mobile {
+display: inline-block;
 background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
-text-decoration: none;  
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px; 
 padding: 10px 20px;
-margin: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4291,7 +4267,7 @@ transform: scale(1.05);
 .supportmystudies-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4304,7 +4280,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .supportmystudies-title {
@@ -4313,17 +4289,18 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;    
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .supportmystudies-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .supportmystudies-image {
 width: 100%;
 min-width: 0;
@@ -4337,22 +4314,22 @@ display: block;
 border-radius: 15px;
 margin: 0px;
 }
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.supportmystudies-information {
+/* CONTENEDOR: CONTENIDO */
+.supportmystudies-content {
 width: 100%;
 margin: 0px;
 }
-.supportmystudies-information-text,
-.supportmystudies-information-text-end {
+.supportmystudies-content-text,
+.supportmystudies-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.supportmystudies-information-text-end {
+.supportmystudies-content-text-end {
 margin-botton: 0px;
 }
 /* CONTENEDOR: BOTÓN */
@@ -4367,9 +4344,11 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none;  
-padding: 10px 20px 10px 20px;
-margin: 0px;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px;   
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4377,10 +4356,9 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmystudies-button-donatewithpaypal:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL*/
 .supportmystudies-container { display: block; }
 .supportmystudies-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: SUPPORT MY STUDIES
 ====================================== */
@@ -4389,7 +4367,7 @@ transform: scale(1.05);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -4402,7 +4380,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .supportmystudies-title-mobile {
@@ -4411,13 +4389,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .supportmystudies-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN MÓVIL */
@@ -4431,15 +4410,15 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.supportmystudies-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.supportmystudies-content-mobile {
 width: 100%;
 }
-.supportmystudies-information-text-mobile,
-.supportmystudies-information-text-end-mobile {
+.supportmystudies-content-text-mobile,
+.supportmystudies-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -4447,24 +4426,28 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.supportmystudies-information-text-end-mobile {
+.supportmystudies-content-text-end-mobile {
 margin-bottom: 0px;
 }
-/* BOTÓN MÓVIL */
+/* CONTENEDOR: BOTÓN */
 .supportmystudies-button-mobile {
-display: flex;
-justify-content: center;
+width: 100%;
+display: block;
+text-align: center; 
 margin: 0px;
 }
 .supportmystudies-button-donatewithpaypal-mobile {
+display: inline-block;
 background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
-text-decoration: none;  
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px; 
 padding: 10px 20px;
-margin: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4472,7 +4455,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmystudies-button-donatewithpaypal-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .supportmystudies-container { display: none; }
 .supportmystudies-container-mobile { display: block; }
 }
@@ -4484,7 +4467,7 @@ transform: scale(1.05);
 .gifts-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -4497,7 +4480,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .gifts-title {
@@ -4506,17 +4489,18 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;    
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .gifts-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .gifts-image {
 width: 100%;
 min-width: 0;
@@ -4530,22 +4514,22 @@ display: block;
 border-radius: 15px;
 margin: 0px;
 }
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.gifts-information {
+/* CONTENEDOR: CONTENIDO */
+.gifts-content {
 width: 100%;
 margin: 0px;
 }
-.gifts-information-text,
-.gifts-information-text-end {
+.gifts-content-text,
+.gifts-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.gifts-information-text-end {
+.gifts-content-text-end {
 margin-botton: 0px;
 }
 /* CONTENEDOR: BOTÓN */
@@ -4560,9 +4544,11 @@ border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
-text-decoration: none;  
-padding: 10px 20px 10px 20px;
-margin: 0px;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px;   
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4570,10 +4556,9 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .gifts-button-donatewithpaypal:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .gifts-container { display: block; }
 .gifts-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: GIFTS
 ====================================== */
@@ -4582,7 +4567,7 @@ transform: scale(1.05);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -4595,7 +4580,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .gifts-title-mobile {
@@ -4604,13 +4589,14 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .gifts-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: IMAGEN MÓVIL */
@@ -4624,15 +4610,15 @@ height: auto;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.gifts-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.gifts-content-mobile {
 width: 100%;
 }
-.gifts-information-text-mobile,
-.gifts-information-text-end-mobile {
+.gifts-content-text-mobile,
+.gifts-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
@@ -4640,24 +4626,28 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.gifts-information-text-end-mobile {
+.gifts-content-text-end-mobile {
 margin-bottom: 0px;
 }
-/* BOTÓN MÓVIL */
+/* CONTENEDOR: BOTÓN */
 .gifts-button-mobile {
-display: flex;
-justify-content: center;
+width: 100%;
+display: block;
+text-align: center; 
 margin: 0px;
 }
 .gifts-button-donatewithpaypal-mobile {
+display: inline-block;
 background-color: #ff1493 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
-text-decoration: none;  
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px; 
 padding: 10px 20px;
-margin: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease, background-color 0.3s ease;
@@ -4665,11 +4655,10 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .gifts-button-donatewithpaypal-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .gifts-container { display: none; }
 .gifts-container-mobile { display: block; }
 }
-
 
 
 
