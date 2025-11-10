@@ -1662,7 +1662,6 @@ margin: 0px;
 width: 100%;
 height: auto;
 display: block;
-margin: 0px;
 }
 /* CONTENEDOR: CONTENIDO */
 .alone-columns-grid-content {
@@ -2498,7 +2497,7 @@ z-index: 2;
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
-margin: 0px;
+margin: 0 0 15px 0;
 }
 /* CONTENEDOR: IMAGEN*/
 .album1969-columns-grid-image {
@@ -2510,7 +2509,6 @@ margin: 0px;
 width: 100%;
 height: auto;
 display: block;
-margin: 0px;
 }
 /* CONTENEDOR: CONTENIDO */
 .album1969-columns-grid-content {
@@ -2673,24 +2671,6 @@ margin-bottom: 0px;
 .album1969-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    FASHION BANNER PC
 ====================================== */
@@ -2741,11 +2721,11 @@ filter: brightness(1.2) contrast(1.1) saturate(1.1);
 border-radius: 0;
 background-color: #000000 !important;
 }
-/* CONTENEDOR DE TEXTO FASHION */
+/* CONTENEDOR: FASHION */
 .fashion-container {
 position: relative;
 width: 800px;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2758,7 +2738,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fashion-title {
@@ -2769,6 +2749,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -2777,13 +2758,13 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.fashion-information {
+/* CONTENEDOR: CONTENIDO */
+.fashion-content {
 width: 100%;
 margin: 0px; 
 }
-.fashion-information-text,
-.fashion-information-text-end {
+.fashion-content-text,
+.fashion-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -2792,7 +2773,7 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.fashion-information-text-end {
+.fashion-content-text-end {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
@@ -2832,12 +2813,12 @@ filter: brightness(1.2) contrast(1.1) saturate(1.1);
 border-radius: 0;
 background-color: #000000 !important; 
 }
-/* CONTENEDOR */
+/* CONTENEDOR: FASHION */
 .fashion-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -2850,7 +2831,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fashion-title-mobile {
@@ -2861,6 +2842,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;  
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -2868,13 +2850,13 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: INFORMACIÓN */
-.fashion-information-mobile {
+/* CONTENEDOR: CONTENIDO */
+.fashion-content-mobile {
 width: 100%;
 margin: 0px;  
 }
-.fashion-information-text-mobile,
-.fashion-information-text-end-mobile {
+.fashion-content-text-mobile,
+.fashion-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -2883,10 +2865,10 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.fashion-information-text-end-mobile {
+.fashion-content-text-end-mobile {
 margin-bottom: 0px;
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .fashion-banner { display: none; }
 .fashion-container { display: none; }
 .fashion-banner-mobile { display: flex; }
@@ -2900,7 +2882,7 @@ margin-bottom: 0px;
 .fwcollection-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -2913,7 +2895,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fwcollection-title {
@@ -2922,14 +2904,15 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .fwcollection-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -2945,14 +2928,11 @@ grid-auto-rows: 250px;
 gap: 20px;
 margin: 0 0 30px 0;
 }
-/* CONTENEDOR: TARJETA DE PRODUCTOS */
+/* CONTENEDOR: TARJETAS */
 .fwcollection-columns-grid-card {
 position: relative;
 overflow: hidden;
-height: 100%;
 display: block;
-border-radius: 15px;
-border: 2px solid white !important;
 text-decoration: none;
 }
 .fwcollection-columns-grid-card img {
@@ -2964,7 +2944,7 @@ transition: transform 0.3s ease;
 .fwcollection-columns-grid-card img:hover { 
 transform: scale(1.1);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .fwcollection-container { display: block; }
 .fwcollection-container-mobile { display: none; }
 /* ======================================
@@ -2975,7 +2955,7 @@ transform: scale(1.1);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -2988,38 +2968,37 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important; 
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
- /* TÍTULO */
 .fwcollection-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;   
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .fwcollection-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: TARJETA DE PRODUCTOS */
+/* CONTENEDOR: TARJETAS */
 .fwcollection-cards-mobile {
 position: relative;
 z-index: 2;
 }
-.fwcollection-cards-2627-mobile {
+/* CONTENEDOR: TARJETA */   
+.fwcollection-cards-card-mobile {
 position: relative;
 overflow: hidden;
 width: 100%;
 height: 200px;
 display: block;
-border-radius: 15px;
-border: 2px solid white !important;
 text-decoration: none;
 margin-bottom: 0px;
 }
@@ -3044,7 +3023,7 @@ transform: scale(1.1);
 .fw2627-container {
 position: relative;
 width: 800px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -3057,7 +3036,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fw2627-title {
@@ -3066,46 +3045,53 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
 }
 .fw2627-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN*/
+/* CONTENEDOR: IMAGEN */
 .fw2627-image {
 width: 100%;
 min-width: 0;
-margin: 0px;
 margin: 0 0 15px 0;
 }
 .fw2627-image img {
 width: 100%;
 height: auto;
 display: block;
-border-radius: 15px;
 margin: 0px;
 }
-/* CONTENEDOR: INFORMACION DEBAJO DE LA IMAGEN */
-.fw2627-information {
+/* DIVISOR */
+.fw2627-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: CONTENIDO */
+.fw2627-content {
 width: 100%;
 margin: 0px;
 }
-.fw2627-information-subtitle {
+.fw2627-content-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;    
 line-height: 1.5;
 text-align: center;
 margin-bottom: 10px;
 }
-.fw2627-information-text,
-.fw2627-information-text-end {
+.fw2627-content-text,
+.fw2627-content-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: white !important;
@@ -3114,7 +3100,7 @@ line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.fw2627-information-text-end {
+.fw2627-content-text-end {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
@@ -3128,7 +3114,7 @@ margin-bottom: 0px;
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 padding: 20px;
 margin: 30px auto;
@@ -3141,7 +3127,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .fw2627-title-mobile {
@@ -3150,16 +3136,17 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
 margin: 0 0 10px 0; 
 }
 .fw2627-title-mobile a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
+/* CONTENEDOR: IMAGEN */
 .fw2627-image-mobile {
 width: 100%;
 margin: 0 0 20px 0;
@@ -3168,24 +3155,31 @@ margin: 0 0 20px 0;
 width: 100%;
 height: auto;
 display: block;
-border-radius: 15px;
 }
-/* CONTENEDOR: INFORMACIÓN MÓVIL */
-.fw2627-information-mobile {
+/* DIVISOR */
+.fw2627-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: CONTENIDO */
+.fw2627-content-mobile {
 width: 100%;
 margin: 0px;
 }
-.fw2627-information-subtitle-mobile {
+.fw2627-content-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
 line-height: 1.5;
 text-align: center;
 margin: 0 0 10px 0;
 }
-.fw2627-information-text-mobile,
-.fw2627-information-text-end-mobile {
+.fw2627-content-text-mobile,
+.fw2627-content-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: white !important;
@@ -3196,13 +3190,27 @@ margin: 0 0 10px 0;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.fw2627-information-text-end-mobile {
+.fw2627-content-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL DISPLAY MÓVIL */
 .fw2627-container { display: none; }
 .fw2627-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ART BANNER PC
