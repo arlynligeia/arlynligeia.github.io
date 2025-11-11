@@ -5288,7 +5288,7 @@ font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
 text-align: center;
-line-height: 0.5;
+line-height: 1.5;
 }
 /* CONTENEDOR: TARJETAS CERRADAS/OPACAS */
 .digitalproducts-columns-grid-card.closed {
@@ -5306,6 +5306,118 @@ color: #ff0000 !important;
 /* CONTROL */
 .digitalproducts-container { display: block; }
 .digitalproducts-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: DIGITAL PRODUCTS
+====================================== */
+@media (max-width: 768px) {
+.digitalproducts-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background-color: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.digitalproducts-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.digitalproducts-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;     
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.digitalproducts-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.digitalproducts-cards-mobile {
+position: relative;
+z-index: 2;
+margin: 0px; 
+}
+.digitalproducts-cards-card-mobile {
+position: relative;
+display: block; 
+width: 100%;
+height: 200px;
+overflow: hidden;
+box-sizing: border-box;
+border-radius: 15px;
+border: 3px solid #00FFFF !important;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);   
+text-decoration: none;
+margin: 0 0 20px 0;
+}
+.digitalproducts-cards-card-mobile:last-child {
+margin-bottom: 0px;
+}
+.digitalproducts-cards-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.digitalproducts-cards-card-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTENEDOR: ETIQUETAS */
+.digitalproducts-cards-card-label-mobile {
+position: absolute;
+z-index: 2;
+top: 50%;
+left: 0;
+width: 100%;
+height: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;      
+align-items: center;
+background: #ff1493 !important;
+transform: translateY(-50%);
+}
+.digitalproducts-cards-card-label-text-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+line-height: 0.5;
+}
+/* CONTENEDOR: TARJETAS CERRADAS/OPACAS */
+.digitalproducts-cards-card-mobile.closed {
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;    
+}
+.digitalproducts-cards-card-mobile:not(.closed) .digitalproducts-cards-card-label-text-mobile:last-child {
+color: #00ff00 !important;
+}
+.digitalproducts-cards-card-mobile.closed .digitalproducts-cards-card-label-text-mobile:last-child {
+color: #ff0000 !important;
+}
+/* CONTROL */
+.digitalproducts-container { display: none; }
+.digitalproducts-container-mobile { display: block; }
+}
 
 
 
