@@ -5214,9 +5214,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-transform: uppercase;      
-line-height: 1.6;
+text-transform: uppercase;
 text-align: left;
+line-height: 1.6;
 margin: 0 0 16px 0;
 }
 .digitalproducts-title a {
@@ -5263,7 +5263,7 @@ z-index: 2;
 top: 50%;
 left: 0;
 width: 100%;
-height: 60px;
+height: 65px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -5276,8 +5276,8 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
-line-height: 0;
 text-align: center;
+line-height: 0.5;
 }
 /* TARJETAS CERRADAS/OPACAS */
 .digitalproducts-columns-grid-card.closed {
@@ -5286,20 +5286,15 @@ text-decoration: none;
 cursor: not-allowed;
 pointer-events: none;
 }
-.digitalproducts-columns-grid-card.closed .digitalproducts-columns-grid-card-label-text:last-child {
-color: #ff0000 !important;
-}
 .digitalproducts-columns-grid-card:not(.closed) .digitalproducts-columns-grid-card-label-text:last-child {
 color: #00ff00 !important;
+}
+.digitalproducts-columns-grid-card.closed .digitalproducts-columns-grid-card-label-text:last-child {
+color: #ff0000 !important;
 }
 /* CONTROL */
 .digitalproducts-container { display: block; }
 .digitalproducts-container-mobile { display: none; }
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: DIGITAL PRODUCTS
 ====================================== */
@@ -5321,7 +5316,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalproducts-title-mobile {
@@ -5332,6 +5327,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;     
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -5354,9 +5350,9 @@ overflow: hidden;
 box-sizing: border-box;
 border-radius: 15px;
 border: 3px solid #00FFFF !important;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);   
 text-decoration: none;
 margin-bottom: 20px;
-box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
 }
 .digitalproducts-card-mobile:last-child {
 margin-bottom: 0px;
@@ -5370,7 +5366,7 @@ transition: transform 0.3s ease;
 .digitalproducts-card-mobile img:hover { 
 transform: scale(1.1);
 }
-/* CONTENEDOR: ETIQUETAS MÓVIL */
+/* CONTENEDOR: ETIQUETAS */
 .digitalproducts-columns-grid-card-label-mobile {
 position: absolute;
 z-index: 2;
@@ -5378,53 +5374,38 @@ top: 50%;
 left: 0;
 width: 100%;
 height: 50px;
-background-color: #ff1493 !important;
 display: flex;
+justify-content: center;      
 align-items: center;
-justify-content: center;
+background: #ff1493 !important;
 transform: translateY(-50%);
 }
 .digitalproducts-card-label-text-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
+text-decoration: none;
+text-transform: uppercase;
 text-align: center;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+line-height: 0.5;
 }
-
-/* 🔥 NUEVO: ESTILO PARA TARJETAS CERRADAS/OPACAS EN MÓVIL */
+/* TARJETAS CERRADAS/OPACAS EN MÓVIL */
 .digitalproducts-card-mobile.closed {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    text-decoration: none;
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;    
 }
-
-/* OPCIONAL: Colores diferenciados para OPEN/CLOSED en móvil */
-.digitalproducts-card-mobile.closed .digitalproducts-card-label-text-mobile:last-child {
-    color: #ff0000 !important; /* Rojo para CLOSED */
-}
-
 .digitalproducts-card-mobile:not(.closed) .digitalproducts-card-label-text-mobile:last-child {
-    color: #00ff00 !important; /* Verde para OPEN */
+color: #00ff00 !important;
 }
-
+.digitalproducts-card-mobile.closed .digitalproducts-card-label-text-mobile:last-child {
+color: #ff0000 !important;
+}
 /* CONTROL */
 .digitalproducts-container { display: none; }
 .digitalproducts-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    PHYSICAL PRODUCTS
@@ -5433,7 +5414,7 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .physicalproducts-container {
 position: relative;
 width: 90%;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5446,7 +5427,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .physicalproducts-title {
@@ -5457,8 +5438,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
-line-height: 1.6;
+text-transform: uppercase;
 text-align: left;
+line-height: 1.6;
 margin: 0 0 16px 0;
 }
 .physicalproducts-title a {
@@ -5486,8 +5468,8 @@ height: 100%;
 overflow: hidden;
 border-radius: 15px;
 border: 3px solid #00FFFF !important;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);   
 text-decoration: none;
-box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
 }
 .physicalproducts-columns-grid-card img {
 width: 100%;
@@ -5505,8 +5487,8 @@ z-index: 2;
 top: 50%;
 left: 0;
 width: 100%;
-height: 60px;
-background-color: #ff1493 !important;
+height: 65px;
+background: #ff1493 !important;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -5516,27 +5498,25 @@ transform: translateY(-50%);
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
+text-decoration: none;
+text-transform: uppercase;     
 text-align: center;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+line-height: 0.5;
 }
-
-/* 🔥 NUEVO: ESTILO PARA TARJETAS CERRADAS/OPACAS */
+/* TARJETAS CERRADAS/OPACAS */
 .physicalproducts-columns-grid-card.closed {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    text-decoration: none;
+opacity: 0.5;
+text-decoration: none;   
+cursor: not-allowed;
+pointer-events: none;
 }
-
-/* OPCIONAL: Colores diferenciados para OPEN/CLOSED */
-.physicalproducts-columns-grid-card.closed .physicalproducts-columns-grid-card-label-text:last-child {
-    color: #ff0000 !important; /* Rojo para CLOSED */
-}
-
 .physicalproducts-columns-grid-card:not(.closed) .physicalproducts-columns-grid-card-label-text:last-child {
-    color: #00ff00 !important; /* Verde para OPEN */
+color: #00ff00 !important; 
 }
 
+.physicalproducts-columns-grid-card.closed .physicalproducts-columns-grid-card-label-text:last-child {
+color: #ff0000 !important;
+}
 /* CONTROL */
 .physicalproducts-container { display: block; }
 .physicalproducts-container-mobile { display: none; }
@@ -5548,7 +5528,7 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 position: relative;
 width: 90%;
 box-sizing: border-box;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
@@ -5561,7 +5541,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .physicalproducts-title-mobile {
@@ -5572,6 +5552,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -5594,9 +5575,9 @@ overflow: hidden;
 box-sizing: border-box;
 border-radius: 15px;
 border: 3px solid #00FFFF !important;
+box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);   
 text-decoration: none;
 margin-bottom: 20px;
-box-shadow: 0 0 15px #00FFFF, 0 0 25px rgba(0, 255, 255, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.4);
 }
 .physicalproducts-card-mobile:last-child {
 margin-bottom: 0px;
@@ -5618,7 +5599,7 @@ top: 50%;
 left: 0;
 width: 100%;
 height: 50px;
-background-color: #ff1493 !important;
+background: #ff1493 !important;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -5628,27 +5609,25 @@ transform: translateY(-50%);
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
+text-decoration: none;
+text-transform: uppercase;  
 text-align: center;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+line-height: 0.5;
 }
 
-/* 🔥 NUEVO: ESTILO PARA TARJETAS CERRADAS/OPACAS EN MÓVIL */
+/* TARJETAS CERRADAS/OPACAS EN MÓVIL */
 .physicalproducts-card-mobile.closed {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    text-decoration: none;
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;   
 }
-
-/* OPCIONAL: Colores diferenciados para OPEN/CLOSED en móvil */
-.physicalproducts-card-mobile.closed .physicalproducts-card-label-text-mobile:last-child {
-    color: #ff0000 !important; /* Rojo para CLOSED */
-}
-
 .physicalproducts-card-mobile:not(.closed) .physicalproducts-card-label-text-mobile:last-child {
-    color: #00ff00 !important; /* Verde para OPEN */
+color: #00ff00 !important;
 }
-
+.physicalproducts-card-mobile.closed .physicalproducts-card-label-text-mobile:last-child {
+color: #ff0000 !important;
+}
 /* CONTROL */
 .physicalproducts-container { display: none; }
 .physicalproducts-container-mobile { display: block; }
