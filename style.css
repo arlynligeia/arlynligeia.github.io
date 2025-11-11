@@ -4660,7 +4660,216 @@ transform: scale(1.05);
 .gifts-container-mobile { display: block; }
 }
 
-
+/* ======================================
+   CONTACT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.contact-container {
+position: relative;
+width: 550px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.contact-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.contact-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;      
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.contact-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: FORMULARIO */
+.contact-form-column {
+width: 100%;
+display: block;   
+margin: 0px;
+}
+/* CONTENEDOR: TEXTOS SOBRE LAS CAJAS */
+.contact-form-label {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;   
+margin: 0 0 5px 0;
+}
+/* CONTENEDOR: CAJAS CON TEXTOS */
+.contact-form-input,
+.contact-form-textarea {
+width: 100%;
+height: 40px;   
+box-sizing: border-box;   
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: left;
+margin: 0 0 15px 0;
+padding: 10px;
+border: none;
+}
+.contact-form-textarea {
+height: 150px;
+resize: vertical;
+margin-bottom: 20px;
+}
+/* CONTENEDOR: BOTÓN */
+.contact-button {
+display: flex;
+justify-content: center;
+margin: 0px;
+}
+.contact-button-submit {
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;  
+margin: 0px;  
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.contact-button-submit:hover {
+transform: scale(1.05);
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.contact-container { display: block; }
+.contact-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: CONTACT
+====================================== */
+@media (max-width: 768px) {
+.contact-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: ##3A0052 !important;
+border-radius: 20px;
+padding: 20px;
+margin: 30px auto;
+}
+.contact-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.contact-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;     
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.contact-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: FORMULARIO */
+.contact-form-mobile {
+width: 100%;
+margin: 0px;
+}
+/* CONTENEDOR: TEXTOS SOBRE LAS CAJAS */
+.contact-form-label-mobile {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;   
+margin: 0 0 5px 0;
+}
+/* CONTENEDOR: CAJAS CON TEXTOS */
+.contact-form-input-mobile,
+.contact-form-textarea-mobile {
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: left;
+margin: 0 0 15px 0;   
+padding: 10px;
+border: none;
+}
+.contact-form-textarea-mobile {
+height: 150px;
+resize: vertical;
+margin-bottom: 20px;
+}   
+/* CONTENEDOR: BOTÓN */
+.contact-button-mobile {
+width: 100%;
+display: block;
+justify-content: center;
+margin: 0px;
+}
+.contact-button-submit-mobile {
+display: inline-block;   
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;  
+margin: 0px;   
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.contact-button-submit-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.contact-container { display: none; }
+.contact-container-mobile { display: block; }
+}
 
 
 
@@ -6914,9 +7123,6 @@ text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
 }   
-
-
-
 
 /* DIVISOR */
 .shippinginformation-ordersummary-divider {
