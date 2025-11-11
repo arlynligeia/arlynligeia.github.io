@@ -5766,10 +5766,10 @@ padding: 10px;
 border: none;  
 }
 .shippingdetails-table-wrapper-body-row:first-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
-background: #8A2BE2 !important;
+background: #FF66CC !important;
 }
 .shippingdetails-table-wrapper-body-row:last-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
-background: #FF6B00 !important;
+background: #FF66CC !important;
 }
 /* TABLA: TEXTOS DENTRO DE LA CAJA */
 .shippingdetails-table-wrapper-body-row-cell-box-text {
@@ -5872,7 +5872,12 @@ border: none;
 background: #FF66CC !important;
 }
 .shippingdetails-content-mobile div:nth-child(7) .shippingdetails-content-box-mobile {
-background: #00FF00 !important;
+background: #FF66CC !important;
+}
+.shippingdetails-content-mobile div:nth-child(4) .shippingdetails-content-box-mobile,
+.shippingdetails-content-mobile div:nth-child(9) .shippingdetails-content-box-mobile {
+height: 60px !important;
+min-height: 60px;
 }
 /* CONTENEDOR: TEXTO */
 .shippingdetails-content-box-text-mobile {
