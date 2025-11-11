@@ -6265,6 +6265,1690 @@ transform: scale(1.05);
 }
 
 
+/* ======================================
+   CART EMTY PC
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.cartempty-container {
+position: relative;
+width: 1000px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.cartempty-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.cartempty-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0; 
+}
+.cartempty-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cartempty-information {
+width: 100%;
+margin: 0px;
+}
+.cartempty-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 3rem;
+color: #00FF00 !important;
+text-decoration: none;  
+line-height: 1.5;
+text-align: center;
+margin: 115px 0;
+}
+/* CONTENEDOR: BOTONES */
+.cartempty-button {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.cartempty-back,
+.cartempty-button-continueshopping {
+display: flex;
+justify-content: space-between;   
+background-color: #00CED1 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;   
+margin: 0px;   
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cartempty-back:hover,
+.cartempty-button-continueshopping:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.cartempty-container { display: block; }
+.cartempty-container-mobile { display: none; }
+/* ======================================
+   CART EMTY MOBILE
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.cartempty-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 30px auto;
+padding: 20px;
+}
+.cartempty-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cartempty-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.cartempty-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cartempty-information-mobile {
+width: 100%;
+margin: 0px;
+}
+.cartempty-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 2rem;
+color: #00FF00 !important;
+text-decoration: none;  
+line-height: 1.5;
+text-align: center;
+margin: 140px 0;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cartempty-button-mobile {
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.cartempty-back-mobile,
+.cartempty-button-continueshopping-mobile {
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.cartempty-button-continueshopping-mobile {
+margin: 0px;
+}
+.cartempty-back-mobile:hover,
+.cartempty-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.cartempty-container { display: none; }
+.cartempty-container-mobile { display: block; }
+}
+
+/* ======================================
+   CART FULL
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.cartfull-container {
+position: relative;
+width: 1000px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.cartfull-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.cartfull-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.cartfull-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.cartfull-table {
+width: 100%;
+margin: 0 0 20px 0;
+}
+.cartfull-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 10;
+background-color: transparent;
+}
+/* ANCHO DE COLUMNAS */
+.cartfull-table-wrapper th:nth-child(1),
+.cartfull-table-wrapper td:nth-child(1) {
+width: 8%;
+}
+.cartfull-table-wrapper th:nth-child(2),
+.cartfull-table-wrapper td:nth-child(2) {
+width: 40%;
+}
+.cartfull-table-wrapper th:nth-child(3),
+.cartfull-table-wrapper td:nth-child(3) {
+width: 10%;
+}
+.cartfull-table-wrapper th:nth-child(4),
+.cartfull-table-wrapper td:nth-child(4) {
+width: 18%;
+}
+.cartfull-table-wrapper th:nth-child(5),
+.cartfull-table-wrapper td:nth-child(5) {
+width: 18%;
+}
+.cartfull-table-wrapper th:nth-child(6),
+.cartfull-table-wrapper td:nth-child(6) {
+width: 6%;
+}
+/* CONTENEDOR: ENCABEZADOS */
+.cartfull-table-wrapper-head-row {
+width: 100%;
+margin: 0px;
+}
+.cartfull-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.5;
+text-align: center;
+margin: 0px;
+padding: 0px; 
+}
+/* CONTENEDOR: CUERPO */
+.cartfull-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+/* DIVISOR */
+.cartfull-table-wrapper-divider-1 td,
+.cartfull-table-wrapper-divider-2 td,
+.cartfull-table-wrapper-divider-3 td {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 10px 0; 
+}
+/* CONTENEDOR: FILAS */
+.cartfull-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CONTENEDOR: IMAGEN */
+.cartfull-table-wrapper-body-row-cell-image {
+width: 100%;
+display: flex;
+justify-content: center; 
+align-items: center;
+margin: 0 0 5px 0;
+}
+.cartfull-table-wrapper-body-row-cell-image img {
+max-width: 100%;
+max-height: 100%; 
+border-radius: 6px;
+object-fit: contain;
+}
+/* CONTENEDOR: NOMBRES */
+.cartfull-table-wrapper-body-row-cell-name,
+.cartfull-table-wrapper-body-row-cell-quantity,
+.cartfull-table-wrapper-body-row-cell-unit,
+.cartfull-table-wrapper-body-row-cell-total {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;  
+margin: 0px;
+padding: 10px;
+}
+.cartfull-table-wrapper-body-row-cell-quantity {
+padding: 5px;
+}
+.cartfull-table-wrapper-body-row-cell-name {
+text-align: left;
+}
+.cartfull-table-wrapper-body-row-cell-subtotal,
+.cartfull-table-wrapper-body-row-cell-shipping,
+.cartfull-table-wrapper-body-row-cell-totalfinal {
+background: transparent !important;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;   
+color: #00FF00 !important;
+text-decoration: none;  
+text-align: right;
+margin: 0px;
+padding: 10px;
+border: none !important;
+}
+.cartfull-table-wrapper-body-row-cell-unit-symbol,
+.cartfull-table-wrapper-body-row-cell-total-symbol,
+.cartfull-table-wrapper-body-row-cell-subtotal-symbol,
+.cartfull-table-wrapper-body-row-cell-shipping-symbol,
+.cartfull-table-wrapper-body-row-cell-totalfinal-symbol,{
+text-align: left;
+}
+.cartfull-table-wrapper-body-row-cell-uni-amount,
+.cartfull-table-wrapper-body-row-cell-total-amount,
+.cartfull-table-wrapper-body-row-cell-subtotal-amount,
+.cartfull-table-wrapper-body-row-cell-shipping-amount,
+.cartfull-table-wrapper-body-row-cell-totalfinal-amount {
+text-align: right;
+}
+/* CONTENEDOR: CONTROLES DE CANTIDAD */
+.cartfull-table-wrapper-body-row-cell-quantity {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: 2px;
+}
+.cartfull-table-wrapper-body-row-cell-quantity-decrease,
+.cartfull-table-wrapper-body-row-cell-quantity-increase {
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #FF6B00 !important;
+border-radius: 4px;
+font-size: 15px;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+margin: 0px; 
+padding: 8px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;  
+}
+.cartfull-table-wrapper-body-row-cell-quantity-decrease:hover,
+.cartfull-table-wrapper-body-row-cell-quantity-increase:hover {
+transform: scale(1.05);
+}
+.cartfull-table-wrapper-body-row-cell-quantity-value {
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 30px;
+}
+/* CONTENEDOR: BOTÓN REMOVER */
+.cartfull-table-wrapper-body-row-cell-button-remove {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+background: #FF6B00 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-align: center;
+font-weight: bold; 
+margin: 0px;
+padding: 10px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.cartfull-table-wrapper-body-row-cell-button-remove:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: SUBTOTAL,SHIPPING,TOTAL */
+.cartfull-table-wrapper-body-row-cell-subtotal-value,
+.cartfull-table-wrapper-body-row-cell-shipping-value,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+background: #FF66CC !important;
+border-radius: 6px; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;  
+margin: 0px;
+padding: 10px;
+}
+.cartfull-table-wrapper-body-row-cell-totalfinal-value {
+background: #ff1493 !important;
+color: white !important;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cartfull-button {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.cartfull-back,
+.cartfull-button-continueshopping,
+.cartfull-button-clearcart,
+.cartfull-button-checkout {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;   
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important; 
+text-decoration: none;
+text-align: center;
+font-weight: bold; 
+margin: 0px;   
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cartfull-button-clearcart {
+background-color: #FF6B00 !important;
+color: white !important; 
+}
+.cartfull-button-checkout {
+background-color: #ff1493 !important;
+color: white !important;    
+}
+.cartfull-back:hover,
+.cartfull-button-continueshopping:hover,
+.cartfull-button-checkout:hover,
+.cartfull-button-clearcart:hover {
+transform: scale(1.05);
+}
+.cartfull-container { display: block; }
+.cartfull-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: CARTFULL
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA, TÍTULO*/ 
+.cartfull-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 30px auto;
+padding: 20px;
+}
+.cartfull-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cartfull-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.cartfull-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: PRODUCTOS */
+.cartfull-products-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}
+/* DIVISOR */
+.cartfull-products-divider-1-mobile,
+.cartfull-products-divider-2-mobile,
+.cartfull-products-divider-3-mobile,
+.cartfull-products-divider-4-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+}   
+/* CONTENEDOR: IMAGEN */
+.cartfull-products-image-mobile {
+width: 110px;
+height: 110px;
+display: block;
+text-align: center;
+margin: 0 auto 10px auto;
+}  
+.cartfull-products-image-mobile img {
+max-width: 100%;
+max-height: 100%;
+border-radius: 6px;
+object-fit: cover;
+}
+/* CONTENEDORES: CAJAS CON TEXTO */
+.cartfull-products-name-mobile,
+.cartfull-products-quantity-mobile,
+.cartfull-products-unit-mobile,
+.cartfull-products-total-mobile,
+.cartfull-products-subtotal-mobile,
+.cartfull-products-shipping-mobile,
+.cartfull-products-totalfinal-mobile {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;   
+margin: 0 0 10px 0;
+padding: 10px;
+}
+.cartfull-products-subtotal-mobile,
+.cartfull-products-shipping-mobile {
+background: #FF66CC !important;
+}
+.cartfull-products-totalfinal-mobile {
+background: #ff1493 !important;
+color: white !important;
+}   
+/* ORDEN DE LOS TEXTOS */
+.cartfull-products-name-text-mobile{
+text-align: center;
+flex: 1;
+}
+.cartfull-products-quantity-text-mobile,   
+.cartfull-products-unit-text-mobile,
+.cartfull-products-total-text-mobile,
+.cartfull-products-subtotal-text-mobile,
+.cartfull-products-shipping-text-mobile,
+.cartfull-products-totalfinal-text-mobile {
+text-align: left;
+flex: 1;
+}  
+.cartfull-products-unit-value-mobile,
+.cartfull-products-total-value-mobile,
+.cartfull-products-subtotal-value-mobile,
+.cartfull-products-shipping-value-mobile,
+.cartfull-products-totalfinal-value-mobile {
+min-width: 130px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.cartfull-products-unit-value-symbol-mobile,
+.cartfull-products-total-value-symbol-mobile,
+.cartfull-products-subtotal-value-symbol-mobile,
+.cartfull-products-shipping-value-symbol-mobile,
+.cartfull-products-totalfinal-value-symbol-mobile {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.cartfull-products-unit-value-amount-mobile,
+.cartfull-products-total-value-amount-mobile,
+.cartfull-products-subtotal-value-amount-mobile,
+.cartfull-products-shipping-value-amount-mobile,
+.cartfull-products-totalfinal-value-amount-mobile {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}  
+/* CONTENEDOR: CONTROLES CANTIDAD */
+.cartfull-products-quantity-control-mobile {
+display: flex;
+justify-content: flex-end;   
+align-items: center;
+gap: 5px;
+}
+.cartfull-products-quantity-control-decrease-mobile,
+.cartfull-products-quantity-control-increase-mobile {
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;   
+align-items: center;
+background: #FF6B00 !important;
+border-radius: 4px;
+font-size: 15px;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+margin: 0px; 
+padding: 5px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;  
+}
+.cartfull-products-quantity-control-decrease-mobile:hover,
+.cartfull-products-quantity-control-increase-mobile:hover {
+transform: scale(1.05);
+}
+.cartfull-products-quantity-control-value-mobile {
+display: flex;
+justify-content: center;   
+align-items: center;
+min-width: 30px;
+} 
+/* CONTENEDOR: BOTON REMOVER */
+.cartfull-products-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.cartfull-products-button-remove-mobile {
+display: inline-block;
+background: #FF6B00 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.cartfull-products-button-remove-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cartfull-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.cartfull-button-cleancart-mobile,
+.cartfull-back-mobile,
+.cartfull-button-continueshopping-mobile,
+.cartfull-button-checkout-mobile {
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.cartfull-button-cleancart-mobile {
+background: #FF6B00 !important;
+color: white !important;
+}
+.cartfull-button-checkout-mobile {
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
+}
+.cartfull-button-cleancart-mobile:hover,
+.cartfull-back-mobile:hover,
+.cartfull-button-continueshopping-mobile:hover,
+.cartfull-button-checkout-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.cartfull-container { display: none; }
+.cartfull-container-mobile { display: block; }
+}
+
+
+
+
+
+/* MOSTRAR CARTEMPTY POR DEFECTO, OCULTAR CARTFULL */
+.cartempty-section { 
+    display: block;
+}
+
+.cartfull-section {
+    display: none;
+}
+
+/* EN MOBILE */
+@media (max-width: 768px) {
+    .cartempty-section { 
+        display: block;
+    }
+    
+    .cartfull-section {
+        display: none;
+    }
+}
+
+
+
+
+
+/* ======================================
+   SHIPPING INFORMATION
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippinginformation-container {
+position: relative;
+width: 900px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.shippinginformation-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.shippinginformation-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.shippinginformation-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: ORDER SUMMARY */
+.shippinginformation-ordersummary {
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;   
+padding: 15px;
+}
+.shippinginformation-ordersummary-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal,
+.shippinginformation-ordersummary-shipping,
+.shippinginformation-ordersummary-total {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal-text,
+.shippinginformation-ordersummary-shipping-text,
+.shippinginformation-ordersummary-total-text {
+text-align: left;
+flex: 1;
+}
+.shippinginformation-ordersummary-subtotal-value,
+.shippinginformation-ordersummary-shipping-value,
+.shippinginformation-ordersummary-total-value {
+min-width: 130px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol,
+.shippinginformation-ordersummary-shipping-value-symbol,
+.shippinginformation-ordersummary-total-value-symbol {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount,
+.shippinginformation-ordersummary-shipping-value-amount,
+.shippinginformation-ordersummary-total-value-amount {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}   
+
+/* DIVISOR */
+.shippinginformation-ordersummary-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 5px 0; 
+}   
+/* CONTENEDOR: FORMULARIO */
+.shippinginformation-form {
+margin: 0px;
+}
+/* CONTENEDOR: COLUMNAS */
+.shippinginformation-form-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID */
+.shippinginformation-form-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0 0 20px 0;
+}
+/* CONTENDEDOR: TÍTULOS DE COLUMNAS */
+.shippinginformation-form-columns-grid-personalinformation-title,
+.shippinginformation-form-columns-grid-shippingaddress-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;     
+line-height: 1.5; 
+text-align: center;  
+margin: 0 0 5px 0;
+}
+/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
+.shippinginformation-form-columns-grid-personalinformation-label,
+.shippinginformation-form-columns-grid-shippingaddress-label {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.5; 
+text-align: left;  
+margin: 0 0 5px 0;
+}
+/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
+.shippinginformation-form-columns-grid-personalinformation-input,
+.shippinginformation-form-columns-grid-shippingaddress-input {
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #00FFFF !important; 
+border-radius: 6px;
+border: 2px solid #ccc;  
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+margin: 0 0 15px 0;
+padding: 10px;
+}
+#shippinginformation-apartment {
+margin-bottom: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.shippinginformation-button {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.shippinginformation-button-back,
+.shippinginformation-button-continueshopping,
+.shippinginformation-button-proceedpayment {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;   
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+margin: 0px;     
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.shippinginformation-button-proceedpayment {
+background: #ff1493 !important;
+color: white !important;   
+}
+.shippinginformation-button-back:hover,
+.shippinginformation-button-continueshopping:hover,
+.shippinginformation-button-proceedpayment:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.shippinginformation-container { display: block; }
+.shippinginformation-container-mobile { display: none; }
+/* ======================================
+   SHIPPING INFORMATION MOBILE
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippinginformation-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.shippinginformation-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shippinginformation-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.shippinginformation-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}  
+/* CONTENEDOR: ORDER SUMMARY */
+.shippinginformation-ordersummary-mobile {
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0;   
+padding: 10px;
+}  
+.shippinginformation-ordersummary-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}  
+.shippinginformation-ordersummary-subtotal-mobile,
+.shippinginformation-ordersummary-shipping-mobile,
+.shippinginformation-ordersummary-total-mobile {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+} 
+/* ORDEN DE LOS TEXTOS */   
+.shippinginformation-ordersummary-subtotal-text-mobile,
+.shippinginformation-ordersummary-shipping-text-mobile,
+.shippinginformation-ordersummary-total-text-mobile {
+text-align: left;
+flex: 1;
+}
+.shippinginformation-ordersummary-subtotal-value-mobile,
+.shippinginformation-ordersummary-shipping-value-mobile,
+.shippinginformation-ordersummary-total-value-mobile {
+min-width: 130px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol-mobile,
+.shippinginformation-ordersummary-shipping-value-symbol-mobile,
+.shippinginformation-ordersummary-total-value-symbol-mobile {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount-mobile,
+.shippinginformation-ordersummary-shipping-value-amount-mobile,
+.shippinginformation-ordersummary-total-value-amount-mobile {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}  
+/* DIVISOR */
+.shippinginformation-ordersummary-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 5px 0; 
+}   
+/* CONTENEDOR: FORMULARIO */
+.shippinginformation-form-mobile {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: TÍTULOS */
+.shippinginformation-form-personalinformation-title-mobile,
+.shippinginformation-form-shippingaddress-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;      
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
+.shippinginformation-form-personalinformation-label-mobile,
+.shippinginformation-form-shippingaddress-label-mobile {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;    
+line-height: 1.5; 
+text-align: left;  
+margin: 0 0 5px 0;
+}  
+/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
+.shippinginformation-form-personalinformation-imput-mobile,
+.shippinginformation-form-shippingaddress-imput-mobile {
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+border: 2px solid #ccc;     
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+margin: 0 0 15px 0;
+padding: 10px;
+}  
+/* CONTENEDOR: BOTONES FINALES */
+.shippinginformation-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.shippinginformation-button-back-mobile,
+.shippinginformation-button-continueshopping-mobile,
+.shippinginformation-button-proceedpayment-mobile {
+display: inline-block;
+background: #00CED1 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.shippinginformation-button-proceedpayment-mobile {
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
+}
+.shippinginformation-button-back-mobile:hover,
+.shippinginformation-button-continueshopping-mobile:hover,
+.shippinginformation-button-proceedpayment-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DE VISIBILIDAD */
+.shippinginformation-container { display: none; }
+.shippinginformation-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   PAYMENT METHOD
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.paymentmethod-container {
+position: relative;
+width: 600px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.paymentmethod-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.paymentmethod-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0;
+}
+.paymentmethod-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TOTAL */
+.paymentmethod-total {
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+text-align: center;
+margin: 0 0 10px 0;   
+padding: 15px;
+}
+.paymentmethod-total-text,
+.paymentmethod-total-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;   
+margin: 0px;      
+}
+.paymentmethod-total-amount {
+font-size: 1.5rem;
+}
+/* CONTENEDOR: OPCIONES */
+.paymentmethod-paymentoptions-card,
+.paymentmethod-paymentoptions-paypal,
+.paymentmethod-paymentoptions-googlepay,
+.paymentmethod-paymentoptions-applepay {
+margin: 0px;
+}
+/* CONTENEDOR: OPCIONES: ENCABEZADOS */
+.paymentmethod-paymentoptions-card-head,
+.paymentmethod-paymentoptions-paypal-head,
+.paymentmethod-paymentoptions-googlepay-head,
+.paymentmethod-paymentoptions-applepay-head {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 0 0 10px 0;
+padding: 10px;
+}
+/* CONTENEDOR: OPCIONES: RADIO BUTTON */
+.paymentmethod-paymentoptions-card-head-imput,
+.paymentmethod-paymentoptions-paypal-head-imput,
+.paymentmethod-paymentoptions-googlepay-head-imput,
+.paymentmethod-paymentoptions-applepay-head-imput {
+flex-shrink: 0;
+margin: 0px;     
+transform: scale(1.5);  
+}
+/* CONTENEDOR: OPCIONES: LABEL */
+.paymentmethod-paymentoptions-card-head-label,
+.paymentmethod-paymentoptions-paypal-head-label,
+.paymentmethod-paymentoptions-googlepay-head-label,
+.paymentmethod-paymentoptions-applepay-head-label {
+width: 100%;
+display: flex;
+justify-content: space-between;   
+align-items: center;
+margin: 0px;
+cursor: pointer;
+}
+/* CONTENEDOR: OPCIONES: TÍTULOS */
+.paymentmethod-paymentoptions-card-head-label-title,
+.paymentmethod-paymentoptions-paypal-head-label-title,
+.paymentmethod-paymentoptions-googlepay-head-label-title,
+.paymentmethod-paymentoptions-applepay-head-label-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+white-space: nowrap;
+flex-shrink: 0;
+margin: 0px;
+}
+/* CONTENEDOR: OPCIONES: ÍCONOS */
+.paymentmethod-paymentoptions-card-head-label-icons,
+.paymentmethod-paymentoptions-paypal-head-label-icon,
+.paymentmethod-paymentoptions-googlepay-head-label-icon,
+.paymentmethod-paymentoptions-applepay-head-label-icon {
+display: flex;
+align-items: center;  
+gap: 5px;
+flex-shrink: 0;
+margin-left: auto;
+}
+.paymentmethod-paymentoptions-card-head-label-icons-icon {
+flex-shrink: 0;
+}
+/* CONTENEDOR: OPCIONES: TARJETA */
+.paymentmethod-paymentoptions-card-mercadopago {
+margin: 0px;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-text {
+width: 100%;
+height: 40px;
+box-sizing: border-box;   
+background: #00FFFF !important;  
+border-radius: 6px;
+border: 2px solid #ccc;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+margin: 0px;   
+padding: 10px;    
+}
+/* FILA ESPECIAL PARA LOS ÚNICOS QUE VAN JUNTOS */
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationType-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
+width: 49%;
+display: inline-block;
+margin-right: 1%;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
+margin-right: 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#expirationDate-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container) {
+float: left;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#securityCode-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#identificationNumber-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#installments-container) {
+float: right;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardholderName-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#issuer-container),
+.paymentmethod-paymentoptions-card-mercadopago-imput:has(#cardNumber-container) {
+clear: both;
+}
+/* CONTENEDOR: INFORMACIÓN PAYPAL, GOOGLE PAY, APPLE PAY */
+.paymentmethod-paymentoptions-paypal-information,
+.paymentmethod-paymentoptions-googlepay-information,
+.paymentmethod-paymentoptions-applepay-information {
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+text-align: justify;   
+margin: 0 0 10px 0;   
+padding: 20px;
+}
+.paymentmethod-paymentoptions-applepay-information {
+margin-bottom: 20px;  
+}   
+.paymentmethod-paymentoptions-paypal-information-text,
+.paymentmethod-paymentoptions-googlepay-information-text,
+.paymentmethod-paymentoptions-applepay-information-text,
+.paymentmethod-paymentoptions-paypal-information-text-end,
+.paymentmethod-paymentoptions-googlepay-information-text-end,
+.paymentmethod-paymentoptions-applepay-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;   
+line-height: 1.5;
+text-align: justify;   
+margin: 0 0 10px 0;
+}
+.paymentmethod-paymentoptions-paypal-information-text-end,
+.paymentmethod-paymentoptions-googlepay-information-text-end,
+.paymentmethod-paymentoptions-applepay-information-text-end {
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.paymentmethod-button {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.paymentmethod-button-back,
+.paymentmethod-button-cancel,
+.paymentmethod-button-pay {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;  
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+margin: 0px;     
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.paymentmethod-button-cancel {
+background: #FF6B00 !important;
+color: white !important;
+}
+.paymentmethod-button-pay {
+background: #ff1493 !important;
+color: white !important;
+}
+.paymentmethod-button-back:hover,
+.paymentmethod-button-cancel:hover,
+.paymentmethod-button-pay:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.paymentmethod-container { display: block; }
+.paymentmethod-container-mobile { display: none; }
+/* ======================================
+   PAYMENT METHOD MOBILE
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.paymentmethod-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.paymentmethod-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.paymentmethod-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.paymentmethod-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TOTAL */
+.paymentmethod-total-mobile {
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+text-align: center;   
+margin: 0 0 10px 0;   
+padding: 10px;
+}
+.paymentmethod-total-text-mobile,
+.paymentmethod-total-symbol-mobile,
+.paymentmethod-total-amount-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;   
+margin: 0px;      
+}
+.paymentmethod-total-symbol-mobile,
+.paymentmethod-total-amount-mobile {
+font-size: 1.2rem;
+}
+/* CONTENEDOR: OPCIONES */
+.paymentmethod-paymentoptions-card-mobile,
+.paymentmethod-paymentoptions-paypal-mobile,
+.paymentmethod-paymentoptions-googlepay-mobile,
+.paymentmethod-paymentoptions-applepay-mobile {
+margin: 0px;
+}
+/* CONTENEDOR: OPCIONES: ENCABEZADO */
+.paymentmethod-paymentoptions-card-head-mobile,
+.paymentmethod-paymentoptions-paypal-head-mobile,
+.paymentmethod-paymentoptions-googlepay-head-mobile,
+.paymentmethod-paymentoptions-applepay-head-mobile {
+display: flex;
+align-items: center;
+gap: 15px;
+margin: 0 0 10px 0;
+padding: 10px;
+}
+/* CONTENEDOR: OPCIONES: RADIO BUTTON */
+.paymentmethod-paymentoptions-card-head-imput-mobile,
+.paymentmethod-paymentoptions-paypal-head-imput-mobile,
+.paymentmethod-paymentoptions-googlepay-head-imput-mobile,
+.paymentmethod-paymentoptions-applepay-head-imput-mobile {
+flex-shrink: 0;
+margin: 0px;    
+transform: scale(1.5);
+}
+/* CONTENEDOR: OPCIONES: LABEL */
+.paymentmethod-paymentoptions-card-head-label-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-mobile,
+.paymentmethod-paymentoptions-googlepay-head-label-mobile,
+.paymentmethod-paymentoptions-applepay-head-label-mobile {
+width: 100%;
+display: flex;
+justify-content: space-between;   
+align-items: center;
+margin: 0px;
+cursor: pointer;
+}
+/* CONTENEDOR: OPCIONES: TÍTULOS */
+.paymentmethod-paymentoptions-card-head-label-title-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-title-mobile,
+.paymentmethod-paymentoptions-googlepay-head-label-title-mobile,
+.paymentmethod-paymentoptions-applepay-head-label-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+white-space: nowrap;
+flex-shrink: 0;
+margin: 0px;
+}
+/* CONTENEDOR: OPCIONES: ÍCONOS */
+.paymentmethod-paymentoptions-card-head-label-icons-mobile,
+.paymentmethod-paymentoptions-paypal-head-label-icon-mobile,
+.paymentmethod-paymentoptions-googlepay-head-label-icon-mobile,
+.paymentmethod-paymentoptions-applepay-head-label-icon-mobile {
+display: flex;
+align-items: center;
+gap: 5px;
+flex-shrink: 0;
+margin-left: auto;
+}
+.paymentmethod-paymentoptions-card-head-label-icons-icon-mobile {
+flex-shrink: 0;
+}
+/* CONTENEDOR: OPCIONES: TARJETA */
+.paymentmethod-paymentoptions-card-mercadopago-mobile {
+margin: 0px;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile {
+width: 100%;
+height: 40px;
+box-sizing: border-box;   
+background-color: #00FFFF !important; 
+border-radius: 6px;
+border: 2px solid #ccc;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+margin: 0px;   
+padding: 10px;    
+}
+/* FILA ESPECIAL PARA LOS ÚNICOS QUE VAN JUNTOS */
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile),
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+width: 49%;
+display: inline-block;
+margin-right: 1%;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+margin-right: 0;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#expirationDate-container-mobile) {
+float: left;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#securityCode-container-mobile) {
+float: right;
+}
+.paymentmethod-paymentoptions-card-mercadopago-imput-mobile:has(#cardholderName-container-mobile) {
+clear: both;
+}
+/* CONTENEDOR: INFORMACIÓN: PAYPAL, GOOGLE PAY, APPLE PAY */
+.paymentmethod-paymentoptions-paypal-information-mobile,
+.paymentmethod-paymentoptions-googlepay-information-mobile,
+.paymentmethod-paymentoptions-applepay-information-mobile {
+background-color: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0;   
+padding: 10px;
+text-align: justify;
+}
+.paymentmethod-paymentoptions-paypal-information-text-mobile,
+.paymentmethod-paymentoptions-googlepay-information-text-mobile,
+.paymentmethod-paymentoptions-applepay-information-text-mobile,
+.paymentmethod-paymentoptions-paypal-information-text-end-mobile,
+.paymentmethod-paymentoptions-googlepay-information-text-end-mobile,
+.paymentmethod-paymentoptions-applepay-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;   
+line-height: 1.5;
+text-align: justify;   
+margin: 0 0 10px 0;
+}
+.paymentmethod-paymentoptions-paypal-information-text-end-mobile,
+.paymentmethod-paymentoptions-googlepay-information-text-end-mobile,
+.paymentmethod-paymentoptions-applepay-information-text-end-mobile {
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.paymentmethod-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.paymentmethod-button-back-mobile,
+.paymentmethod-button-cancel-mobile,
+.paymentmethod-button-pay-mobile {
+display: inline-block;
+background: #00FFFF !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.paymentmethod-button-cancel-mobile {
+background: #FF6B00 !important;
+color: white !important;
+}
+.paymentmethod-button-pay-mobile {
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
+}
+.paymentmethod-button-back-mobile:hover,
+.paymentmethod-button-cancel-mobile:hover,
+.paymentmethod-button-pay-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.paymentmethod-container { display: none; }
+.paymentmethod-container-mobile { display: block; }
+}
+
+
 
 
 
