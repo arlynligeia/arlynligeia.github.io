@@ -5658,7 +5658,6 @@ background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;   
 padding: 30px;
-
 }
 .shippingdetails-container::before {
 content: "";
@@ -5691,7 +5690,7 @@ text-decoration: none;
 /* CONTENEDOR: TABLA */
 .shippingdetails-table {
 width: 100%;
-margin: 0px;
+margin: 0 0 15px 0;
 }
 .shippingdetails-table-wrapper {
 width: 100%;
@@ -5765,6 +5764,12 @@ border-radius: 6px;
 margin: 0px;
 padding: 10px;
 border: none;  
+}
+.shippingdetails-table-wrapper-body-row:first-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
+background: #8A2BE2 !important;
+}
+.shippingdetails-table-wrapper-body-row:last-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
+background: #FF6B00 !important;
 }
 /* TABLA: TEXTOS DENTRO DE LA CAJA */
 .shippingdetails-table-wrapper-body-row-cell-box-text {
@@ -5862,6 +5867,12 @@ text-align: center;
 margin: 0 0 10px 0;  
 padding: 10px;
 border: none;
+}
+.shippingdetails-content-mobile div:nth-child(2) .shippingdetails-content-box-mobile {
+background: #FF66CC !important;
+}
+.shippingdetails-content-mobile div:nth-child(7) .shippingdetails-content-box-mobile {
+background: #00FF00 !important;
 }
 /* CONTENEDOR: TEXTO */
 .shippingdetails-content-box-text-mobile {
