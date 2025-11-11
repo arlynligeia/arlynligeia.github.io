@@ -5268,7 +5268,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;   
-background-color: #ff1493 !important;
+background: #ff1493 !important;
 transform: translateY(-50%);
 }
 .digitalproducts-columns-grid-card-label-text {
@@ -5276,7 +5276,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
 text-decoration: none;
-line-height: 1;
+line-height: 0;
 text-align: center;
 }
 /* TARJETAS CERRADAS/OPACAS */
@@ -5286,11 +5286,11 @@ text-decoration: none;
 cursor: not-allowed;
 pointer-events: none;
 }
-.digitalproducts-columns-grid-card:not(.closed) .digitalproducts-columns-grid-card-label-text:last-child {
-color: #00ff00 !important;
-}
 .digitalproducts-columns-grid-card.closed .digitalproducts-columns-grid-card-label-text:last-child {
 color: #ff0000 !important;
+}
+.digitalproducts-columns-grid-card:not(.closed) .digitalproducts-columns-grid-card-label-text:last-child {
+color: #00ff00 !important;
 }
 /* CONTROL */
 .digitalproducts-container { display: block; }
