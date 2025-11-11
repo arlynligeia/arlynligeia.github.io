@@ -6738,7 +6738,6 @@ transform: scale(1.05);
 .digitalfeaturefilm-container-mobile { display: block; }
 }
 
-
 /* ======================================
    ALONE SPONSORSHIP
 ====================================== */
@@ -7023,6 +7022,291 @@ transform: scale(1.05);
 .alonesponsorship-container-mobile { display: block; }
 }
 
+```css
+/* ======================================
+   ALONE EXECUTIVE PRODUCERS
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.aloneexecutiveproducers-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.aloneexecutiveproducers-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.aloneexecutiveproducers-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.aloneexecutiveproducers-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.aloneexecutiveproducers-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.aloneexecutiveproducers-columns-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+margin: 0 0 20px 0;
+}
+/* CONTENEDOR: PRODUCTOS */
+.aloneexecutiveproducers-columns-grid-product {
+width: 100%;
+display: block;
+justify-content: center; 
+margin: 0px;
+}
+.aloneexecutiveproducers-columns-grid-product-image {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.aloneexecutiveproducers-columns-grid-product-image img {
+width: 100%;
+display: block;
+height: auto;
+border-radius: 15px;
+}
+.aloneexecutiveproducers-columns-grid-product-name,
+.aloneexecutiveproducers-columns-grid-product-value {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;   
+text-transform: uppercase;
+line-height: 1.5;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.aloneexecutiveproducers-columns-grid-product-value {
+font-size: 1.5rem;
+}
+.aloneexecutiveproducers-columns-grid-product-button {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.aloneexecutiveproducers-columns-grid-product-button-view {
+display: inline-block;
+background-color: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+margin: 0px;
+padding: 10px 20px;
+border: none;  
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.aloneexecutiveproducers-columns-grid-product-button-view:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: BOTONES */
+.aloneexecutiveproducers-button {
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.aloneexecutiveproducers-button-back,
+.aloneexecutiveproducers-button-continueshopping {
+display: flex;
+justify-content: space-between;
+background-color: #00FFFF !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+font-weight: bold;
+text-align: center;
+margin: 0px;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.aloneexecutiveproducers-button-back:hover,
+.aloneexecutiveproducers-button-continueshopping:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.aloneexecutiveproducers-container { display: block; }
+.aloneexecutiveproducers-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: ALONE EXECUTIVE PRODUCERS
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA, TÍTULO*/ 
+.aloneexecutiveproducers-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.aloneexecutiveproducers-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.aloneexecutiveproducers-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;      
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.aloneexecutiveproducers-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* SEPARADOR */
+.aloneexecutiveproducers-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: PRODUCTO */ 
+.aloneexecutiveproducers-product-mobile  {
+width: 100%; 
+display: block;
+justify-content: center;
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN */ 
+.aloneexecutiveproducers-product-image-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.aloneexecutiveproducers-product-image-mobile img {
+width: 100%;
+height: 200px;
+display: block;
+border-radius: 15px;
+}
+/* CONTENEDOR: NOMBRE Y VALOR */ 
+.aloneexecutiveproducers-product-name-mobile,
+.aloneexecutiveproducers-product-value-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none; 
+text-transform: uppercase;
+line-height: 1.5;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.aloneexecutiveproducers-product-value-mobile {
+font-size: 1.2rem;
+}
+/* CONTENEDOR: BOTÓN VIEW */ 
+.aloneexecutiveproducers-product-button-mobile {
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.aloneexecutiveproducers-product-button-view-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase; 
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.aloneexecutiveproducers-product-button-view-mobile:hover {
+transform: scale(1.05);
+} 
+/* CONTENEDOR: BOTONES */
+.aloneexecutiveproducers-button-mobile {
+width: 100%;
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.aloneexecutiveproducers-button-back-mobile,
+.aloneexecutiveproducers-button-continueshopping-mobile {
+display: inline-block;
+background: #00FFFF !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;  
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.aloneexecutiveproducers-button-continueshopping-mobile {
+margin: 0px; 
+} 
+.aloneexecutiveproducers-button-back-mobile:hover,
+.aloneexecutiveproducers-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.aloneexecutiveproducers-container { display: none; }
+.aloneexecutiveproducers-container-mobile { display: block; }
+}
+```
 
 
 
