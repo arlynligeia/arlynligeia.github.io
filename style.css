@@ -5728,7 +5728,7 @@ vertical-align: middle;
 .shippingdetails-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #00FF00 !important;
+color: #FF6B00 !important;
 text-decoration: none;
 text-align: center;
 text-transform: uppercase;
@@ -5868,16 +5868,16 @@ margin: 0 0 10px 0;
 padding: 10px;
 border: none;
 }
-.shippingdetails-content-mobile div:nth-child(2) .shippingdetails-content-box-mobile {
-background: #FF66CC !important;
+/* COLOR PARA FEDEX Y OLVA COURIER - CORREGIDO */
+.shippingdetails-content-mobile > div:nth-child(2),
+.shippingdetails-content-mobile > div:nth-child(7) {
+    background: #FF66CC !important;
 }
-.shippingdetails-content-mobile div:nth-child(7) .shippingdetails-content-box-mobile {
-background: #FF66CC !important;
-}
-.shippingdetails-content-mobile div:nth-child(4) .shippingdetails-content-box-mobile,
-.shippingdetails-content-mobile div:nth-child(9) .shippingdetails-content-box-mobile {
-height: 60px !important;
-min-height: 60px;
+
+/* ALTURA PARA CAJAS DE TIEMPO ESTIMADO - CORREGIDO */
+.shippingdetails-content-mobile > div:nth-child(4),
+.shippingdetails-content-mobile > div:nth-child(9) {
+    height: 60px !important;
 }
 /* CONTENEDOR: TEXTO */
 .shippingdetails-content-box-text-mobile {
