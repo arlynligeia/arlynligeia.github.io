@@ -5190,7 +5190,7 @@ opacity: 1;
 .digitalproducts-container {
 position: relative;
 width: 90%;
-background-color: #3A0052 !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -5203,7 +5203,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px;
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalproducts-title {
@@ -5214,6 +5214,7 @@ font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;      
 line-height: 1.6;
 text-align: left;
 margin: 0 0 16px 0;
@@ -5235,7 +5236,7 @@ grid-auto-rows: 250px;
 gap: 20px;
 margin: 0px;
 }
-/* CONTENEDOR: TARJETAS*/
+/* CONTENEDOR: TARJETAS */
 .digitalproducts-columns-grid-card {
 position: relative;
 display: block;
@@ -5263,40 +5264,42 @@ top: 50%;
 left: 0;
 width: 100%;
 height: 60px;
-background-color: #ff1493 !important;
 display: flex;
-align-items: center;
+flex-direction: column;
 justify-content: center;
+align-items: center;   
+background-color: #ff1493 !important;
 transform: translateY(-50%);
 }
 .digitalproducts-columns-grid-card-label-text {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: white !important;
+text-decoration: none;  
 text-align: center;
-text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 }
 
-/* 🔥 NUEVO: ESTILO PARA TARJETAS CERRADAS/OPACAS */
+/* TARJETAS CERRADAS/OPACAS */
 .digitalproducts-columns-grid-card.closed {
-    opacity: 0.5;
-    cursor: not-allowed;
-    pointer-events: none;
-    text-decoration: none;
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;
 }
-
-/* OPCIONAL: Colores diferenciados para OPEN/CLOSED */
-.digitalproducts-columns-grid-card.closed .digitalproducts-columns-grid-card-label-text:last-child {
-    color: #ff0000 !important; /* Rojo para CLOSED */
-}
-
 .digitalproducts-columns-grid-card:not(.closed) .digitalproducts-columns-grid-card-label-text:last-child {
-    color: #00ff00 !important; /* Verde para OPEN */
+color: #00ff00 !important;
 }
-
+.digitalproducts-columns-grid-card.closed .digitalproducts-columns-grid-card-label-text:last-child {
+color: #ff0000 !important;
+}
 /* CONTROL */
 .digitalproducts-container { display: block; }
 .digitalproducts-container-mobile { display: none; }
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: DIGITAL PRODUCTS
 ====================================== */
@@ -5410,6 +5413,18 @@ text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
 .digitalproducts-container { display: none; }
 .digitalproducts-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    PHYSICAL PRODUCTS
