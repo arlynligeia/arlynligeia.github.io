@@ -15391,63 +15391,94 @@ display: none;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ================================
-   🔻 FOOTER PERSONALIZADO
-=================================== */
-.footer-end {
-text-align: center;
-font-family: 'Orbitron', sans-serif;
-color: white;
-padding: 40px 20px;
-margin-bottom: 40px;
+/* ======================================
+   FOOTER PC
+====================================== */
+.footer {
+position: fixed;
+bottom: 0;
+left: 0;
+width: 100%;
+background: #000000 !important;
+border-top: 3px solid #FF6B00 !important;
+padding: 20px 0;
+z-index: 1000;
+box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
 }
-.footer-end-name {
-font-size: 1.5rem;
-text-transform: uppercase;
-letter-spacing: 2px;
-margin-bottom: 10px;
+.footer-content {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0 30px;
 }
-.footer-end-allrightreserved {
-font-size: 0.9rem;
-text-transform: none;
-margin: 4px 0;
+
+/* CONTENEDOR: NOMBRE Y COPYRIGHT */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
-.footer-end-privacypolicy {
-font-size: 0.9rem;
-text-transform: none;
-margin: 4px 0;
+
+.footer-brand-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #FF66CC !important;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 5px;
 }
-.footer-end-termsandconditions {
-font-size: 0.9rem;
-text-transform: none;
-margin: 4px 0;
+
+.footer-brand-allrightreserved {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  color: #00FF00 !important;
 }
-.footer-end-privacypolicy a,
-.footer-end-termsandconditions a {
-color: white;
-text-decoration: none;
+
+/* CONTENEDOR: LINK */
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
 }
-.footer-end-privacypolicy a:hover,
-.footer-end-privacypolicy a:visited,
-.footer-end-privacypolicy a:focus,
-.footer-end-termsandconditions a:hover,
-.footer-end-termsandconditions a:visited,
-.footer-end-termsandconditions a:focus {
-color: white;
-text-decoration: underline;
+
+.footer-link-termsandconditions a,
+.footer-link-privacypolicy a,
+.footer-link-cookiepolicy a {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  color: #00FF00 !important;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link-termsandconditions a:hover,
+.footer-link-privacypolicy a:hover,
+.footer-link-cookiepolicy a:hover {
+  color: #00FFFF !important;
+}
+
+/* CONTENEDOR: REDES SOCIALES */
+.footer-socialmedia {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer-socialmedia-icon {
+  width: 24px;
+  height: 24px;
+  color: #00FFFF !important;
+  transition: all 0.3s ease;
+}
+
+.footer-socialmedia-icon:hover {
+  color: #FF66CC !important;
+  transform: scale(1.2);
 }
 
 
