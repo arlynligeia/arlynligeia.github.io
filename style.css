@@ -15399,17 +15399,19 @@ display: none;
   width: 100%;
   background: #000000 !important;
   border-top: 3px solid #FF6B00 !important;
-  padding: 20px 0;
+  padding: 30px 0;
   box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.7);
-  margin-top: auto; /* Para que se quede al final del contenido */
+  margin-top: auto;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  gap: 20px;
   padding: 0 30px;
 }
 
@@ -15418,21 +15420,20 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 5px;
 }
 
 .footer-brand-name {
   font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #FF66CC !important;
   text-transform: uppercase;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .footer-brand-allrightreserved {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #00FF00 !important;
 }
 
@@ -15441,15 +15442,14 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .footer-link-termsandconditions a,
 .footer-link-privacypolicy a,
 .footer-link-cookiepolicy a {
   font-family: 'Share Tech Mono', monospace;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #00FF00 !important;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -15464,13 +15464,14 @@ display: none;
 /* CONTENEDOR: REDES SOCIALES */
 .footer-socialmedia {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   align-items: center;
+  margin-top: 10px;
 }
 
 .footer-socialmedia-icon {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   color: #00FFFF !important;
   transition: all 0.3s ease;
 }
@@ -15479,55 +15480,6 @@ display: none;
   color: #FF66CC !important;
   transform: scale(1.2);
 }
-
-/* ======================================
-   MOVIL RESPONSIVE: FOOTER
-====================================== */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    padding: 0 20px;
-  }
-  
-  .footer-brand {
-    order: 1;
-  }
-  
-  .footer-link {
-    order: 2;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .footer-socialmedia {
-    order: 3;
-    justify-content: center;
-    gap: 12px;
-  }
-  
-  .footer-brand-name {
-    font-size: 1.3rem;
-  }
-  
-  .footer-brand-allrightreserved {
-    font-size: 0.8rem;
-  }
-  
-  .footer-link-termsandconditions a,
-  .footer-link-privacypolicy a,
-  .footer-link-cookiepolicy a {
-    font-size: 0.8rem;
-  }
-  
-  .footer-socialmedia-icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
 
 
 
