@@ -14590,22 +14590,6 @@ transform: scale(1.05);
 .shippinginformation-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    PAYMENT METHOD
 ====================================== */
@@ -15113,10 +15097,251 @@ transform: scale(1.05);
 
 
 
+/* ======================================
+   PRIVACY POLICY
+====================================== */
+.privacypolicy-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.privacypolicy-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.privacypolicy-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.privacypolicy-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.privacypolicy-information {
+width: 100%;
+margin: 0px; 
+}
+.privacypolicy-information-text,
+.privacypolicy-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.privacypolicy-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.privacypolicy-container { display: block; }
+.privacypolicy-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: PRIVACY POLICY
+====================================== */
+@media (max-width: 768px) {
+.privacypolicy-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.privacypolicy-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.privacypolicy-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.privacypolicy-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.privacypolicy-information-mobile {
+width: 100%;
+margin: 0px; 
+}
+.privacypolicy-information-text-mobile,
+.privacypolicy-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.privacypolicy-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.privacypolicy-container { display: none; }
+.privacypolicy-container-mobile { display: block; }
+}
 
-
-
-
+/* ======================================
+   TERMS AND CONDITIONS
+====================================== */
+.termsandconditions-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.termsandconditions-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.termsandconditions-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.termsandconditions-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.termsandconditions-information {
+width: 100%;
+margin: 0px; 
+}
+.termsandconditions-information-text,
+.termsandconditions-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.termsandconditions-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.termsandconditions-container { display: block; }
+.termsandconditions-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: TERMS AND CONDITIONS
+====================================== */
+@media (max-width: 768px) {
+.termsandconditions-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.termsandconditions-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.termsandconditions-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.termsandconditions-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.termsandconditions-information-mobile {
+width: 100%;
+margin: 0px; 
+}
+.termsandconditions-information-text-mobile,
+.termsandconditions-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.termsandconditions-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.termsandconditions-container { display: none; }
+.termsandconditions-container-mobile { display: block; }
+}
 
 
 
