@@ -6219,6 +6219,8 @@ divider2.insertAdjacentElement('beforebegin', productRow);
 updateShippingTotal();
 // ACTUALIZAR SUBTOTAL
 updateSubtotal();
+// ACTUALIZAR TOTAL FINAL
+updateTotalFinal();
 }
 
 // 8. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
@@ -6244,6 +6246,23 @@ subtotal += item.totalprice;
 
 // ACTUALIZAR EL SUBTOTAL EN LA TABLA
 document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
+}
+
+  // 10. FUNCIÓN: ACTUALIZAR TOTAL FINAL
+function updateTotalFinal() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+let shippingTotal = 0;
+
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+
+const totalFinal = subtotal + shippingTotal;
+
+// ACTUALIZAR EL TOTAL FINAL EN LA TABLA
+document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
