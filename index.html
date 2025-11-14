@@ -6455,7 +6455,7 @@ document.getElementById('shippinginformation-shipping').textContent = formatNumb
 document.getElementById('shippinginformation-total').textContent = formatNumberWithCommas(totalFinal);
 
 // OCULTAR TODAS LAS SECCIONES Y MOSTRAR SHIPPING INFORMATION
-const allSections = document.querySelectorAll('.main-section, .subsection');
+const allSections = document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section');
 allSections.forEach(section => {
 section.style.display = 'none';
 });
