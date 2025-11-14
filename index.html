@@ -6133,11 +6133,11 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-toggleCart(); // MOSTRAR CARRITO DESPUÉS DE AGREGAR
 }
  
 // 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
+const cart = JSON.parse(localStorage.getItem('cart')) || []; // ← AGREGAR ESTA LÍNEA
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
