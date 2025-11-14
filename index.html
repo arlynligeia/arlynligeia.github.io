@@ -4961,6 +4961,19 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN CART EMPTY MOBILE -->
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 <!-- CART FULL PC -->
 <section class="cartfull-section" id="cartfull"> 
@@ -5059,6 +5072,11 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN CART FULL PC -->
+
+
+
+
+
   
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
@@ -5114,6 +5132,17 @@ Cosmic/Psychological Horror</p>
 </div>  
 </section>
 <!-- FIN CART FULL MOBILE -->
+
+
+
+
+
+
+
+
+
+
+
   
 <!-- SHIPPING INFORMATION PC -->
 <section class="shippinginformation-section main-section" id="shippinginformation">
@@ -5309,384 +5338,22 @@ Cosmic/Psychological Horror</p>
 </section>
 <!-- FIN SHIPPING INFORMATION MOBILE -->
  
-<!-- PAYMENT METHOD PC -->
-<section class="paymentmethod-section main-section" id="paymentmethod">
-<div class="paymentmethod-container">
-<h2 class="paymentmethod-title"><a href="#paymentmethod">PAYMENT METHOD</a></h2> 
-<!-- CONTENEDOR: TOTAL -->
-<div class="paymentmethod-total">
-<span class="paymentmethod-total-text">TOTAL</span><br>
-<span class="paymentmethod-total-amount" id="paymentmethod-total">$ 0.00</span>
-</div>
-<!-- CONTENEDOR: PAYMENT OPTIONS --> 
-<div class="paymentmethod-paymentoptions">  
-<form id="paymentmethod-paymentoptions" method="POST">
-<!-- CONTENEDOR: OPCIÓN 1: CARD -->
-<div class="paymentmethod-paymentoptions-card">
-<div class="paymentmethod-paymentoptions-card-head">  
-<input class="paymentmethod-paymentoptions-card-head-imput" id="creditcard" type="radio" name="payment-method" value="credit-card">  
-<label class="paymentmethod-paymentoptions-card-head-label" for="creditcard">
-<span class="paymentmethod-paymentoptions-card-head-label-title">CARD</span> 
-<span class="paymentmethod-paymentoptions-card-head-label-icons">
-<!-- VISA -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="white" rx="4"/>
-<path fill="#1a1f71" d="M16.4 8.3h7.2v8.4h-7.2z"/>
-<path fill="#1a1f71" d="M20 12.5a8.3 8.3 0 1 0 0 16.6 8.3 8.3 0 0 0 0-16.6z"/>
-</svg>
-<!-- MASTERCARD -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="white" rx="4"/>
-<circle cx="15" cy="12.5" r="8" fill="#eb001b"/>
-<circle cx="25" cy="12.5" r="8" fill="#f79e1b"/>
-</svg>
-<!-- AMERICAN EXPRESS -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="#2e77bc" rx="4"/>
-<text x="20" y="15" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">AMEX</text>
-</svg>
-<!-- DISCOVER -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="#ff6000" rx="4"/>
-<path fill="white" d="M20 8.5c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 19.5c-4.1 0-7.5-3.4-7.5-7.5s3.4-7.5 7.5-7.5 7.5 3.4 7.5 7.5-3.4 7.5-7.5 7.5z"/>
-<path fill="white" d="M20 12.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5z"/>
-</svg>
-</span>
-</label> 
-</div>
-<!-- CONTENEDOR: MERCADO PAGO -->
-<div class="paymentmethod-paymentoptions-card-mercadopago" id="creditcard-form">  
-<!-- NÚMERO DE TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="cardNumber-container" type="text" placeholder="Card number">
-</div>
-<!-- FECHA DE EXPIRACIÓN -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="expirationDate-container" type="text" placeholder="MM/YY">
-</div>
-<!-- CÓDIGO DE SEGURIDAD -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="securityCode-container" type="text" placeholder="CVV">
-</div> 
-<!-- NOMBRE EN LA TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="cardholderName-container" type="text" placeholder="Name on card">
-</div> 
-<!-- SELECCIÓN DE DOCUMENTO -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="identificationType-container">
-<option value="">Select document type</option>
-</select>
-</div>
-<!-- DOCUMENTO -->  
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="identificationNumber-container" type="text" placeholder="Document number">
-</div> 
-<!-- SELECCIÓN DE TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="issuer-container">
-<option value="">Select issuer</option>
-</select>
-</div>
-<!-- SELECCIÓN DE CUOTAS -->  
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text" id="installments-container">
-<option value="">Select instalments</option>
-</select>
-</div>  
-</div>
-</div>
-<!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal">  
-<div class="paymentmethod-paymentoptions-paypal-head">
-<input class="paymentmethod-paymentoptions-paypal-head-imput" id="paypal" type="radio" name="payment-method" value="paypal">
-<label class="paymentmethod-paymentoptions-paypal-head-label" for="paypal">
-<span class="paymentmethod-paymentoptions-paypal-head-label-title">PAYPAL</span>
-<span class="paymentmethod-paymentoptions-paypal-head-label-icon">
-<!-- PAYPAL -->
-<svg width="50" height="30" viewBox="0 0 50 30" class="card-icon">
-<rect width="50" height="30" fill="white" rx="4"/>
-<path fill="#003087" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
-<path fill="#009cde" d="M41.7 9.6c-.2-1.7-1-3.1-2.2-4.2-1.2-1.1-2.8-1.7-4.6-1.7H20.2c-.7 0-1.3.3-1.8.8l-6.3 7.8-1.6 7.5c-.1.6.1 1.2.6 1.6.4.4 1 .5 1.5.4l5.8-1.3h9c5 0 8.9-4 8.9-8.9 0-1.2-.2-2.3-.6-3.4z"/>
-<path fill="#012169" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
-</svg>
-</span>
-</label>  
-</div>  
-<!-- CONTENEDOR: INFORMACIÓN PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal-information" id="paypal-form">
-<p class="paymentmethod-paymentoptions-paypal-information-text">You will be redirected to PayPal to complete your payment securely</p>
-<p class="paymentmethod-paymentoptions-paypal-information-text">• Secure payment through PayPal</p>
-<p class="paymentmethod-paymentoptions-paypal-information-text-end">• No need to enter card details on this site</p>
-</div>  
-</div>
-<!-- CONTENEDOR: OPCIÓN 3: GOOGLE PAY -->
-<div class="paymentmethod-paymentoptions-googlepay">   
-<div class="paymentmethod-paymentoptions-googlepay-head">
-<input class="paymentmethod-paymentoptions-googlepay-head-imput" id="googlepay" type="radio" name="payment-method" value="googlepay">
-<label class="paymentmethod-paymentoptions-googlepay-head-label" for="googlepay">
-<span class="paymentmethod-paymentoptions-googlepay-head-label-title">GOOGLE PAY</span>
-<span class="paymentmethod-paymentoptions-googlepay-head-label-icon">
-<!-- GOOGLE PAY -->
-<svg width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="white" rx="4"/>
-<path fill="#4285F4" d="M20 8h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H20c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2z"/>
-<path fill="#34A853" d="M32 8h8c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2h-8V8z"/>
-<path fill="#FBBC04" d="M12 20H8c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2h4v12z"/>
-<path fill="#EA4335" d="M20 20h-8V8h8v12z"/>
-</svg>
-</span>
-</label>  
-</div>
-<!-- CONTENEDOR: INFORMACIÓN GOOGLE PAY -->
-<div class="paymentmethod-paymentoptions-googlepay-information" id="googlepay-form">
-<p class="paymentmethod-paymentoptions-googlepay-information-text">Pay faster with your saved payment methods</p>
-<p class="paymentmethod-paymentoptions-googlepay-information-text">• Secure payment through Google</p>
-<p class="paymentmethod-paymentoptions-googlepay-information-text-end">• No need to enter card details</p>
-</div>
-</div>
-<!-- CONTENEDOR: OPCIÓN 4: APPLE PAY -->
-<div class="paymentmethod-paymentoptions-applepay">  
-<div class="paymentmethod-paymentoptions-applepay-head">
-<input class="paymentmethod-paymentoptions-applepay-head-imput" id="applepay" type="radio" name="payment-method" value="applepay">
-<label class="paymentmethod-paymentoptions-applepay-head-label" for="applepay">
-<span class="paymentmethod-paymentoptions-applepay-head-label-title">APPLE PAY</span>
-<span class="paymentmethod-paymentoptions-applepay-head-label-icon">
-<!-- APPLE PAY -->
-<svg width="50" height="30" viewBox="0 0 50 30">
-<rect width="50" height="30" fill="black" rx="4"/>
-<path fill="white" d="M25 10c0-.6.4-1 1-1h8c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1h-8c-.6 0-1-.4-1-1V10zm2 2v8h6v-8h-6z"/>
-<path fill="white" d="M20 12h-6v6h6v2h-8V10h8v2zm-6 4v-2h4v2h-4z"/>
-<path fill="white" d="M15 18h-2v-6h2v6zm-4-6h2v6h-2v-6z"/>
-</svg>
-</span>
-</label>  
-</div>
-<!-- CONTENEDOR: INFORMACIÓN APPLE PAY -->
-<div class="paymentmethod-paymentoptions-applepay-information" id="applepay-form">
-<p class="paymentmethod-paymentoptions-applepay-information-text">Pay securely with Face ID or Touch ID</p>
-<p class="paymentmethod-paymentoptions-applepay-information-text">• Secure payment through Apple</p>
-<p class="paymentmethod-paymentoptions-applepay-information-text-end">• No card details required</p>
-</div>
-</div>
-<!-- CAMPOS OCULTOS -->
-<input type="hidden" id="token" name="token">
-<input type="hidden" id="paymentMethodId" name="paymentMethodId">
-<input type="hidden" id="issuerId" name="issuerId">
-<!-- CONTENEDOR: BOTONES FINALES -->
-<div class="paymentmethod-button">
-<a class="paymentmethod-button-back" href="#shippinginformation">BACK</a>
-<button class="paymentmethod-button-cancel" type="button">CANCEL</button>
-<a class="paymentmethod-button-pay">PROCEED PAYMENT</a>
-</div>
-</form>
-</div>
-<!-- FORMULARIO PAYPAL PARA REDIRECCIÓN -->
-<form id="paypalForm" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="business" value="arlynligeia@gmail.com">
-<input type="hidden" name="return" value="https://tudominio.com/success">
-<input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
-</form>  
-</div>
-</section>            
-<!-- FIN PAYMENT METHOD PC -->
- 
-<!-- PAYMENT METHOD MOBILE -->
-<section class="paymentmethod-section main-section mobile-only" id="paymentmethod-mobile">
-<div class="paymentmethod-container-mobile">
-<h2 class="paymentmethod-title-mobile"><a href="#paymentmethod-mobile">PAYMENT METHOD</a></h2> 
-<!-- CONTENEDOR: TOTAL -->
-<div class="paymentmethod-total-mobile">
-<span class="paymentmethod-total-text-mobile">TOTAL</span><br>
-<span class="paymentmethod-total-symbol-mobile">$</span>
-<span class="paymentmethod-total-amount-mobile" id="paymentmethod-total-mobile">0.00</span>
-</div>
-<!-- CONTENEDOR: PAYMENT OPTIONS --> 
-<div class="paymentmethod-paymentoptions-mobile">  
-<form id="paymentmethod-paymentoptions-mobile" method="POST">
-<!-- CONTENEDOR: OPCIÓN 1: CARD -->
-<div class="paymentmethod-paymentoptions-card-mobile">  
-<div class="paymentmethod-paymentoptions-card-head-mobile">  
-<input class="paymentmethod-paymentoptions-card-head-imput-mobile" id="creditcard-mobile" type="radio" name="payment-method" value="credit-card">  
-<label class="paymentmethod-paymentoptions-card-head-label-mobile" for="creditcard-mobile">
-<span class="paymentmethod-paymentoptions-card-head-label-title-mobile">CARD</span> 
-<span class="paymentmethod-paymentoptions-card-head-label-icons-mobile">
-<!-- VISA -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="white" rx="4"/>
-<path fill="#1a1f71" d="M16.4 8.3h7.2v8.4h-7.2z"/>
-<path fill="#1a1f71" d="M20 12.5a8.3 8.3 0 1 0 0 16.6 8.3 8.3 0 0 0 0-16.6z"/>
-</svg>
-<!-- MASTERCARD -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="white" rx="4"/>
-<circle cx="15" cy="12.5" r="8" fill="#eb001b"/>
-<circle cx="25" cy="12.5" r="8" fill="#f79e1b"/>
-</svg>
-<!-- AMERICAN EXPRESS -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="#2e77bc" rx="4"/>
-<text x="20" y="15" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">AMEX</text>
-</svg>
-<!-- DISCOVER -->
-<svg class="paymentmethod-paymentoptions-card-head-label-icons-icon-mobile" width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="#ff6000" rx="4"/>
-<path fill="white" d="M20 8.5c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 19.5c-4.1 0-7.5-3.4-7.5-7.5s3.4-7.5 7.5-7.5 7.5 3.4 7.5 7.5-3.4 7.5-7.5 7.5z"/>
-<path fill="white" d="M20 12.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5z"/>
-</svg>
-</span>
-</label> 
-</div>
-<!-- CONTENEDOR: MERCADO PAGO -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-mobile" id="creditcard-form-mobile">  
-<!-- NÚMERO DE TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="cardNumber-container-mobile" type="text" placeholder="Card number">
-</div>
-<!-- FECHA DE EXPIRACIÓN -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="expirationDate-container-mobile" type="text" placeholder="MM/YY">
-</div>
-<!-- CÓDIGO DE SEGURIDAD -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="securityCode-container-mobile" type="text" placeholder="CVV">
-</div> 
-<!-- NOMBRE EN LA TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="cardholderName-container-mobile" type="text" placeholder="Name on card">
-</div> 
-<!-- SELECCIÓN DE DOCUMENTO -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="identificationType-container-mobile">
-<option value="">Select document type</option>
-</select>
-</div>
-<!-- DOCUMENTO -->  
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<input class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="identificationNumber-container-mobile" type="text" placeholder="Document number">
-</div> 
-<!-- SELECCIÓN DE TARJETA -->
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="issuer-container-mobile">
-<option value="">Select issuer</option>
-</select>
-</div>
-<!-- SELECCIÓN DE CUOTAS -->  
-<div class="paymentmethod-paymentoptions-card-mercadopago-imput-mobile">
-<select class="paymentmethod-paymentoptions-card-mercadopago-imput-text-mobile" id="installments-container-mobile">
-<option value="">Select instalments</option>
-</select>
-</div>  
-</div>
-</div>
-<!-- CONTENEDOR: OPCIÓN 2: PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal-mobile">  
-<div class="paymentmethod-paymentoptions-paypal-head-mobile">
-<input class="paymentmethod-paymentoptions-paypal-head-imput-mobile" id="paypal-mobile" type="radio" name="payment-method" value="paypal">
-<label class="paymentmethod-paymentoptions-paypal-head-label-mobile" for="paypal-mobile">
-<span class="paymentmethod-paymentoptions-paypal-head-label-title-mobile">PAYPAL</span>
-<span class="paymentmethod-paymentoptions-paypal-head-label-icon-mobile">
-<!-- PAYPAL -->
-<svg width="40" height="25" viewBox="0 0 40 25" class="card-icon">
-<rect width="40" height="25" fill="white" rx="4"/>
-<path fill="#003087" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
-<path fill="#009cde" d="M41.7 9.6c-.2-1.7-1-3.1-2.2-4.2-1.2-1.1-2.8-1.7-4.6-1.7H20.2c-.7 0-1.3.3-1.8.8l-6.3 7.8-1.6 7.5c-.1.6.1 1.2.6 1.6.4.4 1 .5 1.5.4l5.8-1.3h9c5 0 8.9-4 8.9-8.9 0-1.2-.2-2.3-.6-3.4z"/>
-<path fill="#012169" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
-</svg>
-</span>
-</label>  
-</div>
-<!-- CONTENEDOR: INFORMACIÓN PAYPAL -->
-<div class="paymentmethod-paymentoptions-paypal-information-mobile" id="paypal-form-mobile">
-<p class="paymentmethod-paymentoptions-paypal-information-text-mobile">You will be redirected to PayPal to complete your payment securely</p>
-<p class="paymentmethod-paymentoptions-paypal-information-text-mobile">• Secure payment through PayPal</p>
-<p class="paymentmethod-paymentoptions-paypal-information-text-end-mobile">• No need to enter card details on this site</p>
-</div>  
-</div>
-<!-- CONTENEDOR: OPCIÓN 3: GOOGLE PAY MOBILE -->
-<div class="paymentmethod-paymentoptions-googlepay-mobile">   
-<div class="paymentmethod-paymentoptions-googlepay-head-mobile">
-<input class="paymentmethod-paymentoptions-googlepay-head-imput-mobile" id="googlepay-mobile" type="radio" name="payment-method" value="googlepay">
-<label class="paymentmethod-paymentoptions-googlepay-head-label-mobile" for="googlepay-mobile">
-<span class="paymentmethod-paymentoptions-googlepay-head-label-title-mobile">GOOGLE PAY</span>
-<span class="paymentmethod-paymentoptions-googlepay-head-label-icon-mobile">
-<!-- GOOGLE PAY -->
-<svg width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="white" rx="4"/>
-<path fill="#4285F4" d="M16 6h8c0.9 0 1.6 0.7 1.6 1.6v8c0 0.9-0.7 1.6-1.6 1.6h-8c-0.9 0-1.6-0.7-1.6-1.6v-8c0-0.9 0.7-1.6 1.6-1.6z"/>
-<path fill="#34A853" d="M26 6h6c0.9 0 1.6 0.7 1.6 1.6v8c0 0.9-0.7 1.6-1.6 1.6h-6V6z"/>
-<path fill="#FBBC04" d="M10 16H6c-0.9 0-1.6-0.7-1.6-1.6v-8c0-0.9 0.7-1.6 1.6-1.6h4v12z"/>
-<path fill="#EA4335" d="M16 16h-6V6h6v10z"/>
-</svg>
-</span>
-</label>  
-</div>
-<!-- CONTENEDOR: INFORMACIÓN GOOGLE PAY MOBILE -->
-<div class="paymentmethod-paymentoptions-googlepay-information-mobile" id="googlepay-form-mobile">
-<p class="paymentmethod-paymentoptions-googlepay-information-text-mobile">Pay faster with your saved payment methods</p>
-<p class="paymentmethod-paymentoptions-googlepay-information-text-mobile">• Secure payment through Google</p>
-<p class="paymentmethod-paymentoptions-googlepay-information-text-end-mobile">• No need to enter card details</p>
-</div>
-</div>
-<!-- CONTENEDOR: OPCIÓN 4: APPLE PAY MOBILE -->
-<div class="paymentmethod-paymentoptions-applepay-mobile">  
-<div class="paymentmethod-paymentoptions-applepay-head-mobile">
-<input class="paymentmethod-paymentoptions-applepay-head-imput-mobile" id="applepay-mobile" type="radio" name="payment-method" value="applepay">
-<label class="paymentmethod-paymentoptions-applepay-head-label-mobile" for="applepay-mobile">
-<span class="paymentmethod-paymentoptions-applepay-head-label-title-mobile">APPLE PAY</span>
-<span class="paymentmethod-paymentoptions-applepay-head-label-icon-mobile">
-<!-- APPLE PAY -->
-<svg width="40" height="25" viewBox="0 0 40 25">
-<rect width="40" height="25" fill="black" rx="4"/>
-<path fill="white" d="M20 8c0-0.5 0.4-0.9 0.9-0.9h6c0.5 0 0.9 0.4 0.9 0.9v8c0 0.5-0.4 0.9-0.9 0.9h-6c-0.5 0-0.9-0.4-0.9-0.9V8zm1.6 1.6v6.4h4.8V9.6h-4.8z"/>
-<path fill="white" d="M16 9.6h-4.8v4.8h4.8v1.6h-6.4V8h6.4v1.6zm-4.8 3.2v-1.6h3.2v1.6h-3.2z"/>
-<path fill="white" d="M12 14.4h-1.6v-4.8h1.6v4.8zm-3.2-4.8h1.6v4.8h-1.6v-4.8z"/>
-</svg>
-</span>
-</label>  
-</div>
-<!-- CONTENEDOR: INFORMACIÓN APPLE PAY MOBILE -->
-<div class="paymentmethod-paymentoptions-applepay-information-mobile" id="applepay-form-mobile">
-<p class="paymentmethod-paymentoptions-applepay-information-text-mobile">Pay securely with Face ID or Touch ID</p>
-<p class="paymentmethod-paymentoptions-applepay-information-text-mobile">• Secure payment through Apple</p>
-<p class="paymentmethod-paymentoptions-applepay-information-text-end-mobile">• No card details required</p>
-</div>
-</div>
-<!-- CAMPOS OCULTOS (IDs ÚNICOS) -->
-<input type="hidden" id="token-mobile" name="token">
-<input type="hidden" id="paymentMethodId-mobile" name="paymentMethodId">
-<input type="hidden" id="issuerId-mobile" name="issuerId">
-<!-- BOTONES -->
-<div class="paymentmethod-button-mobile">
-<a class="paymentmethod-button-back-mobile" href="#shippinginformation-mobile">BACK</a>
-</div>
-<div class="paymentmethod-button-mobile"> 
-<button class="paymentmethod-button-cancel-mobile" type="button">CANCEL</button>  
-</div>
-<div class="paymentmethod-button-mobile">   
-<a class="paymentmethod-button-pay-mobile">PROCEED PAYMENT</a>
-</div>
-</form>
-</div>
-<!-- FORMULARIO PAYPAL PARA REDIRECCIÓN (ID ÚNICO) -->
-<form id="paypalForm-mobile" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" style="display:none;">
-<input type="hidden" name="cmd" value="_cart">
-<input type="hidden" name="upload" value="1">
-<input type="hidden" name="currency_code" value="USD">
-<input type="hidden" name="business" value="arlynligeia@gmail.com">
-<input type="hidden" name="return" value="https://tudominio.com/success">
-<input type="hidden" name="cancel_return" value="https://tudominio.com/cancel">
-</form>
-</div>
-</section>            
-<!-- FIN PAYMENT METHOD MOBILE -->              
+          
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
 
 <!-- POLÍTICAS DE PRIVACIDAD -->
 
@@ -5942,33 +5609,24 @@ Cosmic/Psychological Horror</p>
 <!-- FIN FOOTER MOBILE -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 <!-- MODALES -->
 
-<!-- MODAL: NOTIFICACIÓN PRODUCTO AGREGADO -->
-<div class="notification-modal-overlay" id="notificationModal">
-<div class="notification-modal">
-<div class="notification-icon">✓</div>
-<p class="notification-message">Product added to cart successfully!</p>
+<!-- MODAL: PRODUCTO AGREGADO PC -->
+<div class="modal-addedproduct" id="modaladdedproduct">
+<div class="modal-addedproduct-notification">
+<p class="modal-addedproduct-notification-text">Product added to cart successfully!</p>
 </div>
 </div>
-<!-- FIN MODAL: NOTIFICACIÓN PRODUCTO AGREGADO -->
+<!-- FIN MODAL: PRODUCTO AGREGADO PC -->
+
+
+
+
+
+
+
+
   
 <!-- MODAL: CLEAR CART -->
 <div class="cart-modal-overlay" id="clearCartModal">
@@ -6386,7 +6044,7 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
  
 
-<!-- SCRIP: CARRITO -->
+<!-- SCRIP: CARRITO PC -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');  
@@ -6406,6 +6064,8 @@ const productStock = {
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
 }; 
+
+  
 // 1. FUNCION: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productData) {
 const cartItem = cart.find(item => item.product === productData.product);
@@ -6440,15 +6100,19 @@ updateCartDisplay();
 showNotification('Product added to cart successfully!');
 }
 function showNotification(message) {
-const modal = document.getElementById('notificationModal');
-const messageElement = modal.querySelector('.notification-message');
+const modal = document.getElementById('modaladdedproduct');
+const messageElement = modal.querySelector('.modal-addedproduct-notification-text');
 messageElement.textContent = message;
 modal.style.display = 'flex';
 setTimeout(() => {
 modal.style.display = 'none';
 }, 1000);
-}  
+}
 
+
+
+
+  
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
     const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -6515,6 +6179,9 @@ function updateCartDisplay() {
 }
 
   
+
+
+
   
 // 3. FUNCIÓN ACTUALIZAR BOTONES (HABILITAR/DESABILITAR)
 function updateAddToCartButtons() {
@@ -6677,6 +6344,8 @@ setupGoToCartButton();
 
 
 
+
+
   
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
@@ -6728,6 +6397,9 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplayMobile();
 showNotification('Product added to cart successfully!');
 }
+
+
+
 
   
 // 2. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO MOBILE
@@ -6805,9 +6477,6 @@ function updateCartDisplayMobile() {
     updateCartSectionsMobile();
 }
 
-
-
-
   
 // 3. FUNCIÓN: ACTUALIZAR TOTALES MOBILE
 function updateCartTotalsMobile() {
@@ -6834,6 +6503,9 @@ if (cartEmpty) cartEmpty.style.display = 'none';
 if (cartFull) cartFull.style.display = 'block';
 }
 }
+
+
+  
 // 5. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 let parts = number.toString().split('.');
@@ -7363,176 +7035,6 @@ initializePaymentMethodTotalMobile();
 
 
 
-<script src="https://sdk.mercadopago.com/js/v2"></script>
-<script>
-let selectedPaymentMethod = 'credit-card';
-
-// 🔴🔴🔴 AQUÍ REEMPLAZA - CLAVE PÚBLICA DE PRODUCCIÓN 🔴🔴🔴
-const mp = new MercadoPago('TEST-1753754b-0551-412b-b585-097f0e264388', {
-    locale: 'en-US'
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    initializePaymentMethods();
-    setupPaymentProcessing();
-    initializeMercadoPagoAutoFill();
-});
-
-function initializePaymentMethods() {
-    const creditCardRadio = document.getElementById('creditcard');
-    const paypalRadio = document.getElementById('paypal');
-    const creditCardForm = document.getElementById('creditcard-form');
-    const paypalForm = document.getElementById('paypal-form');
-
-    creditCardRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'credit-card';
-            creditCardForm.style.display = 'block';
-            paypalForm.style.display = 'none';
-            paypalRadio.checked = false;
-        }
-    });
-
-    paypalRadio.addEventListener('change', function() {
-        if (this.checked) {
-            selectedPaymentMethod = 'paypal';
-            paypalForm.style.display = 'block';
-            creditCardForm.style.display = 'none';
-            creditCardRadio.checked = false;
-        }
-    });
-
-    creditCardRadio.checked = true;
-    creditCardForm.style.display = 'block';
-    paypalForm.style.display = 'none';
-}
-
-function initializeMercadoPagoAutoFill() {
-    const docSelect = document.getElementById('identificationType-container');
-    docSelect.innerHTML = `
-        <option value="">Select document type</option>
-        <option value="DNI">DNI</option>
-        <option value="CI">CI</option>
-        <option value="LC">LC</option>
-        <option value="LE">LE</option>
-        <option value="PAS">Passport</option>
-        <option value="ID">ID Card</option>
-    `;
-
-    const installmentsSelect = document.getElementById('installments-container');
-    installmentsSelect.innerHTML = '<option value="">Select instalments</option>';
-    const installmentsOptions = [1, 2, 3, 4, 5, 6, 9, 12];
-    installmentsOptions.forEach(installment => {
-        const option = document.createElement('option');
-        option.value = installment;
-        option.textContent = installment === 1 ? 'Full payment' : `${installment} months`;
-        installmentsSelect.appendChild(option);
-    });
-
-    const cardNumberInput = document.getElementById('cardNumber-container');
-    cardNumberInput.addEventListener('input', function() {
-        if (this.value.length >= 6) {
-            const bin = this.value.substring(0, 6);
-            
-            mp.getPaymentMethods({ bin: bin })
-                .then(result => {
-                    if (result.results.length > 0) {
-                        const issuerSelect = document.getElementById('issuer-container');
-                        issuerSelect.innerHTML = '<option value="">Select issuer</option>';
-                        
-                        const acceptedCards = ['visa', 'master', 'amex'];
-                        
-result.results.forEach(paymentMethod => {
-    // ACEPTA CUALQUIER TARJETA, no solo visa/master/amex
-    const option = document.createElement('option');
-    option.value = paymentMethod.id;
-    option.textContent = paymentMethod.name;
-    issuerSelect.appendChild(option);
-});
-                        
-                        if (issuerSelect.options.length === 1) {
-                            const option = document.createElement('option');
-                            option.value = 'credit_card';
-                            option.textContent = 'Credit Card';
-                            issuerSelect.appendChild(option);
-                        }
-                    }
-                })
-                .catch(error => console.log('Auto-fill info only'));
-        }
-    });
-}
-
-function setupPaymentProcessing() {
-    const payButton = document.getElementById('paymentmethod-button-pay');
-    
-    payButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        
-        if (selectedPaymentMethod === 'credit-card') {
-            processCreditCardPayment();
-        } else if (selectedPaymentMethod === 'paypal') {
-            document.getElementById('paypalForm').submit();
-        }
-    });
-}
-
-function processCreditCardPayment() {
-    const cardData = {
-        cardNumber: document.getElementById('cardNumber-container').value.replace(/\s/g, ''),
-        expirationDate: document.getElementById('expirationDate-container').value,
-        securityCode: document.getElementById('securityCode-container').value,
-        cardholderName: document.getElementById('cardholderName-container').value,
-        identificationType: document.getElementById('identificationType-container').value,
-        identificationNumber: document.getElementById('identificationNumber-container').value
-    };
-
-    if (!cardData.cardNumber || !cardData.expirationDate || !cardData.securityCode || !cardData.cardholderName) {
-        alert('Please complete all required fields');
-        return;
-    }
-
-    // CREAR TOKEN
-    mp.createCardToken(cardData)
-        .then(result => {
-            if (result.error) {
-                alert('Payment error: ' + result.error.message);
-                return;
-            }
-            
-            // 🔴🔴🔴 AQUÍ REEMPLAZA - URL DE TU BACKEND REAL 🔴🔴🔴
-           const backendUrl = 'https://arlynligeiagithubio-production.up.railway.app/process-payment';
-            
-            const amount = parseFloat(document.querySelector('.paymentmethod-total-amount').textContent.replace('$', '').trim()) || 100;
-            
-            fetch(backendUrl, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({
-                    token: result.id,
-                    amount: amount,
-                   description: 'Purchase from your store',  // ← AGREGAR COMA AL FINAL
-  paymentMethodId: document.getElementById('issuer-container').value  // ← NUEVA LÍNEA
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    alert('✅ REAL PAYMENT PROCESSED SUCCESSFULLY!');
-                    document.getElementById('paymentmethod-form').reset();
-                } else {
-                    alert('❌ Payment rejected: ' + data.message);
-                }
-            })
-            .catch(error => {
-                alert('Error connecting to server: ' + error.message);
-            });
-        })
-        .catch(error => {
-            alert('Processing error: ' + error.message);
-        });
-}
-</script>
 
 
 
