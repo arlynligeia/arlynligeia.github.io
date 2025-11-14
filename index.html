@@ -5161,7 +5161,7 @@ Cosmic/Psychological Horror</p>
 <span class="shippinginformation-ordersummary-subtotal-text">Subtotal:</span>
 <div class="shippinginformation-ordersummary-subtotal-value">  
 <span class="shippinginformation-ordersummary-subtotal-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-subtotal-value-amount" id="cart-subtotal-mobile">0.00</span>
+<span class="shippinginformation-ordersummary-subtotal-value-amount" id="shippinginformation-subtotal">0.00</span>
 </div>  
 </div>  
 <!-- SHIPPING -->  
@@ -5169,7 +5169,7 @@ Cosmic/Psychological Horror</p>
 <span class="shippinginformation-ordersummary-shipping-text">Shipping:</span>
 <div class="shippinginformation-ordersummary-shipping-value">  
 <span class="shippinginformation-ordersummary-shipping-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-shipping-value-amount" id="cart-subtotal-mobile">0.00</span>
+<span class="shippinginformation-ordersummary-shipping-value-amount" id="shippinginformation-shipping">0.00</span>
 </div>  
 </div> 
 <!-- DIVISOR -->
@@ -5179,7 +5179,7 @@ Cosmic/Psychological Horror</p>
 <span class="shippinginformation-ordersummary-total-text">TOTAL:</span>
 <div class="shippinginformation-ordersummary-total-value">  
 <span class="shippinginformation-ordersummary-total-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-total-value-amount" id="cart-subtotal-mobile">0.00</span>
+<span class="shippinginformation-ordersummary-total-value-amount" id="shippinginformation-total">0.00</span>
 </div>
 </div>  
 </div>   
@@ -5246,6 +5246,12 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION PC -->
+
+
+
+
+
+
   
 <!-- SHIPPING INFORMATION MOBILE -->
 <section class="shippinginformation-section main-section mobile-only" id="shippinginformation-mobile">  
@@ -6037,7 +6043,6 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');  
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
@@ -6053,13 +6058,11 @@ const productStock = {
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
 }; 
-
 // ========== FUNCIONES DE UTILIDAD ==========
 // 1. FUNCIÓN: CONVERTIR STRING A NÚMERO (MANEJA COMAS)
 function parsePrice(priceString) {
 return parseFloat(priceString.replace(/,/g, ''));
 }
-
 // 2. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 const num = parseFloat(number);
@@ -6068,7 +6071,6 @@ minimumFractionDigits: 2,
 maximumFractionDigits: 2
 });
 }
-
 // ========== FUNCIONES DE STOCK ==========
 // 3. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
 function checkStock(productName) {
@@ -6078,19 +6080,16 @@ const currentStock = productStock[productName];
 const cartQuantity = productInCart ? productInCart.quantity : 0;
 return currentStock - cartQuantity;
 }
-
 // 4. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
 function canAddToCart(productName) {
 return checkStock(productName) > 0;
 }
-
 // 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
 function updateAddToCartButtons() {
 const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
 addToCartButtons.forEach(button => {
 const productName = button.getAttribute('data-product');
 const availableStock = checkStock(productName);
-
 if (availableStock <= 0) {
 button.disabled = true;
 button.style.opacity = '0.5';
@@ -6104,7 +6103,6 @@ button.textContent = 'ADD TO CART';
 }
 });
 }
-
 // ========== FUNCIONES DEL CARRITO ==========
 // 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
@@ -6113,7 +6111,6 @@ if (!canAddToCart(productName)) {
 console.log(`❌ No hay stock disponible para: ${productName}`);
 return;
 }
-
 console.log(`🛒 Agregando producto: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const existingProductIndex = cart.findIndex(item => item.product === productName);
@@ -6143,7 +6140,6 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
 }
-
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -6154,13 +6150,11 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCart();
 }
-
 // 8. FUNCIÓN: DISMINUIR CANTIDAD
 function decreaseQuantity(productName) {
 console.log(`➖ Disminuyendo cantidad: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const productIndex = cart.findIndex(item => item.product === productName);
-
 if (productIndex !== -1) {
 if (cart[productIndex].quantity > 1) {
 cart[productIndex].quantity -= 1;
@@ -6174,13 +6168,11 @@ updateAddToCartButtons();
 toggleCart();
 }
 }
-
 // 9. FUNCIÓN: AUMENTAR CANTIDAD
 function increaseQuantity(productName) {
 console.log(`➕ Aumentando cantidad: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const productIndex = cart.findIndex(item => item.product === productName);
-
 if (productIndex !== -1) {
 const availableStock = checkStock(productName);
 if (availableStock <= 0) {
@@ -6194,7 +6186,6 @@ updateCartDisplay();
 updateAddToCartButtons();
 }
 }
-
 // 10. FUNCIÓN: LIMPIAR CARRITO
 function clearCart() {
 console.log('🧹 Limpiando carrito');
@@ -6203,7 +6194,6 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCart();
 }
-
 // ========== FUNCIONES DE VISUALIZACIÓN ==========
 // 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
@@ -6258,15 +6248,14 @@ productRow.innerHTML = `
 </td>
 `;
 divider2.insertAdjacentElement('beforebegin', productRow);
-});
-  
+}); 
 setupRemoveButtons();
 setupQuantityButtons();
 updateShippingTotal();
 updateSubtotal();
 updateTotalFinal();
+updateHiddenCartFields();
 }
-
 // 12. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
 function updateShippingTotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6276,7 +6265,6 @@ shippingTotal += item.shipping * item.quantity;
 });
 document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
 }
-
 // 13. FUNCIÓN: ACTUALIZAR SUBTOTAL
 function updateSubtotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6286,7 +6274,6 @@ subtotal += item.totalprice;
 });
 document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
 }
-
 // 14. FUNCIÓN: ACTUALIZAR TOTAL FINAL
 function updateTotalFinal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6299,7 +6286,6 @@ shippingTotal += item.shipping * item.quantity;
 const totalFinal = subtotal + shippingTotal;
 document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
-
 // ========== FUNCIONES DE NAVEGACIÓN ==========
 // 15. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL
 function toggleCart() {
@@ -6327,7 +6313,6 @@ updateCartDisplay();
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
 }
-
 // ========== FUNCIONES DE CONFIGURACIÓN DE BOTONES ==========
 // 16. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
 function setupAddToCartButtons() {
@@ -6346,7 +6331,6 @@ console.error('❌ Datos del producto incompletos');
 });
 });
 }
-
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-button-remove');
@@ -6357,7 +6341,6 @@ removeFromCart(productName);
 });
 });
 }
-
 // 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
 const decreaseButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-quantity-decrease');
@@ -6375,7 +6358,6 @@ increaseQuantity(productName);
 });
 });
 }
-
 // 19. FUNCIÓN: CONFIGURAR BOTÓN CART
 function setupCartButton() {
 const cartButton = document.querySelector('.cart-button');
@@ -6385,7 +6367,6 @@ toggleCart();
 });
 }
 }
-
 // 20. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
 function setupGoToCartButtons() {
 const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
@@ -6395,7 +6376,6 @@ toggleCart();
 });
 });
 }
-
 // 21. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
 function setupClearCartButton() {
 const clearCartButton = document.querySelector('.cartfull-button-clearcart');
@@ -6405,18 +6385,101 @@ clearCart();
 });
 }
 }
+// ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
+// 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
+function updateHiddenCartFields() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+let shippingTotal = 0;
 
+// CALCULAR TOTALES
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+
+const totalFinal = subtotal + shippingTotal;
+
+// CREAR ARRAY DE PRODUCTOS PARA EL CAMPO OCULTO
+const cartItems = cart.map(item => ({
+product: item.product,
+quantity: item.quantity,
+price: item.price,
+total: item.totalprice
+}));
+
+// ACTUALIZAR CAMPOS OCULTOS
+document.getElementById('hidden-cart-items').value = JSON.stringify(cartItems);
+document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
+document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
+document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+}
+
+// ========== FUNCIONES DE CHECKOUT ==========
+// 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
+function setupCheckoutButton() {
+const checkoutButton = document.querySelector('.cartfull-button-checkout');
+if (checkoutButton) {
+checkoutButton.addEventListener('click', function(e) {
+e.preventDefault();
+goToCheckout();
+});
+}
+}
+
+// 24. FUNCIÓN: IR A CHECKOUT
+function goToCheckout() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+if (cart.length === 0) {
+console.log('❌ Carrito vacío, no se puede proceder al checkout');
+return;
+}
+
+// ACTUALIZAR CAMPOS OCULTOS ANTES DE REDIRIGIR
+updateHiddenCartFields();
+
+// CALCULAR TOTALES PARA PASAR A SHIPPING INFORMATION
+let subtotal = 0;
+let shippingTotal = 0;
+
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+
+const totalFinal = subtotal + shippingTotal;
+
+// PASAR DATOS A SHIPPING INFORMATION
+document.getElementById('shippinginformation-subtotal').textContent = formatNumberWithCommas(subtotal);
+document.getElementById('shippinginformation-shipping').textContent = formatNumberWithCommas(shippingTotal);
+document.getElementById('shippinginformation-total').textContent = formatNumberWithCommas(totalFinal);
+
+// OCULTAR TODAS LAS SECCIONES Y MOSTRAR SHIPPING INFORMATION
+const allSections = document.querySelectorAll('.main-section, .subsection');
+allSections.forEach(section => {
+section.style.display = 'none';
+});
+
+const shippingInfoSection = document.querySelector('.shippinginformation-section');
+if (shippingInfoSection) {
+shippingInfoSection.style.display = 'block';
+window.location.hash = '#shippinginformation';
+}
+
+console.log('✅ Redirigiendo a checkout');
+}
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
 setupAddToCartButtons();
 setupClearCartButton();
+setupCheckoutButton();
 updateAddToCartButtons();
+updateHiddenCartFields();
 
 if (window.location.hash === '#cartfull' || window.location.hash === '#cartempty') {
 toggleCart();
 }
-  
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
