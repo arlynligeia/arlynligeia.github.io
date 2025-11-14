@@ -6186,9 +6186,9 @@ productRow.innerHTML = `
 <!-- CANTIDAD -->
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-quantity">
-<button class="cartfull-table-wrapper-body-row-cell-quantity-decrease" onclick="decreaseQuantity('${item.product}')">-</button> 
+<button class="cartfull-table-wrapper-body-row-cell-quantity-decrease" data-product="${item.product}">-</button> 
 <span class="cartfull-table-wrapper-body-row-cell-quantity-value">${item.quantity}</span>
-<button class="cartfull-table-wrapper-body-row-cell-quantity-increase" onclick="increaseQuantity('${item.product}')">+</button>
+<button class="cartfull-table-wrapper-body-row-cell-quantity-increase" data-product="${item.product}">+</button>
 </div>
 </td>
 <!-- PRECIO UNITARIO -->
@@ -6218,6 +6218,9 @@ divider2.insertAdjacentElement('beforebegin', productRow);
   
 // CONFIGURAR BOTONES REMOVER
 setupRemoveButtons();
+
+// CONFIGURAR BOTONES DE CANTIDAD
+setupQuantityButtons();
   
 // ACTUALIZAR SHIPPING TOTAL
 updateShippingTotal();
@@ -6291,7 +6294,60 @@ removeFromCart(productName);
 });
 });
 }
-  
+  // 13. FUNCIÓN: DISMINUIR CANTIDAD
+function decreaseQuantity(productName) {
+console.log(`➖ Disminuyendo cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+
+if (productIndex !== -1) {
+if (cart[productIndex].quantity > 1) {
+cart[productIndex].quantity -= 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+} else {
+// SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
+cart = cart.filter(item => item.product !== productName);
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+toggleCart();
+}
+}
+
+// 14. FUNCIÓN: AUMENTAR CANTIDAD
+function increaseQuantity(productName) {
+console.log(`➕ Aumentando cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+
+if (productIndex !== -1) {
+cart[productIndex].quantity += 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+}
+}
+
+// 15. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
+function setupQuantityButtons() {
+// BOTONES DISMINUIR
+const decreaseButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-quantity-decrease');
+decreaseButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+decreaseQuantity(productName);
+});
+});
+
+// BOTONES AUMENTAR
+const increaseButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-quantity-increase');
+increaseButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+increaseQuantity(productName);
+});
+});
+}
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
 setupAddToCartButtons();
