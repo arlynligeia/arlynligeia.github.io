@@ -7553,53 +7553,47 @@ function processCreditCardPayment() {
 <!-- SCRIP: FOOTER -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🦶 Footer navegación iniciada');
-    
-    // FUNCIÓN: NAVEGACIÓN DEL FOOTER
-    function setupFooterNavigation() {
-
-       // 1. BOTÓN: TERMS & CONDITIONS
-        const termsBtn = document.querySelector('.footer-link-termsandconditions a');
-        if (termsBtn) {
-            termsBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('📑 Navegando a Terms & Conditions');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR TERMS & CONDITIONS
-                const termsConditions = document.getElementById('termsandconditions');
-                if (termsConditions) {
-                    termsConditions.style.display = 'block';
-                    termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'termsandconditions';
-                }
-            });
-        }
-      
-        // 1. BOTÓN: PRIVACY POLICY
-        const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy a');
-        if (privacyPolicyBtn) {
-            privacyPolicyBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('📄 Navegando a Privacy Policy');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR PRIVACY POLICY
-                const privacyPolicy = document.getElementById('privacypolicy');
-                if (privacyPolicy) {
-                    privacyPolicy.style.display = 'block';
-                    privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'privacypolicy';
-                }
-            });
-        }
-
-       
-
+console.log('🦶 Footer navegación iniciada');
+// FUNCIÓN: NAVEGACIÓN DEL FOOTER
+function setupFooterNavigation() {
+// 1. BOTÓN: TERMS & CONDITIONS
+const termsBtn = document.querySelector('.footer-link-termsandconditions a');
+if (termsBtn) {
+termsBtn.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📑 Navegando a Terms & Conditions');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR TERMS & CONDITIONS
+const termsConditions = document.getElementById('termsandconditions');
+if (termsConditions) {
+termsConditions.style.display = 'block';
+termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'termsandconditions';
+}
+});
+}
+// 2. BOTÓN: PRIVACY POLICY
+const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy a');
+if (privacyPolicyBtn) {
+privacyPolicyBtn.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📄 Navegando a Privacy Policy');
+// OCULTAR TODAS LAS SECCIONES
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR PRIVACY POLICY
+const privacyPolicy = document.getElementById('privacypolicy');
+if (privacyPolicy) {
+privacyPolicy.style.display = 'block';
+privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = 'privacypolicy';
+}
+});
+}
         // 3. BOTÓN: COOKIE POLICY
         const cookieBtn = document.querySelector('.footer-link-cookiepolicy a');
         if (cookieBtn) {
@@ -7641,7 +7635,93 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <!-- FIN SCRIP: FOOTER --> 
 
+<!-- SCRIP: FOOTER MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🦶 Footer mobile navegación iniciada');
+// FUNCIÓN: NAVEGACIÓN DEL FOOTER MOBILE
+function setupFooterNavigationMobile() {
 
+       // 1. BOTÓN: TERMS & CONDITIONS
+        const termsBtn = document.querySelector('.footer-link-termsandconditions-mobile a');
+        if (termsBtn) {
+            termsBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('📑 Navegando a Terms & Conditions');
+                // OCULTAR TODAS LAS SECCIONES
+                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+                    section.style.display = 'none';
+                });
+                // MOSTRAR TERMS & CONDITIONS
+                const termsConditions = document.getElementById('termsandconditions');
+                if (termsConditions) {
+                    termsConditions.style.display = 'block';
+                    termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.location.hash = 'termsandconditions';
+                }
+            });
+        }
+      
+        // 2. BOTÓN: PRIVACY POLICY
+        const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy-mobile a');
+        if (privacyPolicyBtn) {
+            privacyPolicyBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('📄 Navegando a Privacy Policy');
+                // OCULTAR TODAS LAS SECCIONES
+                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+                    section.style.display = 'none';
+                });
+                // MOSTRAR PRIVACY POLICY
+                const privacyPolicy = document.getElementById('privacypolicy');
+                if (privacyPolicy) {
+                    privacyPolicy.style.display = 'block';
+                    privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.location.hash = 'privacypolicy';
+                }
+            });
+        }
+
+        // 3. BOTÓN: COOKIE POLICY
+        const cookieBtn = document.querySelector('.footer-link-cookiepolicy-mobile a');
+        if (cookieBtn) {
+            cookieBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('🍪 Navegando a Cookie Policy');
+                // OCULTAR TODAS LAS SECCIONES
+                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+                    section.style.display = 'none';
+                });
+                // MOSTRAR COOKIE POLICY
+                const cookiePolicy = document.getElementById('cookiepolicy');
+                if (cookiePolicy) {
+                    cookiePolicy.style.display = 'block';
+                    cookiePolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    window.location.hash = 'cookiepolicy';
+                }
+            });
+        }
+
+        // 4. BOTÓN: SCROLL TO TOP
+        const scrollTopBtn = document.querySelector('.footer-button-scrolltop-mobile');
+        if (scrollTopBtn) {
+            scrollTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('⬆️ Scroll to top');
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+
+    // INICIALIZAR
+    setupFooterNavigationMobile();
+    console.log('✅ Footer mobile navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: FOOTER MOBILE -->
 
 
 
