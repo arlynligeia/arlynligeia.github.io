@@ -6208,13 +6208,17 @@ productRow.innerHTML = `
 <!-- BOTÓN ELIMINAR -->
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-button">
-<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" data-product="${item.product}">X</button>
 </div>
 </td>
 `;
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
 divider2.insertAdjacentElement('beforebegin', productRow);
 });
+  
+// CONFIGURAR BOTONES REMOVER
+setupRemoveButtons();
+  
 // ACTUALIZAR SHIPPING TOTAL
 updateShippingTotal();
 // ACTUALIZAR SUBTOTAL
@@ -6276,6 +6280,16 @@ cart = cart.filter(item => item.product !== productName);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 toggleCart(); // ACTUALIZAR LA VISUALIZACIÓN DEL CARRITO
+}
+  // 12. FUNCIÓN: CONFIGURAR BOTONES REMOVER
+function setupRemoveButtons() {
+const removeButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-button-remove');
+removeButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+removeFromCart(productName);
+});
+});
 }
   
 // INICIALIZAR BOTONES AL CARGAR
