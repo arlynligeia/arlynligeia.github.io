@@ -6059,21 +6059,28 @@ if (!section.classList.contains('cartempty-section') &&
 !section.classList.contains('cartfull-section')) {
 section.style.display = 'none';
 }
-});  
+});    
 // VERIFICAR CARRITO VACIO O LLENO
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const isEmpty = cart.length === 0;
 if (isEmpty) {
 // MOSTRAR CARRITO VACIO - OCULTAR CARRITO LLENO
 if (cartEmpty) cartEmpty.style.display = 'block';
+// ACTUALIZAR URL PARA CART EMPTY
+window.location.hash = '#cartempty';
 if (cartFull) cartFull.style.display = 'none';
-} else {
+}
+else {
 // MOSTRAR CARRITO LLENO - OCULTAR CARRITO VACIO
 if (cartEmpty) cartEmpty.style.display = 'none';
 if (cartFull) cartFull.style.display = 'block';
+// ACTUALIZAR URL PARA CART FULL
+window.location.hash = '#cartfull';
+// ACTUALIZAR DISPLAY DEL CARRITO
+updateCartDisplay();
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
-}  
+}     
 // 2. FUNCIÓN: BOTÓN CART
 const cartButton = document.querySelector('.cart-button');
 if (cartButton) {
@@ -6102,37 +6109,33 @@ console.log('❌ No se encontraron botones GO TO CART');
   
 // 4. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
-    console.log(`🛒 Agregando producto: ${productName}`);
-    
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
-    const existingProductIndex = cart.findIndex(item => item.product === productName);
-    
-    if (existingProductIndex !== -1) {
-        // SI EXISTE, AUMENTAR CANTIDAD DEL PRODUCTO
-        cart[existingProductIndex].quantity += 1;
-        cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
-        console.log(`📦 Producto existente, nueva cantidad: ${cart[existingProductIndex].quantity}`);
-    } else {
-        // SI NO EXISTE, AGREGAR NUEVO PRODUCTO
-        const newProduct = {
-            image: productImage,
-            product: productName,
-            quantity: 1,
-            price: productPrice,
-            shipping: productShipping
-        };
-        cart.push(newProduct);
-        console.log(`🆕 Nuevo producto agregado: ${productName}`);
-    }
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
+console.log(`🛒 Agregando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
+const existingProductIndex = cart.findIndex(item => item.product === productName);
+if (existingProductIndex !== -1) {
+// SI EXISTE, AUMENTAR CANTIDAD DEL PRODUCTO
+cart[existingProductIndex].quantity += 1;
+cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
+console.log(`📦 Producto existente, nueva cantidad: ${cart[existingProductIndex].quantity}`);
+} else {
+// SI NO EXISTE, AGREGAR NUEVO PRODUCTO
+const newProduct = {
+image: productImage,
+product: productName,
+quantity: 1,
+price: productPrice,
+totalprice: productPrice, // INICIALIZAR TOTALPRICE
+shipping: productShipping
+};
+cart.push(newProduct);
+console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
-
-
-  
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+toggleCart(); // MOSTRAR CARRITO DESPUÉS DE AGREGAR
+}
+ 
 // 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -6186,7 +6189,10 @@ productRow.innerHTML = `
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
 divider2.insertAdjacentElement('beforebegin', productRow);
 });
+// ACTUALIZAR TOTALES
+updateCartTotals();
 }
+  
 // 6. FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
 function calculateTotal(quantity, price) {
 return quantity * price;
@@ -6209,47 +6215,50 @@ function updateCartTotals() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Calcular valores
 const subtotal = calculateSubtotal(cart);
-const shipping = 0; // Aquí debes obtener el shipping de donde lo tengas
-const totalFinal = calculateTotalFinal(subtotal, shipping);
+let totalShipping = 0;
+cart.forEach(item => {
+totalShipping += parseFloat(item.shipping);
+});
+const totalFinal = calculateTotalFinal(subtotal, totalShipping);
 // Actualizar en el HTML
 const subtotalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount');
 const shippingElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount');
 const totalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount');
 if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
-if (shippingElement) shippingElement.textContent = formatNumberWithCommas(shipping.toFixed(2));
+if (shippingElement) shippingElement.textContent = formatNumberWithCommas(totalShipping.toFixed(2));
 if (totalElement) totalElement.textContent = formatNumberWithCommas(totalFinal.toFixed(2));
 }
+  
 // 10. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 // Convertir a número, manejar decimales y agregar comas
 const num = parseFloat(number);
 return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 } 
-// 9. FUNCIÓN: BOTONES ADD TO CART
+  
+// 11. FUNCIÓN: BOTONES ADD TO CART
 function setupAddToCartButtons() {
-    const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-    
-    if (addToCartButtons.length > 0) {
-        addToCartButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Obtener información del producto de los data attributes EN ORDEN
-                const productImage = this.getAttribute('data-image') || 'default-image.jpg';
-                const productName = this.getAttribute('data-product') || 'Producto';
-                const productPrice = parseFloat(this.getAttribute('data-price') || '0');
-                const productShipping = parseFloat(this.getAttribute('data-shipping') || '0');
-                
-                console.log(`🛍️ Agregando al carrito: ${productName} - $${productPrice}`);
-                
-                addToCart(productImage, productName, productPrice, productShipping);
-            });
-        });
-        console.log(`✅ Se encontraron ${addToCartButtons.length} botones ADD TO CART`);
-    } else {
-        console.log('❌ No se encontraron botones ADD TO CART');
-    }
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+if (addToCartButtons.length > 0) {
+addToCartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+// Obtener información del producto de los data attributes EN ORDEN
+const productImage = this.getAttribute('data-image') || 'default-image.jpg';
+const productName = this.getAttribute('data-product') || 'Producto';
+const productPrice = parseFloat(this.getAttribute('data-price') || '0');
+const productShipping = parseFloat(this.getAttribute('data-shipping') || '0');
+console.log(`🛍️ Agregando al carrito: ${productName} - $${productPrice}`);
+addToCart(productImage, productName, productPrice, productShipping);
+});
+});
+console.log(`✅ Se encontraron ${addToCartButtons.length} botones ADD TO CART`);
+} else {
+console.log('❌ No se encontraron botones ADD TO CART');
 }
+}  
+// INICIALIZAR BOTONES ADD TO CART
+setupAddToCartButtons();
   
 // OCULTAR CARRITO AL CARGAR LA PÁGINA
 const cartEmpty = document.querySelector('.cartempty-section');
