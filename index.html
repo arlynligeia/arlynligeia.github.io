@@ -6348,9 +6348,34 @@ increaseQuantity(productName);
 });
 });
 }
+  // 16. FUNCIÓN: LIMPIAR CARRITO
+function clearCart() {
+console.log('🧹 Limpiando carrito');
+localStorage.removeItem('cart');
+updateCartDisplay();
+toggleCart();
+}
+
+// 17. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
+function setupClearCartButton() {
+const clearCartButton = document.querySelector('.cartfull-button-clearcart');
+if (clearCartButton) {
+clearCartButton.addEventListener('click', function() {
+clearCart();
+});
+}
+}
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
 setupAddToCartButtons();
+setupClearCartButton(); // AGREGAR ESTA LÍNEA
+
+
+  // VERIFICAR ESTADO INICIAL DEL CARRITO
+if (window.location.hash === '#cartfull' || window.location.hash === '#cartempty') {
+toggleCart();
+}
+  
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
