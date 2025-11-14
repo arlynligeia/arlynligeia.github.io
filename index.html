@@ -6134,7 +6134,7 @@ productRow.innerHTML = `
 <!-- CANTIDAD -->
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-quantity">
-<button class="cartfull-table-wrapper-body-row-cell-quantity-decrease" onclick="decreaseQuantity('${item.product}')">-</button>
+<button class="cartfull-table-wrapper-body-row-cell-quantity-decrease" onclick="decreaseQuantity('${item.product}')">-</button> 
 <span class="cartfull-table-wrapper-body-row-cell-quantity-value">${item.quantity}</span>
 <button class="cartfull-table-wrapper-body-row-cell-quantity-increase" onclick="increaseQuantity('${item.product}')">+</button>
 </div>
@@ -6300,53 +6300,47 @@ if (cartFull) cartFull.style.display = 'block';
 updateCartDisplay();
 }
 });
-// 8. FUNCIONES: GLOBALES (FUERA DEL SCOPE PRINCIPAL)
+// BOTÓN REMOVER
 window.removeFromCart = function(productName) {
-    console.log(`🗑️ Eliminando producto: ${productName}`);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // FILTRAR EL PRODUCTO A ELIMINAR
     cart = cart.filter(item => item.product !== productName);
-    
     localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
     
-    // SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
-    if (cart.length === 0) {
-        toggleCart();
-    }
+    // Actualizar display
+    const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+    const productRows = cartBody.querySelectorAll('.product-row');
+    productRows.forEach(row => row.remove());
+    
+    // Recargar carrito
+    location.reload();
 };
 
+// BOTÓN AUMENTAR
 window.increaseQuantity = function(productName) {
-    console.log(`➕ Aumentando cantidad: ${productName}`);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const productIndex = cart.findIndex(item => item.product === productName);
-    if (productIndex !== -1) {
-        cart[productIndex].quantity += 1;
-        cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-        console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+    const product = cart.find(item => item.product === productName);
+    if (product) {
+        product.quantity += 1;
+        product.totalprice = product.quantity * product.price;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        location.reload();
     }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
 };
 
+// BOTÓN DISMINUIR  
 window.decreaseQuantity = function(productName) {
-    console.log(`➖ Disminuyendo cantidad: ${productName}`);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const productIndex = cart.findIndex(item => item.product === productName);
-    if (productIndex !== -1) {
-        if (cart[productIndex].quantity > 1) {
-            cart[productIndex].quantity -= 1;
-            cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-            console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+    const product = cart.find(item => item.product === productName);
+    if (product) {
+        if (product.quantity > 1) {
+            product.quantity -= 1;
+            product.totalprice = product.quantity * product.price;
+            localStorage.setItem('cart', JSON.stringify(cart));
+            location.reload();
         } else {
-            // SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
             removeFromCart(productName);
-            return; // SALIR DE LA FUNCIÓN
         }
     }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
 };
 </script>
 <!-- SCRIP: CARRITO PC -->
