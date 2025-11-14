@@ -6025,7 +6025,65 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
  
 
 
-
+<!-- CARRITO -->
+  
+<!-- SCRIP: CARRITO PC -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🛒 Carrito iniciado');  
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// STOCK DE PRODUCTOS INTERNO
+const productStock = {
+"Comet Sponsor": 288,
+"Planet Sponsor": 120,
+"Star Sponsor": 48,
+"Comet Sponsor Brand": 24,
+"Planet Sponsor Brand": 8,
+"Star Sponsor Brand": 2,
+"Nebula Executive Producer": 1,
+"Pulsar Executive Producer": 1,
+"Black Hole Executive Producer": 1,
+"Quasar Executive Producer": 1,
+"Galaxy Executive Producer": 1,
+"Cosmos Executive Producer": 1
+}; 
+// 1. FUNCIÓN: ALTERNAR CART EMPTY Y CART FULL
+function toggleCart() {
+const cartEmpty = document.querySelector('.cartempty-section');
+const cartFull = document.querySelector('.cartfull-section');
+// VERIFICAR CARRITO VACIO O LLENO
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const isEmpty = cart.length === 0;
+if (isEmpty) {
+// MOSTRAR CARRITO VACIO - OCULTAR CARRITO LLENO
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
+} else {
+// MOSTRAR CARRITO LLENO - OCULTAR CARRITO VACIO
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+}
+console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
+}
+// 2. FUNCIÓN: BOTÓN CART
+const cartButton = document.querySelector('.cart-button');
+if (cartButton) {
+cartButton.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📦 Botón carrito clickeado');
+toggleCart();
+});
+} else {
+console.log('❌ No se encontró el botón del carrito');
+}
+// OCULTAR CARRITO AL CARGAR LA PÁGINA
+const cartEmpty = document.querySelector('.cartempty-section');
+const cartFull = document.querySelector('.cartfull-section');
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'none';
+});
+</script>
+<!-- SCRIP: CARRITO PC -->
 
 
 
