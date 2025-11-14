@@ -6294,6 +6294,7 @@ cart = cart.filter(item => item.product !== productName);
 
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
+updateAddToCartButtons(); // ACTUALIZAR BOTONES
 toggleCart(); // ACTUALIZAR LA VISUALIZACIÓN DEL CARRITO
 }
   // 12. FUNCIÓN: CONFIGURAR BOTONES REMOVER
@@ -6322,6 +6323,7 @@ cart = cart.filter(item => item.product !== productName);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
+updateAddToCartButtons(); // ACTUALIZAR BOTONES
 toggleCart();
 }
 }
@@ -6337,6 +6339,7 @@ cart[productIndex].quantity += 1;
 cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
+updateAddToCartButtons(); // ACTUALIZAR BOTONES
 }
 }
 
@@ -6365,6 +6368,7 @@ function clearCart() {
 console.log('🧹 Limpiando carrito');
 localStorage.removeItem('cart');
 updateCartDisplay();
+updateAddToCartButtons(); // ACTUALIZAR BOTONES
 toggleCart();
 }
 
@@ -6418,7 +6422,7 @@ setupCartButton();
 setupGoToCartButtons(); // AGREGAR ESTA LÍNEA
 setupAddToCartButtons();
 setupClearCartButton(); // AGREGAR ESTA LÍNEA
-
+updateAddToCartButtons(); // ACTUALIZAR ESTADO INICIAL DE BOTONES
 
   // VERIFICAR ESTADO INICIAL DEL CARRITO
 if (window.location.hash === '#cartfull' || window.location.hash === '#cartempty') {
