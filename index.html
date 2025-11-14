@@ -6099,7 +6099,7 @@ image: productImage,
 product: productName,
 quantity: 1,
 price: productPrice,
-totalprice: productPrice, // INICIALIZAR TOTALPRICE
+totalprice: productPrice,
 shipping: productShipping
 };
 cart.push(newProduct);
@@ -6156,7 +6156,7 @@ productRow.innerHTML = `
 <!-- BOTÓN ELIMINAR -->
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-button">
-<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart(\"${item.product}\")">X</button>
 </div>
 </td>`;
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
@@ -6168,17 +6168,26 @@ updateCartTotals();
 // 4. BOTONES
 // FUNCIÓN: BOTÓN REMOVE
 function removeFromCart(productName) {
-console.log(`🗑️ Eliminando producto: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// FILTRAR EL PRODUCTO A ELIMINAR
-cart = cart.filter(item => item.product !== productName);
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-// SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
-if (cart.length === 0) {
-toggleCart();
+    console.log(`🗑️ Eliminando producto: ${productName}`);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // FILTRAR EL PRODUCTO A ELIMINAR - ESTO ELIMINA SOLO ESA FILA
+    cart = cart.filter(item => item.product !== productName);
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    
+    // SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
+    if (cart.length === 0) {
+        toggleCart();
+    }
 }
-}  
+
+
+
+
+
+  
 // FUNCIÓN: CONFIGURAR CLEAN CART
 function clearCart() {
 console.log('🧹 Vaciar carrito completo');
@@ -6200,6 +6209,7 @@ console.log('✅ Botón CLEAR CART configurado');
 console.log('❌ No se encontró el botón CLEAR CART');
 }
 }  
+  
 // FUNCIÓN: AUMENTAR CANTIDAD
 function increaseQuantity(productName) {
 console.log(`➕ Aumentando cantidad: ${productName}`);
@@ -6232,6 +6242,11 @@ return; // SALIR DE LA FUNCIÓN
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 }
+
+
+
+
+  
 // 5. FUNCION: CALCULAR TOTALES-FORMULAS
 // FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
 function calculateTotal(quantity, price) {
