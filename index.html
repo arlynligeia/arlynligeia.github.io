@@ -6097,7 +6097,18 @@ toggleCart();
 });
 }
 }
-
+  
+// 18. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
+function setupGoToCartButtons() {
+const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function() {
+toggleCart();
+});
+});
+}
+  
+  
 // 3. FUNCIÓN: CONVERTIR STRING A NÚMERO (MANEJA COMAS)
 function parsePrice(priceString) {
 // REMOVER COMAS Y CONVERTIR A NÚMERO
@@ -6365,8 +6376,10 @@ clearCart();
 });
 }
 }
+
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
+setupGoToCartButtons(); // AGREGAR ESTA LÍNEA
 setupAddToCartButtons();
 setupClearCartButton(); // AGREGAR ESTA LÍNEA
 
