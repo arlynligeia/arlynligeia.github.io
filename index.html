@@ -6155,9 +6155,9 @@ productRow.innerHTML = `
 </td>
 <!-- BOTÓN ELIMINAR -->
 <td class="cartfull-table-wrapper-body-row-cell">
-<div class="cartfull-table-wrapper-body-row-cell-button">
-<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
-</div>
+    <div class="cartfull-table-wrapper-body-row-cell-button">
+        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+    </div>
 </td>
 `;
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
@@ -6167,24 +6167,6 @@ divider2.insertAdjacentElement('beforebegin', productRow);
 updateCartTotals();
 }  
 // 4. BOTONES
-// FUNCIÓN: BOTÓN REMOVE
-function removeFromCart(productName) {
-    console.log(`🗑️ Eliminando producto: ${productName}`);
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-    // FILTRAR EL PRODUCTO A ELIMINAR
-    cart = cart.filter(item => item.product !== productName);
-    
-    localStorage.setItem('cart', JSON.stringify(cart));
-    updateCartDisplay();
-    
-    // SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
-    if (cart.length === 0) {
-        toggleCart();
-    }
-}
-
-
 
   
 // FUNCIÓN: CONFIGURAR CLEAN CART
@@ -6208,41 +6190,6 @@ console.log('✅ Botón CLEAR CART configurado');
 console.log('❌ No se encontró el botón CLEAR CART');
 }
 }  
-  
-// FUNCIÓN: AUMENTAR CANTIDAD
-function increaseQuantity(productName) {
-console.log(`➕ Aumentando cantidad: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productIndex = cart.findIndex(item => item.product === productName);
-if (productIndex !== -1) {
-cart[productIndex].quantity += 1;
-cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
-}
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-}
-// FUNCIÓN: DISMINUIR CANTIDAD
-function decreaseQuantity(productName) {
-console.log(`➖ Disminuyendo cantidad: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productIndex = cart.findIndex(item => item.product === productName);
-if (productIndex !== -1) {
-if (cart[productIndex].quantity > 1) {
-cart[productIndex].quantity -= 1;
-cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
-} else {
-// SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
-removeFromCart(productName);
-return; // SALIR DE LA FUNCIÓN
-}
-}
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-}
-
-
 
 
   
@@ -6352,8 +6299,55 @@ if (cartEmpty) cartEmpty.style.display = 'none';
 if (cartFull) cartFull.style.display = 'block';
 updateCartDisplay();
 }
-
 });
+// 8. FUNCIONES: GLOBALES (FUERA DEL SCOPE PRINCIPAL)
+window.removeFromCart = function(productName) {
+    console.log(`🗑️ Eliminando producto: ${productName}`);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // FILTRAR EL PRODUCTO A ELIMINAR
+    cart = cart.filter(item => item.product !== productName);
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+    
+    // SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
+    if (cart.length === 0) {
+        toggleCart();
+    }
+};
+
+window.increaseQuantity = function(productName) {
+    console.log(`➕ Aumentando cantidad: ${productName}`);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const productIndex = cart.findIndex(item => item.product === productName);
+    if (productIndex !== -1) {
+        cart[productIndex].quantity += 1;
+        cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+        console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+};
+
+window.decreaseQuantity = function(productName) {
+    console.log(`➖ Disminuyendo cantidad: ${productName}`);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const productIndex = cart.findIndex(item => item.product === productName);
+    if (productIndex !== -1) {
+        if (cart[productIndex].quantity > 1) {
+            cart[productIndex].quantity -= 1;
+            cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+            console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+        } else {
+            // SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
+            removeFromCart(productName);
+            return; // SALIR DE LA FUNCIÓN
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+};
 </script>
 <!-- SCRIP: CARRITO PC -->
 
