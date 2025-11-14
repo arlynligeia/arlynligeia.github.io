@@ -6306,13 +6306,13 @@ window.removeFromCart = function(productName) {
     cart = cart.filter(item => item.product !== productName);
     localStorage.setItem('cart', JSON.stringify(cart));
     
-    // Actualizar display
-    const cartBody = document.querySelector('.cartfull-table-wrapper-body');
-    const productRows = cartBody.querySelectorAll('.product-row');
-    productRows.forEach(row => row.remove());
+    // Actualizar la vista sin recargar
+    updateCartDisplay();
     
-    // Recargar carrito
-    location.reload();
+    // Si el carrito queda vacío, mostrar cart empty
+    if (cart.length === 0) {
+        toggleCart();
+    }
 };
 
 // BOTÓN AUMENTAR
@@ -6323,7 +6323,7 @@ window.increaseQuantity = function(productName) {
         product.quantity += 1;
         product.totalprice = product.quantity * product.price;
         localStorage.setItem('cart', JSON.stringify(cart));
-        location.reload();
+        updateCartDisplay();
     }
 };
 
@@ -6336,7 +6336,7 @@ window.decreaseQuantity = function(productName) {
             product.quantity -= 1;
             product.totalprice = product.quantity * product.price;
             localStorage.setItem('cart', JSON.stringify(cart));
-            location.reload();
+            updateCartDisplay();
         } else {
             removeFromCart(productName);
         }
