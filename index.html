@@ -6073,12 +6073,7 @@ if (cartEmpty) cartEmpty.style.display = 'none';
 if (cartFull) cartFull.style.display = 'block';
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
-}
-
-
-
-
-  
+}  
 // 2. FUNCIÓN: BOTÓN CART
 const cartButton = document.querySelector('.cart-button');
 if (cartButton) {
@@ -6089,6 +6084,20 @@ toggleCart();
 });
 } else {
 console.log('❌ No se encontró el botón del carrito');
+}
+// 3. FUNCIÓN: BOTONES GO TO CART
+const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
+if (goToCartButtons.length > 0) {
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('🛒 Botón GO TO CART clickeado');
+toggleCart();
+});
+});
+console.log(`✅ Se encontraron ${goToCartButtons.length} botones GO TO CART`);
+} else {
+console.log('❌ No se encontraron botones GO TO CART');
 }
 // OCULTAR CARRITO AL CARGAR LA PÁGINA
 const cartEmpty = document.querySelector('.cartempty-section');
