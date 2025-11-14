@@ -6260,11 +6260,25 @@ console.log('❌ No se encontraron botones ADD TO CART');
 // INICIALIZAR BOTONES ADD TO CART
 setupAddToCartButtons();
   
-// OCULTAR CARRITO AL CARGAR LA PÁGINA
-const cartEmpty = document.querySelector('.cartempty-section');
-const cartFull = document.querySelector('.cartfull-section');
-if (cartEmpty) cartEmpty.style.display = 'none';
-if (cartFull) cartFull.style.display = 'none';
+// VERIFICAR ESTADO DEL CARRITO AL CARGAR
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const isEmpty = cart.length === 0;
+const currentHash = window.location.hash;
+
+if (currentHash === '#cartempty' || currentHash === '#cartfull') {
+    if (isEmpty) {
+        const cartEmpty = document.querySelector('.cartempty-section');
+        const cartFull = document.querySelector('.cartfull-section');
+        if (cartEmpty) cartEmpty.style.display = 'block';
+        if (cartFull) cartFull.style.display = 'none';
+    } else {
+        const cartEmpty = document.querySelector('.cartempty-section');
+        const cartFull = document.querySelector('.cartfull-section');
+        if (cartEmpty) cartEmpty.style.display = 'none';
+        if (cartFull) cartFull.style.display = 'block';
+        updateCartDisplay();
+    }
+}
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
