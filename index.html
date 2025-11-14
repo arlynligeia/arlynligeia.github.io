@@ -5149,92 +5149,82 @@ Cosmic/Psychological Horror</p>
 
 
   
-<!-- SHIPPING INFORMATION PC -->
-<section class="shippinginformation-section main-section" id="shippinginformation">
-<div class="shippinginformation-container">
-<h2 class="shippinginformation-title"><a href="#shippinginformation">SHIPPING INFORMATION</a></h2> 
-<!-- CONTENEDOR: ORDER SUMMARY  -->
-<div class="shippinginformation-ordersummary" id="shippinginformation-ordersummary">  
-<h3 class="shippinginformation-ordersummary-title">ORDER SUMMARY</h3>
-<!-- SUBTOTAL -->  
-<div class="shippinginformation-ordersummary-subtotal">
-<span class="shippinginformation-ordersummary-subtotal-text">Subtotal:</span>
-<div class="shippinginformation-ordersummary-subtotal-value">  
-<span class="shippinginformation-ordersummary-subtotal-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-subtotal-value-amount" id="shippinginformation-subtotal">0.00</span>
-</div>  
-</div>  
-<!-- SHIPPING -->  
-<div class="shippinginformation-ordersummary-shipping">
-<span class="shippinginformation-ordersummary-shipping-text">Shipping:</span>
-<div class="shippinginformation-ordersummary-shipping-value">  
-<span class="shippinginformation-ordersummary-shipping-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-shipping-value-amount" id="shippinginformation-shipping">0.00</span>
-</div>  
+<!-- CONTENEDOR: OPCIONES DE PAGO -->
+<div class="shippinginformation-paymentmethod">
+<h3 class="shippinginformation-paymentmethod-title">PAYMENT METHOD</h3>
+<!-- CONTENEDOR: OPCIONES -->  
+<div class="shippinginformation-paymentmethod-options">
+<!-- OPCIÓN 1: MERCADO PAGO -->
+<div class="shippinginformation-paymentmethod-options-mercadopago">  
+<input class="shippinginformation-paymentmethod-options-mercadopago-input" id="shippinginformation-payment-mercadopago" type="radio" name="paymentmethod" value="mercadopago" checked>  
+<label class="shippinginformation-paymentmethod-options-mercadopago-label" for="shippinginformation-payment-mercadopago">
+<!-- FILA 1: TARJETAS -->
+<span class="shippinginformation-paymentmethod-options-mercadopago-label-subtitle">CARD</span> 
+<span class="shippinginformation-paymentmethod-options-mercadopago-label-icons">
+<!-- VISA -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="white" rx="4"/>
+<path fill="#1a1f71" d="M16.4 8.3h7.2v8.4h-7.2z"/>
+<path fill="#1a1f71" d="M20 12.5a8.3 8.3 0 1 0 0 16.6 8.3 8.3 0 0 0 0-16.6z"/>
+</svg>
+<!-- MASTERCARD -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="white" rx="4"/>
+<circle cx="15" cy="12.5" r="8" fill="#eb001b"/>
+<circle cx="25" cy="12.5" r="8" fill="#f79e1b"/>
+</svg>
+<!-- AMERICAN EXPRESS -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="#2e77bc" rx="4"/>
+<text x="20" y="15" text-anchor="middle" fill="white" font-family="Arial" font-size="8" font-weight="bold">AMEX</text>
+</svg>
+<!-- DISCOVER -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="#ff6000" rx="4"/>
+<path fill="white" d="M20 8.5c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 19.5c-4.1 0-7.5-3.4-7.5-7.5s3.4-7.5 7.5-7.5 7.5 3.4 7.5 7.5-3.4 7.5-7.5 7.5z"/>
+<path fill="white" d="M20 12.5c-4.1 0-7.5 3.4-7.5 7.5s3.4 7.5 7.5 7.5 7.5-3.4 7.5-7.5-3.4-7.5-7.5-7.5z"/>
+</svg>
+</span>
+<!-- FILA 2: GOOGLE PAY - APPLE PAY -->
+<span class="shippinginformation-paymentmethod-options-mercadopago-label-subtitle">GOOGLE PAY - APPLE PAY</span> 
+<span class="shippinginformation-paymentmethod-options-mercadopago-label-icons">  
+<!-- GOOGLE PAY -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="white" rx="4"/>
+<path fill="#4285F4" d="M20 8h10c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H20c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2z"/>
+<path fill="#34A853" d="M32 8h8c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2h-8V8z"/>
+<path fill="#FBBC04" d="M12 20H8c-1.1 0-2-.9-2-2V10c0-1.1.9-2 2-2h4v12z"/>
+<path fill="#EA4335" d="M20 20h-8V8h8v12z"/>
+</svg>
+<!-- APPLE PAY -->
+<svg class="shippinginformation-paymentmethod-options-mercadopago-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="black" rx="4"/>
+<path fill="white" d="M25 10c0-.6.4-1 1-1h8c.6 0 1 .4 1 1v10c0 .6-.4 1-1 1h-8c-.6 0-1-.4-1-1V10zm2 2v8h6v-8h-6z"/>
+<path fill="white" d="M20 12h-6v6h6v2h-8V10h8v2zm-6 4v-2h4v2h-4z"/>
+<path fill="white" d="M15 18h-2v-6h2v6zm-4-6h2v6h-2v-6z"/>
+</svg>
+</span> 
+</label> 
 </div> 
-<!-- DIVISOR -->
-<div class="shippinginformation-ordersummary-divider"></div> 
-<!-- TOTAL -->  
-<div class="shippinginformation-ordersummary-total">
-<span class="shippinginformation-ordersummary-total-text">TOTAL:</span>
-<div class="shippinginformation-ordersummary-total-value">  
-<span class="shippinginformation-ordersummary-total-value-symbol">$</span>
-<span class="shippinginformation-ordersummary-total-value-amount" id="shippinginformation-total">0.00</span>
+<!-- OPCIÓN 2: PAYPAL -->
+<div class="shippinginformation-paymentmethod-options-paypal">
+<input class="shippinginformation-paymentmethod-options-paypal-input" id="shippinginformation-payment-paypal" type="radio" name="paymentmethod" value="paypal">  
+<label class="shippinginformation-paymentmethod-options-paypal-label" for="shippinginformation-payment-paypal">
+<span class="shippinginformation-paymentmethod-options-paypal-label-subtitle">PAYPAL</span> 
+<span class="shippinginformation-paymentmethod-options-paypal-label-icons">
+<!-- PAYPAL -->
+<svg class="shippinginformation-paymentmethod-options-paypal-label-icons-icon" width="50" height="30" viewBox="0 0 50 30">
+<rect width="50" height="30" fill="white" rx="4"/>
+<path fill="#003087" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
+<path fill="#009cde" d="M41.7 9.6c-.2-1.7-1-3.1-2.2-4.2-1.2-1.1-2.8-1.7-4.6-1.7H20.2c-.7 0-1.3.3-1.8.8l-6.3 7.8-1.6 7.5c-.1.6.1 1.2.6 1.6.4.4 1 .5 1.5.4l5.8-1.3h9c5 0 8.9-4 8.9-8.9 0-1.2-.2-2.3-.6-3.4z"/>
+<path fill="#012169" d="M39.5 7.8c-1.2-1.4-3.2-2.2-5.8-2.2H17.2c-.8 0-1.5.3-2 .9l-5.2 6.4-1.3 6.2c-.1.5.1 1 .5 1.3.3.3.8.4 1.2.3l4.8-1.1h7.4c4.1 0 7.3-3.3 7.3-7.3 0-4.1-3.3-7.3-7.3-7.3H19l-1.4-3.3c-.2-.5-.7-.8-1.3-.8H5.8c-.6 0-1.1.4-1.3.9L.2 23.7c-.1.4.1.9.5 1.1.3.3.7.4 1.1.3l6.4-1.5h5.3c.6 0 1.1-.4 1.3-.9l2.8-6.9h8.2c2.6 0 4.6-1 5.8-2.2 1.2-1.2 1.6-2.8 1.4-4.5-.2 1.7.2 3.3 1.4 4.5z"/>
+</svg>
+</span>
+</label>
 </div>
-</div>  
-</div>   
-<!-- CONTENEDOR: FORMULARIO DE ENVÍO -->
-<div class="shippinginformation-form">
-<form id="shippinginformation-form" action="https://formspree.io/f/xrblnevd" method="POST">
-<!-- CONTENEDOR: COLUMNAS -->  
-<div class="shippinginformation-form-columns">
-<!-- CONTENEDOR: GRID -->
-<div class="shippinginformation-form-columns-grid">
-<!-- CONTENEDOR: COLUMNA 1: INFORMACIÓN PERSONAL -->
-<div class="shippinginformation-form-columns-grid-personalinformation"> 
-<h3 class="shippinginformation-form-columns-grid-personalinformation-title">PERSONAL INFORMATION</h3>
-<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-firstname">FIRST NAME</label>
-<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-firstname" type="text" name="firstname" required>
-<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-lastname">LAST NAME</label>
-<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-lastname" type="text" name="lastname" required>
-<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-idnumber">ID NUMBER</label>
-<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-idnumber" type="text" name="idnumber" required>
-<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-mobilephone">MOBILE PHONE</label>
-<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-mobilephone" type="tel" name="mobilephone" required>
-<label class="shippinginformation-form-columns-grid-personalinformation-label" for="shippinginformation-email">EMAIL</label>
-<input class="shippinginformation-form-columns-grid-personalinformation-input" id="shippinginformation-email" type="email" name="email" required>
+</div> 
 </div>
-<!-- CONTENEDOR DE COLUMNA 2: DIRECCIÓN DE ENVÍO -->
-<div class="shippinginformation-form-columns-grid-shippingaddress">
-<h3 class="shippinginformation-form-columns-grid-shippingaddress-title">SHIPPING ADDRESS</h3>
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-country">COUNTRY</label>
-<select class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-country" name="country" required>
-<option value="">Select Country</option>
-<option value="US">United States</option>
-<option value="PE">Peru</option>     
-<option value="MX">Mexico</option>
-<option value="CA">Canada</option> 
-<option value="GB">United Kingdom</option>
-</select>
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-state">STATE/PROVINCE/REGION</label>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-state" type="text" name="state" required>
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-city">CITY</label>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-city" type="text" name="city" required>
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-zipcode">ZIP CODE</label>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-zipcode" type="text" name="zipcode" required>
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-address">ADDRESS</label>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-address" type="text" name="address" required>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-address2" type="text" name="address2">
-<label class="shippinginformation-form-columns-grid-shippingaddress-label" for="shippinginformation-apartment">APARTMENT/SUITE/ETC</label>
-<input class="shippinginformation-form-columns-grid-shippingaddress-input" id="shippinginformation-apartment" type="text" name="apartment">
-</div>
-</div>
-<!-- CAMPOS OCULTOS PARA LOS DATOS DEL CARRITO -->
-<input type="hidden" id="hidden-cart-items" name="cart_items" value="">
-<input type="hidden" id="hidden-cart-subtotal" name="cart_subtotal">
-<input type="hidden" id="hidden-cart-shipping" name="cart_shipping">
-<input type="hidden" id="hidden-cart-total" name="cart_total">
-</div>
+
 <!-- CONTENEDOR DE BOTONES -->
 <div class="shippinginformation-button">
 <a class="shippinginformation-button-back" href="#cartfull">BACK</a>
