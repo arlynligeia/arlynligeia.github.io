@@ -6080,34 +6080,8 @@ window.location.hash = '#cartfull';
 updateCartDisplay();
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
-}     
-// 2. FUNCIÓN: BOTÓN CART
-const cartButton = document.querySelector('.cart-button');
-if (cartButton) {
-cartButton.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('📦 Botón carrito clickeado');
-toggleCart();
-});
-} else {
-console.log('❌ No se encontró el botón del carrito');
 }
-// 3. FUNCIÓN: BOTONES GO TO CART
-const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
-if (goToCartButtons.length > 0) {
-goToCartButtons.forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('🛒 Botón GO TO CART clickeado');
-toggleCart();
-});
-});
-console.log(`✅ Se encontraron ${goToCartButtons.length} botones GO TO CART`);
-} else {
-console.log('❌ No se encontraron botones GO TO CART');
-}
-  
-// 4. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+// 2. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
 console.log(`🛒 Agregando producto: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6133,9 +6107,8 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-}
- 
-// 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+} 
+// 3. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cart = JSON.parse(localStorage.getItem('cart')) || []; // ← AGREGAR ESTA LÍNEA
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -6191,13 +6164,80 @@ divider2.insertAdjacentElement('beforebegin', productRow);
 });
 // ACTUALIZAR TOTALES
 updateCartTotals();
+}  
+// 4. BOTONES
+// FUNCIÓN: BOTÓN REMOVE
+function removeFromCart(productName) {
+console.log(`🗑️ Eliminando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// FILTRAR EL PRODUCTO A ELIMINAR
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+// SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
+if (cart.length === 0) {
+toggleCart();
 }
-  
-// 6. FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
+}  
+// FUNCIÓN: CONFIGURAR CLEAN CART
+function clearCart() {
+console.log('🧹 Vaciar carrito completo');
+localStorage.setItem('cart', JSON.stringify([]));
+updateCartDisplay();
+toggleCart(); // MOSTRAR CART EMPTY
+}
+// FUNCIÓN: BOTÓN CLEAR CART
+function setupClearCartButton() {
+const clearCartButton = document.querySelector('.cartfull-button-clearcart');
+if (clearCartButton) {
+clearCartButton.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('🧹 Botón CLEAR CART clickeado');
+clearCart();
+});
+console.log('✅ Botón CLEAR CART configurado');
+} else {
+console.log('❌ No se encontró el botón CLEAR CART');
+}
+}  
+// FUNCIÓN: AUMENTAR CANTIDAD
+function increaseQuantity(productName) {
+console.log(`➕ Aumentando cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+if (productIndex !== -1) {
+cart[productIndex].quantity += 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+}
+// FUNCIÓN: DISMINUIR CANTIDAD
+function decreaseQuantity(productName) {
+console.log(`➖ Disminuyendo cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+if (productIndex !== -1) {
+if (cart[productIndex].quantity > 1) {
+cart[productIndex].quantity -= 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+console.log(`📦 Nueva cantidad: ${cart[productIndex].quantity}`);
+} else {
+// SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
+removeFromCart(productName);
+return; // SALIR DE LA FUNCIÓN
+}
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+}
+// 5. FUNCION: CALCULAR TOTALES-FORMULAS
+// FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
 function calculateTotal(quantity, price) {
 return quantity * price;
 }
-// 7. FUNCIÓN: CALCULAR SUBTOTAL (suma de todos los totales)
+// FUNCIÓN: CALCULAR SUBTOTAL (suma de todos los totales)
 function calculateSubtotal(cart) {
 let subtotal = 0;
 cart.forEach(item => {
@@ -6206,11 +6246,11 @@ subtotal += itemTotal;
 });
 return subtotal;
 }
-// 8. FUNCIÓN: CALCULAR TOTAL FINAL (subtotal + shipping)
+// FUNCIÓN: CALCULAR TOTAL FINAL (subtotal + shipping)
 function calculateTotalFinal(subtotal, shipping) {
 return subtotal + parseFloat(shipping);
 }
-// 9. FUNCIÓN: ACTUALIZAR TOTALES EN EL CARRITO
+// FUNCIÓN: ACTUALIZAR TOTALES EN EL CARRITO
 function updateCartTotals() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 // Calcular valores
@@ -6227,16 +6267,14 @@ const totalElement = document.querySelector('.cartfull-table-wrapper-body-row-ce
 if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
 if (shippingElement) shippingElement.textContent = formatNumberWithCommas(totalShipping.toFixed(2));
 if (totalElement) totalElement.textContent = formatNumberWithCommas(totalFinal.toFixed(2));
-}
-  
-// 10. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+} 
+// 6. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 // Convertir a número, manejar decimales y agregar comas
 const num = parseFloat(number);
 return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 } 
-  
-// 11. FUNCIÓN: BOTONES ADD TO CART
+// 7. FUNCIÓN: BOTONES ADD TO CART
 function setupAddToCartButtons() {
 const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
 if (addToCartButtons.length > 0) {
@@ -6257,23 +6295,50 @@ console.log(`✅ Se encontraron ${addToCartButtons.length} botones ADD TO CART`)
 console.log('❌ No se encontraron botones ADD TO CART');
 }
 }  
-// INICIALIZAR BOTONES ADD TO CART
+// INICIALIZAR TODOS LOS BOTONES
+setupClearCartButton();
 setupAddToCartButtons();
-  
+// 8. FUNCIÓN: BOTONES DIRECTOS 
+// FUNCIÓN: BOTÓN CART
+const cartButton = document.querySelector('.cart-button');
+if (cartButton) {
+cartButton.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('📦 Botón carrito clickeado');
+toggleCart();
+});
+} else {
+console.log('❌ No se encontró el botón del carrito');
+}
+// FUNCIÓN: BOTONES GO TO CART
+const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
+if (goToCartButtons.length > 0) {
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+console.log('🛒 Botón GO TO CART clickeado');
+toggleCart();
+});
+});
+console.log(`✅ Se encontraron ${goToCartButtons.length} botones GO TO CART`);
+} else {
+console.log('❌ No se encontraron botones GO TO CART');
+}    
 // VERIFICAR URL AL CARGAR LA PÁGINA
 const currentHash = window.location.hash;
 if (currentHash === '#cartempty') {
-    const cartEmpty = document.querySelector('.cartempty-section');
-    const cartFull = document.querySelector('.cartfull-section');
-    if (cartEmpty) cartEmpty.style.display = 'block';
-    if (cartFull) cartFull.style.display = 'none';
+const cartEmpty = document.querySelector('.cartempty-section');
+const cartFull = document.querySelector('.cartfull-section');
+if (cartEmpty) cartEmpty.style.display = 'block';
+if (cartFull) cartFull.style.display = 'none';
 } else if (currentHash === '#cartfull') {
-    const cartEmpty = document.querySelector('.cartempty-section');
-    const cartFull = document.querySelector('.cartfull-section');
-    if (cartEmpty) cartEmpty.style.display = 'none';
-    if (cartFull) cartFull.style.display = 'block';
-    updateCartDisplay();
+const cartEmpty = document.querySelector('.cartempty-section');
+const cartFull = document.querySelector('.cartfull-section');
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+updateCartDisplay();
 }
+
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
