@@ -6037,7 +6037,8 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🛒 Carrito iniciado');  
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// STOCK DE PRODUCTOS INTERNO
+
+// ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
 "Planet Sponsor": 120,
@@ -6052,74 +6053,69 @@ const productStock = {
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
 }; 
-  
-// 1. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL
-function toggleCart() {
-const cartEmpty = document.querySelector('.cartempty-section');
-const cartFull = document.querySelector('.cartfull-section');
-// OCULTAR TODAS LAS SECCIONES PRINCIPALES
-const allSections = document.querySelectorAll('.main-section, .subsection');
-allSections.forEach(section => {
-// NO OCULTAR EL CARRITO
-if (!section.classList.contains('cartempty-section') && 
-!section.classList.contains('cartfull-section')) {
-section.style.display = 'none';
-}
-});    
-// VERIFICAR CARRITO VACIO O LLENO
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const isEmpty = cart.length === 0;
-if (isEmpty) {
-// MOSTRAR CARRITO VACIO - OCULTAR CARRITO LLENO
-if (cartEmpty) cartEmpty.style.display = 'block';
-// ACTUALIZAR URL PARA CART EMPTY
-window.location.hash = '#cartempty';
-if (cartFull) cartFull.style.display = 'none';
-}
-else {
-// MOSTRAR CARRITO LLENO - OCULTAR CARRITO VACIO
-if (cartEmpty) cartEmpty.style.display = 'none';
-if (cartFull) cartFull.style.display = 'block';
-// ACTUALIZAR URL PARA CART FULL
-window.location.hash = '#cartfull';
-// ACTUALIZAR DISPLAY DEL CARRITO
-updateCartDisplay();
-}
-console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
-}
 
-// 2. FUNCIÓN: MANEJAR BOTÓN CART
-function setupCartButton() {
-const cartButton = document.querySelector('.cart-button');
-if (cartButton) {
-cartButton.addEventListener('click', function() {
-toggleCart();
-});
-}
-}
-  
-// 18. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
-function setupGoToCartButtons() {
-const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
-goToCartButtons.forEach(button => {
-button.addEventListener('click', function() {
-toggleCart();
-});
-});
-}
-  
-  
-// 3. FUNCIÓN: CONVERTIR STRING A NÚMERO (MANEJA COMAS)
+// ========== FUNCIONES DE UTILIDAD ==========
+// 1. FUNCIÓN: CONVERTIR STRING A NÚMERO (MANEJA COMAS)
 function parsePrice(priceString) {
-// REMOVER COMAS Y CONVERTIR A NÚMERO
 return parseFloat(priceString.replace(/,/g, ''));
 }
 
-// 4. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+// 2. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+const num = parseFloat(number);
+return num.toLocaleString('en-US', {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2
+});
+}
+
+// ========== FUNCIONES DE STOCK ==========
+// 3. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
+function checkStock(productName) {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productInCart = cart.find(item => item.product === productName);
+const currentStock = productStock[productName];
+const cartQuantity = productInCart ? productInCart.quantity : 0;
+return currentStock - cartQuantity;
+}
+
+// 4. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
+function canAddToCart(productName) {
+return checkStock(productName) > 0;
+}
+
+// 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
+function updateAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+addToCartButtons.forEach(button => {
+const productName = button.getAttribute('data-product');
+const availableStock = checkStock(productName);
+
+if (availableStock <= 0) {
+button.disabled = true;
+button.style.opacity = '0.5';
+button.style.cursor = 'not-allowed';
+button.textContent = 'OUT OF STOCK';
+} else {
+button.disabled = false;
+button.style.opacity = '1';
+button.style.cursor = 'pointer';
+button.textContent = 'ADD TO CART';
+}
+});
+}
+
+// ========== FUNCIONES DEL CARRITO ==========
+// 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
+// VERIFICAR STOCK ANTES DE AGREGAR
+if (!canAddToCart(productName)) {
+console.log(`❌ No hay stock disponible para: ${productName}`);
+return;
+}
+
 console.log(`🛒 Agregando producto: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
-// VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
 const existingProductIndex = cart.findIndex(item => item.product === productName);
 if (existingProductIndex !== -1) {
 // VERIFICAR STOCK ANTES DE AUMENTAR CANTIDAD
@@ -6128,12 +6124,10 @@ if (availableStock <= 0) {
 console.log(`❌ No hay suficiente stock para: ${productName}`);
 return;
 }
-// SI EXISTE, AUMENTAR CANTIDAD DEL PRODUCTO
 cart[existingProductIndex].quantity += 1;
 cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
 console.log(`📦 Producto existente, nueva cantidad: ${cart[existingProductIndex].quantity}`);
 } else {
-// SI NO EXISTE, AGREGAR NUEVO PRODUCTO
 const newProduct = {
 image: productImage,
 product: productName,
@@ -6147,38 +6141,71 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-updateAddToCartButtons(); // ACTUALIZAR ESTADO DE BOTONES
+updateAddToCartButtons();
 }
 
-// 5. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
-function setupAddToCartButtons() {
-const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-addToCartButtons.forEach(button => {
-button.addEventListener('click', function() {
-const productImage = this.getAttribute('data-image');
-const productName = this.getAttribute('data-product');
-const productPrice = this.getAttribute('data-price');
-const productShipping = this.getAttribute('data-shipping');
-if (productImage && productName && productPrice && productShipping) {
-addToCart(productImage, productName, productPrice, productShipping);
+// 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
+function removeFromCart(productName) {
+console.log(`🗑️ Eliminando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCart();
+}
+
+// 8. FUNCIÓN: DISMINUIR CANTIDAD
+function decreaseQuantity(productName) {
+console.log(`➖ Disminuyendo cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+
+if (productIndex !== -1) {
+if (cart[productIndex].quantity > 1) {
+cart[productIndex].quantity -= 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
 } else {
-console.error('❌ Datos del producto incompletos');
+cart = cart.filter(item => item.product !== productName);
 }
-});
-});
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCart();
 }
-
-// 6. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
-function formatNumberWithCommas(number) {
-// Convertir a número y formatear con comas
-const num = parseFloat(number);
-return num.toLocaleString('en-US', {
-minimumFractionDigits: 2,
-maximumFractionDigits: 2
-});
 }
 
-// 7. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+// 9. FUNCIÓN: AUMENTAR CANTIDAD
+function increaseQuantity(productName) {
+console.log(`➕ Aumentando cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+
+if (productIndex !== -1) {
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+console.log(`❌ No hay suficiente stock para: ${productName}`);
+return;
+}
+cart[productIndex].quantity += 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+}
+}
+
+// 10. FUNCIÓN: LIMPIAR CARRITO
+function clearCart() {
+console.log('🧹 Limpiando carrito');
+localStorage.removeItem('cart');
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCart();
+}
+
+// ========== FUNCIONES DE VISUALIZACIÓN ==========
+// 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -6230,80 +6257,97 @@ productRow.innerHTML = `
 </div>
 </td>
 `;
-// INSERTAR PRODUCTO ANTES DE DIVIDER-2 
 divider2.insertAdjacentElement('beforebegin', productRow);
 });
   
-// CONFIGURAR BOTONES REMOVER
 setupRemoveButtons();
-
-// CONFIGURAR BOTONES DE CANTIDAD
 setupQuantityButtons();
-  
-// ACTUALIZAR SHIPPING TOTAL
 updateShippingTotal();
-// ACTUALIZAR SUBTOTAL
 updateSubtotal();
-// ACTUALIZAR TOTAL FINAL
 updateTotalFinal();
 }
 
-// 8. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
+// 12. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
 function updateShippingTotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let shippingTotal = 0;
-
 cart.forEach(item => {
 shippingTotal += item.shipping * item.quantity;
 });
-
-// ACTUALIZAR EL SHIPPING EN LA TABLA
 document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
 }
-// 9. FUNCIÓN: ACTUALIZAR SUBTOTAL
+
+// 13. FUNCIÓN: ACTUALIZAR SUBTOTAL
 function updateSubtotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let subtotal = 0;
-
 cart.forEach(item => {
 subtotal += item.totalprice;
 });
-
-// ACTUALIZAR EL SUBTOTAL EN LA TABLA
 document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
 }
 
-  // 10. FUNCIÓN: ACTUALIZAR TOTAL FINAL
+// 14. FUNCIÓN: ACTUALIZAR TOTAL FINAL
 function updateTotalFinal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let subtotal = 0;
 let shippingTotal = 0;
-
 cart.forEach(item => {
 subtotal += item.totalprice;
 shippingTotal += item.shipping * item.quantity;
 });
-
 const totalFinal = subtotal + shippingTotal;
-
-// ACTUALIZAR EL TOTAL FINAL EN LA TABLA
 document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
 
-// 11. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
-function removeFromCart(productName) {
-console.log(`🗑️ Eliminando producto: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-// FILTRAR EL CARRITO PARA REMOVER EL PRODUCTO
-cart = cart.filter(item => item.product !== productName);
-
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateAddToCartButtons(); // ACTUALIZAR BOTONES
-toggleCart(); // ACTUALIZAR LA VISUALIZACIÓN DEL CARRITO
+// ========== FUNCIONES DE NAVEGACIÓN ==========
+// 15. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL
+function toggleCart() {
+const cartEmpty = document.querySelector('.cartempty-section');
+const cartFull = document.querySelector('.cartfull-section');
+const allSections = document.querySelectorAll('.main-section, .subsection');
+allSections.forEach(section => {
+if (!section.classList.contains('cartempty-section') && 
+!section.classList.contains('cartfull-section')) {
+section.style.display = 'none';
 }
-  // 12. FUNCIÓN: CONFIGURAR BOTONES REMOVER
+});    
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const isEmpty = cart.length === 0;
+if (isEmpty) {
+if (cartEmpty) cartEmpty.style.display = 'block';
+window.location.hash = '#cartempty';
+if (cartFull) cartFull.style.display = 'none';
+}
+else {
+if (cartEmpty) cartEmpty.style.display = 'none';
+if (cartFull) cartFull.style.display = 'block';
+window.location.hash = '#cartfull';
+updateCartDisplay();
+}
+console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
+}
+
+// ========== FUNCIONES DE CONFIGURACIÓN DE BOTONES ==========
+// 16. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
+function setupAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+addToCartButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productImage = this.getAttribute('data-image');
+const productName = this.getAttribute('data-product');
+const productPrice = this.getAttribute('data-price');
+const productShipping = this.getAttribute('data-shipping');
+if (productImage && productName && productPrice && productShipping) {
+addToCart(productImage, productName, productPrice, productShipping);
+} else {
+console.error('❌ Datos del producto incompletos');
+}
+});
+});
+}
+
+// 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-button-remove');
 removeButtons.forEach(button => {
@@ -6313,51 +6357,9 @@ removeFromCart(productName);
 });
 });
 }
-  // 13. FUNCIÓN: DISMINUIR CANTIDAD
-function decreaseQuantity(productName) {
-console.log(`➖ Disminuyendo cantidad: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productIndex = cart.findIndex(item => item.product === productName);
 
-if (productIndex !== -1) {
-if (cart[productIndex].quantity > 1) {
-cart[productIndex].quantity -= 1;
-cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-} else {
-// SI LA CANTIDAD ES 1, ELIMINAR EL PRODUCTO
-cart = cart.filter(item => item.product !== productName);
-}
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateAddToCartButtons(); // ACTUALIZAR BOTONES
-toggleCart();
-}
-}
-
-// 14. FUNCIÓN: AUMENTAR CANTIDAD
-function increaseQuantity(productName) {
-console.log(`➕ Aumentando cantidad: ${productName}`);
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productIndex = cart.findIndex(item => item.product === productName);
-
-if (productIndex !== -1) {
-// VERIFICAR STOCK ANTES DE AUMENTAR
-const availableStock = checkStock(productName);
-if (availableStock <= 0) {
-console.log(`❌ No hay suficiente stock para: ${productName}`);
-return;
-}
-cart[productIndex].quantity += 1;
-cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
-localStorage.setItem('cart', JSON.stringify(cart));
-updateCartDisplay();
-updateAddToCartButtons(); // ACTUALIZAR BOTONES
-}
-}
-
-// 15. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
+// 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
-// BOTONES DISMINUIR
 const decreaseButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-quantity-decrease');
 decreaseButtons.forEach(button => {
 button.addEventListener('click', function() {
@@ -6365,8 +6367,6 @@ const productName = this.getAttribute('data-product');
 decreaseQuantity(productName);
 });
 });
-
-// BOTONES AUMENTAR
 const increaseButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-quantity-increase');
 increaseButtons.forEach(button => {
 button.addEventListener('click', function() {
@@ -6375,16 +6375,28 @@ increaseQuantity(productName);
 });
 });
 }
-  // 16. FUNCIÓN: LIMPIAR CARRITO
-function clearCart() {
-console.log('🧹 Limpiando carrito');
-localStorage.removeItem('cart');
-updateCartDisplay();
-updateAddToCartButtons(); // ACTUALIZAR BOTONES
+
+// 19. FUNCIÓN: CONFIGURAR BOTÓN CART
+function setupCartButton() {
+const cartButton = document.querySelector('.cart-button');
+if (cartButton) {
+cartButton.addEventListener('click', function() {
 toggleCart();
+});
+}
 }
 
-// 17. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
+// 20. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
+function setupGoToCartButtons() {
+const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
+goToCartButtons.forEach(button => {
+button.addEventListener('click', function() {
+toggleCart();
+});
+});
+}
+
+// 21. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
 function setupClearCartButton() {
 const clearCartButton = document.querySelector('.cartfull-button-clearcart');
 if (clearCartButton) {
@@ -6394,49 +6406,13 @@ clearCart();
 }
 }
 
-  // 19. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
-function checkStock(productName) {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productInCart = cart.find(item => item.product === productName);
-const currentStock = productStock[productName];
-const cartQuantity = productInCart ? productInCart.quantity : 0;
-return currentStock - cartQuantity;
-}
-
-// 20. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
-function updateAddToCartButtons() {
-const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-addToCartButtons.forEach(button => {
-const productName = button.getAttribute('data-product');
-const availableStock = checkStock(productName);
-
-if (availableStock <= 0) {
-button.disabled = true;
-button.style.opacity = '0.5';
-button.style.cursor = 'not-allowed';
-button.textContent = 'OUT OF STOCK';
-} else {
-button.disabled = false;
-button.style.opacity = '1';
-button.style.cursor = 'pointer';
-button.textContent = 'ADD TO CART';
-}
-});
-}
-
-// 21. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
-function canAddToCart(productName) {
-return checkStock(productName) > 0;
-}
-  
-// INICIALIZAR BOTONES AL CARGAR
+// ========== INICIALIZACIÓN ==========
 setupCartButton();
-setupGoToCartButtons(); // AGREGAR ESTA LÍNEA
+setupGoToCartButtons();
 setupAddToCartButtons();
-setupClearCartButton(); // AGREGAR ESTA LÍNEA
-updateAddToCartButtons(); // ACTUALIZAR ESTADO INICIAL DE BOTONES
+setupClearCartButton();
+updateAddToCartButtons();
 
-  // VERIFICAR ESTADO INICIAL DEL CARRITO
 if (window.location.hash === '#cartfull' || window.location.hash === '#cartempty') {
 toggleCart();
 }
