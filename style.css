@@ -15652,7 +15652,7 @@ transform: scale(1.05);
    
 
 /* MODAL NOTIFICACIÓN */
-.notification-modal-overlay {
+.modal-addedproduct {
     position: fixed;
     top: 0;
     left: 0;
@@ -15666,7 +15666,7 @@ transform: scale(1.05);
     backdrop-filter: blur(3px);
 }
 
-.notification-modal {
+.modal-addedproduct-notification {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     padding: 2rem;
     border-radius: 12px;
@@ -15689,9 +15689,11 @@ transform: scale(1.05);
     }
 }
 
-.notification-icon {
+.modal-addedproduct-notification::before {
+    content: "✓";
     font-size: 3rem;
     color: #39ff14;
+    display: block;
     margin-bottom: 1rem;
     text-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
     animation: pulse 1.5s infinite;
@@ -15702,13 +15704,19 @@ transform: scale(1.05);
     50% { transform: scale(1.1); }
 }
 
-.notification-message {
+.modal-addedproduct-notification-text {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: #00CED1;
     margin: 0;
     text-shadow: 0 0 10px rgba(0, 206, 209, 0.5);
 }
+
+
+
+
+
+
 
 
 /* MODAL CLEAR CART */
