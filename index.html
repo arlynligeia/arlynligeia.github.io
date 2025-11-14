@@ -6264,6 +6264,20 @@ const totalFinal = subtotal + shippingTotal;
 // ACTUALIZAR EL TOTAL FINAL EN LA TABLA
 document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
+
+// 11. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
+function removeFromCart(productName) {
+console.log(`🗑️ Eliminando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// FILTRAR EL CARRITO PARA REMOVER EL PRODUCTO
+cart = cart.filter(item => item.product !== productName);
+
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+toggleCart(); // ACTUALIZAR LA VISUALIZACIÓN DEL CARRITO
+}
+  
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
 setupAddToCartButtons();
