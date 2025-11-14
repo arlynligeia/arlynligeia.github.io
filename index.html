@@ -6141,6 +6141,7 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
+updateAddToCartButtons(); // ACTUALIZAR ESTADO DE BOTONES
 }
 
 // 5. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
@@ -6377,6 +6378,41 @@ clearCart();
 }
 }
 
+  // 19. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
+function checkStock(productName) {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productInCart = cart.find(item => item.product === productName);
+const currentStock = productStock[productName];
+const cartQuantity = productInCart ? productInCart.quantity : 0;
+return currentStock - cartQuantity;
+}
+
+// 20. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
+function updateAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+addToCartButtons.forEach(button => {
+const productName = button.getAttribute('data-product');
+const availableStock = checkStock(productName);
+
+if (availableStock <= 0) {
+button.disabled = true;
+button.style.opacity = '0.5';
+button.style.cursor = 'not-allowed';
+button.textContent = 'OUT OF STOCK';
+} else {
+button.disabled = false;
+button.style.opacity = '1';
+button.style.cursor = 'pointer';
+button.textContent = 'ADD TO CART';
+}
+});
+}
+
+// 21. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
+function canAddToCart(productName) {
+return checkStock(productName) > 0;
+}
+  
 // INICIALIZAR BOTONES AL CARGAR
 setupCartButton();
 setupGoToCartButtons(); // AGREGAR ESTA LÍNEA
