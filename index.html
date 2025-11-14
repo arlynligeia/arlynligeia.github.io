@@ -2415,7 +2415,7 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 data-image="assets/assets/Alone Teaser Poster (Square).png"
 data-product="Comet Sponsor"
 data-price="50.00"
-data-shipping="0.00">
+data-shipping="50.00">
 ADD TO CART
 </button>
 </div>
@@ -2474,7 +2474,12 @@ ADD TO CART
 </div>  
 </section>
 <!-- FIN COMET SPONSOR PC -->
- 
+
+
+
+
+
+  
 <!-- COMET SPONSOR MOVIL -->
 <section class="cometsponsor-section main-section mobile-only" id="cometsponsor-mobile">
 <div class="cometsponsor-container-mobile">
@@ -6047,7 +6052,8 @@ const productStock = {
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
 }; 
-// 1. FUNCIÓN: ALTERNAR CART EMPTY Y CART FULL
+  
+// 1. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL
 function toggleCart() {
 const cartEmpty = document.querySelector('.cartempty-section');
 const cartFull = document.querySelector('.cartfull-section');
@@ -6081,6 +6087,7 @@ updateCartDisplay();
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
 }
+
 // 2. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
 console.log(`🛒 Agregando producto: ${productName}`);
@@ -6098,19 +6105,44 @@ const newProduct = {
 image: productImage,
 product: productName,
 quantity: 1,
-price: productPrice,
-totalprice: productPrice,
-shipping: productShipping
+price: parseFloat(productPrice),
+totalprice: parseFloat(productPrice),
+shipping: parseFloat(productShipping)
 };
 cart.push(newProduct);
 console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-} 
-// 3. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+toggleCart();
+}
+
+// 3. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
+function setupAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+addToCartButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productImage = this.getAttribute('data-image');
+const productName = this.getAttribute('data-product');
+const productPrice = this.getAttribute('data-price');
+const productShipping = this.getAttribute('data-shipping');
+if (productImage && productName && productPrice && productShipping) {
+addToCart(productImage, productName, productPrice, productShipping);
+} else {
+console.error('❌ Datos del producto incompletos');
+}
+});
+});
+}
+
+// 4. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+return parseFloat(number).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+// 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
-const cart = JSON.parse(localStorage.getItem('cart')) || []; // ← AGREGAR ESTA LÍNEA
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
 const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
 productRows.forEach(row => row.remove());
@@ -6155,423 +6187,21 @@ productRow.innerHTML = `
 </td>
 <!-- BOTÓN ELIMINAR -->
 <td class="cartfull-table-wrapper-body-row-cell">
-    <div class="cartfull-table-wrapper-body-row-cell-button">
-        <button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
-    </div>
+<div class="cartfull-table-wrapper-body-row-cell-button">
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+</div>
 </td>
 `;
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
 divider2.insertAdjacentElement('beforebegin', productRow);
 });
-// ACTUALIZAR TOTALES
-updateCartTotals();
-}  
-// 4. BOTONES
+}
 
-  
-// FUNCIÓN: CONFIGURAR CLEAN CART
-function clearCart() {
-console.log('🧹 Vaciar carrito completo');
-localStorage.setItem('cart', JSON.stringify([]));
-updateCartDisplay();
-toggleCart(); // MOSTRAR CART EMPTY
-}
-// FUNCIÓN: BOTÓN CLEAR CART
-function setupClearCartButton() {
-const clearCartButton = document.querySelector('.cartfull-button-clearcart');
-if (clearCartButton) {
-clearCartButton.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('🧹 Botón CLEAR CART clickeado');
-clearCart();
-});
-console.log('✅ Botón CLEAR CART configurado');
-} else {
-console.log('❌ No se encontró el botón CLEAR CART');
-}
-}  
-
-
-  
-// 5. FUNCION: CALCULAR TOTALES-FORMULAS
-// FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
-function calculateTotal(quantity, price) {
-return quantity * price;
-}
-// FUNCIÓN: CALCULAR SUBTOTAL (suma de todos los totales)
-function calculateSubtotal(cart) {
-let subtotal = 0;
-cart.forEach(item => {
-const itemTotal = calculateTotal(item.quantity, item.price);
-subtotal += itemTotal;
-});
-return subtotal;
-}
-// FUNCIÓN: CALCULAR TOTAL FINAL (subtotal + shipping)
-function calculateTotalFinal(subtotal, shipping) {
-return subtotal + parseFloat(shipping);
-}
-// FUNCIÓN: ACTUALIZAR TOTALES EN EL CARRITO
-function updateCartTotals() {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-// Calcular valores
-const subtotal = calculateSubtotal(cart);
-let totalShipping = 0;
-cart.forEach(item => {
-totalShipping += parseFloat(item.shipping);
-});
-const totalFinal = calculateTotalFinal(subtotal, totalShipping);
-// Actualizar en el HTML
-const subtotalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount');
-const shippingElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount');
-const totalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount');
-if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
-if (shippingElement) shippingElement.textContent = formatNumberWithCommas(totalShipping.toFixed(2));
-if (totalElement) totalElement.textContent = formatNumberWithCommas(totalFinal.toFixed(2));
-} 
-// 6. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
-function formatNumberWithCommas(number) {
-// Convertir a número, manejar decimales y agregar comas
-const num = parseFloat(number);
-return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-} 
-// 7. FUNCIÓN: BOTONES ADD TO CART
-function setupAddToCartButtons() {
-const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-if (addToCartButtons.length > 0) {
-addToCartButtons.forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-// Obtener información del producto de los data attributes EN ORDEN
-const productImage = this.getAttribute('data-image') || 'default-image.jpg';
-const productName = this.getAttribute('data-product') || 'Producto';
-const productPrice = parseFloat(this.getAttribute('data-price') || '0');
-const productShipping = parseFloat(this.getAttribute('data-shipping') || '0');
-console.log(`🛍️ Agregando al carrito: ${productName} - $${productPrice}`);
-addToCart(productImage, productName, productPrice, productShipping);
-});
-});
-console.log(`✅ Se encontraron ${addToCartButtons.length} botones ADD TO CART`);
-} else {
-console.log('❌ No se encontraron botones ADD TO CART');
-}
-}  
-// INICIALIZAR TODOS LOS BOTONES
-setupClearCartButton();
+// INICIALIZAR BOTONES AL CARGAR
 setupAddToCartButtons();
-// 8. FUNCIÓN: BOTONES DIRECTOS 
-// FUNCIÓN: BOTÓN CART
-const cartButton = document.querySelector('.cart-button');
-if (cartButton) {
-cartButton.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('📦 Botón carrito clickeado');
-toggleCart();
 });
-} else {
-console.log('❌ No se encontró el botón del carrito');
-}
-// FUNCIÓN: BOTONES GO TO CART
-const goToCartButtons = document.querySelectorAll('[class*="button-gotocart"]');
-if (goToCartButtons.length > 0) {
-goToCartButtons.forEach(button => {
-button.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('🛒 Botón GO TO CART clickeado');
-toggleCart();
-});
-});
-console.log(`✅ Se encontraron ${goToCartButtons.length} botones GO TO CART`);
-} else {
-console.log('❌ No se encontraron botones GO TO CART');
-}    
-// VERIFICAR URL AL CARGAR LA PÁGINA
-const currentHash = window.location.hash;
-if (currentHash === '#cartempty') {
-const cartEmpty = document.querySelector('.cartempty-section');
-const cartFull = document.querySelector('.cartfull-section');
-if (cartEmpty) cartEmpty.style.display = 'block';
-if (cartFull) cartFull.style.display = 'none';
-} else if (currentHash === '#cartfull') {
-const cartEmpty = document.querySelector('.cartempty-section');
-const cartFull = document.querySelector('.cartfull-section');
-if (cartEmpty) cartEmpty.style.display = 'none';
-if (cartFull) cartFull.style.display = 'block';
-updateCartDisplay();
-}
-});
-// BOTÓN REMOVER
-window.removeFromCart = function(productName) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = cart.filter(item => item.product !== productName);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    
-    // SOLO QUITA ESTA LÍNEA:
-    // location.reload();
-};
-
-// BOTÓN AUMENTAR
-window.increaseQuantity = function(productName) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const product = cart.find(item => item.product === productName);
-    if (product) {
-        product.quantity += 1;
-        product.totalprice = product.quantity * product.price;
-        localStorage.setItem('cart', JSON.stringify(cart));
-        // SOLO QUITA ESTA LÍNEA:
-        // location.reload();
-    }
-};
-
-// BOTÓN DISMINUIR  
-window.decreaseQuantity = function(productName) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const product = cart.find(item => item.product === productName);
-    if (product) {
-        if (product.quantity > 1) {
-            product.quantity -= 1;
-            product.totalprice = product.quantity * product.price;
-            localStorage.setItem('cart', JSON.stringify(cart));
-            // SOLO QUITA ESTA LÍNEA:
-            // location.reload();
-        } else {
-            removeFromCart(productName);
-        }
-    }
-};
 </script>
 <!-- SCRIP: CARRITO PC -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-  
-<!-- SCRIP: FOOTER -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🦶 Footer navegación iniciada');
-// FUNCIÓN: NAVEGACIÓN DEL FOOTER
-function setupFooterNavigation() {
-// 1. BOTÓN: TERMS & CONDITIONS
-const termsBtn = document.querySelector('.footer-link-termsandconditions a');
-if (termsBtn) {
-termsBtn.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('📑 Navegando a Terms & Conditions');
-// OCULTAR TODAS LAS SECCIONES
-document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR TERMS & CONDITIONS
-const termsConditions = document.getElementById('termsandconditions');
-if (termsConditions) {
-termsConditions.style.display = 'block';
-termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = 'termsandconditions';
-}
-});
-}
-// 2. BOTÓN: PRIVACY POLICY
-const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy a');
-if (privacyPolicyBtn) {
-privacyPolicyBtn.addEventListener('click', function(e) {
-e.preventDefault();
-console.log('📄 Navegando a Privacy Policy');
-// OCULTAR TODAS LAS SECCIONES
-document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-section.style.display = 'none';
-});
-// MOSTRAR PRIVACY POLICY
-const privacyPolicy = document.getElementById('privacypolicy');
-if (privacyPolicy) {
-privacyPolicy.style.display = 'block';
-privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = 'privacypolicy';
-}
-});
-}
-        // 3. BOTÓN: COOKIE POLICY
-        const cookieBtn = document.querySelector('.footer-link-cookiepolicy a');
-        if (cookieBtn) {
-            cookieBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('🍪 Navegando a Cookie Policy');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR COOKIE POLICY
-                const cookiePolicy = document.getElementById('cookiepolicy');
-                if (cookiePolicy) {
-                    cookiePolicy.style.display = 'block';
-                    cookiePolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'cookiepolicy';
-                }
-            });
-        }
-
-        // 4. BOTÓN: SCROLL TO TOP
-        const scrollTopBtn = document.querySelector('.footer-button-scrolltop');
-        if (scrollTopBtn) {
-            scrollTopBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('⬆️ Scroll to top');
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    }
-
-    // INICIALIZAR
-    setupFooterNavigation();
-    console.log('✅ Footer navegación configurada correctamente');
-});
-</script>
-<!-- FIN SCRIP: FOOTER --> 
-
-<!-- SCRIP: FOOTER MOBILE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🦶 Footer mobile navegación iniciada');
-// FUNCIÓN: NAVEGACIÓN DEL FOOTER MOBILE
-function setupFooterNavigationMobile() {
-
-       // 1. BOTÓN: TERMS & CONDITIONS
-        const termsBtn = document.querySelector('.footer-link-termsandconditions-mobile a');
-        if (termsBtn) {
-            termsBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('📑 Navegando a Terms & Conditions');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR TERMS & CONDITIONS
-                const termsConditions = document.getElementById('termsandconditions-mobile');
-                if (termsConditions) {
-                    termsConditions.style.display = 'block';
-                    termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'termsandconditions';
-                }
-            });
-        }
-
-
-  
-        // 2. BOTÓN: PRIVACY POLICY
-        const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy-mobile a');
-        if (privacyPolicyBtn) {
-            privacyPolicyBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('📄 Navegando a Privacy Policy');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR PRIVACY POLICY
-                const privacyPolicy = document.getElementById('privacypolicy-mobile');
-                if (privacyPolicy) {
-                    privacyPolicy.style.display = 'block';
-                    privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'privacypolicy';
-                }
-            });
-        }
-
-        // 3. BOTÓN: COOKIE POLICY
-        const cookieBtn = document.querySelector('.footer-link-cookiepolicy-mobile a');
-        if (cookieBtn) {
-            cookieBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('🍪 Navegando a Cookie Policy');
-                // OCULTAR TODAS LAS SECCIONES
-                document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
-                    section.style.display = 'none';
-                });
-                // MOSTRAR COOKIE POLICY
-                const cookiePolicy = document.getElementById('cookiepolicy-mobile');
-                if (cookiePolicy) {
-                    cookiePolicy.style.display = 'block';
-                    cookiePolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    window.location.hash = 'cookiepolicy';
-                }
-            });
-        }
-
-        // 4. BOTÓN: SCROLL TO TOP
-        const scrollTopBtn = document.querySelector('.footer-button-scrolltop-mobile');
-        if (scrollTopBtn) {
-            scrollTopBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                console.log('⬆️ Scroll to top');
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
-    }
-
-    // INICIALIZAR
-    setupFooterNavigationMobile();
-    console.log('✅ Footer mobile navegación configurada correctamente');
-});
-</script>
-<!-- FIN SCRIP: FOOTER MOBILE -->
-
-
-
-
-
-
-
-
-
-
-
 
   
 </body>
