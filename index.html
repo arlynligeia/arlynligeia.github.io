@@ -5901,13 +5901,13 @@ Cosmic/Psychological Horror</p>
 <!-- CONTENEDOR: LINK -->
 <div class="footer-link-mobile">
 <div class="footer-link-termsandconditions-mobile">  
-<a href="#termsandconditions" class="footer-link-item-mobile">Terms & Conditions</a>
+<a href="#termsandconditions-mobile">Terms & Conditions</a>
 </div>  
 <div class="footer-link-privacypolicy-mobile">
-<a href="#privacypolicy" class="footer-link-item-mobile">Privacy Policy</a>
+<a href="#privacypolicy-mobile">Privacy Policy</a>
 </div>
 <div class="footer-link-cookiepolicy-mobile">
-<a href="#cookiepolicy" class="footer-link-item-mobile">Cookie Policy</a>
+<a href="#cookiepolicy-mobile">Cookie Policy</a>
 </div>
 </div>
 <!-- CONTENEDOR: REDES SOCIALES -->
@@ -7653,7 +7653,7 @@ function setupFooterNavigationMobile() {
                     section.style.display = 'none';
                 });
                 // MOSTRAR TERMS & CONDITIONS
-                const termsConditions = document.getElementById('termsandconditions');
+                const termsConditions = document.getElementById('termsandconditions-mobile');
                 if (termsConditions) {
                     termsConditions.style.display = 'block';
                     termsConditions.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -7661,7 +7661,9 @@ function setupFooterNavigationMobile() {
                 }
             });
         }
-      
+
+
+  
         // 2. BOTÓN: PRIVACY POLICY
         const privacyPolicyBtn = document.querySelector('.footer-link-privacypolicy-mobile a');
         if (privacyPolicyBtn) {
@@ -7673,7 +7675,7 @@ function setupFooterNavigationMobile() {
                     section.style.display = 'none';
                 });
                 // MOSTRAR PRIVACY POLICY
-                const privacyPolicy = document.getElementById('privacypolicy');
+                const privacyPolicy = document.getElementById('privacypolicy-mobile');
                 if (privacyPolicy) {
                     privacyPolicy.style.display = 'block';
                     privacyPolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -7693,7 +7695,7 @@ function setupFooterNavigationMobile() {
                     section.style.display = 'none';
                 });
                 // MOSTRAR COOKIE POLICY
-                const cookiePolicy = document.getElementById('cookiepolicy');
+                const cookiePolicy = document.getElementById('cookiepolicy-mobile');
                 if (cookiePolicy) {
                     cookiePolicy.style.display = 'block';
                     cookiePolicy.scrollIntoView({ behavior: 'smooth', block: 'start' });
