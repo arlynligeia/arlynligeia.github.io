@@ -6156,7 +6156,7 @@ productRow.innerHTML = `
 <!-- BOTÓN ELIMINAR -->
 <td class="cartfull-table-wrapper-body-row-cell">
 <div class="cartfull-table-wrapper-body-row-cell-button">
-<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick=`removeFromCart("${item.product}")`>X</button>
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
 </div>
 </td>
 `;
@@ -6167,33 +6167,22 @@ divider2.insertAdjacentElement('beforebegin', productRow);
 updateCartTotals();
 }  
 // 4. BOTONES
-// FUNCIÓN CON DEBUG EXTENDIDO
+// FUNCIÓN: BOTÓN REMOVE
 function removeFromCart(productName) {
-    console.log('=== DEBUG REMOVE FROM CART ===');
-    console.log('Producto recibido:', productName);
-    console.log('Tipo de dato:', typeof productName);
-    
+    console.log(`🗑️ Eliminando producto: ${productName}`);
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    console.log('Carrito actual:', cart);
     
-    // Mostrar qué productos se están comparando
-    cart.forEach((item, index) => {
-        console.log(`Item ${index}: "${item.product}" === "${productName}"?`, item.product === productName);
-    });
-    
+    // FILTRAR EL PRODUCTO A ELIMINAR
     cart = cart.filter(item => item.product !== productName);
-    console.log('Carrito después de filtrar:', cart);
     
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartDisplay();
     
+    // SI EL CARRITO QUEDÓ VACÍO, MOSTRAR CART EMPTY
     if (cart.length === 0) {
         toggleCart();
     }
-    
-    console.log('=== FIN DEBUG ===');
 }
-
 
 
 
