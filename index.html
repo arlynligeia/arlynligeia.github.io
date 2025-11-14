@@ -6051,6 +6051,15 @@ const productStock = {
 function toggleCart() {
 const cartEmpty = document.querySelector('.cartempty-section');
 const cartFull = document.querySelector('.cartfull-section');
+// OCULTAR TODAS LAS SECCIONES PRINCIPALES
+const allSections = document.querySelectorAll('.main-section, .subsection');
+allSections.forEach(section => {
+// NO OCULTAR EL CARRITO
+if (!section.classList.contains('cartempty-section') && 
+!section.classList.contains('cartfull-section')) {
+section.style.display = 'none';
+}
+});  
 // VERIFICAR CARRITO VACIO O LLENO
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const isEmpty = cart.length === 0;
@@ -6065,6 +6074,11 @@ if (cartFull) cartFull.style.display = 'block';
 }
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
 }
+
+
+
+
+  
 // 2. FUNCIÓN: BOTÓN CART
 const cartButton = document.querySelector('.cart-button');
 if (cartButton) {
