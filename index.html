@@ -4679,7 +4679,7 @@ Cosmic/Psychological Horror</p>
 data-image="assets/assets/Alone Teaser Poster (Square).png"
 data-product="Cosmos Executive Producer"
 data-price="10,000.00"
-data-shipping="0.00">
+data-shipping="50.00">
 ADD TO CART
 </button>
 </div>
@@ -6152,12 +6152,12 @@ console.error('❌ Datos del producto incompletos');
 
 // 6. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
-    // Convertir a número y formatear con comas
-    const num = parseFloat(number);
-    return num.toLocaleString('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+// Convertir a número y formatear con comas
+const num = parseFloat(number);
+return num.toLocaleString('en-US', {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2
+});
 }
 
 // 7. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
@@ -6215,6 +6215,21 @@ productRow.innerHTML = `
 // INSERTAR PRODUCTO ANTES DE DIVIDER-2 
 divider2.insertAdjacentElement('beforebegin', productRow);
 });
+// ACTUALIZAR SHIPPING TOTAL
+updateShippingTotal();
+}
+
+// 8. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
+function updateShippingTotal() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let shippingTotal = 0;
+
+cart.forEach(item => {
+shippingTotal += item.shipping * item.quantity;
+});
+
+// ACTUALIZAR EL SHIPPING EN LA TABLA
+document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
 }
 
 // INICIALIZAR BOTONES AL CARGAR
