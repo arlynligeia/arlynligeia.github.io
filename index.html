@@ -6088,7 +6088,17 @@ updateCartDisplay();
 console.log('🛒 Estado del carrito:', isEmpty ? 'vacío' : 'con productos');
 }
 
-// 2. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+// 2. FUNCIÓN: MANEJAR BOTÓN CART
+function setupCartButton() {
+const cartButton = document.querySelector('.cart-button');
+if (cartButton) {
+cartButton.addEventListener('click', function() {
+toggleCart();
+});
+}
+}
+
+// 3. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
 console.log(`🛒 Agregando producto: ${productName}`);
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6114,10 +6124,10 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 }
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
-toggleCart();
+// REMOVÍ toggleCart() DE AQUÍ - SOLO AGREGA EL PRODUCTO
 }
 
-// 3. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
+// 4. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
 function setupAddToCartButtons() {
 const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
 addToCartButtons.forEach(button => {
@@ -6135,12 +6145,12 @@ console.error('❌ Datos del producto incompletos');
 });
 }
 
-// 4. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+// 5. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
 function formatNumberWithCommas(number) {
 return parseFloat(number).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-// 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+// 6. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartBody = document.querySelector('.cartfull-table-wrapper-body');
@@ -6198,6 +6208,7 @@ divider2.insertAdjacentElement('beforebegin', productRow);
 }
 
 // INICIALIZAR BOTONES AL CARGAR
+setupCartButton();
 setupAddToCartButtons();
 });
 </script>
