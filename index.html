@@ -6099,6 +6099,158 @@ console.log(`✅ Se encontraron ${goToCartButtons.length} botones GO TO CART`);
 } else {
 console.log('❌ No se encontraron botones GO TO CART');
 }
+  
+// 4. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+function addToCart(productImage, productName, productPrice, productShipping) {
+    console.log(`🛒 Agregando producto: ${productName}`);
+    
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+    // VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
+    const existingProductIndex = cart.findIndex(item => item.product === productName);
+    
+    if (existingProductIndex !== -1) {
+        // SI EXISTE, AUMENTAR CANTIDAD DEL PRODUCTO
+        cart[existingProductIndex].quantity += 1;
+        cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
+        console.log(`📦 Producto existente, nueva cantidad: ${cart[existingProductIndex].quantity}`);
+    } else {
+        // SI NO EXISTE, AGREGAR NUEVO PRODUCTO
+        const newProduct = {
+            image: productImage,
+            product: productName,
+            quantity: 1,
+            price: productPrice,
+            shipping: productShipping
+        };
+        cart.push(newProduct);
+        console.log(`🆕 Nuevo producto agregado: ${productName}`);
+    }
+    
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartDisplay();
+}
+
+
+  
+// 5. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+function updateCartDisplay() {
+const cartBody = document.querySelector('.cartfull-table-wrapper-body');
+const productRows = cartBody.querySelectorAll('.cartfull-table-wrapper-body-row.product-row');
+productRows.forEach(row => row.remove());
+const divider2 = cartBody.querySelector('.cartfull-table-wrapper-divider-2');
+cart.forEach((item) => {
+const productRow = document.createElement('tr');
+productRow.className = 'cartfull-table-wrapper-body-row product-row';
+productRow.innerHTML = `
+<!-- IMAGEN -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-image">
+<img src="${item.image}" alt="${item.product}">
+</div>
+</td>
+<!-- NOMBRE DEL PRODUCTO -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-name">
+<span class="cartfull-table-wrapper-body-row-cell-name-text">${item.product}</span>
+</div>
+</td>
+<!-- CANTIDAD -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-quantity">
+<button class="cartfull-table-wrapper-body-row-cell-quantity-decrease" onclick="decreaseQuantity('${item.product}')">-</button>
+<span class="cartfull-table-wrapper-body-row-cell-quantity-value">${item.quantity}</span>
+<button class="cartfull-table-wrapper-body-row-cell-quantity-increase" onclick="increaseQuantity('${item.product}')">+</button>
+</div>
+</td>
+<!-- PRECIO UNITARIO -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-unit">
+<span class="cartfull-table-wrapper-body-row-cell-unit-symbol">$</span>
+<span class="cartfull-table-wrapper-body-row-cell-unit-amount">${formatNumberWithCommas(item.price)}</span>
+</div>
+</td>
+<!-- TOTAL -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-total">
+<span class="cartfull-table-wrapper-body-row-cell-total-symbol">$</span>
+<span class="cartfull-table-wrapper-body-row-cell-total-amount">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</td>
+<!-- BOTÓN ELIMINAR -->
+<td class="cartfull-table-wrapper-body-row-cell">
+<div class="cartfull-table-wrapper-body-row-cell-button">
+<button class="cartfull-table-wrapper-body-row-cell-button-remove" onclick="removeFromCart('${item.product}')">X</button>
+</div>
+</td>`;
+// INSERTAR PRODUCTO ANTES DE DIVIDER-2 
+divider2.insertAdjacentElement('beforebegin', productRow);
+});
+}
+// 6. FUNCIÓN: CALCULAR TOTAL (cantidad × precio unitario)
+function calculateTotal(quantity, price) {
+return quantity * price;
+}
+// 7. FUNCIÓN: CALCULAR SUBTOTAL (suma de todos los totales)
+function calculateSubtotal(cart) {
+let subtotal = 0;
+cart.forEach(item => {
+const itemTotal = calculateTotal(item.quantity, item.price);
+subtotal += itemTotal;
+});
+return subtotal;
+}
+// 8. FUNCIÓN: CALCULAR TOTAL FINAL (subtotal + shipping)
+function calculateTotalFinal(subtotal, shipping) {
+return subtotal + parseFloat(shipping);
+}
+// 9. FUNCIÓN: ACTUALIZAR TOTALES EN EL CARRITO
+function updateCartTotals() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+// Calcular valores
+const subtotal = calculateSubtotal(cart);
+const shipping = 0; // Aquí debes obtener el shipping de donde lo tengas
+const totalFinal = calculateTotalFinal(subtotal, shipping);
+// Actualizar en el HTML
+const subtotalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-subtotal-value-amount');
+const shippingElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-shipping-value-amount');
+const totalElement = document.querySelector('.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount');
+if (subtotalElement) subtotalElement.textContent = formatNumberWithCommas(subtotal.toFixed(2));
+if (shippingElement) shippingElement.textContent = formatNumberWithCommas(shipping.toFixed(2));
+if (totalElement) totalElement.textContent = formatNumberWithCommas(totalFinal.toFixed(2));
+}
+// 10. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+// Convertir a número, manejar decimales y agregar comas
+const num = parseFloat(number);
+return num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+} 
+// 9. FUNCIÓN: BOTONES ADD TO CART
+function setupAddToCartButtons() {
+    const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+    
+    if (addToCartButtons.length > 0) {
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Obtener información del producto de los data attributes EN ORDEN
+                const productImage = this.getAttribute('data-image') || 'default-image.jpg';
+                const productName = this.getAttribute('data-product') || 'Producto';
+                const productPrice = parseFloat(this.getAttribute('data-price') || '0');
+                const productShipping = parseFloat(this.getAttribute('data-shipping') || '0');
+                
+                console.log(`🛍️ Agregando al carrito: ${productName} - $${productPrice}`);
+                
+                addToCart(productImage, productName, productPrice, productShipping);
+            });
+        });
+        console.log(`✅ Se encontraron ${addToCartButtons.length} botones ADD TO CART`);
+    } else {
+        console.log('❌ No se encontraron botones ADD TO CART');
+    }
+}
+  
 // OCULTAR CARRITO AL CARGAR LA PÁGINA
 const cartEmpty = document.querySelector('.cartempty-section');
 const cartFull = document.querySelector('.cartfull-section');
