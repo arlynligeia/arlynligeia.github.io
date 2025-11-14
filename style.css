@@ -15555,18 +15555,22 @@ flex-direction: column;
 align-items: center;
 margin: 0 0 10px 0;
 }
-.footer-link-item-mobile {
+.footer-link-termsandconditions-mobile a,
+.footer-link-privacypolicy-mobile a,
+.footer-link-cookiepolicy-mobile a {
 position: relative;
 z-index: 1;
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 0.8rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;  
 margin: 0 0 10px 0;
 transition: all 0.3s ease;
 }
-.footer-link-item-mobile:hover::after {
+.footer-link-termsandconditions-mobile:hover::after,
+.footer-link-privacypolicy-mobile:hover::after,
+.footer-link-cookiepolicy-mobile:hover::after {
 content: "";
 position: absolute;
 left: 0;
