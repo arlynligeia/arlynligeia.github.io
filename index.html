@@ -6122,6 +6122,12 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // VERIFICAR SI EL PRODUCTO YA EXISTE EN EL CARRITO
 const existingProductIndex = cart.findIndex(item => item.product === productName);
 if (existingProductIndex !== -1) {
+// VERIFICAR STOCK ANTES DE AUMENTAR CANTIDAD
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+console.log(`❌ No hay suficiente stock para: ${productName}`);
+return;
+}
 // SI EXISTE, AUMENTAR CANTIDAD DEL PRODUCTO
 cart[existingProductIndex].quantity += 1;
 cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
@@ -6335,6 +6341,12 @@ let cart = JSON.parse(localStorage.getItem('cart')) || [];
 const productIndex = cart.findIndex(item => item.product === productName);
 
 if (productIndex !== -1) {
+// VERIFICAR STOCK ANTES DE AUMENTAR
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+console.log(`❌ No hay suficiente stock para: ${productName}`);
+return;
+}
 cart[productIndex].quantity += 1;
 cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
 localStorage.setItem('cart', JSON.stringify(cart));
