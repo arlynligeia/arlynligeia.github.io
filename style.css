@@ -14360,6 +14360,9 @@ padding: 10px;
 #shippinginformation-apartment {
 margin-bottom: 0px;
 }
+/* ======================================
+   SHIPPING INFORMATION PAYMENT METHOD
+====================================== */
 /* CONTENEDOR: OPCIONES DE PAGO */
 .shippinginformation-paymentmethod {
 background: transparent !important;
@@ -14399,9 +14402,10 @@ margin: 10px 15px 0 0;
 
 .shippinginformation-paymentmethod-options-mercadopago-label {
 display: flex;
-flex-direction: column;
+align-items: center;
 flex: 1;
 cursor: pointer;
+gap: 15px;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-subtitle {
@@ -14412,14 +14416,12 @@ text-decoration: none;
 text-transform: uppercase;   
 line-height: 1.5; 
 text-align: left;  
-margin: 5px 0;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-icons {
 display: flex;
 gap: 10px;
 align-items: center;
-margin: 5px 0;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-icons-icon {
@@ -14502,7 +14504,6 @@ border-radius: 50%;
 transform: scale(1.02);
 transition: transform 0.3s ease;
 }
-
 
 
 
