@@ -14373,112 +14373,21 @@ text-align: center;
 line-height: 1.5; 
 margin: 0px 0px 15px 0px;
 }
-/* CONTENEDOR: OPCIONES */
-.shippinginformation-paymentmethod-options {
-display: flex;
-flex-direction: column;
-gap: 15px;
+.shippinginformation-paymentmethod-message {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 255, 0, 0.1);
+  border-radius: 10px;
+  border: 2px solid #00FF00;
 }
-/* OPCIÓN 1: MERCADO PAGO */
-.shippinginformation-paymentmethod-options-mercadopago {
-display: flex;
-align-items: flex-start;
+
+.shippinginformation-paymentmethod-message p {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #00FF00 !important;
+  margin: 0;
 }
-.shippinginformation-paymentmethod-options-mercadopago-input {
-margin: 10px 15px 0 0;
-}
-.shippinginformation-paymentmethod-options-mercadopago-label {
-display: flex;
-align-items: center;
-flex: 1;
-cursor: pointer;
-gap: 15px;
-}
-.shippinginformation-paymentmethod-options-mercadopago-label-subtitle {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-text-align: left;    
-line-height: 1.5; 
-white-space: nowrap;
-}
-.shippinginformation-paymentmethod-options-mercadopago-label-icons {
-display: flex;
-gap: 10px;
-align-items: center;
-flex-wrap: wrap;
-}
-.shippinginformation-paymentmethod-options-mercadopago-label-icons-icon {
-border-radius: 4px;
-}
-/* OPCIÓN 2: PAYPAL */
-.shippinginformation-paymentmethod-options-paypal {
-display: flex;
-align-items: flex-start;
-}
-.shippinginformation-paymentmethod-options-paypal-input {
-margin: 10px 15px 0 0;
-}
-.shippinginformation-paymentmethod-options-paypal-label {
-display: flex;
-align-items: center;
-flex: 1;
-cursor: pointer;
-gap: 15px;
-}
-.shippinginformation-paymentmethod-options-paypal-label-subtitle {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: left;   
-line-height: 1.5; 
-white-space: nowrap;
-}
-.shippinginformation-paymentmethod-options-paypal-label-icons {
-display: flex;
-align-items: center;   
-gap: 10px;
-}
-.shippinginformation-paymentmethod-options-paypal-label-icons-icon {
-border-radius: 4px;
-}
-/* ESTILOS PARA RADIO BUTTONS */
-.shippinginformation-paymentmethod-options-mercadopago-input,
-.shippinginformation-paymentmethod-options-paypal-input {
-position: relative;
-width: 20px;
-height: 20px;
-border: 2px solid #00FF00 !important;
-border-radius: 50%;
-background: transparent;
-cursor: pointer;
-appearance: none;
-}
-.shippinginformation-paymentmethod-options-mercadopago-input:checked,
-.shippinginformation-paymentmethod-options-paypal-input:checked {
-background: #00FF00 !important;
-}
-.shippinginformation-paymentmethod-options-mercadopago-input:checked::after,
-.shippinginformation-paymentmethod-options-paypal-input:checked::after {
-content: "";
-position: absolute;
-top: 4px;
-left: 4px;
-width: 8px;
-height: 8px;
-background: #3A0052 !important;
-border-radius: 50%;
-}
-/* EFECTO HOVER */
-.shippinginformation-paymentmethod-options-mercadopago-label:hover,
-.shippinginformation-paymentmethod-options-paypal-label:hover {
-transition: transform 0.3s ease;   
-transform: scale(1.02);
-}
+
 /* CONTENEDOR: BOTONES FINALES */
 .shippinginformation-button {
 display: flex;
