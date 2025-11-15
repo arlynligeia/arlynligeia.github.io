@@ -5367,71 +5367,69 @@ Cosmic/Psychological Horror</p>
 <section class="electronicsalesreceipt-section main-section" id="electronicsalesreceipt">
 <div class="electronicsalesreceipt-container">
 <h2 class="electronicsalesreceipt-title"><a href="#electronicsalesreceipt">ELECTRONIC SALES RECEIPT</a></h2>
-<!-- CONTENEDOR DE RECIBO (8 SECCIONES DENTRO) -->
-<div class="electronicsalesreceipt-receipt">
-<!-- 1. SERIES - ORDER - DATE -->
-<div class="electronicsalesreceipt-receipt-series"> 
-<div class="electronicsalesreceipt-receipt-series-serie">
-<span>Serie:</span>  
-<span id="electronicsalesreceipt-serie">B001 - </span> 
-<span id="electronicsalesreceipt-number">N°00000001</span>  
+<!-- CONTENEDOR: SERIES -->
+<div class="electronicsalesreceipt-series"> 
+<div class="electronicsalesreceipt-series-information">
+<span class="electronicsalesreceipt-series-information-text">Serie:</span>
+<span class="electronicsalesreceipt-series-information-lllll">B001 -</span>
+<span class="electronicsalesreceipt-series-information-number" id="electronicsalesreceipt-number">N°00000001</span>  
 </div>  
-<div class="electronicsalesreceipt-receipt-series-order">
-<span>Order:</span>
-<span id="electronicsalesreceipt-year">N°AL25</span>  
-<span id="electronicsalesreceipt-order">00000001</span>   
-</div> 
-<div class="electronicsalesreceipt-receipt-series-date">        
-<span>Date:</span>  
-<span id="electronicsalesreceipt-date">January 8, 2025</span>    
+<div class="electronicsalesreceipt-series-information">
+<span class="electronicsalesreceipt-series-information-text">Order:</span>
+<span class="electronicsalesreceipt-series-information-year" id="electronicsalesreceipt-year">N° AL25</span>
+<span class="electronicsalesreceipt-series-information-order" id="electronicsalesreceipt-order">00000001</span>  
 </div>  
+<div class="electronicsalesreceipt-series-information">
+<span class="electronicsalesreceipt-series-information-text">Date:</span>
+<span class="electronicsalesreceipt-series-information-date" id="electronicsalesreceipt-date">January 8, 2025</span>  
+</div>    
 </div>
-<!-- 2. INFORMACIÓN DEL EMISOR -->
-<div class="electronicsalesreceipt-receipt-issuer">
-<h3 class="electronicsalesreceipt-receipt-issuer-title">ISSUER</h3>
-<div class="electronicsalesreceipt-receipt-issuer-text">
-<span>RUC:</span>
-<span>0000000000</span>
+<!-- CONTENEDOR: INFORMACIÓN DEL EMISOR -->
+<div class="electronicsalesreceipt-issuer">
+<h3 class="electronicsalesreceipt-issuer-title">ISSUER</h3>
+<div class="electronicsalesreceipt-issuer-information">
+<span class="electronicsalesreceipt-issuer-information-text">RUC:</span>
+<span class="electronicsalesreceipt-issuer-information-ruc">0000000000</span>
 </div>
-<div class="electronicsalesreceipt-receipt-issuer-text">
-<span>Bussines Name:</span>
-<span>Arlyn Ligeia</span>
+<div class="electronicsalesreceipt-issuer-information">
+<span class="electronicsalesreceipt-issuer-information-text">Bussines Name:</span>
+<span class="electronicsalesreceipt-issuer-information-bussines">Arlyn Ligeia</span>
 </div>
-<div class="electronicsalesreceipt-receipt-issuer-text">
-<span>Address:</span>
-<span>New York</span>
+<div class="electronicsalesreceipt-issuer-information">
+<span class="electronicsalesreceipt-issuer-information-text">Address:</span>
+<span class="electronicsalesreceipt-issuer-information-bussines">New York</span>
+</div>
+</div>   
+<!-- CONTENEDOR: INFORMACIÓN DEL CLIENTE -->
+<div class="electronicsalesreceipt-customer">
+<h3 class="electronicsalesreceipt-customer-title">CUSTOMER</h3>
+<div class="electronicsalesreceipt-customer-information">
+<span class="electronicsalesreceipt-customer-information-text">Full Name:</span>
+<span class="electronicsalesreceipt-customer-information-firstname" id="electronicsalesreceipt-firstname"><!-- Se llenará con firstname --></span>
+<span class="electronicsalesreceipt-customer-information-lastname" id="electronicsalesreceipt-lastname"><!-- Se llenará con lastname --></span>
+</div>
+<div class="electronicsalesreceipt-customer-information">
+<span class="electronicsalesreceipt-customer-information-text">ID Number:</span>
+<span class="electronicsalesreceipt-customer-information-idnumber" id="electronicsalesreceipt-idnumber"><!-- Se llenará con idnumber --></span>
+</div>
+<div class="electronicsalesreceipt-customer-information">
+<span class="electronicsalesreceipt-customer-information-text">Address:</span>
+<span class="electronicsalesreceipt-customer-information-address" id="electronicsalesreceipt-address"><!-- Se llenará con address --></span>
+<span class="electronicsalesreceipt-customer-information-address2" id="electronicsalesreceipt-address2"><!-- Se llenará con address2 --></span>
+<span class="electronicsalesreceipt-customer-information-apartment" id="electronicsalesreceipt-apartment"><!-- Se llenará con apartment --></span>
+<span class="electronicsalesreceipt-customer-information-city" id="electronicsalesreceipt-city"><!-- Se llenará con city --></span>
+<span class="electronicsalesreceipt-customer-information-country" id="electronicsalesreceipt-country"><!-- Se llenará con country --></span>
+</div>
+<div class="electronicsalesreceipt-customer-information">
+<span class="electronicsalesreceipt-customer-information-text">Mobile Phone:</span>
+<span class="electronicsalesreceipt-customer-information-mobilephone" id="electronicsalesreceipt-mobilephone"><!-- Se llenará con mobilephone --></span>
 </div>  
-</div>
-<!-- 3. INFORMACIÓN DEL CLIENTE -->
-<div class="electronicsalesreceipt-receipt-customer">
-<h3 class="electronicsalesreceipt-receipt-issuer-title">CUSTOMER</h3>
-<div class="electronicsalesreceipt-receipt-customer-text">
-<span>Full Name:</span>
-<span id="electronicsalesreceipt-firstname"><!-- Se llenará con firstname --></span>
-<span id="electronicsalesreceipt-lastname"><!-- Se llenará con lastname --></span>
-</div>
-<div class="electronicsalesreceipt-receipt-customer-text">
-<span>ID Number:</span>
-<span id="electronicsalesreceipt-idnumber"><!-- Se llenará con idnumber --></span>
-</div>
-<div class="electronicsalesreceipt-receipt-customer-text">
-<span>Address:</span>
-<span id="electronicsalesreceipt-address"><!-- Se llenará con address --></span>
-<span id="electronicsalesreceipt-address2"><!-- Se llenará con address2 --></span>
-<span id="electronicsalesreceipt-apartment"><!-- Se llenará con apartment --></span>
-<span id="electronicsalesreceipt-city"><!-- Se llenará con city --></span>
-<span id="electronicsalesreceipt-country"><!-- Se llenará con country --></span>
-</div>
-<div class="electronicsalesreceipt-receipt-customer-text">
-<span>Mobile Phone:</span>
-<span id="electronicsalesreceipt-mobilephone"><!-- Se llenará con mobilephone --></span>
-</div>  
-<div class="electronicsalesreceipt-receipt-customer-text">
-<span>Email:</span>
-<span id="electronicsalesreceipt-email"><!-- Se llenará con email --></span>
+<div class="electronicsalesreceipt-customer-information">
+<span class="electronicsalesreceipt-customer-information-text">Email:</span>
+<span class="electronicsalesreceipt-customer-information-email" id="electronicsalesreceipt-email"><!-- Se llenará con email --></span>
 </div>
 </div>
-<!-- 4. DETALLES DE LA ORDEN CON TABLA -->
+<!-- CONTENEDOR: ORDER DETAILS -->
 <div class="electronicsalesreceipt-receipt-orderdetails">
 <h3 class="electronicsalesreceipt-receipt-orderdetails-title">ORDER DETAILS</h3>
 <!-- CONTENEDOR: TABLA -->  
@@ -5445,14 +5443,14 @@ Cosmic/Psychological Horror</p>
 <th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">UNIT PRICE</th>  
 <th class="electronicsalesreceipt-table-wrapper-head-row-subtitle">TOTAL</th>
 </tr>
-</thead> 
+</thead>
+<!-- DIVISOR -->
+<tr class="electronicsalesreceipt-table-wrapper-divider-1"><td colspan="4"></td></tr>  
 <!-- CUERPO -->  
 <tbody class="electronicsalesreceipt-table-wrapper-body">
-<!-- LÍNEA DIVISORIA SUPERIOR -->
-<tr class="electronicsalesreceipt-table-wrapper-body-divider"><td colspan="4"></td></tr>
 <!-- PRODUCTOS DEL RECIBO SE INSERTARÁN AQUÍ DINÁMICAMENTE -->
-<!-- LÍNEA DIVISORIA INFERIOR -->
-<tr class="electronicsalesreceipt-table-wrapper-body-divider"><td colspan="4"></td></tr>
+<!-- DIVISOR -->
+<tr class="electronicsalesreceipt-table-wrapper-divider-2"><td colspan="4"></td></tr>    
 <!-- FILA SUBTOTAL -->
 <tr class="electronicsalesreceipt-table-wrapper-body-row">
 <td class="electronicsalesreceipt-table-wrapper-body-row-cell"></td>
@@ -5466,6 +5464,7 @@ Cosmic/Psychological Horror</p>
 <div class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice">
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice-symbol">$</span>
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-subtotalprice-amount">0.00</span>
+</div>
 </td>
 </tr>
 <!-- FILA SHIPPING -->
@@ -5481,6 +5480,7 @@ Cosmic/Psychological Horror</p>
 <div class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice">
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice-symbol">$</span>
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-shippingprice-amount">0.00</span>
+</div>
 </td>
 </tr>
 <!-- FILA TOTAL -->
@@ -5496,62 +5496,54 @@ Cosmic/Psychological Horror</p>
 <div class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-end">
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-symbol">$</span>
 <span class="electronicsalesreceipt-table-wrapper-body-row-cell-totalprice-amount">0.00</span>
+</div>
 </td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
- <!-- 5. DESGLOSE DE IMPUESTOS -->
-<div class="electronicsalesreceipt-receipt-tax" id="electronicsalesreceipt-receipt-tax">
-<div class="electronicsalesreceipt-receipt-tax-subtotal">
-<span>Subtotal:</span>
-<span>$</span> 
-<span id="electronicsalesreceipt-subtotal-no-tax">1,000,000.00</span>
-</div>  
-<div class="electronicsalesreceipt-receipt-tax-vat">
-<span>VAT:</span>
-<span>$</span> 
-<span id="electronicsalesreceipt-vat">0.00</span>
-</div>  
-<div class="electronicsalesreceipt-receipt-tax-total">
-<span>TOTAL:</span>
-<span>$</span> 
-<span id="electronicsalesreceipt-cart-total">0.00</span>
+<!-- CONTENEDOR: DESGLOSE DE IMPUESTOS -->  
+<div class="electronicsalesreceipt-tax" id="electronicsalesreceipt-receipt-tax">
+<!-- SUBTOTAL -->
+<div class="electronicsalesreceipt-tax-subtotal">
+<span class="electronicsalesreceipt-tax-subtotal-text">Subtotal:</span>
+<span class="electronicsalesreceipt-tax-subtotal-symbol">$</span>
+<span class="electronicsalesreceipt-tax-subtotal-amount">1,000,000.00</span>
+</div>
+<!-- VAT -->
+<div class="electronicsalesreceipt-tax-vat">
+<span class="electronicsalesreceipt-tax-vat-text">VAT:</span>
+<span class="electronicsalesreceipt-tax-vat-symbol">$</span>
+<span class="electronicsalesreceipt-tax-vat-amount">0.00</span>
+</div>
+<!-- TOTAL -->
+<div class="electronicsalesreceipt-tax-totalfinal">
+<span class="electronicsalesreceipt-tax-totalfinal-text">Total</span>
+<span class="electronicsalesreceipt-tax-totalfinal-symbol">$</span>
+<span class="electronicsalesreceipt-tax-totalfinal-amount">0.00</span>
+</div>   
+</div> 
+<!-- CONTENEDOR: INFORMACIÓN DE PAGO -->
+<div class="electronicsalesreceipt-paymentinformation">
+<h3 class="electronicsalesreceipt-paymentinformation-title">PAYMENT INFORMATION</h3>
+<div class="electronicsalesreceipt-paymentinformation-information">
+<span class="electronicsalesreceipt-paymentinformation-information-text">Paypal</span>
 </div>
 </div>
-<!-- 6. INFORMACIÓN DE PAGO -->
-<div class="electronicsalesreceipt-receipt-payment">
-<h3 class="electronicsalesreceipt-receipt-payment-title">PAYMENT INFORMATION</h3>
-<div class="electronicsalesreceipt-receipt-payment-text">
-<span>Payment Method:</span>
-<span>Paypal - </span>
-<span id="electronicsalesreceipt-payment-method">Mastercard</span>
-</div>
-<div class="electronicsalesreceipt-receipt-payment-text">
-<span>Transaction ID:</span> 
-<span id="electronicsalesreceipt-transaction-id"><!-- Se llenará con ID de PayPal --></span>
-</div>
-<div class="electronicsalesreceipt-receipt-payment-text">
-<span>Payment Date:</span> 
-<span id="electronicsalesreceipt-payment-date"><!-- Se llenará con fecha de PayPal --></span>
-</div>
-</div>
-<!-- 7. INFORMACIÓN LEGAL -->
-<div class="electronicsalesreceipt-receipt-legal">
-<p class="electronicsalesreceipt-receipt-legal-text">
+<!-- CONTENDOR: INFORMACIÓN LEGAL -->
+<div class="electronicsalesreceipt-legal">
+<p class="electronicsalesreceipt-legal-text">
 Printed representation of the electronic sales receipt.<br>
-Check validity at <span class="electronicsalesreceipt-receipt-legal-link">www.sunat.gob.pe</span><br>
+Check validity at <span class="electronicsalesreceipt-legal-link">www.sunat.gob.pe</span><br>
 Authorized by Intendancy Resolution N°</p>
-</div>
-<!-- 8. AGRADECIMIENTO-->
+</div>  
+<!-- CONTENEDOR: AGRADECIMIENTO-->
 <div class="electronicsalesreceipt-receipt-thanks">
 <span>THANKS FOR YOU PURCHASE</span>
 </div>
-</div>
-  
 <!-- CONTENEDOR DE BOTONES -->
-<div class="electronicsalesreceipt-buttons">
+<div class="electronicsalesreceipt-button">
 <a class="electronicsalesreceipt-button-continueshopping" href="#store">CONTINUE SHOPPING</a>
 <button class="electronicsalesreceipt-button-print" onclick="window.print()">PRINT RECEIPT</button>
 <button class="electronicsalesreceipt-button-download" id="electronicsalesreceipt-button-download-pdf">DOWNLOAD PDF</button>
@@ -5576,6 +5568,12 @@ Authorized by Intendancy Resolution N°</p>
 
   
 
+
+
+
+
+
+  
 <!-- POLÍTICAS DE PRIVACIDAD -->
 
 <!-- TERMS AND CONDITIONS -->
