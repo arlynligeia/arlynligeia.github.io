@@ -6552,9 +6552,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
     
-    // Tu email de PayPal de negocio
-    const PAYPAL_EMAIL = 'arlynligeia@gmail.com';
-    
     // Manejar clic en "PROCEED PAYMENT"
     proceedButton.addEventListener('click', function(e) {
         e.preventDefault();
@@ -6567,8 +6564,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Obtener el monto total del carrito
         const totalAmount = document.getElementById('shippinginformation-total').textContent;
-        
-        // Remover el símbolo $ y cualquier espacio
         const cleanAmount = totalAmount.replace('$', '').trim();
         
         // Actualizar campos ocultos con datos del carrito
@@ -6582,15 +6577,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     function redirectToPayPal(amount) {
-        // Crear URL de PayPal con el monto dinámico
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${PAYPAL_EMAIL}&item_name=Compra&amount=${amount}&currency_code=USD&no_note=1&lc=US`;
-        
-        // Redirigir a PayPal
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&item_name=Compra&amount=${amount}&currency_code=USD`;
         window.location.href = paypalUrl;
     }
     
     function submitFormToFormspree() {
-        // Enviar a Formspree usando fetch
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
