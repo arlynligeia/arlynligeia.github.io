@@ -14636,11 +14636,10 @@ transform: scale(1.05);
 /* ======================================
    ELECTRONIC SALES RECEIPT
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .electronicsalesreceipt-container {
 position: relative;
 width: 900px;
-background-color: #9900CC !important;
+background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
@@ -14653,7 +14652,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 90px; 
-background-color: #8000A8 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;  
 }
 .electronicsalesreceipt-title {
@@ -14662,107 +14661,116 @@ z-index: 2;
 display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 2.5rem;
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
 line-height: 1.6;
-text-align: left;
-margin-top: 0;
-margin-bottom: 16px; 
+margin: 0 0 16px 0; 
 }
 .electronicsalesreceipt-title a {
-color: white !important;
+color: #FF66CC !important;
 text-decoration: none;
 }
-
 /* CONTENEDOR: SERIES */
 .electronicsalesreceipt-series {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-series-information {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: left;  
+display: flex;
+justify-content: space-between;
+align-items: center;
 margin: 0px;
 }
-
+.electronicsalesreceipt-series-information-text,
+.electronicsalesreceipt-series-information-serie,
+.electronicsalesreceipt-series-information-number,
+.electronicsalesreceipt-series-information-code,
+.electronicsalesreceipt-series-information-order,
+.electronicsalesreceipt-series-information-date {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;    
+line-height: 1.5;  
+margin: 0px;
+}
 /* CONTENEDOR: INFORMACIÓN DEL EMISOR */
 .electronicsalesreceipt-issuer {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-issuer-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;     
 line-height: 1.5; 
-text-align: center;  
 margin: 0px;
 }
 .electronicsalesreceipt-issuer-information {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: left;  
+width: 100%; 
 margin: 0px;
 }
 .electronicsalesreceipt-issuer-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
+text-align: left;     
 line-height: 1.5; 
-text-align: left;  
 margin: 0px;
 }
-
 /* CONTENEDOR: INFORMACIÓN DEL CLIENTE */
 .electronicsalesreceipt-customer {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-customer-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: #FF6B00 !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;     
 line-height: 1.5; 
-text-align: center;  
 margin: 0px;
 }
 .electronicsalesreceipt-customer-information {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: white !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: left;  
+display: flex;
+justify-content: space-between;
+align-items: center;
 margin: 0px;
 }
 .electronicsalesreceipt-customer-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
+text-align: left;     
 line-height: 1.5; 
-text-align: left;  
 margin: 0px;
 }
+
+
+
+
+
+
+
 
 /* CONTENEDOR: ORDER DETAILS */
 .electronicsalesreceipt-receipt-orderdetails {
