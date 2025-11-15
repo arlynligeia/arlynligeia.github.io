@@ -6463,15 +6463,12 @@ function updateHiddenCartFields() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let subtotal = 0;
 let shippingTotal = 0;
-
 // CALCULAR TOTALES
 cart.forEach(item => {
 subtotal += item.totalprice;
 shippingTotal += item.shipping * item.quantity;
 });
-
 const totalFinal = subtotal + shippingTotal;
-
 // CREAR ARRAY DE PRODUCTOS PARA EL CAMPO OCULTO
 const cartItems = cart.map(item => ({
 product: item.product,
@@ -6479,14 +6476,12 @@ quantity: item.quantity,
 price: item.price,
 total: item.totalprice
 }));
-
 // ACTUALIZAR CAMPOS OCULTOS
 document.getElementById('hidden-cart-items').value = JSON.stringify(cartItems);
 document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
 document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
 }
-
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -6498,7 +6493,6 @@ goToCheckout();
 });
 }
 }
-
 // 24. FUNCIÓN: IR A CHECKOUT
 function goToCheckout() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -6506,38 +6500,30 @@ if (cart.length === 0) {
 console.log('❌ Carrito vacío, no se puede proceder al checkout');
 return;
 }
-
 // ACTUALIZAR CAMPOS OCULTOS ANTES DE REDIRIGIR
 updateHiddenCartFields();
-
 // CALCULAR TOTALES PARA PASAR A SHIPPING INFORMATION
 let subtotal = 0;
 let shippingTotal = 0;
-
 cart.forEach(item => {
 subtotal += item.totalprice;
 shippingTotal += item.shipping * item.quantity;
 });
-
 const totalFinal = subtotal + shippingTotal;
-
 // PASAR DATOS A SHIPPING INFORMATION
 document.getElementById('shippinginformation-subtotal').textContent = formatNumberWithCommas(subtotal);
 document.getElementById('shippinginformation-shipping').textContent = formatNumberWithCommas(shippingTotal);
 document.getElementById('shippinginformation-total').textContent = formatNumberWithCommas(totalFinal);
-
 // OCULTAR TODAS LAS SECCIONES Y MOSTRAR SHIPPING INFORMATION
 const allSections = document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section');
 allSections.forEach(section => {
 section.style.display = 'none';
 });
-
 const shippingInfoSection = document.querySelector('.shippinginformation-section');
 if (shippingInfoSection) {
 shippingInfoSection.style.display = 'block';
 window.location.hash = '#shippinginformation';
 }
-
 console.log('✅ Redirigiendo a checkout');
 }
 // ========== INICIALIZACIÓN ==========
@@ -6548,13 +6534,82 @@ setupClearCartButton();
 setupCheckoutButton();
 updateAddToCartButtons();
 updateHiddenCartFields();
-
 if (window.location.hash === '#cartfull' || window.location.hash === '#cartempty') {
 toggleCart();
 }
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
+
+
+
+
+
+
+<script>
+  // Script para redirección a Mercado Pago
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('shippinginformation-form');
+    const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
+    
+    // Tu enlace de Mercado Pago
+    const MERCADO_PAGO_BASE_URL = 'https://link.mercadopago.com.pe/arlynligeia';
+    
+    // Manejar clic en "PROCEED PAYMENT"
+    proceedButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Validar que el formulario esté completo
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        
+        // Obtener el monto total del carrito
+        const totalAmount = document.getElementById('shippinginformation-total').textContent;
+        
+        // Remover el símbolo $ y cualquier espacio
+        const cleanAmount = totalAmount.replace('$', '').trim();
+        
+        // Actualizar campos ocultos con datos del carrito
+        updateHiddenCartFields();
+        
+        // Enviar formulario a Formspree
+        submitFormToFormspree();
+        
+        // Redirigir a Mercado Pago
+        redirectToMercadoPago(cleanAmount);
+    });
+    
+    function redirectToMercadoPago(amount) {
+        // Redirigir a Mercado Pago
+        window.location.href = MERCADO_PAGO_BASE_URL;
+    }
+    
+    function submitFormToFormspree() {
+        // Enviar a Formspree usando fetch
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+        });
+    }
+    
+    function updateHiddenCartFields() {
+        const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
+        const shipping = document.getElementById('shippinginformation-shipping').textContent;
+        const total = document.getElementById('shippinginformation-total').textContent;
+        
+        document.getElementById('hidden-cart-subtotal').value = subtotal;
+        document.getElementById('hidden-cart-shipping').value = shipping;
+        document.getElementById('hidden-cart-total').value = total;
+    }
+});
+</script>
+
+
+
+
 
   
 </body>
