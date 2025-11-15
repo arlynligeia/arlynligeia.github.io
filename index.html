@@ -6547,13 +6547,13 @@ toggleCart();
 
 
 <script>
-  // Script para redirección a Mercado Pago
+// Script para redirección a PayPal
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
     
-    // Tu enlace de Mercado Pago
-    const MERCADO_PAGO_BASE_URL = 'https://link.mercadopago.com.pe/arlynligeia';
+    // Tu email de PayPal de negocio
+    const PAYPAL_EMAIL = 'arlynligeia@gmail.com';
     
     // Manejar clic en "PROCEED PAYMENT"
     proceedButton.addEventListener('click', function(e) {
@@ -6577,13 +6577,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Enviar formulario a Formspree
         submitFormToFormspree();
         
-        // Redirigir a Mercado Pago
-        redirectToMercadoPago(cleanAmount);
+        // Redirigir a PayPal con el monto
+        redirectToPayPal(cleanAmount);
     });
     
-    function redirectToMercadoPago(amount) {
-        // Redirigir a Mercado Pago
-        window.location.href = MERCADO_PAGO_BASE_URL;
+    function redirectToPayPal(amount) {
+        // Crear URL de PayPal con el monto dinámico
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=${PAYPAL_EMAIL}&item_name=Compra&amount=${amount}&currency_code=USD&no_note=1&lc=US`;
+        
+        // Redirigir a PayPal
+        window.location.href = paypalUrl;
     }
     
     function submitFormToFormspree() {
