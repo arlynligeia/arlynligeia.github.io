@@ -14195,7 +14195,6 @@ transform: scale(1.05);
 /* ======================================
    SHIPPING INFORMATION
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .shippinginformation-container {
 position: relative;
 width: 900px;
@@ -14292,7 +14291,6 @@ text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
 }   
-
 /* DIVISOR */
 .shippinginformation-ordersummary-divider {
 width: 100%;
@@ -14357,152 +14355,150 @@ text-decoration: none;
 margin: 0 0 15px 0;
 padding: 10px;
 }
-#shippinginformation-apartment {
-margin-bottom: 0px;
-}
-/* ======================================
-   SHIPPING INFORMATION PAYMENT METHOD
-====================================== */
+
 /* CONTENEDOR: OPCIONES DE PAGO */
 .shippinginformation-paymentmethod {
-background: transparent !important;
-border-radius: 15px;
-border: 3px solid #FF6B00 !important;
-margin: 0 0 15px 0;   
-padding: 15px;
+  background: transparent !important;
+  border-radius: 15px;
+  border: 3px solid #FF6B00 !important;
+  margin: 0 0 15px 0;   
+  padding: 15px;
 }
 
 .shippinginformation-paymentmethod-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #FF6B00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.5; 
-text-align: center;  
-margin: 0px 0px 15px 0px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #FF6B00 !important;
+  text-decoration: none;
+  text-transform: uppercase;   
+  line-height: 1.5; 
+  text-align: center;  
+  margin: 0px 0px 15px 0px;
 }
 
 /* CONTENEDOR: OPCIONES */
 .shippinginformation-paymentmethod-options {
-display: flex;
-flex-direction: column;
-gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 /* OPCIÓN 1: MERCADO PAGO */
 .shippinginformation-paymentmethod-options-mercadopago {
-display: flex;
-align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-input {
-margin: 10px 15px 0 0;
+  margin: 10px 15px 0 0;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label {
-display: flex;
-align-items: center;
-flex: 1;
-cursor: pointer;
-gap: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  gap: 15px;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-subtitle {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.5; 
-text-align: left;  
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #00FF00 !important;
+  text-decoration: none;
+  text-transform: uppercase;   
+  line-height: 1.5; 
+  text-align: left;  
+  white-space: nowrap;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-icons {
-display: flex;
-gap: 10px;
-align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-label-icons-icon {
-border-radius: 4px;
-border: 2px solid #00FF00 !important;
+  border-radius: 4px;
+  border: 2px solid #00FF00 !important;
 }
 
 /* OPCIÓN 2: PAYPAL */
 .shippinginformation-paymentmethod-options-paypal {
-display: flex;
-align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .shippinginformation-paymentmethod-options-paypal-input {
-margin: 10px 15px 0 0;
+  margin: 10px 15px 0 0;
 }
 
 .shippinginformation-paymentmethod-options-paypal-label {
-display: flex;
-align-items: center;
-flex: 1;
-cursor: pointer;
-gap: 15px;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  gap: 15px;
 }
 
 .shippinginformation-paymentmethod-options-paypal-label-subtitle {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.5; 
-text-align: left;  
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  color: #00FF00 !important;
+  text-decoration: none;
+  text-transform: uppercase;   
+  line-height: 1.5; 
+  text-align: left;  
+  white-space: nowrap;
 }
 
 .shippinginformation-paymentmethod-options-paypal-label-icons {
-display: flex;
-gap: 10px;
-align-items: center;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .shippinginformation-paymentmethod-options-paypal-label-icons-icon {
-border-radius: 4px;
-border: 2px solid #00FF00 !important;
+  border-radius: 4px;
+  border: 2px solid #00FF00 !important;
 }
 
 /* ESTILOS PARA RADIO BUTTONS */
 .shippinginformation-paymentmethod-options-mercadopago-input,
 .shippinginformation-paymentmethod-options-paypal-input {
-appearance: none;
-width: 20px;
-height: 20px;
-border: 2px solid #00FF00 !important;
-border-radius: 50%;
-background: transparent;
-cursor: pointer;
-position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #00FF00 !important;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-input:checked,
 .shippinginformation-paymentmethod-options-paypal-input:checked {
-background: #00FF00 !important;
+  background: #00FF00 !important;
 }
 
 .shippinginformation-paymentmethod-options-mercadopago-input:checked::after,
 .shippinginformation-paymentmethod-options-paypal-input:checked::after {
-content: "";
-position: absolute;
-top: 4px;
-left: 4px;
-width: 8px;
-height: 8px;
-background: #3A0052 !important;
-border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  background: #3A0052 !important;
+  border-radius: 50%;
 }
 
 /* EFECTO HOVER */
 .shippinginformation-paymentmethod-options-mercadopago-label:hover,
 .shippinginformation-paymentmethod-options-paypal-label:hover {
-transform: scale(1.02);
-transition: transform 0.3s ease;
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
 }
 
 
