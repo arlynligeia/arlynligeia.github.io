@@ -14437,19 +14437,6 @@ transform: scale(1.05);
 /* CONTROL */
 .shippinginformation-container { display: block; }
 .shippinginformation-container-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SHIPPING INFORMATION MOBILE
 ====================================== */
@@ -14644,13 +14631,6 @@ transform: scale(1.05);
 .shippinginformation-container { display: none; }
 .shippinginformation-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
 
 /* ======================================
    ELECTRONIC SALES RECEIPT
@@ -14978,25 +14958,27 @@ border: 3px solid #FF6B00 !important;
 margin: 0 0 15px 0;  
 padding: 15px;
 }
+/* CONTENEDOR: DESGLOSE DE IMPUESTOS - SUBTOTAL, VAT, TOTAL*/
 .electronicsalesreceipt-tax-subtotal,
 .electronicsalesreceipt-tax-vat,
 .electronicsalesreceipt-tax-totalfinal {
 display: flex;
 justify-content: space-between; 
+margin: 0px;
+}
+.electronicsalesreceipt-tax-subtotal-text,
+.electronicsalesreceipt-tax-vat-text,
+.electronicsalesreceipt-tax-totalfinal-text {
+flex: 1;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-align: left;   
 line-height: 1.5;
 margin: 0px;
 }
-/* Etiqueta a la izquierda */
-.electronicsalesreceipt-tax-subtotal-text,
-.electronicsalesreceipt-tax-vat-text,
-.electronicsalesreceipt-tax-totalfinal-text {
-text-align: left;
-flex: 1;
-}
+/* CONTENEDOR: DESGLOSE DE IMPUESTOS - VALORES */
 .electronicsalesreceipt-tax-subtotal-value,
 .electronicsalesreceipt-tax-vat-value,
 .electronicsalesreceipt-tax-totalfinal-value {
@@ -15004,6 +14986,19 @@ min-width: 150px;
 display: flex;
 justify-content: flex-end;  
 align-items: center;
+}
+.electronicsalesreceipt-tax-subtotal-value-symbol,
+.electronicsalesreceipt-tax-vat-value-symbol,
+.electronicsalesreceipt-tax-totalfinal-value-symbol,
+.electronicsalesreceipt-tax-subtotal-value-amount,
+.electronicsalesreceipt-tax-vat-value-amount,
+.electronicsalesreceipt-tax-totalfinal-value-amount  {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
 }
 .electronicsalesreceipt-tax-subtotal-value-symbol,
 .electronicsalesreceipt-tax-vat-value-symbol,
