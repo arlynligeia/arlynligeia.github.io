@@ -6657,7 +6657,7 @@ toggleCart();
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
 <script>
-// Script para redirección a PayPal Standard
+// Script para redirección a PayPal Standard - COMPLETO
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
@@ -6685,16 +6685,13 @@ document.addEventListener('DOMContentLoaded', function() {
         // Enviar formulario a Formspree
         submitFormToFormspree();
         
-        // Redirigir a PayPal Standard con return URL
+        // Redirigir a PayPal Standard
         redirectToPayPalStandard(cleanAmount);
     });
     
     function redirectToPayPalStandard(amount) {
-        // URL de retorno a tu recibo electrónico
-        const returnUrl = window.location.origin + window.location.pathname + '#electronicsalesreceipt';
-        
-        // PayPal Standard con return URL
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${amount}&currency_code=USD&item_name=Order&return=${encodeURIComponent(returnUrl)}&cancel_return=${encodeURIComponent(window.location.href)}&no_shipping=1&no_note=1`;
+        // PayPal Standard funcionando
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${amount}&currency_code=USD&item_name=Order`;
         
         window.location.href = paypalUrl;
     }
