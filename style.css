@@ -13430,13 +13430,12 @@ transform: scale(1.05);
 /* ======================================
    CART EMTY PC
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .cartempty-container {
 position: relative;
 width: 1000px;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 10px auto 40px auto;
+margin: 40px auto;
 padding: 30px;
 }
 .cartempty-container::before {
@@ -13470,19 +13469,22 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .cartempty-information {
 width: 100%;
+box-sizing: border-box;
 margin: 0px;
 }
 .cartempty-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 3rem;
 color: #00FF00 !important;
-text-decoration: none;  
+text-decoration: none;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 115px 0;
 }
 /* CONTENEDOR: BOTONES */
 .cartempty-button {
+width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -13656,7 +13658,6 @@ border-collapse: separate;
 border-spacing: 10;
 background-color: transparent;
 }
-/* ANCHO DE COLUMNAS */
 .cartfull-table-wrapper th:nth-child(1),
 .cartfull-table-wrapper td:nth-child(1) {
 width: 8%;
@@ -13682,9 +13683,12 @@ width: 18%;
 width: 6%;
 }
 /* CONTENEDOR: ENCABEZADOS */
-.cartfull-table-wrapper-head-row {
+.cartfull-table-wrapper-head {
 width: 100%;
 margin: 0px;
+}
+.cartfull-table-wrapper-head-row {
+vertical-align: middle;
 }
 .cartfull-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
@@ -13692,15 +13696,9 @@ font-size: 1.2rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;   
-line-height: 1.5;
 text-align: center;
 margin: 0px;
 padding: 0px; 
-}
-/* CONTENEDOR: CUERPO */
-.cartfull-table-wrapper-body {
-width: 100%;
-margin: 0px;
 }
 /* DIVISOR */
 .cartfull-table-wrapper-divider-1 td,
@@ -13711,7 +13709,11 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 10px 0; 
 }
-/* CONTENEDOR: FILAS */
+/* CONTENEDOR: CUERPO */
+.cartfull-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
 .cartfull-table-wrapper-body-row {
 vertical-align: middle;
 }
@@ -13729,64 +13731,55 @@ max-height: 100%;
 border-radius: 6px;
 object-fit: contain;
 }
-/* CONTENEDOR: NOMBRES */
+/* CONTENEDOR: PRODUCTOS */
 .cartfull-table-wrapper-body-row-cell-name,
 .cartfull-table-wrapper-body-row-cell-quantity,
 .cartfull-table-wrapper-body-row-cell-unit,
 .cartfull-table-wrapper-body-row-cell-total {
 width: 100%;
 height: 40px;
+box-sizing: border-box;   
 display: flex;
 justify-content: space-between;
 align-items: center;
-box-sizing: border-box;
 background: #00FFFF !important;
-border-radius: 6px;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: black !important;
-text-decoration: none;  
+border-radius: 6px; 
 margin: 0px;
 padding: 10px;
 }
 .cartfull-table-wrapper-body-row-cell-quantity {
 padding: 5px;
 }
-.cartfull-table-wrapper-body-row-cell-name {
-text-align: left;
-}
-.cartfull-table-wrapper-body-row-cell-subtotal,
-.cartfull-table-wrapper-body-row-cell-shipping,
-.cartfull-table-wrapper-body-row-cell-totalfinal {
-background: transparent !important;
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;   
-color: #00FF00 !important;
-text-decoration: none;  
-text-align: right;
-margin: 0px;
-padding: 10px;
-border: none !important;
-}
+.cartfull-table-wrapper-body-row-cell-name-text,
+.cartfull-table-wrapper-body-row-cell-quantity-text,
 .cartfull-table-wrapper-body-row-cell-unit-symbol,
 .cartfull-table-wrapper-body-row-cell-total-symbol,
-.cartfull-table-wrapper-body-row-cell-subtotal-symbol,
-.cartfull-table-wrapper-body-row-cell-shipping-symbol,
-.cartfull-table-wrapper-body-row-cell-totalfinal-symbol,{
+.cartfull-table-wrapper-body-row-cell-unit-amount,
+.cartfull-table-wrapper-body-row-cell-total-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+margin: 0px;   
+}
+.cartfull-table-wrapper-body-row-cell-name-text {
+text-align: left;   
+}
+.cartfull-table-wrapper-body-row-cell-unit-symbol,
+.cartfull-table-wrapper-body-row-cell-total-symbol {
 text-align: left;
 }
-.cartfull-table-wrapper-body-row-cell-uni-amount,
-.cartfull-table-wrapper-body-row-cell-total-amount,
-.cartfull-table-wrapper-body-row-cell-subtotal-amount,
-.cartfull-table-wrapper-body-row-cell-shipping-amount,
-.cartfull-table-wrapper-body-row-cell-totalfinal-amount {
+.cartfull-table-wrapper-body-row-cell-unit-amount,
+.cartfull-table-wrapper-body-row-cell-total-amount {
 text-align: right;
 }
 /* CONTENEDOR: CONTROLES DE CANTIDAD */
 .cartfull-table-wrapper-body-row-cell-quantity {
+width: 100%;
+box-sizing: border-box;      
 display: flex;
+justify-content: flex-end;   
 align-items: center;
-justify-content: flex-end;
 gap: 2px;
 }
 .cartfull-table-wrapper-body-row-cell-quantity-decrease,
@@ -13817,15 +13810,25 @@ display: flex;
 align-items: center;
 justify-content: center;
 min-width: 30px;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+margin: 0px;   
 }
 /* CONTENEDOR: BOTÓN REMOVER */
-.cartfull-table-wrapper-body-row-cell-button-remove {
+.cartfull-table-wrapper-body-row-cell-button {
 width: 100%;
 height: 40px;
+box-sizing: border-box;   
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.cartfull-table-wrapper-body-row-cell-button-remove {
 display: flex;
 justify-content: center;
 align-items: center;
-box-sizing: border-box;
 background: #FF6B00 !important;
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
@@ -13833,7 +13836,6 @@ font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
 text-align: center;
-font-weight: bold; 
 margin: 0px;
 padding: 10px;
 border: none;
@@ -13843,31 +13845,74 @@ transition: transform 0.3s ease;
 .cartfull-table-wrapper-body-row-cell-button-remove:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: SUBTOTAL,SHIPPING,TOTAL */
+/* CONTENEDORES: SUBTOTAL, SHIPPING, TOTALFINAL */
+.cartfull-table-wrapper-body-row-cell-subtotal,
+.cartfull-table-wrapper-body-row-cell-shipping,
+.cartfull-table-wrapper-body-row-cell-totalfinal {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: flex-end;
+align-items: center;
+background: transparent !important;   
+margin: 0px;
+padding: 0px;
+}
+.cartfull-table-wrapper-body-row-cell-subtotal-text,
+.cartfull-table-wrapper-body-row-cell-shipping-text,
+.cartfull-table-wrapper-body-row-cell-totalfinal-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: right;     
+margin: 0px; 
+}
+/* CONTENEDORES: VALORES */
 .cartfull-table-wrapper-body-row-cell-subtotal-value,
 .cartfull-table-wrapper-body-row-cell-shipping-value,
 .cartfull-table-wrapper-body-row-cell-totalfinal-value {
 width: 100%;
-height: 40px;
+height: 40px;   
+box-sizing: border-box;   
 display: flex;
-justify-content: space-between;
+justify-content: space-between;    
 align-items: center;
-box-sizing: border-box;
 background: #FF66CC !important;
-border-radius: 6px; 
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: black !important;
-text-decoration: none;  
+border-radius: 6px;    
 margin: 0px;
-padding: 10px;
+padding: 0 10px;
 }
 .cartfull-table-wrapper-body-row-cell-totalfinal-value {
 background: #ff1493 !important;
 color: white !important;
 }
+.cartfull-table-wrapper-body-row-cell-subtotal-value-symbol,
+.cartfull-table-wrapper-body-row-cell-shipping-value-symbol,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-symbol,
+.cartfull-table-wrapper-body-row-cell-subtotal-value-amount,
+.cartfull-table-wrapper-body-row-cell-shipping-value-amount,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount  {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+margin: 0px; 
+}   
+.cartfull-table-wrapper-body-row-cell-subtotal-value-symbol,
+.cartfull-table-wrapper-body-row-cell-shipping-value-symbol,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-symbol {
+text-align: left;
+}
+.cartfull-table-wrapper-body-row-cell-subtotal-value-amount,
+.cartfull-table-wrapper-body-row-cell-shipping-value-amount,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount {
+text-align: right;
+}
 /* CONTENEDOR: BOTONES FINALES */
 .cartfull-button {
+width: 100%;
+box-sizing: border-box;   
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -13893,11 +13938,11 @@ cursor: pointer;
 transition: transform 0.3s ease;
 }
 .cartfull-button-clearcart {
-background-color: #FF6B00 !important;
+background: #FF6B00 !important;
 color: white !important; 
 }
 .cartfull-button-checkout {
-background-color: #ff1493 !important;
+background: #ff1493 !important;
 color: white !important;    
 }
 .cartfull-back:hover,
@@ -14419,6 +14464,8 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
+text-align: center;
+font-weight: bold; 
 margin: 0px;     
 padding: 10px 20px;
 border: none;
@@ -15109,6 +15156,8 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
+text-align: center;
+font-weight: bold; 
 margin: 0px;     
 padding: 10px 20px;
 border: none;
@@ -15127,6 +15176,9 @@ color: white !important;
 .electronicsalesreceipt-button-download:hover {
 transform: scale(1.05);
 }
+
+
+
 
 
 
