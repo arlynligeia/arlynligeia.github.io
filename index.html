@@ -6765,13 +6765,12 @@ function formatNumberWithCommas(number) {
 
 
 
-
-<!-- SCRIP: ELECTRONIC SALES RECEIPT -->
+<!-- SCRIP: RECIBO ELECTRONICO PC -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script>
 // Función para generar el recibo automáticamente
 function generateElectronicReceipt() {
+ 
     // 1. OBTENER DATOS DEL FORMULARIO
     const formData = JSON.parse(localStorage.getItem('formData')) || {};
     
@@ -6905,16 +6904,29 @@ function setupDownloadPDF() {
 function downloadReceiptPDF() {
     const receiptElement = document.querySelector('.electronicsalesreceipt-container');
     
-    // Opciones para el PDF
+    // Opciones mejoradas para el PDF
     const options = {
-        margin: 10,
+        margin: [10, 10, 10, 10],
         filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent}.pdf`,
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+        html2canvas: { 
+            scale: 2,
+            useCORS: true,
+            logging: false,
+            width: receiptElement.scrollWidth,
+            height: receiptElement.scrollHeight,
+            windowWidth: receiptElement.scrollWidth
+        },
+        jsPDF: { 
+            unit: 'mm', 
+            format: 'a4', 
+            orientation: 'portrait',
+            compress: true
+        },
+        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
     };
     
-    // Generar PDF
+    // Generar PDF con mejor configuración
     html2pdf().set(options).from(receiptElement).save();
 }
 
@@ -6934,9 +6946,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-
-<!-- FIN SCRIP: ELECTRONIC SALES RECEIPT -->
-
+<!-- FIN SCRIP: RECIBO ELECTRONICO PC -->
   
 </body>
   
