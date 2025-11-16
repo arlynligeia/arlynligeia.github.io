@@ -6765,11 +6765,44 @@ function formatNumberWithCommas(number) {
 
 
 
-<!-- SCRIP: RECIBO ELECTRONICO PC -->
+
+
+
+  
+<!-- SCRIP: RECIBO ELECTRONICO -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
+// Variable global para controlar el estado del pago
+let paymentCompleted = false;
+
+// Función para verificar el estado del pago
+function checkPaymentStatus() {
+    // 1. Verificar en localStorage si el pago fue completado
+    const paymentStatus = localStorage.getItem('paymentStatus');
+    
+    // 2. Verificar parámetros URL (PayPal retorna parámetros específicos)
+    const urlParams = new URLSearchParams(window.location.search);
+    const paypalStatus = urlParams.get('paymentStatus') || urlParams.get('status');
+    
+    // 3. Combinar verificaciones
+    paymentCompleted = paymentStatus === 'completed' || 
+                      paypalStatus === 'completed' || 
+                      paypalStatus === 'success' ||
+                      // Agrega más condiciones según tu integración con PayPal
+                      false;
+    
+    return paymentCompleted;
+}
+
 // Función para generar el recibo automáticamente
 function generateElectronicReceipt() {
+    // Verificar si el pago fue completado antes de generar el recibo
+    if (!checkPaymentStatus()) {
+        // Si no hay pago, redirigir a la tienda o mostrar mensaje
+        alert('Payment not completed. Please complete your purchase first.');
+        window.location.hash = '#store';
+        return;
+    }
  
     // 1. OBTENER DATOS DEL FORMULARIO
     const formData = JSON.parse(localStorage.getItem('formData')) || {};
@@ -6833,46 +6866,57 @@ function generateElectronicReceipt() {
     
     // 6. CONFIGURAR BOTÓN DESCARGAR PDF
     setupDownloadPDF();
+    
+    // 7. MARCAR EL RECIBO COMO GENERADO PARA EVITAR RE-GENERACIÓN
+    localStorage.setItem('receiptGenerated', 'true');
+}
+
+// Función para marcar el pago como completado (debes llamar esta función cuando PayPal confirme el pago)
+function markPaymentAsCompleted() {
+    localStorage.setItem('paymentStatus', 'completed');
+    paymentCompleted = true;
+}
+
+// Función para limpiar el estado después de generar el recibo
+function clearPaymentData() {
+    // Opcional: limpiar carrito y datos después de generar recibo
+    // localStorage.removeItem('cart');
+    // localStorage.removeItem('formData');
+    localStorage.removeItem('paymentStatus');
+    localStorage.removeItem('receiptGenerated');
 }
 
 // Función para actualizar totales del recibo CON VAT
 function updateReceiptTotals() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let subtotalConVAT = 0; // Lo que el cliente ve (incluye VAT)
+    let subtotalConVAT = 0;
     let shippingTotal = 0;
     
-    // Calcular subtotal (que ya incluye VAT) y shipping
     cart.forEach(item => {
         subtotalConVAT += item.totalprice;
         shippingTotal += item.shipping * item.quantity;
     });
     
-    // CALCULAR VAT Y SUBTOTAL REAL
-    const subtotalReal = subtotalConVAT / 1.18; // Quitar el 18% del VAT
-    const vatAmount = subtotalConVAT - subtotalReal; // Calcular VAT
-    
+    const subtotalReal = subtotalConVAT / 1.18;
+    const vatAmount = subtotalConVAT - subtotalReal;
     const totalFinal = subtotalConVAT + shippingTotal;
     
-    // Actualizar en la tabla (mostrar subtotal con VAT)
     document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalConVAT);
     document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
     document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
     
-    // Actualizar en desglose de impuestos (mostrar cálculo real)
     document.querySelector('.electronicsalesreceipt-tax-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalReal);
     document.querySelector('.electronicsalesreceipt-tax-vat-value-amount').textContent = formatNumberWithCommas(vatAmount);
     document.querySelector('.electronicsalesreceipt-tax-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
 
-// Función para generar números únicos de recibo - CORREGIDA
+// Función para generar números únicos de recibo
 function generateReceiptNumbers() {
-    // Generar número de recibo único
     const lastReceipt = localStorage.getItem('lastReceiptNumber') || '00000000';
     const newReceipt = String(parseInt(lastReceipt) + 1).padStart(8, '0');
     localStorage.setItem('lastReceiptNumber', newReceipt);
     document.getElementById('electronicsalesreceipt-number').textContent = `N°${newReceipt}`;
     
-    // Generar número de orden único - CORREGIDO
     const date = new Date();
     const year = date.getFullYear().toString().slice(-2);
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -6880,11 +6924,9 @@ function generateReceiptNumbers() {
     const newOrder = String(parseInt(lastOrder) + 1).padStart(6, '0');
     localStorage.setItem('lastOrderNumber', newOrder);
     
-    // CORRECCIÓN: Solo mostrar el código con año y mes, y el order number separado
     document.getElementById('electronicsalesreceipt-year').textContent = `N°AL${year}${month}`;
     document.getElementById('electronicsalesreceipt-order').textContent = newOrder;
     
-    // Fecha actual
     document.getElementById('electronicsalesreceipt-date').textContent = date.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -6892,7 +6934,7 @@ function generateReceiptNumbers() {
     });
 }
 
-// Función para DESCARGAR PDF - MEJORADA
+// Función para DESCARGAR PDF
 function setupDownloadPDF() {
     const downloadButton = document.getElementById('electronicsalesreceipt-button-download-pdf');
     
@@ -6906,9 +6948,7 @@ function setupDownloadPDF() {
 function downloadReceiptPDF() {
     const receiptElement = document.querySelector('.electronicsalesreceipt-container');
     
-    // Esperar un momento para que todo se renderice correctamente
     setTimeout(() => {
-        // Opciones mejoradas para el PDF
         const options = {
             margin: [15, 15, 15, 15],
             filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent.replace('N°', '')}.pdf`,
@@ -6934,7 +6974,6 @@ function downloadReceiptPDF() {
             pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
         };
         
-        // Generar PDF con mejor configuración
         html2pdf().set(options).from(receiptElement).save();
     }, 500);
 }
@@ -6954,8 +6993,12 @@ document.addEventListener('DOMContentLoaded', function() {
         generateElectronicReceipt();
     }
 });
-</script>
 
+// EXPORTAR FUNCIONES PARA USO EN OTROS SCRIPTS
+window.markPaymentAsCompleted = markPaymentAsCompleted;
+window.checkPaymentStatus = checkPaymentStatus;
+</script>
+<!-- FIN SCRIP: RECIBO ELECTRONICO -->
 
 
 
