@@ -5219,9 +5219,6 @@ Cosmic/Psychological Horror</p>
 <a class="shippinginformation-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
 <a class="shippinginformation-button-proceedpayment" href="#proceedpayment">PROCEED PAYMENT</a>
 </div>
-
-<!-- AGREGAR ESTO EN TU HTML DEL SHIPPING INFORMATION -->
-<div id="paypal-button-container" style="display: none;"></div>
   
 </form>
 </div>  
@@ -6659,74 +6656,24 @@ toggleCart();
 
 
 
-<!-- SCRIP: SHIPPING INFORMATION PC -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAAR14SP0IP9tkhLIERUp2MognioM888ikn_7EaISL5O4mLypQbcw8IYKWlixE7ogi0tCGjQWKj9vPeBEg&currency=USD"></script>
-
+<!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN SIMPLE -->
 <script>
-// Script para PayPal Checkout
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
 
-    // Manejar clic en "PROCEED PAYMENT"
     proceedButton.addEventListener('click', function(e) {
         e.preventDefault();
 
-        // Validar que el formulario esté completo
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        // Obtener el monto total del carrito
         const totalAmount = document.getElementById('shippinginformation-total').textContent;
         const cleanAmount = totalAmount.replace('$', '').trim();
 
-        // Actualizar campos ocultos con datos del carrito
-        updateHiddenCartFields();
-        
-        // Guardar datos del formulario
-        saveFormData();
-
-        // Enviar formulario a Formspree
-        submitFormToFormspree();
-
-        // Ocultar botón PROCEED y mostrar botón PayPal
-        proceedButton.style.display = 'none';
-        document.getElementById('paypal-button-container').style.display = 'block';
-    });
-
-    // PayPal Checkout Button
-    paypal.Buttons({
-        createOrder: function(data, actions) {
-            const totalAmount = document.getElementById('shippinginformation-total').textContent.replace('$', '').trim();
-            
-            return actions.order.create({
-                purchase_units: [{
-                    amount: {
-                        value: totalAmount,
-                        currency_code: 'USD'
-                    }
-                }]
-            });
-        },
-
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(orderData) {
-                // Pago exitoso - redirigir al recibo
-                window.location.hash = "#electronicsalesreceipt";
-                // Aquí llamarás a generateElectronicReceipt()
-            });
-        },
-
-        onError: function(err) {
-            alert("Error processing payment. Please try again.");
-            console.error('PayPal Error:', err);
-        }
-
-    }).render('#paypal-button-container');
-
-    function saveFormData() {
+        // 1. Guardar datos para el recibo
         const formData = {
             firstname: document.getElementById('shippinginformation-firstname').value,
             lastname: document.getElementById('shippinginformation-lastname').value,
@@ -6742,15 +6689,21 @@ document.addEventListener('DOMContentLoaded', function() {
             apartment: document.getElementById('shippinginformation-apartment').value
         };
         localStorage.setItem('formData', JSON.stringify(formData));
-    }
+        localStorage.setItem('pendingReceipt', 'true');
 
-    function submitFormToFormspree() {
+        // 2. Enviar a Formspree
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             mode: 'no-cors'
         });
-    }
+
+        // 3. Actualizar campos ocultos
+        updateHiddenCartFields();
+
+        // 4. REDIRIGIR A PAYPAL.ME (SIN BACKEND)
+        window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+    });
 
     function updateHiddenCartFields() {
         const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
@@ -6760,6 +6713,18 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('hidden-cart-subtotal').value = subtotal;
         document.getElementById('hidden-cart-shipping').value = shipping;
         document.getElementById('hidden-cart-total').value = total;
+    }
+
+    // DETECTAR CUANDO EL CLIENTE VUELVE DE PAYPAL
+    if (localStorage.getItem('pendingReceipt') === 'true') {
+        setTimeout(() => {
+            const userConfirmed = confirm('¿Ya realizaste el pago en PayPal? Haz clic en OK para generar tu recibo.');
+            if (userConfirmed) {
+                localStorage.removeItem('pendingReceipt');
+                window.location.hash = "#electronicsalesreceipt";
+                // Aquí va tu generateElectronicReceipt()
+            }
+        }, 2000);
     }
 });
 </script>
