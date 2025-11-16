@@ -6656,82 +6656,85 @@ toggleCart();
 
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
+
+<script src="https://www.paypal.com/sdk/js?client-id=Ab9QYHDGpt2r0Kz7pQPHicWjfLHq9i9G1sKbwk_xLVkCgEDEZMRsd1wb1grAz-mAtInOk0CEogJOt0Tl&currency=USD"></script>
+
 <script>
-// Script para redirección a PayPal Standard - COMPLETO
+// ==== SHIPPING INFORMATION SCRIPT + PAYPAL CHECKOUT ====
 document.addEventListener('DOMContentLoaded', function() {
+
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
-    
-    // Manejar clic en "PROCEED PAYMENT"
+
     proceedButton.addEventListener('click', function(e) {
         e.preventDefault();
-        
-        // Validar que el formulario esté completo
+
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
-        
-        // Obtener el monto total del carrito
-        const totalAmount = document.getElementById('shippinginformation-total').textContent;
-        const cleanAmount = totalAmount.replace('$', '').trim();
-        
-        // Guardar datos para el recibo
-        saveFormData();
-        
-        // Actualizar campos ocultos con datos del carrito
+
         updateHiddenCartFields();
-        
-        // Enviar formulario a Formspree
         submitFormToFormspree();
         
-        // Redirigir a PayPal Standard
-        redirectToPayPalStandard(cleanAmount);
+        // Mostrar botón PayPal después de validar formulario
+        document.getElementById("paypal-button-container").style.display = "block";
+        proceedButton.style.display = "none";
     });
-    
-    function redirectToPayPalStandard(amount) {
-        // PayPal Standard funcionando
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${amount}&currency_code=USD&item_name=Order`;
-        
-        window.location.href = paypalUrl;
-    }
-    
-    function saveFormData() {
-        const formData = {
-            firstname: document.getElementById('shippinginformation-firstname').value,
-            lastname: document.getElementById('shippinginformation-lastname').value,
-            idnumber: document.getElementById('shippinginformation-idnumber').value,
-            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
-            email: document.getElementById('shippinginformation-email').value,
-            country: document.getElementById('shippinginformation-country').value,
-            state: document.getElementById('shippinginformation-state').value,
-            city: document.getElementById('shippinginformation-city').value,
-            zipcode: document.getElementById('shippinginformation-zipcode').value,
-            address: document.getElementById('shippinginformation-address').value,
-            address2: document.getElementById('shippinginformation-address2').value,
-            apartment: document.getElementById('shippinginformation-apartment').value
-        };
-        localStorage.setItem('formData', JSON.stringify(formData));
-    }
-    
+
     function submitFormToFormspree() {
         fetch(form.action, {
-            method: 'POST',
+            method: "POST",
             body: new FormData(form),
-            mode: 'no-cors'
+            mode: "no-cors"
         });
     }
-    
+
     function updateHiddenCartFields() {
         const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
         const shipping = document.getElementById('shippinginformation-shipping').textContent;
         const total = document.getElementById('shippinginformation-total').textContent;
-        
+
         document.getElementById('hidden-cart-subtotal').value = subtotal;
         document.getElementById('hidden-cart-shipping').value = shipping;
         document.getElementById('hidden-cart-total').value = total;
     }
+
+    // === PAYPAL CHECKOUT BUTTON ===
+    paypal.Buttons({
+
+        createOrder: function(data, actions) {
+            const totalAmount = document.getElementById('shippinginformation-total').textContent
+                .replace('$','').trim();
+
+            return actions.order.create({
+                purchase_units: [{
+                    amount: { value: totalAmount }
+                }]
+            });
+        },
+
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+
+                // Guardar datos del pago en tu recibo
+                document.querySelector(".electronicsalesreceipt-paymentmethod-text").textContent =
+                    "Payment Method: PayPal Checkout";
+
+                // Redirigir EXACTAMENTE a tu recibo
+                window.location.hash = "#electronicsalesreceipt";
+            });
+        },
+
+        onError: function(err) {
+            alert("There was an error processing your payment.");
+            console.error(err);
+        }
+
+    }).render('#paypal-button-container');
+
 });
+
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION PC -->
 
