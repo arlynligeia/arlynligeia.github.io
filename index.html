@@ -6864,7 +6864,7 @@ function updateReceiptTotals() {
     document.querySelector('.electronicsalesreceipt-tax-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
 
-// Función para generar números únicos de recibo
+// Función para generar números únicos de recibo - CORREGIDA
 function generateReceiptNumbers() {
     // Generar número de recibo único
     const lastReceipt = localStorage.getItem('lastReceiptNumber') || '00000000';
@@ -6872,15 +6872,17 @@ function generateReceiptNumbers() {
     localStorage.setItem('lastReceiptNumber', newReceipt);
     document.getElementById('electronicsalesreceipt-number').textContent = `N°${newReceipt}`;
     
-    // Generar número de orden único
+    // Generar número de orden único - CORREGIDO
     const date = new Date();
     const year = date.getFullYear().toString().slice(-2);
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
     const lastOrder = localStorage.getItem('lastOrderNumber') || '000001';
     const newOrder = String(parseInt(lastOrder) + 1).padStart(6, '0');
     localStorage.setItem('lastOrderNumber', newOrder);
-    document.getElementById('electronicsalesreceipt-order').textContent = newOrder;
+    
+    // CORRECCIÓN: Solo mostrar el código con año y mes, y el order number separado
     document.getElementById('electronicsalesreceipt-year').textContent = `N°AL${year}${month}`;
+    document.getElementById('electronicsalesreceipt-order').textContent = newOrder;
     
     // Fecha actual
     document.getElementById('electronicsalesreceipt-date').textContent = date.toLocaleDateString('en-US', {
@@ -6890,7 +6892,7 @@ function generateReceiptNumbers() {
     });
 }
 
-// Función para DESCARGAR PDF
+// Función para DESCARGAR PDF - MEJORADA
 function setupDownloadPDF() {
     const downloadButton = document.getElementById('electronicsalesreceipt-button-download-pdf');
     
@@ -6904,30 +6906,37 @@ function setupDownloadPDF() {
 function downloadReceiptPDF() {
     const receiptElement = document.querySelector('.electronicsalesreceipt-container');
     
-    // Opciones mejoradas para el PDF
-    const options = {
-        margin: [10, 10, 10, 10],
-        filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent}.pdf`,
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { 
-            scale: 2,
-            useCORS: true,
-            logging: false,
-            width: receiptElement.scrollWidth,
-            height: receiptElement.scrollHeight,
-            windowWidth: receiptElement.scrollWidth
-        },
-        jsPDF: { 
-            unit: 'mm', 
-            format: 'a4', 
-            orientation: 'portrait',
-            compress: true
-        },
-        pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-    };
-    
-    // Generar PDF con mejor configuración
-    html2pdf().set(options).from(receiptElement).save();
+    // Esperar un momento para que todo se renderice correctamente
+    setTimeout(() => {
+        // Opciones mejoradas para el PDF
+        const options = {
+            margin: [15, 15, 15, 15],
+            filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent.replace('N°', '')}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                logging: true,
+                letterRendering: true,
+                width: receiptElement.scrollWidth,
+                height: receiptElement.scrollHeight,
+                scrollX: 0,
+                scrollY: 0,
+                windowWidth: receiptElement.scrollWidth,
+                windowHeight: receiptElement.scrollHeight
+            },
+            jsPDF: { 
+                unit: 'mm', 
+                format: 'a4', 
+                orientation: 'portrait',
+                compress: true
+            },
+            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        };
+        
+        // Generar PDF con mejor configuración
+        html2pdf().set(options).from(receiptElement).save();
+    }, 500);
 }
 
 // Función para formatear números
@@ -6946,7 +6955,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-<!-- FIN SCRIP: RECIBO ELECTRONICO PC -->
+
+
+
+
+
+
+
+
+
+
   
 </body>
   
