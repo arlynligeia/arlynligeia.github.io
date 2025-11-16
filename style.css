@@ -14318,46 +14318,54 @@ font-variant-numeric: tabular-nums;
 
 /* CONTENEDOR: FORMULARIO */
 .shippinginformation-form {
+width: 100%;
+box-sizing: border-box;
 margin: 0px;
 }
-/* CONTENEDOR: COLUMNAS */
+/* CONTENEDOR: FORMULARIO - COLUMNAS */
 .shippinginformation-form-columns {
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR: GRID */
+/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID */
 .shippinginformation-form-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin: 0 0 20px 0;
 }
-/* CONTENDEDOR: TÍTULOS DE COLUMNAS */
+/* CONTENDEDOR: TÍTULOS */
 .shippinginformation-form-columns-grid-personalinformation-title,
 .shippinginformation-form-columns-grid-shippingaddress-title {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #FF6B00 !important;
 text-decoration: none;
-text-transform: uppercase;     
+text-transform: uppercase;
+text-align: center;   
 line-height: 1.5; 
-text-align: center;  
 margin: 0 0 5px 0;
 }
-/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
+/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID - INFORMACIÓN PERSONAL */
+.shippinginformation-form-columns-grid-personalinformation {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+/* TÍTULOS SOBRE LAS CAJAS */
 .shippinginformation-form-columns-grid-personalinformation-label,
 .shippinginformation-form-columns-grid-shippingaddress-label {
-display: block;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #00FF00 !important;
 text-decoration: none;
-text-transform: uppercase;   
+text-transform: uppercase;
+text-align: left;     
 line-height: 1.5; 
-text-align: left;  
 margin: 0 0 5px 0;
 }
-/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
+/* CAJAS Y TEXTOS DENTRO */
 .shippinginformation-form-columns-grid-personalinformation-input,
 .shippinginformation-form-columns-grid-shippingaddress-input {
 width: 100%;
@@ -14387,7 +14395,7 @@ background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
 margin: 0 0 15px 0;  
-padding: 15px;
+padding: 20px;
 }
 .shippinginformation-paymentmethod-text {
 font-family: 'Share Tech Mono', monospace;
