@@ -6766,7 +6766,9 @@ function formatNumberWithCommas(number) {
 
 
 
-  <!-- SCRIP: ELECTRONIC SALES RECEIPT -->
+<!-- SCRIP: ELECTRONIC SALES RECEIPT -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
 <script>
 // Función para generar el recibo automáticamente
 function generateElectronicReceipt() {
@@ -6829,6 +6831,9 @@ function generateElectronicReceipt() {
     
     // 5. GENERAR NÚMEROS ÚNICOS
     generateReceiptNumbers();
+    
+    // 6. CONFIGURAR BOTÓN DESCARGAR PDF
+    setupDownloadPDF();
 }
 
 // Función para actualizar totales del recibo
@@ -6882,7 +6887,34 @@ function generateReceiptNumbers() {
     });
 }
 
-// Función para formatear números (debe estar en ambos scripts)
+// Función para DESCARGAR PDF
+function setupDownloadPDF() {
+    const downloadButton = document.getElementById('electronicsalesreceipt-button-download-pdf');
+    
+    if (downloadButton) {
+        downloadButton.addEventListener('click', function() {
+            downloadReceiptPDF();
+        });
+    }
+}
+
+function downloadReceiptPDF() {
+    const receiptElement = document.querySelector('.electronicsalesreceipt-container');
+    
+    // Opciones para el PDF
+    const options = {
+        margin: 10,
+        filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent}.pdf`,
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    };
+    
+    // Generar PDF
+    html2pdf().set(options).from(receiptElement).save();
+}
+
+// Función para formatear números
 function formatNumberWithCommas(number) {
     const num = parseFloat(number);
     return num.toLocaleString('en-US', {
@@ -6899,6 +6931,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<!-- FIN SCRIP: ELECTRONIC SALES RECEIPT -->
 
   
 </body>
