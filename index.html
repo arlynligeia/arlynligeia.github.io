@@ -4929,6 +4929,9 @@ Cosmic/Psychological Horror</p>
 
 
 
+
+
+  
 <!-- CARRITO -->
  
 <!-- CART EMPTY PC -->
@@ -6654,48 +6657,83 @@ toggleCart();
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
 <script>
-// Script para redirección a PayPal - Versión corregida
+// Script para redirección a PayPal Standard
 document.addEventListener('DOMContentLoaded', function() {
-const form = document.getElementById('shippinginformation-form');
-const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
-// Manejar clic en "PROCEED PAYMENT"
-proceedButton.addEventListener('click', function(e) {
-e.preventDefault();
-// Validar que el formulario esté completo
-if (!form.checkValidity()) {
-form.reportValidity();
-return;
-}
-// Obtener el monto total del carrito
-const totalAmount = document.getElementById('shippinginformation-total').textContent;
-const cleanAmount = totalAmount.replace('$', '').trim();
-// Actualizar campos ocultos con datos del carrito
-updateHiddenCartFields();
-// Enviar formulario a Formspree
-submitFormToFormspree();
-// Redirigir a PayPal con el monto - USANDO paypal.me que SÍ funciona
-redirectToPayPal(cleanAmount);
-});
-function redirectToPayPal(amount) {
-// Usar paypal.me que es más confiable y funciona
-const paypalUrl = `https://paypal.me/arlynligeia/${amount}USD`;
-window.location.href = paypalUrl;
-}
-function submitFormToFormspree() {
-fetch(form.action, {
-method: 'POST',
-body: new FormData(form),
-mode: 'no-cors'
-});
-}
-function updateHiddenCartFields() {
-const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
-const shipping = document.getElementById('shippinginformation-shipping').textContent;
-const total = document.getElementById('shippinginformation-total').textContent;
-document.getElementById('hidden-cart-subtotal').value = subtotal;
-document.getElementById('hidden-cart-shipping').value = shipping;
-document.getElementById('hidden-cart-total').value = total;
-}
+    const form = document.getElementById('shippinginformation-form');
+    const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
+    
+    // Manejar clic en "PROCEED PAYMENT"
+    proceedButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Validar que el formulario esté completo
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        
+        // Obtener el monto total del carrito
+        const totalAmount = document.getElementById('shippinginformation-total').textContent;
+        const cleanAmount = totalAmount.replace('$', '').trim();
+        
+        // Guardar datos para el recibo
+        saveFormData();
+        
+        // Actualizar campos ocultos con datos del carrito
+        updateHiddenCartFields();
+        
+        // Enviar formulario a Formspree
+        submitFormToFormspree();
+        
+        // Redirigir a PayPal Standard con return URL
+        redirectToPayPalStandard(cleanAmount);
+    });
+    
+    function redirectToPayPalStandard(amount) {
+        // URL de retorno a tu recibo electrónico
+        const returnUrl = window.location.origin + window.location.pathname + '#electronicsalesreceipt';
+        
+        // PayPal Standard con return URL
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${amount}&currency_code=USD&item_name=Order&return=${encodeURIComponent(returnUrl)}&cancel_return=${encodeURIComponent(window.location.href)}&no_shipping=1&no_note=1`;
+        
+        window.location.href = paypalUrl;
+    }
+    
+    function saveFormData() {
+        const formData = {
+            firstname: document.getElementById('shippinginformation-firstname').value,
+            lastname: document.getElementById('shippinginformation-lastname').value,
+            idnumber: document.getElementById('shippinginformation-idnumber').value,
+            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
+            email: document.getElementById('shippinginformation-email').value,
+            country: document.getElementById('shippinginformation-country').value,
+            state: document.getElementById('shippinginformation-state').value,
+            city: document.getElementById('shippinginformation-city').value,
+            zipcode: document.getElementById('shippinginformation-zipcode').value,
+            address: document.getElementById('shippinginformation-address').value,
+            address2: document.getElementById('shippinginformation-address2').value,
+            apartment: document.getElementById('shippinginformation-apartment').value
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+    }
+    
+    function submitFormToFormspree() {
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+        });
+    }
+    
+    function updateHiddenCartFields() {
+        const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
+        const shipping = document.getElementById('shippinginformation-shipping').textContent;
+        const total = document.getElementById('shippinginformation-total').textContent;
+        
+        document.getElementById('hidden-cart-subtotal').value = subtotal;
+        document.getElementById('hidden-cart-shipping').value = shipping;
+        document.getElementById('hidden-cart-total').value = total;
+    }
 });
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION PC -->
