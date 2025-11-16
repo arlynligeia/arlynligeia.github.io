@@ -13812,7 +13812,7 @@ justify-content: center;
 min-width: 30px;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: #00FF00 !important;
+color: black !important;
 text-decoration: none;
 margin: 0px;   
 }
@@ -13826,6 +13826,7 @@ justify-content: space-between;
 align-items: center;
 }
 .cartfull-table-wrapper-body-row-cell-button-remove {
+width: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -13837,7 +13838,7 @@ color: white !important;
 text-decoration: none;
 text-align: center;
 margin: 0px;
-padding: 10px;
+padding: 0px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;  
@@ -13855,8 +13856,8 @@ display: flex;
 justify-content: flex-end;
 align-items: center;
 background: transparent !important;   
-margin: 0px;
-padding: 0px;
+margin: 0 0 10px 0;
+padding: 0 10px;
 }
 .cartfull-table-wrapper-body-row-cell-subtotal-text,
 .cartfull-table-wrapper-body-row-cell-shipping-text,
@@ -13880,12 +13881,11 @@ justify-content: space-between;
 align-items: center;
 background: #FF66CC !important;
 border-radius: 6px;    
-margin: 0px;
+margin: 0 0 10px 0;
 padding: 0 10px;
 }
 .cartfull-table-wrapper-body-row-cell-totalfinal-value {
 background: #ff1493 !important;
-color: white !important;
 }
 .cartfull-table-wrapper-body-row-cell-subtotal-value-symbol,
 .cartfull-table-wrapper-body-row-cell-shipping-value-symbol,
@@ -13898,7 +13898,11 @@ font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
 margin: 0px; 
-}   
+}
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-symbol,
+.cartfull-table-wrapper-body-row-cell-totalfinal-value-amount {
+color: white !important;
+}
 .cartfull-table-wrapper-body-row-cell-subtotal-value-symbol,
 .cartfull-table-wrapper-body-row-cell-shipping-value-symbol,
 .cartfull-table-wrapper-body-row-cell-totalfinal-value-symbol {
