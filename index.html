@@ -5219,9 +5219,6 @@ Cosmic/Psychological Horror</p>
 <a class="shippinginformation-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
 <a class="shippinginformation-button-proceedpayment" href="#proceedpayment">PROCEED PAYMENT</a>
 </div>
-
-  <!-- AQUÍ AGREGA EL CONTENEDOR PAYPAL -->
-        <div id="paypal-button-container" style="display: none; margin-top: 20px;"></div>
 </form>
 </div>  
 </div>
@@ -6660,13 +6657,10 @@ toggleCart();
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
 
-<!-- SCRIP: SHIPPING INFORMATION PC -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAAR14SP0IP9tkhLIERUp2MognioM888ikn_7EaISL5O4mLypQbcw8IYKWlixE7ogi0tCGjQWKj9vPeBEg&currency=USD"></script>
 
 <script>
-// ==== SHIPPING INFORMATION SCRIPT + PAYPAL CHECKOUT ====
+// ==== SHIPPING INFORMATION - REDIRECCIÓN DIRECTA ====
 document.addEventListener('DOMContentLoaded', function() {
-
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
 
@@ -6678,13 +6672,39 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        updateHiddenCartFields();
+        // 1. Enviar formulario a Formspree
         submitFormToFormspree();
         
-        // Mostrar botón PayPal después de validar formulario
-        document.getElementById("paypal-button-container").style.display = "block";
-        proceedButton.style.display = "none";
+        // 2. Actualizar campos ocultos  
+        updateHiddenCartFields();
+        
+        // 3. Guardar datos para el recibo
+        saveFormData();
+        
+        // 4. REDIRECCIÓN DIRECTA A PAYPAL
+        redirectToPayPalStandard();
     });
+
+    function redirectToPayPalStandard() {
+        const totalAmount = document.getElementById('shippinginformation-total').textContent.replace('$','').trim();
+        
+        // URL de retorno a tu recibo
+        const returnUrl = window.location.href.split('#')[0] + '#electronicsalesreceipt';
+        
+        // PayPal Standard con return URL
+        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${totalAmount}&currency_code=USD&item_name=Order&return=${encodeURIComponent(returnUrl)}&cancel_return=${encodeURIComponent(window.location.href)}`;
+        
+        window.location.href = paypalUrl;
+    }
+
+    function saveFormData() {
+        const formData = {
+            firstname: document.getElementById('shippinginformation-firstname').value,
+            lastname: document.getElementById('shippinginformation-lastname').value,
+            // ... todos los campos
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+    }
 
     function submitFormToFormspree() {
         fetch(form.action, {
@@ -6703,61 +6723,6 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('hidden-cart-shipping').value = shipping;
         document.getElementById('hidden-cart-total').value = total;
     }
-
-    // === PAYPAL CHECKOUT BUTTON ===
-    paypal.Buttons({
-
-        createOrder: function(data, actions) {
-            const totalAmount = document.getElementById('shippinginformation-total').textContent
-                .replace('$','').trim();
-
-            return actions.order.create({
-                purchase_units: [{
-                    amount: { 
-                        value: totalAmount,
-                        currency_code: 'USD'
-                    }
-                }]
-            });
-        },
-
-        onApprove: function(data, actions) {
-            return actions.order.capture().then(function(orderData) {
-                // Pago exitoso - guardar datos del formulario
-                saveFormData();
-                
-                // Redirigir al recibo electrónico
-                window.location.hash = "#electronicsalesreceipt";
-                
-                // Aquí llamarás a tu función generateElectronicReceipt()
-            });
-        },
-
-        onError: function(err) {
-            alert("There was an error processing your payment. Please try again.");
-            console.error('PayPal Error:', err);
-        }
-
-    }).render('#paypal-button-container');
-    
-    function saveFormData() {
-        const formData = {
-            firstname: document.getElementById('shippinginformation-firstname').value,
-            lastname: document.getElementById('shippinginformation-lastname').value,
-            idnumber: document.getElementById('shippinginformation-idnumber').value,
-            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
-            email: document.getElementById('shippinginformation-email').value,
-            country: document.getElementById('shippinginformation-country').value,
-            state: document.getElementById('shippinginformation-state').value,
-            city: document.getElementById('shippinginformation-city').value,
-            zipcode: document.getElementById('shippinginformation-zipcode').value,
-            address: document.getElementById('shippinginformation-address').value,
-            address2: document.getElementById('shippinginformation-address2').value,
-            apartment: document.getElementById('shippinginformation-apartment').value
-        };
-        localStorage.setItem('formData', JSON.stringify(formData));
-    }
-
 });
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION PC -->
