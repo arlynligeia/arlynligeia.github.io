@@ -14982,79 +14982,56 @@ text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
 }   
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CONTENEDOR: INFORMACIÓN DE PAGO - NUEVO */
 .electronicsalesreceipt-paymentinformation {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
-text-align: center;
 }
 .electronicsalesreceipt-paymentinformation-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
-line-height: 1.5; 
+line-height: 1.5;
 margin: 0px;
 }
-
 /* CONTENEDOR: INFORMACIÓN LEGAL */
 .electronicsalesreceipt-legal {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-legal-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
+line-height: 1.5;
 margin: 0px;
 }
-.electronicsalesreceipt-legal-link {
-color: #39ff14 !important;
+.electronicsalesreceipt-legal-text-link {
+color: #ff1493 !important;
 }
-
-/* CONTENEDOR: AGRADECIMIENTO - NUEVO */
+/* CONTENEDOR: AGRADECIMIENTO */
 .electronicsalesreceipt-thanks {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #39ff14 !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
-margin: 0 0 30px 0;
+width: 100%;
+margin: 0px;
 }
 .electronicsalesreceipt-thanks-text {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #39ff14 !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5; 
 text-align: center;  
 margin: 0px;
 }
-
-/* CONTENEDOR DE BOTONES FINALES */
+/* CONTENEDOR: BOTONES FINALES */
 .electronicsalesreceipt-button {
 display: flex;
 justify-content: space-between;
@@ -15065,33 +15042,32 @@ margin: 0px;
 .electronicsalesreceipt-button-download {
 display: flex;
 justify-content: space-between;
+background: #00CED1 !important;   
 border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: white !important;
+color: black !important;
 text-decoration: none;
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
+margin: 0px;     
+padding: 10px 20px;
 border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.electronicsalesreceipt-button-continueshopping {
-background-color: #00CED1 !important;
-}
 .electronicsalesreceipt-button-print {
-background-color: #FFA500 !important;
+background: #FFA500 !important;
 }
 .electronicsalesreceipt-button-download {
-background-color: #ff1493 !important;
+background: #ff1493 !important;
 }
 .electronicsalesreceipt-button-continueshopping:hover,
 .electronicsalesreceipt-button-print:hover,
 .electronicsalesreceipt-button-download:hover {
 transform: scale(1.05);
 }
+
+
+
 
 
 
