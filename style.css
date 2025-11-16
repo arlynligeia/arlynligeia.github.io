@@ -14681,8 +14681,12 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
+
 /* CONTENEDOR: SERIES */
 .electronicsalesreceipt-series {
+width: 100%;
+display: flex;
+align-items: center;   
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -14709,6 +14713,12 @@ text-align: left;
 line-height: 1.5;  
 margin: 0px;
 }
+
+
+
+
+
+
 /* CONTENEDOR: INFORMACIÓN DEL EMISOR */
 .electronicsalesreceipt-issuer {
 background: transparent !important;
@@ -14773,6 +14783,7 @@ text-align: left;
 line-height: 1.5; 
 margin: 0px;
 }
+
 /* CONTENEDOR: DETALLES DE LA ORDEN */
 .electronicsalesreceipt-receipt-orderdetails {
 background: transparent !important;
@@ -14982,24 +14993,31 @@ text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
 }   
-/* CONTENEDOR: INFORMACIÓN DE PAGO - NUEVO */
-.electronicsalesreceipt-paymentinformation {
+/* CONTENEDOR: MÉTODO DE PAGO */
+.electronicsalesreceipt-paymentmethod {
+width: 100%;
+display: flex;
+justify-content: center;   
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
 margin: 0 0 15px 0;  
 padding: 15px;
 }
-.electronicsalesreceipt-paymentinformation-text {
+.electronicsalesreceipt-paymentmethod-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
+text-align: center;     
 margin: 0px;
 }
 /* CONTENEDOR: INFORMACIÓN LEGAL */
 .electronicsalesreceipt-legal {
+width: 100%;
+display: flex;
+justify-content: center;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -15012,6 +15030,7 @@ font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
+text-align: center;  
 margin: 0px;
 }
 .electronicsalesreceipt-legal-text-link {
@@ -15020,12 +15039,14 @@ color: #ff1493 !important;
 /* CONTENEDOR: AGRADECIMIENTO */
 .electronicsalesreceipt-thanks {
 width: 100%;
-margin: 0px;
+display: flex;
+justify-content: center;
+margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-thanks-text {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
-color: #00FF00 !important;
+color: #FF6B00 !important;
 text-decoration: none;
 line-height: 1.5; 
 text-align: center;  
@@ -15059,6 +15080,7 @@ background: #FFA500 !important;
 }
 .electronicsalesreceipt-button-download {
 background: #ff1493 !important;
+color: white !important;
 }
 .electronicsalesreceipt-button-continueshopping:hover,
 .electronicsalesreceipt-button-print:hover,
