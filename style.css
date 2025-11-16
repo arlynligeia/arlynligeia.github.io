@@ -15455,6 +15455,128 @@ margin-bottom: 0px;
 .privacypolicy-container-mobile { display: block; }
 }
 
+/* ======================================
+   COOKIE POLICY
+====================================== */
+.cookiepolicy-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 10px auto 40px auto;
+padding: 30px;
+}
+.cookiepolicy-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cookiepolicy-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.cookiepolicy-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cookiepolicy-information {
+width: 100%;
+margin: 0px; 
+}
+.cookiepolicy-information-text,
+.cookiepolicy-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.cookiepolicy-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.cookiepolicy-container { display: block; }
+.cookiepolicy-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: COOKIE POLICY
+====================================== */
+@media (max-width: 768px) {
+.cookiepolicy-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.cookiepolicy-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cookiepolicy-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.cookiepolicy-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.cookiepolicy-information-mobile {
+width: 100%;
+margin: 0px; 
+}
+.cookiepolicy-information-text-mobile,
+.cookiepolicy-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.cookiepolicy-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.cookiepolicy-container { display: none; }
+.cookiepolicy-container-mobile { display: block; }
+}
 
 
 
