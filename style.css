@@ -14904,13 +14904,11 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-total-amount {
 text-align: right;
 }
-/* CONTENEDORES: SUBTOTAL, SHIPPING, TOTALFINAL, VALORES */
+
+/* CONTENEDORES: SUBTOTAL, SHIPPING, TOTALFINAL */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping,
-.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal,
-.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
-.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value,
-.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value {
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal, {
 width: 100%;
 box-sizing: border-box;   
 display: flex;
@@ -14921,7 +14919,28 @@ padding: 0px;
 }
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-text,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-text,
-.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: right;     
+margin: 0px; 
+}
+
+
+/* CONTENEDORES: VALORES */
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: space-between;    
+align-items: center;
+margin: 0px;
+padding: 0 10px;
+}
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-symbol,
@@ -14933,12 +14952,7 @@ font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 margin: 0px; 
-}
-.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-text,
-.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-text,
-.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
-text-align: right;    
-}
+}   
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-symbol {
@@ -14949,6 +14963,11 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
 text-align: right;
 }
+
+
+
+
+
 
 
 
