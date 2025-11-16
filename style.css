@@ -14805,7 +14805,7 @@ border-spacing: 10px;
 /* ANCHO DE COLUMNAS*/
 .electronicsalesreceipt-table-wrapper th:nth-child(1),
 .electronicsalesreceipt-table-wrapper td:nth-child(1) {
-width: 58%;
+width: 54%;
 }
 .electronicsalesreceipt-table-wrapper th:nth-child(2),
 .electronicsalesreceipt-table-wrapper td:nth-child(2) {
@@ -14813,11 +14813,11 @@ width: 6%;
 }
 .electronicsalesreceipt-table-wrapper th:nth-child(3),
 .electronicsalesreceipt-table-wrapper td:nth-child(3) {
-width: 18%;
+width: 20%;
 }
 .electronicsalesreceipt-table-wrapper th:nth-child(4),
 .electronicsalesreceipt-table-wrapper td:nth-child(4) {
-width: 18%;
+width: 20%;
 }
 /* CONTENEDOR: ENCABEZADOS */
 .electronicsalesreceipt-table-wrapper-head-row {
@@ -14830,9 +14830,10 @@ font-size: 1.2rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;   
-text-align: center; 
-margin: 0px;  
-padding: 0px;
+line-height: 1.5;
+text-align: center;
+margin: 0px;
+padding: 0px; 
 }
 /* DIVISOR */
 .electronicsalesreceipt-table-wrapper-divider-1 td,
@@ -14842,7 +14843,7 @@ width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
 margin: 5px 0; 
-}  
+} 
 /* CONTENEDOR: CUERPO */
 .electronicsalesreceipt-table-wrapper-body {
 width: 100%;
@@ -14852,14 +14853,8 @@ margin: 0px;
 .electronicsalesreceipt-table-wrapper-body-row {
 vertical-align: middle;
 }
-/* CONTENEDOR: CUERPO - CELDA */
-.electronicsalesreceipt-table-wrapper-body-row-cell {
-box-sizing: border-box;
-margin: 0px;
-padding: 10px;   
-}
 
-/* CONTENEDORES DE PRODUCTOS */
+/* CONTENEDORES: PRODUCTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-name,
 .electronicsalesreceipt-table-wrapper-body-row-cell-quantity,
 .electronicsalesreceipt-table-wrapper-body-row-cell-unit,
@@ -14868,19 +14863,20 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+box-sizing: border-box;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
-text-decoration: none;   
+color: #00FF00 !important;
+text-decoration: none;  
+margin: 0px;
+padding: 5px 10px;
 }
-/* TEXTOS DE PRODUCTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-name-text {
 text-align: left;   
 }
 .electronicsalesreceipt-table-wrapper-body-row-cell-quantity-text {
 text-align: center; 
 }
-/* SÍMBOLOS Y MONTOS DE PRODUCTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-unit-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-total-symbol {
 text-align: left;
@@ -14895,15 +14891,16 @@ text-align: right;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal {
 width: 100%;
 display: flex;
-justify-content: flex-end;
+justify-content: space-between;
 align-items: center;
+box-sizing: border-box;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
-text-decoration: none;
-text-align: right;
+text-decoration: none;  
+margin: 0px;
+padding: 5px 10px;
 }
-/* TEXTOS DE SUBTOTAL, SHIPPING, TOTAL */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-text,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-text,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
@@ -14917,12 +14914,14 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+box-sizing: border-box;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;  
+margin: 0px;
+padding: 5px 10px;
 }
-/* SÍMBOLOS Y MONTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-symbol,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-symbol {
@@ -14933,6 +14932,10 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
 text-align: right;
 }
+
+
+
+
 
 
 
@@ -15089,6 +15092,9 @@ background-color: #ff1493 !important;
 .electronicsalesreceipt-button-download:hover {
 transform: scale(1.05);
 }
+
+
+
 
 
 
