@@ -14334,7 +14334,15 @@ grid-template-columns: repeat(2, 1fr);
 gap: 20px;
 margin: 0 0 20px 0;
 }
-/* CONTENDEDOR: TÍTULOS */
+/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID - INFORMACIÓN PERSONAL, DIRECCIÓN DE ENVIO */
+.shippinginformation-form-columns-grid-personalinformation,
+.shippinginformation-form-columns-grid-shippingaddress {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+/* TÍTULOS */
 .shippinginformation-form-columns-grid-personalinformation-title,
 .shippinginformation-form-columns-grid-shippingaddress-title {
 font-family: 'Orbitron', sans-serif;
@@ -14345,13 +14353,6 @@ text-transform: uppercase;
 text-align: center;   
 line-height: 1.5; 
 margin: 0 0 5px 0;
-}
-/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID - INFORMACIÓN PERSONAL */
-.shippinginformation-form-columns-grid-personalinformation {
-width: 100%;
-box-sizing: border-box;
-display: block;
-margin: 0px;
 }
 /* TÍTULOS SOBRE LAS CAJAS */
 .shippinginformation-form-columns-grid-personalinformation-label,
