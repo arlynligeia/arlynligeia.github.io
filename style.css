@@ -14236,12 +14236,15 @@ margin-bottom: 16px;
 color: #FF66CC !important;
 text-decoration: none;
 }
+
 /* CONTENEDOR: ORDER SUMMARY */
 .shippinginformation-ordersummary {
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
-margin: 0 0 15px 0;   
+margin: 0 0 15px 0;  
 padding: 15px;
 }
 .shippinginformation-ordersummary-title {
@@ -14249,36 +14252,52 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.5rem;
 color: #FF6B00 !important;
 text-decoration: none;
-text-transform: uppercase;   
+text-transform: uppercase;
+text-align: center;     
 line-height: 1.5; 
-text-align: center;  
 margin: 0px;
 }
+/* CONTENEDOR: ORDER SUMMARY - SUBTOTAL, SHIPPING, TOTAL*/
 .shippinginformation-ordersummary-subtotal,
 .shippinginformation-ordersummary-shipping,
 .shippinginformation-ordersummary-total {
 display: flex;
 justify-content: space-between; 
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal-text,
+.shippinginformation-ordersummary-shipping-text,
+.shippinginformation-ordersummary-total-text {
+flex: 1;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTENEDOR: ORDER SUMMARY - VALORES */
+.shippinginformation-ordersummary-subtotal-value,
+.shippinginformation-ordersummary-shipping-value,
+.shippinginformation-ordersummary-total-value {
+min-width: 150px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol,
+.shippinginformation-ordersummary-shipping-value-symbol,
+.shippinginformation-ordersummary-total-value-symbol,
+.shippinginformation-ordersummary-subtotal-value-amount,
+.shippinginformation-ordersummary-shipping-value-amount,
+.shippinginformation-ordersummary-total-value-amount {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0px;
-}
-.shippinginformation-ordersummary-subtotal-text,
-.shippinginformation-ordersummary-shipping-text,
-.shippinginformation-ordersummary-total-text {
-text-align: left;
-flex: 1;
-}
-.shippinginformation-ordersummary-subtotal-value,
-.shippinginformation-ordersummary-shipping-value,
-.shippinginformation-ordersummary-total-value {
-min-width: 130px;
-display: flex;
-justify-content: flex-end;  
-align-items: center;
 }
 .shippinginformation-ordersummary-subtotal-value-symbol,
 .shippinginformation-ordersummary-shipping-value-symbol,
@@ -14290,11 +14309,16 @@ min-width: 5px;
 .shippinginformation-ordersummary-subtotal-value-amount,
 .shippinginformation-ordersummary-shipping-value-amount,
 .shippinginformation-ordersummary-total-value-amount {
-min-width: 110px;
+min-width: 150px;
 text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
-}   
+}
+
+
+
+
+
 /* DIVISOR */
 .shippinginformation-ordersummary-divider {
 width: 100%;
@@ -14302,6 +14326,10 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 5px 0; 
 }   
+
+
+
+
 /* CONTENEDOR: FORMULARIO */
 .shippinginformation-form {
 margin: 0px;
@@ -14359,6 +14387,12 @@ text-decoration: none;
 margin: 0 0 15px 0;
 padding: 10px;
 }
+
+
+
+
+
+
 /* CONTENEDOR: OPCIONES DE PAGO */
 .shippinginformation-paymentmethod {
 background: transparent !important;
@@ -14779,8 +14813,6 @@ text-align: left;
 line-height: 1.5; 
 margin: 0px;
 }
-
-
 /* CONTENEDOR: DETALLES DE LA ORDEN */
 .electronicsalesreceipt-receipt-orderdetails {
 width: 100%;
@@ -14865,7 +14897,6 @@ margin: 0px;
 .electronicsalesreceipt-table-wrapper-body-row {
 vertical-align: middle;
 }
-
 /* CONTENEDOR: PRODUCTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-name,
 .electronicsalesreceipt-table-wrapper-body-row-cell-quantity,
@@ -14905,8 +14936,6 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-total-amount {
 text-align: right;
 }
-
-
 /* CONTENEDORES: SUBTOTAL, SHIPPING, TOTALFINAL */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping,
@@ -14929,8 +14958,6 @@ text-decoration: none;
 text-align: right;     
 margin: 0px; 
 }
-
-
 /* CONTENEDORES: VALORES */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value,
@@ -14965,17 +14992,6 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
 text-align: right;
 }
-
-
-
-
-
-
-
-
-
-
-
 /* CONTENEDOR: DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-tax {
 width: 100%;
