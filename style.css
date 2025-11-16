@@ -14891,7 +14891,7 @@ text-align: right;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal {
 width: 100%;
 display: flex;
-justify-content: space-between;
+justify-content: flex-end;
 align-items: center;
 box-sizing: border-box;
 font-family: 'Share Tech Mono', monospace;
@@ -14902,10 +14902,8 @@ text-align: right;
 margin: 0px;
 padding: 0 10px;
 }
-.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-text,
-.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-text,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
-text-align: right;  
+color: #00FF00 !important;
 }
 /* CONTENEDORES DE VALORES */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
