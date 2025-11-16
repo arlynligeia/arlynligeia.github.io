@@ -6657,7 +6657,8 @@ toggleCart();
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
 
-<script src="https://www.paypal.com/sdk/js?client-id=Ab9QYHDGpt2r0Kz7pQPHicWjfLHq9i9G1sKbwk_xLVkCgEDEZMRsd1wb1grAz-mAtInOk0CEogJOt0Tl&currency=USD"></script>
+<!-- SCRIP: SHIPPING INFORMATION PC -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAAR14SP0IP9tkhLIERUp2MognioM888ikn_7EaISL5O4mLypQbcw8IYKWlixE7ogi0tCGjQWKj9vPeBEg&currency=USD"></script>
 
 <script>
 // ==== SHIPPING INFORMATION SCRIPT + PAYPAL CHECKOUT ====
@@ -6709,32 +6710,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
             return actions.order.create({
                 purchase_units: [{
-                    amount: { value: totalAmount }
+                    amount: { 
+                        value: totalAmount,
+                        currency_code: 'USD'
+                    }
                 }]
             });
         },
 
         onApprove: function(data, actions) {
             return actions.order.capture().then(function(orderData) {
-
-                // Guardar datos del pago en tu recibo
-                document.querySelector(".electronicsalesreceipt-paymentmethod-text").textContent =
-                    "Payment Method: PayPal Checkout";
-
-                // Redirigir EXACTAMENTE a tu recibo
+                // Pago exitoso - guardar datos del formulario
+                saveFormData();
+                
+                // Redirigir al recibo electrónico
                 window.location.hash = "#electronicsalesreceipt";
+                
+                // Aquí llamarás a tu función generateElectronicReceipt()
             });
         },
 
         onError: function(err) {
-            alert("There was an error processing your payment.");
-            console.error(err);
+            alert("There was an error processing your payment. Please try again.");
+            console.error('PayPal Error:', err);
         }
 
     }).render('#paypal-button-container');
+    
+    function saveFormData() {
+        const formData = {
+            firstname: document.getElementById('shippinginformation-firstname').value,
+            lastname: document.getElementById('shippinginformation-lastname').value,
+            idnumber: document.getElementById('shippinginformation-idnumber').value,
+            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
+            email: document.getElementById('shippinginformation-email').value,
+            country: document.getElementById('shippinginformation-country').value,
+            state: document.getElementById('shippinginformation-state').value,
+            city: document.getElementById('shippinginformation-city').value,
+            zipcode: document.getElementById('shippinginformation-zipcode').value,
+            address: document.getElementById('shippinginformation-address').value,
+            address2: document.getElementById('shippinginformation-address2').value,
+            apartment: document.getElementById('shippinginformation-apartment').value
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+    }
 
 });
-
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION PC -->
 
