@@ -14712,14 +14712,10 @@ text-align: left;
 line-height: 1.5;  
 margin: 0px;
 }
-
-
-
-
-
-
 /* CONTENEDOR: INFORMACIÓN DEL EMISOR */
 .electronicsalesreceipt-issuer {
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -14751,6 +14747,8 @@ margin: 0px;
 }
 /* CONTENEDOR: INFORMACIÓN DEL CLIENTE */
 .electronicsalesreceipt-customer {
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -14782,9 +14780,10 @@ text-align: left;
 line-height: 1.5; 
 margin: 0px;
 }
-
 /* CONTENEDOR: DETALLES DE LA ORDEN */
 .electronicsalesreceipt-receipt-orderdetails {
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -14944,6 +14943,8 @@ text-align: right;
 }
 /* CONTENEDOR: DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-tax {
+width: 100%;
+box-sizing: border-box;
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
@@ -14995,6 +14996,7 @@ font-variant-numeric: tabular-nums;
 /* CONTENEDOR: MÉTODO DE PAGO */
 .electronicsalesreceipt-paymentmethod {
 width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: center;   
 background: transparent !important;
@@ -15015,6 +15017,7 @@ margin: 0px;
 /* CONTENEDOR: INFORMACIÓN LEGAL */
 .electronicsalesreceipt-legal {
 width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: center;
 background: transparent !important;
@@ -15038,6 +15041,7 @@ color: #ff1493 !important;
 /* CONTENEDOR: AGRADECIMIENTO */
 .electronicsalesreceipt-thanks {
 width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: center;
 margin: 0 0 15px 0;
@@ -15053,6 +15057,8 @@ margin: 0px;
 }
 /* CONTENEDOR: BOTONES FINALES */
 .electronicsalesreceipt-button {
+width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: space-between;
 margin: 0px;
