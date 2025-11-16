@@ -5219,6 +5219,10 @@ Cosmic/Psychological Horror</p>
 <a class="shippinginformation-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
 <a class="shippinginformation-button-proceedpayment" href="#proceedpayment">PROCEED PAYMENT</a>
 </div>
+
+<!-- AGREGAR ESTO EN TU HTML DEL SHIPPING INFORMATION -->
+<div id="paypal-button-container" style="display: none;"></div>
+  
 </form>
 </div>  
 </div>
@@ -6656,61 +6660,95 @@ toggleCart();
 
 
 <!-- SCRIP: SHIPPING INFORMATION PC -->
-
+<script src="https://www.paypal.com/sdk/js?client-id=BAAR14SP0IP9tkhLIERUp2MognioM888ikn_7EaISL5O4mLypQbcw8IYKWlixE7ogi0tCGjQWKj9vPeBEg&currency=USD"></script>
 
 <script>
-// ==== SHIPPING INFORMATION - REDIRECCIÓN DIRECTA ====
+// Script para PayPal Checkout
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
     const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
 
+    // Manejar clic en "PROCEED PAYMENT"
     proceedButton.addEventListener('click', function(e) {
         e.preventDefault();
 
+        // Validar que el formulario esté completo
         if (!form.checkValidity()) {
             form.reportValidity();
             return;
         }
 
-        // 1. Enviar formulario a Formspree
-        submitFormToFormspree();
-        
-        // 2. Actualizar campos ocultos  
+        // Obtener el monto total del carrito
+        const totalAmount = document.getElementById('shippinginformation-total').textContent;
+        const cleanAmount = totalAmount.replace('$', '').trim();
+
+        // Actualizar campos ocultos con datos del carrito
         updateHiddenCartFields();
         
-        // 3. Guardar datos para el recibo
+        // Guardar datos del formulario
         saveFormData();
-        
-        // 4. REDIRECCIÓN DIRECTA A PAYPAL
-        redirectToPayPalStandard();
+
+        // Enviar formulario a Formspree
+        submitFormToFormspree();
+
+        // Ocultar botón PROCEED y mostrar botón PayPal
+        proceedButton.style.display = 'none';
+        document.getElementById('paypal-button-container').style.display = 'block';
     });
 
-    function redirectToPayPalStandard() {
-        const totalAmount = document.getElementById('shippinginformation-total').textContent.replace('$','').trim();
-        
-        // URL de retorno a tu recibo
-        const returnUrl = window.location.href.split('#')[0] + '#electronicsalesreceipt';
-        
-        // PayPal Standard con return URL
-        const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=arlynligeia@gmail.com&amount=${totalAmount}&currency_code=USD&item_name=Order&return=${encodeURIComponent(returnUrl)}&cancel_return=${encodeURIComponent(window.location.href)}`;
-        
-        window.location.href = paypalUrl;
-    }
+    // PayPal Checkout Button
+    paypal.Buttons({
+        createOrder: function(data, actions) {
+            const totalAmount = document.getElementById('shippinginformation-total').textContent.replace('$', '').trim();
+            
+            return actions.order.create({
+                purchase_units: [{
+                    amount: {
+                        value: totalAmount,
+                        currency_code: 'USD'
+                    }
+                }]
+            });
+        },
+
+        onApprove: function(data, actions) {
+            return actions.order.capture().then(function(orderData) {
+                // Pago exitoso - redirigir al recibo
+                window.location.hash = "#electronicsalesreceipt";
+                // Aquí llamarás a generateElectronicReceipt()
+            });
+        },
+
+        onError: function(err) {
+            alert("Error processing payment. Please try again.");
+            console.error('PayPal Error:', err);
+        }
+
+    }).render('#paypal-button-container');
 
     function saveFormData() {
         const formData = {
             firstname: document.getElementById('shippinginformation-firstname').value,
             lastname: document.getElementById('shippinginformation-lastname').value,
-            // ... todos los campos
+            idnumber: document.getElementById('shippinginformation-idnumber').value,
+            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
+            email: document.getElementById('shippinginformation-email').value,
+            country: document.getElementById('shippinginformation-country').value,
+            state: document.getElementById('shippinginformation-state').value,
+            city: document.getElementById('shippinginformation-city').value,
+            zipcode: document.getElementById('shippinginformation-zipcode').value,
+            address: document.getElementById('shippinginformation-address').value,
+            address2: document.getElementById('shippinginformation-address2').value,
+            apartment: document.getElementById('shippinginformation-apartment').value
         };
         localStorage.setItem('formData', JSON.stringify(formData));
     }
 
     function submitFormToFormspree() {
         fetch(form.action, {
-            method: "POST",
+            method: 'POST',
             body: new FormData(form),
-            mode: "no-cors"
+            mode: 'no-cors'
         });
     }
 
@@ -6725,7 +6763,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
-<!-- FIN SCRIP: SHIPPING INFORMATION PC -->
+
 
 
 
