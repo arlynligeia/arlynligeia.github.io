@@ -14639,6 +14639,9 @@ transform: scale(1.05);
 
 
 
+
+
+
 /* ======================================
    ELECTRONIC SALES RECEIPT
 ====================================== */
@@ -14770,9 +14773,7 @@ text-align: left;
 line-height: 1.5; 
 margin: 0px;
 }
-
-
-/* CONTENEDOR: ORDER DETAILS */
+/* CONTENEDOR: DETALLES DE LA ORDEN */
 .electronicsalesreceipt-receipt-orderdetails {
 background: transparent !important;
 border-radius: 15px;
@@ -14802,7 +14803,6 @@ background: transparent !important;
 table-layout: fixed;
 border-spacing: 10px;
 }
-/* ANCHO DE COLUMNAS*/
 .electronicsalesreceipt-table-wrapper th:nth-child(1),
 .electronicsalesreceipt-table-wrapper td:nth-child(1) {
 width: 50%;
@@ -14820,9 +14820,12 @@ width: 22%;
 width: 22%;
 }
 /* CONTENEDOR: ENCABEZADOS */
-.electronicsalesreceipt-table-wrapper-head-row {
+.electronicsalesreceipt-table-wrapper-head {
 width: 100%;
 margin: 0px;
+}
+.electronicsalesreceipt-table-wrapper-head-row {
+vertical-align: middle;
 }
 .electronicsalesreceipt-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
@@ -14830,7 +14833,6 @@ font-size: 1.2rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;   
-line-height: 1.5;
 text-align: center;
 margin: 0px;
 padding: 0px; 
@@ -14853,8 +14855,7 @@ margin: 0px;
 .electronicsalesreceipt-table-wrapper-body-row {
 vertical-align: middle;
 }
-
-/* CONTENEDORES: PRODUCTOS */
+/* CONTENEDOR: PRODUCTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-name,
 .electronicsalesreceipt-table-wrapper-body-row-cell-quantity,
 .electronicsalesreceipt-table-wrapper-body-row-cell-unit,
@@ -14905,7 +14906,7 @@ padding: 0px;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
 color: #00FF00 !important;
 }
-/* CONTENEDORES DE VALORES */
+/* CONTENEDORES: MONTOS */
 .electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
 .electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value,
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value {
@@ -14931,30 +14932,13 @@ text-align: left;
 .electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
 text-align: right;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* CONTENEDOR: DESGLOSE DE IMPUESTOS */
 .electronicsalesreceipt-tax {
-background-color: rgba(255, 255, 255, 0.1);
+background: transparent !important;
 border-radius: 15px;
-border: 3px solid #39ff14 !important;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
 padding: 15px;
-margin: 0 0 15px 0;
 }
 .electronicsalesreceipt-tax-subtotal,
 .electronicsalesreceipt-tax-vat,
@@ -14963,16 +14947,11 @@ display: flex;
 justify-content: space-between; 
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: white !important;
+color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0px;
 }
-.electronicsalesreceipt-tax-totalfinal {
-color: #39ff14 !important;
-margin-bottom: 0px;
-}
-
 /* Etiqueta a la izquierda */
 .electronicsalesreceipt-tax-subtotal-text,
 .electronicsalesreceipt-tax-vat-text,
@@ -14980,19 +14959,41 @@ margin-bottom: 0px;
 text-align: left;
 flex: 1;
 }
-
-/* Contenedor para símbolo + monto alineados a la derecha */
-.electronicsalesreceipt-tax-subtotal-symbol,
-.electronicsalesreceipt-tax-vat-symbol,
-.electronicsalesreceipt-tax-totalfinal-symbol {
-margin-right: 5px;
-}
-.electronicsalesreceipt-tax-subtotal-amount,
-.electronicsalesreceipt-tax-vat-amount,
-.electronicsalesreceipt-tax-totalfinal-amount {
-text-align: right;
+.electronicsalesreceipt-tax-subtotal-value,
+.electronicsalesreceipt-tax-shipping-value,
+.electronicsalesreceipt-tax-totalfinal-value {
 min-width: 130px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
 }
+.electronicsalesreceipt-tax-subtotal-value-symbol,
+.electronicsalesreceipt-tax-shipping-value-symbol,
+.electronicsalesreceipt-tax-totalfinal-value-symbol {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.electronicsalesreceipt-tax-subtotal-value-amount,
+.electronicsalesreceipt-tax-shipping-value-amount,
+.electronicsalesreceipt-tax-totalfinal-value-amount {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}   
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* CONTENEDOR: INFORMACIÓN DE PAGO - NUEVO */
 .electronicsalesreceipt-paymentinformation {
