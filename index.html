@@ -6655,8 +6655,7 @@ toggleCart();
 
 
 
-
-<!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN SIMPLE -->
+<!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN COMPLETA -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
@@ -6691,17 +6690,21 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('formData', JSON.stringify(formData));
         localStorage.setItem('pendingReceipt', 'true');
 
-        // 2. Enviar a Formspree
+        // 2. GUARDAR CARRITO COMPLETO para el recibo
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        localStorage.setItem('cartForReceipt', JSON.stringify(cart));
+
+        // 3. Enviar a Formspree
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             mode: 'no-cors'
         });
 
-        // 3. Actualizar campos ocultos
+        // 4. Actualizar campos ocultos
         updateHiddenCartFields();
 
-        // 4. REDIRIGIR A PAYPAL.ME (SIN BACKEND)
+        // 5. REDIRIGIR A PAYPAL.ME (SIN BACKEND)
         window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
     });
 
@@ -6722,15 +6725,167 @@ document.addEventListener('DOMContentLoaded', function() {
             if (userConfirmed) {
                 localStorage.removeItem('pendingReceipt');
                 window.location.hash = "#electronicsalesreceipt";
-                // Aquí va tu generateElectronicReceipt()
+                
+                // LLAMAR A LA FUNCIÓN DEL RECIBO
+                if (typeof generateElectronicReceipt === 'function') {
+                    generateElectronicReceipt();
+                }
+            } else {
+                localStorage.removeItem('pendingReceipt');
+                localStorage.removeItem('cartForReceipt');
             }
         }, 2000);
     }
 });
+
+// FUNCIÓN PARA FORMATEAR NÚMEROS (IMPORTANTE - debe estar en ambos scripts)
+function formatNumberWithCommas(number) {
+    const num = parseFloat(number);
+    return num.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
 </script>
 
 
 
+
+
+
+
+  <!-- SCRIP: ELECTRONIC SALES RECEIPT -->
+<script>
+// Función para generar el recibo automáticamente
+function generateElectronicReceipt() {
+    // 1. OBTENER DATOS DEL FORMULARIO
+    const formData = JSON.parse(localStorage.getItem('formData')) || {};
+    
+    // Llenar información del cliente
+    document.getElementById('electronicsalesreceipt-firstname').textContent = formData.firstname || '';
+    document.getElementById('electronicsalesreceipt-lastname').textContent = formData.lastname || '';
+    document.getElementById('electronicsalesreceipt-idnumber').textContent = formData.idnumber || '';
+    document.getElementById('electronicsalesreceipt-mobilephone').textContent = formData.mobilephone || '';
+    document.getElementById('electronicsalesreceipt-email').textContent = formData.email || '';
+    document.getElementById('electronicsalesreceipt-address').textContent = formData.address || '';
+    document.getElementById('electronicsalesreceipt-city').textContent = formData.city || '';
+    document.getElementById('electronicsalesreceipt-country').textContent = formData.country || '';
+    
+    // 2. OBTENER DATOS DEL CARRITO
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const receiptTableBody = document.querySelector('.electronicsalesreceipt-table-wrapper-body');
+    
+    // Limpiar productos anteriores
+    const existingProductRows = receiptTableBody.querySelectorAll('.electronicsalesreceipt-table-wrapper-body-row.product-row');
+    existingProductRows.forEach(row => row.remove());
+    
+    const divider2 = receiptTableBody.querySelector('.electronicsalesreceipt-table-wrapper-divider-2');
+    
+    // 3. AGREGAR PRODUCTOS AL RECIBO
+    cart.forEach((item) => {
+        const productRow = document.createElement('tr');
+        productRow.className = 'electronicsalesreceipt-table-wrapper-body-row product-row';
+        productRow.innerHTML = `
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-name">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-name-text">${item.product}</span>
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-quantity">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-quantity-text">${item.quantity}</span>
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-unit">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-unit-symbol">$</span>
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-unit-amount">${formatNumberWithCommas(item.price)}</span>  
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-total">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-total-symbol">$</span>
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-total-amount">${formatNumberWithCommas(item.totalprice)}</span>  
+                </div>   
+            </td>
+        `;
+        divider2.insertAdjacentElement('beforebegin', productRow);
+    });
+    
+    // 4. ACTUALIZAR TOTALES
+    updateReceiptTotals();
+    
+    // 5. GENERAR NÚMEROS ÚNICOS
+    generateReceiptNumbers();
+}
+
+// Función para actualizar totales del recibo
+function updateReceiptTotals() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let subtotal = 0;
+    let shippingTotal = 0;
+    
+    // Calcular subtotal y shipping
+    cart.forEach(item => {
+        subtotal += item.totalprice;
+        shippingTotal += item.shipping * item.quantity;
+    });
+    
+    const totalFinal = subtotal + shippingTotal;
+    
+    // Actualizar en la tabla
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
+    
+    // Actualizar en desglose de impuestos
+    document.querySelector('.electronicsalesreceipt-tax-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
+    document.querySelector('.electronicsalesreceipt-tax-vat-value-amount').textContent = '0.00';
+    document.querySelector('.electronicsalesreceipt-tax-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
+}
+
+// Función para generar números únicos de recibo
+function generateReceiptNumbers() {
+    // Generar número de recibo único
+    const lastReceipt = localStorage.getItem('lastReceiptNumber') || '00000000';
+    const newReceipt = String(parseInt(lastReceipt) + 1).padStart(8, '0');
+    localStorage.setItem('lastReceiptNumber', newReceipt);
+    document.getElementById('electronicsalesreceipt-number').textContent = `N°${newReceipt}`;
+    
+    // Generar número de orden único
+    const date = new Date();
+    const year = date.getFullYear().toString().slice(-2);
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const lastOrder = localStorage.getItem('lastOrderNumber') || '000001';
+    const newOrder = String(parseInt(lastOrder) + 1).padStart(6, '0');
+    localStorage.setItem('lastOrderNumber', newOrder);
+    document.getElementById('electronicsalesreceipt-order').textContent = newOrder;
+    document.getElementById('electronicsalesreceipt-year').textContent = `N°AL${year}${month}`;
+    
+    // Fecha actual
+    document.getElementById('electronicsalesreceipt-date').textContent = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+// Función para formatear números (debe estar en ambos scripts)
+function formatNumberWithCommas(number) {
+    const num = parseFloat(number);
+    return num.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+
+// Ejecutar automáticamente cuando se carga el recibo
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#electronicsalesreceipt') {
+        generateElectronicReceipt();
+    }
+});
+</script>
 
 
   
