@@ -14236,7 +14236,6 @@ margin-bottom: 16px;
 color: #FF66CC !important;
 text-decoration: none;
 }
-
 /* CONTENEDOR: ORDER SUMMARY */
 .shippinginformation-ordersummary {
 width: 100%;
@@ -14317,19 +14316,6 @@ font-variant-numeric: tabular-nums;
 
 
 
-
-
-/* DIVISOR */
-.shippinginformation-ordersummary-divider {
-width: 100%;
-height: 0; 
-border-top: 3px solid #FF6B00 !important;
-margin: 5px 0; 
-}   
-
-
-
-
 /* CONTENEDOR: FORMULARIO */
 .shippinginformation-form {
 margin: 0px;
@@ -14391,43 +14377,31 @@ padding: 10px;
 
 
 
-
-
-/* CONTENEDOR: OPCIONES DE PAGO */
+/* CONTENEDOR: MÉTODO DE PAGO */
 .shippinginformation-paymentmethod {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;   
 background: transparent !important;
 border-radius: 15px;
 border: 3px solid #FF6B00 !important;
-margin: 0 0 15px 0;   
+margin: 0 0 15px 0;  
 padding: 15px;
 }
-.shippinginformation-paymentmethod-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.5rem;
-color: #FF6B00 !important;
+.shippinginformation-paymentmethod-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
 text-decoration: none;
-text-transform: uppercase;   
+line-height: 1.5;
 text-align: center;     
-line-height: 1.5; 
-margin: 0px 0px 15px 0px;
+margin: 0px;
 }
-.shippinginformation-paymentmethod-message {
-  text-align: center;
-  padding: 20px;
-  background: rgba(0, 255, 0, 0.1);
-  border-radius: 10px;
-  border: 2px solid #00FF00;
-}
-
-.shippinginformation-paymentmethod-message p {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.2rem;
-  color: #00FF00 !important;
-  margin: 0;
-}
-
 /* CONTENEDOR: BOTONES FINALES */
 .shippinginformation-button {
+width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: space-between;
 margin: 0px;
