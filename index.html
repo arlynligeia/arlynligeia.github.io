@@ -6793,7 +6793,7 @@ function generateElectronicReceipt() {
     if (!checkPaymentStatus()) {
         // Si no hay pago, redirigir a la tienda o mostrar mensaje
         alert('Payment not completed. Please complete your purchase first.');
-        window.location.hash = '#store';
+        window.location.hash = '#shop'; // CAMBIADO de #store a #shop
         return;
     }
  
