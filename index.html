@@ -6826,7 +6826,7 @@ function generateElectronicReceipt() {
         divider2.insertAdjacentElement('beforebegin', productRow);
     });
     
-    // 4. ACTUALIZAR TOTALES
+    // 4. ACTUALIZAR TOTALES CON VAT
     updateReceiptTotals();
     
     // 5. GENERAR NÚMEROS ÚNICOS
@@ -6836,28 +6836,32 @@ function generateElectronicReceipt() {
     setupDownloadPDF();
 }
 
-// Función para actualizar totales del recibo
+// Función para actualizar totales del recibo CON VAT
 function updateReceiptTotals() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let subtotal = 0;
+    let subtotalConVAT = 0; // Lo que el cliente ve (incluye VAT)
     let shippingTotal = 0;
     
-    // Calcular subtotal y shipping
+    // Calcular subtotal (que ya incluye VAT) y shipping
     cart.forEach(item => {
-        subtotal += item.totalprice;
+        subtotalConVAT += item.totalprice;
         shippingTotal += item.shipping * item.quantity;
     });
     
-    const totalFinal = subtotal + shippingTotal;
+    // CALCULAR VAT Y SUBTOTAL REAL
+    const subtotalReal = subtotalConVAT / 1.18; // Quitar el 18% del VAT
+    const vatAmount = subtotalConVAT - subtotalReal; // Calcular VAT
     
-    // Actualizar en la tabla
-    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
+    const totalFinal = subtotalConVAT + shippingTotal;
+    
+    // Actualizar en la tabla (mostrar subtotal con VAT)
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalConVAT);
     document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
     document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
     
-    // Actualizar en desglose de impuestos
-    document.querySelector('.electronicsalesreceipt-tax-subtotal-value-amount').textContent = formatNumberWithCommas(subtotal);
-    document.querySelector('.electronicsalesreceipt-tax-vat-value-amount').textContent = '0.00';
+    // Actualizar en desglose de impuestos (mostrar cálculo real)
+    document.querySelector('.electronicsalesreceipt-tax-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalReal);
+    document.querySelector('.electronicsalesreceipt-tax-vat-value-amount').textContent = formatNumberWithCommas(vatAmount);
     document.querySelector('.electronicsalesreceipt-tax-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
 }
 
