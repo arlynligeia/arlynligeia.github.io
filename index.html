@@ -6256,26 +6256,95 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- CARRUSELES --> 
 
 <!-- SCRIP: CARRUSEL HOME -->
+<!-- Script para el carrusel -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.home-carousel-image');
+    // Elementos del carrusel
+    const carouselImages = document.querySelectorAll('.home-carousel-image');
+    const totalImages = carouselImages.length;
     let currentIndex = 0;
+    let carouselInterval;
     
-    function showNextImage() {
-        images[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % images.length;
-        images[currentIndex].classList.add('active');
+    // Función para cambiar a una imagen específica
+    function showImage(index) {
+        // Remover clase active de todas las imágenes
+        carouselImages.forEach(img => {
+            img.classList.remove('active');
+        });
+        
+        // Agregar clase active a la imagen actual
+        carouselImages[index].classList.add('active');
+        currentIndex = index;
     }
     
-    setInterval(showNextImage, 10000);
+    // Función para avanzar a la siguiente imagen
+    function nextImage() {
+        let nextIndex = (currentIndex + 1) % totalImages;
+        showImage(nextIndex);
+    }
     
-    // Click en imagen 2 - SOLUCIÓN CORREGIDA
-    const image2 = document.getElementById('home-carousel-image-2');
-    image2.addEventListener('click', function() {
-        // SOLO funciona si la imagen está activa (visible)
-        if (this.classList.contains('active')) {
-            window.location.href = '#alone';
+    // Función para hacer scroll a una sección específica
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
         }
+    }
+    
+    // Función para manejar el clic en las imágenes
+    function handleImageClick() {
+        // Detener el carrusel temporalmente al hacer clic
+        clearInterval(carouselInterval);
+        
+        // Navegar a la sección correspondiente según la imagen
+        switch(this.id) {
+            case 'home-carousel-image-2':
+                scrollToSection('alone');
+                break;
+            case 'home-carousel-image-3':
+                scrollToSection('album1969');
+                break;
+            case 'home-carousel-image-4':
+                scrollToSection('fw2627');
+                break;
+            // La imagen 1 no hace nada o puedes agregar una acción si lo deseas
+        }
+        
+        // Reanudar el carrusel después de 2 segundos
+        setTimeout(startCarousel, 2000);
+    }
+    
+    // Agregar event listeners para el clic en las imágenes
+    carouselImages.forEach(img => {
+        img.addEventListener('click', handleImageClick);
+        img.style.cursor = 'pointer'; // Cambiar cursor para indicar que es clickeable
+    });
+    
+    // Función para iniciar el carrusel automático
+    function startCarousel() {
+        carouselInterval = setInterval(nextImage, 10000); // Cambiar cada 10 segundos
+    }
+    
+    // Inicializar el carrusel
+    function initCarousel() {
+        showImage(0); // Mostrar primera imagen
+        startCarousel(); // Iniciar rotación automática
+    }
+    
+    // Iniciar el carrusel cuando la página esté cargada
+    initCarousel();
+    
+    // Opcional: Pausar carrusel cuando el mouse está sobre él
+    const carouselContainer = document.querySelector('.home-carousel');
+    carouselContainer.addEventListener('mouseenter', function() {
+        clearInterval(carouselInterval);
+    });
+    
+    carouselContainer.addEventListener('mouseleave', function() {
+        startCarousel();
     });
 });
 </script>
