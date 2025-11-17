@@ -6256,7 +6256,6 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- CARRUSELES --> 
 
 <!-- SCRIP: CARRUSEL HOME -->
-<!-- Script para el carrusel -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     // Elementos del carrusel
@@ -6291,16 +6290,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth',
                 block: 'start'
             });
+        } else {
+            console.warn('Sección no encontrada:', sectionId);
         }
     }
     
     // Función para manejar el clic en las imágenes
-    function handleImageClick() {
+    function handleImageClick(event) {
         // Detener el carrusel temporalmente al hacer clic
         clearInterval(carouselInterval);
         
+        // Obtener el índice de la imagen clickeada
+        const clickedImage = event.currentTarget;
+        const imageId = clickedImage.id;
+        
+        console.log('Imagen clickeada:', imageId); // Para debug
+        
         // Navegar a la sección correspondiente según la imagen
-        switch(this.id) {
+        switch(imageId) {
             case 'home-carousel-image-2':
                 scrollToSection('alone');
                 break;
@@ -6310,7 +6317,8 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'home-carousel-image-4':
                 scrollToSection('fw2627');
                 break;
-            // La imagen 1 no hace nada o puedes agregar una acción si lo deseas
+            default:
+                console.log('Imagen sin redirección:', imageId);
         }
         
         // Reanudar el carrusel después de 2 segundos
@@ -6320,32 +6328,50 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agregar event listeners para el clic en las imágenes
     carouselImages.forEach(img => {
         img.addEventListener('click', handleImageClick);
-        img.style.cursor = 'pointer'; // Cambiar cursor para indicar que es clickeable
+        img.style.cursor = 'pointer';
+        
+        // Agregar atributo tabindex para mejor accesibilidad
+        img.setAttribute('tabindex', '0');
+        
+        // También permitir navegación con Enter key
+        img.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleImageClick.call(this, e);
+            }
+        });
     });
     
     // Función para iniciar el carrusel automático
     function startCarousel() {
-        carouselInterval = setInterval(nextImage, 10000); // Cambiar cada 10 segundos
+        clearInterval(carouselInterval); // Limpiar intervalo anterior
+        carouselInterval = setInterval(nextImage, 10000);
     }
     
     // Inicializar el carrusel
     function initCarousel() {
-        showImage(0); // Mostrar primera imagen
-        startCarousel(); // Iniciar rotación automática
+        showImage(0);
+        startCarousel();
     }
     
     // Iniciar el carrusel cuando la página esté cargada
     initCarousel();
     
-    // Opcional: Pausar carrusel cuando el mouse está sobre él
+    // Pausar carrusel cuando el mouse está sobre él
     const carouselContainer = document.querySelector('.home-carousel');
-    carouselContainer.addEventListener('mouseenter', function() {
-        clearInterval(carouselInterval);
-    });
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', function() {
+            clearInterval(carouselInterval);
+        });
+        
+        carouselContainer.addEventListener('mouseleave', function() {
+            startCarousel();
+        });
+    }
     
-    carouselContainer.addEventListener('mouseleave', function() {
-        startCarousel();
-    });
+    // Debug: Verificar que las secciones existen
+    console.log('Sección alone:', document.getElementById('alone'));
+    console.log('Sección album1969:', document.getElementById('album1969'));
+    console.log('Sección fw2627:', document.getElementById('fw2627'));
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
