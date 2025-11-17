@@ -6258,28 +6258,33 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- SCRIP: CARRUSEL HOME -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-const images = document.querySelectorAll('.home-carousel-image');
-let currentIndex = 0;
-function showNextImage() {
-images[currentIndex].classList.remove('active');
-currentIndex = (currentIndex + 1) % images.length;
-images[currentIndex].classList.add('active');
-}
-// Añadir evento click a la imagen 2
-const image2 = document.getElementById('home-carousel-image-2');
-if (image2) {
-image2.addEventListener('click', function() {
-// Solo redirigir si estamos en móvil
-if (window.innerWidth <= 768) {
-window.location.hash = '#alone';
-}
-});
-}
-setInterval(showNextImage, 10000);
+    const images = document.querySelectorAll('.home-carousel-image');
+    let currentIndex = 0;
+    
+    function showNextImage() {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+    }
+    
+    // Añadir evento click a la imagen 2
+    const image2 = document.getElementById('home-carousel-image-2');
+    if (image2) {
+        image2.addEventListener('click', function() {
+            // Solo redirigir si estamos en móvil
+            if (window.innerWidth <= 768) {
+                const aloneSection = document.getElementById('alone');
+                if (aloneSection) {
+                    aloneSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    }
+    
+    setInterval(showNextImage, 10000);
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
-
 
 
 
