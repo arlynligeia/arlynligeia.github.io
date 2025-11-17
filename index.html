@@ -6255,34 +6255,30 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
   
 <!-- CARRUSELES --> 
 
-<!-- SCRIP: CARRUSEL HOME -->
+<!-- SCRIP: CARRUSEL HOME CORREGIDO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Elementos del carrusel
     const carouselImages = document.querySelectorAll('.home-carousel-image');
     const totalImages = carouselImages.length;
     let currentIndex = 0;
     let carouselInterval;
-    
-    // Función para cambiar a una imagen específica
+
     function showImage(index) {
-        // Remover clase active de todas las imágenes
         carouselImages.forEach(img => {
             img.classList.remove('active');
+            img.style.pointerEvents = 'none'; // Desactivar clics
         });
         
-        // Agregar clase active a la imagen actual
         carouselImages[index].classList.add('active');
+        carouselImages[index].style.pointerEvents = 'auto'; // Activar solo en activa
         currentIndex = index;
     }
-    
-    // Función para avanzar a la siguiente imagen
+
     function nextImage() {
         let nextIndex = (currentIndex + 1) % totalImages;
         showImage(nextIndex);
     }
-    
-    // Función para hacer scroll a una sección específica
+
     function scrollToSection(sectionId) {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -6290,23 +6286,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 behavior: 'smooth',
                 block: 'start'
             });
-        } else {
-            console.warn('Sección no encontrada:', sectionId);
         }
     }
-    
-    // Función para manejar el clic en las imágenes
+
     function handleImageClick(event) {
-        // Detener el carrusel temporalmente al hacer clic
         clearInterval(carouselInterval);
         
-        // Obtener el índice de la imagen clickeada
         const clickedImage = event.currentTarget;
         const imageId = clickedImage.id;
         
-        console.log('Imagen clickeada:', imageId); // Para debug
+        console.log('Clic en imagen:', imageId);
         
-        // Navegar a la sección correspondiente según la imagen
         switch(imageId) {
             case 'home-carousel-image-2':
                 scrollToSection('alone');
@@ -6317,46 +6307,30 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'home-carousel-image-4':
                 scrollToSection('fw2627');
                 break;
-            default:
-                console.log('Imagen sin redirección:', imageId);
         }
         
-        // Reanudar el carrusel después de 2 segundos
-        setTimeout(startCarousel, 2000);
+        setTimeout(startCarousel, 3000);
     }
-    
-    // Agregar event listeners para el clic en las imágenes
+
+    // Agregar event listeners solo a las imágenes
     carouselImages.forEach(img => {
         img.addEventListener('click', handleImageClick);
         img.style.cursor = 'pointer';
-        
-        // Agregar atributo tabindex para mejor accesibilidad
-        img.setAttribute('tabindex', '0');
-        
-        // También permitir navegación con Enter key
-        img.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                handleImageClick.call(this, e);
-            }
-        });
     });
-    
-    // Función para iniciar el carrusel automático
+
     function startCarousel() {
-        clearInterval(carouselInterval); // Limpiar intervalo anterior
+        clearInterval(carouselInterval);
         carouselInterval = setInterval(nextImage, 10000);
     }
-    
-    // Inicializar el carrusel
+
     function initCarousel() {
         showImage(0);
         startCarousel();
     }
-    
-    // Iniciar el carrusel cuando la página esté cargada
+
     initCarousel();
-    
-    // Pausar carrusel cuando el mouse está sobre él
+
+    // Pausar al hacer hover
     const carouselContainer = document.querySelector('.home-carousel');
     if (carouselContainer) {
         carouselContainer.addEventListener('mouseenter', function() {
@@ -6367,11 +6341,6 @@ document.addEventListener('DOMContentLoaded', function() {
             startCarousel();
         });
     }
-    
-    // Debug: Verificar que las secciones existen
-    console.log('Sección alone:', document.getElementById('alone'));
-    console.log('Sección album1969:', document.getElementById('album1969'));
-    console.log('Sección fw2627:', document.getElementById('fw2627'));
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
