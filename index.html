@@ -6261,28 +6261,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.home-carousel-image');
     let currentIndex = 0;
     
-    // Función para cambiar imagen
     function showNextImage() {
         images[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
     }
     
-    // Carrusel automático
     setInterval(showNextImage, 10000);
     
-    // Click en imagen 2 para ir a sección alone
+    // Click en imagen 2
     const image2 = document.getElementById('home-carousel-image-2');
     image2.addEventListener('click', function() {
         const aloneSection = document.getElementById('alone');
         if (aloneSection) {
+            // Cambiar el URL Y hacer scroll
+            window.location.hash = 'alone';
             aloneSection.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
-
 
 
 
