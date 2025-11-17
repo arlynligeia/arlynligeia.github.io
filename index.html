@@ -6256,6 +6256,7 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- CARRUSELES --> 
 
 <!-- SCRIP: CARRUSEL HOME -->
+<!-- SCRIP: CARRUSEL HOME -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.home-carousel-image');
@@ -6269,18 +6270,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setInterval(showNextImage, 10000);
     
-    // Click en imagen 2
+    // Click en imagen 2 - SOLUCIÓN DIRECTA
     const image2 = document.getElementById('home-carousel-image-2');
     image2.addEventListener('click', function() {
-        const aloneSection = document.getElementById('alone');
-        if (aloneSection) {
-            // Cambiar el URL Y hacer scroll
-            window.location.hash = 'alone';
-            aloneSection.scrollIntoView({ behavior: 'smooth' });
-        }
+        window.location.href = '#alone';
     });
 });
 </script>
+<!-- FIN SCRIP: CARRUSEL HOME -->
 <!-- FIN SCRIP: CARRUSEL HOME -->
 
 
