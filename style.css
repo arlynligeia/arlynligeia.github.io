@@ -339,3 +339,160 @@ border-bottom: 1px solid white !important;
         display: none !important;
     }
 }
+
+
+
+
+
+
+
+
+/* ======================================
+    HOME PC
+====================================== */
+.home-carousel {
+position: relative;
+width: 95%;
+height: calc(100vh - 220px); 
+z-index: 1; 
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #000000 !important;
+border: 10px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 40px auto;
+}
+@keyframes borderGlow {
+0% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.6),
+0 0 30px rgba(255, 0, 255, 0.4),
+inset 0 0 15px rgba(168, 85, 247, 0.3);
+}
+100% {
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.8),
+0 0 30px rgba(255, 0, 255, 0.6),
+inset 0 0 25px rgba(168, 85, 247, 0.5);
+}
+}
+/* CONTENEDOR: IMÁGENES */
+.home-carousel-image {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
+}
+.home-carousel-image.active {
+opacity: 1;
+}
+/* CONTROL */
+.home-carousel { display: flex; }
+.home-carousel-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SHOP
+====================================== */
+@media (max-width: 768px) {
+.home-carousel-mobile {
+position: relative; 
+width: 90%;
+height: 70vh;
+overflow: hidden;
+background-color: #000000 !important;
+border: 8px solid #A855F7 !important;
+border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
+box-shadow: 
+0 0 10px #A855F7,
+0 0 20px rgba(168, 85, 247, 0.7),
+0 0 30px rgba(255, 0, 255, 0.5),
+inset 0 0 20px rgba(168, 85, 247, 0.4);
+animation: borderGlow 3s ease-in-out infinite alternate;
+margin: 20px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* CONTENEDOR: IMÁGENES */
+.home-carousel-image-mobile {
+position: absolute;
+width: 100%;
+height: 100%;
+object-fit: cover;
+opacity: 0;
+transition: opacity 1s ease-in-out;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);
+border-radius: 0;
+background-color: #000000 !important;
+}
+.home-carousel-image-mobile.active {
+opacity: 1;
+}
+/* CONTROL */
+.home-carousel { display: none; }
+.home-carousel-mobile { display: flex; }
+}
+
+
+
+
+
+
+
+
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES PC
+====================================== */
+.main-section:not(#home),
+#cartempty,
+#cartfull { display: none; }
+
+.subsection:not([id^="home-"]) { display: none; }
+
+/* DEJAR SOLO LA SECCIÓN HOME */
+#home { display: block; }
+
+#home-socialmediacontent,
+#home-tiktokhighlight, 
+#home-youtubehighlight { display: block; }
+
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES MOBILE
+====================================== */
+.main-section.mobile-only:not(#home-mobile),
+#cartempty-mobile,
+#cartfull-mobile { 
+    display: none; 
+}
+
+.subsection.mobile-only:not([id^="home-mobile-"]) { 
+    display: none; 
+}
+
+
+
+/* DEJAR SOLO LA SECCIÓN HOME MOBILE */
+#home-mobile { 
+    display: flex !important; 
+}
+
+#home-socialmediacontent-mobile,
+#home-tiktokhighlight-mobile, 
+#home-youtubehighlight-mobile { 
+    display: block; 
+}
