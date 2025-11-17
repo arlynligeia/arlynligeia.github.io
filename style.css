@@ -380,6 +380,11 @@ border-bottom: 1px solid white !important;
     pointer-events: auto; /* ← IMPORTANTE: Solo la imagen activa recibe clics */
     z-index: 2; /* ← Asegura que esté por encima */
 }
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.home-carousel { display: block; }
+.home-container-mobile { display: none; }
+.home-carousel-mobile { display: none; }
+}
 
 
 
