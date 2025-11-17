@@ -15532,11 +15532,11 @@ margin-bottom: 0px;
 /* ======================================
    OCULTAR TODAS LAS SECCIONES MOBILE
 ====================================== */
-.main-section.mobile-only:not(#home)
+.main-section.mobile-only:not(#home-mobile)
 #cartempty-section.mobile-only,
-#cartfull-section.mobile-only  { display: none; }
+#cartfull-section.mobile-only { display: none; }
 
-.subsection.mobile-only:not([id^="home-"]) { display: none; }
+.subsection.mobile-only:not([id^="home-mobile-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME */
 #home-mobile { display: block; }
