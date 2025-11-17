@@ -6255,65 +6255,33 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
   
 <!-- CARRUSELES --> 
 
+<!-- SCRIP: CARRUSEL HOME -->
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Obtener todas las imágenes del carrusel
+document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.home-carousel-image');
     let currentIndex = 0;
-    const intervalTime = 10000;
-
-    // Función para mostrar la siguiente imagen
-    const showNextImage = () => {
+    
+    // Función para cambiar imagen
+    function showNextImage() {
         images[currentIndex].classList.remove('active');
         currentIndex = (currentIndex + 1) % images.length;
         images[currentIndex].classList.add('active');
-    };
-
-    // Iniciar el cambio automático de imágenes
-    setInterval(showNextImage, intervalTime);
-
-    // 2. Asignar las URL de redirección
-    images.forEach(image => {
-        const imageId = image.id;
-        let targetSectionId = null;
-
-        // Determinar el ID de la sección de destino
-        switch (imageId) {
-            case 'home-carousel-image-2':
-                targetSectionId = 'alone';
-                break;
-            case 'home-carousel-image-3':
-                targetSectionId = 'album1969';
-                break;
-            case 'home-carousel-image-4':
-                targetSectionId = 'fw2627';
-                break;
-            default:
-                return; 
-        }
-
-        // Agregar el evento de clic con verificación de estado
-        if (targetSectionId) {
-            image.style.cursor = 'pointer';
-            
-            image.addEventListener('click', (event) => {
-                if (image.classList.contains('active')) {
-                    event.preventDefault();
-                    
-                    // **CORRECCIÓN: Usar scrollIntoView en lugar de hash**
-                    const targetSection = document.getElementById(targetSectionId);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                }
-            });
+    }
+    
+    // Carrusel automático
+    setInterval(showNextImage, 10000);
+    
+    // Click en imagen 2 para ir a sección alone
+    const image2 = document.getElementById('home-carousel-image-2');
+    image2.addEventListener('click', function() {
+        const aloneSection = document.getElementById('alone');
+        if (aloneSection) {
+            aloneSection.scrollIntoView({ behavior: 'smooth' });
         }
     });
 });
 </script>
+<!-- FIN SCRIP: CARRUSEL HOME -->
 
 
 
