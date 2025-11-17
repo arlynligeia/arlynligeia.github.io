@@ -6257,31 +6257,60 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
 <!-- SCRIP: CARRUSEL HOME -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Obtener todas las imágenes del carrusel
     const images = document.querySelectorAll('.home-carousel-image');
     let currentIndex = 0;
-    
-    function showNextImage() {
+    const intervalTime = 10000; // 10,000 milisegundos = 10 segundos
+
+    // Función para mostrar la siguiente imagen
+    const showNextImage = () => {
+        // Ocultar la imagen actual
         images[currentIndex].classList.remove('active');
+
+        // Calcular el índice de la siguiente imagen
         currentIndex = (currentIndex + 1) % images.length;
+
+        // Mostrar la siguiente imagen
         images[currentIndex].classList.add('active');
-    }
-    
-    // Añadir evento click a la imagen 2
-    const image2 = document.getElementById('home-carousel-image-2');
-    if (image2) {
-        image2.addEventListener('click', function() {
-            // Solo redirigir si estamos en móvil
-            if (window.innerWidth <= 768) {
-                const aloneSection = document.getElementById('alone');
-                if (aloneSection) {
-                    aloneSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        });
-    }
-    
-    setInterval(showNextImage, 10000);
+    };
+
+    // Iniciar el cambio automático de imágenes
+    setInterval(showNextImage, intervalTime);
+
+    // 2. Asignar las URL de redirección a las imágenes específicas
+    images.forEach(image => {
+        const imageId = image.id;
+        let targetSectionId = null;
+
+        // Determinar el ID de la sección de destino basado en el ID de la imagen
+        switch (imageId) {
+            case 'home-carousel-image-2':
+                // La imagen 2 debe llevar a la sección #alone
+                targetSectionId = 'alone';
+                break;
+            case 'home-carousel-image-3':
+                // La imagen 3 debe llevar a la sección #album1969
+                targetSectionId = 'album1969';
+                break;
+            case 'home-carousel-image-4':
+                // La imagen 4 debe llevar a la sección #fw2627
+                targetSectionId = 'fw2627';
+                break;
+            default:
+                // La imagen 1 no tiene redirección específica
+                return; 
+        }
+
+        // Agregar un evento de clic a la imagen si tiene un destino
+        if (targetSectionId) {
+            image.style.cursor = 'pointer'; // Para indicar al usuario que es clickeable
+            image.addEventListener('click', () => {
+                // Redireccionar a la sección usando su ID
+                window.location.hash = targetSectionId;
+            });
+        }
+    });
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
