@@ -162,6 +162,12 @@
 </div>
 </section>
 <!-- FIN HOME PC -->
+
+
+
+
+
+
   
 <!-- HOME MÓVIL -->
 <section class="home-section main-section mobile-only" id="home-mobile">
@@ -5870,7 +5876,7 @@ Verify RUC 10763395613 - Arlyn Ligeia at: <a href="https://e-consultaruc.sunat.g
   
 <!-- SCRIPS -->   
 
-<!-- SCRIPS NAVEGACIÓN -->  
+<!-- NAVEGACIÓN -->  
 
 <!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
 <script>
@@ -5943,7 +5949,6 @@ console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-
 
   
 <!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
@@ -6161,7 +6166,6 @@ console.log('✅ Navegación de tienda configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
 
-
   
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
 <script>
@@ -6243,9 +6247,79 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
 
-<!-- FIN SCRIPS NAVEGACIÓN -->  
+<!-- FIN NAVEGACIÓN -->  
 
 
+
+
+  
+<!-- CARRUSELES --> 
+
+<!-- SCRIP: CARRUSEL HOME --> 
+<script>
+// CARRUSEL AUTOMÁTICO
+document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.home-carousel-image');
+    let currentIndex = 0;
+    
+    // Función para cambiar imagen
+    function showNextImage() {
+        // Ocultar imagen actual
+        images[currentIndex].classList.remove('active');
+        
+        // Avanzar al siguiente índice
+        currentIndex = (currentIndex + 1) % images.length;
+        
+        // Mostrar nueva imagen
+        images[currentIndex].classList.add('active');
+    }
+    
+    // Iniciar carrusel automático cada 10 segundos
+    setInterval(showNextImage, 10000);
+    
+    // Hacer imágenes clickeables (excepto la primera)
+    const image2 = document.getElementById('home-carousel-image-2');
+    const image3 = document.getElementById('home-carousel-image-3');
+    const image4 = document.getElementById('home-carousel-image-4');
+    
+    // Imagen 2 - Lleva a ALONE
+    if (image2) {
+        image2.style.cursor = 'pointer';
+        image2.addEventListener('click', function() {
+            window.location.hash = 'alone';
+        });
+    }
+    
+    // Imagen 3 - Lleva a 1969
+    if (image3) {
+        image3.style.cursor = 'pointer';
+        image3.addEventListener('click', function() {
+            window.location.hash = 'album1969';
+        });
+    }
+    
+    // Imagen 4 - Lleva a FW 26/27
+    if (image4) {
+        image4.style.cursor = 'pointer';
+        image4.addEventListener('click', function() {
+            window.location.hash = 'fw2627';
+        });
+    }
+    
+    // Imagen 1 no es clickeable (mantiene cursor por defecto)
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL HOME --> 
+
+
+
+
+
+
+
+
+
+  
 
 
 
