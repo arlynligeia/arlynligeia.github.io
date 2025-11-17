@@ -6255,95 +6255,40 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
   
 <!-- CARRUSELES --> 
 
-<!-- SCRIP: CARRUSEL HOME CORREGIDO -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const carouselImages = document.querySelectorAll('.home-carousel-image');
-    const totalImages = carouselImages.length;
-    let currentIndex = 0;
-    let carouselInterval;
+    const images = document.querySelectorAll('.home-carousel-image');
+    let current = 0;
+    let interval;
 
-    function showImage(index) {
-        carouselImages.forEach(img => {
-            img.classList.remove('active');
-            img.style.pointerEvents = 'none'; // Desactivar clics
+    // Cambiar imagen cada 10 segundos
+    function startCarousel() {
+        interval = setInterval(() => {
+            images[current].classList.remove('active');
+            current = (current + 1) % images.length;
+            images[current].classList.add('active');
+        }, 10000);
+    }
+
+    // Click en imágenes
+    images.forEach(img => {
+        img.addEventListener('click', function() {
+            const id = this.id;
+            if (id === 'home-carousel-image-2') {
+                document.getElementById('alone').scrollIntoView({behavior: 'smooth'});
+            } else if (id === 'home-carousel-image-3') {
+                document.getElementById('album1969').scrollIntoView({behavior: 'smooth'});
+            } else if (id === 'home-carousel-image-4') {
+                document.getElementById('fw2627').scrollIntoView({behavior: 'smooth'});
+            }
         });
-        
-        carouselImages[index].classList.add('active');
-        carouselImages[index].style.pointerEvents = 'auto'; // Activar solo en activa
-        currentIndex = index;
-    }
-
-    function nextImage() {
-        let nextIndex = (currentIndex + 1) % totalImages;
-        showImage(nextIndex);
-    }
-
-    function scrollToSection(sectionId) {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    }
-
-    function handleImageClick(event) {
-        clearInterval(carouselInterval);
-        
-        const clickedImage = event.currentTarget;
-        const imageId = clickedImage.id;
-        
-        console.log('Clic en imagen:', imageId);
-        
-        switch(imageId) {
-            case 'home-carousel-image-2':
-                scrollToSection('alone');
-                break;
-            case 'home-carousel-image-3':
-                scrollToSection('album1969');
-                break;
-            case 'home-carousel-image-4':
-                scrollToSection('fw2627');
-                break;
-        }
-        
-        setTimeout(startCarousel, 3000);
-    }
-
-    // Agregar event listeners solo a las imágenes
-    carouselImages.forEach(img => {
-        img.addEventListener('click', handleImageClick);
-        img.style.cursor = 'pointer';
     });
 
-    function startCarousel() {
-        clearInterval(carouselInterval);
-        carouselInterval = setInterval(nextImage, 10000);
-    }
-
-    function initCarousel() {
-        showImage(0);
-        startCarousel();
-    }
-
-    initCarousel();
-
-    // Pausar al hacer hover
-    const carouselContainer = document.querySelector('.home-carousel');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', function() {
-            clearInterval(carouselInterval);
-        });
-        
-        carouselContainer.addEventListener('mouseleave', function() {
-            startCarousel();
-        });
-    }
+    // Iniciar
+    images[0].classList.add('active');
+    startCarousel();
 });
 </script>
-<!-- FIN SCRIP: CARRUSEL HOME -->
 
 
 
