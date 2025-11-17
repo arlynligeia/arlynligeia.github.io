@@ -6260,21 +6260,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Obtener todas las imágenes del carrusel
     const images = document.querySelectorAll('.home-carousel-image');
     let currentIndex = 0;
-    const intervalTime = 10000; // 10,000 milisegundos = 10 segundos
+    const intervalTime = 10000;
 
     // Función para mostrar la siguiente imagen
     const showNextImage = () => {
         images[currentIndex].classList.remove('active');
-
         currentIndex = (currentIndex + 1) % images.length;
-
         images[currentIndex].classList.add('active');
     };
 
     // Iniciar el cambio automático de imágenes
     setInterval(showNextImage, intervalTime);
 
-    // 2. Asignar las URL de redirección y garantizar que solo se haga clic en la imagen activa
+    // 2. Asignar las URL de redirección
     images.forEach(image => {
         const imageId = image.id;
         let targetSectionId = null;
@@ -6291,26 +6289,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetSectionId = 'fw2627';
                 break;
             default:
-                // Imagen 1 no lleva a ninguna sección
                 return; 
         }
 
         // Agregar el evento de clic con verificación de estado
         if (targetSectionId) {
-            image.style.cursor = 'pointer'; // Muestra la mano al pasar el mouse
+            image.style.cursor = 'pointer';
             
             image.addEventListener('click', (event) => {
-                // **CORRECCIÓN CLAVE:** Solo ejecuta la navegación si la imagen TIENE la clase 'active'
                 if (image.classList.contains('active')) {
-                    // Evita cualquier comportamiento de enlace por defecto si fuera un <a> tag
-                    event.preventDefault(); 
+                    event.preventDefault();
                     
-                    // Redirecciona a la sección
-                    window.location.hash = targetSectionId;
-                } else {
-                    // Opcional: Si el usuario hace clic en una imagen que no es la activa, 
-                    // simplemente ignora el evento.
-                    return; 
+                    // **CORRECCIÓN: Usar scrollIntoView en lugar de hash**
+                    const targetSection = document.getElementById(targetSectionId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
                 }
             });
         }
