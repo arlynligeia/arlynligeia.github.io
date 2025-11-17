@@ -6257,7 +6257,7 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 
 <!-- SCRIP: CARRUSEL HOME --> 
 <script>
-// CARRUSEL AUTOMÁTICO
+// CARRUSEL AUTOMÁTICO - VERSIÓN CORREGIDA
 document.addEventListener('DOMContentLoaded', function() {
     const images = document.querySelectorAll('.home-carousel-image');
     let currentIndex = 0;
@@ -6271,21 +6271,44 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setInterval(showNextImage, 10000);
     
+    // Función para navegar a secciones
+    function navigateToSection(sectionId) {
+        console.log(`🖼️ Navegando a ${sectionId} desde carrusel`);
+        
+        // Ocultar todas las secciones principales
+        document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+            section.style.display = 'none';
+        });
+        
+        // Mostrar solo la sección objetivo
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+            targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            window.location.hash = sectionId;
+            console.log(`✅ Sección ${sectionId} mostrada correctamente`);
+        } else {
+            console.error(`❌ No se encontró la sección: ${sectionId}`);
+        }
+    }
+    
+    // Imagen 2 - Lleva a ALONE (NO clickeable)
+    const image1 = document.getElementById('home-carousel-image-1');
+    if (image1) {
+        image1.style.cursor = 'default';
+        // Remover cualquier evento click previo
+        image1.replaceWith(image1.cloneNode(true));
+    }
+    
     // Imagen 2 - Lleva a ALONE
     const image2 = document.getElementById('home-carousel-image-2');
     if (image2) {
         image2.style.cursor = 'pointer';
-        image2.addEventListener('click', function() {
-            console.log('🖼️ Navegando a ALONE desde carrusel');
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            const aloneSection = document.getElementById('alone');
-            if (aloneSection) {
-                aloneSection.style.display = 'block';
-                aloneSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.location.hash = 'alone';
-            }
+        // Remover eventos previos y asignar nuevo
+        image2.replaceWith(image2.cloneNode(true));
+        const newImage2 = document.getElementById('home-carousel-image-2');
+        newImage2.addEventListener('click', function() {
+            navigateToSection('alone');
         });
     }
     
@@ -6293,17 +6316,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const image3 = document.getElementById('home-carousel-image-3');
     if (image3) {
         image3.style.cursor = 'pointer';
-        image3.addEventListener('click', function() {
-            console.log('🖼️ Navegando a 1969 desde carrusel');
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            const album1969Section = document.getElementById('album1969');
-            if (album1969Section) {
-                album1969Section.style.display = 'block';
-                album1969Section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.location.hash = 'album1969';
-            }
+        // Remover eventos previos y asignar nuevo
+        image3.replaceWith(image3.cloneNode(true));
+        const newImage3 = document.getElementById('home-carousel-image-3');
+        newImage3.addEventListener('click', function() {
+            navigateToSection('album1969');
         });
     }
     
@@ -6311,29 +6328,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const image4 = document.getElementById('home-carousel-image-4');
     if (image4) {
         image4.style.cursor = 'pointer';
-        image4.addEventListener('click', function() {
-            console.log('🖼️ Navegando a FW 26/27 desde carrusel');
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            const fw2627Section = document.getElementById('fw2627');
-            if (fw2627Section) {
-                fw2627Section.style.display = 'block';
-                fw2627Section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                window.location.hash = 'fw2627';
-            }
+        // Remover eventos previos y asignar nuevo
+        image4.replaceWith(image4.cloneNode(true));
+        const newImage4 = document.getElementById('home-carousel-image-4');
+        newImage4.addEventListener('click', function() {
+            navigateToSection('fw2627');
         });
-    }
-    
-    // Imagen 1 no es clickeable
-    const image1 = document.getElementById('home-carousel-image-1');
-    if (image1) {
-        image1.style.cursor = 'default';
     }
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME -->
-
 
 
 
