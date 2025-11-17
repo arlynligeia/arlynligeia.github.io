@@ -6255,40 +6255,72 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
   
 <!-- CARRUSELES --> 
 
+<!-- SCRIP: CARRUSEL HOME PC-->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.home-carousel-image');
-    let current = 0;
-    let interval;
-
-    // Cambiar imagen cada 10 segundos
-    function startCarousel() {
-        interval = setInterval(() => {
-            images[current].classList.remove('active');
-            current = (current + 1) % images.length;
-            images[current].classList.add('active');
-        }, 10000);
-    }
-
-    // Click en imágenes
-    images.forEach(img => {
-        img.addEventListener('click', function() {
-            const id = this.id;
-            if (id === 'home-carousel-image-2') {
-                document.getElementById('alone').scrollIntoView({behavior: 'smooth'});
-            } else if (id === 'home-carousel-image-3') {
-                document.getElementById('album1969').scrollIntoView({behavior: 'smooth'});
-            } else if (id === 'home-carousel-image-4') {
-                document.getElementById('fw2627').scrollIntoView({behavior: 'smooth'});
-            }
-        });
-    });
-
-    // Iniciar
-    images[0].classList.add('active');
-    startCarousel();
+console.log('🖼️ Carrusel iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.home-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+const carousel = document.querySelector('.home-carousel');
+const imageDestinations = {
+'home-carousel-image-1': 'film-featurefilm-alone',
+'home-carousel-image-2': 'music-album-album1969',
+'home-carousel-image-3': 'fashion-fwcollection-fw2627',
+'home-carousel-image-4': 'fashion-fwcollection-fw2627'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.home-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel configurada');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
 });
 </script>
+<!-- FIN SCRIP: CARRUSEL HOME PC -->
 
 
 
