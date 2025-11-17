@@ -15543,9 +15543,14 @@ margin-bottom: 0px;
     display: none; 
 }
 
+
+
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
 #home-mobile { 
-    display: flex; 
+    display: block !important; 
+}
+.home-carousel-mobile { 
+    display: flex !important; 
 }
 
 #home-socialmediacontent-mobile,
