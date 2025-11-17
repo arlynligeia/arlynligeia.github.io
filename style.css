@@ -461,12 +461,10 @@ opacity: 1;
 .main-section:not(#home),
 #cartempty,
 #cartfull { display: none; }
-
 .subsection:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME */
 #home { display: block; }
-
 #home-socialmediacontent,
 #home-tiktokhighlight, 
 #home-youtubehighlight { display: block; }
@@ -476,23 +474,262 @@ opacity: 1;
 ====================================== */
 .main-section.mobile-only:not(#home-mobile),
 #cartempty-mobile,
-#cartfull-mobile { 
-    display: none; 
-}
-
-.subsection.mobile-only:not([id^="home-mobile-"]) { 
-    display: none; 
-}
-
-
+#cartfull-mobile { display: none; }
+.subsection.mobile-only:not([id^="home-mobile-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
-#home-mobile { 
-    display: flex !important; 
-}
-
+#home-mobile { display: flex !important; }
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
-#home-youtubehighlight-mobile { 
-    display: block; 
+#home-youtubehighlight-mobile { display: block; }
+
+/* ======================================
+   FOOTER PC
+====================================== */
+.footer {
+position: relative;
+width: 100%;
+box-sizing: border-box; 
+background: #320046 !important;
+padding: 30px;   
+margin-top: auto;
+}
+/* CONTENEDOR: NOMBRE Y COPYRIGHT */
+.footer-brand {
+width: 100%;
+box-sizing: border-box;    
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-brand-name {
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff1493 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.footer-brand-allrightreserved {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0 0 10px 0;   
+}
+/* CONTENEDOR: LINK */
+.footer-link {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 0 10px 0;
+}
+.footer-link-termsandconditions a,
+.footer-link-privacypolicy a,
+.footer-link-cookiepolicy a {
+position: relative;
+z-index: 1;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;  
+margin: 0 0 10px 0;
+transition: all 0.3s ease;
+}
+.footer-link-termsandconditions a:hover::after,
+.footer-link-privacypolicy a:hover::after,
+.footer-link-cookiepolicy a:hover::after {
+content: "";
+position: absolute;
+left: 0;
+top: 50%;
+width: 100%;
+height: 2px;
+background: #FF6B00 !important;
+transform: translateY(-50%);
+animation: strike 0.3s ease forwards;
+}
+@keyframes strike {
+from { width: 0%; }
+to { width: 100%; }
+}
+/* CONTENEDOR: REDES SOCIALES */
+.footer-socialmedia {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;   
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.footer-socialmedia-icon {
+width: 25px;
+height: 25px;
+color: #ff1493 !important;
+transition: all 0.3s ease;
+}
+.footer-socialmedia-icon:hover {
+transform: scale(1.2);
+}
+/* CONTENEDOR: BOTÓN SCROLL TOP */
+.footer-button {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 0px;
+}
+.footer-button-scrolltop {
+display: flex;
+justify-content: space-between;
+background: #ff1493 !important; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+margin: 0px;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.footer-button-scrolltop:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.footer { display: block; }
+.footer-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FOOTER
+====================================== */
+@media (max-width: 768px) {
+.footer-mobile {
+position: relative;
+width: 100%;
+box-sizing: border-box; 
+background: #1E0029 !important;
+padding: 20px;   
+margin-top: auto;
+}
+/* CONTENEDOR: NOMBRE Y COPYRIGHT */
+.footer-brand-mobile {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.footer-brand-name-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #ff1493 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.footer-brand-allrightreserved-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 0.8rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0 0 10px 0;   
+}
+/* CONTENEDOR: LINK */
+.footer-link-mobile {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 0 10px 0;
+}
+.footer-link-termsandconditions-mobile a,
+.footer-link-privacypolicy-mobile a,
+.footer-link-cookiepolicy-mobile a {
+position: relative;
+z-index: 1;
+font-family: 'Share Tech Mono', monospace;
+font-size: 0.8rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;  
+margin: 0 0 10px 0;
+transition: all 0.3s ease;
+}
+.footer-link-termsandconditions-mobile:hover::after,
+.footer-link-privacypolicy-mobile:hover::after,
+.footer-link-cookiepolicy-mobile:hover::after {
+content: "";
+position: absolute;
+left: 0;
+top: 50%;
+width: 100%;
+height: 2px;
+background: #FF6B00 !important;
+transform: translateY(-50%);
+animation: strike 0.3s ease forwards;
+}
+@keyframes strike {
+from { width: 0%; }
+to { width: 100%; }
+}
+/* CONTENEDOR: REDES SOCIALES */
+.footer-socialmedia-mobile {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;   
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.footer-socialmedia-icon-mobile {
+width: 20px;
+height: 20px;
+color: #ff1493 !important;
+transition: all 0.3s ease;
+}
+.footer-socialmedia-icon-mobile:hover {
+transform: scale(1.2);
+}
+/* CONTENEDOR: BOTÓN SCROLL TOP */
+.footer-button-mobile {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 0px;
+}
+.footer-button-scrolltop-mobile {
+display: flex;
+justify-content: space-between;
+background: #ff1493 !important; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+font-weight: bold;
+text-transform: uppercase;
+text-align: center;
+margin: 0px;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.footer-button-scrolltop-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.footer { display: none; }
+.footer-mobile { display: block; }
 }
