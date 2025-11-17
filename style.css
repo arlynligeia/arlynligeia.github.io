@@ -350,7 +350,8 @@ border-bottom: 1px solid white !important;
 ====================================== */
 .home-carousel {
 position: relative;
-width: 95%;
+width: 100%;
+box-sizing: border-box;
 height: calc(100vh - 220px); 
 z-index: 1; 
 overflow: hidden;
@@ -359,7 +360,7 @@ justify-content: center;
 align-items: center;
 background-color: #000000 !important;
 border: 3px solid #A855F7 !important;
-margin: 40px auto;
+margin: 200px 0 40px 0;
 }
 /* CONTENEDOR: IMÁGENES */
 .home-carousel-image {
