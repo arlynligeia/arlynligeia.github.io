@@ -6270,10 +6270,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     setInterval(showNextImage, 10000);
     
-    // Click en imagen 2 - SOLUCIÓN DIRECTA
+    // Click en imagen 2 - SOLUCIÓN CORREGIDA
     const image2 = document.getElementById('home-carousel-image-2');
     image2.addEventListener('click', function() {
-        window.location.href = '#alone';
+        // SOLO funciona si la imagen está activa (visible)
+        if (this.classList.contains('active')) {
+            window.location.href = '#alone';
+        }
     });
 });
 </script>
