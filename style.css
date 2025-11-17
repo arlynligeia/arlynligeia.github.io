@@ -389,11 +389,11 @@ opacity: 1;
 /* CONTROL */
 .home-container { display: flex; }
 .home-container-mobile  { display: none; }
+.home-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR: BIENVENIDA */
 .home-container-mobile {
 position: relative;
 z-index: 1;    
@@ -435,6 +435,7 @@ opacity: 1;
 /* CONTROL */
 .home-container { display: none; }
 .home-container-mobile { display: flex; }
+.home-carousel-mobile { display: flex; }
 }
 
 
