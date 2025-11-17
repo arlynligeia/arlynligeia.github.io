@@ -348,30 +348,18 @@ border-bottom: 1px solid white !important;
 /* ======================================
     HOME PC
 ====================================== */
-.home-container {
+.home-carousel {
 position: relative;
 z-index: 1;   
 width: 100%;
 height: calc(100vh - 220px); 
-box-sizing: border-box;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #3A0052 !important;
-margin: 40px auto;
-padding: 10px;
-}
-.home-carousel {
-position: relative;
-z-index: 1;    
-width: 100%;
-height: 100%;
 box-sizing: border-box;
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
 background: #000000 !important;
+margin: 40px auto;
 }
 .home-carousel-image {
 position: absolute;
@@ -387,37 +375,25 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 /* CONTROL */
-.home-container { display: flex; }
-.home-container-mobile  { display: none; }
+.home-carousel { display: flex; }
 .home-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
-.home-container-mobile {
+.home-carousel-mobile {
 position: relative;
 z-index: 1;    
 width: 100%;
 height: 500px;
 box-sizing: border-box;
+overflow: hidden;   
 display: flex;
 justify-content: center;
 align-items: center;
 background: #3A0052 !important;
 margin: 30px auto;
 padding: 5px;
-}
-.home-carousel-mobile {
-position: relative;
-z-index: 1; 
-width: 100%;
-height: 100%;
-box-sizing: border-box;
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #000000 !important;
 }
 .home-carousel-image-mobile {
 position: absolute;
@@ -433,8 +409,7 @@ transition: opacity 1s ease-in-out;
 opacity: 1;
 }
 /* CONTROL */
-.home-container { display: none; }
-.home-container-mobile { display: flex; }
+.home-carousel { display: none; }
 .home-carousel-mobile { display: flex; }
 }
 
@@ -5029,51 +5004,26 @@ transform: scale(1.05);
 ====================================== */
 .shop-carousel {
 position: relative;
-width: 95%;
+z-index: 1;   
+width: 100%;
 height: calc(100vh - 220px); 
-z-index: 1; 
+box-sizing: border-box;
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #000000 !important;
-border: 10px solid #A855F7 !important;
-border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.7),
-0 0 30px rgba(255, 0, 255, 0.5),
-inset 0 0 20px rgba(168, 85, 247, 0.4);
-animation: borderGlow 3s ease-in-out infinite alternate;
-margin: 20px auto;
+background: #000000 !important;
+margin: 40px auto;
 }
-@keyframes borderGlow {
-0% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.6),
-0 0 30px rgba(255, 0, 255, 0.4),
-inset 0 0 15px rgba(168, 85, 247, 0.3);
-}
-100% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.8),
-0 0 30px rgba(255, 0, 255, 0.6),
-inset 0 0 25px rgba(168, 85, 247, 0.5);
-}
-}
-/* CONTENEDOR: IMÁGENES */
 .shop-carousel-image {
 position: absolute;
 width: 100%;
 height: 100%;
+background: #000000 !important;
 object-fit: cover;
 opacity: 0;
-transition: opacity 1s ease-in-out;
-filter: brightness(1.2) contrast(1.1) saturate(1.1);
-border-radius: 0;
-background-color: #000000 !important;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);   
+transition: opacity 1s ease-in-out;   
 }
 .shop-carousel-image.active {
 opacity: 1;
@@ -5086,35 +5036,28 @@ opacity: 1;
 ====================================== */
 @media (max-width: 768px) {
 .shop-carousel-mobile {
-position: relative; 
-width: 90%;
-height: 70vh;
-overflow: hidden;
-background-color: #000000 !important;
-border: 8px solid #A855F7 !important;
-border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.7),
-0 0 30px rgba(255, 0, 255, 0.5),
-inset 0 0 20px rgba(168, 85, 247, 0.4);
-animation: borderGlow 3s ease-in-out infinite alternate;
-margin: 20px auto;
+position: relative;
+z-index: 1;    
+width: 100%;
+height: 500px;
+box-sizing: border-box;
+overflow: hidden;   
 display: flex;
 justify-content: center;
 align-items: center;
+background: #3A0052 !important;
+margin: 30px auto;
+padding: 5px;
 }
-/* CONTENEDOR: IMÁGENES */
 .shop-carousel-image-mobile {
 position: absolute;
 width: 100%;
 height: 100%;
+background: #000000 !important;
 object-fit: cover;
 opacity: 0;
-transition: opacity 1s ease-in-out;
-filter: brightness(1.2) contrast(1.1) saturate(1.1);
-border-radius: 0;
-background-color: #000000 !important;
+filter: brightness(1.2) contrast(1.1) saturate(1.1);   
+transition: opacity 1s ease-in-out;   
 }
 .shop-carousel-image-mobile.active {
 opacity: 1;
@@ -5123,6 +5066,10 @@ opacity: 1;
 .shop-carousel { display: none; }
 .shop-carousel-mobile { display: flex; }
 }
+
+
+
+
 
 /* ======================================
    DIGITAL PRODUCTS
@@ -15547,9 +15494,6 @@ margin-bottom: 0px;
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
 #home-mobile { 
-    display: block !important; 
-}
-.home-carousel-mobile { 
     display: flex !important; 
 }
 
