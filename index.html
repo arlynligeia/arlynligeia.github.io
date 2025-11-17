@@ -153,7 +153,6 @@
   
 <!-- HOME PC -->
 <section class="home-section main-section" id="home">
-<!-- CONTENEDOR: CARRUSEL -->
 <div class="home-carousel">
 <img class="home-carousel-image active" id="home-carousel-image-1" src="assets/assets/Arlyn Ligeia Banner Store.png" alt="Image 1">
 <img class="home-carousel-image" id="home-carousel-image-2" src="assets/assets/Alone Teaser Poster (Horizontal).png" alt="Image 2">
@@ -165,7 +164,6 @@
 
 <!-- HOME MOBILE -->
 <section class="home-section main-section mobile-only" id="home-mobile">
-<!-- CONTENEDOR: CARRUSEL -->
 <div class="home-carousel-mobile">
 <img class="home-carousel-image-mobile active" id="home-carousel-image-1-mobile" src="assets/assets/Arlyn Ligeia Banner Store.png" alt="Image 1">
 <img class="home-carousel-image-mobile" id="home-carousel-image-2-mobile" src="assets/assets/Alone Teaser Poster (Horizontal).png" alt="Image 2">
@@ -6218,139 +6216,7 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
   
 <!-- CARRUSELES --> 
 
-<!-- SCRIP: CARRUSEL HOME PC-->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🖼️ Carrusel iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('.home-carousel-image');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
-}
-// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
-function setupCarouselNavigation() {
-const carousel = document.querySelector('.home-carousel');
-const imageDestinations = {
-'home-carousel-image-2': 'alone',
-'home-carousel-image-3': 'album1969',
-'home-carousel-image-4': 'fw2627'
- };
- carousel.addEventListener('click', function() {
- const activeImage = this.querySelector('.home-carousel-image.active');
- if (activeImage) {
- const destinationId = imageDestinations[activeImage.id];
- if (destinationId) {
- console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
- // OCULTAR TODAS LAS SECCIONES 
- document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
- section.style.display = 'none';
- });
- // MOSTRAR SECCIÓN O SUBSECCIÓN
- const targetSection = document.getElementById(destinationId);
- if (targetSection) {
- const mainSectionId = destinationId.split('-')[0];
- const mainSection = document.getElementById(mainSectionId);
- if (mainSection) {
- mainSection.style.display = 'block';
- document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
- subsection.style.display = 'block';
- });
-targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = destinationId;
-}
-}
-} else {
-console.warn('❌ No se encontró destino para:', activeImage.id);
-}
-}
-});
-// CURSOR
-carousel.style.cursor = 'pointer';
-console.log('✅ Navegación del carrusel configurada');
-}
-// INICIALIZACIÓN 
-startCarousel();
-setupCarouselNavigation();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL HOME PC -->
 
-
-  
-<!-- SCRIP: CARRUSEL HOME MOBILE-->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🖼️ Carrusel móvil iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('.home-carousel-image-mobile');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel móvil configurado - Cambio cada 10 segundos');
-}
-// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
-function setupCarouselNavigation() {
-const carousel = document.querySelector('.home-carousel-mobile');
-const imageDestinations = {
-'home-carousel-image-2-mobile': 'alone-mobile',
-'home-carousel-image-3-mobile': 'album1969-mobile',
-'home-carousel-image-4-mobile': 'fw2627-mobile'
- };
- carousel.addEventListener('click', function() {
- const activeImage = this.querySelector('.home-carousel-image-mobile.active');
- if (activeImage) {
- const destinationId = imageDestinations[activeImage.id];
- if (destinationId) {
- console.log('🖱️ Click en carrusel móvil - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
- // OCULTAR TODAS LAS SECCIONES 
- document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
- section.style.display = 'none';
- });
- // MOSTRAR SECCIÓN O SUBSECCIÓN
- const targetSection = document.getElementById(destinationId);
- if (targetSection) {
- const mainSectionId = destinationId.split('-')[0];
- const mainSection = document.getElementById(mainSectionId);
- if (mainSection) {
- mainSection.style.display = 'block';
- document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
- subsection.style.display = 'block';
- });
-targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = destinationId;
-}
-}
-} else {
-console.warn('❌ No se encontró destino para:', activeImage.id);
-}
-}
-});
-// CURSOR
-carousel.style.cursor = 'pointer';
-console.log('✅ Navegación del carrusel móvil configurada');
-}
-// INICIALIZACIÓN 
-startCarousel();
-setupCarouselNavigation();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL HOME MOBILE -->
 
 
 
