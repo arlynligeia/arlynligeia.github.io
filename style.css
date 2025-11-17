@@ -348,7 +348,6 @@ border-bottom: 1px solid white !important;
 /* ======================================
     HOME PC
 ====================================== */
-/* CONTENEDOR PRINCIPAL - OCUPA TODA LA PANTALLA */
 .home-container {
 position: relative;
 z-index: 1;   
@@ -374,13 +373,12 @@ justify-content: center;
 align-items: center;
 background: #000000 !important;
 }
-/* CONTENEDOR: IMÁGENES */
 .home-carousel-image {
 position: absolute;
 width: 100%;
 height: 100%;
 background: #000000 !important;
-border: 3px solid #ffffff;
+border: 3px solid #00FFFF !important;
 object-fit: cover;
 opacity: 0;
 filter: brightness(1.2) contrast(1.1) saturate(1.1);   
