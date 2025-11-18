@@ -377,13 +377,12 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image.active {
 opacity: 1;
 }
-/* CONTROL */
-.home-carousel { display: flex; }
-.home-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: SHOP
 ====================================== */
 @media (max-width: 768px) {
+.home-carousel { display: none; }
+   
 .home-carousel-mobile {
 position: relative;
 z-index: 1; 
@@ -411,9 +410,6 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image-mobile.active {
 opacity: 1;
 }
-/* CONTROL */
-.home-carousel { display: none; }
-.home-carousel-mobile { display: flex; }
 }
 
 
