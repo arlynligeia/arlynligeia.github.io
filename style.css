@@ -2552,7 +2552,497 @@ margin-bottom: 0px;
 .album1969-container-mobile { display: block; }
 }
 
+/* ======================================
+   FASHION BANNER PC
+====================================== */
+.fashion-banner {
+position: relative;
+z-index: 1;   
+width: 100%;
+box-sizing: border-box;
+height: calc(100vh - 220px);
+overflow: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 40px auto !important; 
+}
+.fashion-banner img {
+position: absolute;
+z-index: 1;
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;
+}
+/* CONTROL */
+.fashion-banner { display: flex; }
+.fashion-banner-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FASHION
+====================================== */
+@media (max-width: 768px) {  
+.fashion-banner-mobile {
+position: relative;
+z-index: 1; 
+width: 100%;
+height: 500px;
+box-sizing: border-box;   
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;   
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 30px auto;
+}
+.fashion-banner-mobile img {
+position: absolute;
+z-index: 1;    
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;   
+}
+/* CONTROL */
+.fashion-banner { display: none; }
+.fashion-banner-mobile { display: flex; }
+}
 
+/* ======================================
+   FASHIONWELCOME
+====================================== */
+.fashionwelcome-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.fashionwelcome-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.fashionwelcome-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.fashionwelcome-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashionwelcome-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.fashionwelcome-information-text,
+.fashionwelcome-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fashionwelcome-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.fashionwelcome-container { display: block; }
+.fashionwelcome-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FASHIONWELCOME
+====================================== */
+@media (max-width: 768px) {
+.fashionwelcome-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.fashionwelcome-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;  
+border-radius: 20px 20px 0 0;
+}
+.fashionwelcome-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.fashionwelcome-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashionwelcome-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+margin: 0px;
+}
+.fashionwelcome-information-text-mobile,
+.fashionwelcome-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fashionwelcome-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.fashionwelcome-container { display: none; }
+.fashionwelcome-container-mobile { display: block; }
+}
+
+/* ======================================
+   FWCOLLECTION
+====================================== */
+.fwcollection-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.fwcollection-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.fwcollection-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.fwcollection-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.fwcollection-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.fwcollection-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-auto-rows: 250px;
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: TARJETAS */
+.fwcollection-columns-grid-card {
+position: relative;
+overflow: hidden;
+display: block;
+text-decoration: none;
+}
+.fwcollection-columns-grid-card img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.fwcollection-columns-grid-card img:hover { 
+transform: scale(1.1);
+}
+/* CONTROL */
+.fwcollection-container { display: block; }
+.fwcollection-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FWCOLLECTION
+====================================== */
+@media (max-width: 768px) {
+.fwcollection-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.fwcollection-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.fwcollection-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.fwcollection-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.fwcollection-cards-mobile {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: TARJETA */   
+.fwcollection-cards-card-mobile {
+position: relative;
+overflow: hidden;
+width: 100%;
+height: 200px;
+display: block;
+text-decoration: none;
+margin-bottom: 0px;
+}
+.fwcollection-cards-2627-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.fwcollection-cards-2627-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTROL DISPLAY MÓVIL */
+.fwcollection-container { display: none; }
+.fwcollection-container-mobile { display: block; }
+}
+
+/* ======================================
+   FW 26/27
+====================================== */
+.fw2627-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.fw2627-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.fw2627-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.fw2627-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: IMAGEN */
+.fw2627-image {
+width: 100%;
+box-sizing: border-box;
+margin: 0 0 15px 0;
+}
+.fw2627-image img {
+width: 100%;
+height: auto;
+display: block;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fw2627-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.fw2627-information-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.5;
+margin: 0px;
+}
+.fw2627-information-text,
+.fw2627-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fw2627-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+.fw2627-container { display: block; }
+.fw2627-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FW2627
+====================================== */
+@media (max-width: 768px) {
+.fw2627-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;   
+padding: 20px;
+}
+.fw2627-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.fw2627-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;      
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.fw2627-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: IMAGEN */
+.fw2627-image-mobile {
+width: 100%;
+box-sizing: border-box;  
+margin: 0 0 20px 0;
+}
+.fw2627-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fw2627-information-mobile {
+width: 100%;
+box-sizing: border-box;
+margin: 0px;
+}
+.fw2627-information-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fw2627-information-text-mobile,
+.fw2627-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;  
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fw2627-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL DISPLAY MÓVIL */
+.fw2627-container { display: none; }
+.fw2627-container-mobile { display: block; }
+}
 
 
 
