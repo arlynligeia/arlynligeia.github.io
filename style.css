@@ -674,6 +674,123 @@ margin: 0 0 10px 0;
 .alone-content-text-end {
 margin-bottom: 0px;
 }
+/* CONTROL */
+.alone-container { display: block; }
+.alone-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: ALONE
+====================================== */
+@media (max-width: 768px) {
+.alone-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto;
+padding: 20px;
+}
+.alone-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background-color: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.alone-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase; 
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.alone-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: IMAGEN */
+.alone-image-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.alone-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+}
+/* DIVISOR */
+.alone-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: CONTENIDO */
+.alone-content-mobile {
+width: 100%;
+margin: 0 0 10px 0;
+}
+.alone-content-subtitle-1-mobile,
+.alone-content-subtitle-2-mobile,
+.alone-content-subtitle-3-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;    
+line-height: 1.5;
+text-align: center;
+margin: 0 0 10px 0;
+}
+.alone-content-subtitle-2-mobile {
+color: #00FFFF !important;
+}
+.alone-content-text-1-mobile,
+.alone-content-text-2-mobile,
+.alone-content-text-mobile,
+.alone-content-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color:  #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.alone-content-text-2-mobile {
+color: #00FFFF !important;
+}
+.alone-content-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.alone-container { display: none; }
+.alone-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    OCULTAR TODAS LAS SECCIONES PC
