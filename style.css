@@ -1373,10 +1373,12 @@ margin-bottom: 0px;
    OCULTAR TODAS LAS SECCIONES MOBILE
 ====================================== */
 @media (max-width: 768px) {
-.main-section.mobile-only:not(#home-mobile),
-#cartempty-mobile,
-#cartfull-mobile { display: none; }
-.subsection.mobile-only:not([id^="home-mobile-"]) { display: none; }
+    .main-section.mobile-only,
+    .subsection.mobile-only,
+    #cartempty-mobile,
+    #cartfull-mobile { 
+        display: none; 
+    }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
 #home-mobile { display: flex; }
