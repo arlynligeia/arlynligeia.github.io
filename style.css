@@ -377,13 +377,13 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image.active {
 opacity: 1;
 }
+/* CONTROL */
+.home-carousel { display: flex; }
 .home-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: SHOP
 ====================================== */
-@media (max-width: 768px) {
-.home-carousel { display: none; }
-   
+@media (max-width: 768px) {  
 .home-carousel-mobile {
 position: relative;
 z-index: 1; 
@@ -411,20 +411,10 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image-mobile.active {
 opacity: 1;
 }
+/* CONTROL */
+.home-carousel { display: none; }
+.home-carousel-mobile { display: flex; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    FILM BANNER PC
@@ -441,7 +431,7 @@ justify-content: center;
 align-items: center;
 background: #000000 !important;
 border: 3px solid #A855F7 !important;
-margin: 40px auto;
+margin: 40px auto !important; 
 }
 .film-banner img {
 position: absolute;
@@ -454,14 +444,36 @@ background: #000000 !important;
 /* CONTROL */
 .film-banner { display: flex; }
 .film-banner-mobile { display: none; }
-
-
-
-
-
-
-
-
+/* ======================================
+   MOVIL RESPONSIVE: FILM
+====================================== */
+@media (max-width: 768px) {  
+.film-banner-mobile {
+position: relative;
+z-index: 1; 
+width: 100%;
+height: 500px;
+box-sizing: border-box;   
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;   
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 30px auto;
+}
+.film-banner-mobile img {
+position: absolute;
+z-index: 1;    
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;   
+}
+/* CONTROL */
+.home-carousel { display: none; }
+.home-carousel-mobile { display: flex; }
+}
 
 /* ======================================
    FEATURE FILM
@@ -534,14 +546,71 @@ transform: scale(1.1);
 /* CONTROL */
 .featurefilm-container { display: block; }
 .featurefilm-container-mobile { display: none; }
-
-
-
-
-
-
-
-
+/* ======================================
+   MOVIL RESPONSIVE: FEATURE FILM
+====================================== */
+@media (max-width: 768px) {
+.featurefilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.featurefilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.featurefilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase; 
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.featurefilm-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.featurefilm-cards-mobile {
+position: relative;
+z-index: 2;
+}
+.featurefilm-cards-card-mobile {
+position: relative;
+display: block;
+overflow: hidden;
+text-decoration: none;
+margin-bottom: 0px;
+}
+.featurefilm-cards-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.featurefilm-cards-card-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTROL */
+.featurefilm-container { display: none; }
+.featurefilm-container-mobile { display: block; }
+}
 
 /* ======================================
    ALONE
@@ -820,6 +889,7 @@ margin-bottom: 0px;
 /* ======================================
    OCULTAR TODAS LAS SECCIONES MOBILE
 ====================================== */
+@media (max-width: 768px) {
 .main-section.mobile-only:not(#home-mobile),
 #cartempty-mobile,
 #cartfull-mobile { display: none; }
@@ -830,6 +900,14 @@ margin-bottom: 0px;
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
 #home-youtubehighlight-mobile { display: block; }
+}
+
+
+
+
+
+
+
 
 /* ======================================
    FOOTER PC
