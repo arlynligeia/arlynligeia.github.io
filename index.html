@@ -256,9 +256,54 @@
 </section>
 <!-- FIN ALONE FILM PC-->
   
+<!-- ALONE FILM MÓVIL -->
+<section class="alone-section main-section mobile-only" id="alone-mobile">
+<div class="alone-container-mobile">
+<h2 class="alone-title-mobile"><a href="#alone-mobile">ALONE</a></h2>
+<!-- CONTENEDOR: IMAGEN -->
+<div class="alone-image-mobile">    
+<img src="assets/assets/Alone Teaser Poster (Vertical).png" alt="Alone Teaser Poster">
+</div>
+<!-- DIVISOR -->
+<div class="alone-divider"></div>  
+<!-- CONTENEDOR: CONTENIDO -->
+<div class="alone-content-mobile">
+<h3 class="alone-content-subtitle-1-mobile">UPCOMING</h3>
+<p class="alone-content-text-1-mobile">Written, directed, shot, starred in, and edited by Arlyn Ligeia</p>
+<!-- DIVISOR -->
+<div class="alone-divider"></div>  
+<h3 class="alone-content-subtitle-2-mobile">SYNOPSIS</h3>  
+<p class="alone-content-text-2-mobile">A horror content creator puts a retrocausal protocol to the test. What seemed like a simple experiment turns sinister when the rules of reality begin to break around her.</p>
+<!-- DIVISOR -->
+<div class="alone-divider"></div>
+<h3 class="alone-content-subtitle-3-mobile">CURRENTLY IN PRODUCTION</h3>  
+<p class="alone-content-text-mobile">ALONE is Arlyn Ligeia's first feature film. This is a very personal project for Ligeia, born from adversity and a profound exploration of solitude during one of the most financially challenging periods of her life.</p>
+<p class="alone-content-text-mobile">Yet, rather than giving up, Ligeia found a way to turn pain into art. This film was written by Ligeia and will be directed, shot, starred in, and edited by her.</p>
+<p class="alone-content-text-mobile">This feature film will mark Ligeia's debut in the world of cinema. A science fiction story blending psychological and cosmic horror with a deeply dreamlike aesthetic.</p>
+<p class="alone-content-text-mobile">Entirely self-produced, the film is a bold statement of artistic independence, shaped by her background in psychology.</p>
+<p class="alone-content-text-mobile">This film is a love letter to artistic survival, to the loneliness that fuels creation, and to the relentless pursuit of one's deepest dreams, even in the darkest of times.</p>
+<p class="alone-content-text-end-mobile">Filming is currently underway.</p>
+</div>  
+</div>
+</section>
+<!-- FIN ALONE FILM MÓVIL -->
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
 </main>
 
@@ -811,6 +856,74 @@ setupCarouselNavigation();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME PC -->
+
+
+<!-- SCRIP: CARRUSEL HOME MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🖼️ Carrusel móvil iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.home-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel móvil configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+const carousel = document.querySelector('.home-carousel-mobile');
+const imageDestinations = {
+'home-carousel-image-2-mobile': 'alone-mobile',
+'home-carousel-image-3-mobile': 'album1969-mobile',
+'home-carousel-image-4-mobile': 'fw2627-mobile'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.home-carousel-image-mobile.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel móvil - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId; // CORREGIDO: igual al PC
+ const mainSection = document.getElementById(mainSectionId); // CORREGIDO: igual al PC
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel móvil configurada');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL HOME MOBILE -->
+
 
 <!-- FIN CARRUSELES -->
 
