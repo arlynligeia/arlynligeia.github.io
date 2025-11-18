@@ -868,65 +868,70 @@ setupCarouselNavigation();
 <!-- SCRIP: CARRUSEL HOME MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🖼️ Carrusel móvil iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('.home-carousel-image-mobile');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel móvil configurado - Cambio cada 10 segundos');
-}
-// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
-function setupCarouselNavigation() {
-const carousel = document.querySelector('.home-carousel-mobile');
-const imageDestinations = {
-'home-carousel-image-2-mobile': 'alone-mobile',
-'home-carousel-image-3-mobile': 'album1969-mobile',
-'home-carousel-image-4-mobile': 'fw2627-mobile'
- };
- carousel.addEventListener('click', function() {
- const activeImage = this.querySelector('.home-carousel-image-mobile.active');
- if (activeImage) {
- const destinationId = imageDestinations[activeImage.id];
- if (destinationId) {
- console.log('🖱️ Click en carrusel móvil - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
- // OCULTAR TODAS LAS SECCIONES 
- document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
- section.style.display = 'none';
- });
- // MOSTRAR SECCIÓN O SUBSECCIÓN
- const targetSection = document.getElementById(destinationId);
- if (targetSection) {
- const mainSectionId = destinationId.split('-')[0];
- const mainSection = document.getElementById(mainSectionId);
- if (mainSection) {
- mainSection.style.display = 'block';
- document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
- subsection.style.display = 'block';
- });
-targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = destinationId;
-}
-}
-} else {
-console.warn('❌ No se encontró destino para:', activeImage.id);
-}
-}
-});
-// CURSOR
-carousel.style.cursor = 'pointer';
-console.log('✅ Navegación del carrusel móvil configurada');
-}
-// INICIALIZACIÓN 
-startCarousel();
-setupCarouselNavigation();
+    console.log('📱 Carrusel Mobile iniciado');
+    
+    // 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+    function startCarouselMobile() {
+        const images = document.querySelectorAll('.home-carousel-image-mobile');
+        let currentImageIndex = 0;
+        
+        // 2. FUNCIÓN: CAMBIAR IMAGEN
+        function changeImage() {
+            images.forEach(img => img.classList.remove('active'));
+            images[currentImageIndex].classList.add('active');
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+        }
+        
+        changeImage();
+        setInterval(changeImage, 10000);
+        console.log('✅ Carrusel Mobile configurado - Cambio cada 10 segundos');
+    }
+    
+    // 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+    function setupCarouselNavigationMobile() {
+        const carousel = document.querySelector('.home-carousel-mobile');
+        const imageDestinations = {
+            'home-carousel-image-2-mobile': 'alone-mobile',
+            'home-carousel-image-3-mobile': 'album1969-mobile',
+            'home-carousel-image-4-mobile': 'fw2627-mobile'
+        };
+        
+        carousel.addEventListener('click', function() {
+            const activeImage = this.querySelector('.home-carousel-image-mobile.active');
+            if (activeImage) {
+                const destinationId = imageDestinations[activeImage.id];
+                if (destinationId) {
+                    console.log('🖱️ Click en carrusel mobile - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+                    
+                    // OCULTAR TODAS LAS SECCIONES MOBILE
+                    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    
+                    // OCULTAR EL CARRUSEL
+                    document.getElementById('home-mobile').style.display = 'none';
+                    
+                    // MOSTRAR SECCIÓN O SUBSECCIÓN
+                    const targetSection = document.getElementById(destinationId);
+                    if (targetSection) {
+                        targetSection.style.display = 'block';
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        window.location.hash = destinationId;
+                    }
+                } else {
+                    console.warn('❌ No se encontró destino para:', activeImage.id);
+                }
+            }
+        });
+        
+        // CURSOR
+        carousel.style.cursor = 'pointer';
+        console.log('✅ Navegación del carrusel mobile configurada');
+    }
+    
+    // INICIALIZACIÓN 
+    startCarouselMobile();
+    setupCarouselNavigationMobile();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME MOBILE -->
