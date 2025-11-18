@@ -1155,7 +1155,8 @@ console.log('🖱️ Click en carrusel mobile - Imagen activa:', activeImage.id,
 // OCULTAR TODAS LAS SECCIONES MOBILE
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
 section.style.display = 'none';
-});                        
+});  
+  
 // MOSTRAR SECCIÓN O SUBSECCIÓN
 const targetSection = document.getElementById(destinationId);
 if (targetSection) {
@@ -1173,6 +1174,13 @@ carousel.style.cursor = 'pointer';
 console.log('✅ Navegación del carrusel mobile configurada');
 }
 // INICIALIZACIÓN 
+  
+// MOSTRAR HOME MOBILE Y SUS HIJOS AL CARGAR LA PÁGINA
+document.getElementById('home-mobile').style.display = 'flex';
+document.getElementById('home-socialmediacontent-mobile').style.display = 'block';
+document.getElementById('home-tiktokhighlight-mobile').style.display = 'block'; 
+document.getElementById('home-youtubehighlight-mobile').style.display = 'block';
+  
 startCarouselMobile();
 setupCarouselNavigationMobile();
 });
