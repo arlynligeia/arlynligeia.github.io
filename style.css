@@ -352,51 +352,26 @@ border-bottom: 1px solid white !important;
 ====================================== */
 .home-carousel {
 position: relative;
+z-index: 1; 
 width: 95%;
 height: calc(100vh - 220px); 
-z-index: 1; 
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #000000 !important;
-border: 10px solid #A855F7 !important;
-border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.7),
-0 0 30px rgba(255, 0, 255, 0.5),
-inset 0 0 20px rgba(168, 85, 247, 0.4);
-animation: borderGlow 3s ease-in-out infinite alternate;
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
 margin: 40px auto;
 }
-@keyframes borderGlow {
-0% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.6),
-0 0 30px rgba(255, 0, 255, 0.4),
-inset 0 0 15px rgba(168, 85, 247, 0.3);
-}
-100% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.8),
-0 0 30px rgba(255, 0, 255, 0.6),
-inset 0 0 25px rgba(168, 85, 247, 0.5);
-}
-}
-/* CONTENEDOR: IMÁGENES */
 .home-carousel-image {
 position: absolute;
+z-index: 1; 
 width: 100%;
 height: 100%;
 object-fit: cover;
+background: #000000 !important;
 opacity: 0;
 transition: opacity 1s ease-in-out;
-filter: brightness(1.2) contrast(1.1) saturate(1.1);
-border-radius: 0;
-background-color: #000000 !important;
 }
 .home-carousel-image.active {
 opacity: 1;
@@ -407,51 +382,32 @@ opacity: 1;
 ====================================== */
 .film-banner {
 position: relative;
+z-index: 1;   
 width: 95%;
 height: calc(100vh - 220px);
-z-index: 1;
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background-color: #000000 !important;
-border: 10px solid #A855F7 !important;
-border-radius: 10% 8% 10% 8% / 50% 50% 50% 50%; 
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.7),
-0 0 30px rgba(255, 0, 255, 0.5),
-inset 0 0 20px rgba(168, 85, 247, 0.4);
-animation: borderGlow 3s ease-in-out infinite alternate;
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
 margin: 40px auto;
 }
-@keyframes borderGlow {
-0% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.6),
-0 0 30px rgba(255, 0, 255, 0.4),
-inset 0 0 15px rgba(168, 85, 247, 0.3);
-}
-100% {
-box-shadow: 
-0 0 10px #A855F7,
-0 0 20px rgba(168, 85, 247, 0.8),
-0 0 30px rgba(255, 0, 255, 0.6),
-inset 0 0 25px rgba(168, 85, 247, 0.5);
-}
-}
-/* IMAGEN DENTRO DEL BANNER */
 .film-banner img {
 position: absolute;
 z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
-filter: brightness(1.2) contrast(1.1) saturate(1.1);
-border-radius: 0;
-background-color: #000000 !important;
+background: #000000 !important;
 }
+
+
+
+
+
+
+
 /* CONTENEDOR: FILM */
 .film-container {
 position: relative;
