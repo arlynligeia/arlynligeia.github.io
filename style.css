@@ -416,6 +416,475 @@ opacity: 1;
 .home-carousel-mobile { display: flex; }
 }
 
+/* ======================================
+   SOCIAL MEDIA CONTENT
+====================================== */
+.socialmediacontent-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;  
+padding: 30px;
+}
+.socialmediacontent-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.socialmediacontent-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.socialmediacontent-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.socialmediacontent-table {
+width: 100%;   
+margin: 0px;
+}
+.socialmediacontent-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 10;
+background-color: transparent;
+}
+.socialmediacontent-table-wrapper th:nth-child(1),
+.socialmediacontent-table-wrapper td:nth-child(1) {
+width: 20%;
+}
+.socialmediacontent-table-wrapper th:nth-child(2),
+.socialmediacontent-table-wrapper td:nth-child(2) {
+width: 45%;
+}
+.socialmediacontent-table-wrapper th:nth-child(3),
+.socialmediacontent-table-wrapper td:nth-child(3) {
+width: 35%;
+}
+/* TABLA: ENCABEZADOS */
+.socialmediacontent-table-wrapper-head {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper-head-row {
+vertical-align: middle;
+}
+.socialmediacontent-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-align: center;
+text-transform: uppercase;
+padding: 0px;
+margin: 0px;  
+}
+/* DIVISOR */
+.socialmediacontent-table-wrapper-divider td {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 10px 0; 
+}
+/* TABLA: CUERPO */
+.socialmediacontent-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+.socialmediacontent-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* TABLA: CELDA DE BOTÓN */
+.socialmediacontent-table-wrapper-body-row-cell-button {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+background: #ff1493 !important;
+border-radius: 6px;
+margin: 0px; 
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.socialmediacontent-table-wrapper-body-row-cell-button:hover {
+transform: scale(1.05);
+}
+/* TABLA: TEXTO DE BOTÓN */
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;  
+}
+/* TABLA: CELDA DE TEXTOS */
+.socialmediacontent-table-wrapper-body-row-cell-box {
+width: 100%;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;   
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+margin: 0px;
+padding: 10px;
+border: none;  
+}
+/* TABLA: TEXTOS */
+.socialmediacontent-table-wrapper-body-row-cell-box-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+}
+/* CONTROL */
+.socialmediacontent-container { display: block; }
+.socialmediacontent-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
+====================================== */
+@media (max-width: 768px) {
+.socialmediacontent-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.socialmediacontent-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.socialmediacontent-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.socialmediacontent-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: CONTENIDO */
+.socialmediacontent-content-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}
+/* CONTENEDOR: BOTON */
+.socialmediacontent-content-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.socialmediacontent-content-button-tiktok-mobile,
+.socialmediacontent-content-button-youtube-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;   
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;   
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.socialmediacontent-content-button-tiktok-mobile:hover,
+.socialmediacontent-content-button-youtube-mobile:hover {
+transform: scale(1.05);
+}  
+/* CONTENEDOR: CAJAS */
+.socialmediacontent-content-box-mobile {
+width: 100%;
+height: 40px;
+display: inline-block;
+box-sizing: border-box;   
+background: #00FFFF !important;
+border-radius: 6px;
+text-align: center; 
+margin: 0 0 10px 0;  
+padding: 10px;
+border: none;
+}
+/* CONTENEDOR: TEXTO */
+.socialmediacontent-content-box-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+}   
+/* SEPARADOR */
+.socialmediacontent-content-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+}
+ /* CONTROL */
+.socialmediacontent-container { display: none; }
+.socialmediacontent-container-mobile { display: block; }
+}
+
+/* ======================================
+   YOUTUBE HIGHLIGHT
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.youtubehighlight-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+padding: 30px; 
+margin: 40px auto;
+}
+.youtubehighlight-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+height: 90px;
+}
+/* TÍTULO Y BOTÓN */
+.youtubehighlight-header {
+position: relative;
+z-index: 2;
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 16px;
+}
+/* TÍTULO */
+.youtubehighlight-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+line-height: 1.6;
+text-align: left;
+margin: 0 0 16px 0; 
+}
+.youtubehighlight-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* BOTÓN: FOLLOW */
+.youtubehighlight-button-follow {
+z-index: 2;
+display: inline-block;
+background-color: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+text-align: center;
+margin: 0 0 16px 0;    
+padding: 10px 20px; 
+border: none;
+cursor: pointer; 
+transition: transform 0.3s ease, background-color 0.3s ease;  
+}
+.youtubehighlight-button-follow:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: COLUMNAS */
+.youtubehighlight-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.youtubehighlight-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+grid-auto-rows: 250px;
+margin: 0px; 
+}
+/* CONTENEDOR: VIDEO */
+.youtubehighlight-columns-grid-video {
+position: relative;
+overflow: hidden;
+border-radius: 15px;
+margin: 0px; 
+}
+.youtubehighlight-columns-grid-video iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 15px;
+border: none;
+}
+/* CONTROL */
+.youtubehighlight-container { display: block; }
+.youtubehighlight-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: YOUTUBE HIGHLIGHT
+====================================== */
+@media (max-width: 768px) {
+.youtubehighlight-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+ .youtubehighlight-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.youtubehighlight-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.youtubehighlight-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: BOTÓN FOLLOW */
+.youtubehighlight-button-mobile {
+display: flex;
+justify-content: center;
+}
+.youtubehighlight-button-follow-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;   
+text-align: center;
+margin: 0 0 10px 0;    
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.youtubehighlight-button-follow-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: VIDEOS */
+.youtubehighlight-content-mobile {
+width: 100%;
+display: block;
+margin: 0px;
+}
+.youtubehighlight-content-video-mobile {
+position: relative;
+width: 100%;
+height: 200px;
+border-radius: 15px;
+overflow: hidden;
+margin: 0 0 10px 0;
+}
+.youtubehighlight-content-video-mobile:last-child {
+margin-bottom: 0;
+}
+.youtubehighlight-content-video-mobile iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 15px;
+border: none;
+}
+/* CONTROL */
+.youtubehighlight-container { display: none; }
+.youtubehighlight-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
