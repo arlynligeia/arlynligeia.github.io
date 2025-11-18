@@ -454,6 +454,9 @@ height: 100%;
 object-fit: cover;
 background: #000000 !important;
 }
+/* CONTROL */
+.film-banner { display: flex; }
+.film-banner-mobile { display: none; }
 
 
 
@@ -531,6 +534,17 @@ transition: transform 0.3s ease;
 .featurefilm-columns-grid-card img:hover { 
 transform: scale(1.1);
 }
+/* CONTROL */
+.featurefilm-container { display: block; }
+.featurefilm-container-mobile { display: none; }
+
+
+
+
+
+
+
+
 
 /* ======================================
    ALONE
