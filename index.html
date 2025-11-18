@@ -170,15 +170,6 @@
 <!-- FIN HOME PC -->
 
 
-
-
-
-
-
-
-
-
-
   
 <!-- FILM PC -->
 <section class="film-section main-section" id="film">
@@ -189,16 +180,14 @@
 </section>
 <!-- FIN FILM PC -->
 
-
-
-
-
-
-
-
-
-
-
+<!-- FILM PC -->
+<section class="film-section main-section mobile-only" id="film-mobile">
+<!-- CONTENEDOR: BANNER -->  
+<div class="film-banner-mobile">
+<img id="film-banner-alone-mobile" src="assets/assets/Alone Teaser Poster (Horizontal 2).png" alt="Alone Teaser Banner"/>
+</div>
+</section>
+<!-- FIN FILM PC -->
 
   
 <!-- FEATURE FILM PC-->
@@ -218,6 +207,21 @@
 </div>
 </section>
 <!-- END FEATURE FILM PC-->
+  
+<!-- FEATURE FILM MÓVIL -->
+<section class="subsection mobile-only" id="film-mobile-featurefilm">
+<div class="featurefilm-container-mobile">
+<h2 class="featurefilm-title-mobile"><a href="#film-mobile-featurefilm">FEATURE FILM</a></h2>
+<!-- CONTENEDOR: TARJETAS -->  
+<div class="featurefilm-cards-mobile">
+<!-- CONTENEDOR: TARJETA -->
+<a class="featurefilm-cards-card-mobile" href="#alone-mobile">
+<img src="assets/assets/Alone Teaser Poster (Vertical).png" alt="Alone Teaser Poster">
+</a> 
+</div> 
+</div>
+</section>
+<!-- END FEATURE FILM MÓVIL -->
   
 <!-- ALONE FILM PC-->
 <section class="alone-section main-section" id="alone">
@@ -858,6 +862,9 @@ setupCarouselNavigation();
 <!-- FIN SCRIP: CARRUSEL HOME PC -->
 
 
+
+
+  
 <!-- SCRIP: CARRUSEL HOME MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -897,8 +904,8 @@ const imageDestinations = {
  // MOSTRAR SECCIÓN O SUBSECCIÓN
  const targetSection = document.getElementById(destinationId);
  if (targetSection) {
- const mainSectionId = destinationId; // CORREGIDO: igual al PC
- const mainSection = document.getElementById(mainSectionId); // CORREGIDO: igual al PC
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
  if (mainSection) {
  mainSection.style.display = 'block';
  document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
@@ -930,6 +937,10 @@ setupCarouselNavigation();
 
 
 
+
+
+
+  
 
 <!-- BANNERS --> 
 
