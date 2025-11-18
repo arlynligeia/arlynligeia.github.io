@@ -1799,6 +1799,89 @@ setupBannerNavigationMobile();
 </script>
 <!-- FIN SCRIP: BANNER MUSIC MOBILE -->
 
+
+
+<!-- SCRIP: BANNER FASHION PC --> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('👗 Banner Fashion iniciado');
+// FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN EL BANNER
+function setupBannerNavigation() {
+const banner = document.getElementById('fashion-banner-fw2627');
+banner.addEventListener('click', function() {
+console.log('🖱️ Click en banner - Navegando a: fw2627');
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN FW2627
+const targetSection = document.getElementById('fw2627');
+if (targetSection) {
+const mainSection = document.getElementById('fw2627');
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll('[id^="fw2627-"]').forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSection.scrollIntoView({ 
+behavior: 'smooth', 
+block: 'start' 
+});
+window.location.hash = 'fw2627';
+}
+} else {
+console.warn('❌ No se encontró la sección fw2627');
+}
+});
+// CURSOR
+banner.style.cursor = 'pointer';
+console.log('✅ Navegación del banner configurada');
+}
+// INICIALIZACIÓN 
+setupBannerNavigation();
+});
+</script>
+<!-- FIN SCRIP: BANNER FASHION PC -->
+
+
+<!-- SCRIP: BANNER FASHION MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('👗 Banner Fashion Mobile iniciado');
+// FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN EL BANNER
+function setupBannerNavigationMobile() {
+const banner = document.getElementById('fashion-banner-fw2627-mobile');
+banner.addEventListener('click', function() {
+console.log('🖱️ Click en banner mobile - Navegando a: fw2627-mobile');
+// OCULTAR TODAS LAS SECCIONES MOBILE
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+// OCULTAR EL CARRUSEL MOBILE
+document.getElementById('home-mobile').style.display = 'none';
+// MOSTRAR SECCIÓN FW2627-MOBILE
+const targetSection = document.getElementById('fw2627-mobile');
+if (targetSection) {
+targetSection.style.display = 'block';
+targetSection.scrollIntoView({ 
+behavior: 'smooth', 
+block: 'start' 
+});
+window.location.hash = 'fw2627-mobile';
+} else {
+console.warn('❌ No se encontró la sección fw2627-mobile');
+}
+});
+// CURSOR
+banner.style.cursor = 'pointer';
+console.log('✅ Navegación del banner mobile configurada');
+}
+// INICIALIZACIÓN 
+setupBannerNavigationMobile();
+});
+</script>
+<!-- FIN SCRIP: BANNER FASHION MOBILE -->
+
 <!-- FIN BANNERS --> 
 
 
