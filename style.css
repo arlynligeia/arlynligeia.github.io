@@ -679,21 +679,6 @@ margin: 0 0 10px 0;
 .socialmediacontent-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    YOUTUBE HIGHLIGHT
 ====================================== */
@@ -703,8 +688,8 @@ position: relative;
 width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
+margin: 40px auto;   
 padding: 30px; 
-margin: 40px auto;
 }
 .youtubehighlight-container::before {
 content: "";
@@ -724,7 +709,7 @@ z-index: 2;
 display: flex;
 align-items: center;
 justify-content: space-between;
-margin-bottom: 16px;
+margin: 0 0 16px 0;
 }
 /* TÍTULO */
 .youtubehighlight-title {
@@ -736,8 +721,8 @@ font-size: 2.5rem;
 color: #FF66CC !important;
 text-decoration: none;
 text-transform: uppercase;
+text-align: left;   
 line-height: 1.6;
-text-align: left;
 margin: 0 0 16px 0; 
 }
 .youtubehighlight-title a {
@@ -754,9 +739,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
-text-transform: uppercase;   
+text-transform: uppercase;
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 16px 0;    
 padding: 10px 20px; 
 border: none;
@@ -775,8 +760,8 @@ z-index: 2;
 .youtubehighlight-columns-grid {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
-gap: 20px;
 grid-auto-rows: 250px;
+gap: 20px;
 margin: 0px; 
 }
 /* CONTENEDOR: VIDEO */
@@ -840,6 +825,8 @@ text-decoration: none;
 }
 /* CONTENEDOR: BOTÓN FOLLOW */
 .youtubehighlight-button-mobile {
+width: 100%;
+box-sizing: border-box;
 display: flex;
 justify-content: center;
 }
@@ -852,8 +839,8 @@ font-size: 1rem;
 color: white !important;
 text-decoration: none;
 text-transform: uppercase;
+text-align: center;   
 font-weight: bold;   
-text-align: center;
 margin: 0 0 10px 0;    
 padding: 10px 20px;
 border: none;
@@ -866,6 +853,7 @@ transform: scale(1.05);
 /* CONTENEDOR: VIDEOS */
 .youtubehighlight-content-mobile {
 width: 100%;
+box-sizing: border-box;
 display: block;
 margin: 0px;
 }
@@ -873,12 +861,12 @@ margin: 0px;
 position: relative;
 width: 100%;
 height: 200px;
+overflow: hidden;  
 border-radius: 15px;
-overflow: hidden;
 margin: 0 0 10px 0;
 }
 .youtubehighlight-content-video-mobile:last-child {
-margin-bottom: 0;
+margin-bottom: 0PX;
 }
 .youtubehighlight-content-video-mobile iframe {
 position: absolute;
