@@ -157,6 +157,28 @@
 </div>
 </section>
 <!-- FIN HOME PC -->
+
+<!-- HOME MOBILE -->
+<section class="home-section main-section mobile-only" id="home-mobile">
+<div class="home-carousel-mobile">
+<img class="home-carousel-image-mobile active" id="home-carousel-image-1-mobile" src="assets/assets/Arlyn Ligeia Banner Store.png" alt="Image 1">
+<img class="home-carousel-image-mobile" id="home-carousel-image-2-mobile" src="assets/assets/Alone Teaser Poster (Horizontal).png" alt="Image 2">
+<img class="home-carousel-image-mobile" id="home-carousel-image-3-mobile" src="assets/assets/1969 Official Poster (Horizontal).png" alt="Image 3">
+<img class="home-carousel-image-mobile" id="home-carousel-image-4-mobile" src="assets/assets/FW 2627 Afiche 1 Horizontal.png" alt="Image 4">
+</div>
+</section>
+<!-- FIN HOME PC -->
+
+
+
+
+
+
+
+
+
+
+
   
 <!-- FILM PC -->
 <section class="film-section main-section" id="film">
@@ -801,48 +823,41 @@ setupCarouselNavigation();
 <!-- SCRIP: BANNER FILM PC --> 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🎬 Banner Film iniciado');
-    
-    // FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN EL BANNER
-    function setupBannerNavigation() {
-        const banner = document.getElementById('film-banner-alone');
-        
-        banner.addEventListener('click', function() {
-            console.log('🖱️ Click en banner - Navegando a: alone');
-            
-            // OCULTAR TODAS LAS SECCIONES 
-            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
-                section.style.display = 'none';
-            });
-            
-            // MOSTRAR SECCIÓN ALONE
-            const targetSection = document.getElementById('alone');
-            if (targetSection) {
-                const mainSection = document.getElementById('alone');
-                if (mainSection) {
-                    mainSection.style.display = 'block';
-                    document.querySelectorAll('[id^="alone-"]').forEach(subsection => {
-                        subsection.style.display = 'block';
-                    });
-                    
-                    targetSection.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'start' 
-                    });
-                    window.location.hash = 'alone';
-                }
-            } else {
-                console.warn('❌ No se encontró la sección alone');
-            }
-        });
-        
-        // CURSOR
-        banner.style.cursor = 'pointer';
-        console.log('✅ Navegación del banner configurada');
-    }
-    
-    // INICIALIZACIÓN 
-    setupBannerNavigation();
+console.log('🎬 Banner Film iniciado');
+// FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN EL BANNER
+function setupBannerNavigation() {
+const banner = document.getElementById('film-banner-alone');
+banner.addEventListener('click', function() {
+console.log('🖱️ Click en banner - Navegando a: alone');
+// OCULTAR TODAS LAS SECCIONES 
+document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SECCIÓN ALONE
+const targetSection = document.getElementById('alone');
+if (targetSection) {
+const mainSection = document.getElementById('alone');
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll('[id^="alone-"]').forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSection.scrollIntoView({ 
+behavior: 'smooth', 
+block: 'start' 
+});
+window.location.hash = 'alone';
+}
+} else {
+console.warn('❌ No se encontró la sección alone');
+}
+});
+// CURSOR
+banner.style.cursor = 'pointer';
+console.log('✅ Navegación del banner configurada');
+}
+// INICIALIZACIÓN 
+setupBannerNavigation();
 });
 </script>
 <!-- FIN SCRIP: BANNER FILM PC -->
