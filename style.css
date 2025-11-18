@@ -354,8 +354,8 @@ border-bottom: 1px solid white !important;
 position: relative;
 z-index: 1; 
 width: 100%;
+height: calc(100vh - 220px);
 box-sizing: border-box;
-height: calc(100vh - 220px); 
 overflow: hidden;
 display: flex;
 justify-content: center;
@@ -377,6 +377,57 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image.active {
 opacity: 1;
 }
+/* CONTROL */
+.home-carousel { display: flex; }
+.home-carousel-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SHOP
+====================================== */
+@media (max-width: 768px) {
+.home-carousel-mobile {
+position: relative;
+z-index: 1; 
+width: 100%;
+height: 500px;
+box-sizing: border-box;   
+overflow: hidden;  
+display: flex;
+justify-content: center;
+align-items: center;   
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 30px auto;
+}
+.home-carousel-image-mobile {
+position: absolute;
+z-index: 1;    
+width: 100%;
+height: 100%;
+object-fit: cover;
+background: #000000 !important;   
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+.home-carousel-image-mobile.active {
+opacity: 1;
+}
+/* CONTROL */
+.home-carousel { display: none; }
+.home-carousel-mobile { display: flex; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    FILM BANNER PC
