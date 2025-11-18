@@ -162,7 +162,7 @@
 <section class="film-section main-section" id="film">
 <!-- CONTENEDOR: BANNER -->  
 <div class="film-banner">
-<img src="assets/assets/Alone Teaser Poster (Horizontal 2).png" alt="Alone Teaser Banner"/>
+<img id="alone-banner" src="assets/assets/Alone Teaser Poster (Horizontal 2).png" alt="Alone Teaser Banner"/>
 </div>
 </section>
 <!-- FIN FILM PC -->
@@ -790,6 +790,31 @@ setupCarouselNavigation();
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME PC -->
 
+<!-- FIN CARRUSELES -->
+
+
+
+
+
+<!-- BANNERS --> 
+
+<!-- SCRIP: BANNER FILM PC --> 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const aloneBanner = document.getElementById('alone-banner');
+aloneBanner.addEventListener('click', function() {
+const aloneSection = document.getElementById('alone');
+if (aloneSection) {
+aloneSection.scrollIntoView({ 
+behavior: 'smooth' 
+});
+}
+});
+// CAMBIAR CURSOR
+aloneBanner.style.cursor = 'pointer';
+});
+</script>
+<!-- FIN SCRIP: BANNER FILM PC --> 
   
 </body>
   
