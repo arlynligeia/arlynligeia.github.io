@@ -903,35 +903,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (destinationId) {
                     console.log('🖱️ Click en carrusel mobile - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
                     
-                    // OCULTAR TODAS LAS SECCIONES MOBILE
-                    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
-                        section.style.display = 'none';
-                    });
+  // OCULTAR TODAS LAS SECCIONES MOBILE
+  document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+  section.style.display = 'none';
+  });
                     
-                    // OCULTAR EL CARRUSEL
-                    document.getElementById('home-mobile').style.display = 'none';
-                    
-                    // MOSTRAR SECCIÓN O SUBSECCIÓN
-                    const targetSection = document.getElementById(destinationId);
-                    if (targetSection) {
-                        targetSection.style.display = 'block';
-                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        window.location.hash = destinationId;
-                    }
-                } else {
-                    console.warn('❌ No se encontró destino para:', activeImage.id);
-                }
-            }
-        });
-        
-        // CURSOR
-        carousel.style.cursor = 'pointer';
-        console.log('✅ Navegación del carrusel mobile configurada');
-    }
-    
-    // INICIALIZACIÓN 
-    startCarouselMobile();
-    setupCarouselNavigationMobile();
+                        
+// MOSTRAR SECCIÓN O SUBSECCIÓN
+const targetSection = document.getElementById(destinationId);
+if (targetSection) {
+targetSection.style.display = 'block';
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel mobile configurada');
+}
+// INICIALIZACIÓN 
+startCarouselMobile();
+setupCarouselNavigationMobile();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME MOBILE -->
