@@ -162,7 +162,7 @@
 <section class="film-section main-section" id="film">
 <!-- CONTENEDOR: BANNER -->  
 <div class="film-banner">
-<img id="alone-banner" src="assets/assets/Alone Teaser Poster (Horizontal 2).png" alt="Alone Teaser Banner"/>
+<img id="film-banner-alone" src="assets/assets/Alone Teaser Poster (Horizontal 2).png" alt="Alone Teaser Banner"/>
 </div>
 </section>
 <!-- FIN FILM PC -->
@@ -801,20 +801,51 @@ setupCarouselNavigation();
 <!-- SCRIP: BANNER FILM PC --> 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-const aloneBanner = document.getElementById('alone-banner');
-aloneBanner.addEventListener('click', function() {
-const aloneSection = document.getElementById('alone');
-if (aloneSection) {
-aloneSection.scrollIntoView({ 
-behavior: 'smooth' 
-});
-}
-});
-// CAMBIAR CURSOR
-aloneBanner.style.cursor = 'pointer';
+    console.log('🎬 Banner Film iniciado');
+    
+    // FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN EL BANNER
+    function setupBannerNavigation() {
+        const banner = document.getElementById('film-banner-alone');
+        
+        banner.addEventListener('click', function() {
+            console.log('🖱️ Click en banner - Navegando a: alone');
+            
+            // OCULTAR TODAS LAS SECCIONES 
+            document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // MOSTRAR SECCIÓN ALONE
+            const targetSection = document.getElementById('alone');
+            if (targetSection) {
+                const mainSection = document.getElementById('alone');
+                if (mainSection) {
+                    mainSection.style.display = 'block';
+                    document.querySelectorAll('[id^="alone-"]').forEach(subsection => {
+                        subsection.style.display = 'block';
+                    });
+                    
+                    targetSection.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                    window.location.hash = 'alone';
+                }
+            } else {
+                console.warn('❌ No se encontró la sección alone');
+            }
+        });
+        
+        // CURSOR
+        banner.style.cursor = 'pointer';
+        console.log('✅ Navegación del banner configurada');
+    }
+    
+    // INICIALIZACIÓN 
+    setupBannerNavigation();
 });
 </script>
-<!-- FIN SCRIP: BANNER FILM PC --> 
+<!-- FIN SCRIP: BANNER FILM PC -->
   
 </body>
   
