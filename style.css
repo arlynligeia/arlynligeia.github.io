@@ -457,7 +457,8 @@ text-decoration: none;
 }
 /* CONTENEDOR: TABLA */
 .socialmediacontent-table {
-width: 100%;   
+width: 100%;
+box-sizing: border-box;
 margin: 0px;
 }
 .socialmediacontent-table-wrapper {
@@ -481,7 +482,7 @@ width: 35%;
 }
 /* TABLA: ENCABEZADOS */
 .socialmediacontent-table-wrapper-head {
-width: 100%;
+width: 100%;  
 margin: 0px;
 }
 .socialmediacontent-table-wrapper-head-row {
@@ -494,8 +495,8 @@ color: #FF6B00 !important;
 text-decoration: none;
 text-align: center;
 text-transform: uppercase;
+margin: 0px;     
 padding: 0px;
-margin: 0px;  
 }
 /* DIVISOR */
 .socialmediacontent-table-wrapper-divider td {
@@ -512,57 +513,61 @@ margin: 0px;
 .socialmediacontent-table-wrapper-body-row {
 vertical-align: middle;
 }
-/* TABLA: CELDA DE BOTÓN */
-.socialmediacontent-table-wrapper-body-row-cell-button {
+/* TABLA: CUERPO - BOTONES */
+.socialmediacontent--table-wrapper-body-row-cell-button {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
 width: 100%;
 height: 40px;
+box-sizing: border-box;     
 display: flex;
 justify-content: center;
 align-items: center;
-box-sizing: border-box;
 background: #ff1493 !important;
 border-radius: 6px;
-margin: 0px; 
-padding: 10px 20px;
-border: none;
-cursor: pointer;
-transition: transform 0.3s ease;  
-}
-.socialmediacontent-table-wrapper-body-row-cell-button:hover {
-transform: scale(1.05);
-}
-/* TABLA: TEXTO DE BOTÓN */
-.socialmediacontent-table-wrapper-body-row-cell-button-tiktok,
-.socialmediacontent-table-wrapper-body-row-cell-button-youtube {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
-text-transform: uppercase;
+text-transform: uppercase;   
+text-align: center;
 font-weight: bold;
-text-align: center;  
+margin: 0px; 
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;    
 }
-/* TABLA: CELDA DE TEXTOS */
-.socialmediacontent-table-wrapper-body-row-cell-box {
+.socialmediacontent-table-wrapper-body-row-cell-button-tiktok:hover,
+.socialmediacontent-table-wrapper-body-row-cell-button-youtube:hover {
+transform: scale(1.05);
+}
+/* CONTENEDOR: CUERPO - CAJAS */
+.socialmediacontent-table-wrapper-body-row-cell-box  {
 width: 100%;
 height: 40px;
+box-sizing: border-box;   
 display: flex;
-justify-content: center;
-align-items: center;   
-box-sizing: border-box;
+justify-content: space-between;
+align-items: center;
 background: #00FFFF !important;
-border-radius: 6px;
+border-radius: 6px; 
 margin: 0px;
 padding: 10px;
 border: none;  
 }
-/* TABLA: TEXTOS */
 .socialmediacontent-table-wrapper-body-row-cell-box-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
 text-decoration: none;
-text-align: center;  
+text-align: center;   
 }
 /* CONTROL */
 .socialmediacontent-container { display: block; }
@@ -609,6 +614,7 @@ text-decoration: none;
 /* CONTENEDOR: CONTENIDO */
 .socialmediacontent-content-mobile {
 width: 100%;
+box-sizing: border-box;
 display: block;
 margin: 0px;
 }
@@ -629,8 +635,8 @@ font-size: 1rem;
 color: white !important;
 text-decoration: none;
 text-transform: uppercase;
+text-align: center;  
 font-weight: bold;   
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;   
 border: none;
@@ -640,13 +646,13 @@ transition: all 0.3s ease;
 .socialmediacontent-content-button-tiktok-mobile:hover,
 .socialmediacontent-content-button-youtube-mobile:hover {
 transform: scale(1.05);
-}  
+}     
 /* CONTENEDOR: CAJAS */
 .socialmediacontent-content-box-mobile {
 width: 100%;
 height: 40px;
+box-sizing: border-box;      
 display: inline-block;
-box-sizing: border-box;   
 background: #00FFFF !important;
 border-radius: 6px;
 text-align: center; 
@@ -660,9 +666,9 @@ font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: black !important;
 text-decoration: none;
-text-align: center;  
+text-align: center;
 }   
-/* SEPARADOR */
+/* DIVISOR */
 .socialmediacontent-content-divider-mobile {
 width: 100%;
 height: 0; 
@@ -673,6 +679,21 @@ margin: 0 0 10px 0;
 .socialmediacontent-container { display: none; }
 .socialmediacontent-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    YOUTUBE HIGHLIGHT
