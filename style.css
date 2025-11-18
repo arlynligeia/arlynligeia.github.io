@@ -353,7 +353,8 @@ border-bottom: 1px solid white !important;
 .home-carousel {
 position: relative;
 z-index: 1; 
-width: 95%;
+width: 100%;
+box-sizing: border-box;
 height: calc(100vh - 220px); 
 overflow: hidden;
 display: flex;
@@ -383,7 +384,8 @@ opacity: 1;
 .film-banner {
 position: relative;
 z-index: 1;   
-width: 95%;
+width: 100%;
+box-sizing: border-box;
 height: calc(100vh - 220px);
 overflow: hidden;
 display: flex;
@@ -408,61 +410,7 @@ background: #000000 !important;
 
 
 
-/* CONTENEDOR: FILM */
-.film-container {
-position: relative;
-width: 800px;
-background-color: #3A0052 !important;
-border-radius: 20px;
-margin: 40px auto;
-padding: 30px;
-}
-.film-container::before {
-content: "";
-position: absolute;
-z-index: 1;
-top: 0;
-left: 0;
-width: 100%;
-height: 90px;
-background: #320046 !important;
-border-radius: 20px 20px 0 0;
-}
-.film-title {
-position: relative;
-z-index: 2;
-display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
-color: #FF66CC !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.6;
-text-align: left;
-margin: 0 0 16px 0;
-}
-.film-title a {
-color: #FF66CC !important;
-text-decoration: none;
-}
-/* CONTENEDOR: CONTENIDO */
-.film-content {
-width: 100%;
-margin: 0px; 
-}
-.film-content-text,
-.film-content-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
-color: #00FF00 !important;
-text-decoration: none;
-line-height: 1.5;
-text-align: justify;
-margin: 0 0 10px 0;
-}
-.film-content-text-end {
-margin-bottom: 0px;
-}
+
 
 /* ======================================
    FEATURE FILM
