@@ -416,6 +416,12 @@ opacity: 1;
 .home-carousel-mobile { display: flex; }
 }
 
+
+
+
+
+
+
 /* ======================================
    FILM BANNER PC
 ====================================== */
@@ -890,13 +896,13 @@ margin-bottom: 0px;
    OCULTAR TODAS LAS SECCIONES MOBILE
 ====================================== */
 @media (max-width: 768px) {
-.main-section.mobile-only:not(#home-mobile),
+.main-section.mobile-only:not(#home),
 #cartempty-mobile,
 #cartfull-mobile { display: none; }
-.subsection.mobile-only:not([id^="home-mobile-"]) { display: none; }
+.subsection.mobile-only:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
-#home-mobile { display: flex !important; }
+#home-mobile { display: flex; }
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
 #home-youtubehighlight-mobile { display: block; }
