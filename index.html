@@ -4997,6 +4997,11 @@ Cosmic/Psychological Horror</p>
 </div>
 </section>
 <!-- FIN CART FULL PC -->
+
+
+
+
+
   
 <!-- CART FULL MOBILE -->
 <section class="cartfull-section mobile-only" id="cartfull-mobile">
@@ -5005,6 +5010,9 @@ Cosmic/Psychological Horror</p>
 <!-- CONTENEDOR: PRODUCTOS -->  
 <div class="cartfull-products-mobile">
 <!-- LOS PRODUCTOS SE AGREGARÁN AQUÍ DINÁMICAMENTE (ANTES DEL DIVIDER-2) -->
+
+
+  
 <!-- DIVISOR (RESUMEN EMPIEZA AQUÍ) -->
 <div class="cartfull-products-divider-2-mobile"></div> 
 <!-- PRECIO SUBTOTAL -->
@@ -5036,6 +5044,10 @@ Cosmic/Psychological Horror</p>
 <!-- DIVISOR -->
 <div class="cartfull-products-divider-4-mobile"></div>   
 </div> 
+
+
+
+  
 <!-- CONTENEDOR: BOTONES FINALES -->
 <div class="cartfull-button-mobile">  
 <button class="cartfull-button-cleancart-mobile">CLEAR CART</button>
@@ -6852,6 +6864,9 @@ toggleCart();
 
 
 
+
+
+  
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -7016,60 +7031,68 @@ toggleCartMobile();
 // ========== FUNCIONES DE VISUALIZACIÓN ==========
 // 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
-// ELIMINAR SOLO LOS DIVISORES DE PRODUCTOS EXISTENTES (divider-1-mobile)
-const existingDividers = cartProductsContainer.querySelectorAll('.cartfull-products-divider-1-mobile');
-existingDividers.forEach(divider => divider.remove());
-const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
-cart.forEach((item, index) => {
-const productHTML = `
-<!-- DIVISOR DEL PRODUCTO -->
-<div class="cartfull-products-divider-1-mobile"></div>
-<!-- IMAGEN DEL PRODUCTO -->
-<div class="cartfull-products-image-mobile">
-<img src="${item.image}" alt="${item.product}">
-</div>  
-<!-- NOMBRE DEL PRODUCTO -->
-<div class="cartfull-products-name-mobile">
-<span class="cartfull-products-name-text-mobile">${item.product}</span> 
-</div>
-<!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
-<div class="cartfull-products-quantity-mobile">
-<span class="cartfull-products-quantity-text-mobile">QTY:</span> 
-<div class="cartfull-products-quantity-control-mobile">
-<button class="cartfull-products-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
-<span class="cartfull-products-quantity-control-value-mobile">${item.quantity}</span>
-<button class="cartfull-products-quantity-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
-</div>
-</div>
-<!-- PRECIO UNITARIO DEL PRODUCTO -->
-<div class="cartfull-products-unit-mobile">
-<span class="cartfull-products-unit-text-mobile">UNIT:</span>  
-<div class="cartfull-products-unit-value-mobile">  
-<span class="cartfull-products-unit-value-symbol-mobile">$</span>
-<span class="cartfull-products-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
-</div>
-</div>
-<!-- PRECIO TOTAL DEL PRODUCTO -->
-<div class="cartfull-products-total-mobile">
-<span class="cartfull-products-total-text-mobile">TOTAL:</span>  
-<div class="cartfull-products-total-value-mobile">  
-<span class="cartfull-products-total-value-symbol-mobile">$</span>
-<span class="cartfull-products-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
-</div>
-</div>
-<!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
-<div class="cartfull-products-button-mobile">  
-<button class="cartfull-products-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
-</div>
-`;
-divider2.insertAdjacentHTML('beforebegin', productHTML);
-}); 
-updateShippingTotal();
-updateSubtotal();
-updateTotalFinal();
-updateHiddenCartFields();
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
+    
+    // ELIMINAR CONTENEDORES DE PRODUCTOS EXISTENTES
+    const productContainers = cartProductsContainer.querySelectorAll('.cartfull-products-product-mobile');
+    productContainers.forEach(container => container.remove());
+    
+    const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
+    
+    cart.forEach((item, index) => {
+        const productHTML = `
+            <!-- CONTENEDOR ÚNICO DEL PRODUCTO -->
+            <div class="cartfull-products-product-mobile">
+                <!-- DIVISOR DEL PRODUCTO -->
+                <div class="cartfull-products-product-divider-1-mobile"></div>
+                <!-- IMAGEN DEL PRODUCTO -->
+                <div class="cartfull-products-product-image-mobile">
+                    <img src="${item.image}" alt="${item.product}">
+                </div>  
+                <!-- NOMBRE DEL PRODUCTO -->
+                <div class="cartfull-products-product-name-mobile">
+                    <span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
+                </div>
+                <!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
+                <div class="cartfull-products-product-quantity-mobile">
+                    <span class="cartfull-products-product-quantity-text-mobile">QTY:</span> 
+                    <div class="cartfull-products-product-quantity-control-mobile">
+                        <button class="cartfull-products-product-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
+                        <span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
+                        <button class="cartfull-products-product-quantity-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
+                    </div>
+                </div>
+                <!-- PRECIO UNITARIO DEL PRODUCTO -->
+                <div class="cartfull-products-product-unit-mobile">
+                    <span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
+                    <div class="cartfull-products-product-unit-value-mobile">  
+                        <span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
+                        <span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+                    </div>
+                </div>
+                <!-- PRECIO TOTAL DEL PRODUCTO -->
+                <div class="cartfull-products-product-total-mobile">
+                    <span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
+                    <div class="cartfull-products-product-total-value-mobile">  
+                        <span class="cartfull-products-product-total-value-symbol-mobile">$</span>
+                        <span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+                    </div>
+                </div>
+                <!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
+                <div class="cartfull-products-product-button-mobile">  
+                    <button class="cartfull-products-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+                </div>
+            </div>
+            <!-- FIN CONTENEDOR ÚNICO DEL PRODUCTO -->
+        `;
+        divider2.insertAdjacentHTML('beforebegin', productHTML);
+    }); 
+    
+    updateShippingTotal();
+    updateSubtotal();
+    updateTotalFinal();
+    updateHiddenCartFields();
 }
 
   
