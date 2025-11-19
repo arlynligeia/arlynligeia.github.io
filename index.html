@@ -6852,11 +6852,10 @@ toggleCart();
 
 
 
-  
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🛒 Carrito Mobile iniciado');  
+console.log('🛒 Carrito móvil iniciado');  
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
@@ -6873,15 +6872,242 @@ const productStock = {
 "Galaxy Executive Producer": 1,
 "Cosmos Executive Producer": 1
 }; 
+// ========== FUNCIONES DE UTILIDAD ==========
+// 1. FUNCIÓN: CONVERTIR STRING A NÚMERO (MANEJA COMAS)
+function parsePrice(priceString) {
+return parseFloat(priceString.replace(/,/g, ''));
+}
+// 2. FUNCIÓN: FORMATEAR NÚMEROS CON COMAS
+function formatNumberWithCommas(number) {
+const num = parseFloat(number);
+return num.toLocaleString('en-US', {
+minimumFractionDigits: 2,
+maximumFractionDigits: 2
+});
+}
+// ========== FUNCIONES DE STOCK ==========
+// 3. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
+function checkStock(productName) {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productInCart = cart.find(item => item.product === productName);
+const currentStock = productStock[productName];
+const cartQuantity = productInCart ? productInCart.quantity : 0;
+return currentStock - cartQuantity;
+}
+// 4. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
+function canAddToCart(productName) {
+return checkStock(productName) > 0;
+}
+// 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
+function updateAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart-mobile"]');
+addToCartButtons.forEach(button => {
+const productName = button.getAttribute('data-product');
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+button.disabled = true;
+button.style.opacity = '0.5';
+button.style.cursor = 'not-allowed';
+button.textContent = 'OUT OF STOCK';
+} else {
+button.disabled = false;
+button.style.opacity = '1';
+button.style.cursor = 'pointer';
+button.textContent = 'ADD TO CART';
+}
+});
+}
+// ========== FUNCIONES DEL CARRITO ==========
+// 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
+function addToCart(productImage, productName, productPrice, productShipping) {
+// VERIFICAR STOCK ANTES DE AGREGAR
+if (!canAddToCart(productName)) {
+console.log(`❌ No hay stock disponible para: ${productName}`);
+return;
+}
+console.log(`🛒 Agregando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const existingProductIndex = cart.findIndex(item => item.product === productName);
+if (existingProductIndex !== -1) {
+// VERIFICAR STOCK ANTES DE AUMENTAR CANTIDAD
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+console.log(`❌ No hay suficiente stock para: ${productName}`);
+return;
+}
+cart[existingProductIndex].quantity += 1;
+cart[existingProductIndex].totalprice = cart[existingProductIndex].quantity * cart[existingProductIndex].price;
+console.log(`📦 Producto existente, nueva cantidad: ${cart[existingProductIndex].quantity}`);
+} else {
+const newProduct = {
+image: productImage,
+product: productName,
+quantity: 1,
+price: parsePrice(productPrice),
+totalprice: parsePrice(productPrice),
+shipping: parsePrice(productShipping)
+};
+cart.push(newProduct);
+console.log(`🆕 Nuevo producto agregado: ${productName}`);
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+}
+// 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
+function removeFromCartMobile(productName) {
+console.log(`🗑️ Eliminando producto: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+cart = cart.filter(item => item.product !== productName);
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCartMobile();
+}
 
+// 8. FUNCIÓN: DISMINUIR CANTIDAD
+function decreaseQuantityMobile(productName) {
+console.log(`➖ Disminuyendo cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+if (productIndex !== -1) {
+if (cart[productIndex].quantity > 1) {
+cart[productIndex].quantity -= 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+} else {
+cart = cart.filter(item => item.product !== productName);
+}
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCartMobile();
+}
+}
+
+// 9. FUNCIÓN: AUMENTAR CANTIDAD
+function increaseQuantityMobile(productName) {
+console.log(`➕ Aumentando cantidad: ${productName}`);
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productIndex = cart.findIndex(item => item.product === productName);
+if (productIndex !== -1) {
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+console.log(`❌ No hay suficiente stock para: ${productName}`);
+return;
+}
+cart[productIndex].quantity += 1;
+cart[productIndex].totalprice = cart[productIndex].quantity * cart[productIndex].price;
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartDisplay();
+updateAddToCartButtons();
+}
+}
+
+// 10. FUNCIÓN: LIMPIAR CARRITO
+function clearCartMobile() {
+console.log('🧹 Limpiando carrito');
+localStorage.removeItem('cart');
+updateCartDisplay();
+updateAddToCartButtons();
+toggleCartMobile();
+}
+// ========== FUNCIONES DE VISUALIZACIÓN ==========
+// 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
+function updateCartDisplay() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
+const existingProducts = cartProductsContainer.querySelectorAll('.cartfull-product-item-mobile');
+existingProducts.forEach(product => product.remove());
+const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
+cart.forEach((item, index) => {
+const productHTML = `
+<!-- DIVISOR DEL PRODUCTO -->
+<div class="cartfull-products-divider-1-mobile"></div>
+<!-- IMAGEN DEL PRODUCTO -->
+<div class="cartfull-products-image-mobile">
+<img src="${item.image}" alt="${item.product}">
+</div>  
+<!-- NOMBRE DEL PRODUCTO -->
+<div class="cartfull-products-name-mobile">
+<span class="cartfull-products-name-text-mobile">${item.product}</span> 
+</div>
+<!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
+<div class="cartfull-products-quantity-mobile">
+<span class="cartfull-products-quantity-text-mobile">QTY:</span> 
+<div class="cartfull-products-quantity-control-mobile">
+<button class="cartfull-products-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
+<span class="cartfull-products-quantity-control-value-mobile">${item.quantity}</span>
+<button class="cartfull-products-quantity-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
+</div>
+</div>
+<!-- PRECIO UNITARIO DEL PRODUCTO -->
+<div class="cartfull-products-unit-mobile">
+<span class="cartfull-products-unit-text-mobile">UNIT:</span>  
+<div class="cartfull-products-unit-value-mobile">  
+<span class="cartfull-products-unit-value-symbol-mobile">$</span>
+<span class="cartfull-products-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+</div>
+</div>
+<!-- PRECIO TOTAL DEL PRODUCTO -->
+<div class="cartfull-products-total-mobile">
+<span class="cartfull-products-total-text-mobile">TOTAL:</span>  
+<div class="cartfull-products-total-value-mobile">  
+<span class="cartfull-products-total-value-symbol-mobile">$</span>
+<span class="cartfull-products-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</div>
+<!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
+<div class="cartfull-products-button-mobile">  
+<button class="cartfull-products-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+</div>
+`;
+divider2.insertAdjacentHTML('beforebegin', productHTML);
+}); 
+updateShippingTotal();
+updateSubtotal();
+updateTotalFinal();
+updateHiddenCartFields();
+}
+// 12. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
+function updateShippingTotal() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let shippingTotal = 0;
+cart.forEach(item => {
+shippingTotal += item.shipping * item.quantity;
+});
+document.querySelector('.cartfull-products-shipping-value-amount-mobile').textContent = formatNumberWithCommas(shippingTotal);
+}
+
+// 13. FUNCIÓN: ACTUALIZAR SUBTOTAL
+function updateSubtotal() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+cart.forEach(item => {
+subtotal += item.totalprice;
+});
+document.querySelector('.cartfull-products-subtotal-value-amount-mobile').textContent = formatNumberWithCommas(subtotal);
+}
+
+// 14. FUNCIÓN: ACTUALIZAR TOTAL FINAL
+function updateTotalFinal() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+let shippingTotal = 0;
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+const totalFinal = subtotal + shippingTotal;
+document.querySelector('.cartfull-products-totalfinal-value-amount-mobile').textContent = formatNumberWithCommas(totalFinal);
+}
 // ========== FUNCIONES DE NAVEGACIÓN ==========
-// 15. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL MOBILE
+// 15. FUNCIÓN: ALTERNAR CART EMPTY - CART FULL
 function toggleCartMobile() {
 const cartEmpty = document.querySelector('.cartempty-section.mobile-only');
 const cartFull = document.querySelector('.cartfull-section.mobile-only');
 const allSections = document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only');
 allSections.forEach(section => {
-if (!section.classList.contains('cartempty-section.mobile-only') && 
+if (!section.classList.contains('cartempty-section.mobile.only') && 
 !section.classList.contains('cartfull-section.mobile-only')) {
 section.style.display = 'none';
 }
@@ -6897,13 +7123,59 @@ else {
 if (cartEmpty) cartEmpty.style.display = 'none';
 if (cartFull) cartFull.style.display = 'block';
 window.location.hash = '#cartfull-mobile';
+updateCartDisplay();
 }
-console.log('🛒 Estado del carrito mobile:', isEmpty ? 'vacío' : 'con productos');
+console.log('🛒 Estado del carrito móvil:', isEmpty ? 'vacío' : 'con productos');
+}
+// ========== FUNCIONES DE CONFIGURACIÓN DE BOTONES ==========
+// 16. FUNCIÓN: CONFIGURAR BOTONES ADD TO CART
+function setupAddToCartButtons() {
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart-mobile"]');
+addToCartButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productImage = this.getAttribute('data-image');
+const productName = this.getAttribute('data-product');
+const productPrice = this.getAttribute('data-price');
+const productShipping = this.getAttribute('data-shipping');
+if (productImage && productName && productPrice && productShipping) {
+addToCart(productImage, productName, productPrice, productShipping);
+} else {
+console.error('❌ Datos del producto incompletos');
+}
+});
+});
 }
 
-// ========== FUNCIONES DE CONFIGURACIÓN DE BOTONES ==========
-// 19. FUNCIÓN: CONFIGURAR BOTÓN CART MOBILE
-function setupCartButtonMobile() {
+// 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
+function setupRemoveButtons() {
+const removeButtons = document.querySelectorAll('.cartfull-products-button-remove-mobile');
+removeButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+removeFromCartMobile(productName);
+});
+});
+}
+// 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
+function setupQuantityButtons() {
+const decreaseButtons = document.querySelectorAll('.cartfull-products-quantity-control-decrease-mobile');
+decreaseButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+decreaseQuantityMobile(productName);
+});
+});
+const increaseButtons = document.querySelectorAll('.cartfull-products-quantity-control-increase-mobile');
+increaseButtons.forEach(button => {
+button.addEventListener('click', function() {
+const productName = this.getAttribute('data-product');
+increaseQuantityMobile(productName);
+});
+});
+}
+
+// 19. FUNCIÓN: CONFIGURAR BOTÓN CART
+function setupCartButton() {
 const cartButton = document.querySelector('.cart-button-mobile');
 if (cartButton) {
 cartButton.addEventListener('click', function() {
@@ -6912,8 +7184,8 @@ toggleCartMobile();
 }
 }
 
-// 20. FUNCIÓN: CONFIGURAR BOTONES GO TO CART MOBILE
-function setupGoToCartButtonsMobile() {
+// 20. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
+function setupGoToCartButtons() {
 const goToCartButtons = document.querySelectorAll('[class*="button-gotocart-mobile"]');
 goToCartButtons.forEach(button => {
 button.addEventListener('click', function() {
@@ -6922,10 +7194,96 @@ toggleCartMobile();
 });
 }
 
-// ========== INICIALIZACIÓN ==========
-setupCartButtonMobile();
-setupGoToCartButtonsMobile();
+// 21. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
+function setupClearCartButton() {
+const clearCartButton = document.querySelector('.cartfull-button-cleancart-mobile');
+if (clearCartButton) {
+clearCartButton.addEventListener('click', function() {
+clearCartMobile();
+});
+}
+}
 
+// ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
+// 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
+function updateHiddenCartFields() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+let shippingTotal = 0;
+// CALCULAR TOTALES
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+const totalFinal = subtotal + shippingTotal;
+// CREAR ARRAY DE PRODUCTOS PARA EL CAMPO OCULTO
+const cartItems = cart.map(item => ({
+product: item.product,
+quantity: item.quantity,
+price: item.price,
+total: item.totalprice
+}));
+// ACTUALIZAR CAMPOS OCULTOS DEL MÓVIL
+document.getElementById('hidden-cart-items-mobile').value = JSON.stringify(cartItems);
+document.getElementById('hidden-cart-subtotal-mobile').value = subtotal.toFixed(2);
+document.getElementById('hidden-cart-shipping-mobile').value = shippingTotal.toFixed(2);
+document.getElementById('hidden-cart-total-mobile').value = totalFinal.toFixed(2);
+}
+
+// ========== FUNCIONES DE CHECKOUT ==========
+// 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
+function setupCheckoutButton() {
+const checkoutButton = document.querySelector('.cartfull-button-checkout-mobile');
+if (checkoutButton) {
+checkoutButton.addEventListener('click', function(e) {
+e.preventDefault();
+goToCheckoutMobile();
+});
+}
+}
+
+// 24. FUNCIÓN: IR A CHECKOUT
+function goToCheckoutMobile() {
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+if (cart.length === 0) {
+console.log('❌ Carrito vacío, no se puede proceder al checkout');
+return;
+}
+// ACTUALIZAR CAMPOS OCULTOS ANTES DE REDIRIGIR
+updateHiddenCartFields();
+// CALCULAR TOTALES PARA PASAR A SHIPPING INFORMATION
+let subtotal = 0;
+let shippingTotal = 0;
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+const totalFinal = subtotal + shippingTotal;
+// PASAR DATOS A SHIPPING INFORMATION MÓVIL
+document.getElementById('cart-subtotal-mobile').textContent = formatNumberWithCommas(subtotal);
+document.getElementById('cart-shipping-mobile').textContent = formatNumberWithCommas(shippingTotal);
+document.getElementById('cart-total-mobile').textContent = formatNumberWithCommas(totalFinal);
+// OCULTAR TODAS LAS SECCIONES Y MOSTRAR SHIPPING INFORMATION MÓVIL
+const allSections = document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section');
+allSections.forEach(section => {
+section.style.display = 'none';
+});
+const shippingInfoSection = document.querySelector('.shippinginformation-section.mobile-only');
+if (shippingInfoSection) {
+shippingInfoSection.style.display = 'block';
+window.location.hash = '#shippinginformation-mobile';
+}
+console.log('✅ Redirigiendo a checkout móvil');
+}
+
+// ========== INICIALIZACIÓN ==========
+setupCartButton();
+setupGoToCartButtons();
+setupAddToCartButtons();
+setupClearCartButton();
+setupCheckoutButton();
+updateAddToCartButtons();
+updateHiddenCartFields();
 if (window.location.hash === '#cartfull-mobile' || window.location.hash === '#cartempty-mobile') {
 toggleCartMobile();
 }
@@ -6946,10 +7304,10 @@ toggleCartMobile();
 
 
 
-
-
-
   
+
+
+
   
 <!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN COMPLETA -->
 <script>
