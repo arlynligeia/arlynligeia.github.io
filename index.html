@@ -5996,6 +5996,8 @@ setupBannerNavigationMobile();
 
  <!-- CARRITO -->
   
+<!-- CARRITO -->
+  
 <!-- SCRIP: CARRITO PC -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -6042,51 +6044,25 @@ return currentStock - cartQuantity;
 function canAddToCart(productName) {
 return checkStock(productName) > 0;
 }
-
-
-
-  
 // 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
 function updateAddToCartButtons() {
-    const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-    
-    addToCartButtons.forEach(button => {
-        const productName = button.getAttribute('data-product');
-        
-        if (!productName) {
-            console.warn('⚠️ Botón sin data-product:', button);
-            return;
-        }
-        
-        const availableStock = checkStock(productName);
-        
-        if (availableStock <= 0) {
-            // DESACTIVAR BOTÓN CUANDO NO HAY STOCK
-            button.disabled = true;
-            button.style.opacity = '0.5';
-            button.style.cursor = 'not-allowed';
-            button.textContent = 'OUT OF STOCK';
-            
-            // AGREGAR CLASE PARA ESTILOS ADICIONALES SI ES NECESARIO
-            button.classList.add('out-of-stock');
-            button.classList.remove('in-stock');
-        } else {
-            // ACTIVAR BOTÓN CUANDO HAY STOCK
-            button.disabled = false;
-            button.style.opacity = '1';
-            button.style.cursor = 'pointer';
-            button.textContent = 'ADD TO CART';
-            
-            button.classList.add('in-stock');
-            button.classList.remove('out-of-stock');
-        }
-        
-        console.log(`📦 ${productName}: Stock disponible = ${availableStock}, Botón ${button.disabled ? 'DESACTIVADO' : 'ACTIVO'}`);
-    });
+const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+addToCartButtons.forEach(button => {
+const productName = button.getAttribute('data-product');
+const availableStock = checkStock(productName);
+if (availableStock <= 0) {
+button.disabled = true;
+button.style.opacity = '0.5';
+button.style.cursor = 'not-allowed';
+button.textContent = 'OUT OF STOCK';
+} else {
+button.disabled = false;
+button.style.opacity = '1';
+button.style.cursor = 'pointer';
+button.textContent = 'ADD TO CART';
 }
-
-
-  
+});
+}
 // ========== FUNCIONES DEL CARRITO ==========
 // 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
@@ -6124,13 +6100,6 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
 }
-
-
-
-
-
-
-  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -6459,6 +6428,350 @@ toggleCart();
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
+
+
+
+
+
+
+
+
+
+  
+<!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN COMPLETA -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('shippinginformation-form');
+    const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
+
+    proceedButton.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+
+        const totalAmount = document.getElementById('shippinginformation-total').textContent;
+        const cleanAmount = totalAmount.replace('$', '').trim();
+
+        // 1. Guardar datos para el recibo
+        const formData = {
+            firstname: document.getElementById('shippinginformation-firstname').value,
+            lastname: document.getElementById('shippinginformation-lastname').value,
+            idnumber: document.getElementById('shippinginformation-idnumber').value,
+            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
+            email: document.getElementById('shippinginformation-email').value,
+            country: document.getElementById('shippinginformation-country').value,
+            state: document.getElementById('shippinginformation-state').value,
+            city: document.getElementById('shippinginformation-city').value,
+            zipcode: document.getElementById('shippinginformation-zipcode').value,
+            address: document.getElementById('shippinginformation-address').value,
+            address2: document.getElementById('shippinginformation-address2').value,
+            apartment: document.getElementById('shippinginformation-apartment').value
+        };
+        localStorage.setItem('formData', JSON.stringify(formData));
+        localStorage.setItem('pendingReceipt', 'true');
+
+        // 2. GUARDAR CARRITO COMPLETO para el recibo
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        localStorage.setItem('cartForReceipt', JSON.stringify(cart));
+
+        // 3. Enviar a Formspree
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            mode: 'no-cors'
+        });
+
+        // 4. Actualizar campos ocultos
+        updateHiddenCartFields();
+
+        // 5. REDIRIGIR A PAYPAL.ME (SIN BACKEND)
+        window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+    });
+
+    function updateHiddenCartFields() {
+        const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
+        const shipping = document.getElementById('shippinginformation-shipping').textContent;
+        const total = document.getElementById('shippinginformation-total').textContent;
+
+        document.getElementById('hidden-cart-subtotal').value = subtotal;
+        document.getElementById('hidden-cart-shipping').value = shipping;
+        document.getElementById('hidden-cart-total').value = total;
+    }
+
+    // DETECTAR CUANDO EL CLIENTE VUELVE DE PAYPAL
+    if (localStorage.getItem('pendingReceipt') === 'true') {
+        setTimeout(() => {
+            const userConfirmed = confirm('¿Ya realizaste el pago en PayPal? Haz clic en OK para generar tu recibo.');
+            if (userConfirmed) {
+                localStorage.removeItem('pendingReceipt');
+                window.location.hash = "#electronicsalesreceipt";
+                
+                // LLAMAR A LA FUNCIÓN DEL RECIBO
+                if (typeof generateElectronicReceipt === 'function') {
+                    generateElectronicReceipt();
+                }
+            } else {
+                localStorage.removeItem('pendingReceipt');
+                localStorage.removeItem('cartForReceipt');
+            }
+        }, 2000);
+    }
+});
+
+// FUNCIÓN PARA FORMATEAR NÚMEROS (IMPORTANTE - debe estar en ambos scripts)
+function formatNumberWithCommas(number) {
+    const num = parseFloat(number);
+    return num.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+</script>
+
+
+
+
+
+
+
+
+
+  
+<!-- SCRIP: RECIBO ELECTRONICO -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+// Variable global para controlar el estado del pago
+let paymentCompleted = false;
+
+// Función para verificar el estado del pago
+function checkPaymentStatus() {
+    // 1. Verificar en localStorage si el pago fue completado
+    const paymentStatus = localStorage.getItem('paymentStatus');
+    
+    // 2. Verificar parámetros URL (PayPal retorna parámetros específicos)
+    const urlParams = new URLSearchParams(window.location.search);
+    const paypalStatus = urlParams.get('paymentStatus') || urlParams.get('status');
+    
+    // 3. Combinar verificaciones
+    paymentCompleted = paymentStatus === 'completed' || 
+                      paypalStatus === 'completed' || 
+                      paypalStatus === 'success' ||
+                      // Agrega más condiciones según tu integración con PayPal
+                      false;
+    
+    return paymentCompleted;
+}
+
+// Función para generar el recibo automáticamente
+function generateElectronicReceipt() {
+    // Verificar si el pago fue completado antes de generar el recibo
+    if (!checkPaymentStatus()) {
+        // Si no hay pago, redirigir a la tienda o mostrar mensaje
+        alert('Payment not completed. Please complete your purchase first.');
+        window.location.hash = '#shop'; // CAMBIADO de #store a #shop
+        return;
+    }
+ 
+    // 1. OBTENER DATOS DEL FORMULARIO
+    const formData = JSON.parse(localStorage.getItem('formData')) || {};
+    
+    // Llenar información del cliente
+    document.getElementById('electronicsalesreceipt-firstname').textContent = formData.firstname || '';
+    document.getElementById('electronicsalesreceipt-lastname').textContent = formData.lastname || '';
+    document.getElementById('electronicsalesreceipt-idnumber').textContent = formData.idnumber || '';
+    document.getElementById('electronicsalesreceipt-mobilephone').textContent = formData.mobilephone || '';
+    document.getElementById('electronicsalesreceipt-email').textContent = formData.email || '';
+    document.getElementById('electronicsalesreceipt-address').textContent = formData.address || '';
+    document.getElementById('electronicsalesreceipt-city').textContent = formData.city || '';
+    document.getElementById('electronicsalesreceipt-country').textContent = formData.country || '';
+    
+    // 2. OBTENER DATOS DEL CARRITO
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const receiptTableBody = document.querySelector('.electronicsalesreceipt-table-wrapper-body');
+    
+    // Limpiar productos anteriores
+    const existingProductRows = receiptTableBody.querySelectorAll('.electronicsalesreceipt-table-wrapper-body-row.product-row');
+    existingProductRows.forEach(row => row.remove());
+    
+    const divider2 = receiptTableBody.querySelector('.electronicsalesreceipt-table-wrapper-divider-2');
+    
+    // 3. AGREGAR PRODUCTOS AL RECIBO
+    cart.forEach((item) => {
+        const productRow = document.createElement('tr');
+        productRow.className = 'electronicsalesreceipt-table-wrapper-body-row product-row';
+        productRow.innerHTML = `
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-name">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-name-text">${item.product}</span>
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-quantity">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-quantity-text">${item.quantity}</span>
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-unit">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-unit-symbol">$</span>
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-unit-amount">${formatNumberWithCommas(item.price)}</span>  
+                </div>   
+            </td>
+            <td class="electronicsalesreceipt-table-wrapper-body-row-cell">
+                <div class="electronicsalesreceipt-table-wrapper-body-row-cell-total">
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-total-symbol">$</span>
+                    <span class="electronicsalesreceipt-table-wrapper-body-row-cell-total-amount">${formatNumberWithCommas(item.totalprice)}</span>  
+                </div>   
+            </td>
+        `;
+        divider2.insertAdjacentElement('beforebegin', productRow);
+    });
+    
+    // 4. ACTUALIZAR TOTALES CON VAT
+    updateReceiptTotals();
+    
+    // 5. GENERAR NÚMEROS ÚNICOS
+    generateReceiptNumbers();
+    
+    // 6. CONFIGURAR BOTÓN DESCARGAR PDF
+    setupDownloadPDF();
+    
+    // 7. MARCAR EL RECIBO COMO GENERADO PARA EVITAR RE-GENERACIÓN
+    localStorage.setItem('receiptGenerated', 'true');
+}
+
+// Función para marcar el pago como completado (debes llamar esta función cuando PayPal confirme el pago)
+function markPaymentAsCompleted() {
+    localStorage.setItem('paymentStatus', 'completed');
+    paymentCompleted = true;
+}
+
+// Función para limpiar el estado después de generar el recibo
+function clearPaymentData() {
+    // Opcional: limpiar carrito y datos después de generar recibo
+    // localStorage.removeItem('cart');
+    // localStorage.removeItem('formData');
+    localStorage.removeItem('paymentStatus');
+    localStorage.removeItem('receiptGenerated');
+}
+
+// Función para actualizar totales del recibo CON VAT
+function updateReceiptTotals() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let subtotalConVAT = 0;
+    let shippingTotal = 0;
+    
+    cart.forEach(item => {
+        subtotalConVAT += item.totalprice;
+        shippingTotal += item.shipping * item.quantity;
+    });
+    
+    const subtotalReal = subtotalConVAT / 1.18;
+    const vatAmount = subtotalConVAT - subtotalReal;
+    const totalFinal = subtotalConVAT + shippingTotal;
+    
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalConVAT);
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount').textContent = formatNumberWithCommas(shippingTotal);
+    document.querySelector('.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
+    
+    document.querySelector('.electronicsalesreceipt-tax-subtotal-value-amount').textContent = formatNumberWithCommas(subtotalReal);
+    document.querySelector('.electronicsalesreceipt-tax-vat-value-amount').textContent = formatNumberWithCommas(vatAmount);
+    document.querySelector('.electronicsalesreceipt-tax-totalfinal-value-amount').textContent = formatNumberWithCommas(totalFinal);
+}
+
+// Función para generar números únicos de recibo
+function generateReceiptNumbers() {
+    const lastReceipt = localStorage.getItem('lastReceiptNumber') || '00000000';
+    const newReceipt = String(parseInt(lastReceipt) + 1).padStart(8, '0');
+    localStorage.setItem('lastReceiptNumber', newReceipt);
+    document.getElementById('electronicsalesreceipt-number').textContent = `N°${newReceipt}`;
+    
+    const date = new Date();
+    const year = date.getFullYear().toString().slice(-2);
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const lastOrder = localStorage.getItem('lastOrderNumber') || '000001';
+    const newOrder = String(parseInt(lastOrder) + 1).padStart(6, '0');
+    localStorage.setItem('lastOrderNumber', newOrder);
+    
+    document.getElementById('electronicsalesreceipt-year').textContent = `N°AL${year}${month}`;
+    document.getElementById('electronicsalesreceipt-order').textContent = newOrder;
+    
+    document.getElementById('electronicsalesreceipt-date').textContent = date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+}
+
+// Función para DESCARGAR PDF
+function setupDownloadPDF() {
+    const downloadButton = document.getElementById('electronicsalesreceipt-button-download-pdf');
+    
+    if (downloadButton) {
+        downloadButton.addEventListener('click', function() {
+            downloadReceiptPDF();
+        });
+    }
+}
+
+function downloadReceiptPDF() {
+    const receiptElement = document.querySelector('.electronicsalesreceipt-container');
+    
+    setTimeout(() => {
+        const options = {
+            margin: [15, 15, 15, 15],
+            filename: `receipt_${document.getElementById('electronicsalesreceipt-number').textContent.replace('N°', '')}.pdf`,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { 
+                scale: 2,
+                useCORS: true,
+                logging: true,
+                letterRendering: true,
+                width: receiptElement.scrollWidth,
+                height: receiptElement.scrollHeight,
+                scrollX: 0,
+                scrollY: 0,
+                windowWidth: receiptElement.scrollWidth,
+                windowHeight: receiptElement.scrollHeight
+            },
+            jsPDF: { 
+                unit: 'mm', 
+                format: 'a4', 
+                orientation: 'portrait',
+                compress: true
+            },
+            pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+        };
+        
+        html2pdf().set(options).from(receiptElement).save();
+    }, 500);
+}
+
+// Función para formatear números
+function formatNumberWithCommas(number) {
+    const num = parseFloat(number);
+    return num.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
+}
+
+// Ejecutar automáticamente cuando se carga el recibo
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#electronicsalesreceipt') {
+        generateElectronicReceipt();
+    }
+});
+
+// EXPORTAR FUNCIONES PARA USO EN OTROS SCRIPTS
+window.markPaymentAsCompleted = markPaymentAsCompleted;
+window.checkPaymentStatus = checkPaymentStatus;
+</script>
+<!-- FIN SCRIP: RECIBO ELECTRONICO -->
+
+
 
 
 
