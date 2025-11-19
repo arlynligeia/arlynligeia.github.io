@@ -13939,6 +13939,951 @@ transform: scale(1.05);
     }
 }
 
+/* ======================================
+   SHIPPING INFORMATION
+====================================== */
+.shippinginformation-container {
+position: relative;
+width: 900px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.shippinginformation-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.shippinginformation-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.6;
+text-align: left;
+margin-top: 0;
+margin-bottom: 16px; 
+}
+.shippinginformation-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: ORDER SUMMARY */
+.shippinginformation-ordersummary {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.shippinginformation-ordersummary-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;     
+line-height: 1.5; 
+margin: 0px;
+}
+/* CONTENEDOR: ORDER SUMMARY - SUBTOTAL, SHIPPING, TOTAL*/
+.shippinginformation-ordersummary-subtotal,
+.shippinginformation-ordersummary-shipping,
+.shippinginformation-ordersummary-total {
+display: flex;
+justify-content: space-between; 
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal-text,
+.shippinginformation-ordersummary-shipping-text,
+.shippinginformation-ordersummary-total-text {
+flex: 1;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTENEDOR: ORDER SUMMARY - VALORES */
+.shippinginformation-ordersummary-subtotal-value,
+.shippinginformation-ordersummary-shipping-value,
+.shippinginformation-ordersummary-total-value {
+min-width: 150px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol,
+.shippinginformation-ordersummary-shipping-value-symbol,
+.shippinginformation-ordersummary-total-value-symbol,
+.shippinginformation-ordersummary-subtotal-value-amount,
+.shippinginformation-ordersummary-shipping-value-amount,
+.shippinginformation-ordersummary-total-value-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol,
+.shippinginformation-ordersummary-shipping-value-symbol,
+.shippinginformation-ordersummary-total-value-symbol {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount,
+.shippinginformation-ordersummary-shipping-value-amount,
+.shippinginformation-ordersummary-total-value-amount {
+min-width: 150px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}
+/* CONTENEDOR: FORMULARIO */
+.shippinginformation-form {
+width: 100%;
+box-sizing: border-box;
+margin: 0px;
+}
+/* CONTENEDOR: FORMULARIO - COLUMNAS */
+.shippinginformation-form-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID */
+.shippinginformation-form-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: FORMULARIO - COLUMNAS - GRID - INFORMACIÓN PERSONAL, DIRECCIÓN DE ENVIO */
+.shippinginformation-form-columns-grid-personalinformation,
+.shippinginformation-form-columns-grid-shippingaddress {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+/* TÍTULOS */
+.shippinginformation-form-columns-grid-personalinformation-title,
+.shippinginformation-form-columns-grid-shippingaddress-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+line-height: 1.5; 
+margin: 0 0 5px 0;
+}
+/* SUBTÍULOS SOBRE LAS CAJAS */
+.shippinginformation-form-columns-grid-personalinformation-label,
+.shippinginformation-form-columns-grid-shippingaddress-label {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;     
+line-height: 1.5; 
+margin: 0 0 5px 0;
+}
+/* CAJAS Y TEXTOS DENTRO */
+.shippinginformation-form-columns-grid-personalinformation-input,
+.shippinginformation-form-columns-grid-shippingaddress-input {
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #00FFFF !important; 
+border-radius: 6px;
+border: 2px solid #ccc;  
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+margin: 0 0 15px 0;
+padding: 10px;
+}
+/* CONTENEDOR: MÉTODO DE PAGO */
+.shippinginformation-paymentmethod {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;   
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 20px 0;  
+padding: 15px;
+}
+.shippinginformation-paymentmethod-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;     
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.shippinginformation-button {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.shippinginformation-button-back,
+.shippinginformation-button-continueshopping,
+.shippinginformation-button-proceedpayment {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;   
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-align: center;
+font-weight: bold; 
+margin: 0px;     
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.shippinginformation-button-proceedpayment {
+background: #ff1493 !important;
+color: white !important;   
+}
+.shippinginformation-button-back:hover,
+.shippinginformation-button-continueshopping:hover,
+.shippinginformation-button-proceedpayment:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.shippinginformation-container { display: block; }
+.shippinginformation-container-mobile { display: none; }
+/* ======================================
+   SHIPPING INFORMATION MOBILE
+====================================== */
+@media (max-width: 768px) {
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.shippinginformation-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 20px auto 30px auto;
+padding: 20px;
+}
+.shippinginformation-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shippinginformation-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.shippinginformation-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}  
+/* CONTENEDOR: ORDER SUMMARY */
+.shippinginformation-ordersummary-mobile {
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0;   
+padding: 10px;
+}  
+.shippinginformation-ordersummary-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}  
+.shippinginformation-ordersummary-subtotal-mobile,
+.shippinginformation-ordersummary-shipping-mobile,
+.shippinginformation-ordersummary-total-mobile {
+display: flex;
+justify-content: space-between; 
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+} 
+/* ORDEN DE LOS TEXTOS */   
+.shippinginformation-ordersummary-subtotal-text-mobile,
+.shippinginformation-ordersummary-shipping-text-mobile,
+.shippinginformation-ordersummary-total-text-mobile {
+text-align: left;
+flex: 1;
+}
+.shippinginformation-ordersummary-subtotal-value-mobile,
+.shippinginformation-ordersummary-shipping-value-mobile,
+.shippinginformation-ordersummary-total-value-mobile {
+min-width: 130px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.shippinginformation-ordersummary-subtotal-value-symbol-mobile,
+.shippinginformation-ordersummary-shipping-value-symbol-mobile,
+.shippinginformation-ordersummary-total-value-symbol-mobile {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.shippinginformation-ordersummary-subtotal-value-amount-mobile,
+.shippinginformation-ordersummary-shipping-value-amount-mobile,
+.shippinginformation-ordersummary-total-value-amount-mobile {
+min-width: 110px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}  
+/* DIVISOR */
+.shippinginformation-ordersummary-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 5px 0; 
+}   
+/* CONTENEDOR: FORMULARIO */
+.shippinginformation-form-mobile {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: TÍTULOS */
+.shippinginformation-form-personalinformation-title-mobile,
+.shippinginformation-form-shippingaddress-title-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;      
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+/* CONTENEDOR: TÍTULOS SOBRE LAS CAJAS */
+.shippinginformation-form-personalinformation-label-mobile,
+.shippinginformation-form-shippingaddress-label-mobile {
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;    
+line-height: 1.5; 
+text-align: left;  
+margin: 0 0 5px 0;
+}  
+/* CONTENEDOR: CAJAS Y TEXTOS DENTRO */
+.shippinginformation-form-personalinformation-imput-mobile,
+.shippinginformation-form-shippingaddress-imput-mobile {
+width: 100%;
+height: 40px;
+box-sizing: border-box;
+background: #00FFFF !important;
+border-radius: 6px;
+border: 2px solid #ccc;     
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+margin: 0 0 15px 0;
+padding: 10px;
+}  
+/* CONTENEDOR: BOTONES FINALES */
+.shippinginformation-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.shippinginformation-button-back-mobile,
+.shippinginformation-button-continueshopping-mobile,
+.shippinginformation-button-proceedpayment-mobile {
+display: inline-block;
+background: #00CED1 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.shippinginformation-button-proceedpayment-mobile {
+background: #ff1493 !important;
+color: white !important;
+margin: 0px; 
+}
+.shippinginformation-button-back-mobile:hover,
+.shippinginformation-button-continueshopping-mobile:hover,
+.shippinginformation-button-proceedpayment-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL DE VISIBILIDAD */
+.shippinginformation-container { display: none; }
+.shippinginformation-container-mobile { display: block; }
+}
+
+/* ======================================
+   ELECTRONIC SALES RECEIPT
+====================================== */
+.electronicsalesreceipt-container {
+position: relative;
+width: 900px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.electronicsalesreceipt-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;  
+}
+.electronicsalesreceipt-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0; 
+}
+.electronicsalesreceipt-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: SERIES */
+.electronicsalesreceipt-series {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-series-information {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 0px;
+}
+.electronicsalesreceipt-series-information-text,
+.electronicsalesreceipt-series-information-serie,
+.electronicsalesreceipt-series-information-number,
+.electronicsalesreceipt-series-information-code,
+.electronicsalesreceipt-series-information-order,
+.electronicsalesreceipt-series-information-date {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;    
+line-height: 1.5;  
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN DEL EMISOR */
+.electronicsalesreceipt-issuer {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-issuer-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: center;     
+line-height: 1.5; 
+margin: 0px;
+}
+.electronicsalesreceipt-issuer-information {
+width: 100%; 
+margin: 0px;
+}
+.electronicsalesreceipt-issuer-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;     
+line-height: 1.5; 
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN DEL CLIENTE */
+.electronicsalesreceipt-customer {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-customer-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: center;     
+line-height: 1.5; 
+margin: 0px;
+}
+.electronicsalesreceipt-customer-information {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 0px;
+}
+.electronicsalesreceipt-customer-information-text,
+.electronicsalesreceipt-customer-information-firstname,
+.electronicsalesreceipt-customer-information-lastname,
+.electronicsalesreceipt-customer-information-idnumber,
+.electronicsalesreceipt-customer-information-address,
+.electronicsalesreceipt-customer-information-address2,
+.electronicsalesreceipt-customer-information-apartment,
+.electronicsalesreceipt-customer-information-city,
+.electronicsalesreceipt-customer-information-city,
+.electronicsalesreceipt-customer-information-mobilephone,
+.electronicsalesreceipt-customer-information-email {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;     
+line-height: 1.5; 
+margin: 0px;
+}
+/* CONTENEDOR: DETALLES DE LA ORDEN */
+.electronicsalesreceipt-receipt-orderdetails {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-receipt-orderdetails-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;    
+line-height: 1.5; 
+margin: 0px;
+}
+/* CONTENEDOR: TABLA */
+.electronicsalesreceipt-table {
+width: 100%;
+margin: 0px;
+}
+.electronicsalesreceipt-table-wrapper {
+width: 100%;
+border-collapse: separate;
+background: transparent !important;   
+table-layout: fixed;
+border-spacing: 10px;
+}
+.electronicsalesreceipt-table-wrapper th:nth-child(1),
+.electronicsalesreceipt-table-wrapper td:nth-child(1) {
+width: 50%;
+}
+.electronicsalesreceipt-table-wrapper th:nth-child(2),
+.electronicsalesreceipt-table-wrapper td:nth-child(2) {
+width: 6%;
+}
+.electronicsalesreceipt-table-wrapper th:nth-child(3),
+.electronicsalesreceipt-table-wrapper td:nth-child(3) {
+width: 22%;
+}
+.electronicsalesreceipt-table-wrapper th:nth-child(4),
+.electronicsalesreceipt-table-wrapper td:nth-child(4) {
+width: 22%;
+}
+/* CONTENEDOR: ENCABEZADOS */
+.electronicsalesreceipt-table-wrapper-head {
+width: 100%;
+margin: 0px;
+}
+.electronicsalesreceipt-table-wrapper-head-row {
+vertical-align: middle;
+}
+.electronicsalesreceipt-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: center;
+margin: 0px;
+padding: 0px; 
+}
+/* DIVISOR */
+.electronicsalesreceipt-table-wrapper-divider-1 td,
+.electronicsalesreceipt-table-wrapper-divider-2 td,
+.electronicsalesreceipt-table-wrapper-divider-3 td {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 5px 0; 
+} 
+/* CONTENEDOR: CUERPO */
+.electronicsalesreceipt-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+/* CONTENEDOR: CUERPO - FILA */
+.electronicsalesreceipt-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* CONTENEDOR: PRODUCTOS */
+.electronicsalesreceipt-table-wrapper-body-row-cell-name,
+.electronicsalesreceipt-table-wrapper-body-row-cell-quantity,
+.electronicsalesreceipt-table-wrapper-body-row-cell-unit,
+.electronicsalesreceipt-table-wrapper-body-row-cell-total {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0px;
+padding: 0 10px;
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-name-text,
+.electronicsalesreceipt-table-wrapper-body-row-cell-quantity-text,
+.electronicsalesreceipt-table-wrapper-body-row-cell-unit-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-total-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-unit-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-total-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+margin: 0px;   
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-name-text {
+text-align: left;   
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-quantity-text {
+text-align: center; 
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-unit-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-total-symbol {
+text-align: left;
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-unit-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-total-amount {
+text-align: right;
+}
+/* CONTENEDORES: SUBTOTAL, SHIPPING, TOTALFINAL */
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin: 0px;
+padding: 0px;
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-text,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-text,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: right;     
+margin: 0px; 
+}
+/* CONTENEDORES: VALORES */
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: space-between;    
+align-items: center;
+margin: 0px;
+padding: 0 10px;
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+margin: 0px; 
+}   
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-symbol,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-symbol {
+text-align: left;
+}
+.electronicsalesreceipt-table-wrapper-body-row-cell-subtotal-value-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-shipping-value-amount,
+.electronicsalesreceipt-table-wrapper-body-row-cell-totalfinal-value-amount {
+text-align: right;
+}
+/* CONTENEDOR: DESGLOSE DE IMPUESTOS */
+.electronicsalesreceipt-tax {
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+/* CONTENEDOR: DESGLOSE DE IMPUESTOS - SUBTOTAL, VAT, TOTAL*/
+.electronicsalesreceipt-tax-subtotal,
+.electronicsalesreceipt-tax-vat,
+.electronicsalesreceipt-tax-totalfinal {
+display: flex;
+justify-content: space-between; 
+margin: 0px;
+}
+.electronicsalesreceipt-tax-subtotal-text,
+.electronicsalesreceipt-tax-vat-text,
+.electronicsalesreceipt-tax-totalfinal-text {
+flex: 1;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: left;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTENEDOR: DESGLOSE DE IMPUESTOS - VALORES */
+.electronicsalesreceipt-tax-subtotal-value,
+.electronicsalesreceipt-tax-vat-value,
+.electronicsalesreceipt-tax-totalfinal-value {
+min-width: 150px;
+display: flex;
+justify-content: flex-end;  
+align-items: center;
+}
+.electronicsalesreceipt-tax-subtotal-value-symbol,
+.electronicsalesreceipt-tax-vat-value-symbol,
+.electronicsalesreceipt-tax-totalfinal-value-symbol,
+.electronicsalesreceipt-tax-subtotal-value-amount,
+.electronicsalesreceipt-tax-vat-value-amount,
+.electronicsalesreceipt-tax-totalfinal-value-amount  {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+margin: 0px;
+}
+.electronicsalesreceipt-tax-subtotal-value-symbol,
+.electronicsalesreceipt-tax-vat-value-symbol,
+.electronicsalesreceipt-tax-totalfinal-value-symbol {
+display: inline-block;
+text-align: left;
+min-width: 5px;
+}
+.electronicsalesreceipt-tax-subtotal-value-amount,
+.electronicsalesreceipt-tax-vat-value-amount,
+.electronicsalesreceipt-tax-totalfinal-value-amount {
+min-width: 150px;
+text-align: right;
+font-feature-settings: "tnum";
+font-variant-numeric: tabular-nums;
+}   
+/* CONTENEDOR: MÉTODO DE PAGO */
+.electronicsalesreceipt-paymentmethod {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;   
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-paymentmethod-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;     
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN LEGAL */
+.electronicsalesreceipt-legal {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+background: transparent !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0 0 15px 0;  
+padding: 15px;
+}
+.electronicsalesreceipt-legal-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: center;  
+margin: 0px;
+}
+.electronicsalesreceipt-legal-text-link {
+position: relative;
+color: #ff1493 !important;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+.electronicsalesreceipt-legal-text-link:hover::after {
+content: "";
+position: absolute;
+left: 0;
+top: 50%;
+width: 100%;
+height: 2px;
+background: #9370DB !important;
+transform: translateY(-50%);
+}
+/* CONTENEDOR: AGRADECIMIENTO */
+.electronicsalesreceipt-thanks {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: center;
+margin: 0 0 15px 0;
+}
+.electronicsalesreceipt-thanks-text {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF6B00 !important;
+text-decoration: none;
+line-height: 1.5; 
+text-align: center;  
+margin: 0px;
+}
+/* CONTENEDOR: BOTONES FINALES */
+.electronicsalesreceipt-button {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.electronicsalesreceipt-button-continueshopping,
+.electronicsalesreceipt-button-print,
+.electronicsalesreceipt-button-download {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;   
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-align: center;
+font-weight: bold; 
+margin: 0px;     
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.electronicsalesreceipt-button-print {
+background: #FFA500 !important;
+}
+.electronicsalesreceipt-button-download {
+background: #ff1493 !important;
+color: white !important;
+}
+.electronicsalesreceipt-button-continueshopping:hover,
+.electronicsalesreceipt-button-print:hover,
+.electronicsalesreceipt-button-download:hover {
+transform: scale(1.05);
+}
 
 
 
