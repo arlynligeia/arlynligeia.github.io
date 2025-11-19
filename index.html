@@ -7178,7 +7178,7 @@ console.error('❌ Datos del producto incompletos');
   
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
-const removeButtons = document.querySelectorAll('.cartfull-products-button-remove-mobile');
+const removeButtons = document.querySelectorAll('.cartfull-products-product-button-remove-mobile');
 removeButtons.forEach(button => {
 button.addEventListener('click', function() {
 const productName = this.getAttribute('data-product');
@@ -7189,14 +7189,14 @@ removeFromCartMobile(productName);
 
 // 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
-const decreaseButtons = document.querySelectorAll('.cartfull-products-quantity-control-decrease-mobile');
+const decreaseButtons = document.querySelectorAll('.cartfull-products-product-quantity-control-decrease-mobile');
 decreaseButtons.forEach(button => {
 button.addEventListener('click', function() {
 const productName = this.getAttribute('data-product');
 decreaseQuantityMobile(productName);
 });
 });
-const increaseButtons = document.querySelectorAll('.cartfull-products-quantity-control-increase-mobile');
+const increaseButtons = document.querySelectorAll('.cartfull-products-product-quantity-control-increase-mobile');
 increaseButtons.forEach(button => {
 button.addEventListener('click', function() {
 const productName = this.getAttribute('data-product');
