@@ -6042,25 +6042,51 @@ return currentStock - cartQuantity;
 function canAddToCart(productName) {
 return checkStock(productName) > 0;
 }
+
+
+
+  
 // 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
 function updateAddToCartButtons() {
-const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
-addToCartButtons.forEach(button => {
-const productName = button.getAttribute('data-product');
-const availableStock = checkStock(productName);
-if (availableStock <= 0) {
-button.disabled = true;
-button.style.opacity = '0.5';
-button.style.cursor = 'not-allowed';
-button.textContent = 'OUT OF STOCK';
-} else {
-button.disabled = false;
-button.style.opacity = '1';
-button.style.cursor = 'pointer';
-button.textContent = 'ADD TO CART';
+    const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
+    
+    addToCartButtons.forEach(button => {
+        const productName = button.getAttribute('data-product');
+        
+        if (!productName) {
+            console.warn('⚠️ Botón sin data-product:', button);
+            return;
+        }
+        
+        const availableStock = checkStock(productName);
+        
+        if (availableStock <= 0) {
+            // DESACTIVAR BOTÓN CUANDO NO HAY STOCK
+            button.disabled = true;
+            button.style.opacity = '0.5';
+            button.style.cursor = 'not-allowed';
+            button.textContent = 'OUT OF STOCK';
+            
+            // AGREGAR CLASE PARA ESTILOS ADICIONALES SI ES NECESARIO
+            button.classList.add('out-of-stock');
+            button.classList.remove('in-stock');
+        } else {
+            // ACTIVAR BOTÓN CUANDO HAY STOCK
+            button.disabled = false;
+            button.style.opacity = '1';
+            button.style.cursor = 'pointer';
+            button.textContent = 'ADD TO CART';
+            
+            button.classList.add('in-stock');
+            button.classList.remove('out-of-stock');
+        }
+        
+        console.log(`📦 ${productName}: Stock disponible = ${availableStock}, Botón ${button.disabled ? 'DESACTIVADO' : 'ACTIVO'}`);
+    });
 }
-});
-}
+
+
+  
 // ========== FUNCIONES DEL CARRITO ==========
 // 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
@@ -6098,6 +6124,13 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
 }
+
+
+
+
+
+
+  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
