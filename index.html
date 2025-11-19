@@ -7011,13 +7011,16 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCartMobile();
 }
+
+  
 // ========== FUNCIONES DE VISUALIZACIÓN ==========
 // 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
-const existingProducts = cartProductsContainer.querySelectorAll('.cartfull-product-item-mobile');
-existingProducts.forEach(product => product.remove());
+// ELIMINAR SOLO LOS DIVISORES DE PRODUCTOS EXISTENTES (divider-1-mobile)
+const existingDividers = cartProductsContainer.querySelectorAll('.cartfull-products-divider-1-mobile');
+existingDividers.forEach(divider => divider.remove());
 const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
 cart.forEach((item, index) => {
 const productHTML = `
@@ -7068,6 +7071,8 @@ updateSubtotal();
 updateTotalFinal();
 updateHiddenCartFields();
 }
+
+  
 // 12. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
 function updateShippingTotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -7146,6 +7151,8 @@ console.error('❌ Datos del producto incompletos');
 });
 }
 
+
+  
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-products-button-remove-mobile');
@@ -7156,6 +7163,7 @@ removeFromCartMobile(productName);
 });
 });
 }
+
 // 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
 const decreaseButtons = document.querySelectorAll('.cartfull-products-quantity-control-decrease-mobile');
@@ -7204,6 +7212,8 @@ clearCartMobile();
 }
 }
 
+
+  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7305,6 +7315,19 @@ toggleCartMobile();
 
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
