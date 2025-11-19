@@ -5654,8 +5654,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
-font-weight: bold;   
+text-transform: uppercase;   
+text-align: center;   
+font-weight: bold;
 margin: 0px;
 padding: 10px 20px;
 border: none;
@@ -5775,9 +5776,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -5906,8 +5907,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
-font-weight: bold;   
+text-transform: uppercase;   
+text-align: center;   
+font-weight: bold;
 margin: 0px;
 padding: 10px 20px;
 border: none;
@@ -6027,9 +6029,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -6048,23 +6050,9 @@ transform: scale(1.05);
 .digitalmusic-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    DIGITAL FEATURE FILM
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .digitalfeaturefilm-container {
 position: relative;
 width: 800px;
@@ -6104,15 +6092,16 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .digitalfeaturefilm-information {
 width: 100%;
+box-sizing: border-box;        
 margin: 0 0 20px 0;
 }
 .digitalfeaturefilm-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
-text-decoration: none;  
+text-decoration: none;
+text-align: justify;   
 line-height: 1.5;
-text-align: justify;
 margin: 0 0 10px 0;
 }
 /* CONTENEDOR: COLUMNAS */
@@ -6127,14 +6116,14 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0 0 20px 0;
 }
-/* CONTENEDOR: PRODUCTOS */
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS */
 .digitalfeaturefilm-columns-grid-product {
 width: 100%;
 display: block;
 justify-content: center; 
 margin: 0px;
 }
-/* CONTENEDOR: IMAGEN */
+/* CONTENEDOR:  GRID DE 3 - PRODUCTOS - IMAGEN */
 .digitalfeaturefilm-columns-grid-product-image {
 width: 100%;
 margin: 0 0 10px 0;
@@ -6145,7 +6134,7 @@ display: block;
 height: auto;
 border-radius: 15px;
 }
-/* CONTENEDOR: NOMBRE Y VALOR */
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .digitalfeaturefilm-columns-grid-product-name,
 .digitalfeaturefilm-columns-grid-product-value {
 font-family: 'Share Tech Mono', monospace;
@@ -6153,14 +6142,14 @@ font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;   
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-columns-grid-product-value {
 font-size: 1.5rem;
 }
-/* CONTENEDOR: BOTÓN VIEW */
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - BOTÓN VIEW */
 .digitalfeaturefilm-columns-grid-product-button {
 width: 100%;
 display: block;
@@ -6175,8 +6164,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;  
@@ -6186,8 +6176,10 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .digitalfeaturefilm-columns-grid-product-button-view:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .digitalfeaturefilm-button {
+width: 100%;
+box-sizing: border-box;        
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -6202,8 +6194,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;
@@ -6221,7 +6214,6 @@ transform: scale(1.05);
    MOVIL RESPONSIVE: DIGITAL FEATURE FILM
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR, FRANJA, TÍTULO*/ 
 .digitalfeaturefilm-container-mobile {
 position: relative;
 width: 90%;
@@ -6239,7 +6231,7 @@ top: 0;
 left: 0;
 width: 100%;
 height: 60px; 
-background-color: #320046 !important;
+background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
 .digitalfeaturefilm-title-mobile {
@@ -6260,6 +6252,7 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .digitalfeaturefilm-information-mobile {
 width: 100%;
+box-sizing: border-box;     
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-information-text-mobile {
@@ -6267,11 +6260,11 @@ font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
+text-align: justify;   
 line-height: 1.5;
-text-align: justify;
 margin: 0 0 10px 0;
 }
-/* SEPARADOR */
+/* DIVISOR */
 .digitalfeaturefilm-divider-mobile {
 width: 100%;
 height: 0; 
@@ -6280,14 +6273,16 @@ margin: 0 0 10px 0;
 } 
 /* CONTENEDOR: PRODUCTO */ 
 .digitalfeaturefilm-product-mobile  {
-width: 100%; 
+width: 100%;
+box-sizing: border-box; 
 display: block;
 justify-content: center;
 margin: 0px;
 }
-/* CONTENEDOR: IMAGEN */ 
+/* CONTENEDOR: PRODUCTO - IMAGEN */ 
 .digitalfeaturefilm-product-image-mobile {
 width: 100%;
+box-sizing: border-box; 
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-product-image-mobile img {
@@ -6296,7 +6291,7 @@ height: 200px;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: NOMBRE Y VALOR */ 
+/* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .digitalfeaturefilm-product-name-mobile,
 .digitalfeaturefilm-product-value-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -6304,8 +6299,8 @@ font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none; 
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .digitalfeaturefilm-product-value-mobile {
@@ -6314,6 +6309,7 @@ font-size: 1.2rem;
 /* CONTENEDOR: BOTÓN VIEW */ 
 .digitalfeaturefilm-product-button-mobile {
 width: 100%;
+box-sizing: border-box;    
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6326,9 +6322,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
-text-transform: uppercase; 
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0;
 padding: 10px 20px;
 border: none;
@@ -6338,9 +6334,10 @@ transition: all 0.3s ease;
 .digitalfeaturefilm-content-product-button-view-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .digitalfeaturefilm-button-mobile {
 width: 100%;
+box-sizing: border-box; 
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6354,9 +6351,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;  
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -6378,7 +6375,6 @@ transform: scale(1.05);
 /* ======================================
    ALONE SPONSORSHIP
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .alonesponsorship-container {
 position: relative;
 width: 800px;
@@ -6427,13 +6423,14 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0 0 20px 0;
 }
-/* CONTENEDOR: PRODUCTOS */
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS */
 .alonesponsorship-columns-grid-product {
 width: 100%;
 display: block;
 justify-content: center; 
 margin: 0px;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - IMAGEN */
 .alonesponsorship-columns-grid-product-image {
 width: 100%;
 margin: 0 0 10px 0;
@@ -6444,6 +6441,7 @@ display: block;
 height: auto;
 border-radius: 15px;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .alonesponsorship-columns-grid-product-name,
 .alonesponsorship-columns-grid-product-value {
 font-family: 'Share Tech Mono', monospace;
@@ -6451,13 +6449,14 @@ font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;   
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .alonesponsorship-columns-grid-product-value {
 font-size: 1.5rem;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS -BOTÓN VIEW */
 .alonesponsorship-columns-grid-product-button {
 width: 100%;
 display: block;
@@ -6472,8 +6471,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;  
@@ -6483,8 +6483,10 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .alonesponsorship-columns-grid-product-button-view:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .alonesponsorship-button {
+width: 100%;
+box-sizing: border-box;    
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -6499,8 +6501,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;
@@ -6518,14 +6521,13 @@ transform: scale(1.05);
    MOVIL RESPONSIVE: ALONE SPONSORSHIP
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR, FRANJA, TÍTULO*/ 
 .alonesponsorship-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 20px auto 30px auto;
+margin: 30px auto;
 padding: 20px;
 }
 .alonesponsorship-container-mobile::before {
@@ -6555,7 +6557,7 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* SEPARADOR */
+/* DIVISOR */
 .alonesponsorship-divider-mobile {
 width: 100%;
 height: 0; 
@@ -6564,14 +6566,16 @@ margin: 0 0 10px 0;
 } 
 /* CONTENEDOR: PRODUCTO */ 
 .alonesponsorship-product-mobile  {
-width: 100%; 
+width: 100%;
+box-sizing: border-box;   
 display: block;
 justify-content: center;
 margin: 0px;
 }
-/* CONTENEDOR: IMAGEN */ 
+/* CONTENEDOR: PRODUCTO - IMAGEN */ 
 .alonesponsorship-product-image-mobile {
 width: 100%;
+box-sizing: border-box;
 margin: 0 0 10px 0;
 }
 .alonesponsorship-product-image-mobile img {
@@ -6580,7 +6584,7 @@ height: 200px;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: NOMBRE Y VALOR */ 
+/* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .alonesponsorship-product-name-mobile,
 .alonesponsorship-product-value-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -6588,16 +6592,17 @@ font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none; 
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .alonesponsorship-product-value-mobile {
 font-size: 1.2rem;
 }
-/* CONTENEDOR: BOTÓN VIEW */ 
+/* CONTENEDOR: PRODUCTO - BOTÓN VIEW */ 
 .alonesponsorship-product-button-mobile {
 width: 100%;
+box-sizing: border-box;     
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6610,9 +6615,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
-text-transform: uppercase; 
+text-transform: uppercase;
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0;
 padding: 10px 20px;
 border: none;
@@ -6622,9 +6627,10 @@ transition: all 0.3s ease;
 .alonesponsorship-product-button-view-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .alonesponsorship-button-mobile {
 width: 100%;
+box-sizing: border-box; 
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6638,9 +6644,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;  
+text-transform: uppercase;
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -6662,7 +6668,6 @@ transform: scale(1.05);
 /* ======================================
    ALONE EXECUTIVE PRODUCERS
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .aloneexecutiveproducers-container {
 position: relative;
 width: 800px;
@@ -6711,13 +6716,14 @@ grid-template-columns: repeat(3, 1fr);
 gap: 20px;
 margin: 0 0 20px 0;
 }
-/* CONTENEDOR: PRODUCTOS */
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS */
 .aloneexecutiveproducers-columns-grid-product {
 width: 100%;
 display: block;
 justify-content: center; 
 margin: 0px;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - IMAGEN */
 .aloneexecutiveproducers-columns-grid-product-image {
 width: 100%;
 margin: 0 0 10px 0;
@@ -6728,6 +6734,7 @@ display: block;
 height: auto;
 border-radius: 15px;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .aloneexecutiveproducers-columns-grid-product-name,
 .aloneexecutiveproducers-columns-grid-product-value {
 font-family: 'Share Tech Mono', monospace;
@@ -6735,13 +6742,14 @@ font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;   
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .aloneexecutiveproducers-columns-grid-product-value {
 font-size: 1.5rem;
 }
+/* CONTENEDOR: GRID DE 3 - PRODUCTOS -BOTÓN VIEW */
 .aloneexecutiveproducers-columns-grid-product-button {
 width: 100%;
 display: block;
@@ -6756,8 +6764,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: white !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;  
@@ -6767,8 +6776,10 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .aloneexecutiveproducers-columns-grid-product-button-view:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .aloneexecutiveproducers-button {
+width: 100%;
+box-sizing: border-box;    
 display: flex;
 justify-content: space-between;
 margin: 0px;
@@ -6783,8 +6794,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: black !important;
 text-decoration: none;
+text-transform: uppercase;   
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0px;
 padding: 10px 20px;
 border: none;
@@ -6802,14 +6814,13 @@ transform: scale(1.05);
    MOVIL RESPONSIVE: ALONE EXECUTIVE PRODUCERS
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR, FRANJA, TÍTULO*/ 
 .aloneexecutiveproducers-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 20px auto 30px auto;
+margin: 30px auto;
 padding: 20px;
 }
 .aloneexecutiveproducers-container-mobile::before {
@@ -6839,7 +6850,7 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* SEPARADOR */
+/* DIVISOR */
 .aloneexecutiveproducers-divider-mobile {
 width: 100%;
 height: 0; 
@@ -6848,14 +6859,16 @@ margin: 0 0 10px 0;
 } 
 /* CONTENEDOR: PRODUCTO */ 
 .aloneexecutiveproducers-product-mobile  {
-width: 100%; 
+width: 100%;
+box-sizing: border-box;   
 display: block;
 justify-content: center;
 margin: 0px;
 }
-/* CONTENEDOR: IMAGEN */ 
+/* CONTENEDOR: PRODUCTO - IMAGEN */ 
 .aloneexecutiveproducers-product-image-mobile {
 width: 100%;
+box-sizing: border-box;
 margin: 0 0 10px 0;
 }
 .aloneexecutiveproducers-product-image-mobile img {
@@ -6864,7 +6877,7 @@ height: 200px;
 display: block;
 border-radius: 15px;
 }
-/* CONTENEDOR: NOMBRE Y VALOR */ 
+/* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .aloneexecutiveproducers-product-name-mobile,
 .aloneexecutiveproducers-product-value-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -6872,16 +6885,17 @@ font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none; 
 text-transform: uppercase;
+text-align: center;   
 line-height: 1.5;
-text-align: center;
 margin: 0 0 10px 0;
 }
 .aloneexecutiveproducers-product-value-mobile {
 font-size: 1.2rem;
 }
-/* CONTENEDOR: BOTÓN VIEW */ 
+/* CONTENEDOR: PRODUCTO - BOTÓN VIEW */ 
 .aloneexecutiveproducers-product-button-mobile {
 width: 100%;
+box-sizing: border-box;     
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6894,9 +6908,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: white !important;
 text-decoration: none;
-text-transform: uppercase; 
+text-transform: uppercase;
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0;
 padding: 10px 20px;
 border: none;
@@ -6906,9 +6920,10 @@ transition: all 0.3s ease;
 .aloneexecutiveproducers-product-button-view-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTENEDOR: BOTONES */
+/* CONTENEDOR: BOTONES FINALES */
 .aloneexecutiveproducers-button-mobile {
 width: 100%;
+box-sizing: border-box; 
 display: block;
 text-align: center; 
 margin: 0px;
@@ -6922,9 +6937,9 @@ font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
-text-transform: uppercase;  
+text-transform: uppercase;
+text-align: center;   
 font-weight: bold;
-text-align: center;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -6942,6 +6957,10 @@ transform: scale(1.05);
 .aloneexecutiveproducers-container { display: none; }
 .aloneexecutiveproducers-container-mobile { display: block; }
 }
+
+
+
+
 
 
 
