@@ -6504,12 +6504,19 @@ document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .
 section.style.display = 'none';
 });  
   
-// MOSTRAR SECCIÓN O SUBSECCIÓN
+// MOSTRAR SECCIÓN O SUBSECCIÓN (MISMA LÓGICA QUE PC)
 const targetSection = document.getElementById(destinationId);
 if (targetSection) {
-targetSection.style.display = 'block';
-targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-window.location.hash = destinationId;
+    const mainSectionId = destinationId.split('-')[0];
+    const mainSection = document.getElementById(mainSectionId + '-mobile');
+    if (mainSection) {
+        mainSection.style.display = 'block';
+        document.querySelectorAll(`[id^="${mainSectionId}-mobile-"]`).forEach(subsection => {
+            subsection.style.display = 'block';
+        });
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        window.location.hash = destinationId;
+    }
 }
 } else {
 console.warn('❌ No se encontró destino para:', activeImage.id);
