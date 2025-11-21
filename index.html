@@ -5808,9 +5808,6 @@ console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-  
-
-
 
   
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
@@ -5976,11 +5973,6 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
 
 <!-- FIN NAVEGACIÓN -->  
-
-
-
-
-
 
 
 <!-- CARRUSELES -->
@@ -6161,6 +6153,130 @@ startCarouselMobile();
 });
 </script>
 <!-- FIN SCRIP: CARRUSEL SCIENCE MOBILE -->
+
+
+<!-- SCRIP: CARRUSEL SHOP PC -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🖼️ Carrusel Shop PC iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.shop-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Shop PC configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigation() {
+const carousel = document.querySelector('.shop-carousel');
+const imageDestinations = {
+'shop-carousel-image-2': 'digitalfeaturefilm-alonesponsorship'
+ };
+ carousel.addEventListener('click', function() {
+ const activeImage = this.querySelector('.shop-carousel-image.active');
+ if (activeImage) {
+ const destinationId = imageDestinations[activeImage.id];
+ if (destinationId) {
+ console.log('🖱️ Click en carrusel shop - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+ // OCULTAR TODAS LAS SECCIONES 
+ document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ section.style.display = 'none';
+ });
+ // MOSTRAR SECCIÓN O SUBSECCIÓN
+ const targetSection = document.getElementById(destinationId);
+ if (targetSection) {
+ const mainSectionId = destinationId.split('-')[0];
+ const mainSection = document.getElementById(mainSectionId);
+ if (mainSection) {
+ mainSection.style.display = 'block';
+ document.querySelectorAll(`[id^="${mainSectionId}-"]`).forEach(subsection => {
+ subsection.style.display = 'block';
+ });
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel shop PC configurada');
+}
+// INICIALIZACIÓN 
+startCarousel();
+setupCarouselNavigation();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL SHOP PC -->
+
+  
+<!-- SCRIP: CARRUSEL SHOP MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('📱 Carrusel Shop Mobile iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarouselMobile() {
+const images = document.querySelectorAll('.shop-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Shop Mobile configurado - Cambio cada 10 segundos');
+}
+// 3. FUNCIÓN: NAVEGACIÓN AL HACER CLICK EN IMÁGENES
+function setupCarouselNavigationMobile() {
+const carousel = document.querySelector('.shop-carousel-mobile');
+const imageDestinations = {
+'shop-carousel-image-2-mobile': 'digitalfeaturefilm-mobile-alonesponsorship'
+};
+carousel.addEventListener('click', function() {
+const activeImage = this.querySelector('.shop-carousel-image-mobile.active');
+if (activeImage) {
+const destinationId = imageDestinations[activeImage.id];
+if (destinationId) {
+console.log('🖱️ Click en carrusel shop mobile - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
+// OCULTAR TODAS LAS SECCIONES MOBILE
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+section.style.display = 'none';
+});  
+  
+// MOSTRAR SECCIÓN O SUBSECCIÓN
+const targetSection = document.getElementById(destinationId);
+if (targetSection) {
+targetSection.style.display = 'block';
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
+} else {
+console.warn('❌ No se encontró destino para:', activeImage.id);
+}
+}
+});
+// CURSOR
+carousel.style.cursor = 'pointer';
+console.log('✅ Navegación del carrusel shop mobile configurada');
+}
+// INICIALIZACIÓN   
+startCarouselMobile();
+setupCarouselNavigationMobile();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL SHOP MOBILE -->
   
 <!-- FIN CARRUSELES -->
 
@@ -6427,6 +6543,11 @@ setupBannerNavigationMobile();
 
 
 
+
+
+
+
+  
  <!-- CARRITO -->
   
 <!-- CARRITO -->
