@@ -5278,17 +5278,17 @@ color: #ff0000 !important;
 }
 
 /* ======================================
-   SHIPPING DETAILS PC 
+   PURCHASE POLICIES PC 
 ====================================== */
-.shippingdetails-container {
+.purchasepolicies-container {
 position: relative;
-width: 90%;
+width: 800px;
 background: #3A0052 !important;
 border-radius: 20px;
 margin: 40px auto;   
 padding: 30px;
 }
-.shippingdetails-container::before {
+.purchasepolicies-container::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -5299,7 +5299,7 @@ height: 90px;
 background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
-.shippingdetails-title {
+.purchasepolicies-title {
 position: relative;
 z-index: 2;
 display: block;
@@ -5312,48 +5312,172 @@ text-align: left;
 line-height: 1.6;
 margin: 0 0 16px 0;
 }
-.shippingdetails-title a {
+.purchasepolicies-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.purchasepolicies-information {
+width: 100%;
+box-sizing: border-box;     
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 15px;
+}
+.purchasepolicies-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.purchasepolicies-container { display: block; }
+.purchasepolicies-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: PURCHASE POLICIES
+====================================== */
+@media (max-width: 768px) {
+.purchasepolicies-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.purchasepolicies-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.purchasepolicies-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;    
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.purchasepolicies-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.purchasepolicies-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 10px;
+}
+.purchasepolicies-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.purchasepolicies-container { display: none; }
+.purchasepolicies-container-mobile { display: block; }
+}
+/* ======================================
+   SHIPPING AND DELIVERY POLICIES PC 
+====================================== */
+.shippinganddeliverypolicies-container {
+position: relative;
+width: 90%;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;   
+padding: 30px;
+}
+.shippinganddeliverypolicies-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shippinganddeliverypolicies-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: left;
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.shippinganddeliverypolicies-title a {
 color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: TABLA */
-.shippingdetails-table {
+.shippinganddeliverypolicies-table {
 width: 100%;
 box-sizing: border-box;  
 margin: 0 0 15px 0;
 }
-.shippingdetails-table-wrapper {
+.shippinganddeliverypolicies-table-wrapper {
 width: 100%;
 table-layout: fixed;
 border-collapse: separate;
 border-spacing: 10;
 background-color: transparent;
 }
-.shippingdetails-table-wrapper th:nth-child(1),
-.shippingdetails-table-wrapper td:nth-child(1) {
+.shippinganddeliverypolicies-table-wrapper th:nth-child(1),
+.shippinganddeliverypolicies-table-wrapper td:nth-child(1) {
 width: 25%;
 }
-.shippingdetails-table-wrapper th:nth-child(2),
-.shippingdetails-table-wrapper td:nth-child(2) {
+.shippinganddeliverypolicies-table-wrapper th:nth-child(2),
+.shippinganddeliverypolicies-table-wrapper td:nth-child(2) {
 width: 15%;
 }
-.shippingdetails-table-wrapper th:nth-child(3),
-.shippingdetails-table-wrapper td:nth-child(3) {
+.shippinganddeliverypolicies-table-wrapper th:nth-child(3),
+.shippinganddeliverypolicies-table-wrapper td:nth-child(3) {
 width: 30%;
 }
-.shippingdetails-table-wrapper th:nth-child(4),
-.shippingdetails-table-wrapper td:nth-child(4) {
+.shippinganddeliverypolicies-table-wrapper th:nth-child(4),
+.shippinganddeliverypolicies-table-wrapper td:nth-child(4) {
 width: 30%;
 }
 /* TABLA: ENCABEZADOS */
-.shippingdetails-table-wrapper-head {
+.shippinganddeliverypolicies-table-wrapper-head {
 width: 100%;  
 margin: 0px;
 }
-.shippingdetails-table-wrapper-head-row {
+.shippinganddeliverypolicies-table-wrapper-head-row {
 vertical-align: middle;
 }
-.shippingdetails-table-wrapper-head-row-subtitle {
+.shippinganddeliverypolicies-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #FF6B00 !important;
@@ -5364,22 +5488,22 @@ margin: 0px;
 padding: 0px; 
 }
 /* TABLA: DIVISOR */
-.shippingdetails-table-wrapper-divider td {
+.shippinganddeliverypolicies-table-wrapper-divider td {
 width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
 margin: 10px 0; 
 }
 /* TABLA: CUERPO */
-.shippingdetails-table-wrapper-body {
+.shippinganddeliverypolicies-table-wrapper-body {
 width: 100%;
 margin: 0px;
 }
-.shippingdetails-table-wrapper-body-row {
+.shippinganddeliverypolicies-table-wrapper-body-row {
 vertical-align: middle;
 }
 /* TABLA: CUERPO - CAJAS */
-.shippingdetails-table-wrapper-body-row-cell-box {
+.shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
 width: 100%;
 height: 40px;
 box-sizing: border-box;   
@@ -5392,13 +5516,13 @@ margin: 0px;
 padding: 10px;
 border: none;  
 }
-.shippingdetails-table-wrapper-body-row:first-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
+.shippinganddeliverypolicies-table-wrapper-body-row:first-child .shippinganddeliverypolicies-table-wrapper-body-row-cell:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
 background: #FF66CC !important;
 }
-.shippingdetails-table-wrapper-body-row:last-child .shippingdetails-table-wrapper-body-row-cell:nth-child(2) .shippingdetails-table-wrapper-body-row-cell-box {
+.shippinganddeliverypolicies-table-wrapper-body-row:last-child .shippinganddeliverypolicies-table-wrapper-body-row-cell:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
 background: #FF66CC !important;
 }
-.shippingdetails-table-wrapper-body-row-cell-box-text {
+.shippinganddeliverypolicies-table-wrapper-body-row-cell-box-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: black !important;
@@ -5406,7 +5530,7 @@ text-decoration: none;
 text-align: center;  
 }
 /* CONTENEDOR: INFORMACIÓN */
-.shippingdetails-information {
+.shippinganddeliverypolicies-information {
 width: 100%;
 box-sizing: border-box;     
 background: #3A0052 !important;
@@ -5415,7 +5539,7 @@ border: 3px solid #FF6B00 !important;
 margin: 0px; 
 padding: 15px;
 }
-.shippingdetails-information-subtitle {
+.shippinganddeliverypolicies-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #00FF00 !important;
@@ -5425,31 +5549,27 @@ text-align: justify;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.shippingdetails-information-text {
+.shippinganddeliverypolicies-information-text,
+.shippinganddeliverypolicies-information-text-end {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
-margin: 0px;
+margin: 0 0 10px 0;
+}
+.shippinganddeliverypolicies-information-text-end {
+margin-bottom: 0px;
 }
 /* CONTROL */
-.shippingdetails-container { display: block; }
-.shippingdetails-container-mobile { display: none; }
-
-
-
-
-
-
-
-
+.shippinganddeliverypolicies-container { display: block; }
+.shippinganddeliverypolicies-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
+   MOVIL RESPONSIVE: SHIPPING AND DELIVERY POLICIES
 ====================================== */
 @media (max-width: 768px) {
-.shippingdetails-container-mobile {
+.shippinganddeliverypolicies-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
@@ -5458,7 +5578,7 @@ border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
 }
-.shippingdetails-container-mobile::before {
+.shippinganddeliverypolicies-container-mobile::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -5469,7 +5589,7 @@ height: 100px;
 background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
-.shippingdetails-title-mobile {
+.shippinganddeliverypolicies-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
@@ -5481,19 +5601,19 @@ text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
-.shippingdetails-title-mobile a {
+.shippinganddeliverypolicies-title-mobile a {
 color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: CONTENIDO */
-.shippingdetails-content-mobile {
+.shippinganddeliverypolicies-content-mobile {
 width: 100%;
 box-sizing: border-box;   
 display: block;
 margin: 0px;
 }
 /* CONTENEDOR: CAJAS */
-.shippingdetails-content-box-mobile {
+.shippinganddeliverypolicies-content-box-mobile {
 width: 100%;
 height: 40px;
 box-sizing: border-box;    
@@ -5505,15 +5625,15 @@ margin: 0 0 10px 0;
 padding: 10px;
 border: none;
 }
-.shippingdetails-content-mobile > div:nth-child(2),
-.shippingdetails-content-mobile > div:nth-child(7) {
+.shippinganddeliverypolicies-content-mobile > div:nth-child(2),
+.shippinganddeliverypolicies-content-mobile > div:nth-child(7) {
 background: #FF66CC !important;
 }
-.shippingdetails-content-mobile > div:nth-child(4),
-.shippingdetails-content-mobile > div:nth-child(9) {
+.shippinganddeliverypolicies-content-mobile > div:nth-child(4),
+.shippinganddeliverypolicies-content-mobile > div:nth-child(9) {
 height: 60px !important;
 }
-.shippingdetails-content-box-text-mobile {
+.shippinganddeliverypolicies-content-box-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: black !important;
@@ -5521,14 +5641,14 @@ text-decoration: none;
 text-align: center;  
 }
 /* DIVISOR */
-.shippingdetails-content-divider-mobile {
+.shippinganddeliverypolicies-content-divider-mobile {
 width: 100%;
 height: 0; 
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
 }
 /* CONTENEDOR: INFORMACIÓN */
-.shippingdetails-information-mobile {
+.shippinganddeliverypolicies-information-mobile {
 width: 100%;
 box-sizing: border-box; 
 background: #3A0052 !important;
@@ -5537,7 +5657,7 @@ border: 3px solid #FF6B00 !important;
 margin: 0px; 
 padding: 10px;
 }
-.shippingdetails-information-subtitle-mobile {
+.shippinganddeliverypolicies-information-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -5547,20 +5667,23 @@ text-align: justify;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.shippingdetails-information-text-mobile {
+.shippinganddeliverypolicies-information-text-mobile,
+.shippinganddeliverypolicies-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
-margin: 0px;
+margin: 0 0 10px 0;
 }
+.shippinganddeliverypolicies-information-text-end-mobile {
+margin-bottom: 0px;
+}  
 /* CONTROL */
-.shippingdetails-container { display: none; }
-.shippingdetails-container-mobile { display: block; }
+.shippinganddeliverypolicies-container { display: none; }
+.shippinganddeliverypolicies-container-mobile { display: block; }
 }
-
 
 
 
