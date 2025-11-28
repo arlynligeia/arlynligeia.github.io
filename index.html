@@ -7611,7 +7611,6 @@ toggleCartMobile();
 
 
   
-<!-- SCRIP: SHIPPING INFORMATION PC - VERSIÓN COMPLETA -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('shippinginformation-form');
@@ -7628,43 +7627,26 @@ document.addEventListener('DOMContentLoaded', function() {
         const totalAmount = document.getElementById('shippinginformation-total').textContent;
         const cleanAmount = totalAmount.replace('$', '').trim();
 
-        // 1. Guardar datos para el recibo
-        const formData = {
-            firstname: document.getElementById('shippinginformation-firstname').value,
-            lastname: document.getElementById('shippinginformation-lastname').value,
-            idnumber: document.getElementById('shippinginformation-idnumber').value,
-            mobilephone: document.getElementById('shippinginformation-mobilephone').value,
-            email: document.getElementById('shippinginformation-email').value,
-            country: document.getElementById('shippinginformation-country').value,
-            state: document.getElementById('shippinginformation-state').value,
-            city: document.getElementById('shippinginformation-city').value,
-            zipcode: document.getElementById('shippinginformation-zipcode').value,
-            address: document.getElementById('shippinginformation-address').value,
-            address2: document.getElementById('shippinginformation-address2').value,
-            apartment: document.getElementById('shippinginformation-apartment').value
-        };
-        localStorage.setItem('formData', JSON.stringify(formData));
-        localStorage.setItem('pendingReceipt', 'true');
+        // 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
+        updateHiddenCartFields();
 
-        // 2. GUARDAR CARRITO COMPLETO para el recibo
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        localStorage.setItem('cartForReceipt', JSON.stringify(cart));
-
-        // 3. Enviar a Formspree
+        // 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
             mode: 'no-cors'
+        }).then(() => {
+            // 3. REDIRIGIR A PAYPAL después del envío
+            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+        }).catch(error => {
+            console.error('Error:', error);
+            // Redirigir igualmente a PayPal
+            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
         });
-
-        // 4. Actualizar campos ocultos
-        updateHiddenCartFields();
-
-        // 5. REDIRIGIR A PAYPAL.ME (SIN BACKEND)
-        window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
     });
 
     function updateHiddenCartFields() {
+        // Actualizar campos de resumen
         const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
         const shipping = document.getElementById('shippinginformation-shipping').textContent;
         const total = document.getElementById('shippinginformation-total').textContent;
@@ -7672,36 +7654,27 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('hidden-cart-subtotal').value = subtotal;
         document.getElementById('hidden-cart-shipping').value = shipping;
         document.getElementById('hidden-cart-total').value = total;
-    }
-
-    // DETECTAR CUANDO EL CLIENTE VUELVE DE PAYPAL
-    if (localStorage.getItem('pendingReceipt') === 'true') {
-        setTimeout(() => {
-            const userConfirmed = confirm('¿Ya realizaste el pago en PayPal? Haz clic en OK para generar tu recibo.');
-            if (userConfirmed) {
-                localStorage.removeItem('pendingReceipt');
-                window.location.hash = "#electronicsalesreceipt";
-                
-                // LLAMAR A LA FUNCIÓN DEL RECIBO
-                if (typeof generateElectronicReceipt === 'function') {
-                    generateElectronicReceipt();
-                }
-            } else {
-                localStorage.removeItem('pendingReceipt');
-                localStorage.removeItem('cartForReceipt');
-            }
-        }, 2000);
+        
+        // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let cartItemsText = '';
+        
+        cart.forEach(item => {
+            cartItemsText += `${item.name} - $${item.price} x ${item.quantity}\n`;
+        });
+        
+        // Buscar o crear campo para los items del carrito
+        let cartItemsField = document.getElementById('hidden-cart-items');
+        if (!cartItemsField) {
+            cartItemsField = document.createElement('input');
+            cartItemsField.type = 'hidden';
+            cartItemsField.name = 'cart_items';
+            cartItemsField.id = 'hidden-cart-items';
+            form.appendChild(cartItemsField);
+        }
+        cartItemsField.value = cartItemsText;
     }
 });
-
-// FUNCIÓN PARA FORMATEAR NÚMEROS (IMPORTANTE - debe estar en ambos scripts)
-function formatNumberWithCommas(number) {
-    const num = parseFloat(number);
-    return num.toLocaleString('en-US', {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
-}
 </script>
 
 
