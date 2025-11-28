@@ -5278,6 +5278,304 @@ color: #ff0000 !important;
 }
 
 /* ======================================
+   SHOP INFORMATION PC 
+====================================== */
+.shopinformation-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;   
+padding: 30px;
+}
+.shopinformation-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shopinformation-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: left;
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.shopinformation-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TABLA */
+.shopinformation-table {
+width: 100%;
+box-sizing: border-box;  
+margin: 0 0 15px 0;
+}
+.shopinformation-table-wrapper {
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 10;
+background-color: transparent;
+}
+.shopinformation-table-wrapper th:nth-child(1),
+.shopinformation-table-wrapper td:nth-child(1) {
+width: 50%;
+}
+.shopinformation-table-wrapper th:nth-child(2),
+.shopinformation-table-wrapper td:nth-child(2) {
+width: 50%;
+}
+/* TABLA: ENCABEZADOS */
+.shopinformation-table-wrapper-head {
+width: 100%;  
+margin: 0px;
+}
+.shopinformation-table-wrapper-head-row {
+vertical-align: middle;
+}
+.shopinformation-table-wrapper-head-row-title {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0px;    
+padding: 10px;
+}
+.shopinformation-table-wrapper-head-row-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0px;    
+padding: 0px; 
+}
+/* TABLA: DIVISOR */
+.shopinformation-table-wrapper-divider td {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 10px 0; 
+}
+/* TABLA: CUERPO */
+.shopinformation-table-wrapper-body {
+width: 100%;
+margin: 0px;
+}
+.shopinformation-table-wrapper-body-row {
+vertical-align: middle;
+}
+/* TABLA: CUERPO - CAJAS */
+.shopinformation-table-wrapper-body-row-cell-box {
+width: 100%;
+height: 40px;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+align-items: center;   
+background: #00FFFF !important;
+border-radius: 6px;
+margin: 0px;
+padding: 10px;
+border: none;  
+}
+.shopinformation-table-wrapper-body-row-cell-box-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+}
+/* CONTENEDOR: INFORMACIÓN */
+.shopinformation-information {
+width: 100%;
+box-sizing: border-box;     
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 15px;
+}
+.shopinformation-information-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: justify;
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.shopinformation-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.shopinformation-container { display: block; }
+.shopinformation-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SHOP INFORMATION
+====================================== */
+@media (max-width: 768px) {
+.shopinformation-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.shopinformation-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.shopinformation-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;    
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.shopinformation-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: CONTENIDO */
+.shopinformation-content-mobile {
+width: 100%;
+box-sizing: border-box;   
+display: block;
+margin: 0px;
+}
+.shopinformation-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #FF6B00 !important;
+text-decoration: none;
+text-transform: uppercase;    
+text-align: center;
+margin: 0 0 15px 0; 
+}
+/* CONTENEDOR: CAJAS */
+.shopinformation-content-box-mobile {
+width: 100%;
+height: 40px;
+box-sizing: border-box;    
+display: inline-block;  
+background: #00FFFF !important;
+border-radius: 6px;
+text-align: center; 
+margin: 0 0 10px 0;  
+padding: 10px;
+border: none;
+}
+.shopinformation-content-box-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: black !important;
+text-decoration: none;
+text-align: center;  
+}
+/* DIVISOR */
+.shopinformation-content-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+}
+/* CONTENEDOR: INFORMACIÓN */
+.shopinformation-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 10px;
+}
+.shopinformation-information-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: justify;
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.shopinformation-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.shopinformation-container { display: none; }
+.shopinformation-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
    PURCHASE POLICIES PC 
 ====================================== */
 .purchasepolicies-container {
