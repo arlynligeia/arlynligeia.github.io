@@ -5331,11 +5331,11 @@ background-color: transparent;
 }
 .shopinformation-table-wrapper th:nth-child(1),
 .shopinformation-table-wrapper td:nth-child(1) {
-width: 50%;
+width: 40%;
 }
 .shopinformation-table-wrapper th:nth-child(2),
 .shopinformation-table-wrapper td:nth-child(2) {
-width: 50%;
+width: 60%;
 }
 /* TABLA: ENCABEZADOS */
 .shopinformation-table-wrapper-head {
@@ -5505,10 +5505,17 @@ margin: 0 0 10px 0;
 padding: 10px;
 border: none;
 }
-.shopinformation-content-mobile > div:nth-child(1),
-.shopinformation-content-mobile > div:nth-child(4),
-.shopinformation-content-mobile > div:nth-child(7) {
+/* RECUADROS DE DAYS EN ROSADO */
+.shopinformation-content-mobile > div:nth-child(2),
+.shopinformation-content-mobile > div:nth-child(5),
+.shopinformation-content-mobile > div:nth-child(8) {
 background: #FF66CC !important;
+}
+/* RECUADROS DE TIME CON ALTURA 60px */
+.shopinformation-content-mobile > div:nth-child(3),
+.shopinformation-content-mobile > div:nth-child(6),
+.shopinformation-content-mobile > div:nth-child(9) {
+height: 60px !important;
 }
 .shopinformation-content-box-text-mobile {
 font-family: 'Share Tech Mono', monospace;
