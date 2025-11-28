@@ -5394,6 +5394,9 @@ margin: 0px;
 padding: 10px;
 border: none;  
 }
+.shopinformation-table-wrapper-body-row-cell:first-child .shopinformation-table-wrapper-body-row-cell-box {
+background: #FF66CC !important;
+}
 .shopinformation-table-wrapper-body-row-cell-box-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -5502,6 +5505,11 @@ margin: 0 0 10px 0;
 padding: 10px;
 border: none;
 }
+.shopinformation-content-mobile > div:nth-child(1),
+.shopinformation-content-mobile > div:nth-child(4),
+.shopinformation-content-mobile > div:nth-child(7) {
+background: #FF66CC !important;
+}
 .shopinformation-content-box-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
@@ -5549,31 +5557,6 @@ margin: 0px;
 .shopinformation-container { display: none; }
 .shopinformation-container-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    PURCHASE POLICIES PC 
@@ -5989,7 +5972,130 @@ margin-bottom: 0px;
 .shippinganddeliverypolicies-container-mobile { display: block; }
 }
 
-
+/* ======================================
+   CONTACT & SUPPORT PC 
+====================================== */
+.contactsupport-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;   
+padding: 30px;
+}
+.contactsupport-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.contactsupport-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;   
+text-align: left;
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.contactsupport-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.contactsupport-information {
+width: 100%;
+box-sizing: border-box;     
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 15px;
+}
+.contactsupport-information-text {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.contactsupport-container { display: block; }
+.contactsupport-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: CONTACT & SUPPORT
+====================================== */
+@media (max-width: 768px) {
+.contactsupport-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.contactsupport-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.contactsupport-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;    
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.contactsupport-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.contactsupport-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+background: #3A0052 !important;
+border-radius: 15px;
+border: 3px solid #FF6B00 !important;
+margin: 0px; 
+padding: 10px;
+}
+.contactsupport-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+/* CONTROL */
+.contactsupport-container { display: none; }
+.contactsupport-container-mobile { display: block; }
+}
 
 
 
