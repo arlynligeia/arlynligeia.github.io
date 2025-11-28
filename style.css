@@ -5401,6 +5401,7 @@ margin: 0px;
 .purchasepolicies-container { display: none; }
 .purchasepolicies-container-mobile { display: block; }
 }
+
 /* ======================================
    SHIPPING AND DELIVERY POLICIES PC 
 ====================================== */
@@ -5519,6 +5520,9 @@ border: none;
 .shippinganddeliverypolicies-table-wrapper-body-row:first-child .shippinganddeliverypolicies-table-wrapper-body-row-cell:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
 background: #FF66CC !important;
 }
+.shippinganddeliverypolicies-table-wrapper-body-row:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
+background: #FF66CC !important;
+}
 .shippinganddeliverypolicies-table-wrapper-body-row:last-child .shippinganddeliverypolicies-table-wrapper-body-row-cell:nth-child(2) .shippinganddeliverypolicies-table-wrapper-body-row-cell-box {
 background: #FF66CC !important;
 }
@@ -5626,11 +5630,13 @@ padding: 10px;
 border: none;
 }
 .shippinganddeliverypolicies-content-mobile > div:nth-child(2),
-.shippinganddeliverypolicies-content-mobile > div:nth-child(7) {
+.shippinganddeliverypolicies-content-mobile > div:nth-child(7),
+.shippinganddeliverypolicies-content-mobile > div:nth-child(11) {
 background: #FF66CC !important;
 }
 .shippinganddeliverypolicies-content-mobile > div:nth-child(4),
-.shippinganddeliverypolicies-content-mobile > div:nth-child(9) {
+.shippinganddeliverypolicies-content-mobile > div:nth-child(9),
+.shippinganddeliverypolicies-content-mobile > div:nth-child(13) {
 height: 60px !important;
 }
 .shippinganddeliverypolicies-content-box-text-mobile {
