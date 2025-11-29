@@ -6741,16 +6741,6 @@ setupCarouselNavigationMobile();
   
 <!-- FIN CARRUSELES -->
 
-
-
-
-
-
-
-
-
-
-
   
 
 <!-- BANNERS --> 
@@ -6837,7 +6827,6 @@ setupBannerNavigationMobile();
 <!-- FIN SCRIP: BANNER FILM MOBILE -->
 
 
-
 <!-- SCRIP: BANNER MUSIC PC --> 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -6918,7 +6907,6 @@ setupBannerNavigationMobile();
 });
 </script>
 <!-- FIN SCRIP: BANNER MUSIC MOBILE -->
-
 
 
 <!-- SCRIP: BANNER FASHION PC --> 
@@ -7005,16 +6993,7 @@ setupBannerNavigationMobile();
 <!-- FIN BANNERS --> 
 
 
-
-
-
-
-
-
-
-  
- <!-- CARRITO -->
-  
+    
 <!-- CARRITO -->
   
 <!-- SCRIP: CARRITO PC -->
@@ -7364,36 +7343,28 @@ clearCart();
 });
 }
 }
-
-  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let subtotal = 0;
-    let shippingTotal = 0;
-    
-    // CALCULAR TOTALES
-    cart.forEach(item => {
-        subtotal += item.totalprice;
-        shippingTotal += item.shipping * item.quantity;
-    });
-    const totalFinal = subtotal + shippingTotal;
-    
-    // CREAR STRING CON LOS DATOS EXACTOS DEL CARRITO
-    const cartItemsString = cart.map(item => 
-        `${item.product} - Quantity: ${item.quantity} - Unit Price: $${item.price} - Total: $${item.totalprice}`
-    ).join(' | ');
-    
-    // ACTUALIZAR CAMPOS OCULTOS
-    document.getElementById('hidden-cart-items').value = cartItemsString;
-    document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
-    document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
-    document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let subtotal = 0;
+let shippingTotal = 0;
+// CALCULAR TOTALES
+cart.forEach(item => {
+subtotal += item.totalprice;
+shippingTotal += item.shipping * item.quantity;
+});
+const totalFinal = subtotal + shippingTotal;
+// CREAR STRING CON LOS DATOS EXACTOS DEL CARRITO
+const cartItemsString = cart.map(item => 
+`${item.product} - Quantity: ${item.quantity} - Unit Price: $${item.price} - Total: $${item.totalprice}`
+).join(' | ');
+// ACTUALIZAR CAMPOS OCULTOS
+document.getElementById('hidden-cart-items').value = cartItemsString;
+document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
+document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
+document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
 }
-
-
-  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7452,15 +7423,6 @@ toggleCart();
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
-
-
-
-
-
-
-
-
-
 
 
 
@@ -7569,7 +7531,7 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-}
+}  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCartMobile(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -7580,7 +7542,6 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCartMobile();
 }
-
 // 8. FUNCIÓN: DISMINUIR CANTIDAD
 function decreaseQuantityMobile(productName) {
 console.log(`➖ Disminuyendo cantidad: ${productName}`);
@@ -7599,7 +7560,6 @@ updateAddToCartButtons();
 toggleCartMobile();
 }
 }
-
 // 9. FUNCIÓN: AUMENTAR CANTIDAD
 function increaseQuantityMobile(productName) {
 console.log(`➕ Aumentando cantidad: ${productName}`);
@@ -7618,7 +7578,6 @@ updateCartDisplay();
 updateAddToCartButtons();
 }
 }
-
 // 10. FUNCIÓN: LIMPIAR CARRITO
 function clearCartMobile() {
 console.log('🧹 Limpiando carrito');
@@ -7627,7 +7586,6 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCartMobile();
 }
-
   
 // ========== FUNCIONES DE VISUALIZACIÓN ==========
 // 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
@@ -7659,9 +7617,9 @@ function updateCartDisplay() {
                 <div class="cartfull-products-product-quantity-mobile">
                     <span class="cartfull-products-product-quantity-text-mobile">QTY:</span> 
                     <div class="cartfull-products-product-quantity-control-mobile">
-                        <button class="cartfull-products-product-quantity-control-decrease-mobile" onclick="decreaseQuantityMobile('${item.product}')">-</button>
+                        <button class="cartfull-products-product-quantity-control-decrease-mobile" data-product="${item.product}">-</button>
                         <span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
-                        <button class="cartfull-products-product-quantity-control-increase-mobile" onclick="increaseQuantityMobile('${item.product}')">+</button>
+                        <button class="cartfull-products-product-quantity-control-increase-mobile" data-product="${item.product}">+</button>
                     </div>
                 </div>
                 <!-- PRECIO UNITARIO DEL PRODUCTO -->
@@ -7682,18 +7640,19 @@ function updateCartDisplay() {
                 </div>
                 <!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
                 <div class="cartfull-products-product-button-mobile">  
-                    <button class="cartfull-products-product-button-remove-mobile" onclick="removeFromCartMobile('${item.product}')">REMOVE</button>
+                   <button class="cartfull-products-product-button-remove-mobile" data-product="${item.product}">REMOVE</button>
                 </div>
             </div>
             <!-- FIN CONTENEDOR ÚNICO DEL PRODUCTO -->
         `;
         divider2.insertAdjacentHTML('beforebegin', productHTML);
     }); 
-    
-    updateShippingTotal();
-    updateSubtotal();
-    updateTotalFinal();
-    updateHiddenCartFields();
+setupQuantityButtons();
+setupRemoveButtons();
+updateShippingTotal();
+updateSubtotal();
+updateTotalFinal();
+updateHiddenCartFields();
 }
 
   
@@ -7706,7 +7665,6 @@ shippingTotal += item.shipping * item.quantity;
 });
 document.querySelector('.cartfull-products-shipping-value-amount-mobile').textContent = formatNumberWithCommas(shippingTotal);
 }
-
 // 13. FUNCIÓN: ACTUALIZAR SUBTOTAL
 function updateSubtotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -7716,7 +7674,6 @@ subtotal += item.totalprice;
 });
 document.querySelector('.cartfull-products-subtotal-value-amount-mobile').textContent = formatNumberWithCommas(subtotal);
 }
-
 // 14. FUNCIÓN: ACTUALIZAR TOTAL FINAL
 function updateTotalFinal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -7774,8 +7731,6 @@ console.error('❌ Datos del producto incompletos');
 });
 });
 }
-
-
   
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
@@ -7788,6 +7743,7 @@ removeFromCartMobile(productName);
 });
 }
 
+  
 // 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
 const decreaseButtons = document.querySelectorAll('.cartfull-products-product-quantity-control-decrease-mobile');
@@ -7806,6 +7762,7 @@ increaseQuantityMobile(productName);
 });
 }
 
+  
 // 19. FUNCIÓN: CONFIGURAR BOTÓN CART
 function setupCartButton() {
 const cartButton = document.querySelector('.cart-button-mobile');
@@ -7815,7 +7772,6 @@ toggleCartMobile();
 });
 }
 }
-
 // 20. FUNCIÓN: CONFIGURAR BOTONES GO TO CART
 function setupGoToCartButtons() {
 const goToCartButtons = document.querySelectorAll('[class*="button-gotocart-mobile"]');
@@ -7825,7 +7781,6 @@ toggleCartMobile();
 });
 });
 }
-
 // 21. FUNCIÓN: CONFIGURAR BOTÓN CLEAR CART
 function setupClearCartButton() {
 const clearCartButton = document.querySelector('.cartfull-button-cleancart-mobile');
@@ -7864,6 +7819,7 @@ document.getElementById('hidden-cart-shipping-mobile').value = shippingTotal.toF
 document.getElementById('hidden-cart-total-mobile').value = totalFinal.toFixed(2);
 }
 
+  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7875,7 +7831,6 @@ goToCheckoutMobile();
 });
 }
 }
-
 // 24. FUNCIÓN: IR A CHECKOUT
 function goToCheckoutMobile() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -7909,7 +7864,6 @@ window.location.hash = '#shippinginformation-mobile';
 }
 console.log('✅ Redirigiendo a checkout móvil');
 }
-
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
