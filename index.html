@@ -7973,7 +7973,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const cleanAmount = totalAmount.replace('$', '').trim();
 
         // 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
-        updateHiddenCartFields();
+        updateHiddenCartFields(); // <- Esta llamará a la función correcta del carrito
 
         // 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
         fetch(form.action, {
@@ -7990,38 +7990,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    function updateHiddenCartFields() {
-        // Actualizar campos de resumen
-        const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
-        const shipping = document.getElementById('shippinginformation-shipping').textContent;
-        const total = document.getElementById('shippinginformation-total').textContent;
-
-        document.getElementById('hidden-cart-subtotal').value = subtotal;
-        document.getElementById('hidden-cart-shipping').value = shipping;
-        document.getElementById('hidden-cart-total').value = total;
-        
-        // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let cartItemsText = '';
-        
-        cart.forEach(item => {
-            cartItemsText += `${item.name} - $${item.price} x ${item.quantity}\n`;
-        });
-        
-        // Buscar o crear campo para los items del carrito
-        let cartItemsField = document.getElementById('hidden-cart-items');
-        if (!cartItemsField) {
-            cartItemsField = document.createElement('input');
-            cartItemsField.type = 'hidden';
-            cartItemsField.name = 'cart_items';
-            cartItemsField.id = 'hidden-cart-items';
-            form.appendChild(cartItemsField);
-        }
-        cartItemsField.value = cartItemsText;
-    }
+    // ELIMINA ESTA FUNCIÓN DUPLICADA
+    // function updateHiddenCartFields() { ... }
 });
 </script>
-
 
 
 
