@@ -5384,26 +5384,6 @@ Cosmic/Psychological Horror</p>
 </div>  
 </section>
 <!-- FIN CART FULL MOBILE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
   
 <!-- SHIPPING INFORMATION PC -->
 <section class="shippinginformation-section main-section" id="shippinginformation">
@@ -5725,6 +5705,10 @@ Cosmic/Psychological Horror</p>
 
 
 
+
+
+
+  
   
 <!-- POLÍTICAS DE PRIVACIDAD -->
 
@@ -5903,6 +5887,26 @@ Cosmic/Psychological Horror</p>
 <!-- FIN COOKIE POLICY MOBILE -->
   
 </main>
+
+<!-- ADD TO CART MODAL PC -->
+<div id="addToCartModal" class="addtocartmodal" style="display: none;">
+<div class="addtocartmodal-information">
+<div class="addtocartmodal-information-icon">✓</div>
+<h3 class="addtocartmodal-information-title">Successfully Added!</h3>
+<p class="addtocartmodal-information-text">The product has been added to your cart.</p>
+</div>
+</div>
+<!-- FIN ADD TO CART MODAL PC -->
+
+<!-- ADD TO CART MODAL MOBILE -->
+<div id="addToCartModalMobile" class="addtocartmodalmobile" style="display: none;">
+<div class="addtocartmodal-information-mobile">
+<div class="addtocartmodal-information-icon-mobile">✓</div>
+<h3 class="addtocartmodal-information-title-mobile">Successfully Added!</h3>
+<p class="addtocartmodal-information-text-mobile">The product has been added to your cart.</p>
+</div>
+</div>
+<!-- FIN ADD TO CART MODAL MOBILE -->
   
 <!-- FOOTER PC -->
 <footer class="footer">
@@ -6003,40 +6007,6 @@ Cosmic/Psychological Horror</p>
 </div>  
 </footer>
 <!-- FIN FOOTER MOBILE -->
-  
-<!-- ADD TO CART MODAL PC -->
-<div id="addToCartModal" class="addtocartmodal" style="display: none;">
-<div class="addtocartmodal-information">
-<div class="addtocartmodal-information-icon">✓</div>
-<h3 class="addtocartmodal-information-title">Successfully Added!</h3>
-<p class="addtocartmodal-information-text">The product has been added to your cart.</p>
-</div>
-</div>
-<!-- FIN ADD TO CART MODAL PC -->
-
-<!-- ADD TO CART MODAL MOBILE -->
-<div id="addToCartModalMobile" class="addtocartmodalmobile" style="display: none;">
-<div class="addtocartmodal-information-mobile">
-<div class="addtocartmodal-information-icon-mobile">✓</div>
-<h3 class="addtocartmodal-information-title-mobile">Successfully Added!</h3>
-<p class="addtocartmodal-information-text-mobile">The product has been added to your cart.</p>
-</div>
-</div>
-<!-- FIN ADD TO CART MODAL MOBILE -->
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
   
 <!-- SCRIPS -->   
 
@@ -7993,35 +7963,6 @@ toggleCartMobile();
 <!-- FIN SCRIP: CARRITO MOBILE -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- SCRIP: SHIPPING INFORMATION -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -8082,6 +8023,63 @@ cartItemsField.value = cartItemsText;
 
 
 
+
+
+  
+<!-- SCRIP: SHIPPING INFORMATION MOBILE -->  
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const formMobile = document.getElementById('shippinginformation-form-mobile');
+    const proceedButtonMobile = document.querySelector('.shippinginformation-button-proceedpayment-mobile');
+    
+    proceedButtonMobile.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        if (!formMobile.checkValidity()) {
+            formMobile.reportValidity();
+            return;
+        }
+        
+        const totalAmount = document.getElementById('cart-total-mobile').textContent;
+        const cleanAmount = totalAmount.replace('$', '').replace(/,/g, '').trim();
+        
+        // 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
+        updateHiddenCartFieldsMobile();
+        
+        // 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
+        fetch(formMobile.action, {
+            method: 'POST',
+            body: new FormData(formMobile),
+            mode: 'no-cors'
+        }).then(() => {
+            // 3. REDIRIGIR A PAYPAL después del envío
+            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+        }).catch(error => {
+            console.error('Error:', error);
+            // Redirigir igualmente a PayPal
+            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+        });
+    });
+    
+    function updateHiddenCartFieldsMobile() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Crear string con los datos del carrito
+        let cartItemsText = '';
+        cart.forEach(item => {
+            cartItemsText += `${item.product} - Cantidad: ${item.quantity} - Precio Unitario: $${item.price} - Total: $${item.totalprice}\n`;
+        });
+        
+        // Actualizar campo oculto de items del carrito
+        document.getElementById('hidden-cart-items-mobile').value = cartItemsText;
+        
+        // Los campos hidden-cart-subtotal-mobile, hidden-cart-shipping-mobile, 
+        // y hidden-cart-total-mobile ya se actualizan automáticamente
+        // por la función updateHiddenCartFields() del carrito móvil
+    }
+});
+</script>
+<!-- FIN SCRIP: SHIPPING INFORMATION MOBILE -->
 
 
 
