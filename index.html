@@ -8003,9 +8003,13 @@ document.getElementById('hidden-cart-total').value = total;
 // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartItemsText = '';
+let cartItemsText = '';
+  
 cart.forEach(item => {
-cartItemsText += `${item.product} - $${item.price} x ${item.quantity}\n`;
+cartItemsText += `Producto: ${item.product} | Cantidad: ${item.quantity} | Precio Unitario: $${item.price} | Total: $${item.totalprice}\n`;
 });
+
+  
 // Buscar o crear campo para los items del carrito
 let cartItemsField = document.getElementById('hidden-cart-items');
 if (!cartItemsField) {
