@@ -6046,7 +6046,7 @@ button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
 showOnlyOneSection(targetId);
-history.pushState({ section: targetId }, null, `#${targetId}`);
+history.pushState(null, null, `#${targetId}`);
 });
 });
 // EVENTOS PARA BOTONES DEL SUBMENÚ
@@ -6055,24 +6055,10 @@ button.addEventListener('click', function(e) {
 e.preventDefault();
 const targetId = this.getAttribute('href').replace('#', '');
 goToSubsection(targetId);
-history.pushState({ section: targetId }, null, `#${targetId}`);
+history.pushState(null, null, `#${targetId}`);
 });
 });
-// 3. FUNCIÓN: MANEJAR BOTONES DE NAVEGACIÓN DEL NAVEGADOR (ATRÁS/ADELANTE)
-function handleBrowserNavigation(event) {
-const hash = window.location.hash.replace('#', '');
-if (hash) {
-if (hash.includes('-')) {
-goToSubsection(hash);
-} else {
-showOnlyOneSection(hash);
-}
-} else {
-// Si no hay hash, mostrar la sección por defecto (shop-home)
-showOnlyOneSection('shop-home');
-}
-}
-// 4. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
@@ -6081,19 +6067,17 @@ goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
 }
-} else {
-// Mostrar sección por defecto si no hay hash
-showOnlyOneSection('shop-home');
 }
 }
-// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
-window.addEventListener('popstate', handleBrowserNavigation);
+
+  
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+
 
 
 
