@@ -8000,10 +8000,12 @@ const total = document.getElementById('shippinginformation-total').textContent;
 document.getElementById('hidden-cart-subtotal').value = subtotal;
 document.getElementById('hidden-cart-shipping').value = shipping;
 document.getElementById('hidden-cart-total').value = total;
+
+
+  
 // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartItemsText = '';
-  
 cart.forEach(item => {
 cartItemsText += `Producto: ${item.product} | Cantidad: ${item.quantity} | Precio Unitario: $${item.price} | Total: $${item.totalprice}\n`;
 });
