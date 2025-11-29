@@ -2119,14 +2119,6 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </div>
 </section>
 <!-- FIN DIGITAL FILM MOBILE -->
-
-
-
-
-
-
-
-
   
 <!-- DIGITAL MUSIC PC -->
 <section class="digitalmusic-section main-section" id="digitalmusic">
@@ -5539,13 +5531,22 @@ Cosmic/Psychological Horror</p>
 <a class="shippinginformation-button-back" href="#cartfull">BACK</a>
 <a class="shippinginformation-button-continueshopping" href="#shop">CONTINUE SHOPPING</a>
 <a class="shippinginformation-button-proceedpayment" href="#proceedpayment">PROCEED PAYMENT</a>
-</div>
-  
+</div>  
 </form>
 </div>  
 </div>
 </section>
 <!-- FIN SHIPPING INFORMATION PC -->
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7363,6 +7364,8 @@ clearCart();
 });
 }
 }
+
+  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7375,19 +7378,21 @@ subtotal += item.totalprice;
 shippingTotal += item.shipping * item.quantity;
 });
 const totalFinal = subtotal + shippingTotal;
-// CREAR ARRAY DE PRODUCTOS PARA EL CAMPO OCULTO
-const cartItems = cart.map(item => ({
-product: item.product,
-quantity: item.quantity,
-price: item.price,
-total: item.totalprice
-}));
+  
+// CREAR STRING LEGIBLE CON TODOS LOS PRODUCTOS
+const cartItemsString = cart.map(item => 
+`Product: ${item.product} | Quantity: ${item.quantity} | Unit Price: $${item.price} | Total: $${item.totalprice}`
+).join(' | ');
 // ACTUALIZAR CAMPOS OCULTOS
-document.getElementById('hidden-cart-items').value = JSON.stringify(cartItems);
+document.getElementById('hidden-cart-items').value = cartItemsString;
 document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
 document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
+console.log('📦 Campos ocultos actualizados:', cartItemsString);
 }
+
+
+  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
