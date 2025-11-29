@@ -13963,7 +13963,7 @@ vertical-align: middle;
 .cartfull-table-wrapper-head-row-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #00FF00 !important;
+color: #FF6B00 !important;
 text-decoration: none;
 text-transform: uppercase;   
 text-align: center;
@@ -14458,7 +14458,7 @@ margin: 0px;
 .cartfull-button-continueshopping-mobile,
 .cartfull-button-checkout-mobile {
 display: inline-block;
-background: #00FFFF !important; 
+background: #00CED1 !important; 
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
@@ -14493,27 +14493,13 @@ transform: scale(1.05);
 .cartfull-container-mobile { display: block; }
 }
 
-
-
-
-/* MOSTRAR CARTEMPTY POR DEFECTO, OCULTAR CARTFULL */
-.cartempty-section { 
-    display: block;
-}
-
-.cartfull-section {
-    display: none;
-}
-
-/* EN MOBILE */
+/* MOSTRAR CARTEMPTY/ OCULTAR CARTFULL PC */
+.cartempty-section { display: block; }
+.cartfull-section { display: none; }
+/* MOSTRAR CARTEMPTY/ OCULTAR CARTFULL MOBILE */
 @media (max-width: 768px) {
-    .cartempty-section { 
-        display: block;
-    }
-    
-    .cartfull-section {
-        display: none;
-    }
+.cartempty-section { display: block; }
+.cartfull-section { display: none; }
 }
 
 
