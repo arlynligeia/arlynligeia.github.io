@@ -15721,16 +15721,16 @@ background: rgba(0, 0, 0, 0.8);
 .addtocartmodal-information-mobile {
 position: relative;
 overflow: hidden;
-width: 90%;
-max-width: 400px;
+width: 85%; /* Cambiado de 90% */
+max-width: 320px; /* Cambiado de 400px */
 background: #000000 !important; 
 border-radius: 15px;
 border: 3px solid #00FF00 !important; 
 box-shadow: 
-0 0 20px #00FF00,
-inset 0 0 20px rgba(0, 255, 0, 0.1);
+0 0 15px #00FF00, /* Reducido de 20px */
+inset 0 0 15px rgba(0, 255, 0, 0.1); /* Reducido de 20px */
 text-align: center;
-padding: 30px;
+padding: 20px;
 animation: modalAppear 0.3s ease-out;
 }
 .addtocartmodal-information-mobile::before {
@@ -15751,7 +15751,7 @@ pointer-events: none;
 }
 .addtocartmodal-information-icon-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 48px;
+font-size: 35px;
 color: #FF6B00 !important;
 text-decoration: none;
 text-transform: uppercase;
@@ -15761,7 +15761,7 @@ margin: 0 0 10px 0;
 }
 .addtocartmodal-information-title-mobile {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
+font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;   
@@ -15771,7 +15771,7 @@ margin: 0 0 10px 0;
 }
 .addtocartmodal-information-text-mobile {
 font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
+font-size: 0.8rem;
 color: #00FF00 !important;
 text-decoration: none;
 line-height: 1.5; 
