@@ -8003,7 +8003,6 @@ document.getElementById('hidden-cart-total').value = total;
 // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartItemsText = '';
-let cartItemsText = '';
   
 cart.forEach(item => {
 cartItemsText += `Producto: ${item.product} | Cantidad: ${item.quantity} | Precio Unitario: $${item.price} | Total: $${item.totalprice}\n`;
@@ -8024,6 +8023,10 @@ cartItemsField.value = cartItemsText;
 });
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION -->  
+
+
+
+
 
 
 
@@ -8095,6 +8098,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+
+
+
+  
   
 <!-- FOOTER -->
   
