@@ -7059,8 +7059,6 @@ window.addEventListener('storage', function(e) {
         updateCartDisplay();     // Actualizar visualización del carrito
     }
 });
-
-
   
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
@@ -7090,19 +7088,26 @@ minimumFractionDigits: 2,
 maximumFractionDigits: 2
 });
 }
+
+  
 // ========== FUNCIONES DE STOCK ==========
 // 3. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
 function checkStock(productName) {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-const productInCart = cart.find(item => item.product === productName);
-const currentStock = productStock[productName];
-const cartQuantity = productInCart ? productInCart.quantity : 0;
-return currentStock - cartQuantity;
+    // SOLO VERIFICAR EL STOCK TOTAL, NO RESTAR LO QUE TIENE EN CARRITO
+    return productStock[productName];
 }
+
+
+
+  
 // 4. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
 function canAddToCart(productName) {
-return checkStock(productName) > 0;
+    const currentStock = productStock[productName];
+    return currentStock > 0; // SOLO VERIFICAR SI HAY STOCK, PUNTO
 }
+
+
+  
 // 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
 function updateAddToCartButtons() {
 const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
@@ -7496,6 +7501,18 @@ toggleCart();
 </script>
 <!-- SCRIP: CARRITO PC -->
 
+
+
+
+
+
+
+
+
+
+
+
+  
 
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
