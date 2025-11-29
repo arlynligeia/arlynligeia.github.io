@@ -6004,7 +6004,7 @@ Cosmic/Psychological Horror</p>
 </footer>
 <!-- FIN FOOTER MOBILE -->
   
-<!-- ADD TO CART MODAL -->
+<!-- ADD TO CART MODAL PC -->
 <div id="addToCartModal" class="addtocartmodal" style="display: none;">
 <div class="addtocartmodal-information">
 <div class="addtocartmodal-information-icon">✓</div>
@@ -6012,9 +6012,17 @@ Cosmic/Psychological Horror</p>
 <p class="addtocartmodal-information-text">The product has been added to your cart.</p>
 </div>
 </div>
-<!-- FIN ADD TO CART MODAL -->
+<!-- FIN ADD TO CART MODAL PC -->
 
-
+<!-- ADD TO CART MODAL MOBILE -->
+<div id="addToCartModalMobile" class="addtocartmodalmobile" style="display: none;">
+<div class="addtocartmodal-information-mobile">
+<div class="addtocartmodal-information-icon-mobile">✓</div>
+<h3 class="addtocartmodal-information-title-mobile">Successfully Added!</h3>
+<p class="addtocartmodal-information-text-mobile">The product has been added to your cart.</p>
+</div>
+</div>
+<!-- FIN ADD TO CART MODAL MOBILE -->
 
 
    
@@ -7132,15 +7140,8 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-
-   // AGREGAR ESTA LÍNEA PARA MOSTRAR EL MODAL
-  showAddToCartModal();
+showAddToCartModal();
 }
-
-
-
-
-  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -7452,21 +7453,16 @@ window.location.hash = '#shippinginformation';
 }
 console.log('✅ Redirigiendo a checkout');
 }
-
 // 25. FUNCIÓN: MOSTRAR MODAL DE CONFIRMACIÓN
 function showAddToCartModal() {
-  const modal = document.getElementById('addToCartModal');
-  if (modal) {
-    modal.style.display = 'flex';
-    
-    // Auto cerrar después de 1 segundo
-    setTimeout(() => {
-      modal.style.display = 'none';
-    }, 1000);
-  }
+const modal = document.getElementById('addToCartModal');
+if (modal) {
+modal.style.display = 'flex';
+setTimeout(() => {
+modal.style.display = 'none';
+}, 1000);
 }
-
-  
+} 
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
@@ -7481,19 +7477,6 @@ toggleCart();
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
-
-
-
-
-
-
-
-
-
-
-  
-
-
 
   
 <!-- SCRIP: CARRITO MOBILE -->
@@ -7597,6 +7580,9 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
+
+  
+  showAddToCartModalMobile();
 }  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCartMobile(productName) {
@@ -7652,76 +7638,70 @@ updateCartDisplay();
 updateAddToCartButtons();
 toggleCartMobile();
 }
-  
 // ========== FUNCIONES DE VISUALIZACIÓN ==========
 // 11. FUNCIÓN: ACTUALIZAR VISUALIZACIÓN DEL CARRITO  
 function updateCartDisplay() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
-    
-    // ELIMINAR CONTENEDORES DE PRODUCTOS EXISTENTES
-    const productContainers = cartProductsContainer.querySelectorAll('.cartfull-products-product-mobile');
-    productContainers.forEach(container => container.remove());
-    
-    const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
-    
-    cart.forEach((item, index) => {
-        const productHTML = `
-            <!-- CONTENEDOR ÚNICO DEL PRODUCTO -->
-            <div class="cartfull-products-product-mobile">
-                <!-- DIVISOR DEL PRODUCTO -->
-                <div class="cartfull-products-product-divider-1-mobile"></div>
-                <!-- IMAGEN DEL PRODUCTO -->
-                <div class="cartfull-products-product-image-mobile">
-                    <img src="${item.image}" alt="${item.product}">
-                </div>  
-                <!-- NOMBRE DEL PRODUCTO -->
-                <div class="cartfull-products-product-name-mobile">
-                    <span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
-                </div>
-                <!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
-                <div class="cartfull-products-product-quantity-mobile">
-                    <span class="cartfull-products-product-quantity-text-mobile">QTY:</span> 
-                    <div class="cartfull-products-product-quantity-control-mobile">
-                        <button class="cartfull-products-product-quantity-control-decrease-mobile" data-product="${item.product}">-</button>
-                        <span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
-                        <button class="cartfull-products-product-quantity-control-increase-mobile" data-product="${item.product}">+</button>
-                    </div>
-                </div>
-                <!-- PRECIO UNITARIO DEL PRODUCTO -->
-                <div class="cartfull-products-product-unit-mobile">
-                    <span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
-                    <div class="cartfull-products-product-unit-value-mobile">  
-                        <span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
-                        <span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
-                    </div>
-                </div>
-                <!-- PRECIO TOTAL DEL PRODUCTO -->
-                <div class="cartfull-products-product-total-mobile">
-                    <span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
-                    <div class="cartfull-products-product-total-value-mobile">  
-                        <span class="cartfull-products-product-total-value-symbol-mobile">$</span>
-                        <span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
-                    </div>
-                </div>
-                <!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
-                <div class="cartfull-products-product-button-mobile">  
-                   <button class="cartfull-products-product-button-remove-mobile" data-product="${item.product}">REMOVE</button>
-                </div>
-            </div>
-            <!-- FIN CONTENEDOR ÚNICO DEL PRODUCTO -->
-        `;
-        divider2.insertAdjacentHTML('beforebegin', productHTML);
-    }); 
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const cartProductsContainer = document.querySelector('.cartfull-products-mobile');
+// ELIMINAR CONTENEDORES DE PRODUCTOS EXISTENTES
+const productContainers = cartProductsContainer.querySelectorAll('.cartfull-products-product-mobile');
+productContainers.forEach(container => container.remove());
+const divider2 = cartProductsContainer.querySelector('.cartfull-products-divider-2-mobile');
+cart.forEach((item, index) => {
+const productHTML = `
+<!-- CONTENEDOR: PRODUCTO -->
+<div class="cartfull-products-product-mobile">
+<!-- DIVISOR -->
+<div class="cartfull-products-product-divider-1-mobile"></div>
+<!-- CONTENEDOR: PRODUCTO IMAGEN -->
+<div class="cartfull-products-product-image-mobile">
+<img src="${item.image}" alt="${item.product}">
+</div>  
+<!-- NOMBRE DEL PRODUCTO -->
+<div class="cartfull-products-product-name-mobile">
+<span class="cartfull-products-product-name-text-mobile">${item.product}</span> 
+</div>
+<!-- CONTROLES DE CANTIDAD DEL PRODUCTO -->
+<div class="cartfull-products-product-quantity-mobile">
+<span class="cartfull-products-product-quantity-text-mobile">QTY:</span> 
+<div class="cartfull-products-product-quantity-control-mobile">
+<button class="cartfull-products-product-quantity-control-decrease-mobile" data-product="${item.product}">-</button>
+<span class="cartfull-products-product-quantity-control-value-mobile">${item.quantity}</span>
+<button class="cartfull-products-product-quantity-control-increase-mobile" data-product="${item.product}">+</button>
+</div>
+</div>
+<!-- PRECIO UNITARIO DEL PRODUCTO -->
+<div class="cartfull-products-product-unit-mobile">
+<span class="cartfull-products-product-unit-text-mobile">UNIT:</span>  
+<div class="cartfull-products-product-unit-value-mobile">  
+<span class="cartfull-products-product-unit-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-unit-value-amount-mobile">${formatNumberWithCommas(item.price)}</span>
+</div>
+</div>
+<!-- PRECIO TOTAL DEL PRODUCTO -->
+<div class="cartfull-products-product-total-mobile">
+<span class="cartfull-products-product-total-text-mobile">TOTAL:</span>  
+<div class="cartfull-products-product-total-value-mobile">  
+<span class="cartfull-products-product-total-value-symbol-mobile">$</span>
+<span class="cartfull-products-product-total-value-amount-mobile">${formatNumberWithCommas(item.totalprice)}</span>
+</div>
+</div>
+<!-- BOTÓN PARA ELIMINAR PRODUCTO -->  
+<div class="cartfull-products-product-button-mobile">  
+<button class="cartfull-products-product-button-remove-mobile" data-product="${item.product}">REMOVE</button>
+</div>
+</div>
+<!-- FIN CONTENEDOR ÚNICO DEL PRODUCTO -->
+`;
+divider2.insertAdjacentHTML('beforebegin', productHTML);
+}); 
 setupQuantityButtons();
 setupRemoveButtons();
+updateSubtotal(); 
 updateShippingTotal();
-updateSubtotal();
 updateTotalFinal();
 updateHiddenCartFields();
-}
-
-  
+} 
 // 12. FUNCIÓN: ACTUALIZAR SHIPPING TOTAL
 function updateShippingTotal() {
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -7797,7 +7777,6 @@ console.error('❌ Datos del producto incompletos');
 });
 });
 }
-  
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-products-product-button-remove-mobile');
@@ -7807,9 +7786,7 @@ const productName = this.getAttribute('data-product');
 removeFromCartMobile(productName);
 });
 });
-}
-
-  
+}  
 // 18. FUNCIÓN: CONFIGURAR BOTONES DE CANTIDAD
 function setupQuantityButtons() {
 const decreaseButtons = document.querySelectorAll('.cartfull-products-product-quantity-control-decrease-mobile');
@@ -7827,8 +7804,6 @@ increaseQuantityMobile(productName);
 });
 });
 }
-
-  
 // 19. FUNCIÓN: CONFIGURAR BOTÓN CART
 function setupCartButton() {
 const cartButton = document.querySelector('.cart-button-mobile');
@@ -7856,9 +7831,6 @@ clearCartMobile();
 });
 }
 }
-
-
-  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7883,9 +7855,7 @@ document.getElementById('hidden-cart-items-mobile').value = JSON.stringify(cartI
 document.getElementById('hidden-cart-subtotal-mobile').value = subtotal.toFixed(2);
 document.getElementById('hidden-cart-shipping-mobile').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total-mobile').value = totalFinal.toFixed(2);
-}
-
-  
+} 
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7930,6 +7900,20 @@ window.location.hash = '#shippinginformation-mobile';
 }
 console.log('✅ Redirigiendo a checkout móvil');
 }
+
+// 25. FUNCIÓN: MOSTRAR MODAL DE CONFIRMACIÓN MÓVIL
+function showAddToCartModalMobile() {
+  const modal = document.getElementById('addToCartModalMobile');
+  if (modal) {
+    modal.style.display = 'flex';
+    
+    // Auto cerrar después de 1 segundo
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 1000);
+  }
+}
+  
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
