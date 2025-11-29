@@ -7934,7 +7934,7 @@ toggleCartMobile();
 }
 });
 </script>
-<!-- SCRIP: CARRITO MOBILE -->
+<!-- FIN SCRIP: CARRITO MOBILE -->
 
 
 
@@ -7966,73 +7966,63 @@ toggleCartMobile();
 
 
 
-  
+<!-- SCRIP: SHIPPING INFORMATION -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('shippinginformation-form');
-    const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
-
-    proceedButton.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        if (!form.checkValidity()) {
-            form.reportValidity();
-            return;
-        }
-
-        const totalAmount = document.getElementById('shippinginformation-total').textContent;
-        const cleanAmount = totalAmount.replace('$', '').trim();
-
-        // 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
-        updateHiddenCartFields();
-
-        // 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
-        fetch(form.action, {
-            method: 'POST',
-            body: new FormData(form),
-            mode: 'no-cors'
-        }).then(() => {
-            // 3. REDIRIGIR A PAYPAL después del envío
-            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
-        }).catch(error => {
-            console.error('Error:', error);
-            // Redirigir igualmente a PayPal
-            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
-        });
-    });
-
-    function updateHiddenCartFields() {
-        // Actualizar campos de resumen
-        const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
-        const shipping = document.getElementById('shippinginformation-shipping').textContent;
-        const total = document.getElementById('shippinginformation-total').textContent;
-
-        document.getElementById('hidden-cart-subtotal').value = subtotal;
-        document.getElementById('hidden-cart-shipping').value = shipping;
-        document.getElementById('hidden-cart-total').value = total;
-        
-        // ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let cartItemsText = '';
-        
-        cart.forEach(item => {
-            cartItemsText += `${item.product} - $${item.price} x ${item.quantity}\n`;
-        });
-        
-        // Buscar o crear campo para los items del carrito
-        let cartItemsField = document.getElementById('hidden-cart-items');
-        if (!cartItemsField) {
-            cartItemsField = document.createElement('input');
-            cartItemsField.type = 'hidden';
-            cartItemsField.name = 'cart_items';
-            cartItemsField.id = 'hidden-cart-items';
-            form.appendChild(cartItemsField);
-        }
-        cartItemsField.value = cartItemsText;
-    }
+const form = document.getElementById('shippinginformation-form');
+const proceedButton = document.querySelector('.shippinginformation-button-proceedpayment');
+proceedButton.addEventListener('click', function(e) {
+e.preventDefault();
+if (!form.checkValidity()) {
+form.reportValidity();
+return;
+}
+const totalAmount = document.getElementById('shippinginformation-total').textContent;
+const cleanAmount = totalAmount.replace('$', '').trim();
+// 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
+updateHiddenCartFields();
+// 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
+fetch(form.action, {
+method: 'POST',
+body: new FormData(form),
+mode: 'no-cors'
+}).then(() => {
+// 3. REDIRIGIR A PAYPAL después del envío
+window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+}).catch(error => {
+console.error('Error:', error);
+// Redirigir igualmente a PayPal
+window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+});
+});
+function updateHiddenCartFields() {
+// Actualizar campos de resumen
+const subtotal = document.getElementById('shippinginformation-subtotal').textContent;
+const shipping = document.getElementById('shippinginformation-shipping').textContent;
+const total = document.getElementById('shippinginformation-total').textContent;
+document.getElementById('hidden-cart-subtotal').value = subtotal;
+document.getElementById('hidden-cart-shipping').value = shipping;
+document.getElementById('hidden-cart-total').value = total;
+// ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cartItemsText = '';
+cart.forEach(item => {
+cartItemsText += `${item.product} - $${item.price} x ${item.quantity}\n`;
+});
+// Buscar o crear campo para los items del carrito
+let cartItemsField = document.getElementById('hidden-cart-items');
+if (!cartItemsField) {
+cartItemsField = document.createElement('input');
+cartItemsField.type = 'hidden';
+cartItemsField.name = 'cart_items';
+cartItemsField.id = 'hidden-cart-items';
+form.appendChild(cartItemsField);
+}
+cartItemsField.value = cartItemsText;
+}
 });
 </script>
-
+<!-- FIN SCRIP: SHIPPING INFORMATION -->  
 
 
 
