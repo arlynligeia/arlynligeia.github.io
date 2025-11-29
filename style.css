@@ -13693,6 +13693,11 @@ transform: scale(1.05);
 .cosmosexecutiveproducer-container-mobile { display: block; }
 }
 
+
+
+
+
+
 /* ======================================
    CART EMTY PC
 ====================================== */
@@ -13784,14 +13789,13 @@ transform: scale(1.05);
    CART EMTY MOBILE
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .cartempty-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 10px auto 30px auto;
+margin: 30px auto;
 padding: 20px;
 }
 .cartempty-container-mobile::before {
@@ -13824,6 +13828,7 @@ text-decoration: none;
 /* CONTENEDOR: INFORMACIÓN */
 .cartempty-information-mobile {
 width: 100%;
+box-sizing: border-box;
 margin: 0px;
 }
 .cartempty-information-text-mobile {
@@ -13835,7 +13840,7 @@ line-height: 1.5;
 text-align: center;
 margin: 140px 0;
 }
-/* CONTENEDOR: BOTONES FINALES */
+/* CONTENEDOR: BOTONES */
 .cartempty-button-mobile {
 width: 100%;
 display: block;
@@ -13845,15 +13850,15 @@ margin: 0px;
 .cartempty-back-mobile,
 .cartempty-button-continueshopping-mobile {
 display: inline-block;
-background: #00FFFF !important; 
+background: #00CED1 !important;
 border-radius: 6px; 
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem; 
 color: black !important;
 text-decoration: none;
 text-transform: uppercase;
-font-weight: bold;
 text-align: center;
+font-weight: bold;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
@@ -13875,7 +13880,6 @@ transform: scale(1.05);
 /* ======================================
    CART FULL
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .cartfull-container {
 position: relative;
 width: 1000px;
@@ -13983,7 +13987,7 @@ margin: 0px;
 .cartfull-table-wrapper-body-row {
 vertical-align: middle;
 }
-/* CONTENEDOR: IMAGEN */
+/* CONTENEDOR: CUERPO - IMAGEN */
 .cartfull-table-wrapper-body-row-cell-image {
 width: 100%;
 display: flex;
@@ -13997,7 +14001,7 @@ max-height: 100%;
 border-radius: 6px;
 object-fit: contain;
 }
-/* CONTENEDOR: PRODUCTOS */
+/* CONTENEDOR: CUERPO - PRODUCTOS */
 .cartfull-table-wrapper-body-row-cell-name,
 .cartfull-table-wrapper-body-row-cell-quantity,
 .cartfull-table-wrapper-body-row-cell-unit,
@@ -14039,7 +14043,7 @@ text-align: left;
 .cartfull-table-wrapper-body-row-cell-total-amount {
 text-align: right;
 }
-/* CONTENEDOR: CONTROLES DE CANTIDAD */
+/* CONTENEDOR: CUERPO - CONTROLES DE CANTIDAD */
 .cartfull-table-wrapper-body-row-cell-quantity {
 width: 100%;
 box-sizing: border-box;      
@@ -14082,7 +14086,7 @@ color: black !important;
 text-decoration: none;
 margin: 0px;   
 }
-/* CONTENEDOR: BOTÓN REMOVER */
+/* CONTENEDOR: CUERPO - BOTÓN REMOVER */
 .cartfull-table-wrapper-body-row-cell-button {
 width: 100%;
 box-sizing: border-box;   
@@ -14182,7 +14186,7 @@ text-align: left;
 .cartfull-table-wrapper-body-row-cell-totalfinal-value-amount {
 text-align: right;
 }
-/* CONTENEDOR: BOTONES FINALES */
+/* CONTENEDOR: BOTONES */
 .cartfull-button {
 width: 100%;
 box-sizing: border-box;   
@@ -14230,14 +14234,13 @@ transform: scale(1.05);
    MOVIL RESPONSIVE: CARTFULL
 ====================================== */
 @media (max-width: 768px) {
-/* CONTENEDOR, FRANJA, TÍTULO*/ 
 .cartfull-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-margin: 10px auto 30px auto;
+margin: 30px auto;
 padding: 20px;
 }
 .cartfull-container-mobile::before {
@@ -14270,14 +14273,16 @@ text-decoration: none;
 /* CONTENEDOR: PRODUCTOS */
 .cartfull-products-mobile {
 width: 100%;
+box-sizing: border-box;  
 display: block;
 margin: 0px;
 }
-/* CONTENEDOR ÚNICO DE CADA PRODUCTO */
+/* CONTENEDOR: PRODUCTOS - PRODUCTO */
 .cartfull-products-product-mobile {
 width: 100%;
+box-sizing: border-box;
 display: block;
-margin: 0 0 20px 0;
+margin: 0px;
 }
 /* DIVISOR */
 .cartfull-products-product-divider-1-mobile,
@@ -14289,7 +14294,7 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
 }   
-/* CONTENEDOR: IMAGEN */
+/* CONTENEDOR: PRODUCTOS - PRODUCTO IMAGEN */
 .cartfull-products-product-image-mobile {
 width: 110px;
 height: 110px;
@@ -14303,7 +14308,7 @@ max-height: 100%;
 border-radius: 6px;
 object-fit: cover;
 }
-/* CONTENEDORES: CAJAS CON TEXTO */
+/* CONTENEDOR: PRODUCTOS - PRODUCTO CAJAS CON TEXTO */
 .cartfull-products-product-name-mobile,
 .cartfull-products-product-quantity-mobile,
 .cartfull-products-product-unit-mobile,
@@ -14335,7 +14340,6 @@ background: #FF66CC !important;
 background: #ff1493 !important;
 color: white !important;
 }   
-/* ORDEN DE LOS TEXTOS */
 .cartfull-products-product-name-text-mobile{
 text-align: center;
 flex: 1;
@@ -14378,7 +14382,7 @@ text-align: right;
 font-feature-settings: "tnum";
 font-variant-numeric: tabular-nums;
 }  
-/* CONTENEDOR: CONTROLES CANTIDAD */
+/* CONTENEDOR: PRODUCTOS - PRODUCTO CONTROLES DE CANTIDAD */
 .cartfull-products-product-quantity-control-mobile {
 display: flex;
 justify-content: flex-end;   
@@ -14414,7 +14418,7 @@ justify-content: center;
 align-items: center;
 min-width: 30px;
 } 
-/* CONTENEDOR: BOTON REMOVER */
+/* CONTENEDOR: PRODUCTOS - PRODUCTO BOTÓN REMOVER */
 .cartfull-products-product-button-mobile {
 width: 100%;
 display: block;
@@ -14441,9 +14445,10 @@ transition: all 0.3s ease;
 .cartfull-products-product-button-remove-mobile:hover {
 transform: scale(1.05);
 }
-/* CONTENEDOR: BOTONES FINALES */
+/* CONTENEDOR: BOTONES */
 .cartfull-button-mobile {
 width: 100%;
+box-sizing: border-box;      
 display: block;
 text-align: center;
 margin: 0px;
@@ -14460,8 +14465,8 @@ font-size: 1rem;
 color: black !important;
 text-decoration: none;
 text-transform: uppercase;
-font-weight: bold;
 text-align: center;
+font-weight: bold;
 margin: 0 0 10px 0; 
 padding: 10px 20px;
 border: none;
