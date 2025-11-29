@@ -7120,6 +7120,25 @@ button.textContent = 'ADD TO CART';
 }
 });
 }
+
+// ========== ACTUALIZACIÓN AUTOMÁTICA ==========
+// ACTUALIZAR BOTONES CADA 2 SEGUNDOS
+setInterval(function() {
+    updateAddToCartButtons();
+    console.log('🔄 Actualizando botones automáticamente');
+}, 2000);
+
+// ACTUALIZAR AL HACER CLICK EN CUALQUIER PARTE
+document.addEventListener('click', function() {
+    updateAddToCartButtons();
+});
+
+// ACTUALIZAR AL MOVER EL MOUSE
+document.addEventListener('mousemove', function() {
+    updateAddToCartButtons();
+});
+
+  
 // ========== FUNCIONES DEL CARRITO ==========
 // 6. FUNCIÓN: AGREGAR PRODUCTOS AL CARRITO
 function addToCart(productImage, productName, productPrice, productShipping) {
