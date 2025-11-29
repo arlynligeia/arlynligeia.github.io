@@ -7042,16 +7042,26 @@ setupBannerNavigationMobile();
 <!-- SCRIP: CARRITO PC -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // ✅ DETECCIÓN - Solo ejecutar en PC
-    if (window.innerWidth <= 768) {
-        console.log('📱 Dispositivo móvil detectado - Carrito PC NO se inicializa');
-        return; // ❌ Detener ejecución en móvil
-    }
-    
-    console.log('🛒 Carrito PC iniciado - Solo en escritorio');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// ✅ DETECCIÓN - PC
+if (window.innerWidth <= 768) {
+console.log('📱 Dispositivo móvil detectado - Carrito PC NO se inicializa');
+return; // ❌ Detener ejecución en móvil
+}
+console.log('🛒 Carrito PC iniciado - Solo en escritorio');
+let cart = JSON.parse(localStorage.getItem('cart')) || []; 
 
- 
+// ========== SINCRONIZACIÓN EN TIEMPO REAL ==========
+// ESCUCHAR CAMBIOS EN EL CARRITO DE OTROS DISPOSITIVOS
+window.addEventListener('storage', function(e) {
+    if (e.key === 'cart') {
+        console.log('🔄 Carrito actualizado desde otra pestaña/dispositivo');
+        updateAddToCartButtons(); // Actualizar botones inmediatamente
+        updateCartDisplay();     // Actualizar visualización del carrito
+    }
+});
+
+
+  
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
@@ -7394,12 +7404,7 @@ clearCartButton.addEventListener('click', function() {
 clearCart();
 });
 }
-}
-
-
-
-
-  
+}  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7421,10 +7426,7 @@ document.getElementById('hidden-cart-items').value = cartItemsString;
 document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
 document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
-}
-
-
-  
+}  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7495,23 +7497,27 @@ toggleCart();
 <!-- SCRIP: CARRITO PC -->
 
 
-
-
-  
- 
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // ✅ DETECCIÓN - Solo ejecutar en móvil
-    if (window.innerWidth > 768) {
-        console.log('💻 Escritorio detectado - Carrito móvil NO se inicializa');
-        return; // ❌ Detener ejecución en PC
-    }
-    
-    console.log('🛒 Carrito móvil iniciado - Solo en móvil');
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+// ✅ DETECCIÓN - MOBILE
+if (window.innerWidth > 768) {
+console.log('💻 Escritorio detectado - Carrito móvil NO se inicializa');
+return; // ❌ Detener ejecución en PC
+}
+console.log('🛒 Carrito móvil iniciado - Solo en móvil');
+let cart = JSON.parse(localStorage.getItem('cart')) || [];  
 
-  
+// ========== SINCRONIZACIÓN EN TIEMPO REAL ==========
+// ESCUCHAR CAMBIOS EN EL CARRITO DE OTROS DISPOSITIVOS
+window.addEventListener('storage', function(e) {
+    if (e.key === 'cart') {
+        console.log('🔄 Carrito actualizado desde otra pestaña/dispositivo');
+        updateAddToCartButtons(); // Actualizar botones inmediatamente
+        updateCartDisplay();     // Actualizar visualización del carrito
+    }
+});
+
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
@@ -7857,8 +7863,6 @@ clearCartMobile();
 });
 }
 }
-
-  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7884,9 +7888,6 @@ document.getElementById('hidden-cart-subtotal-mobile').value = subtotal.toFixed(
 document.getElementById('hidden-cart-shipping-mobile').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total-mobile').value = totalFinal.toFixed(2);
 } 
-
-
-  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
