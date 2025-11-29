@@ -6069,7 +6069,21 @@ showOnlyOneSection(hash);
 }
 }
 }
+  
+// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+window.addEventListener('popstate', handleBrowserNavigation);
 
+// 4. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
   
 // INICIALIZACIÓN
 checkInitialHash();
