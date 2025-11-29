@@ -7141,7 +7141,7 @@ localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
 showAddToCartModal();
-}
+} 
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -7332,7 +7332,7 @@ console.error('❌ Datos del producto incompletos');
 }
 });
 });
-}
+}  
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-table-wrapper-body-row-cell-button-remove');
@@ -7387,6 +7387,11 @@ clearCart();
 });
 }
 }
+
+
+
+
+  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7409,6 +7414,9 @@ document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
 document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
 }
+
+
+  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7478,7 +7486,7 @@ toggleCart();
 </script>
 <!-- SCRIP: CARRITO PC -->
 
-  
+ 
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -7580,9 +7588,7 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
-
-  
-  showAddToCartModalMobile();
+showAddToCartModalMobile();
 }  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCartMobile(productName) {
@@ -7776,7 +7782,7 @@ console.error('❌ Datos del producto incompletos');
 }
 });
 });
-}
+} 
 // 17. FUNCIÓN: CONFIGURAR BOTONES REMOVER
 function setupRemoveButtons() {
 const removeButtons = document.querySelectorAll('.cartfull-products-product-button-remove-mobile');
@@ -7831,6 +7837,8 @@ clearCartMobile();
 });
 }
 }
+
+  
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
@@ -7856,6 +7864,9 @@ document.getElementById('hidden-cart-subtotal-mobile').value = subtotal.toFixed(
 document.getElementById('hidden-cart-shipping-mobile').value = shippingTotal.toFixed(2);
 document.getElementById('hidden-cart-total-mobile').value = totalFinal.toFixed(2);
 } 
+
+
+  
 // ========== FUNCIONES DE CHECKOUT ==========
 // 23. FUNCIÓN: CONFIGURAR BOTÓN CHECKOUT
 function setupCheckoutButton() {
@@ -7900,20 +7911,16 @@ window.location.hash = '#shippinginformation-mobile';
 }
 console.log('✅ Redirigiendo a checkout móvil');
 }
-
 // 25. FUNCIÓN: MOSTRAR MODAL DE CONFIRMACIÓN MÓVIL
 function showAddToCartModalMobile() {
-  const modal = document.getElementById('addToCartModalMobile');
-  if (modal) {
-    modal.style.display = 'flex';
-    
-    // Auto cerrar después de 1 segundo
-    setTimeout(() => {
-      modal.style.display = 'none';
-    }, 1000);
-  }
+const modal = document.getElementById('addToCartModalMobile');
+if (modal) {
+modal.style.display = 'flex';
+setTimeout(() => {
+modal.style.display = 'none';
+}, 1000);
 }
-  
+}
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
