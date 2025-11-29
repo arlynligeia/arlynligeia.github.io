@@ -6183,7 +6183,6 @@ showOnlyOneSection(mobileSectionId);
 }
 }
 }
-
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
@@ -6197,7 +6196,6 @@ showOnlyOneSection(hash);
 }
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 window.addEventListener('popstate', handleBrowserNavigation);
-
 // Cerrar menú al hacer clic fuera
 hamburgerMenu.addEventListener('click', function(e) {
 if (e.target === hamburgerMenu) {
@@ -6214,18 +6212,6 @@ console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 <!-- SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA -->
@@ -6391,23 +6377,6 @@ console.log('✅ Navegación de tienda MOBILE configurada correctamente');
 <!-- FIN SCRIP: NAVEGACIÓN CORREGIDA DE TIENDA MOBILE -->
 
 <!-- FIN NAVEGACIÓN -->  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   
@@ -6591,6 +6560,55 @@ startCarouselMobile();
 <!-- FIN SCRIP: CARRUSEL SCIENCE MOBILE -->
 
 
+<!-- SCRIP: CARRUSEL BE MY PATRON PC-->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🎭 Carrusel Be My Patron PC iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarousel() {
+const images = document.querySelectorAll('.bemypatron-carousel-image');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Be My Patron PC configurado - Cambio cada 10 segundos');
+}
+// INICIALIZACIÓN 
+startCarousel();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL BE MY PATRON PC -->
+
+<!-- SCRIP: CARRUSEL BE MY PATRON MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🎭 Carrusel Be My Patron Mobile iniciado');
+// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
+function startCarouselMobile() {
+const images = document.querySelectorAll('.bemypatron-carousel-image-mobile');
+let currentImageIndex = 0;
+// 2. FUNCIÓN: CAMBIAR IMAGEN
+function changeImage() {
+images.forEach(img => img.classList.remove('active'));
+images[currentImageIndex].classList.add('active');
+currentImageIndex = (currentImageIndex + 1) % images.length;
+}
+changeImage();
+setInterval(changeImage, 10000);
+console.log('✅ Carrusel Be My Patron Mobile configurado - Cambio cada 10 segundos');
+}
+// INICIALIZACIÓN   
+startCarouselMobile();
+});
+</script>
+<!-- FIN SCRIP: CARRUSEL BE MY PATRON MOBILE -->
+
+  
 <!-- SCRIP: CARRUSEL SHOP PC -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -6689,21 +6707,20 @@ console.log('🖱️ Click en carrusel shop mobile - Imagen activa:', activeImag
 // OCULTAR TODAS LAS SECCIONES MOBILE
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
 section.style.display = 'none';
-});  
-  
+});   
 // MOSTRAR SECCIÓN O SUBSECCIÓN (MISMA LÓGICA QUE PC)
 const targetSection = document.getElementById(destinationId);
 if (targetSection) {
-    const mainSectionId = destinationId.split('-')[0];
-    const mainSection = document.getElementById(mainSectionId + '-mobile');
-    if (mainSection) {
-        mainSection.style.display = 'block';
-        document.querySelectorAll(`[id^="${mainSectionId}-mobile-"]`).forEach(subsection => {
-            subsection.style.display = 'block';
-        });
-        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        window.location.hash = destinationId;
-    }
+const mainSectionId = destinationId.split('-')[0];
+const mainSection = document.getElementById(mainSectionId + '-mobile');
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll(`[id^="${mainSectionId}-mobile-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+window.location.hash = destinationId;
+}
 }
 } else {
 console.warn('❌ No se encontró destino para:', activeImage.id);
@@ -6722,6 +6739,10 @@ setupCarouselNavigationMobile();
 <!-- FIN SCRIP: CARRUSEL SHOP MOBILE -->
   
 <!-- FIN CARRUSELES -->
+
+
+
+
 
 
 
