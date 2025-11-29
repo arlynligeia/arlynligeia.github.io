@@ -7042,8 +7042,16 @@ setupBannerNavigationMobile();
 <!-- SCRIP: CARRITO PC -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🛒 Carrito iniciado');  
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // ✅ DETECCIÓN - Solo ejecutar en PC
+    if (window.innerWidth <= 768) {
+        console.log('📱 Dispositivo móvil detectado - Carrito PC NO se inicializa');
+        return; // ❌ Detener ejecución en móvil
+    }
+    
+    console.log('🛒 Carrito PC iniciado - Solo en escritorio');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+ 
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
@@ -7486,12 +7494,24 @@ toggleCart();
 </script>
 <!-- SCRIP: CARRITO PC -->
 
+
+
+
+  
  
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-console.log('🛒 Carrito móvil iniciado');  
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    // ✅ DETECCIÓN - Solo ejecutar en móvil
+    if (window.innerWidth > 768) {
+        console.log('💻 Escritorio detectado - Carrito móvil NO se inicializa');
+        return; // ❌ Detener ejecución en PC
+    }
+    
+    console.log('🛒 Carrito móvil iniciado - Solo en móvil');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  
 // ========== CONSTANTES Y CONFIGURACIÓN ==========
 const productStock = {
 "Comet Sponsor": 288,
