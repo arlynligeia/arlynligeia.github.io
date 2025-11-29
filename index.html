@@ -7999,18 +7999,13 @@ const shipping = document.getElementById('shippinginformation-shipping').textCon
 const total = document.getElementById('shippinginformation-total').textContent;
 document.getElementById('hidden-cart-subtotal').value = subtotal;
 document.getElementById('hidden-cart-shipping').value = shipping;
-document.getElementById('hidden-cart-total').value = total;
-
-
-  
-// ✅ AGREGAR ESTO: Enviar los items del carrito como texto legible
+document.getElementById('hidden-cart-total').value = total;  
+// ✅ Enviar los items del carrito como texto legible
 const cart = JSON.parse(localStorage.getItem('cart')) || [];
 let cartItemsText = '';
 cart.forEach(item => {
-cartItemsText += `Producto: ${item.product} | Cantidad: ${item.quantity} | Precio Unitario: $${item.price} | Total: $${item.totalprice}\n`;
-});
-
-  
+cartItemsText += `Product: ${item.product} | Quantity: ${item.quantity} | Unit Price: $${item.price} | Total: $${item.totalprice}\n`;
+});  
 // Buscar o crear campo para los items del carrito
 let cartItemsField = document.getElementById('hidden-cart-items');
 if (!cartItemsField) {
@@ -8026,68 +8021,66 @@ cartItemsField.value = cartItemsText;
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION -->  
 
-
-
-
-
-
-
-
-
   
 <!-- SCRIP: SHIPPING INFORMATION MOBILE -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const formMobile = document.getElementById('shippinginformation-form-mobile');
-    const proceedButtonMobile = document.querySelector('.shippinginformation-button-proceedpayment-mobile');
-    
-    proceedButtonMobile.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        if (!formMobile.checkValidity()) {
-            formMobile.reportValidity();
-            return;
+const formMobile = document.getElementById('shippinginformation-form-mobile');
+const proceedButtonMobile = document.querySelector('.shippinginformation-button-proceedpayment-mobile');
+proceedButtonMobile.addEventListener('click', function(e) {
+e.preventDefault();
+if (!formMobile.checkValidity()) {
+formMobile.reportValidity();
+return;
+}
+const totalAmount = document.getElementById('cart-total-mobile').textContent;
+const cleanAmount = totalAmount.replace('$', '').replace(/,/g, '').trim();
+// 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
+updateHiddenCartFieldsMobile();
+// 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
+fetch(formMobile.action, {
+method: 'POST',
+body: new FormData(formMobile),
+mode: 'no-cors'
+}).then(() => {
+// 3. REDIRIGIR A PAYPAL después del envío
+window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+}).catch(error => {
+console.error('Error:', error);
+// Redirigir igualmente a PayPal
+window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
+});
+});
+function updateHiddenCartFieldsMobile() {
+// Actualizar campos de resumen
+const subtotal = document.getElementById('cart-subtotal-mobile').textContent;
+const shipping = document.getElementById('cart-shipping-mobile').textContent;
+const total = document.getElementById('cart-total-mobile').textContent;
+document.getElementById('hidden-cart-subtotal-mobile').value = subtotal;
+document.getElementById('hidden-cart-shipping-mobile').value = shipping;
+document.getElementById('hidden-cart-total-mobile').value = total;
+
+  
+// ✅ Enviar los items del carrito como texto legible
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+let cartItemsText = '';
+cart.forEach(item => {
+cartItemsText += `Product: ${item.product} | Quantity: ${item.quantity} | Unit Price: $${item.price} | Total: $${item.totalprice}\n`;
+});
+  
+// ✅ BUSCAR O CREAR CAMPO PARA LOS ITEMS DEL CARRITO (FALTABA ESTO)
+        let cartItemsField = document.getElementById('hidden-cart-items-mobile');
+        if (!cartItemsField) {
+            cartItemsField = document.createElement('input');
+            cartItemsField.type = 'hidden';
+            cartItemsField.name = 'cart_items';
+            cartItemsField.id = 'hidden-cart-items-mobile';
+            formMobile.appendChild(cartItemsField);
         }
-        
-        const totalAmount = document.getElementById('cart-total-mobile').textContent;
-        const cleanAmount = totalAmount.replace('$', '').replace(/,/g, '').trim();
-        
-        // 1. ACTUALIZAR CAMPOS OCULTOS con los datos del carrito
-        updateHiddenCartFieldsMobile();
-        
-        // 2. ENVIAR FORMULARIO A FORMSPREE (con todos los datos)
-        fetch(formMobile.action, {
-            method: 'POST',
-            body: new FormData(formMobile),
-            mode: 'no-cors'
-        }).then(() => {
-            // 3. REDIRIGIR A PAYPAL después del envío
-            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
-        }).catch(error => {
-            console.error('Error:', error);
-            // Redirigir igualmente a PayPal
-            window.location.href = `https://paypal.me/arlynligeia/${cleanAmount}USD`;
-        });
-    });
-    
-    function updateHiddenCartFieldsMobile() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        
-        // Crear string con los datos del carrito
-        let cartItemsText = '';
-        cart.forEach(item => {
-            cartItemsText += `${item.product} - Cantidad: ${item.quantity} - Precio Unitario: $${item.price} - Total: $${item.totalprice}\n`;
-        });
-        
-        // Actualizar campo oculto de items del carrito
-        document.getElementById('hidden-cart-items-mobile').value = cartItemsText;
-        
-        // Los campos hidden-cart-subtotal-mobile, hidden-cart-shipping-mobile, 
-        // y hidden-cart-total-mobile ya se actualizan automáticamente
-        // por la función updateHiddenCartFields() del carrito móvil
+        cartItemsField.value = cartItemsText;
     }
 });
-</script>
+</script>  
 <!-- FIN SCRIP: SHIPPING INFORMATION MOBILE -->
 
 
