@@ -15622,3 +15622,70 @@ transform: scale(1.05);
 .footer { display: none; }
 .footer-mobile { display: block; }
 }
+
+/* ======================================
+   ADD TO CART MODAL
+====================================== */
+.addtocartmodal {
+position: fixed;
+z-index: 10000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.7);
+display: none;
+justify-content: center;
+align-items: center;
+font-family: Arial, sans-serif;
+}
+
+.addtocartmodal-information {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  width: 90%;
+  animation: modalAppear 0.3s ease-out;
+}
+
+@keyframes modalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.addtocartmodal-information-icon {
+  font-size: 48px;
+  color: #28a745;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.addtocartmodal-information-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.addtocartmodal-information-text {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+
+
+
+
+
