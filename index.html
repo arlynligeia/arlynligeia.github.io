@@ -7369,26 +7369,27 @@ clearCart();
 // ========== FUNCIONES DE DATOS OCULTOS DEL CARRITO ==========
 // 22. FUNCIÓN: ACTUALIZAR CAMPOS OCULTOS DEL CARRITO
 function updateHiddenCartFields() {
-const cart = JSON.parse(localStorage.getItem('cart')) || [];
-let subtotal = 0;
-let shippingTotal = 0;
-// CALCULAR TOTALES
-cart.forEach(item => {
-subtotal += item.totalprice;
-shippingTotal += item.shipping * item.quantity;
-});
-const totalFinal = subtotal + shippingTotal;
-  
-// CREAR STRING LEGIBLE CON TODOS LOS PRODUCTOS
-const cartItemsString = cart.map(item => 
-`Product: ${item.product} | Quantity: ${item.quantity} | Unit Price: $${item.price} | Total: $${item.totalprice}`
-).join(' | ');
-// ACTUALIZAR CAMPOS OCULTOS
-document.getElementById('hidden-cart-items').value = cartItemsString;
-document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
-document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
-document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
-console.log('📦 Campos ocultos actualizados:', cartItemsString);
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let subtotal = 0;
+    let shippingTotal = 0;
+    
+    // CALCULAR TOTALES
+    cart.forEach(item => {
+        subtotal += item.totalprice;
+        shippingTotal += item.shipping * item.quantity;
+    });
+    const totalFinal = subtotal + shippingTotal;
+    
+    // CREAR STRING CON LOS DATOS EXACTOS DEL CARRITO
+    const cartItemsString = cart.map(item => 
+        `${item.product} - Quantity: ${item.quantity} - Unit Price: $${item.price} - Total: $${item.totalprice}`
+    ).join(' | ');
+    
+    // ACTUALIZAR CAMPOS OCULTOS
+    document.getElementById('hidden-cart-items').value = cartItemsString;
+    document.getElementById('hidden-cart-subtotal').value = subtotal.toFixed(2);
+    document.getElementById('hidden-cart-shipping').value = shippingTotal.toFixed(2);
+    document.getElementById('hidden-cart-total').value = totalFinal.toFixed(2);
 }
 
 
@@ -7451,6 +7452,16 @@ toggleCart();
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
+
+
+
+
+
+
+
+
+
+
 
 
 
