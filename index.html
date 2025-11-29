@@ -6069,38 +6069,25 @@ showOnlyOneSection(hash);
 }
 }
 }
-
-// FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
-    const hash = window.location.hash.replace('#', '');
-    if (hash) {
-        if (hash.includes('-')) {
-            goToSubsection(hash);
-        } else {
-            showOnlyOneSection(hash);
-        }
-    }
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
 }
-
+}
+}
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
-window.addEventListener('popstate', handleBrowserNavigation);
-  
+window.addEventListener('popstate', handleBrowserNavigation);  
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-
-
-
-
-
-
-
-
-
-
 
   
 <!-- SCRIP: MENÚ HAMBURGUESA MÓVIL -->
@@ -6196,26 +6183,21 @@ showOnlyOneSection(mobileSectionId);
 }
 }
 }
-// 4. FUNCIÓN: MANEJAR NAVEGACIÓN CON FLECHAS DEL NAVEGADOR (MOBILE)
-function handleBrowserNavigation() {
-window.addEventListener('popstate', function(event) {
+
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
 if (hash) {
 if (hash.includes('-')) {
-// Es una subsección
-const mobileSubsectionId = hash + '-mobile';
-goToSubsection(mobileSubsectionId);
+goToSubsection(hash);
 } else {
-// Es una sección principal
-const mobileSectionId = hash + '-mobile';
-showOnlyOneSection(mobileSectionId);
+showOnlyOneSection(hash);
 }
-} else {
-// Si no hay hash, mostrar la sección por defecto (home-mobile)
-showOnlyOneSection('home-mobile');
 }
-});
 }
+// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+window.addEventListener('popstate', handleBrowserNavigation);
+
 // Cerrar menú al hacer clic fuera
 hamburgerMenu.addEventListener('click', function(e) {
 if (e.target === hamburgerMenu) {
@@ -6232,7 +6214,6 @@ console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
 </script>
 <!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
-
 
 
 
