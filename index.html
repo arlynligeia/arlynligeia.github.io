@@ -7087,27 +7087,20 @@ return num.toLocaleString('en-US', {
 minimumFractionDigits: 2,
 maximumFractionDigits: 2
 });
-}
-
-  
+}  
 // ========== FUNCIONES DE STOCK ==========
 // 3. FUNCIÓN: VERIFICAR STOCK DISPONIBLE
 function checkStock(productName) {
-    // SOLO VERIFICAR EL STOCK TOTAL, NO RESTAR LO QUE TIENE EN CARRITO
-    return productStock[productName];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
+const productInCart = cart.find(item => item.product === productName);
+const currentStock = productStock[productName];
+const cartQuantity = productInCart ? productInCart.quantity : 0;
+return currentStock - cartQuantity;
 }
-
-
-
-  
 // 4. FUNCIÓN: VERIFICAR SI SE PUEDE AGREGAR AL CARRITO
 function canAddToCart(productName) {
-    const currentStock = productStock[productName];
-    return currentStock > 0; // SOLO VERIFICAR SI HAY STOCK, PUNTO
-}
-
-
-  
+return checkStock(productName) > 0;
+} 
 // 5. FUNCIÓN: ACTUALIZAR ESTADO DE BOTONES ADD TO CART
 function updateAddToCartButtons() {
 const addToCartButtons = document.querySelectorAll('[class*="button-addtocart"]');
