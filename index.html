@@ -6003,6 +6003,31 @@ Cosmic/Psychological Horror</p>
 </div>  
 </footer>
 <!-- FIN FOOTER MOBILE -->
+  
+<!-- ADD TO CART MODAL -->
+<div id="addToCartModal" class="addtocartmodal" style="display: none;">
+<div class="addtocartmodal-information">
+<div class="addtocartmodal-information-icon">✓</div>
+<h3 class="addtocartmodal-information-title">Successfully Added!</h3>
+<p class="addtocartmodal-information-text">The product has been added to your cart.</p>
+</div>
+</div>
+<!-- FIN ADD TO CART MODAL -->
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
 
   
 <!-- SCRIPS -->   
@@ -6997,7 +7022,13 @@ setupBannerNavigationMobile();
 <!-- FIN BANNERS --> 
 
 
-    
+
+
+
+
+
+
+  
 <!-- CARRITO -->
   
 <!-- SCRIP: CARRITO PC -->
@@ -7101,7 +7132,15 @@ console.log(`🆕 Nuevo producto agregado: ${productName}`);
 localStorage.setItem('cart', JSON.stringify(cart));
 updateCartDisplay();
 updateAddToCartButtons();
+
+   // AGREGAR ESTA LÍNEA PARA MOSTRAR EL MODAL
+  showAddToCartModal();
 }
+
+
+
+
+  
 // 7. FUNCIÓN: REMOVER PRODUCTO DEL CARRITO
 function removeFromCart(productName) {
 console.log(`🗑️ Eliminando producto: ${productName}`);
@@ -7413,6 +7452,21 @@ window.location.hash = '#shippinginformation';
 }
 console.log('✅ Redirigiendo a checkout');
 }
+
+// 25. FUNCIÓN: MOSTRAR MODAL DE CONFIRMACIÓN
+function showAddToCartModal() {
+  const modal = document.getElementById('addToCartModal');
+  if (modal) {
+    modal.style.display = 'flex';
+    
+    // Auto cerrar después de 1 segundo
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 1000);
+  }
+}
+
+  
 // ========== INICIALIZACIÓN ==========
 setupCartButton();
 setupGoToCartButtons();
