@@ -1386,14 +1386,6 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </section>
 <!-- FIN CONTACT MOBILE -->
 
-
-
-
-
-
-
-  
-
   
 <!-- TIENDA --> 
   
@@ -7057,28 +7049,73 @@ alert('❌ Error sending message. Please try again.');
 </script>
 <!-- FIN SCRIP: CONTACT MOBILE -->
 
+<!-- SCRIP: CONTACT FANS PC -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const contactforfansForm = document.querySelector('.contactforfans-form form');
+contactforfansForm.addEventListener('submit', function(e) {
+e.preventDefault();
+if (!contactforfansForm.checkValidity()) {
+contactforfansForm.reportValidity();
+return;
+}
+// ENVIAR FORMULARIO A FORMSPREE
+fetch(contactforfansForm.action, {
+method: 'POST',
+body: new FormData(contactforfansForm),
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+if (response.ok) {
+alert('✅ Message sent successfully!');
+contactforfansForm.reset();
+} else {
+alert('❌ Error sending message. Please try again.');
+}
+}).catch(error => {
+console.error('Error:', error);
+alert('❌ Error sending message. Please try again.');
+});
+});
+});
+</script>
+<!-- FIN SCRIP: CONTACT FANS PC -->
 
+<!-- SCRIP: CONTACT FANS MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const contactforfansFormMobile = document.querySelector('.contactforfans-form-mobile form');
+contactforfansFormMobile.addEventListener('submit', function(e) {
+e.preventDefault();
+if (!contactforfansFormMobile.checkValidity()) {
+contactforfansFormMobile.reportValidity();
+return;
+}
+// ENVIAR FORMULARIO A FORMSPREE
+fetch(contactforfansFormMobile.action, {
+method: 'POST',
+body: new FormData(contactforfansFormMobile),
+headers: {
+'Accept': 'application/json'
+}
+}).then(response => {
+if (response.ok) {
+alert('✅ Message sent successfully!');
+contactforfansFormMobile.reset();
+} else {
+alert('❌ Error sending message. Please try again.');
+}
+}).catch(error => {
+console.error('Error:', error);
+alert('❌ Error sending message. Please try again.');
+});
+});
+});
+</script>
+<!-- FIN SCRIP: CONTACT FANS MOBILE -->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- FIN FORMULARIOS --> 
 
   
 <!-- CARRITO -->
@@ -7556,7 +7593,6 @@ toggleCart();
 });
 </script>
 <!-- SCRIP: CARRITO PC -->
-
 
 <!-- SCRIP: CARRITO MOBILE -->
 <script>
@@ -8036,7 +8072,6 @@ toggleCartMobile();
 </script>
 <!-- FIN SCRIP: CARRITO MOBILE -->
 
-
 <!-- SCRIP: SHIPPING INFORMATION -->  
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -8094,7 +8129,6 @@ cartItemsField.value = cartItemsText;
 });
 </script>
 <!-- FIN SCRIP: SHIPPING INFORMATION -->  
-
   
 <!-- SCRIP: SHIPPING INFORMATION MOBILE -->  
 <script>
@@ -8157,20 +8191,7 @@ cartItemsText += `Product: ${item.product} | Quantity: ${item.quantity} | Unit P
 </script>  
 <!-- FIN SCRIP: SHIPPING INFORMATION MOBILE -->
 
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
+<!-- FIN CARRITO -->
   
   
 <!-- FOOTER -->
@@ -8257,7 +8278,6 @@ console.log('✅ Footer navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: FOOTER PC --> 
-
   
 <!-- SCRIP: FOOTER MOBILE -->
 <script>
