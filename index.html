@@ -110,7 +110,7 @@
 </li>
 <!-- CART -->
 <li>
-<a class="cart-button" href="javascript:void(0)">Cart</a>
+<a class="cart-button" href="https://arlynligeiastore.myshopify.com/cart" target="_blank">Cart</a>
 </li> 
 </ul>  
 </nav>
@@ -2854,15 +2854,7 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </div>
 <!-- FIN ADD TO CART MODAL PC -->
 
-<!-- ADD TO CART MODAL MOBILE -->
-<div id="addToCartModalMobile" class="addtocartmodalmobile" style="display: none;">
-<div class="addtocartmodal-information-mobile">
-<div class="addtocartmodal-information-icon-mobile">✓</div>
-<h3 class="addtocartmodal-information-title-mobile">Successfully Added!</h3>
-<p class="addtocartmodal-information-text-mobile">The product has been added to your cart.</p>
-</div>
-</div>
-<!-- FIN ADD TO CART MODAL MOBILE -->
+
   
 <!-- FOOTER PC -->
 <footer class="footer">
@@ -2976,7 +2968,7 @@ console.log('🔧 Navegación iniciada');
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
 // OCULTAR TODAS LAS SECCIONES  
-document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
 // MOSTRAR SECCIÓN
@@ -3064,7 +3056,7 @@ const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
 // OCULTAR TODAS LAS SECCIONES MOBILE  
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
 // MOSTRAR SECCIÓN PRINCIPAL MOBILE
@@ -3188,7 +3180,7 @@ console.warn('❌ Sección no encontrada:', targetId);
 return;
 }
 // OCULTAR TODAS LAS SECCIONES 
-document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
 // Determinar la sección principal a mostrar
@@ -3263,7 +3255,7 @@ console.warn('❌ Sección MOBILE no encontrada:', targetId);
 return;
 }
 // OCULTAR TODAS LAS SECCIONES MOBILE
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
 // Determinar la sección principal a mostrar
