@@ -1130,54 +1130,44 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </section>
 <!-- FIN PSYCHOLOGY MOBILE -->
 
+
+
+
+
+
+
+
+  
 <!-- BE MY PATRON PC -->
 <section class="bemypatron-section main-section" id="bemypatron">
-<!-- CONTENEDOR: CARRUSEL -->
-<div class="bemypatron-carousel"> 
-<img class="bemypatron-carousel-image active" id="bemypatron-carousel-image-1" src="assets/assets/Nuevayork.png" alt="Image 1">
-<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-2" src="assets/assets/Fondociudad.png" alt="Image 2">
-<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-3" src="assets/assets/Nuevayork.png" alt="Image 3">
-<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-4" src="assets/assets/Nuevayork.png" alt="Image 5">
-<img class="bemypatron-carousel-image" id="bemypatron-carousel-image-5" src="assets/assets/Fondociudad.png" alt="Image 5">
+<div class="bemypatron-container">
+<h2 class="bemypatron-title"><a href="#bemypatron">Be My Patron</a></h2>
+<div class="bemypatron-information">  
+<p class="bemypatron-information-text">Ligeia extends an invitation, to become her patron and, together, to forge a new chapter on the canvas of art. Patronage takes many forms, and you can be a part of this story by supporting her work and studies, or by sending gifts that enriches her creative.</p>
 </div>
 </section>
 <!-- FIN BE MY PATRON PC -->
 
 <!-- BE MY PATRON MOBILE -->
 <section class="bemypatron-section main-section mobile-only" id="bemypatron-mobile">
-<!-- CONTENEDOR: CARRUSEL -->
-<div class="bemypatron-carousel-mobile"> 
-<img class="bemypatron-carousel-image-mobile active" id="bemypatron-carousel-image-1-mobile" src="assets/assets/Nuevayork.png" alt="Image 1">
-<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-2-mobile" src="assets/assets/Fondociudad.png" alt="Image 2">
-<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-3-mobile" src="assets/assets/Nuevayork.png" alt="Image 3">
-<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-4-mobile" src="assets/assets/Nuevayork.png" alt="Image 4">
-<img class="bemypatron-carousel-image-mobile" id="bemypatron-carousel-image-5-mobile" src="assets/assets/Fondociudad.png" alt="Image 5">
+<div class="bemypatron-container-mobile">
+<h2 class="bemypatron-title-mobile"><a href="#bemypatron-mobile-">Be My Patron</a></h2>
+<div class="bemypatron-information-mobile">  
+<p class="bemypatron-information-text-mobile">Ligeia extends an invitation, to become her patron and, together, to forge a new chapter on the canvas of art. Patronage takes many forms, and you can be a part of this story by supporting her work and studies, or by sending gifts that enriches her creative.</p>
 </div>
 </section>
 <!-- FIN BE MY PATRON MOBILE -->
 
-<!-- BE MY PATRON WELCOME PC -->
-<section class="subsection" id="bemypatron-bemypatronwelcome">
-<div class="bemypatronwelcome-container">
-<h2 class="bemypatronwelcome-title"><a href="#bemypatron-bemypatronwelcome">BE MY PATRON</a></h2>
-<div class="bemypatronwelcome-information">  
-<p class="bemypatronwelcome-information-text">Ligeia extends an invitation, to become her patron and, together, to forge a new chapter on the canvas of art. Patronage takes many forms, and you can be a part of this story by supporting her work and studies, or by sending gifts that enriches her creative.</p>
-</div>
-</div>  
-</section>
-<!-- FIN BE MY PATRON WELCOME PC -->
 
-<!-- BE MY PATRON WELCOME MOBILE -->
-<section class="subsection mobile-only" id="bemypatron-mobile-bemypatronwelcome">
-<div class="bemypatronwelcome-container-mobile">
-<h2 class="bemypatronwelcome-title-mobile"><a href="#bemypatron-mobile-bemypatronwelcome">BE MY PATRON</a></h2>
-<div class="bemypatronwelcome-information-mobile">  
-<p class="bemypatronwelcome-information-text-mobile">Ligeia extends an invitation, to become her patron and, together, to forge a new chapter on the canvas of art. Patronage takes many forms, and you can be a part of this story by supporting her work and studies, or by sending gifts that enriches her creative.</p>
-</div>
-</div>  
-</section>
-<!-- FIN BE MY PATRON WELCOME MOBILE -->
 
+
+
+
+
+
+
+
+  
 <!-- SUPPORT MY WORK PC -->
 <section class="subsection" id="bemypatron-supportmywork">
 <div class="supportmywork-container">
@@ -1298,6 +1288,16 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </section>
 <!-- FIN GIFTS MOBILE -->
 
+
+
+
+
+
+
+
+
+
+  
 <!-- CONTACT PC -->
 <section class="contact-section main-section" id="contact">
 <div class="contact-container">
@@ -3537,53 +3537,7 @@ startCarouselMobile();
 </script>
 <!-- FIN SCRIP: CARRUSEL SCIENCE MOBILE -->
 
-<!-- SCRIP: CARRUSEL BE MY PATRON PC-->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🎭 Carrusel Be My Patron PC iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('.bemypatron-carousel-image');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel Be My Patron PC configurado - Cambio cada 10 segundos');
-}
-// INICIALIZACIÓN 
-startCarousel();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL BE MY PATRON PC -->
 
-<!-- SCRIP: CARRUSEL BE MY PATRON MOBILE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🎭 Carrusel Be My Patron Mobile iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarouselMobile() {
-const images = document.querySelectorAll('.bemypatron-carousel-image-mobile');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel Be My Patron Mobile configurado - Cambio cada 10 segundos');
-}
-// INICIALIZACIÓN   
-startCarouselMobile();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL BE MY PATRON MOBILE -->
   
 <!-- SCRIP: CARRUSEL SHOP PC -->
 <script>
