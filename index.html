@@ -160,10 +160,9 @@
 <!-- HOME PC -->
 <section class="home-section main-section" id="home">
 <div class="home-carousel">
-<img class="home-carousel-image active" id="home-carousel-image-1" src="assets/assets/Arlyn Ligeia Banner Store.png" alt="Image 1">
-<img class="home-carousel-image" id="home-carousel-image-2" src="assets/assets/ALONE Teaser Small Banner.png" alt="Image 2">
-<img class="home-carousel-image" id="home-carousel-image-3" src="assets/assets/1969 Small Banner.png" alt="Image 3">
-<img class="home-carousel-image" id="home-carousel-image-4" src="assets/assets/FW 2627 Small Banner.png" alt="Image 4">
+<img class="home-carousel-image active" id="home-carousel-image-1" src="assets/assets/ALONE Teaser Small Banner.png" alt="Image 1">
+<img class="home-carousel-image" id="home-carousel-image-2" src="assets/assets/1969 Small Banner.png" alt="Image 2">
+<img class="home-carousel-image" id="home-carousel-image-3" src="assets/assets/FW 2627 Small Banner.png" alt="Image 3">
 </div>
 </section>
 <!-- FIN HOME PC -->
@@ -171,14 +170,13 @@
 <!-- HOME MOBILE -->
 <section class="home-section main-section mobile-only" id="home-mobile">
 <div class="home-carousel-mobile">
-<img class="home-carousel-image-mobile active" id="home-carousel-image-1-mobile" src="assets/assets/Arlyn Ligeia Banner Store.png" alt="Image 1">
-<img class="home-carousel-image-mobile" id="home-carousel-image-2-mobile" src="assets/assets/ALONE Mobile Banner.png" alt="Image 2">
-<img class="home-carousel-image-mobile" id="home-carousel-image-3-mobile" src="assets/assets/1969 Mobile Banner.png" alt="Image 3">
-<img class="home-carousel-image-mobile" id="home-carousel-image-4-mobile" src="assets/assets/FW 2627 Mobile Banner.png" alt="Image 4">
+<img class="home-carousel-image-mobile active" id="home-carousel-image-1-mobile" src="assets/assets/ALONE Mobile Banner.png" alt="Image 1">
+<img class="home-carousel-image-mobile" id="home-carousel-image-2-mobile" src="assets/assets/1969 Mobile Banner.png" alt="Image 2">
+<img class="home-carousel-image-mobile" id="home-carousel-image-3-mobile" src="assets/assets/FW 2627 Mobile Banner.png" alt="Image 3">
 </div>
 </section>
 <!-- FIN HOME MOBILE -->
-
+  
 <!-- SOCIAL MEDIA CONTENT PC --> 
 <section class="subsection" id="home-socialmediacontent">
 <div class="socialmediacontent-container">
@@ -3358,9 +3356,9 @@ console.log('✅ Carrusel configurado - Cambio cada 10 segundos');
 function setupCarouselNavigation() {
 const carousel = document.querySelector('.home-carousel');
 const imageDestinations = {
-'home-carousel-image-2': 'alone',
-'home-carousel-image-3': 'album1969',
-'home-carousel-image-4': 'fw2627'
+'home-carousel-image-1': 'alone',
+'home-carousel-image-2': 'album1969',
+'home-carousel-image-3': 'fw2627'
  };
  carousel.addEventListener('click', function() {
  const activeImage = this.querySelector('.home-carousel-image.active');
@@ -3369,7 +3367,7 @@ const imageDestinations = {
  if (destinationId) {
  console.log('🖱️ Click en carrusel - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
  // OCULTAR TODAS LAS SECCIONES 
- document.querySelectorAll('.main-section, .subsection, .cartempty-section, .cartfull-section').forEach(section => {
+ document.querySelectorAll('.main-section, .subsection').forEach(section => {
  section.style.display = 'none';
  });
  // MOSTRAR SECCIÓN O SUBSECCIÓN
@@ -3424,9 +3422,9 @@ console.log('✅ Carrusel Mobile configurado - Cambio cada 10 segundos');
 function setupCarouselNavigationMobile() {
 const carousel = document.querySelector('.home-carousel-mobile');
 const imageDestinations = {
-'home-carousel-image-2-mobile': 'alone-mobile',
-'home-carousel-image-3-mobile': 'album1969-mobile',
-'home-carousel-image-4-mobile': 'fw2627-mobile'
+'home-carousel-image-1-mobile': 'alone-mobile',
+'home-carousel-image-2-mobile': 'album1969-mobile',
+'home-carousel-image-3-mobile': 'fw2627-mobile'
 };
 carousel.addEventListener('click', function() {
 const activeImage = this.querySelector('.home-carousel-image-mobile.active');
@@ -3435,7 +3433,7 @@ const destinationId = imageDestinations[activeImage.id];
 if (destinationId) {
 console.log('🖱️ Click en carrusel mobile - Imagen activa:', activeImage.id, 'Navegando a:', destinationId);
 // OCULTAR TODAS LAS SECCIONES MOBILE
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only, .cartempty-section.mobile-only, .cartfull-section.mobile-only').forEach(section => {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });  
   
@@ -3462,6 +3460,20 @@ setupCarouselNavigationMobile();
 </script>
 <!-- FIN SCRIP: CARRUSEL HOME MOBILE -->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 <!-- SCRIP: CARRUSEL SCIENCE PC-->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
