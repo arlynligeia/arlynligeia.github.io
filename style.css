@@ -8010,9 +8010,6 @@ transition: all 0.3s ease;
 .footer-socialmedia-icon:hover {
 transform: scale(1.2);
 }
-
-
-
 /* CONTENEDOR: BOTÓN SCROLL TOP */
 .footer-button {
 width: 100%;
@@ -8138,23 +8135,6 @@ text-decoration: none;
 line-height: 1.5;  
 margin: 0 0 10px 0;
 transition: all 0.3s ease;
-}
-.footer-link-termsandconditions-mobile:hover::after,
-.footer-link-privacypolicy-mobile:hover::after,
-.footer-link-cookiepolicy-mobile:hover::after {
-content: "";
-position: absolute;
-left: 0;
-top: 50%;
-width: 100%;
-height: 2px;
-background: #00FFFF !important;
-transform: translateY(-50%);
-animation: strike 0.3s ease forwards;
-}
-@keyframes strike {
-from { width: 0%; }
-to { width: 100%; }
 }
 /* CONTENEDOR: REDES SOCIALES */
 .footer-socialmedia-mobile {
