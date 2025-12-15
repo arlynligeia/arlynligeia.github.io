@@ -26,7 +26,7 @@ padding: 30px 10px 10px 10px;
 .site-title {
 font-family: 'Comforter Brush', cursive;
 font-size: 5rem; 
-color: #ff1493 !important;
+color: #FF66CC !important;
 text-align: center;
 font-weight: 500;
 line-height: 1; 
@@ -36,16 +36,6 @@ padding: 0px;
 .site-container { display: block; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
@@ -69,19 +59,6 @@ padding: 0px;
 .site-title-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MENÚ Y SUBMENUS PC
 ====================================== */
@@ -89,112 +66,85 @@ nav {
 text-align: center;
 }
 .menu {
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 10px;
-margin: 5px auto;
-padding: 0px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 5px auto;
+  padding: 0px;
 }
 .menu li {
-position: relative;
+  position: relative;
 }
 
 /* --- BOTONES --- */
 .menu-button,
 .cart-button {
-position: relative;
-display: block;     
-background: transparent !important; /* Fondo transparente */
-border-radius: 8px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-text-decoration: none;
-text-transform: uppercase; 
-margin: 5px auto; 
-padding: 10px;
-cursor: pointer;
-transition: all 0.3s ease;
-background: 
-repeating-linear-gradient(
-45deg,
-transparent,
-transparent 2px,
-rgba(255, 255, 255, 0.05) 2px,
-rgba(255, 255, 255, 0.05) 4px
-) !important;
-}
-/* BOTONES: FUSCIA CON EFECTO LED */
-.menu li:nth-child(odd) .menu-button,
-.menu li:nth-child(odd) .cart-button {
-border: 2px solid #ff1493 !important;
-color: #ff1493 !important;
-box-shadow: 
-0 0 5px #ff1493,
-inset 0 0 5px rgba(255, 0, 255, 0.3);
-}
-/* BOTONES: VERDE CON EFECTO LED */
-.menu li:nth-child(even) .menu-button,
-.menu li:nth-child(even) .cart-button {
-border: 2px solid #39FF14 !important;
-color: #39FF14 !important;
-box-shadow: 
-0 0 5px #39FF14,
-inset 0 0 5px rgba(57, 255, 20, 0.3);
-}
-/* HOVER: FUCSIA CON EFECTO LED */
-/* Hover para botones fucsia - Efecto activación */
-.menu li:nth-child(odd) .menu-button:hover,
-.menu li:nth-child(odd) .cart-button:hover {
-background: rgba(255, 0, 255, 0.1) !important;
-color: #ff00ff !important;
-transform: translateY(-2px);
-box-shadow: 
-0 0 15px #ff00ff,
-0 0 25px #ff00ff,
-inset 0 0 10px rgba(255, 0, 255, 0.5);
-text-shadow: 0 0 10px #ff00ff;
-}
-/* HOVER: VERDE CON EFECTO LED */
-.menu li:nth-child(even) .menu-button:hover,
-.menu li:nth-child(even) .cart-button:hover {
-background: rgba(57, 255, 20, 0.1) !important;
-color:  #00FF00 !important;
-transform: translateY(-2px);
-box-shadow: 
-0 0 15px #00FF00,
-0 0 25px #00FF00 ,
-inset 0 0 10px rgba(57, 255, 20, 0.5);
-text-shadow: 0 0 10px #00FF00;
-}
-/* PUNTO LED */
-.menu-button::after,
-.cart-button::after {
-content: '';
-position: absolute;
-top: 5px;
-right: 5px;
-width: 6px;
-height: 6px;
-border-radius: 50%;
-transition: all 0.3s ease;
-}
-.menu li:nth-child(odd) .menu-button::after,
-.menu li:nth-child(odd) .cart-button::after {
-background: #ff00ff;
-box-shadow: 0 0 5px #ff00ff;
-}
-.menu li:nth-child(even) .menu-button::after,
-.menu li:nth-child(even) .cart-button::after {
-background: #39FF14;
-box-shadow: 0 0 5px #39FF14;
-}
-.menu-button:hover::after,
-.cart-button:hover::after {
-box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  position: relative;
+  display: block;
+  background: transparent !important;
+  border-radius: 8px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 10px auto;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.05) 2px,
+      rgba(255, 255, 255, 0.05) 4px
+    ) !important;
+  
+  /* ESTILO ÚNICO PARA TODOS LOS BOTONES - COLOR CELESTE/TURQUESA */
+  border: 2px solid #00FFFF !important;
+  color: #00FFFF !important;
+  box-shadow: 
+    0 0 5px #00FFFF,
+    inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
+/* HOVER PARA TODOS LOS BOTONES */
+.menu-button:hover,
+.cart-button:hover {
+  background: rgba(0, 255, 255, 0.1) !important;
+  color: #00FFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 
+    0 0 15px #00FFFF,
+    0 0 25px #00FFFF,
+    inset 0 0 10px rgba(0, 255, 255, 0.5);
+  text-shadow: 0 0 10px #00FFFF;
+}
+
+/* PUNTO LED PARA TODOS LOS BOTONES */
+.menu-button::after,
+.cart-button::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00FFFF;
+  box-shadow: 0 0 5px #00FFFF;
+  transition: all 0.3s ease;
+}
+
+/* PUNTO LED EN HOVER */
+.menu-button:hover::after,
+.cart-button:hover::after {
+  box-shadow: 
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF;
+}
 
 
 
