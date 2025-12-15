@@ -3498,78 +3498,9 @@ transform: scale(1.05);
 }
 
 /* ======================================
-    BE MY PATRON PC
+   BE MY PATRON
 ====================================== */
-.bemypatron-carousel {
-position: relative;
-z-index: 1; 
-width: 100%;
-height: calc(100vh - 220px);
-box-sizing: border-box;
-overflow: hidden;
-display: flex;
-justify-content: center;
-align-items: center;
-background: #000000 !important;
-border: 3px solid #A855F7 !important;
-margin: 40px auto;
-}
-.bemypatron-carousel-image {
-position: absolute;
-z-index: 1; 
-width: 100%;
-height: 100%;
-object-fit: cover;
-background: #000000 !important;
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.bemypatron-carousel-image.active {
-opacity: 1;
-}
-/* CONTROL */
-.bemypatron-carousel { display: flex; }
-.bemypatron-carousel-mobile { display: none; }
-/* ======================================
-   MOVIL RESPONSIVE: BE MY PATRON
-====================================== */
-@media (max-width: 768px) {  
-.bemypatron-carousel-mobile {
-position: relative;
-z-index: 1; 
-width: 100%;
-height: 500px;
-box-sizing: border-box;   
-overflow: hidden;  
-display: flex;
-justify-content: center;
-align-items: center;   
-background: #000000 !important;
-border: 3px solid #A855F7 !important;
-margin: 30px auto;
-}
-.bemypatron-carousel-image-mobile {
-position: absolute;
-z-index: 1;    
-width: 100%;
-height: 100%;
-object-fit: cover;
-background: #000000 !important;   
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.bemypatron-carousel-image-mobile.active {
-opacity: 1;
-}
-/* CONTROL */
-.bemypatron-carousel { display: none; }
-.bemypatron-carousel-mobile { display: flex; }
-}
-
-/* ======================================
-   BE MYPATRONWELCOME
-====================================== */
-.bemypatronwelcome-container {
+.bemypatron-container {
 position: relative;
 width: 800px;
 background: #3A0052 !important;
@@ -3577,7 +3508,7 @@ border-radius: 20px;
 margin: 40px auto;
 padding: 30px;
 }
-.bemypatronwelcome-container::before {
+.bemypatron-container::before {
 content: "";
 position: absolute;
 z-index: 1; 
@@ -3588,50 +3519,57 @@ height: 90px;
 background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
-.bemypatronwelcome-title {
+.bemypatron-title {
 position: relative;
 z-index: 2;
 display: block;
-font-family: 'Orbitron', sans-serif;
-font-size: 2.5rem;
+font-family: 'Fuggles', cursive;
+font-size: 5rem;
 color: #FF66CC !important;
 text-decoration: none;
 text-transform: uppercase;
-text-align: left;   
+text-align: center;   
 line-height: 1.6;
 margin: 0 0 16px 0;
 }
-.bemypatronwelcome-title a {
+.bemypatron-title a {
 color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
-.bemypatronwelcome-information {
+.bemypatron-information {
 width: 100%;
 box-sizing: border-box;   
 margin: 0px;
 }
-.bemypatronwelcome-information-text,
-.bemypatronwelcome-information-text-end {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
+.bemypatron-information-text,
+.bemypatron-information-text-end {
+font-family: 'Fuggles', cursive;
+font-size: 3rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
-line-height: 1.5;
+line-height: 1;
 margin: 0 0 10px 0;
 }
-.bemypatronwelcome-information-text-end {
+.bemypatron-information-text-end {
 margin-bottom: 0px;
 }
 /* CONTROL */
-.bemypatronwelcome-container { display: block; }
-.bemypatronwelcome-container-mobile { display: none; }
+.bemypatron-container { display: block; }
+.bemypatron-container-mobile { display: none; }
+
+
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: BE MYPATRONWELCOME
 ====================================== */
 @media (max-width: 768px) {
-.bemypatronwelcome-container-mobile {
+.bemypatron-container-mobile {
 position: relative;
 width: 90%;
 box-sizing: border-box;
@@ -3640,7 +3578,7 @@ border-radius: 20px;
 margin: 30px auto;
 padding: 20px;
 }
-.bemypatronwelcome-container-mobile::before {
+.bemypatron-container-mobile::before {
 content: "";
 position: absolute;
 z-index: 1;
@@ -3651,7 +3589,7 @@ height: 60px;
 background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
-.bemypatronwelcome-title-mobile {
+.bemypatron-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
@@ -3663,18 +3601,18 @@ text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
-.bemypatronwelcome-title-mobile a {
+.bemypatron-title-mobile a {
 color: #FF66CC !important;
 text-decoration: none;
 }
 /* CONTENEDOR: INFORMACIÓN */
-.bemypatronwelcome-information-mobile {
+.bemypatron-information-mobile {
 width: 100%;
 box-sizing: border-box; 
 margin: 0px;
 }
-.bemypatronwelcome-information-text-mobile,
-.bemypatronwelcome-information-text-end-mobile {
+.bemypatron-information-text-mobile,
+.bemypatron-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
@@ -3683,13 +3621,19 @@ text-align: justify;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.bemypatronwelcome-information-text-end-mobile {
+.bemypatron-information-text-end-mobile {
 margin-bottom: 0px;
 }
 /* CONTROL */
-.bemypatronwelcome-container { display: none; }
-.bemypatronwelcome-container-mobile { display: block; }
+.bemypatron-container { display: none; }
+.bemypatron-container-mobile { display: block; }
 }
+
+
+
+
+
+
 
 /* ======================================
    SUPPORT MY WORK
