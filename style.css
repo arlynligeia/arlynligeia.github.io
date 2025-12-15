@@ -7879,8 +7879,8 @@ position: relative;
 width: 100%;
 box-sizing: border-box; 
 background: #320046 !important;
-padding: 30px;   
-margin-top: auto;
+margin-top: auto;   
+padding: 30px;
 }
 /* CONTENEDOR: NOMBRE Y COPYRIGHT */
 .footer-brand {
@@ -7891,9 +7891,9 @@ flex-direction: column;
 align-items: center;
 }
 .footer-brand-name {
-font-family: 'Orbitron', sans-serif;
+font-family: 'Comforter Brush', cursive;
 font-size: 2rem;
-color: #ff1493 !important;
+color: #FF66CC !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;
@@ -7923,7 +7923,7 @@ position: relative;
 z-index: 1;
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 line-height: 1.5;  
 margin: 0 0 10px 0;
@@ -7938,7 +7938,7 @@ left: 0;
 top: 50%;
 width: 100%;
 height: 2px;
-background: #FF6B00 !important;
+background: #00FFFF !important;
 transform: translateY(-50%);
 animation: strike 0.3s ease forwards;
 }
@@ -7959,7 +7959,7 @@ margin: 0 0 10px 0;
 .footer-socialmedia-icon {
 width: 25px;
 height: 25px;
-color: #ff1493 !important;
+color: #FF66CC !important;
 transition: all 0.3s ease;
 }
 .footer-socialmedia-icon:hover {
@@ -7974,30 +7974,84 @@ justify-content: flex-end;
 align-items: center;
 margin: 0px;
 }
+/* BOTÓN SCROLL TOP - MISMO ESTILO QUE MENÚ */
 .footer-button-scrolltop {
+position: relative;
 display: flex;
 justify-content: space-between;
-background: #ff1493 !important; 
-border-radius: 6px;
+background: transparent !important; /* Cambiado de #ff1493 */
+border-radius: 8px; /* Mismo radio que menú */
 font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: white !important;
+font-size: 1rem; /* Mismo tamaño que menú */
+color: #00FFFF !important; /* Color turquesa */
 text-decoration: none;
 font-weight: bold;
 text-transform: uppercase;
 text-align: center;
 margin: 0px;
 padding: 10px 20px;
-border: none;
+border: 2px solid #00FFFF !important; /* Borde turquesa */
 cursor: pointer;
-transition: transform 0.3s ease;
+transition: all 0.3s ease; /* Transición completa como menú */
+background: 
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 2px,
+rgba(255, 255, 255, 0.05) 2px,
+rgba(255, 255, 255, 0.05) 4px
+) !important;
+box-shadow: 
+0 0 5px #00FFFF,
+inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
+/* HOVER - MISMO EFECTO QUE MENÚ */
 .footer-button-scrolltop:hover {
-transform: scale(1.05);
+background: rgba(0, 255, 255, 0.1) !important;
+color: #00FFFF !important;
+transform: translateY(-2px); /* Mismo efecto de elevación */
+box-shadow: 
+0 0 15px #00FFFF,
+0 0 25px #00FFFF,
+inset 0 0 10px rgba(0, 255, 255, 0.5);
+text-shadow: 0 0 10px #00FFFF;
+}
+/* PUNTO LED - MISMO QUE MENÚ */
+.footer-button-scrolltop::after {
+content: '';
+position: absolute;
+top: 5px;
+right: 5px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: #00FFFF;
+box-shadow: 0 0 5px #00FFFF;
+transition: all 0.3s ease;
+}
+/* PUNTO LED EN HOVER */
+.footer-button-scrolltop:hover::after {
+box-shadow: 
+0 0 10px #00FFFF,
+0 0 20px #00FFFF;
 }
 /* CONTROL */
 .footer { display: block; }
 .footer-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: FOOTER
 ====================================== */
