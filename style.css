@@ -66,84 +66,79 @@ nav {
 text-align: center;
 }
 .menu {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 5px auto;
-  padding: 0px;
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 10px;
+margin: 10px auto;
+padding: 0px;
 }
 .menu li {
-  position: relative;
+position: relative;
 }
-
 /* --- BOTONES --- */
 .menu-button,
 .cart-button {
-  position: relative;
-  display: block;
-  background: transparent !important;
-  border-radius: 8px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  margin: 10px auto;
-  padding: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background: 
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 2px,
-      rgba(255, 255, 255, 0.05) 2px,
-      rgba(255, 255, 255, 0.05) 4px
-    ) !important;
-  
-  /* ESTILO ÚNICO PARA TODOS LOS BOTONES - COLOR CELESTE/TURQUESA */
-  border: 2px solid #00FFFF !important;
-  color: #00FFFF !important;
-  box-shadow: 
-    0 0 5px #00FFFF,
-    inset 0 0 5px rgba(0, 255, 255, 0.3);
+position: relative;
+display: block;
+background: transparent !important;
+border-radius: 8px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+text-decoration: none;
+text-transform: uppercase;
+margin: 10px auto;
+padding: 10px;
+cursor: pointer;
+transition: all 0.3s ease;
+background: 
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 2px,
+rgba(255, 255, 255, 0.05) 2px,
+rgba(255, 255, 255, 0.05) 4px
+) !important;
+/* ESTILO ÚNICO PARA TODOS LOS BOTONES - COLOR CELESTE/TURQUESA */
+border: 2px solid #00FFFF !important;
+color: #00FFFF !important;
+box-shadow: 
+0 0 5px #00FFFF,
+inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
-
 /* HOVER PARA TODOS LOS BOTONES */
 .menu-button:hover,
 .cart-button:hover {
-  background: rgba(0, 255, 255, 0.1) !important;
-  color: #00FFFF !important;
-  transform: translateY(-2px);
-  box-shadow: 
-    0 0 15px #00FFFF,
-    0 0 25px #00FFFF,
-    inset 0 0 10px rgba(0, 255, 255, 0.5);
-  text-shadow: 0 0 10px #00FFFF;
+background: rgba(0, 255, 255, 0.1) !important;
+color: #00FFFF !important;
+transform: translateY(-2px);
+box-shadow: 
+0 0 15px #00FFFF,
+0 0 25px #00FFFF,
+inset 0 0 10px rgba(0, 255, 255, 0.5);
+text-shadow: 0 0 10px #00FFFF;
 }
-
 /* PUNTO LED PARA TODOS LOS BOTONES */
 .menu-button::after,
 .cart-button::after {
-  content: '';
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #00FFFF;
-  box-shadow: 0 0 5px #00FFFF;
-  transition: all 0.3s ease;
+content: '';
+position: absolute;
+top: 5px;
+right: 5px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: #00FFFF;
+box-shadow: 0 0 5px #00FFFF;
+transition: all 0.3s ease;
 }
-
 /* PUNTO LED EN HOVER */
 .menu-button:hover::after,
 .cart-button:hover::after {
-  box-shadow: 
-    0 0 10px #00FFFF,
-    0 0 20px #00FFFF;
+box-shadow: 
+0 0 10px #00FFFF,
+0 0 20px #00FFFF;
 }
 
 
