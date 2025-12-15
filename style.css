@@ -13,20 +13,14 @@ margin: 0;
    CONTENEDOR DEL TÍTULO Y MENÚ PC
 ====================================== */
 .site-container {
-width: 95%;
-margin: 20px auto;
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: #320046 !important;    
+margin: 0;
 padding: 10px;
-background: 
-repeating-linear-gradient(
-0deg,
-transparent,
-transparent 2px,
-rgba(255, 20, 147, 0.05) 2px,
-rgba(255, 20, 147, 0.05) 4px
-),
-transparent !important;
-border: 2px solid #ff1493 !important;
-border-radius: 20px;
 }
 /* --- TÍTULO --- */
 .site-title {
