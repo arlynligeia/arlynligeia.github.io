@@ -66,16 +66,6 @@ padding: 0px;
 .site-title-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MENÚ Y SUBMENUS PC
 ====================================== */
@@ -229,26 +219,82 @@ border-bottom: 1px solid white !important;
 /* ======================================
    MENÚ HAMBURGUESA MOVIL
 ====================================== */
-.menu-mobile {
-    display: none;
-}
+.menu-mobile { display: none; }
+
+/* BOTÓN HAMBURGUESA - MISMO ESTILO QUE MENÚ PRINCIPAL */
 .menu-mobile-hamburger-button {
+    position: relative; /* Necesario para el punto LED */
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     z-index: 1001;
-    background: transparent;
-    border: 2px solid #ff1493 !important;
-    border-radius: 6px;
-    padding: 10px;
+    
+    /* ESTILO IDÉNTICO A .menu-button */
+    background: transparent !important;
+    border-radius: 8px;
+    padding: 12px 10px;
     gap: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /* Fondo con líneas diagonales */
+    background: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 255, 255, 0.05) 2px,
+            rgba(255, 255, 255, 0.05) 4px
+        ) !important;
+    
+    /* Borde y color turquesa */
+    border: 2px solid #00FFFF !important;
+    box-shadow: 
+        0 0 5px #00FFFF,
+        inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
+
+/* LAS RAYAS DEL BOTÓN EN COLOR TURQUESA */
 .menu-mobile-hamburger-button span {
     display: block;
     width: 25px;
     height: 3px;
-    background: #ff1493 !important;
+    background: #00FFFF !important; /* Cambiado a turquesa */
+    transition: all 0.3s ease;
 }
+
+/* HOVER - MISMO EFECTO QUE MENÚ PRINCIPAL */
+.menu-mobile-hamburger-button:hover {
+    background: rgba(0, 255, 255, 0.1) !important;
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 15px #00FFFF,
+        0 0 25px #00FFFF,
+        inset 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* PUNTO LED - ESQUINA SUPERIOR DERECHA */
+.menu-mobile-hamburger-button::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00FFFF;
+    box-shadow: 0 0 5px #00FFFF;
+    transition: all 0.3s ease;
+}
+
+/* PUNTO LED EN HOVER */
+.menu-mobile-hamburger-button:hover::after {
+    box-shadow: 
+        0 0 10px #00FFFF,
+        0 0 20px #00FFFF;
+}
+
 
 /* OVERLAY - MORADO */
 .menu-mobile-hamburger-overlay {
@@ -318,6 +364,14 @@ border-bottom: 1px solid white !important;
         display: none !important;
     }
 }
+
+
+
+
+
+
+
+
 
 /* ======================================
     HOME PC
