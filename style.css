@@ -34,6 +34,7 @@ margin: 0px;
 padding: 0px;
 }
 .site-container { display: block; }
+.site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
 
@@ -41,23 +42,40 @@ padding: 0px;
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
 @media (max-width: 768px) {
- .site-container { 
-display: none !important; 
+.site-container-mobile { 
+position: relative;
+top: 0;
+left: 0;  
+width: 100%;
+box-sizing: border-box;
+background: #320046 !important;    
+margin: 0;
+padding: 30px 10px 10px 10px;
 }
 .site-title-mobile {
-font-family: 'Orbitron', monospace;    
+font-family: 'Comforter Brush', cursive;
 font-size: 3rem; 
-color:  #ff1493 !important;
-text-transform: uppercase;
+color: #FF66CC !important;
 text-align: center; 
-font-weight: 900;
-margin: 15px auto;
+font-weight: 500;
+margin: 0px;
 padding: 0px;
 }
 .site-container { display: none; }
+.site-container-mobile { display: block; }   
 .site-title { display: none; }
 .site-title-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    MENÚ Y SUBMENUS PC
