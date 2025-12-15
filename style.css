@@ -319,7 +319,7 @@ border-bottom: none !important;
 }
 .menu-mobile-hamburger-overlay a {
 font-family: 'Orbitron', sans-serif;
-font-size: 1.1rem;
+font-size: 1rem;
 text-decoration: none; 
 text-transform: uppercase;
 padding: 0 20px;
@@ -8083,20 +8083,6 @@ box-shadow:
 /* CONTROL */
 .footer { display: block; }
 .footer-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: FOOTER
 ====================================== */
@@ -8105,29 +8091,27 @@ box-shadow:
 position: relative;
 width: 100%;
 box-sizing: border-box; 
-background: #1E0029 !important;
+background: #320046 !important;
 padding: 20px;   
 margin-top: auto;
 }
-/* CONTENEDOR: NOMBRE Y COPYRIGHT */
 .footer-brand-mobile {
 display: flex;
 flex-direction: column;
 align-items: center;
 }
 .footer-brand-name-mobile {
-font-family: 'Orbitron', sans-serif;
+font-family: 'Comforter Brush', cursive;
 font-size: 1.5rem;
 color: #ff1493 !important;
 text-decoration: none;
-text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0;
 }
 .footer-brand-allrightreserved-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 0.8rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 line-height: 1.5;
 margin: 0 0 10px 0;   
@@ -8146,7 +8130,7 @@ position: relative;
 z-index: 1;
 font-family: 'Share Tech Mono', monospace;
 font-size: 0.8rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 line-height: 1.5;  
 margin: 0 0 10px 0;
@@ -8161,7 +8145,7 @@ left: 0;
 top: 50%;
 width: 100%;
 height: 2px;
-background: #FF6B00 !important;
+background: #00FFFF !important;
 transform: translateY(-50%);
 animation: strike 0.3s ease forwards;
 }
@@ -8188,7 +8172,7 @@ transition: all 0.3s ease;
 .footer-socialmedia-icon-mobile:hover {
 transform: scale(1.2);
 }
-/* CONTENEDOR: BOTÓN SCROLL TOP */
+/* CONTENEDOR: BOTÓN SCROLL TOP MOBILE */
 .footer-button-mobile {
 display: flex;
 justify-content: flex-end;
@@ -8196,25 +8180,62 @@ align-items: center;
 margin: 0px;
 }
 .footer-button-scrolltop-mobile {
+position: relative;
 display: flex;
 justify-content: space-between;
-background: #ff1493 !important; 
-border-radius: 6px;
+border-radius: 6px; /* Original del mobile, no 8px */
 font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
+font-size: 1rem; /* Original del mobile */
 font-weight: bold;
 text-transform: uppercase;
 text-align: center;
 margin: 0px;
-padding: 10px 20px;
-border: none;
+padding: 10px 20px; /* Original del mobile */
+background: transparent !important;
+color: #00FFFF !important; /* Color turquesa */
+text-decoration: none;
+border: 2px solid #00FFFF !important; /* Borde turquesa */
 cursor: pointer;
-transition: transform 0.3s ease;
+transition: all 0.3s ease; /* Transición completa */
+background: 
+repeating-linear-gradient(
+45deg,
+transparent,
+transparent 2px,
+rgba(255, 255, 255, 0.05) 2px,
+rgba(255, 255, 255, 0.05) 4px
+) !important;
+box-shadow: 
+0 0 5px #00FFFF,
+inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
 .footer-button-scrolltop-mobile:hover {
-transform: scale(1.05);
+background: rgba(0, 255, 255, 0.1) !important;
+color: #00FFFF !important;
+transform: translateY(-2px); /* Elevación como PC, no scale(1.05) */
+box-shadow: 
+0 0 15px #00FFFF,
+0 0 25px #00FFFF,
+inset 0 0 10px rgba(0, 255, 255, 0.5);
+text-shadow: 0 0 10px #00FFFF;
+}
+/* PUNTO LED - MISMO QUE PC */
+.footer-button-scrolltop-mobile::after {
+content: '';
+position: absolute;
+top: 5px;
+right: 5px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: #00FFFF;
+box-shadow: 0 0 5px #00FFFF;
+transition: all 0.3s ease;
+}
+.footer-button-scrolltop-mobile:hover::after {
+box-shadow: 
+0 0 10px #00FFFF,
+0 0 20px #00FFFF;
 }
 /* CONTROL */
 .footer { display: none; }
