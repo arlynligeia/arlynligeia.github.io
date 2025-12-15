@@ -37,13 +37,13 @@ padding: 0px;
 .site-container-mobile { display: none; }
 .site-title { display: block; }
 .site-title-mobile { display: none; }
-
 /* ======================================
    TÍTULO DE LA PÁGINA MÓVIL
 ====================================== */
 @media (max-width: 768px) {
 .site-container-mobile { 
 position: relative;
+display: block !important;
 top: 0;
 left: 0;  
 width: 100%;
