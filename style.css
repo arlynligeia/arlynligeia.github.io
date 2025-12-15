@@ -6670,7 +6670,7 @@ margin: 0 0 10px 0;
 width: 100%;
 display: block;
 height: auto;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .digitalfeaturefilm-columns-grid-product-name,
@@ -6827,7 +6827,7 @@ margin: 0 0 10px 0;
 width: 100%;
 height: 200px;
 display: block;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .digitalfeaturefilm-product-name-mobile,
@@ -6977,7 +6977,7 @@ margin: 0 0 10px 0;
 width: 100%;
 display: block;
 height: auto;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .alonesponsorship-columns-grid-product-name,
@@ -7120,7 +7120,7 @@ margin: 0 0 10px 0;
 width: 100%;
 height: 200px;
 display: block;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .alonesponsorship-product-name-mobile,
@@ -7270,7 +7270,7 @@ margin: 0 0 10px 0;
 width: 100%;
 display: block;
 height: auto;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: GRID DE 3 - PRODUCTOS - NOMBRE Y VALOR */
 .aloneexecutiveproducers-columns-grid-product-name,
@@ -7413,7 +7413,7 @@ margin: 0 0 10px 0;
 width: 100%;
 height: 200px;
 display: block;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: PRODUCTO - NOMBRE Y VALOR */ 
 .aloneexecutiveproducers-product-name-mobile,
@@ -7908,175 +7908,6 @@ margin-bottom: 0px;
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
 #home-youtubehighlight-mobile { display: block; }
-}
-
-/* ======================================
-   ADD TO CART MODAL PC
-====================================== */
-.addtocartmodal {
-position: fixed;
-z-index: 10000;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-display: none;
-justify-content: center;
-align-items: center;
-background: rgba(0, 0, 0, 0.8);
-}
-.addtocartmodal-information {
-position: relative;
-overflow: hidden;
-width: 90%;
-max-width: 400px;
-background: #000000 !important; 
-border-radius: 15px;
-border: 3px solid #00FF00 !important; 
-box-shadow: 
-0 0 20px #00FF00,
-inset 0 0 20px rgba(0, 255, 0, 0.1);
-text-align: center;
-padding: 30px;
-animation: modalAppear 0.3s ease-out;
-}
-.addtocartmodal-information::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: repeating-linear-gradient(
-0deg,
-rgba(0, 255, 0, 0.03) 0px,
-rgba(0, 255, 0, 0.03) 1px,
-transparent 1px,
-transparent 2px
-);
-pointer-events: none;
-}
-@keyframes modalAppear {
-from {
-opacity: 0;
-transform: scale(0.8) translateY(-20px);
-}
-to {
-opacity: 1;
-transform: scale(1) translateY(0);
-}
-}
-.addtocartmodal-information-icon {
-font-family: 'Orbitron', sans-serif;
-font-size: 48px;
-color: #FF6B00 !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: center;     
-font-weight: bold;   
-margin: 0 0 10px 0;
-}
-.addtocartmodal-information-title {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.5; 
-text-align: center;  
-margin: 0 0 10px 0;
-}
-.addtocartmodal-information-text {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1rem;
-color: #00FF00 !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
-margin: 0px;
-}
-/* CONTROL */
-.addtocartmodal-control { display: flex; }
-.addtocartmodal-control-mobile { display: none; }
-/* ======================================
-   MOVIL RESPONSIVE: FOOTER
-====================================== */
-@media (max-width: 768px) {
-.addtocartmodalmobile {
-position: fixed;
-z-index: 10000;
-left: 0;
-top: 0;
-width: 100%;
-height: 100%;
-display: none;
-justify-content: center;
-align-items: center;
-background: rgba(0, 0, 0, 0.8);
-}
-.addtocartmodal-information-mobile {
-position: relative;
-overflow: hidden;
-width: 85%; /* Cambiado de 90% */
-max-width: 320px; /* Cambiado de 400px */
-background: #000000 !important; 
-border-radius: 15px;
-border: 3px solid #00FF00 !important; 
-box-shadow: 
-0 0 15px #00FF00, /* Reducido de 20px */
-inset 0 0 15px rgba(0, 255, 0, 0.1); /* Reducido de 20px */
-text-align: center;
-padding: 20px;
-animation: modalAppear 0.3s ease-out;
-}
-.addtocartmodal-information-mobile::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background: repeating-linear-gradient(
-0deg,
-rgba(0, 255, 0, 0.03) 0px,
-rgba(0, 255, 0, 0.03) 1px,
-transparent 1px,
-transparent 2px
-);
-pointer-events: none;
-}
-.addtocartmodal-information-icon-mobile {
-font-family: 'Orbitron', sans-serif;
-font-size: 35px;
-color: #FF6B00 !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: center;     
-font-weight: bold;   
-margin: 0 0 10px 0;
-}
-.addtocartmodal-information-title-mobile {
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: #00FF00 !important;
-text-decoration: none;
-text-transform: uppercase;   
-line-height: 1.5; 
-text-align: center;  
-margin: 0 0 10px 0;
-}
-.addtocartmodal-information-text-mobile {
-font-family: 'Share Tech Mono', monospace;
-font-size: 0.8rem;
-color: #00FF00 !important;
-text-decoration: none;
-line-height: 1.5; 
-text-align: center;  
-margin: 0px;
-}
-/* CONTROL */
-.addtocartmodal-control { display: none; }
-.addtocartmodal-control-mobile { display: flex; }
 }
 
 /* ======================================
