@@ -3677,8 +3677,6 @@ margin: 0 0 15px 0;
 .supportmywork-columns-grid-image {
 width: 100%;
 min-width: 0;   
-display: flex;
-align-items: center;
 margin: 0px;
 }
 .supportmywork-columns-grid-image img {
@@ -3691,6 +3689,8 @@ border-radius: 0px;
 .supportmywork-columns-grid-image-2 {
 width: 100%;
 min-width: 0;
+display: flex;
+align-items: center;
 margin: 0px;
 }
 .supportmywork-columns-grid-image-2 img {
@@ -3703,13 +3703,17 @@ border-radius: 0px;
 .supportmywork-image {
 width: 100%;
 box-sizing: border-box;
+display: flex;
+justify-content: center;
 margin: 0 0 15px 0;
 }
 .supportmywork-image img {
-width: 100%;
+width: 70%;
+max-width: 500px;
 height: auto;
 display: block;
 border-radius: 0px;
+margin: 0 auto; 
 }
 /* CONTENEDOR: INFORMACIÓN */
 .supportmywork-information {
