@@ -357,7 +357,8 @@ box-sizing: border-box;
 background:#3A0052 !important;   
 padding: 30px;
 }
-.home-information-text {
+.home-information-text,
+.home-information-text-end {
 font-family: 'Fuggles', cursive;
 font-size: 5rem;
 color: #00FF00 !important;
@@ -381,7 +382,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 background: #000000;
-border: 3px solid #A855F7;
 }
 .home-carousel-image {
 position: absolute;
@@ -399,8 +399,8 @@ opacity: 1;
 .home-marquee {
 width: 100%;
 box-sizing: border-box;  
-background-color: #A855F7; /* Color morado */
-padding: 230px;
+background: #3A0052 !important;   
+padding: 30px;
 }
 .home-marquee-text {
 font-family: 'Fuggles', cursive;
