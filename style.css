@@ -410,8 +410,8 @@ text-decoration: none !important;
 .home-marquee::after {
 content: "Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!";
 display: inline-block;
-padding-left: 0%;
-animation: marquee 5s linear infinite;
+padding-left: 100%;
+animation: marquee 10s linear infinite;
 font-family: 'Fuggles', cursive;
 font-size: 3rem;
 color: #00FF00 !important;
@@ -423,7 +423,7 @@ color: #00FF00 !important;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%); /* Mueve todo a la izquierda */
+    transform: translateX(-100%);
   }
 }
 /* CONTROL */
