@@ -3541,19 +3541,23 @@ width: 100%;
 box-sizing: border-box;   
 margin: 0px;
 }
-.bemypatron-information-text {
+.bemypatron-information-text,
+.bemypatron-information-text-end {
 font-family: 'Fuggles', cursive;
 font-size: 3rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1;
-margin: 0px;
+margin: 0 0 10px 0;
 }
+.bemypatron-information-text-end {
+text-align: right; 
+margin-bottom: 0px;
+}  
 /* CONTROL */
 .bemypatron-container { display: block; }
 .bemypatron-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: BE MYPATRONWELCOME
 ====================================== */
@@ -3610,12 +3614,21 @@ line-height: 1;
 margin: 0 0 10px 0;
 }
 .bemypatron-information-text-end-mobile {
+text-align: right; 
 margin-bottom: 0px;
 }
 /* CONTROL */
 .bemypatron-container { display: none; }
 .bemypatron-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
 
 /* ======================================
    SUPPORT MY WORK
@@ -4054,7 +4067,7 @@ font-family: 'Fuggles', cursive;
 font-size: 5rem;
 color: #FF66CC !important;
 text-decoration: none;
-text-align: left;   
+text-align: center;   
 line-height: 1;
 margin: 0 0 16px 0;
 }
@@ -4066,8 +4079,8 @@ text-decoration: none;
 .gifts-image {
 width: 100%;
 box-sizing: border-box;
-display: flex;          /* Nuevo: para centrar */
-justify-content: center; /* Centra horizontalmente */
+display: flex;
+justify-content: center;
 margin: 0 0 15px 0;
 }
 .gifts-image img {
