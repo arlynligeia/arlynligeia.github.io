@@ -3622,14 +3622,6 @@ margin-bottom: 0px;
 .bemypatron-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
 /* ======================================
    SUPPORT MY WORK
 ====================================== */
@@ -3669,6 +3661,44 @@ margin: 0 0 16px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
+/* CONTENEDOR: COLUMNAS */
+.supportmywork-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.supportmywork-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0 0 15px 0;
+}
+/* CONTENEDOR: IMAGEN */
+.supportmywork-columns-grid-image {
+width: 100%;
+min-width: 0;   
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.supportmywork-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+/* CONTENEDOR: IMAGEN 2 */
+.supportmywork-columns-grid-image-2 {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.supportmywork-columns-grid-image-2 img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
 /* CONTENEDOR: IMAGEN */
 .supportmywork-image {
 width: 100%;
@@ -3679,7 +3709,7 @@ margin: 0 0 15px 0;
 width: 100%;
 height: auto;
 display: block;
-border-radius: 15px;
+border-radius: 0px;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .supportmywork-information {
@@ -3731,6 +3761,13 @@ transform: scale(1.05);
 /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
 .supportmywork-container { display: block; }
 .supportmywork-container-mobile { display: none; }
+
+
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: SUPPORT MY WORK
 ====================================== */
