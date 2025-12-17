@@ -416,43 +416,54 @@ font-family: 'Fuggles', cursive;
 font-size: 3rem;
 color: #00FF00 !important;
 }
-
 /* ANIMACIÓN */
 @keyframes marquee {
 0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
 }
 /* CONTROL */
 .home-container { display: flex; }
 .home-carousel { display: flex; }
 .home-carousel-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: SHOP
 ====================================== */
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
+.home-container-mobile {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;   
+margin: 500px auto 30px auto;
+}
+/* INFORMACIÓN */
+.home-information-mobile {
+width: 100%;
+box-sizing: border-box;
+background:#3A0052 !important;   
+padding: 20px;
+}
+.home-information-text-mobile,
+.home-information-text-end-mobile {
+font-family: 'Fuggles', cursive;
+font-size: 5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1;
+margin: 0 0 10px 0;
+}
+.home-information-text-end-mobile {
+font-size: 2rem;
+margin: 0px;
+}
+/* CARRUSEL*/   
 .home-carousel-mobile {
 position: relative;
-z-index: 1; 
 width: 100%;
 height: 500px;
 box-sizing: border-box;   
@@ -461,12 +472,9 @@ display: flex;
 justify-content: center;
 align-items: center;   
 background: #000000 !important;
-border: 3px solid #A855F7 !important;
-margin: 30px auto;
 }
 .home-carousel-image-mobile {
-position: absolute;
-z-index: 1;    
+position: absolute;  
 width: 100%;
 height: 100%;
 object-fit: cover;
@@ -477,9 +485,40 @@ transition: opacity 1s ease-in-out;
 .home-carousel-image-mobile.active {
 opacity: 1;
 }
+/* MARQUEE */
+.home-marquee-mobile {
+width: 100%;
+box-sizing: border-box;  
+background: #320046 !important;
+padding: 10px;
+overflow: hidden;
+white-space: nowrap; 
+position: relative;
+display: block;
+text-decoration: none !important;
+}
+.home-marquee-mobile::after {
+content: "Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!";
+display: inline-block;
+padding-left: 100%;
+animation: marquee 30s linear infinite;
+font-family: 'Fuggles', cursive;
+font-size: 2rem;
+color: #00FF00 !important;
+}
+/* ANIMACIÓN */
+@keyframes marquee {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}  
 /* CONTROL */
 .home-container { display: none; }
 .home-carousel { display: none; }
+.home-container-mobile { display: block; }   
 .home-carousel-mobile { display: flex; }
 }
 
@@ -7918,8 +7957,6 @@ margin-bottom: 0px;
    OCULTAR TODAS LAS SECCIONES PC
 ====================================== */
 .main-section:not(#home),
-#cartempty,
-#cartfull { display: none; }
 .subsection:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME */
@@ -7933,16 +7970,21 @@ margin-bottom: 0px;
 ====================================== */
 @media (max-width: 768px) {
 .main-section.mobile-only:not(#home),
-#cartempty-mobile,
-#cartfull-mobile { display: none; }
 .subsection.mobile-only:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
-#home-mobile { display: flex; }
+#home-mobile { display: block; }
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
 #home-youtubehighlight-mobile { display: block; }
 }
+
+
+
+
+
+
+
 
 /* ======================================
    FOOTER PC
