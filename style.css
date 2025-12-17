@@ -4342,20 +4342,6 @@ transform: scale(1.05);
 .gifts-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    CONTACT
 ====================================== */
@@ -4795,21 +4781,35 @@ transform: scale(1.05);
 .contactforfans-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
 /* ======================================
     SHOP PC
 ====================================== */
+.shop-container {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;   
+margin: 40px auto;
+}
+/* INFORMACIÓN */
+.shop-information {
+width: 100%;
+box-sizing: border-box;
+background:#3A0052 !important;   
+padding: 30px;
+}
+.shop-information-text {
+font-family: 'Fuggles', cursive;
+font-size: 7rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1;
+margin: 0;
+}
+/* CARRUSEL*/
 .shop-carousel {
 position: relative;
-z-index: 1; 
 width: 100%;
 height: calc(100vh - 220px);
 box-sizing: border-box;
@@ -4817,33 +4817,85 @@ overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #000000 !important;
-border: 3px solid #A855F7 !important;
-margin: 40px auto;
+background: #000000;
 }
 .shop-carousel-image {
 position: absolute;
-z-index: 1; 
 width: 100%;
 height: 100%;
 object-fit: cover;
-background: #000000 !important;
+background: #000000;
 opacity: 0;
 transition: opacity 1s ease-in-out;
 }
 .shop-carousel-image.active {
 opacity: 1;
 }
+/* MARQUEE */
+.shop-marquee {
+width: 100%;
+box-sizing: border-box;  
+background: #320046 !important;
+padding: 20px;
+overflow: hidden;
+white-space: nowrap; 
+position: relative;
+display: block;
+text-decoration: none !important;
+}
+.shop-marquee::after {
+content: "Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!";
+display: inline-block;
+padding-left: 100%;
+animation: marquee 30s linear infinite;
+font-family: 'Fuggles', cursive;
+font-size: 3rem;
+color: #00FF00 !important;
+}
+/* ANIMACIÓN */
+@keyframes marquee {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}
 /* CONTROL */
+.shop-container { display: flex; }
 .shop-carousel { display: flex; }
+.shop-container-mobile { display: none; }   
 .shop-carousel-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: SHOP
 ====================================== */
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
+.shop-container-mobile {
+width: 100%;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;   
+margin: 30px auto;
+}
+/* INFORMACIÓN */
+.shop-information-mobile {
+width: 100%;
+box-sizing: border-box;
+background:#3A0052 !important;   
+padding: 20px;
+}
+.shop-information-text-mobile {
+font-family: 'Fuggles', cursive;
+font-size: 5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1;
+margin: 0;
+}
+/* CARRUSEL*/   
 .shop-carousel-mobile {
 position: relative;
-z-index: 1; 
 width: 100%;
 height: 500px;
 box-sizing: border-box;   
@@ -4852,12 +4904,9 @@ display: flex;
 justify-content: center;
 align-items: center;   
 background: #000000 !important;
-border: 3px solid #A855F7 !important;
-margin: 30px auto;
 }
 .shop-carousel-image-mobile {
-position: absolute;
-z-index: 1;    
+position: absolute;  
 width: 100%;
 height: 100%;
 object-fit: cover;
@@ -4868,9 +4917,42 @@ transition: opacity 1s ease-in-out;
 .shop-carousel-image-mobile.active {
 opacity: 1;
 }
+/* MARQUEE */
+.shop-marquee-mobile {
+width: 100%;
+box-sizing: border-box;  
+background: #320046 !important;
+padding: 10px;
+overflow: hidden;
+white-space: nowrap; 
+position: relative;
+display: block;
+text-decoration: none !important;
+}
+.shop-marquee-mobile::after {
+content: "Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!   Be a part of Alone!";
+display: inline-block;
+padding-left: 100%;
+animation: marquee 30s linear infinite;
+font-family: 'Fuggles', cursive;
+font-size: 2rem;
+color: #00FF00 !important;
+}
+/* ANIMACIÓN */
+@keyframes marquee {
+0% {
+transform: translateX(0);
+}
+100% {
+transform: translateX(-100%);
+}
+}  
 /* CONTROL */
+.shop-container { display: none; }
 .shop-carousel { display: none; }
+.shop-container-mobile { display: flex; }   
 .shop-carousel-mobile { display: flex; }
+}
 }
 
 /* ======================================
