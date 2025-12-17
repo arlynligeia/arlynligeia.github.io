@@ -866,15 +866,6 @@ allowfullscreen>
 </div>
 </section>
 <!-- FIN 1969 PC -->
-
-
-
-
-
-
-
-
-
   
 <!-- 1969 MOBILE -->
 <section class="album1969-section main-section mobile-only" id="album1969-mobile">
@@ -896,19 +887,6 @@ allowfullscreen>
 </div>  
 </section>
 <!-- FIN 1969 MOBILE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 <!-- FASHION PC -->
 <section class="fashion-section main-section" id="fashion">
@@ -1353,19 +1331,6 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 </div>
 </section>
 <!-- FIN GIFTS MOBILE -->
-
-
-
-
-
-
-
-
-
-
-
-
-
   
 <!-- CONTACT PC -->
 <section class="contact-section main-section" id="contact">
@@ -1440,7 +1405,7 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 <!-- CONTACT FANS PC -->
 <section class="subsection" id="contact-contactforfans">
 <div class="contactforfans-container">
-<h2 class="contactforfans-title"><a href="#contactforfans">CONTACT FOR WORK</a></h2>
+<h2 class="contactforfans-title"><a href="#contactforfans">CONTACT FOR FANS</a></h2>
 <!-- CONTENEDOR: FORMULARIO -->
 <div class="contactforfans-form">
 <form class="contactforfans-form" action="https://formspree.io/f/mvgqjllr" method="POST">  
@@ -1465,7 +1430,7 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 <!-- CONTACT FANS MOBILE -->
 <section class="subsection mobile-only" id="contact-mobile-contactforfans">
 <div class="contactforfans-container-mobile">
-<h2 class="contactforfans-title-mobile"><a href="#contactforfans-mobile">CONTACT FOR WORK</a></h2>
+<h2 class="contactforfans-title-mobile"><a href="#contactforfans-mobile">CONTACT FOR FANS</a></h2>
 <!-- CONTENEDOR: FORMULARIO -->
 <div class="contactforfans-form-mobile">
 <form class="contactforfans-form-mobile" action="https://formspree.io/f/mvgqjllr" method="POST">  
@@ -3065,6 +3030,26 @@ console.log('🔧 Navegación iniciada');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
+
+ // === EXCEPCIÓN PARA CONTACT ===
+  if (sectionId === 'contact') {
+    // OCULTAR TODAS LAS SECCIONES  
+    document.querySelectorAll('.main-section, .subsection').forEach(section => {
+      section.style.display = 'none';
+    });
+    // MOSTRAR SOLO LA SECCIÓN CONTACT (NO sus subsecciones)
+    const mainSection = document.getElementById(sectionId);
+    if (mainSection) {
+      mainSection.style.display = 'block';
+      // NO mostrar subsecciones automáticamente
+      mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return; // Salir de la función aquí
+  }
+  // === FIN EXCEPCIÓN ===
+
+
+  
 // OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
