@@ -3069,6 +3069,26 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
+
+
+// === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
+if (subsectionId === 'contact-contactforfans') {
+  // OCULTAR TODAS LAS SECCIONES  
+  document.querySelectorAll('.main-section, .subsection').forEach(section => {
+    section.style.display = 'none';
+  });
+  // MOSTRAR SOLO LA SUBSECCIÓN CONTACT-FOR-FANS
+  const subsection = document.getElementById(subsectionId);
+  if (subsection) {
+    subsection.style.display = 'block';
+    subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  return; // Salir de la función aquí
+}
+// === FIN EXCEPCIÓN ===
+
+
+  
 const mainSectionId = subsectionId.split('-')[0];
 showOnlyOneSection(mainSectionId);
 // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
