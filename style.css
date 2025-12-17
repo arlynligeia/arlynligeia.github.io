@@ -3644,7 +3644,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 80px; 
+height: 60px; 
 background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
@@ -3652,10 +3652,11 @@ border-radius: 20px 20px 0 0;
 position: relative;
 z-index: 2;
 display: block;
-font-family: 'Fuggles', cursive;
-font-size: 3rem;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: #FF66CC !important;
 text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -3671,12 +3672,12 @@ margin: 0px;
 }
 .bemypatron-information-text-mobile,
 .bemypatron-information-text-end-mobile {
-font-family: 'Fuggles', cursive;
-font-size: 2rem;
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
-line-height: 1;
+line-height: 1.5;
 margin: 0 0 10px 0;
 }
 .bemypatron-information-text-end-mobile {
@@ -3764,15 +3765,13 @@ height: auto;
 display: block;
 border-radius: 0px;
 }
-
 /* CONTENEDOR: INFORMACIÓN */
 .supportmywork-information {
 width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.supportmywork-information-text,
-.supportmywork-information-text-end {
+.supportmywork-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -3780,9 +3779,6 @@ text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.supportmywork-information-text-end {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .supportmywork-button {
@@ -3812,7 +3808,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmywork-button-donatewithpaypal:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .supportmywork-container { display: block; }
 .supportmywork-container-mobile { display: none; }
 /* ======================================
@@ -3825,8 +3821,8 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .supportmywork-container-mobile::before {
 content: "";
@@ -3835,18 +3831,19 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 80px; 
-background: #320046 !important;
+height: 60px; 
+background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
 .supportmywork-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
-font-family: 'Fuggles', cursive;
-font-size: 3rem;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: #FF66CC !important;
-text-decoration: none;  
+text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -3854,13 +3851,17 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
-.supportmywork-image-mobile {
+/* CONTENEDOR: IMAGEN */
+.supportmywork-image-mobile,
+.supportmywork-image-2-mobile,
+.supportmywork-image-3-mobile {
 width: 100%;
 box-sizing: border-box;   
 margin: 0 0 20px 0;
 }
-.supportmywork-image-mobile img {
+.supportmywork-image-mobile img,
+.supportmywork-image-2-mobile img,
+.supportmywork-image-3-mobile img {
 width: 100%;
 height: auto;
 display: block;
@@ -3872,18 +3873,14 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.supportmywork-information-text-mobile,
-.supportmywork-information-text-end-mobile {
-font-family: 'Fuggles', cursive;
-font-size: 2rem;
+.supportmywork-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
-line-height: 1;
+line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.supportmywork-information-text-end-mobile {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .supportmywork-button-mobile {
@@ -3912,7 +3909,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmywork-button-donatewithpaypal-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .supportmywork-container { display: none; }
 .supportmywork-container-mobile { display: block; }
 }
@@ -3975,8 +3972,7 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.supportmystudies-information-text,
-.supportmystudies-information-text-end {
+.supportmystudies-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -3984,9 +3980,6 @@ text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.supportmystudies-information-text-end {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .supportmystudies-button {
@@ -4016,7 +4009,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmystudies-button-donatewithpaypal:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .supportmystudies-container { display: block; }
 .supportmystudies-container-mobile { display: none; }
 /* ======================================
@@ -4029,8 +4022,8 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .supportmystudies-container-mobile::before {
 content: "";
@@ -4039,18 +4032,19 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 80px; 
-background: #320046 !important;
+height: 60px; 
+background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
 .supportmystudies-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
-font-family: 'Fuggles', cursive;
-font-size: 3rem;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: #FF66CC !important;
-text-decoration: none;     
+text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -4058,7 +4052,7 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
+/* CONTENEDOR: IMAGEN */
 .supportmystudies-image-mobile {
 width: 100%;
 box-sizing: border-box;   
@@ -4076,18 +4070,14 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.supportmystudies-information-text-mobile,
-.supportmystudies-information-text-end-mobile {
-font-family: 'Fuggles', cursive;
-font-size: 2rem;
+.supportmystudies-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
-line-height: 1;
+line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.supportmystudies-information-text-end-mobile {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .supportmystudies-button-mobile {
@@ -4116,7 +4106,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .supportmystudies-button-donatewithpaypal-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .supportmystudies-container { display: none; }
 .supportmystudies-container-mobile { display: block; }
 }
@@ -4183,8 +4173,7 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.gifts-information-text,
-.gifts-information-text-end {
+.gifts-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -4192,9 +4181,6 @@ text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.gifts-information-text-end {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .gifts-button {
@@ -4224,7 +4210,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .gifts-button-donatewithpaypal:hover {
 transform: scale(1.05);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .gifts-container { display: block; }
 .gifts-container-mobile { display: none; }
 /* ======================================
@@ -4237,8 +4223,8 @@ width: 90%;
 box-sizing: border-box;
 background: #3A0052 !important;
 border-radius: 20px;
-padding: 20px;
 margin: 30px auto;
+padding: 20px;
 }
 .gifts-container-mobile::before {
 content: "";
@@ -4247,18 +4233,19 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 80px; 
-background: #320046 !important;
+height: 60px; 
+background: #320046 !important;  
 border-radius: 20px 20px 0 0;
 }
 .gifts-title-mobile {
 position: relative;
 z-index: 2;
 display: block;
-font-family: 'Fuggles', cursive;
-font-size: 3rem;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
 color: #FF66CC !important;
-text-decoration: none;     
+text-decoration: none;
+text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0; 
 }
@@ -4266,7 +4253,7 @@ margin: 0 0 10px 0;
 color: #FF66CC !important;
 text-decoration: none;
 }
-/* CONTENEDOR: IMAGEN MÓVIL */
+/* CONTENEDOR: IMAGEN */
 .gifts-image-mobile {
 width: 100%;
 box-sizing: border-box;   
@@ -4284,18 +4271,14 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
-.gifts-information-text-mobile,
-.gifts-information-text-end-mobile {
-font-family: 'Fuggles', cursive;
-font-size: 2rem;
+.gifts-information-text-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
-line-height: 1;
+line-height: 1.5;
 margin: 0 0 10px 0;
-}
-.gifts-information-text-end-mobile {
-margin-bottom: 0px;
 }
 /* CONTENEDOR: BOTÓN */
 .gifts-button-mobile {
@@ -4324,7 +4307,7 @@ transition: transform 0.3s ease, background-color 0.3s ease;
 .gifts-button-donatewithpaypal-mobile:hover {
 transform: scale(1.05);
 } 
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
+/* CONTROL */
 .gifts-container { display: none; }
 .gifts-container-mobile { display: block; }
 }
