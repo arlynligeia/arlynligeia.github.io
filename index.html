@@ -143,7 +143,7 @@
 <li><a href="#bemypatron-mobile" data-section="bemypatron">Be my Patron</a></li>
 <li><a href="#contact-mobile" data-section="contact">Contact</a></li>
 <li><a href="#shop-mobile" data-section="shop">Store</a></li>
-<li><a class="cart-buttonmobile" href="https://arlynligeiastore.myshopify.com/cart">Cart</a></li>
+<li><a href="https://arlynligeiastore.myshopify.com/cart" target="_blank">Cart</a></li>
 </ul>
 </div>
 </div>
@@ -1430,7 +1430,7 @@ target="_blank">NOTAS SOBRE EMPODERAMIENTO FEMENINO EN EL PERÚ</a>
 <!-- CONTACT FANS MOBILE -->
 <section class="subsection mobile-only" id="contact-mobile-contactforfans">
 <div class="contactforfans-container-mobile">
-<h2 class="contactforfans-title-mobile"><a href="#contactforfans-mobile">CONTACT FOR FANS</a></h2>
+<h2 class="contactforfans-title-mobile"><a href="#contact-mobile-contactforfans">CONTACT FOR FANS</a></h2>
 <!-- CONTENEDOR: FORMULARIO -->
 <div class="contactforfans-form-mobile">
 <form class="contactforfans-form-mobile" action="https://formspree.io/f/mvgqjllr" method="POST">  
@@ -3030,26 +3030,22 @@ console.log('🔧 Navegación iniciada');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-
- // === EXCEPCIÓN PARA CONTACT ===
-  if (sectionId === 'contact') {
-    // OCULTAR TODAS LAS SECCIONES  
-    document.querySelectorAll('.main-section, .subsection').forEach(section => {
-      section.style.display = 'none';
-    });
-    // MOSTRAR SOLO LA SECCIÓN CONTACT (NO sus subsecciones)
-    const mainSection = document.getElementById(sectionId);
-    if (mainSection) {
-      mainSection.style.display = 'block';
-      // NO mostrar subsecciones automáticamente
-      mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-    return; // Salir de la función aquí
-  }
-  // === FIN EXCEPCIÓN ===
-
-
-  
+// === EXCEPCIÓN PARA CONTACT ===
+if (sectionId === 'contact') {
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SOLO LA SECCIÓN CONTACT (NO sus subsecciones)
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+// NO mostrar subsecciones automáticamente
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return; // Salir de la función aquí
+}
+// === FIN EXCEPCIÓN === 
 // OCULTAR TODAS LAS SECCIONES  
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
@@ -3069,26 +3065,21 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
-
-
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
-  // OCULTAR TODAS LAS SECCIONES  
-  document.querySelectorAll('.main-section, .subsection').forEach(section => {
-    section.style.display = 'none';
-  });
-  // MOSTRAR SOLO LA SUBSECCIÓN CONTACT-FOR-FANS
-  const subsection = document.getElementById(subsectionId);
-  if (subsection) {
-    subsection.style.display = 'block';
-    subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-  return; // Salir de la función aquí
+// OCULTAR TODAS LAS SECCIONES  
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+// MOSTRAR SOLO LA SUBSECCIÓN CONTACT-FOR-FANS
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.style.display = 'block';
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return; // Salir de la función aquí
 }
 // === FIN EXCEPCIÓN ===
-
-
-  
 const mainSectionId = subsectionId.split('-')[0];
 showOnlyOneSection(mainSectionId);
 // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
@@ -3158,6 +3149,25 @@ const menuLinks = document.querySelectorAll('.menu-mobile-hamburger-overlay a');
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
+
+
+// === EXCEPCIÓN PARA CONTACT MOBILE ===
+  if (sectionId === 'contact-mobile') {
+    // OCULTAR TODAS LAS SECCIONES MOBILE  
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+      section.style.display = 'none';
+    });
+    // MOSTRAR SOLO CONTACT MOBILE (NO sus subsecciones)
+    const mainSection = document.getElementById(sectionId);
+    if (mainSection && mainSection.classList.contains('mobile-only')) {
+      mainSection.style.display = 'block';
+      mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return; // Salir de la función aquí
+  }
+  // === FIN EXCEPCIÓN ===
+
+ 
 // OCULTAR TODAS LAS SECCIONES MOBILE  
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
@@ -3180,6 +3190,28 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
+
+
+// === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
+  if (subsectionId === 'contact-mobile-contactforfans') {
+    // OCULTAR TODAS LAS SECCIONES MOBILE  
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+      section.style.display = 'none';
+    });
+    // MOSTRAR SOLO CONTACT-FOR-FANS MOBILE
+    const subsection = document.getElementById(subsectionId);
+    if (subsection) {  
+      subsection.style.display = 'block';
+      subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    return; // Salir de la función aquí
+  }
+  // === FIN EXCEPCIÓN ===
+
+
+
+
+  
 const mainSectionId = subsectionId.split('-')[0] + '-mobile';
 showOnlyOneSection(mainSectionId);
 // DESPLAZAMIENTO HACIA LA SUBSECCIÓN
