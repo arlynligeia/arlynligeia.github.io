@@ -3238,28 +3238,44 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
+  
 // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA (SOLO SECCIONES PRINCIPALES)
 menuLinks.forEach(link => {
-link.addEventListener('click', function(e) {
-e.preventDefault();
-const href = this.getAttribute('href');
-if (href.startsWith('#')) {
-const targetId = href.replace('#', '');
-console.log('📱 Menú móvil: Navegando a:', targetId);
-// Convertir a ID mobile (ej: #home → #home-mobile)
-const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
-// Navegar a la sección principal mobile
-showOnlyOneSection(mobileSectionId);
-history.pushState(null, null, `#${targetId}`);
-// Cerrar menú después de navegar
-hamburgerMenu.classList.remove('active');
-const spans = hamburgerBtn.querySelectorAll('span');
-spans[0].style.transform = 'none';
-spans[1].style.opacity = '1';
-spans[2].style.transform = 'none';
-}
+  link.addEventListener('click', function(e) {
+    // EXCEPCIÓN: Si es el botón Cart, NO prevenir el comportamiento por defecto
+    if (this.classList.contains('cart-mobile-button')) {
+      // Solo cerrar el menú y dejar que el navegador siga el link normalmente
+      hamburgerMenu.classList.remove('active');
+      const spans = hamburgerBtn.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+      return; // Salir sin preventDefault
+    }
+    
+    // Para TODOS los demás links, aplicar preventDefault
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      const targetId = href.replace('#', '');
+      console.log('📱 Menú móvil: Navegando a:', targetId);
+      // Convertir a ID mobile (ej: #home → #home-mobile)
+      const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
+      // Navegar a la sección principal mobile
+      showOnlyOneSection(mobileSectionId);
+      history.pushState(null, null, `#${targetId}`);
+      // Cerrar menú después de navegar
+      hamburgerMenu.classList.remove('active');
+      const spans = hamburgerBtn.querySelectorAll('span');
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+  });
 });
-});
+
+
+  
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR (IGUAL A PC)
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
