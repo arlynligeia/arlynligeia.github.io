@@ -428,9 +428,10 @@ transform: translateX(-100%);
 /* CONTROL */
 .home-container { display: flex; }
 .home-carousel { display: flex; }
+.home-container-mobile { display: none; }   
 .home-carousel-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: SHOP
+   MOVIL RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
 .home-container-mobile {
@@ -518,9 +519,12 @@ transform: translateX(-100%);
 /* CONTROL */
 .home-container { display: none; }
 .home-carousel { display: none; }
-.home-container-mobile { display: block; }   
+.home-container-mobile { display: flex; }   
 .home-carousel-mobile { display: flex; }
 }
+
+
+
 
 
 
@@ -7973,7 +7977,7 @@ margin-bottom: 0px;
 .subsection.mobile-only:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
-#home-mobile { display: block; }
+#home-mobile { display: flex; }
 #home-socialmediacontent-mobile,
 #home-tiktokhighlight-mobile, 
 #home-youtubehighlight-mobile { display: block; }
