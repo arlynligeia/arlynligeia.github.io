@@ -3756,7 +3756,11 @@ border-radius: 0px;
 /* CONTENEDOR: IMAGEN */
 .supportmywork-columns-grid-image-2 {
 width: 100%;
-min-width: 0;   
+min-width: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+gap: 20px;
 margin: 0px;
 }
 .supportmywork-columns-grid-image-2 img {
