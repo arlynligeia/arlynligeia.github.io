@@ -4797,29 +4797,28 @@ text-align: center;
 line-height: 1;
 margin: 0;
 }
-/* CARRUSEL*/
-.shop-carousel {
+/* BANNER */
+.shop-banner {
 position: relative;
+z-index: 1;   
 width: 100%;
-height: calc(100vh - 220px);
 box-sizing: border-box;
+height: calc(100vh - 220px);
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #000000;
+background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 40px auto !important; 
 }
-.shop-carousel-image {
+.shop-banner img {
 position: absolute;
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
-background: #000000;
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.shop-carousel-image.active {
-opacity: 1;
+background: #000000 !important;
 }
 /* MARQUEE */
 .shop-marquee {
@@ -4853,9 +4852,9 @@ transform: translateX(-100%);
 }
 /* CONTROL */
 .shop-container { display: flex; }
-.shop-carousel { display: flex; }
+.shop-banner { display: flex; }
 .shop-container-mobile { display: none; }   
-.shop-carousel-mobile { display: none; }
+.shop-banner-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: SHOP
 ====================================== */
@@ -4883,9 +4882,10 @@ text-align: center;
 line-height: 1;
 margin: 0;
 }
-/* CARRUSEL*/   
-.shop-carousel-mobile {
+/* BANNER */   
+.shop-banner-mobile {
 position: relative;
+z-index: 1; 
 width: 100%;
 height: 500px;
 box-sizing: border-box;   
@@ -4894,19 +4894,17 @@ display: flex;
 justify-content: center;
 align-items: center;   
 background: #000000 !important;
+border: 3px solid #A855F7 !important;
+margin: 30px auto;
 }
-.shop-carousel-image-mobile {
-position: absolute;  
+.shop-banner-mobile img {
+position: absolute;
+z-index: 1;    
 width: 100%;
 height: 100%;
 object-fit: cover;
 background: #000000 !important;   
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.shop-carousel-image-mobile.active {
-opacity: 1;
-}
+}  
 /* MARQUEE */
 .shop-marquee-mobile {
 width: 100%;
@@ -4939,19 +4937,10 @@ transform: translateX(-100%);
 }  
 /* CONTROL */
 .shop-container { display: none; }
-.shop-carousel { display: none; }
+.shop-banner { display: none; }
 .shop-container-mobile { display: flex; }   
-.shop-carousel-mobile { display: flex; }
+.shop-banner-mobile { display: flex; }
 }
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    DIGITAL PRODUCTS
