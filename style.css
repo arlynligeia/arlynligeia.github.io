@@ -3184,43 +3184,38 @@ background: #000000 !important;
 }
 
 /* ======================================
-    SCIENCE PC
+   SCIENCE BANNER PC
 ====================================== */
-.science-carousel {
+.science-banner {
 position: relative;
-z-index: 1; 
+z-index: 1;   
 width: 100%;
-height: calc(100vh - 220px);
 box-sizing: border-box;
+height: calc(100vh - 220px);
 overflow: hidden;
 display: flex;
 justify-content: center;
 align-items: center;
 background: #000000 !important;
 border: 3px solid #A855F7 !important;
-margin: 40px auto;
+margin: 40px auto !important; 
 }
-.science-carousel-image {
+.science-banner img {
 position: absolute;
-z-index: 1; 
+z-index: 1;
 width: 100%;
 height: 100%;
 object-fit: cover;
 background: #000000 !important;
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.science-carousel-image.active {
-opacity: 1;
 }
 /* CONTROL */
-.science-carousel { display: flex; }
-.science-carousel-mobile { display: none; }
+.science-banner { display: flex; }
+.science-banner-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: SCIENCE
 ====================================== */
 @media (max-width: 768px) {  
-.science-carousel-mobile {
+.science-banner-mobile {
 position: relative;
 z-index: 1; 
 width: 100%;
@@ -3234,22 +3229,17 @@ background: #000000 !important;
 border: 3px solid #A855F7 !important;
 margin: 30px auto;
 }
-.science-carousel-image-mobile {
+.science-banner-mobile img {
 position: absolute;
 z-index: 1;    
 width: 100%;
 height: 100%;
 object-fit: cover;
 background: #000000 !important;   
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-.science-carousel-image-mobile.active {
-opacity: 1;
 }
 /* CONTROL */
-.science-carousel { display: none; }
-.science-carousel-mobile { display: flex; }
+.science-banner { display: none; }
+.science-banner-mobile { display: flex; }
 }
 
 /* ======================================
