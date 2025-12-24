@@ -987,20 +987,16 @@ allowfullscreen>
 
 <!-- SCIENCE PC -->
 <section class="science-section main-section" id="science">
-<div class="science-carousel"> 
-<img class="science-carousel-image active" id="science-carousel-image-1"src="assets/assets/Nuevayork.png" alt=" Image 1">
-<img class="science-carousel-image" id="science-carousel-image-2" src="assets/assets/Fondociudad.png" alt="Image 2">
-<img class="science-carousel-image" id="science-carousel-image-3" src="assets/assets/Nuevayork.png" alt="Image 3">
+<div class="science-banner">
+<img src="assets/assets/Banner Science.png" alt="Science Banner"/>
 </div>
 </section>
-<!-- FIN SCIENCE PC -->  
+<!-- FIN SCIENCE PC -->
 
 <!-- SCIENCE MOBILE -->
 <section class="science-section main-section mobile-only" id="science-mobile">
-<div class="science-carousel-mobile"> 
-<img class="science-carousel-image-mobile active" id="science-carousel-image-1-mobile" src="assets/assets/Nuevayork.png" alt="Image 1">
-<img class="science-carousel-image-mobile" id="science-carousel-image-2-mobile" src="assets/assets/Fondociudad.png" alt="Image 2">
-<img class="science-carousel-image-mobile" id="science-carousel-image-3-mobile" src="assets/assets/Nuevayork.png" alt="Image 3">
+<div class="science-banner-mobile">
+<img src="assets/assets/Nuevayork.png" alt="Science Banner"/>
 </div>
 </section>
 <!-- FIN SCIENCE MOBILE -->
@@ -3570,53 +3566,7 @@ setupCarouselNavigationMobile();
 
 
   
-<!-- SCRIP: CARRUSEL SCIENCE PC-->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🔬 Carrusel Science iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarousel() {
-const images = document.querySelectorAll('.science-carousel-image');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel Science configurado - Cambio cada 10 segundos');
-}
-// INICIALIZACIÓN 
-startCarousel();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL SCIENCE PC -->
-  
-<!-- SCRIP: CARRUSEL SCIENCE MOBILE -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-console.log('🔬 Carrusel Science Mobile iniciado');
-// 1. FUNCIÓN: CARRUSEL AUTOMÁTICO
-function startCarouselMobile() {
-const images = document.querySelectorAll('.science-carousel-image-mobile');
-let currentImageIndex = 0;
-// 2. FUNCIÓN: CAMBIAR IMAGEN
-function changeImage() {
-images.forEach(img => img.classList.remove('active'));
-images[currentImageIndex].classList.add('active');
-currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-changeImage();
-setInterval(changeImage, 10000);
-console.log('✅ Carrusel Science Mobile configurado - Cambio cada 10 segundos');
-}
-// INICIALIZACIÓN   
-startCarouselMobile();
-});
-</script>
-<!-- FIN SCRIP: CARRUSEL SCIENCE MOBILE -->
+
 
 
   
