@@ -5601,6 +5601,56 @@ color: #ff0000 !important;
 }
 
 /* ======================================
+    GO TO SHOPIFY
+====================================== */
+.gotoshopify-container {
+position: relative;
+width: 800px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;   
+padding: 30px;
+}
+.gotoshopify-information-text {
+font-family: 'Fuggles', cursive;
+font-size: 5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1;
+margin: 0;
+}
+/* CONTROL */
+.gotoshopify-container { display: block; }
+.gotoshopify-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SHOP
+====================================== */
+@media (max-width: 768px) {
+.gotoshopify-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.gotoshopify-information-text-mobile {
+font-family: 'Fuggles', cursive;
+font-size: 3rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: center;   
+line-height: 1;
+margin: 0;
+}
+/* CONTROL */
+.gotoshopify-container { display: none; }
+.gotoshopify-container-mobile { display: block; }
+}
+
+/* ======================================
    SHOP INFORMATION PC 
 ====================================== */
 .shopinformation-container {
