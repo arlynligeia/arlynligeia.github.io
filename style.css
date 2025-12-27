@@ -6609,6 +6609,13 @@ transition: transform 0.3s ease;
 .digitalfilm-button-continueshopping:hover {
 transform: scale(1.05);
 }
+/* CONTENEDOR: TARJETAS CERRADAS/OPACAS */
+.digitalfilm-cards-card.closed {
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;    
+}
 /* CONTROL */
 .digitalfilm-container { display: block; }
 .digitalfilm-container-mobile { display: none; }
@@ -6734,6 +6741,12 @@ margin-bottom:0px;
 .digitalfilm-button-continueshopping-mobile:hover {
 transform: scale(1.05);
 }
+.digitalfilm-cards-card-mobile.closed {
+opacity: 0.5;
+text-decoration: none;
+cursor: not-allowed;
+pointer-events: none;    
+}   
 /* CONTROL */
 .digitalfilm-container { display: none; }
 .digitalfilm-container-mobile { display: block; }
