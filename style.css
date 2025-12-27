@@ -989,6 +989,196 @@ border: none;
 }
 
 /* ======================================
+   SOCIAL LINKS
+====================================== */
+.sociallinks-container {
+position: relative;
+width: 600px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;  
+padding: 30px;
+}
+.sociallinks-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.sociallinks-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.sociallinks-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: CONTENIDO */
+.sociallinks-content {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+/* CONTENEDOR: BOTON */
+.sociallinks-content-button {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.sociallinks-content-button-tiktok,
+.sociallinks-content-button-instagram,
+.sociallinks-content-button-facebook,
+.sociallinks-content-button-threads,
+.sociallinks-content-button-x,
+.sociallinks-content-button-tumblr,
+.sociallinks-content-button-reddit,
+.sociallinks-content-button-pinterest,
+.sociallinks-content-button-youtube,
+.sociallinks-content-button-academia {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;  
+font-weight: bold;   
+margin: 0 0 10px 0; 
+padding: 10px 20px;   
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.sociallinks-content-button-tiktok:hover,
+.sociallinks-content-button-instagram:hover,
+.sociallinks-content-button-facebook:hover,
+.sociallinks-content-button-threads:hover,
+.sociallinks-content-button-x:hover,
+.sociallinks-content-button-tumblr:hover,
+.sociallinks-content-button-reddit:hover,
+.sociallinks-content-button-pinterest:hover,
+.sociallinks-content-button-youtube:hover,
+.sociallinks-content-button-academia:hover {
+transform: scale(1.05);
+}     
+/* CONTROL */
+.sociallinks-container { display: block; }
+.sociallinks-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SOCIAL MEDIA CONTENT
+====================================== */
+@media (max-width: 768px) {
+.sociallinks-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.sociallinks-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.sociallinks-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.sociallinks-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: CONTENIDO */
+.sociallinks-content-mobile {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+/* CONTENEDOR: BOTON */
+.sociallinks-content-button-mobile {
+width: 100%;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.sociallinks-content-button-tiktok-mobile,
+.sociallinks-content-button-instagram-mobile,
+.sociallinks-content-button-facebook-mobile,
+.sociallinks-content-button-threads-mobile,
+.sociallinks-content-button-x-mobile,
+.sociallinks-content-button-tumblr-mobile,
+.sociallinks-content-button-reddit-mobile,
+.sociallinks-content-button-pinterest-mobile,
+.sociallinks-content-button-youtube-mobile,
+.sociallinks-content-button-academia-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;  
+font-weight: bold;   
+margin: 0 0 10px 0; 
+padding: 10px 20px;   
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.sociallinks-content-button-tiktok-mobile:hover,
+.sociallinks-content-button-instagram-mobile:hover,
+.sociallinks-content-button-facebook-mobile:hover,
+.sociallinks-content-button-threads-mobile:hover,
+.sociallinks-content-button-x-mobile:hover,
+.sociallinks-content-button-tumblr-mobile:hover,
+.sociallinks-content-button-reddit-mobile:hover,
+.sociallinks-content-button-pinterest-mobile:hover,
+.sociallinks-content-button-youtube-mobile:hover,
+.sociallinks-content-button-academia-mobile:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.sociallinks-container { display: none; }
+.sociallinks-container-mobile { display: block; }
+}
+
+/* ======================================
    UNIVERSE
 ====================================== */
 .universe-container {
