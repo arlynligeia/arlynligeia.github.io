@@ -8298,7 +8298,8 @@ margin-bottom: 0px;
 #home { display: block; }
 #home-socialmediacontent,
 #home-tiktokhighlight, 
-#home-youtubehighlight { display: block; }
+#home-youtubehighlight,
+#home-sociallinks { display: block; }
 
 /* ======================================
    OCULTAR TODAS LAS SECCIONES MOBILE
@@ -8308,10 +8309,11 @@ margin-bottom: 0px;
 .subsection.mobile-only:not([id^="home-"]) { display: none; }
 
 /* DEJAR SOLO LA SECCIÓN HOME MOBILE */
-#home-mobile { display: flex; }
-#home-socialmediacontent-mobile,
-#home-tiktokhighlight-mobile, 
-#home-youtubehighlight-mobile { display: flex; }
+#home-mobile { display: block; }
+#home-mobile-socialmediacontent,
+#home-mobile-tiktokhighlight, 
+#home-mobile-youtubehighlight,
+#home-mobile-sociallinks { display: block; }
 }
 
 /* ======================================
