@@ -8046,7 +8046,7 @@ width: 100%;
 text-align: center; 
 margin: 0px;
 }
-.nebulaexecutiveproducer-columns-grid-action-button-addtocart,
+.nebulaexecutiveproducer-columns-grid-action-button-pay,
 .nebulaexecutiveproducer-columns-grid-action-button-share {
 display: inline-block;
 background: #ff1493 !important; 
@@ -8068,7 +8068,7 @@ transition: transform 0.3s ease;
 background-color: #FF6B00 !important;
 font-size: 1rem;
 }
-.nebulaexecutiveproducer-columns-grid-action-button-addtocart:hover,
+.nebulaexecutiveproducer-columns-grid-action-button-pay:hover,
 .nebulaexecutiveproducer-columns-grid-action-button-share:hover {
 transform: scale(1.05);
 }
@@ -8143,8 +8143,7 @@ justify-content: space-between;
 margin: 0px;
 }
 .nebulaexecutiveproducer-button-back,
-.nebulaexecutiveproducer-button-continueshopping,
-.nebulaexecutiveproducer-button-gotocart {
+.nebulaexecutiveproducer-button-continueshopping {
 display: flex;
 justify-content: space-between;
 background: #00CED1 !important;
@@ -8162,13 +8161,8 @@ border: none;
 cursor: pointer;
 transition: transform 0.3s ease;
 }
-.nebulaexecutiveproducer-button-gotocart {
-background-color: #ff1493 !important; 
-color: white !important;
-}
 .nebulaexecutiveproducer-button-back:hover,
-.nebulaexecutiveproducer-button-continueshopping:hover,
-.nebulaexecutiveproducer-button-gotocart:hover {
+.nebulaexecutiveproducer-button-continueshopping:hover {
 transform: scale(1.05);
 }
 /* TEXTO OUT OF STOCK */
@@ -8181,6 +8175,7 @@ font-weight: bold;
  /* CONTROL */
 .nebulaexecutiveproducer-container { display: block; }
 .nebulaexecutiveproducer-container-mobile { display: none; }
+
 /* ======================================
    MOVIL RESPONSIVE: NEBULA EXECUTIVE PRODUCER
 ====================================== */
@@ -8259,7 +8254,7 @@ display: block;
 text-align: center;
 margin: 0px;
 }
-.nebulaexecutiveproducer-product-button-addtocart-mobile,
+.nebulaexecutiveproducer-product-button-pay,
 .nebulaexecutiveproducer-product-button-share-mobile {
 display: inline-block;
 background: #ff1493 !important; 
@@ -8281,7 +8276,7 @@ transition: all 0.3s ease;
 background-color: #FF6B00 !important;
 font-size: 0.8rem;
 }
-.nebulaexecutiveproducer-product-button-addtocart-mobile:hover,
+.nebulaexecutiveproducer-product-button-pay:hover,
 .nebulaexecutiveproducer-product-button-share-mobile:hover {
 transform: scale(1.05);
 } 
@@ -8392,8 +8387,7 @@ text-align: center;
 margin: 0px;
 }
 .nebulaexecutiveproducer-button-back-mobile,
-.nebulaexecutiveproducer-button-continueshopping-mobile,
-.nebulaexecutiveproducer-button-gotocart-mobile {
+.nebulaexecutiveproducer-button-continueshopping-mobile {
 display: inline-block;
 background: #00CED1 !important;
 border-radius: 6px; 
@@ -8410,23 +8404,14 @@ border: none;
 cursor: pointer; 
 transition: all 0.3s ease;  
 }
-.nebulaexecutiveproducer-button-gotocart-mobile {
-background-color: #ff1493 !important; 
-color: white !important;
-}
-.nebulaexecutiveproducer-button-gotocart-mobile {
-margin: 0px ; 
-}
 .nebulaexecutiveproducer-button-back-mobile:hover,
-.nebulaexecutiveproducer-button-continueshopping-mobile:hover,
-.nebulaexecutiveproducer-button-gotocart-mobile:hover {
+.nebulaexecutiveproducer-button-continueshopping-mobile:hover {
 transform: scale(1.05);
 }
  /* CONTROL */
 .nebulaexecutiveproducer-container { display: none; }
 .nebulaexecutiveproducer-container-mobile { display: block; }
 }
-
 
 
 
