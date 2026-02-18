@@ -7914,6 +7914,547 @@ transform: scale(1.05);
 }
 
 /* ======================================
+   NEBULA EXECUTIVE PRODUCER
+====================================== */
+.nebulaexecutiveproducer-container {
+position: relative;
+width: 900px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.nebulaexecutiveproducer-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.nebulaexecutiveproducer-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.nebulaexecutiveproducer-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.nebulaexecutiveproducer-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.nebulaexecutiveproducer-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 10px 0;
+}
+/* CONTENEDOR: GRID DE 3 - IMAGEN */
+.nebulaexecutiveproducer-columns-grid-image {
+width: 100%;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-image img {
+width: 100%;
+height: auto;
+border-radius: 15px;
+margin: 0px;
+}
+/* CONTENEDOR: GRID DE 3 - SINOPSIS */
+.nebulaexecutiveproducer-columns-grid-synopsis {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-subtitle-1,
+.nebulaexecutiveproducer-columns-grid-synopsis-subtitle-2 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+padding: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-subtitle-1 {
+text-align: center;  
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-subtitle-2 {
+color: #00FFFF !important;
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-text-1,
+.nebulaexecutiveproducer-columns-grid-synopsis-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;     
+line-height: 1.5;
+margin: 0px;
+padding: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-text-1 {
+margin-bottom: 20px;
+}
+.nebulaexecutiveproducer-columns-grid-synopsis-text-2 {
+color: #00FFFF !important;
+}
+/* CONTENEDOR: GRID DE 3 - PRECIO Y BOTONES */
+.nebulaexecutiveproducer-columns-grid-action {
+width: 100%;
+height: 100%;  
+display: flex;                   
+flex-direction: column;      
+justify-content: center;    
+align-items: center;      
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-action-value {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;     
+line-height: 1.5;
+margin: 0 0 10px 0;
+padding: 0px;
+} 
+/* CONTENEDOR: BOTONES */
+.nebulaexecutiveproducer-columns-grid-action-button {
+width: 100%;
+text-align: center; 
+margin: 0px;
+}
+.nebulaexecutiveproducer-columns-grid-action-button-addtocart,
+.nebulaexecutiveproducer-columns-grid-action-button-share {
+display: inline-block;
+background: #ff1493 !important; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;  
+margin: 0 0 20px 0;
+padding: 10px 20px;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.nebulaexecutiveproducer-columns-grid-action-button-share {
+background-color: #FF6B00 !important;
+font-size: 1rem;
+}
+.nebulaexecutiveproducer-columns-grid-action-button-addtocart:hover,
+.nebulaexecutiveproducer-columns-grid-action-button-share:hover {
+transform: scale(1.05);
+}
+/* DIVISOR */
+.nebulaexecutiveproducer-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS */
+.nebulaexecutiveproducer-information {
+width: 100%;
+box-sizing: border-box;  
+margin: 0px;
+}
+.nebulaexecutiveproducer-information-subtitle-1,
+.nebulaexecutiveproducer-information-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  #39FF14 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+.nebulaexecutiveproducer-information-subtitle-1 {
+margin-bottom: 30px;
+}
+.nebulaexecutiveproducer-information-text,
+.nebulaexecutiveproducer-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-text-end {
+margin-bottom: 30px;
+}
+.nebulaexecutiveproducer-information p:last-of-type {
+text-align: center;
+}
+/* CONTENEDOR: ICONOS */
+.nebulaexecutiveproducer-information-icons {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-icon {
+width: 30px;
+height: 30px;
+color: #FF6B00 !important;
+transition: all 0.3s ease;
+}
+.nebulaexecutiveproducer-information-icon:hover {
+transform: scale(1.1);
+}
+/* CONTENEDOR: BOTONES FINALES */
+.nebulaexecutiveproducer-button {
+width: 100%;
+box-sizing: border-box;     
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.nebulaexecutiveproducer-button-back,
+.nebulaexecutiveproducer-button-continueshopping,
+.nebulaexecutiveproducer-button-gotocart {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+margin: 0px;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.nebulaexecutiveproducer-button-gotocart {
+background-color: #ff1493 !important; 
+color: white !important;
+}
+.nebulaexecutiveproducer-button-back:hover,
+.nebulaexecutiveproducer-button-continueshopping:hover,
+.nebulaexecutiveproducer-button-gotocart:hover {
+transform: scale(1.05);
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+font-weight: bold;
+}
+ /* CONTROL */
+.nebulaexecutiveproducer-container { display: block; }
+.nebulaexecutiveproducer-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: NEBULA EXECUTIVE PRODUCER
+====================================== */
+@media (max-width: 768px) {
+.nebulaexecutiveproducer-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.nebulaexecutiveproducer-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.nebulaexecutiveproducer-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.nebulaexecutiveproducer-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: PRODUCTO */
+.nebulaexecutiveproducer-product-mobile {
+width: 100%;
+box-sizing: border-box;   
+display: block;
+justify-content: center; 
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN */ 
+.nebulaexecutiveproducer-product-image-mobile {
+width: 100%;
+box-sizing: border-box;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-product-image-mobile img {
+width: 100%;
+height: 200px;
+display: block; 
+border-radius: 15px;
+}
+/* CONTENEDOR: PRECIO */ 
+.nebulaexecutiveproducer-product-value-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0;
+}
+/* CONTENEDOR: BOTÓN */ 
+.nebulaexecutiveproducer-product-button-mobile {
+width: 100%;
+box-sizing: border-box;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.nebulaexecutiveproducer-product-button-addtocart-mobile,
+.nebulaexecutiveproducer-product-button-share-mobile {
+display: inline-block;
+background: #ff1493 !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;
+margin: 0 0 10px 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.nebulaexecutiveproducer-product-button-share-mobile {
+background-color: #FF6B00 !important;
+font-size: 0.8rem;
+}
+.nebulaexecutiveproducer-product-button-addtocart-mobile:hover,
+.nebulaexecutiveproducer-product-button-share-mobile:hover {
+transform: scale(1.05);
+} 
+/* DIVISOR */
+.nebulaexecutiveproducer-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: SYNOPSIS */ 
+.nebulaexecutiveproducer-synopsis-mobile {
+width: 100%;
+box-sizing: border-box;  
+margin: 0px;
+}
+.nebulaexecutiveproducer-synopsis-subtitle-1-mobile,
+.nebulaexecutiveproducer-synopsis-subtitle-2-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+.nebulaexecutiveproducer-synopsis-subtitle-1-mobile {
+text-align: center;
+}
+.nebulaexecutiveproducer-synopsis-subtitle-2-mobile {
+color: #00FFFF !important;
+}
+.nebulaexecutiveproducer-synopsis-text-1-mobile,
+.nebulaexecutiveproducer-synopsis-text-2-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-synopsis-text-2-mobile {
+color: #00FFFF !important;
+}
+/* CONTENEDOR: INFORMACIÓN */ 
+.nebulaexecutiveproducer-information-mobile {
+width: 100%;
+box-sizing: border-box;     
+margin: 0px;
+}
+.nebulaexecutiveproducer-information-subtitle-1-mobile,
+.nebulaexecutiveproducer-information-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color:  #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px ;
+}
+.nebulaexecutiveproducer-information-subtitle-1-mobile {
+margin-bottom: 20px;
+text-align: center;
+}
+.nebulaexecutiveproducer-information-text-mobile,
+.nebulaexecutiveproducer-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-text-end-mobile {
+margin-bottom: 20px;
+}
+.nebulaexecutiveproducer-information-mobile p:last-of-type {
+text-align: center;
+}
+/* CONTENEDOR: ICONOS */
+.nebulaexecutiveproducer-information-icons-mobile {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;  
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.nebulaexecutiveproducer-information-icon-mobile {
+width: 25px;
+height: 25px;
+color: #FF6B00 !important;
+transition: all 0.3s ease;
+}
+.nebulaexecutiveproducer-information-icon-mobile:hover {
+transform: scale(1.1);
+}
+/* CONTENEDOR: BOTONES FINALES */
+.nebulaexecutiveproducer-button-mobile {
+width: 100%;
+box-sizing: border-box;    
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.nebulaexecutiveproducer-button-back-mobile,
+.nebulaexecutiveproducer-button-continueshopping-mobile,
+.nebulaexecutiveproducer-button-gotocart-mobile {
+display: inline-block;
+background: #00CED1 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.nebulaexecutiveproducer-button-gotocart-mobile {
+background-color: #ff1493 !important; 
+color: white !important;
+}
+.nebulaexecutiveproducer-button-gotocart-mobile {
+margin: 0px ; 
+}
+.nebulaexecutiveproducer-button-back-mobile:hover,
+.nebulaexecutiveproducer-button-continueshopping-mobile:hover,
+.nebulaexecutiveproducer-button-gotocart-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.nebulaexecutiveproducer-container { display: none; }
+.nebulaexecutiveproducer-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
    TERMS AND CONDITIONS
 ====================================== */
 .termsandconditions-container {
