@@ -7914,6 +7914,531 @@ transform: scale(1.05);
 }
 
 /* ======================================
+   COMET SPONSOR
+====================================== */
+.cometsponsor-container {
+position: relative;
+width: 900px;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 40px auto;
+padding: 30px;
+}
+.cometsponsor-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cometsponsor-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.cometsponsor-title a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.cometsponsor-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 3 */
+.cometsponsor-columns-grid {
+display: grid;
+grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+gap: 20px;
+margin: 0 0 10px 0;
+}
+/* CONTENEDOR: GRID DE 3 - IMAGEN */
+.cometsponsor-columns-grid-image {
+width: 100%;
+display: flex;
+align-items: center;
+margin: 0px;
+}
+.cometsponsor-columns-grid-image img {
+width: 100%;
+height: auto;
+border-radius: 0px;
+margin: 0px;
+}
+/* CONTENEDOR: GRID DE 3 - SINOPSIS */
+.cometsponsor-columns-grid-synopsis {
+width: 100%;
+box-sizing: border-box;
+display: block;
+margin: 0px;
+}
+.cometsponsor-columns-grid-synopsis-subtitle-1,
+.cometsponsor-columns-grid-synopsis-subtitle-2 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+padding: 0px;
+}
+.cometsponsor-columns-grid-synopsis-subtitle-1 {
+text-align: center;  
+}
+.cometsponsor-columns-grid-synopsis-subtitle-2 {
+color: #00FFFF !important;
+}
+.cometsponsor-columns-grid-synopsis-text-1,
+.cometsponsor-columns-grid-synopsis-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;     
+line-height: 1.5;
+margin: 0px;
+padding: 0px;
+}
+.cometsponsor-columns-grid-synopsis-text-1 {
+margin-bottom: 20px;
+}
+.cometsponsor-columns-grid-synopsis-text-2 {
+color: #00FFFF !important;
+}
+/* CONTENEDOR: GRID DE 3 - PRECIO Y BOTONES */
+.cometsponsor-columns-grid-action {
+width: 100%;
+height: 100%;  
+display: flex;                   
+flex-direction: column;      
+justify-content: center;    
+align-items: center;      
+margin: 0px;
+}
+.cometsponsor-columns-grid-action-value {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;     
+line-height: 1.5;
+margin: 0 0 10px 0;
+padding: 0px;
+} 
+/* CONTENEDOR: BOTONES */
+.cometsponsor-columns-grid-action-button {
+width: 100%;
+text-align: center; 
+margin: 0px;
+}
+.cometsponsor-columns-grid-action-button-pay,
+.cometsponsor-columns-grid-action-button-share {
+display: inline-block;
+background: #ff1493 !important; 
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;  
+margin: 0 0 20px 0;
+padding: 10px 20px;
+border:none;
+cursor: pointer;
+transition: transform 0.3s ease;  
+}
+.cometsponsor-columns-grid-action-button-share {
+background-color: #FF6B00 !important;
+font-size: 1rem;
+}
+.cometsponsor-columns-grid-action-button-pay:hover,
+.cometsponsor-columns-grid-action-button-share:hover {
+transform: scale(1.05);
+}
+/* DIVISOR */
+.cometsponsor-divider {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS */
+.cometsponsor-information {
+width: 100%;
+box-sizing: border-box;  
+margin: 0px;
+}
+.cometsponsor-information-subtitle-1,
+.cometsponsor-information-subtitle {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color:  #39FF14 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+.cometsponsor-information-subtitle-1 {
+margin-bottom: 30px;
+}
+.cometsponsor-information-text,
+.cometsponsor-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.cometsponsor-information-text-end {
+margin-bottom: 30px;
+}
+.cometsponsor-information p:last-of-type {
+text-align: center;
+}
+/* CONTENEDOR: ICONOS */
+.cometsponsor-information-icons {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.cometsponsor-information-icon {
+width: 30px;
+height: 30px;
+color: #FF6B00 !important;
+transition: all 0.3s ease;
+}
+.cometsponsor-information-icon:hover {
+transform: scale(1.1);
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cometsponsor-button {
+width: 100%;
+box-sizing: border-box;     
+display: flex;
+justify-content: space-between;
+margin: 0px;
+}
+.cometsponsor-button-back,
+.cometsponsor-button-continueshopping {
+display: flex;
+justify-content: space-between;
+background: #00CED1 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+margin: 0px;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+.cometsponsor-button-back:hover,
+.cometsponsor-button-continueshopping:hover {
+transform: scale(1.05);
+}
+/* TEXTO OUT OF STOCK */
+.outofstock {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: #00FF00 !important;
+font-weight: bold;
+}
+ /* CONTROL */
+.cometsponsor-container { display: block; }
+.cometsponsor-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: COMET SPONSOR
+====================================== */
+@media (max-width: 768px) {
+.cometsponsor-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3A0052 !important;
+border-radius: 20px;
+margin: 30px auto;
+padding: 20px;
+}
+.cometsponsor-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 140px; 
+background: #320046 !important;
+border-radius: 20px 20px 0 0;
+}
+.cometsponsor-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #FF66CC !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.cometsponsor-title-mobile a {
+color: #FF66CC !important;
+text-decoration: none;
+}
+/* CONTENEDOR: PRODUCTO */
+.cometsponsor-product-mobile {
+width: 100%;
+box-sizing: border-box;   
+display: block;
+justify-content: center; 
+margin: 0px;
+}
+/* CONTENEDOR: IMAGEN */ 
+.cometsponsor-product-image-mobile {
+width: 100%;
+box-sizing: border-box;
+margin: 0 0 10px 0;
+}
+.cometsponsor-product-image-mobile img {
+width: 100%;
+height: 200px;
+display: block; 
+border-radius: 0px;
+}
+/* CONTENEDOR: PRECIO */ 
+.cometsponsor-product-value-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.5rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0;
+}
+/* CONTENEDOR: BOTÓN */ 
+.cometsponsor-product-button-mobile {
+width: 100%;
+box-sizing: border-box;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.cometsponsor-product-button-pay,
+.cometsponsor-product-button-share-mobile {
+display: inline-block;
+background: #ff1493 !important; 
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;
+margin: 0 0 10px 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.cometsponsor-product-button-share-mobile {
+background-color: #FF6B00 !important;
+font-size: 0.8rem;
+}
+.cometsponsor-product-button-pay:hover,
+.cometsponsor-product-button-share-mobile:hover {
+transform: scale(1.05);
+} 
+/* DIVISOR */
+.cometsponsor-divider-mobile {
+width: 100%;
+height: 0; 
+border-top: 3px solid #FF6B00 !important;
+margin: 0 0 10px 0; 
+} 
+/* CONTENEDOR: SYNOPSIS */ 
+.cometsponsor-synopsis-mobile {
+width: 100%;
+box-sizing: border-box;  
+margin: 0px;
+}
+.cometsponsor-synopsis-subtitle-1-mobile,
+.cometsponsor-synopsis-subtitle-2-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px;
+}
+.cometsponsor-synopsis-subtitle-1-mobile {
+text-align: center;
+}
+.cometsponsor-synopsis-subtitle-2-mobile {
+color: #00FFFF !important;
+}
+.cometsponsor-synopsis-text-1-mobile,
+.cometsponsor-synopsis-text-2-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.cometsponsor-synopsis-text-2-mobile {
+color: #00FFFF !important;
+}
+/* CONTENEDOR: INFORMACIÓN */ 
+.cometsponsor-information-mobile {
+width: 100%;
+box-sizing: border-box;     
+margin: 0px;
+}
+.cometsponsor-information-subtitle-1-mobile,
+.cometsponsor-information-subtitle-mobile {
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color:  #00FF00 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0px ;
+}
+.cometsponsor-information-subtitle-1-mobile {
+margin-bottom: 20px;
+text-align: center;
+}
+.cometsponsor-information-text-mobile,
+.cometsponsor-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.cometsponsor-information-text-end-mobile {
+margin-bottom: 20px;
+}
+.cometsponsor-information-mobile p:last-of-type {
+text-align: center;
+}
+/* CONTENEDOR: ICONOS */
+.cometsponsor-information-icons-mobile {
+position: relative;
+z-index: 1;
+display: flex;
+justify-content: center;  
+gap: 10px;
+margin: 0 0 10px 0;
+}
+.cometsponsor-information-icon-mobile {
+width: 25px;
+height: 25px;
+color: #FF6B00 !important;
+transition: all 0.3s ease;
+}
+.cometsponsor-information-icon-mobile:hover {
+transform: scale(1.1);
+}
+/* CONTENEDOR: BOTONES FINALES */
+.cometsponsor-button-mobile {
+width: 100%;
+box-sizing: border-box;    
+display: block;
+text-align: center; 
+margin: 0px;
+}
+.cometsponsor-button-back-mobile,
+.cometsponsor-button-continueshopping-mobile {
+display: inline-block;
+background: #00CED1 !important;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem; 
+color: black !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;   
+font-weight: bold;
+margin: 0 0 10px 0; 
+padding: 10px 20px;
+border: none;
+cursor: pointer; 
+transition: all 0.3s ease;  
+}
+.cometsponsor-button-back-mobile:hover,
+.cometsponsor-button-continueshopping-mobile:hover {
+transform: scale(1.05);
+}
+ /* CONTROL */
+.cometsponsor-container { display: none; }
+.cometsponsor-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
    NEBULA EXECUTIVE PRODUCER
 ====================================== */
 .nebulaexecutiveproducer-container {
