@@ -7998,11 +7998,10 @@ box-sizing: border-box;
 display: block;
 margin: 0px;
 }
-.cometsponsor-columns-grid-synopsis-subtitle-1,
-.cometsponsor-columns-grid-synopsis-subtitle-2 {
+.cometsponsor-columns-grid-synopsis-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: justify;   
@@ -8010,17 +8009,13 @@ line-height: 1.5;
 margin: 0px;
 padding: 0px;
 }
-.cometsponsor-columns-grid-synopsis-subtitle-1 {
+.cometsponsor-columns-grid-synopsis-subtitle {
 text-align: center;  
 }
-.cometsponsor-columns-grid-synopsis-subtitle-2 {
-color: #00FFFF !important;
-}
-.cometsponsor-columns-grid-synopsis-text-1,
-.cometsponsor-columns-grid-synopsis-text-2 {
+.cometsponsor-columns-grid-synopsis-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 text-align: justify;     
 line-height: 1.5;
@@ -8029,9 +8024,6 @@ padding: 0px;
 }
 .cometsponsor-columns-grid-synopsis-text-1 {
 margin-bottom: 20px;
-}
-.cometsponsor-columns-grid-synopsis-text-2 {
-color: #00FFFF !important;
 }
 /* CONTENEDOR: GRID DE 3 - PRECIO Y BOTONES */
 .cometsponsor-columns-grid-action {
@@ -8061,7 +8053,7 @@ text-align: center;
 margin: 0px;
 }
 .cometsponsor-columns-grid-action-button-pay,
-.cometsponsor-columns-grid-action-button-doosier,
+.cometsponsor-columns-grid-action-button-dossier,
 .cometsponsor-columns-grid-action-button-agreement {
 display: inline-block;
 background: #ff1493 !important; 
@@ -8079,13 +8071,13 @@ border:none;
 cursor: pointer;
 transition: transform 0.3s ease;  
 }
-.cometsponsor-columns-grid-action-button-doosier,
+.cometsponsor-columns-grid-action-button-dossier,
 .cometsponsor-columns-grid-action-button-agreement {
 background-color: #FF6B00 !important;
 font-size: 1rem;
 }
 .cometsponsor-columns-grid-action-button-pay:hover,
-.cometsponsor-columns-grid-action-button-doosier:hover,
+.cometsponsor-columns-grid-action-button-dossier:hover,
 .cometsponsor-columns-grid-action-button-agreement:hover {
 transform: scale(1.05);
 }
@@ -8096,7 +8088,6 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
 } 
-
 /* CONTENEDOR: INFORMACIÓN */
 .cometsponsor-information {
 width: 100%;
@@ -8106,7 +8097,7 @@ margin: 0px;
 .cometsponsor-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
-color:  #39FF14 !important;
+color: #39FF14 !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: justify;   
@@ -8128,7 +8119,14 @@ margin: 0 0 10px 0;
 margin-bottom: 30px;
 }
 .cometsponsor-information-subtitle-2 {
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
 color: #00FFFF !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 30px 0 0;
 }
 .cometsponsor-information-text-2 {
 font-family: 'Share Tech Mono', monospace;
@@ -8201,13 +8199,7 @@ font-weight: bold;
 }
  /* CONTROL */
 .cometsponsor-container { display: block; }
-.cometsponsor-container-mobile { display: none; }
-
-
-
-
-
-   
+.cometsponsor-container-mobile { display: none; } 
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
@@ -8228,7 +8220,7 @@ z-index: 1;
 top: 0;
 left: 0;
 width: 100%;
-height: 140px; 
+height: 140px;
 background: #320046 !important;
 border-radius: 20px 20px 0 0;
 }
@@ -8242,7 +8234,7 @@ color: #FF66CC !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;
-margin: 0 0 10px 0; 
+margin: 0 0 10px 0;
 }
 .cometsponsor-title-mobile a {
 color: #FF66CC !important;
@@ -8251,12 +8243,12 @@ text-decoration: none;
 /* CONTENEDOR: PRODUCTO */
 .cometsponsor-product-mobile {
 width: 100%;
-box-sizing: border-box;   
+box-sizing: border-box;
 display: block;
-justify-content: center; 
+justify-content: center;
 margin: 0px;
 }
-/* CONTENEDOR: IMAGEN */ 
+/* CONTENEDOR: IMAGEN */
 .cometsponsor-product-image-mobile {
 width: 100%;
 box-sizing: border-box;
@@ -8265,10 +8257,10 @@ margin: 0 0 10px 0;
 .cometsponsor-product-image-mobile img {
 width: 100%;
 height: 200px;
-display: block; 
+display: block;
 border-radius: 0px;
 }
-/* CONTENEDOR: PRECIO */ 
+/* CONTENEDOR: PRECIO */
 .cometsponsor-product-value-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.5rem;
@@ -8278,7 +8270,7 @@ text-transform: uppercase;
 text-align: center;
 margin: 0 0 10px 0;
 }
-/* CONTENEDOR: BOTÓN */ 
+/* CONTENEDOR: BOTÓN PAY */
 .cometsponsor-product-button-mobile {
 width: 100%;
 box-sizing: border-box;
@@ -8286,118 +8278,134 @@ display: block;
 text-align: center;
 margin: 0px;
 }
-.cometsponsor-product-button-pay-mobile,
-.cometsponsor-product-button-agreement-mobile {
+.cometsponsor-product-button-pay-mobile {
 display: inline-block;
-background: #ff1493 !important; 
-border-radius: 6px; 
+background: #ff1493 !important;
+border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-font-size: 1rem; 
+font-size: 1rem;
 color: white !important;
 text-decoration: none;
 text-transform: uppercase;
-text-align: center;   
+text-align: center;
 font-weight: bold;
 margin: 0 0 10px 0;
 padding: 10px 20px;
 border: none;
-cursor: pointer; 
-transition: all 0.3s ease;  
+cursor: pointer;
+transition: all 0.3s ease;
 }
-.cometsponsor-product-button-share-mobile {
-background-color: #FF6B00 !important;
-font-size: 0.8rem;
+/* NUEVO CONTENEDOR: BOTONES DOSSIER Y AGREEMENT */
+.cometsponsor-columns-grid-action-button-mobile {
+width: 100%;
+box-sizing: border-box;
+display: block;
+text-align: center;
+margin: 0px;
+}
+.cometsponsor-columns-grid-action-button-dossier-mobile,
+.cometsponsor-columns-grid-action-button-agreement-mobile {
+display: inline-block;
+background: #ff1493 !important;
+border-radius: 6px;
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+font-weight: bold;
+margin: 0 0 10px 0;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
 }
 .cometsponsor-product-button-pay-mobile:hover,
-.cometsponsor-product-button-agreement-mobile:hover {
+.cometsponsor-columns-grid-action-button-dossier-mobile:hover,
+.cometsponsor-columns-grid-action-button-agreement-mobile:hover {
 transform: scale(1.05);
-} 
+}
 /* DIVISOR */
 .cometsponsor-divider-mobile {
 width: 100%;
-height: 0; 
+height: 0;
 border-top: 3px solid #FF6B00 !important;
-margin: 0 0 10px 0; 
-} 
-/* CONTENEDOR: SYNOPSIS */ 
-.cometsponsor-synopsis-mobile {
+margin: 0 0 10px 0;
+}
+/* CONTENEDOR: COMING SOON Y SYNOPSIS */
+.cometsponsor-comingsoon-mobile {
 width: 100%;
-box-sizing: border-box;  
+box-sizing: border-box;
 margin: 0px;
 }
-.cometsponsor-synopsis-subtitle-1-mobile,
-.cometsponsor-synopsis-subtitle-2-mobile {
+.cometsponsor-comingsoon-subtitle-mobile,
+.cometsponsor-synopsis-subtitle-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 text-transform: uppercase;
-text-align: justify;   
+text-align: justify;
 line-height: 1.5;
 margin: 0px;
 }
-.cometsponsor-synopsis-subtitle-1-mobile {
+.cometsponsor-comingsoon-subtitle-mobile {
 text-align: center;
 }
-.cometsponsor-synopsis-subtitle-2-mobile {
-color: #00FFFF !important;
-}
-.cometsponsor-synopsis-text-1-mobile,
-.cometsponsor-synopsis-text-2-mobile {
+.cometsponsor-comingsoon-text-mobile,
+.cometsponsor-synopsis-text-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
-color: #00FF00 !important;
+color: #00FFFF !important;
 text-decoration: none;
 line-height: 1.5;
 text-align: justify;
 margin: 0 0 10px 0;
 }
-.cometsponsor-synopsis-text-2-mobile {
-color: #00FFFF !important;
-}
-/* CONTENEDOR: INFORMACIÓN */ 
+/* CONTENEDOR: INFORMACIÓN */
 .cometsponsor-information-mobile {
 width: 100%;
-box-sizing: border-box;     
+box-sizing: border-box;
 margin: 0px;
 }
-.cometsponsor-information-subtitle-1-mobile,
-.cometsponsor-information-subtitle-mobile {
+.cometsponsor-information-subtitle-mobile,
+.cometsponsor-information-subtitle-2-mobile {
 font-family: 'Orbitron', sans-serif;
 font-size: 1rem;
-color:  #00FF00 !important;
+color: #00FF00 !important;
 text-decoration: none;
 text-transform: uppercase;
-text-align: justify;   
+text-align: justify;
 line-height: 1.5;
-margin: 0px ;
+margin: 0px;
 }
-.cometsponsor-information-subtitle-1-mobile {
-margin-bottom: 20px;
-text-align: center;
-}
+.cometsponsor-information-subtitle-2-mobile {
+color: #00FFFF !important;
+}  
 .cometsponsor-information-text-mobile,
-.cometsponsor-information-text-end-mobile {
+.cometsponsor-information-text-2-mobile,
+.cometsponsor-information-text-3-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
-text-align: justify;   
+text-align: justify;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.cometsponsor-information-text-end-mobile {
-margin-bottom: 20px;
-}
-.cometsponsor-information-mobile p:last-of-type {
+.cometsponsor-information-text-2-mobile {
+color: #00FF00 !important;
+}    
+.cometsponsor-information-text-3-mobile {
 text-align: center;
-}
+}  
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons-mobile {
 position: relative;
 z-index: 1;
 display: flex;
-justify-content: center;  
+justify-content: center;
 gap: 10px;
 margin: 0 0 10px 0;
 }
@@ -8413,28 +8421,28 @@ transform: scale(1.1);
 /* CONTENEDOR: BOTONES FINALES */
 .cometsponsor-button-mobile {
 width: 100%;
-box-sizing: border-box;    
+box-sizing: border-box;
 display: block;
-text-align: center; 
+text-align: center;
 margin: 0px;
 }
 .cometsponsor-button-back-mobile,
 .cometsponsor-button-continueshopping-mobile {
 display: inline-block;
 background: #00CED1 !important;
-border-radius: 6px; 
+border-radius: 6px;
 font-family: 'Orbitron', sans-serif;
-font-size: 1rem; 
+font-size: 1rem;
 color: black !important;
 text-decoration: none;
 text-transform: uppercase;
-text-align: center;   
+text-align: center;
 font-weight: bold;
-margin: 0 0 10px 0; 
+margin: 0 0 10px 0;
 padding: 10px 20px;
 border: none;
-cursor: pointer; 
-transition: all 0.3s ease;  
+cursor: pointer;
+transition: all 0.3s ease;
 }
 .cometsponsor-button-back-mobile:hover,
 .cometsponsor-button-continueshopping-mobile:hover {
@@ -8444,7 +8452,6 @@ transform: scale(1.05);
 .cometsponsor-container { display: none; }
 .cometsponsor-container-mobile { display: block; }
 }
-
 
 
 
