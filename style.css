@@ -8096,13 +8096,13 @@ height: 0;
 border-top: 3px solid #FF6B00 !important;
 margin: 0 0 10px 0; 
 } 
-/* CONTENEDOR: INFORMACIÓN DEBAJO DE LAS COLUMNAS */
+
+/* CONTENEDOR: INFORMACIÓN */
 .cometsponsor-information {
 width: 100%;
 box-sizing: border-box;  
 margin: 0px;
 }
-.cometsponsor-information-subtitle-1,
 .cometsponsor-information-subtitle {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
@@ -8111,13 +8111,11 @@ text-decoration: none;
 text-transform: uppercase;
 text-align: justify;   
 line-height: 1.5;
-margin: 0px;
-}
-.cometsponsor-information-subtitle-1 {
-margin-bottom: 30px;
+margin: 0 30px 0 0;
 }
 .cometsponsor-information-text,
-.cometsponsor-information-text-end {
+.cometsponsor-information-text-end,
+.cometsponsor-information-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -8129,9 +8127,21 @@ margin: 0 0 10px 0;
 .cometsponsor-information-text-end {
 margin-bottom: 30px;
 }
-.cometsponsor-information p:last-of-type {
-text-align: center;
+.cometsponsor-information-subtitle-2 {
+color: #00FFFF !important;
 }
+.cometsponsor-information-text-2 {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FFFF !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.cometsponsor-information-text-3 {
+text-align: center;
+}  
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons {
 position: relative;
@@ -8192,6 +8202,12 @@ font-weight: bold;
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; }
+
+
+
+
+
+   
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
