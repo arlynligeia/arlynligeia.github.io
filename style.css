@@ -7991,7 +7991,6 @@ height: auto;
 border-radius: 0px;
 margin: 0px;
 }
-
 /* CONTENEDOR: GRID DE 3 - SINOPSIS */
 .cometsponsor-columns-grid-synopsis {
 width: 100%;
@@ -8089,6 +8088,7 @@ width: 100%;
 box-sizing: border-box;  
 margin: 0px;
 }
+.cometsponsor-information-subtitle-1,
 .cometsponsor-information-subtitle,
 .cometsponsor-information-subtitle-2 {
 font-family: 'Orbitron', sans-serif;
@@ -8100,9 +8100,13 @@ text-align: justify;
 line-height: 1.5;
 margin: 0 10px 0 0;
 }
+.cometsponsor-information-subtitle-1 {
+margin-bottom: 30px;
+}
 .cometsponsor-information-text,
 .cometsponsor-information-text-2,
-.cometsponsor-information-text-3 {
+.cometsponsor-information-text-3,
+.cometsponsor-information-text-4 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
 color: #00FF00 !important;
@@ -8119,6 +8123,10 @@ color: #00FFFF !important;
 }
 .cometsponsor-information-text-3 {
 text-align: center;
+margin-bottom: 0px;   
+}  
+.cometsponsor-information-text- {
+margin-bottom: 10px;   
 }  
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons {
@@ -8180,6 +8188,9 @@ font-weight: bold;
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; } 
+
+
+
 
 
 
