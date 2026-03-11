@@ -8188,16 +8188,6 @@ transform: scale(1.05);
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; } 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
@@ -8276,7 +8266,9 @@ display: block;
 text-align: center;
 margin: 0px;
 }
-.cometsponsor-product-button-pay-mobile {
+.cometsponsor-product-button-pay-mobile,
+.cometsponsor-product-button-dossier-mobile,
+.cometsponsor-product-button-button-agreement-mobile {
 display: inline-block;
 background: #ff1493 !important;
 border-radius: 6px;
@@ -8293,37 +8285,20 @@ border: none;
 cursor: pointer;
 transition: all 0.3s ease;
 }
-/* NUEVO CONTENEDOR: BOTONES DOSSIER Y AGREEMENT */
-.cometsponsor-columns-grid-action-button-mobile {
-width: 100%;
-box-sizing: border-box;
-display: block;
-text-align: center;
-margin: 0px;
+.cometsponsor-product-button-dossier-mobile {
+background-color: #FF6B00 !important; /* Naranja */
+font-size: 0.8rem;   
 }
-.cometsponsor-columns-grid-action-button-dossier-mobile,
-.cometsponsor-columns-grid-action-button-agreement-mobile {
-display: inline-block;
-background: #ff1493 !important;
-border-radius: 6px;
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: white !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: center;
-font-weight: bold;
-margin: 0 0 10px 0;
-padding: 10px 20px;
-border: none;
-cursor: pointer;
-transition: all 0.3s ease;
+.cometsponsor-product-button-agreement-mobile {
+background-color: #CCFF00 !important; /* Amarillo neón */
+color: black !important;
+font-size: 0.8rem;
 }
 .cometsponsor-product-button-pay-mobile:hover,
-.cometsponsor-columns-grid-action-button-dossier-mobile:hover,
-.cometsponsor-columns-grid-action-button-agreement-mobile:hover {
+.cometsponsor-product-button-button-dossier-mobile:hover,
+.cometsponsor-product-button-button-agreement-mobile:hover {
 transform: scale(1.05);
-}
+}  
 /* DIVISOR */
 .cometsponsor-divider-mobile {
 width: 100%;
@@ -8367,6 +8342,7 @@ width: 100%;
 box-sizing: border-box;
 margin: 0px;
 }
+.cometsponsor-information-subtitle-1-mobile,   
 .cometsponsor-information-subtitle-mobile,
 .cometsponsor-information-subtitle-2-mobile {
 font-family: 'Orbitron', sans-serif;
@@ -8378,25 +8354,34 @@ text-align: justify;
 line-height: 1.5;
 margin: 0px;
 }
+.cometsponsor-information-subtitle-1-mobile {
+margin-bottom: 20px;
+}
 .cometsponsor-information-subtitle-2-mobile {
 color: #00FFFF !important;
 }  
 .cometsponsor-information-text-mobile,
 .cometsponsor-information-text-2-mobile,
-.cometsponsor-information-text-3-mobile {
+.cometsponsor-information-text-3-mobile,
+.cometsponsor-information-text-4-mobile {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
 color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;
 line-height: 1.5;
-margin: 0 0 10px 0;
+margin: 0 0 20px 0;
 }
 .cometsponsor-information-text-2-mobile {
-color: #00FF00 !important;
+color: #00FFFF !important;
 }    
 .cometsponsor-information-text-3-mobile {
 text-align: center;
+margin-bottom: 0px;
+}
+.cometsponsor-information-text-4-mobile {
+text-align: center;
+margin-bottom: 10px;
 }  
 /* CONTENEDOR: ICONOS */
 .cometsponsor-information-icons-mobile {
@@ -8410,7 +8395,7 @@ margin: 0 0 10px 0;
 .cometsponsor-information-icon-mobile {
 width: 25px;
 height: 25px;
-color: #FF6B00 !important;
+color: #CCFF00 !important; /* Amarillo neón */
 transition: all 0.3s ease;
 }
 .cometsponsor-information-icon-mobile:hover {
