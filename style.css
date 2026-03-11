@@ -7974,7 +7974,7 @@ z-index: 2;
 /* CONTENEDOR: GRID DE 3 */
 .cometsponsor-columns-grid {
 display: grid;
-grid-template-columns: calc(30% - 13.33px) calc(47% - 13.33px) calc(23% - 13.33px);
+grid-template-columns: calc(30% - 13.33px) calc(42% - 13.33px) calc(28% - 13.33px);
 gap: 20px;
 margin: 0 0 10px 0;
 }
@@ -8121,11 +8121,14 @@ color: #00FFFF !important;
 .cometsponsor-information-text-2 {
 color: #00FFFF !important;
 }
-.cometsponsor-information-text-3 {
+.cometsponsor-information-text-3,
+.cometsponsor-information-text-4 {
 text-align: center;
+}
+.cometsponsor-information-text-3 {
 margin-bottom: 0px;   
 }  
-.cometsponsor-information-text- {
+.cometsponsor-information-text-4 {
 margin-bottom: 10px;   
 }  
 /* CONTENEDOR: ICONOS */
@@ -8177,13 +8180,6 @@ transition: transform 0.3s ease;
 .cometsponsor-button-back:hover,
 .cometsponsor-button-continueshopping:hover {
 transform: scale(1.05);
-}
-/* TEXTO OUT OF STOCK */
-.outofstock {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
-font-weight: bold;
 }
  /* CONTROL */
 .cometsponsor-container { display: block; }
