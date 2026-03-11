@@ -7991,6 +7991,7 @@ height: auto;
 border-radius: 0px;
 margin: 0px;
 }
+
 /* CONTENEDOR: GRID DE 3 - SINOPSIS */
 .cometsponsor-columns-grid-synopsis {
 width: 100%;
@@ -8009,9 +8010,6 @@ line-height: 1.5;
 margin: 0px;
 padding: 0px;
 }
-.cometsponsor-columns-grid-synopsis-subtitle {
-text-align: center;  
-}
 .cometsponsor-columns-grid-synopsis-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -8021,9 +8019,6 @@ text-align: justify;
 line-height: 1.5;
 margin: 0px;
 padding: 0px;
-}
-.cometsponsor-columns-grid-synopsis-text-1 {
-margin-bottom: 20px;
 }
 /* CONTENEDOR: GRID DE 3 - PRECIO Y BOTONES */
 .cometsponsor-columns-grid-action {
@@ -8094,7 +8089,8 @@ width: 100%;
 box-sizing: border-box;  
 margin: 0px;
 }
-.cometsponsor-information-subtitle {
+.cometsponsor-information-subtitle,
+.cometsponsor-information-subtitle-2 {
 font-family: 'Orbitron', sans-serif;
 font-size: 1.2rem;
 color: #39FF14 !important;
@@ -8102,10 +8098,10 @@ text-decoration: none;
 text-transform: uppercase;
 text-align: justify;   
 line-height: 1.5;
-margin: 0 30px 0 0;
+margin: 0 10px 0 0;
 }
 .cometsponsor-information-text,
-.cometsponsor-information-text-end,
+.cometsponsor-information-text-2,
 .cometsponsor-information-text-3 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -8113,29 +8109,13 @@ color: #00FF00 !important;
 text-decoration: none;
 text-align: justify;   
 line-height: 1.5;
-margin: 0 0 10px 0;
-}
-.cometsponsor-information-text-end {
-margin-bottom: 30px;
+margin: 0 0 30px 0;
 }
 .cometsponsor-information-subtitle-2 {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
 color: #00FFFF !important;
-text-decoration: none;
-text-transform: uppercase;
-text-align: justify;   
-line-height: 1.5;
-margin: 0 30px 0 0;
 }
 .cometsponsor-information-text-2 {
-font-family: 'Share Tech Mono', monospace;
-font-size: 1.25rem;
 color: #00FFFF !important;
-text-decoration: none;
-text-align: justify;   
-line-height: 1.5;
-margin: 0 0 10px 0;
 }
 .cometsponsor-information-text-3 {
 text-align: center;
@@ -8200,6 +8180,13 @@ font-weight: bold;
  /* CONTROL */
 .cometsponsor-container { display: block; }
 .cometsponsor-container-mobile { display: none; } 
+
+
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: COMET SPONSOR
 ====================================== */
