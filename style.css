@@ -11,8 +11,6 @@ margin: 0;
 min-height: 100vh;
 }
 
-
-
 /* ======================================
    CONTENEDOR: SITIO WEB
 ====================================== */
@@ -226,3 +224,42 @@ transform: scaleX(1);
 .site-header-menu-submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
+
+/* ======================================
+   TÍTULO GRANDE PC
+====================================== */
+.site-title {
+font-family: 'Bebas Neue', cursive;
+font-size: 20rem; 
+color: #ff00a9 !important;
+text-align: center;
+font-weight: 400;
+line-height: 1; 
+margin: 40px 0;
+padding: 230px 20px 20px 20px;
+background: 
+repeating-linear-gradient(
+0deg,
+rgba(0, 0, 0, 0.3) 0px,
+rgba(0, 0, 0, 0.3) 2px,
+transparent 2px,
+transparent 4px
+),
+linear-gradient(#ff00a9, #ff00a9);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.site-title.hidden {
+display: none !important;
+}
+@media (max-width: 768px) {
+.site-title { display: none; }
+}
+
+
+
+
+
+
+
