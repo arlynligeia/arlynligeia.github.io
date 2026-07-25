@@ -16,7 +16,7 @@ min-height: 100vh;
 /* ======================================
    CONTENEDOR: SITIO WEB
 ====================================== */
-.site-container {
+.site {
 position: relative;
 top: 0;
 left: 0;  
@@ -30,7 +30,7 @@ padding: 20px 10px 10px 10px;
 /* ======================================
    CONTENEDOR: ENCABEZADO
 ====================================== */
-.site-wrapper {
+.site-header {
 width: 100%;
 box-sizing: border-box;
 display: flex;
@@ -44,7 +44,7 @@ gap: 20px;
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO PC
 ====================================== */
-.site-wrapper-header {
+.site-header-title {
 display: block;
 width: auto;
 box-sizing: border-box;
@@ -52,11 +52,10 @@ background: transparent !important;
 margin: 0;
 padding: 0;
 }
-/* CLASE PARA OCULTAR EL TÍTULO */
-.site-wrapper-header.hidden {
+.site-header-title.hidden {
 display: none !important;
 }
-.site-wrapper-header-title {
+.site-header-title-text {
 font-family: 'Bebas Neue', cursive;
 font-size: 3.5rem;
 color: #00FFFF !important;
@@ -80,8 +79,8 @@ background-clip: text;
 display: inline-block;
 }
 @media (max-width: 768px) {
-.site-wrapper-header { display: none; }
-.site-wrapper-header-title { display: none; }
+.site-header-title { display: none; }
+.site-header-title-text { display: none; }
 }
 
 /* ======================================
@@ -91,7 +90,7 @@ nav {
 display: inline-block;
 text-align: center;
 }
-.site-menu {
+.site-header-menu {
 list-style: none;
 display: flex;
 flex-wrap: nowrap;
@@ -101,10 +100,10 @@ gap: 10px;
 margin: 10px auto 10px auto;
 padding: 0px;  
 }
-.site-menu li {
+.site-header-menu li {
 position: relative;
 }
-.site-menu-button {
+.site-header-menu-button {
 position: relative;
 display: block;
 background: transparent !important;
@@ -133,7 +132,7 @@ box-shadow:
 inset 0 0 5px rgba(0, 255, 255, 0.3);
 }
 /* HOVER PARA TODOS LOS BOTONES */
-.site-menu-button:hover {
+.site-header-menu-button:hover {
 background: rgba(0, 255, 255, 0.1) !important;
 color: #00FFFF !important;
 transform: translateY(-2px);
@@ -144,7 +143,7 @@ inset 0 0 10px rgba(0, 255, 255, 0.5);
 text-shadow: 0 0 10px #00FFFF;
 }
 /* PUNTO LED PARA TODOS LOS BOTONES */
-.site-menu-button::after {
+.site-header-menu-button::after {
 content: '';
 position: absolute;
 top: 5px;
@@ -157,7 +156,7 @@ box-shadow: 0 0 5px #00FFFF;
 transition: all 0.3s ease;
 }
 /* PUNTO LED EN HOVER */
-.site-menu-button:hover::after {
+.site-header-menu-button:hover::after {
 box-shadow: 
 0 0 10px #00FFFF,
 0 0 20px #00FFFF;
@@ -166,7 +165,7 @@ box-shadow:
 /* ======================================
    CONTENEDOR: SUBMENUS PC
 ====================================== */
-.site-menu-submenu {
+.site-header-menu-submenu {
 position: absolute; 
 display: none;
 top: 40px;
@@ -178,15 +177,15 @@ border: 2px solid #ff1493 !important;
 margin: 0;
 padding: 0;
 }
-.site-menu li:hover .site-menu-submenu {
+.site-header-menu li:hover .site-header-menu-submenu {
 display: block;
 }
 /* --- ELEMENTOS DEL SUBMENÚ --- */
-.site-menu-submenu li {
+.site-header-menu-submenu li {
 position: relative;
 overflow: hidden;
 }
-.site-menu-submenu-button {
+.site-header-menu-submenu-button {
 display: block;
 width: 100%;
 text-align: left;
@@ -202,13 +201,13 @@ text-decoration: none;
 transition: all 0.3s ease;
 font-weight: 600;
 }
-.site-menu-submenu-button:hover {
+.site-header-menu-submenu-button:hover {
 background: rgba(255, 20, 147, 0.2) !important;
 color: white !important;
 padding-left: 20px;
 }
 /* --- LÍNEA CELESTE AGUA ANIMADA --- */
-.site-menu-submenu li::before {
+.site-header-menu-submenu li::before {
 content: '';
 position: absolute;
 left: 0;
@@ -220,11 +219,10 @@ transform: scaleX(0);
 transform-origin: left;
 transition: transform 0.3s ease;
 }
-.site-menu-submenu li:hover::before {
+.site-header-menu-submenu li:hover::before {
 transform: scaleX(1);
 }
 /* --- Separadores entre items --- */
-.site-menu-submenu li:not(:last-child) {
+.site-header-menu-submenu li:not(:last-child) {
 border-bottom: 1px solid white !important;
 }
-
