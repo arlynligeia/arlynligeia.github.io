@@ -118,6 +118,51 @@
 </div>   
 </header>
 
+   
+<!-- CONTENEDOR: MENÚ HAMBURGUESA MOBILE -->
+<div class="menuhamburger-mobile">
+<button class="menuhamburger-button-mobile" id="menuhamburger-button-mobile">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="menuhamburger-overlay-mobile" id="menuhamburger-overlay-mobile"> 
+<ul>
+<li><a href="#home-mobile" data-section="home">HOME</a></li>
+<li><a href="#universe-mobile" data-section="universe">UNIVERSE</a></li>  
+<li><a href="#about-mobile" data-section="about">ABOUT</a></li>
+<li><a href="#film-mobile" data-section="film">FILM</a></li>
+<li><a href="#music-mobile" data-section="music">MUSIC</a></li>
+<li><a href="#fashion-mobile" data-section="fashion">FASHION</a></li>
+<li><a href="#science-mobile" data-section="science">SCIENCE</a></li>
+<li><a href="#bemypatron-mobile" data-section="bemypatron">BE MY PATRON</a></li>
+<li><a href="#contact-mobile" data-section="contact">CONTACT</a></li>
+<li><a href="#shop-mobile" data-section="shop">SHOP</a></li> 
+</ul>
+</div>
+</div>
+<!-- FIN CONTENEDOR: MENÚ HAMBURGUESA MOBILE -->
+
+   
+<!-- CONTENEDOR: TÍTULO PEQUEÑO MOBILE -->
+<div class="title-small-mobile"> 
+<div class="title-small-text-mobile">ARLYN LIGEIA</div>
+</div>   
+<!-- FIN CONTENEDOR: TÍTULO PEQUEÑO MOBILE -->
+
+   
+<!-- CONTENEDOR: TÍTULO GRANDE MOBILE -->
+<div class="title-big-mobile"> 
+<div class="title-big-text-mobile">ARLYN<br>LIGEIA</div>
+</div>   
+<!-- CONTENEDOR: TÍTULO GRANDE MOBILE -->
+
+
+
+
+
+
+
 
 
    
@@ -133,11 +178,9 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
-
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
-
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('site-header-title');
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
@@ -150,7 +193,6 @@ mainTitle.classList.remove('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
-
 // === CONTROL DEL TÍTULO GRANDE PC ===
 const siteTitle = document.querySelector('.site-title');
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
@@ -163,9 +205,8 @@ siteTitle.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE PC ===
-
 // === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
-const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlesmallMobile = document.querySelector('.title-small-mobile');
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (titlesmallMobile) {
 titlesmallMobile.classList.add('hidden');
@@ -176,9 +217,8 @@ titlesmallMobile.classList.remove('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
-
 // === CONTROL DEL TÍTULO GRANDE MOBILE ===
-const titlebigMobile = document.querySelector('.titlebig-mobile');
+const titlebigMobile = document.querySelector('.title-big-mobile');
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (titlebigMobile) {
 titlebigMobile.classList.remove('hidden');
@@ -189,7 +229,6 @@ titlebigMobile.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
-
 // === EXCEPCIÓN PARA CONTACT ===
 if (sectionId === 'contact') {
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
@@ -203,7 +242,6 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 return;
 }
 // === FIN EXCEPCIÓN === 
-
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
 section.style.display = 'none';
 });
@@ -216,11 +254,9 @@ subsection.style.display = 'block';
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
-
 // 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
-
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
 const mainTitle = document.getElementById('site-header-title');
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
@@ -233,7 +269,6 @@ mainTitle.classList.remove('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
-
 // === CONTROL DEL TÍTULO GRANDE PC ===
 const siteTitle = document.querySelector('.site-title');
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
@@ -246,9 +281,8 @@ siteTitle.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE PC ===
-
 // === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
-const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlesmallMobile = document.querySelector('.title-small-mobile');
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (titlesmallMobile) {
 titlesmallMobile.classList.add('hidden');
@@ -259,9 +293,8 @@ titlesmallMobile.classList.remove('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
-
 // === CONTROL DEL TÍTULO GRANDE MOBILE ===
-const titlebigMobile = document.querySelector('.titlebig-mobile');
+const titlebigMobile = document.querySelector('.title-big-mobile');
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (titlebigMobile) {
 titlebigMobile.classList.remove('hidden');
@@ -272,7 +305,6 @@ titlebigMobile.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
-
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
 if (subsectionId === 'contact-contactforfans') {
 document.querySelectorAll('.main-section, .subsection').forEach(section => {
@@ -295,7 +327,6 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }, 100);
 }
-
 // EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
 document.querySelectorAll('.site-header-menu-button').forEach(button => {
 button.addEventListener('click', function(e) {
@@ -305,7 +336,6 @@ showOnlyOneSection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
-
 // EVENTOS PARA BOTONES DEL SUBMENÚ
 document.querySelectorAll('.site-header-menu-submenu-button').forEach(button => {
 button.addEventListener('click', function(e) {
@@ -315,12 +345,11 @@ goToSubsection(targetId);
 history.pushState(null, null, `#${targetId}`);
 });
 });
-
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
-const titlesmallMobile = document.querySelector('.titlesmall-mobile');
-const titlebigMobile = document.querySelector('.titlebig-mobile');
+const titlesmallMobile = document.querySelector('.title-small-mobile');
+const titlebigMobile = document.querySelector('.title-big-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -345,12 +374,11 @@ titlebigMobile.classList.remove('hidden');
 }
 }
 }
-
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
-const titlesmallMobile = document.querySelector('.titlesmall-mobile');
-const titlebigMobile = document.querySelector('.titlebig-mobile');
+const titlesmallMobile = document.querySelector('.title-small-mobile');
+const titlebigMobile = document.querySelector('.title-big-mobile');
 if (hash) {
 if (hash.includes('-')) {
 goToSubsection(hash);
@@ -374,17 +402,227 @@ titlebigMobile.classList.remove('hidden');
 }
 }
 }
-
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 window.addEventListener('popstate', handleBrowserNavigation);  
-
 // INICIALIZACIÓN
 checkInitialHash();
 console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-    
+
+
+
+<!-- SCRIP: MENÚ HAMBURGUESA MOBILE -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('📱 Menú hamburguesa móvil iniciado');
+const hamburgerBtn = document.getElementById('menuhamburger-button-mobile');
+const hamburgerMenu = document.getElementById('menuhamburger-overlay-mobile');
+const menuLinks = document.querySelectorAll('.menuhamburger-overlay-mobile a');
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
+function showOnlyOneSection(sectionId) {
+console.log('📱 Mostrando SOLO:', sectionId);
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.title-small-mobile');
+const realSectionId = sectionId.replace('-mobile', '');
+if (realSectionId === 'home' || realSectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.title-big-mobile');
+if (realSectionId === 'home' || realSectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+// === EXCEPCIÓN PARA CONTACT MOBILE ===
+if (sectionId === 'contact-mobile') {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection && mainSection.classList.contains('mobile-only')) {
+mainSection.style.display = 'block';
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection && mainSection.classList.contains('mobile-only')) {
+mainSection.style.display = 'block';
+const sectionPrefix = sectionId.replace('-mobile', '') + '-';
+document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
+if (subsection.id.startsWith(sectionPrefix)) {
+subsection.style.display = 'block';
+}
+});
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
+function goToSubsection(subsectionId) {
+console.log('📱 Yendo a subsección:', subsectionId);
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.title-small-mobile');
+const realSubsectionId = subsectionId.replace('-mobile', '');
+if (realSubsectionId === 'home' || realSubsectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.title-big-mobile');
+if (realSubsectionId === 'home' || realSubsectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+// === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
+if (subsectionId === 'contact-mobile-contactforfans') {
+document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+section.style.display = 'none';
+});
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.style.display = 'block';
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+const mainSectionId = subsectionId.split('-')[0] + '-mobile';
+showOnlyOneSection(mainSectionId);
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+// ABRIR/CERRAR MENÚ HAMBURGUESA
+hamburgerBtn.addEventListener('click', function() {
+hamburgerMenu.classList.toggle('active');
+const spans = this.querySelectorAll('span');
+if (hamburgerMenu.classList.contains('active')) {
+spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
+spans[1].style.opacity = '0';
+spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+} else {
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+// NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
+menuLinks.forEach(link => {
+link.addEventListener('click', function(e) {
+if (this.classList.contains('cart-mobile-button')) {
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+return;
+}
+e.preventDefault();
+const href = this.getAttribute('href');
+if (href.startsWith('#')) {
+const targetId = href.replace('#', '');
+console.log('📱 Menú móvil: Navegando a:', targetId);
+const mobileSectionId = targetId.endsWith('-mobile') ? targetId : targetId + '-mobile';
+showOnlyOneSection(mobileSectionId);
+history.pushState(null, null, `#${targetId}`);
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+});
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.title-small-mobile');
+const titlebigMobile = document.querySelector('.title-big-mobile');
+if (hash) {
+if (hash.includes('-')) {
+const mobileSubsectionId = hash + '-mobile';
+goToSubsection(mobileSubsectionId);
+} else {
+const mobileSectionId = hash + '-mobile';
+showOnlyOneSection(mobileSectionId);
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+}
+}
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+function handleBrowserNavigation(event) {
+const hash = window.location.hash.replace('#', '');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+}
+}
+window.addEventListener('popstate', handleBrowserNavigation);
+hamburgerMenu.addEventListener('click', function(e) {
+if (e.target === hamburgerMenu) {
+hamburgerMenu.classList.remove('active');
+const spans = hamburgerBtn.querySelectorAll('span');
+spans[0].style.transform = 'none';
+spans[1].style.opacity = '1';
+spans[2].style.transform = 'none';
+}
+});
+checkInitialHash();
+console.log('✅ Menú hamburguesa móvil configurado correctamente');
+});
+</script>
+<!-- FIN SCRIP: MENÚ HAMBURGUESA MÓVIL -->
+
+
+
+
+
+
+
+   
 </body>
   
 </html>
