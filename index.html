@@ -784,14 +784,14 @@ function showOnlyHomeOnLoadMobile() {
         section.style.display = 'none';
     });
     
-    // Mostrar solo HOME mobile y sus subsecciones
+    // Mostrar solo HOME mobile
     const homeSection = document.getElementById('home-mobile');
-    if (homeSection && homeSection.classList.contains('mobile-only')) {
+    if (homeSection) {
         homeSection.style.display = 'block';
     }
     
-    // Mostrar todas las subsecciones que comienzan con "home-" y son mobile
-    document.querySelectorAll('[id^="home-"].mobile-only').forEach(subsection => {
+    // Mostrar todas las subsecciones que comienzan con "home-" (hijos de home)
+    document.querySelectorAll('[id^="home-"].subsection.mobile-only').forEach(subsection => {
         subsection.style.display = 'block';
     });
     
@@ -806,7 +806,7 @@ function showOnlyHomeOnLoadMobile() {
     }
 }
 
-// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
 // === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
@@ -834,35 +834,33 @@ titlebigMobile.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
-// === EXCEPCIÓN PARA CONTACT MOBILE ===
-if (sectionId === 'contact-mobile') {
+
+// Ocultar todas las secciones móviles
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
 section.style.display = 'none';
 });
+
+// Mostrar la sección principal solicitada
 const mainSection = document.getElementById(sectionId);
-if (mainSection && mainSection.classList.contains('mobile-only')) {
+if (mainSection) {
 mainSection.style.display = 'block';
-mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
-return;
-}
-// === FIN EXCEPCIÓN ===
-document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
-section.style.display = 'none';
-});
-const mainSection = document.getElementById(sectionId);
-if (mainSection && mainSection.classList.contains('mobile-only')) {
-mainSection.style.display = 'block';
+
+// Mostrar las subsecciones hijas
 const sectionPrefix = sectionId.replace('-mobile', '') + '-';
 document.querySelectorAll('.subsection.mobile-only').forEach(subsection => {
 if (subsection.id.startsWith(sectionPrefix)) {
 subsection.style.display = 'block';
 }
 });
+
+// Scroll a la sección
+if (mainSection) {
 mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }
-// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN (IDÉNTICA A PC)
+
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
 function goToSubsection(subsectionId) {
 console.log('📱 Yendo a subsección:', subsectionId);
 // === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
@@ -890,6 +888,7 @@ titlebigMobile.classList.add('hidden');
 }
 }
 // === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
 // === EXCEPCIÓN PARA CONTACT-FOR-FANS MOBILE ===
 if (subsectionId === 'contact-mobile-contactforfans') {
 document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
@@ -903,6 +902,7 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 return;
 }
 // === FIN EXCEPCIÓN ===
+
 const mainSectionId = subsectionId.split('-')[0] + '-mobile';
 showOnlyOneSection(mainSectionId);
 setTimeout(() => {
@@ -912,6 +912,7 @@ subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 }, 100);
 }
+
 // ABRIR/CERRAR MENÚ HAMBURGUESA
 hamburgerBtn.addEventListener('click', function() {
 hamburgerMenu.classList.toggle('active');
@@ -926,6 +927,7 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
+
 // NAVEGACIÓN PARA ENLACES DEL MENÚ HAMBURGUESA
 menuLinks.forEach(link => {
 link.addEventListener('click', function(e) {
@@ -953,6 +955,7 @@ spans[2].style.transform = 'none';
 }
 });
 });
+
 // 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR
 function checkInitialHash() {
 const hash = window.location.hash.replace('#', '');
@@ -977,6 +980,7 @@ titlebigMobile.classList.remove('hidden');
 showOnlyHomeOnLoadMobile();
 }
 }
+
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
 function handleBrowserNavigation(event) {
 const hash = window.location.hash.replace('#', '');
@@ -991,7 +995,9 @@ showOnlyOneSection(hash);
 showOnlyHomeOnLoadMobile();
 }
 }
+
 window.addEventListener('popstate', handleBrowserNavigation);
+
 hamburgerMenu.addEventListener('click', function(e) {
 if (e.target === hamburgerMenu) {
 hamburgerMenu.classList.remove('active');
@@ -1001,6 +1007,7 @@ spans[1].style.opacity = '1';
 spans[2].style.transform = 'none';
 }
 });
+
 checkInitialHash();
 console.log('✅ Menú hamburguesa móvil configurado correctamente');
 });
