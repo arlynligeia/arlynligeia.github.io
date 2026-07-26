@@ -492,6 +492,44 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
 console.log('🔧 Navegación iniciada');
+
+// FUNCIÓN PARA OCULTAR TODAS LAS SECCIONES EXCEPTO HOME
+function showOnlyHomeOnLoad() {
+    // Ocultar todas las secciones principales
+    document.querySelectorAll('.main-section, .subsection').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Mostrar solo HOME y sus subsecciones
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+        homeSection.style.display = 'block';
+    }
+    
+    // Mostrar todas las subsecciones que comienzan con "home-"
+    document.querySelectorAll('[id^="home-"]').forEach(subsection => {
+        subsection.style.display = 'block';
+    });
+    
+    // Control de títulos para HOME
+    const mainTitle = document.getElementById('site-header-title');
+    if (mainTitle) {
+        mainTitle.classList.add('hidden');
+    }
+    const siteTitle = document.querySelector('.site-title');
+    if (siteTitle) {
+        siteTitle.classList.remove('hidden');
+    }
+    const titlesmallMobile = document.querySelector('.title-small-mobile');
+    if (titlesmallMobile) {
+        titlesmallMobile.classList.add('hidden');
+    }
+    const titlebigMobile = document.querySelector('.title-big-mobile');
+    if (titlebigMobile) {
+        titlebigMobile.classList.remove('hidden');
+    }
+}
+
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
@@ -686,6 +724,8 @@ titlesmallMobile.classList.add('hidden');
 if (titlebigMobile) {
 titlebigMobile.classList.remove('hidden');
 }
+// Mostrar solo HOME al cargar la página
+showOnlyHomeOnLoad();
 }
 }
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
@@ -714,6 +754,8 @@ titlesmallMobile.classList.add('hidden');
 if (titlebigMobile) {
 titlebigMobile.classList.remove('hidden');
 }
+// Mostrar solo HOME cuando se vuelve a la página sin hash
+showOnlyHomeOnLoad();
 }
 }
 // EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
