@@ -126,6 +126,264 @@
 
   
 <!-- SCRIPS -->
+
+<!-- NAVEGACIÓN -->  
+
+<!-- SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+console.log('🔧 Navegación iniciada');
+
+// 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN
+function showOnlyOneSection(sectionId) {
+console.log('Mostrando SOLO:', sectionId);
+
+// === CONTROL DEL TÍTULO PEQUEÑO PC ===
+const mainTitle = document.getElementById('site-header-title');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+} else {
+if (mainTitle) {
+mainTitle.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
+
+// === CONTROL DEL TÍTULO GRANDE PC ===
+const siteTitle = document.querySelector('.site-title');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+} else {
+if (siteTitle) {
+siteTitle.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE PC ===
+
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (sectionId === 'home' || sectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
+// === EXCEPCIÓN PARA CONTACT ===
+if (sectionId === 'contact') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN === 
+
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const mainSection = document.getElementById(sectionId);
+if (mainSection) {
+mainSection.style.display = 'block';
+document.querySelectorAll(`[id^="${sectionId}-"]`).forEach(subsection => {
+subsection.style.display = 'block';
+});
+mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}
+
+// 2. FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
+function goToSubsection(subsectionId) {
+console.log('Yendo a subsección:', subsectionId);
+
+// === CONTROL DEL TÍTULO PEQUEÑO PC ===
+const mainTitle = document.getElementById('site-header-title');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+} else {
+if (mainTitle) {
+mainTitle.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO PC ===
+
+// === CONTROL DEL TÍTULO GRANDE PC ===
+const siteTitle = document.querySelector('.site-title');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+} else {
+if (siteTitle) {
+siteTitle.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE PC ===
+
+// === CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+} else {
+if (titlesmallMobile) {
+titlesmallMobile.classList.remove('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO PEQUEÑO MOBILE ===
+
+// === CONTROL DEL TÍTULO GRANDE MOBILE ===
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+} else {
+if (titlebigMobile) {
+titlebigMobile.classList.add('hidden');
+}
+}
+// === FIN CONTROL DEL TÍTULO GRANDE MOBILE ===
+
+// === EXCEPCIÓN PARA CONTACT-FOR-FANS ===
+if (subsectionId === 'contact-contactforfans') {
+document.querySelectorAll('.main-section, .subsection').forEach(section => {
+section.style.display = 'none';
+});
+const subsection = document.getElementById(subsectionId);
+if (subsection) {
+subsection.style.display = 'block';
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+return;
+}
+// === FIN EXCEPCIÓN ===
+const mainSectionId = subsectionId.split('-')[0];
+showOnlyOneSection(mainSectionId);
+setTimeout(() => {
+const subsection = document.getElementById(subsectionId);
+if (subsection) {  
+subsection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+}, 100);
+}
+
+// EVENTOS PARA BOTONES DEL MENÚ PRINCIPAL
+document.querySelectorAll('.site-header-menu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+showOnlyOneSection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+
+// EVENTOS PARA BOTONES DEL SUBMENÚ
+document.querySelectorAll('.site-header-menu-submenu-button').forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href').replace('#', '');
+goToSubsection(targetId);
+history.pushState(null, null, `#${targetId}`);
+});
+});
+
+// 3. FUNCIÓN: VERIFICAR Y MANTENER LA SECCIÓN ACTIVA AL RECARGAR LA PÁGINA
+function checkInitialHash() {
+const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+} else {
+// Si no hay hash, estamos en HOME
+const mainTitle = document.getElementById('site-header-title');
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+const siteTitle = document.querySelector('.site-title');
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+}
+}
+
+// 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+function handleBrowserNavigation(event) {
+const hash = window.location.hash.replace('#', '');
+const titlesmallMobile = document.querySelector('.titlesmall-mobile');
+const titlebigMobile = document.querySelector('.titlebig-mobile');
+if (hash) {
+if (hash.includes('-')) {
+goToSubsection(hash);
+} else {
+showOnlyOneSection(hash);
+}
+} else {
+const mainTitle = document.getElementById('site-header-title');
+if (mainTitle) {
+mainTitle.classList.add('hidden');
+}
+const siteTitle = document.querySelector('.site-title');
+if (siteTitle) {
+siteTitle.classList.remove('hidden');
+}
+if (titlesmallMobile) {
+titlesmallMobile.classList.add('hidden');
+}
+if (titlebigMobile) {
+titlebigMobile.classList.remove('hidden');
+}
+}
+}
+
+// EVENTO PARA LOS BOTONES DE NAVEGACIÓN DEL NAVEGADOR
+window.addEventListener('popstate', handleBrowserNavigation);  
+
+// INICIALIZACIÓN
+checkInitialHash();
+console.log('✅ Navegación configurada correctamente');
+});
+</script>
+<!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
     
 </body>
   
