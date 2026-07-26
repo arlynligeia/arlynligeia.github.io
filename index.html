@@ -776,6 +776,36 @@ console.log('📱 Menú hamburguesa móvil iniciado');
 const hamburgerBtn = document.getElementById('menuhamburger-button-mobile');
 const hamburgerMenu = document.getElementById('menuhamburger-overlay-mobile');
 const menuLinks = document.querySelectorAll('.menuhamburger-overlay-mobile a');
+
+// FUNCIÓN PARA OCULTAR TODAS LAS SECCIONES EXCEPTO HOME (MOBILE)
+function showOnlyHomeOnLoadMobile() {
+    // Ocultar todas las secciones móviles
+    document.querySelectorAll('.main-section.mobile-only, .subsection.mobile-only').forEach(section => {
+        section.style.display = 'none';
+    });
+    
+    // Mostrar solo HOME mobile y sus subsecciones
+    const homeSection = document.getElementById('home-mobile');
+    if (homeSection && homeSection.classList.contains('mobile-only')) {
+        homeSection.style.display = 'block';
+    }
+    
+    // Mostrar todas las subsecciones que comienzan con "home-" y son mobile
+    document.querySelectorAll('[id^="home-"].mobile-only').forEach(subsection => {
+        subsection.style.display = 'block';
+    });
+    
+    // Control de títulos para HOME
+    const titlesmallMobile = document.querySelector('.title-small-mobile');
+    if (titlesmallMobile) {
+        titlesmallMobile.classList.add('hidden');
+    }
+    const titlebigMobile = document.querySelector('.title-big-mobile');
+    if (titlebigMobile) {
+        titlebigMobile.classList.remove('hidden');
+    }
+}
+
 // 1. FUNCIÓN: NAVEGAR A UNA SECCIÓN (IDÉNTICA A PC)
 function showOnlyOneSection(sectionId) {
 console.log('📱 Mostrando SOLO:', sectionId);
@@ -943,6 +973,8 @@ titlesmallMobile.classList.add('hidden');
 if (titlebigMobile) {
 titlebigMobile.classList.remove('hidden');
 }
+// Mostrar solo HOME al cargar la página en mobile
+showOnlyHomeOnLoadMobile();
 }
 }
 // 4. FUNCIÓN PARA BOTONES DE NAVEGACIÓN DEL NAVEGADOR
@@ -954,6 +986,9 @@ goToSubsection(hash);
 } else {
 showOnlyOneSection(hash);
 }
+} else {
+// Mostrar solo HOME cuando se vuelve a la página sin hash en mobile
+showOnlyHomeOnLoadMobile();
 }
 }
 window.addEventListener('popstate', handleBrowserNavigation);
