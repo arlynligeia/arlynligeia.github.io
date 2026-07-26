@@ -1022,16 +1022,35 @@ margin-bottom: 0px;
 
 
 
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES PC
+====================================== */
+.main-section:not(#home),
+.subsection:not([id^="home-"]) { display: none; }
 
+/* DEJAR SOLO LA SECCIÓN HOME */
+#home { display: block; }
+#home-carousel,
+#home-socialmediacontent,
+#home-tiktokhighlight, 
+#home-youtubehighlight,
+#home-sociallinks { display: block; }
 
+/* ======================================
+   OCULTAR TODAS LAS SECCIONES MOBILE
+====================================== */
+@media (max-width: 768px) {
+.main-section.mobile-only:not(#home),
+.subsection.mobile-only:not([id^="home-"]) { display: none; }
 
-
-
-
-
-
-
-
+/* DEJAR SOLO LA SECCIÓN HOME MOBILE */
+#home-mobile { display: block; }
+#home-mobile-carousel,   
+#home-mobile-socialmediacontent,
+#home-mobile-tiktokhighlight, 
+#home-mobile-youtubehighlight,
+#home-mobile-sociallinks { display: block; }
+}
 
 
 
