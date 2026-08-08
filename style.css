@@ -1305,6 +1305,175 @@ margin-bottom: 0px;
 }
 
 /* ======================================
+   FEATURE FILM
+====================================== */
+/* CONTENEDOR, FRANJA Y TÍTULO */
+.featurefilm-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 40px auto;
+padding: 30px;
+}
+.featurefilm-container::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.featurefilm-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.featurefilm-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.featurefilm-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.featurefilm-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: TARJETAS */
+.featurefilm-columns-grid-card {
+position: relative;
+overflow: hidden;   
+display: block;
+text-decoration: none;
+}
+.featurefilm-columns-grid-card img {
+width: 100%;
+height: auto;
+object-fit: contain;
+transition: transform 0.3s ease;
+}
+.featurefilm-columns-grid-card img:hover { 
+transform: scale(1.1);
+}
+/* CONTROL */
+.featurefilm-container { display: block; }
+.featurefilm-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: FEATURE FILM
+====================================== */
+@media (max-width: 768px) {
+.featurefilm-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 30px auto;
+padding: 20px;
+}
+.featurefilm-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.featurefilm-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase; 
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.featurefilm-title-mobile a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: TARJETAS */
+.featurefilm-cards-mobile {
+position: relative;
+z-index: 2;
+}
+.featurefilm-cards-card-mobile {
+position: relative;
+overflow: hidden;   
+display: block;
+text-decoration: none;
+margin-bottom: 0px;
+}
+.featurefilm-cards-card-mobile img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.3s ease;
+}
+.featurefilm-cards-card-mobile img:hover { 
+transform: scale(1.1);
+}
+/* CONTROL */
+.featurefilm-container { display: none; }
+.featurefilm-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
    MUSIC
 ====================================== */
 .music-container {
