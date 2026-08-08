@@ -1176,6 +1176,104 @@ margin-bottom: 0px;
 
 
 
+/* ======================================
+   FILM WELCOME
+====================================== */
+.film-section {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 50px auto;
+padding: 30px;
+}
+.film-section::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.film-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;  
+}
+.film-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.film-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.film-information-text,
+.film-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.film-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.film-section { display: block; }
+.film-section-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    BE MY PATRON
