@@ -1176,6 +1176,9 @@ margin-bottom: 0px;
 
 
 
+
+
+
 /* ======================================
    FILM WELCOME
 ====================================== */
@@ -1301,10 +1304,256 @@ margin-bottom: 0px;
 .film-container-mobile { display: block; }
 }
 
+/* ======================================
+   MUSIC WELCOME
+====================================== */
+.music-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 50px auto;
+padding: 30px;
+}
+.music-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.music-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;  
+}
+.music-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.music-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.music-information-text,
+.music-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.music-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.music-container { display: block; }
+.music-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: MUSICWELCOME
+====================================== */
+@media (max-width: 768px) {
+.music-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 30px auto;
+padding: 20px;
+}
+.music-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.music-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.music-title-mobile a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.music-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+margin: 0px;
+}
+.music-information-text-mobile,
+.music-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.music-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.music-container { display: none; }
+.music-container-mobile { display: block; }
+}
 
+/* ======================================
+   FASHION WELCOME
+====================================== */
+.fashion-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 50px auto;
+padding: 30px;
+}
+.fashion-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.fashion-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;  
+}
+.fashion-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashion-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.fashion-information-text,
+.fashion-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fashion-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.fashion-container { display: block; }
+.fashion-container-mobile { display: none; }
 
-
-
+/* ======================================
+   MOVIL RESPONSIVE: FASHIONWELCOME
+====================================== */
+@media (max-width: 768px) {
+.fashion-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 30px auto;
+padding: 20px;
+}
+.fashion-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.fashion-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.fashion-title-mobile a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.fashion-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+margin: 0px;
+}
+.fashion-information-text-mobile,
+.fashion-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.fashion-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.fashion-container { display: none; }
+.fashion-container-mobile { display: block; }
+}
 
 
 
