@@ -1180,7 +1180,7 @@ margin-bottom: 0px;
 
 
 /* ======================================
-   FILM WELCOME
+   FILM
 ====================================== */
 .film-container {
 position: relative;
@@ -1241,7 +1241,7 @@ margin-bottom: 0px;
 .film-container { display: block; }
 .film-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: FILMWELCOME
+   MOVIL RESPONSIVE: FILM
 ====================================== */
 @media (max-width: 768px) {
 .film-container-mobile {
@@ -1305,7 +1305,7 @@ margin-bottom: 0px;
 }
 
 /* ======================================
-   MUSIC WELCOME
+   MUSIC
 ====================================== */
 .music-container {
 position: relative;
@@ -1366,7 +1366,7 @@ margin-bottom: 0px;
 .music-container { display: block; }
 .music-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: MUSICWELCOME
+   MOVIL RESPONSIVE: MUSIC
 ====================================== */
 @media (max-width: 768px) {
 .music-container-mobile {
@@ -1430,7 +1430,7 @@ margin-bottom: 0px;
 }
 
 /* ======================================
-   FASHION WELCOME
+   FASHION
 ====================================== */
 .fashion-container {
 position: relative;
@@ -1491,7 +1491,7 @@ margin-bottom: 0px;
 .fashion-container { display: block; }
 .fashion-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: FASHIONWELCOME
+   MOVIL RESPONSIVE: FASHION
 ====================================== */
 @media (max-width: 768px) {
 .fashion-container-mobile {
@@ -1554,7 +1554,130 @@ margin-bottom: 0px;
 .fashion-container-mobile { display: block; }
 }
 
-
+/* ======================================
+   SCIENCE
+====================================== */
+.science-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 50px auto;
+padding: 30px;
+}
+.science-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.science-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;  
+}
+.science-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.science-information {
+width: 100%;
+box-sizing: border-box;   
+margin: 0px;
+}
+.science-information-text,
+.science-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.science-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.science-container { display: block; }
+.science-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SCIENCE
+====================================== */
+@media (max-width: 768px) {
+.science-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border-radius: 0px;
+margin: 0px auto 30px auto;
+padding: 20px;
+}
+.science-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 60px; 
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.science-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 10px 0; 
+}
+.science-title-mobile a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.science-information-mobile {
+width: 100%;
+box-sizing: border-box; 
+margin: 0px;
+}
+.science-information-text-mobile,
+.science-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+}
+.science-information-text-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.science-container { display: none; }
+.science-container-mobile { display: block; }
+}
 
 
 
