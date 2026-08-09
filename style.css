@@ -1695,41 +1695,14 @@ margin-bottom: 0px;
 .alone-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MEDIUM LENGTH FILM
 ====================================== */
-/* CONTENEDOR, FRANJA Y TÍTULO */
 .mediumlengthfilm-container {
 position: relative;
-width: 800px;
+width: 550px;
 background: #3f00a8 !important;
+border: 3px solid #b388ff;    
 border-radius: 0px;
 margin: 40px auto;
 padding: 30px;
@@ -1762,38 +1735,30 @@ margin: 0 0 16px 0;
 color: #ff00a9 !important;
 text-decoration: none;
 }
-/* CONTENEDOR: COLUMNAS */
-.mediumlengthfilm-columns {
+/* CONTENEDOR: TARJETAS */
+.mediumlengthfilm-cards {
 position: relative;
 z-index: 2;
 }
-/* CONTENEDOR: GRID DE 2 */
-.mediumlengthfilm-columns-grid {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 20px;
-margin: 0px;
-}
-/* CONTENEDOR: TARJETAS */
-.mediumlengthfilm-columns-grid-card {
+/* CONTENEDOR: TARJETA */
+.mediumlengthfilm-cards-card {
 position: relative;
 overflow: hidden;   
 display: block;
 text-decoration: none;
 }
-.mediumlengthfilm-columns-grid-card img {
+.mediumlengthfilm-cards-card img {
 width: 100%;
 height: auto;
 object-fit: contain;
 transition: transform 0.3s ease;
 }
-.mediumlengthfilm-columns-grid-card img:hover { 
+.mediumlengthfilm-cards-card img:hover { 
 transform: scale(1.1);
 }
 /* CONTROL */
 .mediumlengthfilm-container { display: block; }
 .mediumlengthfilm-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: MEDIUM LENGTH FILM
 ====================================== */
@@ -1803,6 +1768,7 @@ position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3f00a8 !important;
+border: 3px solid #b388ff;    
 border-radius: 0px;
 margin: 30px auto;
 padding: 20px;
@@ -1839,6 +1805,7 @@ text-decoration: none;
 position: relative;
 z-index: 2;
 }
+/* CONTENEDOR: TARJETA */   
 .mediumlengthfilm-cards-card-mobile {
 position: relative;
 overflow: hidden;   
@@ -1859,6 +1826,42 @@ transform: scale(1.1);
 .mediumlengthfilm-container { display: none; }
 .mediumlengthfilm-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    ANECHOIC CHAMBER 57
