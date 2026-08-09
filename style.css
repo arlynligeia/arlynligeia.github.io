@@ -1380,8 +1380,8 @@ display: block;
 text-decoration: none;
 }
 .featurefilm-cards-card img {
-width: 100%;
-height: auto;
+width: 80%;  /* 👈 AJUSTA ESTE VALOR (50%, 70%, etc.) */
+max-width: 400px;  /* 👈 TAMAÑO MÁXIMO QUE QUIERAS */
 object-fit: contain;
 transition: transform 0.3s ease;
 }
