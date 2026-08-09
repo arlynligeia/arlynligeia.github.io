@@ -1746,12 +1746,14 @@ z-index: 2;
 .mediumlengthfilm-cards-card {
 position: relative;
 overflow: hidden;   
-display: block;
+display: flex;
+justify-content: center;
+align-items: center;
 text-decoration: none;
 }
 .mediumlengthfilm-cards-card img {
-width: 100%;
-height: auto;
+width: 80%;  /* 👈 AJUSTA ESTE VALOR (50%, 70%, etc.) */
+max-width: 350px;  /* 👈 TAMAÑO MÁXIMO QUE QUIERAS */
 object-fit: contain;
 transition: transform 0.3s ease;
 }
