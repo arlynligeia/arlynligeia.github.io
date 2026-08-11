@@ -1,6 +1,5 @@
 /* --- FUENTES --- */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fuggles&family=Homemade+Apple&family=Orbitron:wght@700&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Fuggles&family=Homemade+Apple&family=Orbitron:wght@700&family=Press+Start+2P&family=Rajdhani:wght@400;600;700&family=Share+Tech+Mono&display=swap');
 /* --- ESTILOS GENERALES DEL BODY Y BACKGROUND --- */
 body {
 background: url('assets/assets/Arlyn Ligeia Background.png') no-repeat center center fixed;
@@ -545,6 +544,19 @@ width: 100%;
 min-width: 0;
 margin: 0px;
 }
+.home-columns-grid-information-subtitle {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Press Start 2P', cursive;
+font-size: 1.2rem;
+color: #ff00a9!important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
 .home-columns-grid-information-text {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -611,12 +623,25 @@ width: 100%;
 height: auto;
 display: block;
 border-radius: 0px;
-}
+}  
 /* CONTENEDOR: INFORMACIÓN */
 .home-information-text-mobile {
 width: 100%;
 box-sizing: border-box;    
 margin: 0px;
+}
+.home-information-subtitle-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Press Start 2P', cursive;
+font-size: 1.2rem;
+color: #ff00a9!important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
 }
 .home-information-text-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -631,6 +656,25 @@ margin: 0px;
 .home-container { display: none; }
 .home-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SOCIAL MEDIA CONTENT
@@ -4384,7 +4428,6 @@ margin-bottom: 0px;
 /* CONTROL */
 .cookiepolicy-container { display: block; }
 .cookiepolicy-container-mobile { display: none; }
-
 /* ======================================
    MOVIL RESPONSIVE: COOKIE POLICY
 ====================================== */
