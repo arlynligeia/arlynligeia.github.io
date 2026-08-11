@@ -3393,6 +3393,225 @@ margin-bottom: 0px;
 .supportmywork-container-mobile { display: block; }
 }
 
+/* ======================================
+   SUPPORT MY STUDIES
+====================================== */
+.supportmystudies-container {
+position: relative;
+width: 800px;
+background: #3f00a8 !important;
+border: 3px solid #b388ff;    
+border-radius: 0px;
+margin: 0px auto 50px auto;
+padding: 30px;
+}
+.supportmystudies-container::before {
+content: "";
+position: absolute;
+z-index: 1; 
+top: 0;
+left: 0;
+width: 100%;
+height: 90px;
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.supportmystudies-title {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2.5rem;
+color: #ff00a9!important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: left;   
+line-height: 1.6;
+margin: 0 0 16px 0;
+}
+.supportmystudies-title a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: COLUMNAS */
+.supportmystudies-columns {
+position: relative;
+z-index: 2;
+}
+/* CONTENEDOR: GRID DE 2 */
+.supportmystudies-columns-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 20px;
+margin: 0px;
+}
+/* CONTENEDOR: INFORMACIÓN */
+.supportmystudies-columns-grid-information {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.supportmystudies-columns-grid-information-text,
+.supportmystudies-columns-grid-information-text-end {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1.25rem;
+color: #00FF00 !important;
+text-decoration: none;
+text-align: justify;   
+line-height: 1.5;
+margin: 0 0 10px 0;
+word-break: break-word;
+overflow-wrap: break-word;
+}
+.supportmystudies-columns-grid-information-text-end {
+margin-bottom: 0px;
+}
+/* CONTENEDOR: IMAGEN */
+.supportmystudies-columns-grid-image {
+width: 100%;
+min-width: 0;
+margin: 0px;
+}
+.supportmystudies-columns-grid-image img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+/* CONTENEDOR: BOTÓN */
+.supportmystudies-columns-grid-button {
+width: 100%;
+box-sizing: border-box;   
+display: flex;
+justify-content: center;
+margin: 20px 0 0 0;
+}
+.supportmystudies-columns-grid-button-donatewithpaypal {
+display: flex;
+justify-content: center;   
+background-color: #ff1493 !important;
+border: 2px solid #ffffff;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1.2rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px;   
+padding: 10px 20px;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.supportmystudies-columns-grid-button-donatewithpaypal:hover {
+transform: scale(1.05);
+}
+/* CONTROL */
+.supportmystudies-container { display: block; }
+.supportmystudies-container-mobile { display: none; }
+/* ======================================
+   MOVIL RESPONSIVE: SUPPORT MY STUDIES
+====================================== */
+@media (max-width: 768px) {
+.supportmystudies-container-mobile {
+position: relative;
+width: 90%;
+box-sizing: border-box;
+background: #3f00a8 !important;
+border: 3px solid #b388ff; 
+border-radius: 0px;
+margin: 0px auto 40px auto;
+padding: 20px;
+}
+.supportmystudies-container-mobile::before {
+content: "";
+position: absolute;
+z-index: 1;
+top: 0;
+left: 0;
+width: 100%;
+height: 100px; 
+background: #2a0070 !important;
+border-radius: 0px;
+}
+.supportmystudies-title-mobile {
+position: relative;
+z-index: 2;
+display: block;
+font-family: 'Orbitron', sans-serif;
+font-size: 2rem;
+color: #ff00a9 !important;
+text-decoration: none;
+text-transform: uppercase;
+text-align: center;
+margin: 0 0 20px 0; 
+}
+.supportmystudies-title-mobile a {
+color: #ff00a9 !important;
+text-decoration: none;
+}
+/* CONTENEDOR: IMAGEN */
+.supportmystudies-image-mobile {
+width: 100%;
+min-width: 0;
+margin: 0 0 20px 0;
+}
+.supportmystudies-image-mobile img {
+width: 100%;
+height: auto;
+display: block;
+border-radius: 0px;
+}
+/* CONTENEDOR: BOTÓN */
+.supportmystudies-button-mobile {
+width: 100%;
+box-sizing: border-box;     
+display: block;
+text-align: center; 
+margin: 0 0 20px 0;
+}
+.supportmystudies-button-donatewithpaypal-mobile {
+display: inline-block;
+background-color: #ff1493 !important;
+border: 2px solid #ffffff;
+border-radius: 6px; 
+font-family: 'Orbitron', sans-serif;
+font-size: 1rem;
+color: white !important;
+text-decoration: none;
+text-transform: uppercase;   
+font-weight: bold;
+margin: 0px; 
+padding: 10px 20px;
+cursor: pointer;
+transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.supportmystudies-button-donatewithpaypal-mobile:hover {
+transform: scale(1.05);
+}   
+/* CONTENEDOR: INFORMACIÓN */
+.supportmystudies-information-text-mobile {
+width: 100%;
+box-sizing: border-box;    
+margin: 0px;
+}
+.supportmystudies-information-text-mobile,
+.supportmystudies-information-text-end-mobile {
+font-family: 'Share Tech Mono', monospace;
+font-size: 1rem;
+color: #00FF00 !important;
+text-decoration: none;
+line-height: 1.5;
+text-align: justify;
+margin: 0 0 10px 0;
+}
+.supportmystudies-information-text-description-end-mobile {
+margin-bottom: 0px;
+}
+/* CONTROL */
+.supportmystudies-container { display: none; }
+.supportmystudies-container-mobile { display: block; }
+}
 
 
 
