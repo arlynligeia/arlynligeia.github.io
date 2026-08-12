@@ -1773,25 +1773,6 @@ margin-bottom: 0px;
 .alone-container-mobile { display: block; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    MEDIUM LENGTH FILM
 ====================================== */
@@ -1934,7 +1915,7 @@ transform: scale(1.1);
 position: relative;
 width: 800px;
 background: #3f00a8 !important;
-border: 3px solid #b388ff;       
+border: 3px solid #b388ff; 
 border-radius: 0px;
 margin: 0px auto 50px auto;
 padding: 30px;
@@ -2000,11 +1981,11 @@ flex-direction: column;
 justify-content: center;
 margin: 0px;
 }
-.anechoicchamber57-columns-grid-information-subtitle-1,
-.anechoicchamber57-columns-grid-information-subtitle-2 {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
+.anechoicchamber57-columns-grid-information-subtitle,
+.anechoicchamber57-columns-grid-information-text {
+font-family: 'Doto', sans-serif;
+font-size: 1.4rem;
+color: #ffffff !important;
 text-decoration: none;
 text-align: center;   
 line-height: 1.5;
@@ -2012,11 +1993,11 @@ margin: 0px;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.anechoicchamber57-columns-grid-information-subtitle-2 {
-color: #00FFFF !important;
-text-align: justify;
+.anechoicchamber57-columns-grid-information-text {
+text-align: left;  
+margin-bottom: 30px;
 }
-.anechoicchamber57-columns-grid-information-text-1,
+.anechoicchamber57-columns-grid-information-subtitle-2,
 .anechoicchamber57-columns-grid-information-text-2 {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1.25rem;
@@ -2028,11 +2009,8 @@ margin: 0px;
 word-break: break-word;
 overflow-wrap: break-word;
 }
-.anechoicchamber57-columns-grid-information-text-1 {
-margin-bottom: 30px;
-}
-.anechoicchamber57-columns-grid-information-text-2 {
-color: #00FFFF !important;
+.anechoicchamber57-columns-grid-information-subtitle-2 {
+text-transform: uppercase;
 }
 /* CONTENEDOR: INFORMACIÓN */
 .anechoicchamber57-information {
@@ -2041,14 +2019,14 @@ box-sizing: border-box;
 margin: 0px;
 }
 .anechoicchamber57-information-subtitle {
-font-family: 'Orbitron', sans-serif;
-font-size: 1.2rem;
-color: #00FF00 !important;
+font-family: 'Doto', sans-serif;
+font-size: 1.4rem;
+color: #ffffff !important;
 text-decoration: none;
 text-transform: uppercase;
 text-align: center;   
 line-height: 1.5;
-margin: 0 0 10px 0;
+margin: 0 0 10px 0;  
 }
 .anechoicchamber57-information-text,
 .anechoicchamber57-information-text-end {
@@ -2066,6 +2044,7 @@ margin-bottom: 0px;
 /* CONTROL */
 .anechoicchamber57-container { display: block; }
 .anechoicchamber57-container-mobile { display: none; }
+
 /* ======================================
    MOVIL RESPONSIVE: ANECHOIC CHAMBER 57
 ====================================== */
@@ -2075,7 +2054,7 @@ position: relative;
 width: 90%;
 box-sizing: border-box;
 background: #3f00a8 !important;
-border: 3px solid #b388ff;    
+border: 3px solid #b388ff; 
 border-radius: 0px;
 margin: 0px auto 40px auto;
 padding: 20px;
@@ -2125,22 +2104,20 @@ box-sizing: border-box;
 margin: 0 0 10px 0;
 }
 .anechoicchamber57-information-subtitle-1-mobile,
-.anechoicchamber57-information-subtitle-2-mobile,
+.anechoicchamber57-information-text-1-mobile,
 .anechoicchamber57-information-subtitle-3-mobile {
-font-family: 'Orbitron', sans-serif;
-font-size: 1rem;
-color: #00FF00 !important;
+font-family: 'Doto', sans-serif;
+font-size: 1.2rem;
+color: #ffffff !important;
 text-decoration: none;
-text-transform: uppercase;
 text-align: center;   
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.anechoicchamber57-information-subtitle-2-mobile {
-color: #00FFFF !important;
-}
-.anechoicchamber57-information-text-1-mobile,
-.anechoicchamber57-information-text-2-mobile,
+.anechoicchamber57-information-text-1-mobile {
+text-align: left;   
+}   
+.anechoicchamber57-information-subtitle-2-mobile,
 .anechoicchamber57-information-text-mobile,
 .anechoicchamber57-information-text-end-mobile {
 font-family: 'Share Tech Mono', monospace;
@@ -2151,8 +2128,9 @@ text-align: justify;
 line-height: 1.5;
 margin: 0 0 10px 0;
 }
-.anechoicchamber57-information-text-2-mobile {
-color: #00FFFF !important;
+.anechoicchamber57-information-subtitle-2-mobile {
+text-align: center;     
+text-transform: uppercase;
 }
 .anechoicchamber57-information-text-end-mobile {
 margin-bottom: 0px;
@@ -2161,6 +2139,37 @@ margin-bottom: 0px;
 .anechoicchamber57-container { display: none; }
 .anechoicchamber57-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    SHORT FILM
