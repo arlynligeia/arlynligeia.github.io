@@ -4583,26 +4583,22 @@ flex-direction: column;
 align-items: center;
 }
 .footer-brand-name {
-font-family: 'Bebas Neue', cursive;
-font-size: 5rem;
-color: #ff00a9 !important;
-text-decoration: none;
+/* === EL TEXTO HA SIDO REEMPLAZADO POR LA IMAGEN === */
+display: block;
 text-align: center;
 margin: 0 0 5px 0;
+padding: 0;
+background: transparent !important;
+-webkit-background-clip: unset;
+background-clip: unset;
+-webkit-text-fill-color: unset;
+}
+
+.footer-brand-name img {
+max-width: 30%;
+width: 350px;  /* Ajusta según necesites */
+height: auto;
 display: inline-block;
-position: relative;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#ff00a9, #ff00a9);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
 }
 .footer-brand-allrightreserved {
 font-family: 'Share Tech Mono', monospace;
@@ -4743,6 +4739,21 @@ box-shadow:
 /* CONTROL */
 .footer { display: block; }
 .footer-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    MOVIL RESPONSIVE: FOOTER
 ====================================== */
