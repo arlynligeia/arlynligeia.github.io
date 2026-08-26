@@ -4596,8 +4596,9 @@ background-clip: unset;
 }
 
 .footer-brand-name img {
-max-width: 30%;
-width: 350px;  /* Ajusta según necesites */
+max-width: 100%;
+box-sizing: border-box; 
+width: 500px;  /* Ajusta según necesites */
 height: auto;
 display: inline-block;
 }
