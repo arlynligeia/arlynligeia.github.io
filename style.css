@@ -54,32 +54,35 @@ padding: 0;
 display: none !important;
 }
 .site-header-title-text {
-font-family: 'Bebas Neue', cursive;
-font-size: 3.5rem;
-color: #00FFFF !important;
-font-weight: 400;
-line-height: 1;
+/* === EL TEXTO HA SIDO REEMPLAZADO POR LA IMAGEN === */
+display: inline-block;
 margin: 0;
 padding: 5px;
-letter-spacing: 2px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00FFFF, #00FFFF);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-display: inline-block;
+/* Eliminamos los efectos de texto */
+background: transparent !important;
+-webkit-background-clip: unset;
+background-clip: unset;
+-webkit-text-fill-color: unset;
 }
+
+.site-header-title-text img {
+width: 200px;  /* Ajusta según necesites (equivalente a 3.5rem) */
+max-width: 80%;
+height: auto;
+display: block;
+}
+
 @media (max-width: 768px) {
 .site-header-title { display: none; }
 .site-header-title-text { display: none; }
 }
+
+
+
+
+
+
+
 
 /* ======================================
    CONTENEDOR: MENÚ PC
