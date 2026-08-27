@@ -50,26 +50,28 @@ box-sizing: border-box;
 background: transparent !important;  
 margin: 0;
 padding: 0;
+vertical-align: middle;  /* Alinea verticalmente con el menú */
 }
 .site-header-title.hidden {
 display: none !important;
 }
 .site-header-title-text {
-display: inline-block;
+display: inline-block;  /* Se mantiene */
 margin: 0;
 padding: 5px;
-/* Eliminamos los efectos de texto */
 background: transparent !important;
 -webkit-background-clip: unset;
 background-clip: unset;
 -webkit-text-fill-color: unset;
+vertical-align: middle;  /* Alinea verticalmente */
 }
 
 .site-header-title-text img {
-width: 80px;  /* Ajusta según necesites */
+width: 80px;  /* Reducido para que quepa al lado del menú */
+max-width: 100%;
 height: auto;
-display: inline;  /* ← CAMBIO CLAVE: antes era 'block' */
-vertical-align: middle;  /* ← Alinea con el texto/menú */
+display: inline-block;  /* Cambiado de 'block' a 'inline-block' */
+vertical-align: middle;  /* Alinea verticalmente */
 }
 
 @media (max-width: 768px) {
