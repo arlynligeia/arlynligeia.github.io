@@ -1530,7 +1530,7 @@ function showOnlyHomeOnLoad() {
     });
     
     // Control de títulos para HOME
-    const mainTitle = document.getElementById('site-header-title');
+    const mainTitle = document.getElementById('site-header-isotype');
     if (mainTitle) {
         mainTitle.classList.add('hidden');
     }
@@ -1552,7 +1552,7 @@ function showOnlyHomeOnLoad() {
 function showOnlyOneSection(sectionId) {
 console.log('Mostrando SOLO:', sectionId);
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
-const mainTitle = document.getElementById('site-header-title');
+const mainTitle = document.getElementById('site-header-isotype');
 if (sectionId === 'home' || sectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
@@ -1628,7 +1628,7 @@ mainSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 function goToSubsection(subsectionId) {
 console.log('Yendo a subsección:', subsectionId);
 // === CONTROL DEL TÍTULO PEQUEÑO PC ===
-const mainTitle = document.getElementById('site-header-title');
+const mainTitle = document.getElementById('site-header-isotype');
 if (subsectionId === 'home' || subsectionId.startsWith('home-')) {
 if (mainTitle) {
 mainTitle.classList.add('hidden');
@@ -1728,7 +1728,7 @@ showOnlyOneSection(hash);
 }
 } else {
 // Si no hay hash, estamos en HOME
-const mainTitle = document.getElementById('site-header-title');
+const mainTitle = document.getElementById('site-header-isotype');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
@@ -1758,7 +1758,7 @@ goToSubsection(hash);
 showOnlyOneSection(hash);
 }
 } else {
-const mainTitle = document.getElementById('site-header-title');
+const mainTitle = document.getElementById('site-header-isotype');
 if (mainTitle) {
 mainTitle.classList.add('hidden');
 }
@@ -1784,7 +1784,6 @@ console.log('✅ Navegación configurada correctamente');
 });
 </script>
 <!-- FIN SCRIP: NAVEGACIÓN MENUS Y SUBMENUS -->
-
 
 
 <!-- SCRIP: MENÚ HAMBURGUESA MOBILE -->
