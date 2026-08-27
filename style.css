@@ -50,34 +50,41 @@ box-sizing: border-box;
 background: transparent !important;  
 margin: 0;
 padding: 0;
-vertical-align: middle;  /* Alinea verticalmente con el menú */
 }
 .site-header-title.hidden {
 display: none !important;
 }
 .site-header-title-text {
-display: inline-block;  /* Se mantiene */
+/* === EL TEXTO HA SIDO REEMPLAZADO POR LA IMAGEN === */
+display: inline-block;
 margin: 0;
 padding: 5px;
+/* Eliminamos los efectos de texto */
 background: transparent !important;
 -webkit-background-clip: unset;
 background-clip: unset;
 -webkit-text-fill-color: unset;
-vertical-align: middle;  /* Alinea verticalmente */
 }
 
 .site-header-title-text img {
-width: 80px;  /* Reducido para que quepa al lado del menú */
-max-width: 100%;
+width: 200px;  /* Ajusta según necesites (equivalente a 3.5rem) */
+max-width: 80%;
 height: auto;
-display: inline-block;  /* Cambiado de 'block' a 'inline-block' */
-vertical-align: middle;  /* Alinea verticalmente */
+display: block;
 }
 
 @media (max-width: 768px) {
 .site-header-title { display: none; }
 .site-header-title-text { display: none; }
 }
+
+
+
+
+
+
+
+
 
 
 
