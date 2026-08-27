@@ -38,11 +38,13 @@ background: transparent !important;
 gap: 20px;
 }
 
+
+
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO PC
 ====================================== */
 .site-header-title {
-display:  inline-block; 
+display: block;
 width: auto;
 box-sizing: border-box;
 background: transparent !important;  
@@ -64,10 +66,10 @@ background-clip: unset;
 }
 
 .site-header-title-text img {
-width: 200px;  /* Ajusta según necesites (equivalente a 3.5rem) */
-max-width: 80%;
+width: 80px;  /* Ajusta según necesites */
 height: auto;
-display: block;
+display: inline;  /* ← CAMBIO CLAVE: antes era 'block' */
+vertical-align: middle;  /* ← Alinea con el texto/menú */
 }
 
 @media (max-width: 768px) {
