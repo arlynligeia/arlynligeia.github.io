@@ -38,10 +38,6 @@ background: transparent !important;
 gap: 20px;
 }
 
-
-
-
-
 /* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO PC
 ====================================== */
@@ -78,21 +74,6 @@ display: block;
 .site-header-title { display: none; }
 .site-header-title-text { display: none; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    CONTENEDOR: MENÚ PC
@@ -238,12 +219,6 @@ transform: scaleX(1);
 border-bottom: 1px solid white !important;
 }
 
-
-
-
-
-
-
 /* ======================================
    TÍTULO GRANDE PC
 ====================================== */
@@ -264,15 +239,13 @@ background-clip: unset;
 .site-title img {
 width: 100%;  /* Ajusta este valor para que la imagen tenga el tamaño equivalente al texto de 20rem */
 box-sizing: border-box;   
-max-width: 1500px;  /* Tamaño máximo para pantallas muy anchas */
+max-width: 1700px;  /* Tamaño máximo para pantallas muy anchas */
 height: auto;
 display: inline-block;
 }
-
 .site-title.hidden {
 display: none !important;
 }
-
 @media (max-width: 768px) {
 .site-title { display: none; }
 }
