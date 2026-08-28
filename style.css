@@ -4578,7 +4578,7 @@ background: #2a0070 !important;
 margin-top: auto;   
 padding: 30px;
 }
-/* CONTENEDOR: NOMBRE Y COPYRIGHT */
+/* CONTENEDOR: LOGO Y COPYRIGHT */
 .footer-brand {
 width: 100%;
 box-sizing: border-box;    
@@ -4586,25 +4586,28 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
-.footer-brand-name {
-/* === EL TEXTO HA SIDO REEMPLAZADO POR LA IMAGEN === */
+.footer-brand-logo {
 display: block;
 text-align: center;
-margin: 0;
-padding: 0;
 background: transparent !important;
 -webkit-background-clip: unset;
 background-clip: unset;
--webkit-text-fill-color: unset;
+-webkit-text-fill-color: unset;   
+margin: 0 10px 0 0;
+padding: 0;
 }
-
-.footer-brand-name img {
+.footer-brand-logo img {
 max-width: 100%;
 box-sizing: border-box; 
-width: 500px;  /* Ajusta según necesites */
+width: 400px;
 height: auto;
 display: inline-block;
 }
+
+
+
+
+
 .footer-brand-allrightreserved {
 font-family: 'Share Tech Mono', monospace;
 font-size: 1rem;
