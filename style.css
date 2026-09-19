@@ -424,27 +424,13 @@ padding: 0px;
 .title-small-mobile.hidden {
 display: none !important;
 }
-.title-small-text-mobile {
-font-family: 'Bebas Neue', cursive;
-font-size: 3rem;
-color: #00FFFF !important;   
-text-align: center; 
-font-weight: 400;
-margin: 0px;
-padding: 0px;
-background: 
-repeating-linear-gradient(
-0deg,
-rgba(0, 0, 0, 0.3) 0px,
-rgba(0, 0, 0, 0.3) 2px,
-transparent 2px,
-transparent 4px
-),
-linear-gradient(#00FFFF, #00FFFF);
--webkit-background-clip: text;
-background-clip: text;
--webkit-text-fill-color: transparent;
-}  
+.title-big-mobile img {
+width: 50%;
+box-sizing: border-box;   
+height: auto;
+display: block;
+margin: 0 auto;
+}
 nav {
 display: none !important;
 }
