@@ -406,6 +406,40 @@ display: none !important;
 }
 
 /* ======================================
+   CONTENEDOR: TÍTULO GRANDE MOBILE
+====================================== */
+.title-big-mobile { display: none; }
+@media (max-width: 768px) {  
+.title-big-mobile { 
+display: block;
+position: relative;
+width: 100%;
+box-sizing: border-box;
+background: transparent !important;   
+margin: 0px;
+padding: 0px;
+}   
+.title-big-mobile.hidden {
+display: none !important;
+}
+.title-big-mobile img {
+width: 70%;
+box-sizing: border-box;   
+height: auto;
+display: block;
+margin: 0 auto;
+}
+nav {
+display: none !important;
+}
+}
+
+
+
+
+
+
+/* ======================================
    CONTENEDOR: TÍTULO PEQUEÑO MOBILE
 ====================================== */
 .title-small-mobile { display: none; }
@@ -436,34 +470,7 @@ display: none !important;
 }
 }
 
-/* ======================================
-   CONTENEDOR: TÍTULO GRANDE MOBILE
-====================================== */
-.title-big-mobile { display: none; }
-@media (max-width: 768px) {  
-.title-big-mobile { 
-display: block;
-position: relative;
-width: 100%;
-box-sizing: border-box;
-background: transparent !important;   
-margin: 0px;
-padding: 0px;
-}   
-.title-big-mobile.hidden {
-display: none !important;
-}
-.title-big-mobile img {
-width: 50%;
-box-sizing: border-box;   
-height: auto;
-display: block;
-margin: 0 auto;
-}
-nav {
-display: none !important;
-}
-}
+
 
 
 
