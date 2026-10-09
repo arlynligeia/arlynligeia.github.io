@@ -648,18 +648,16 @@ body.is-section .logo {
 /* ======================================
    SOCIAL MEDIA CONTENT
 ====================================== */
-
 /* CONTENEDOR PRINCIPAL (transparente) */
 .socialmediacontent-container {
     position: relative;
-    width: 800px;
+    width: 850px;
     background: transparent !important;
     border: none;
     border-radius: 0px;
     margin: 50px auto;
     padding: 0px;
 }
-
 /* BARRA DE TÍTULO */
 .socialmediacontent-bar {
     display: flex;
@@ -688,7 +686,6 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-
 /* CONTENEDOR DE CONTENIDO (pegado a la barra) */
 .socialmediacontent-columns {
     width: 100%;
@@ -700,7 +697,6 @@ body.is-section .logo {
     margin: 0px;
     padding: 30px;
 }
-
 /* TABLA */
 .socialmediacontent-table {
     width: 100%;
@@ -726,7 +722,6 @@ body.is-section .logo {
 .socialmediacontent-wrapper td:nth-child(3) {
     width: 35%;
 }
-
 /* ENCABEZADOS */
 .socialmediacontent-head {
     width: 100%;
@@ -763,13 +758,11 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-
 /* CUERPO */
 .socialmediacontent-body {
     width: 100%;
     margin: 0px;
 }
-
 /* BOTONES */
 .socialmediacontent-button {
     width: 100%;
@@ -805,7 +798,6 @@ body.is-section .logo {
 .socialmediacontent-youtube:hover {
     transform: scale(1.05);
 }
-
 /* CAJAS DEL CUERPO */
 .socialmediacontent-box-2 {
     width: 100%;
@@ -827,16 +819,13 @@ body.is-section .logo {
     text-decoration: none;
     text-align: center;
 }
-
 /* CONTROL */
 .socialmediacontent-container { display: block; }
 .socialmediacontent-container-mobile { display: none; }
-
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
 @media (max-width: 768px) {
-
     /* CONTENEDOR PRINCIPAL (transparente) */
     .socialmediacontent-container-mobile {
         position: relative;
@@ -848,7 +837,6 @@ body.is-section .logo {
         margin: 40px auto;
         padding: 0px;
     }
-
     /* BARRA DE TÍTULO */
     .socialmediacontent-bar-mobile {
         display: flex;
@@ -876,7 +864,6 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-
     /* CONTENEDOR DE CONTENIDO (pegado a la barra) */
     .socialmediacontent-content-mobile {
         width: 100%;
@@ -888,7 +875,6 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
-
     /* INFORMACIÓN */
     .socialmediacontent-information-mobile {
         width: 100%;
@@ -896,7 +882,6 @@ body.is-section .logo {
         display: block;
         margin: 0px;
     }
-
     /* BOTÓN */
     .socialmediacontent-button-mobile {
         width: 100%;
@@ -926,7 +911,6 @@ body.is-section .logo {
     .socialmediacontent-youtube-mobile:hover {
         transform: scale(1.05);
     }
-
     /* CAJAS */
     .socialmediacontent-box-mobile {
         width: 100%;
@@ -940,7 +924,6 @@ body.is-section .logo {
         margin: 0 0 10px 0;
         padding: 10px;
     }
-
     /* TEXTO */
     .socialmediacontent-text-mobile {
         font-family: 'Share Tech Mono', monospace;
@@ -949,7 +932,6 @@ body.is-section .logo {
         text-decoration: none;
         text-align: center;
     }
-
     /* DIVISOR */
     .socialmediacontent-divider-mobile {
         width: 100%;
@@ -957,7 +939,6 @@ body.is-section .logo {
         border-top: 3px solid #ff00a9 !important;
         margin: 0 0 10px 0;
     }
-
     /* CONTROL */
     .socialmediacontent-container { display: none; }
     .socialmediacontent-container-mobile { display: block; }
