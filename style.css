@@ -655,7 +655,7 @@ body.is-section .logo {
     background: transparent !important;
     border: none;
     border-radius: 0px;
-    margin: 50px auto;
+    margin: 50px auto 50px auto;
     padding: 0px;
 }
 /* BARRA DE TÍTULO */
@@ -685,6 +685,31 @@ body.is-section .logo {
 .socialmediacontent-title a {
     color: #ff00a9 !important;
     text-decoration: none;
+}
+/* BOTÓN CERRAR (CUADRADITO) */
+.socialmediacontent-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background: #b388ff !important;
+    border: 3px solid #b388ff;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.socialmediacontent-close {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
 }
 /* CONTENEDOR DE CONTENIDO (pegado a la barra) */
 .socialmediacontent-columns {
@@ -735,15 +760,15 @@ body.is-section .logo {
     box-sizing: border-box;
     padding: 0px;
 }
-.socialmediacontent-box {
+.socialmediacontent-box-2 {
     width: 100%;
     height: 40px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent !important;
-    border: 2px solid #ff00a9 !important;
+    background: #00FFFF !important;
+    border: 2px solid #000000;
     border-radius: 6px;
     margin: 0px;
     padding: 10px;
@@ -798,20 +823,7 @@ body.is-section .logo {
 .socialmediacontent-youtube:hover {
     transform: scale(1.05);
 }
-/* CAJAS DEL CUERPO */
-.socialmediacontent-box-2 {
-    width: 100%;
-    height: 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #00FFFF !important;
-    border: 2px solid #000000;
-    border-radius: 6px;
-    margin: 0px;
-    padding: 10px;
-}
+/* TEXTO */
 .socialmediacontent-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
@@ -858,11 +870,37 @@ body.is-section .logo {
         text-decoration: none;
         text-align: left;
         text-transform: uppercase;
+        line-height: 1.3;
         margin: 0;
     }
     .socialmediacontent-title-mobile a {
         color: #ff00a9 !important;
         text-decoration: none;
+    }
+    /* BOTÓN CERRAR (CUADRADITO) */
+    .socialmediacontent-box-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        box-sizing: border-box;
+        background: #b388ff !important;
+        border: 3px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+    .socialmediacontent-close-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.3rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        cursor: pointer;
     }
     /* CONTENEDOR DE CONTENIDO (pegado a la barra) */
     .socialmediacontent-content-mobile {
@@ -943,7 +981,6 @@ body.is-section .logo {
     .socialmediacontent-container { display: none; }
     .socialmediacontent-container-mobile { display: block; }
 }
-
 
 
 
