@@ -701,13 +701,132 @@ body.is-section .logo {
     padding: 30px;
 }
 
-/* TABLA (sin cambios) */
+/* TABLA */
 .socialmediacontent-table {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
 }
-/* ... el resto de la tabla queda igual ... */
+.socialmediacontent-wrapper {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 10px;
+    background-color: transparent;
+}
+.socialmediacontent-wrapper th:nth-child(1),
+.socialmediacontent-wrapper td:nth-child(1) {
+    width: 20%;
+}
+.socialmediacontent-wrapper th:nth-child(2),
+.socialmediacontent-wrapper td:nth-child(2) {
+    width: 45%;
+}
+.socialmediacontent-wrapper th:nth-child(3),
+.socialmediacontent-wrapper td:nth-child(3) {
+    width: 35%;
+}
+
+/* ENCABEZADOS */
+.socialmediacontent-head {
+    width: 100%;
+    margin: 0px;
+}
+.socialmediacontent-row {
+    vertical-align: middle;
+}
+.socialmediacontent-head th {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px;
+}
+.socialmediacontent-box {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border: 2px solid #ff00a9 !important;
+    border-radius: 6px;
+    margin: 0px;
+    padding: 10px;
+}
+.socialmediacontent-subtitle {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #ff00a9 !important;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CUERPO */
+.socialmediacontent-body {
+    width: 100%;
+    margin: 0px;
+}
+
+/* BOTONES */
+.socialmediacontent-button {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.socialmediacontent-tiktok,
+.socialmediacontent-youtube {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ff00a9 !important;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.socialmediacontent-tiktok:hover,
+.socialmediacontent-youtube:hover {
+    transform: scale(1.05);
+}
+
+/* CAJAS DEL CUERPO */
+.socialmediacontent-box-2 {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00FFFF !important;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    margin: 0px;
+    padding: 10px;
+}
+.socialmediacontent-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: black !important;
+    text-decoration: none;
+    text-align: center;
+}
 
 /* CONTROL */
 .socialmediacontent-container { display: block; }
@@ -770,20 +889,79 @@ body.is-section .logo {
         padding: 20px;
     }
 
-    /* INFORMACIÓN (sin cambios) */
+    /* INFORMACIÓN */
     .socialmediacontent-information-mobile {
         width: 100%;
         box-sizing: border-box;
         display: block;
         margin: 0px;
     }
-    /* ... el resto del contenido mobile queda igual ... */
+
+    /* BOTÓN */
+    .socialmediacontent-button-mobile {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin: 0px;
+    }
+    .socialmediacontent-tiktok-mobile,
+    .socialmediacontent-youtube-mobile {
+        display: inline-block;
+        background: #ff00a9 !important;
+        border: 2px solid #ffffff;
+        border-radius: 6px;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: white !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    .socialmediacontent-tiktok-mobile:hover,
+    .socialmediacontent-youtube-mobile:hover {
+        transform: scale(1.05);
+    }
+
+    /* CAJAS */
+    .socialmediacontent-box-mobile {
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+        display: inline-block;
+        background: #00FFFF !important;
+        border: 2px solid #000000;
+        border-radius: 6px;
+        text-align: center;
+        margin: 0 0 10px 0;
+        padding: 10px;
+    }
+
+    /* TEXTO */
+    .socialmediacontent-text-mobile {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1rem;
+        color: black !important;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    /* DIVISOR */
+    .socialmediacontent-divider-mobile {
+        width: 100%;
+        height: 0;
+        border-top: 3px solid #ff00a9 !important;
+        margin: 0 0 10px 0;
+    }
 
     /* CONTROL */
     .socialmediacontent-container { display: none; }
     .socialmediacontent-container-mobile { display: block; }
 }
-
 
 
 
