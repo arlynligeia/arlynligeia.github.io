@@ -440,8 +440,11 @@ body.is-section .logo {
     line-height: 1;
     cursor: pointer;
 }
+
+
+
 /* COLUMNAS */
-.home-columns {
+.home-content {
     width: 100%;
     box-sizing: border-box;
     background: #3f00a8 !important;
@@ -450,6 +453,10 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 30px;
+}
+.home-columns {
+    position: relative;
+    z-index: 2;
 }
 /* GRID DE 2 */
 .home-grid {
@@ -512,6 +519,16 @@ body.is-section .logo {
 /* CONTROL */
 .home-container { display: block; }
 .home-container-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    RESPONSIVE: HOME
 ====================================== */
