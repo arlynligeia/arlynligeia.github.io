@@ -722,6 +722,10 @@ body.is-section .logo {
     margin: 0px;
     padding: 30px;
 }
+
+
+
+
 /* TABLA */
 .socialmediacontent-table {
     width: 100%;
@@ -760,15 +764,15 @@ body.is-section .logo {
     box-sizing: border-box;
     padding: 0px;
 }
-.socialmediacontent-box-2 {
+.socialmediacontent-box {
     width: 100%;
     height: 40px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #00FFFF !important;
-    border: 2px solid #000000;
+    background: transparent !important;
+    border: 2px solid #ff00a9 !important;
     border-radius: 6px;
     margin: 0px;
     padding: 10px;
@@ -823,7 +827,20 @@ body.is-section .logo {
 .socialmediacontent-youtube:hover {
     transform: scale(1.05);
 }
-/* TEXTO */
+/* CAJAS DEL CUERPO */
+.socialmediacontent-box-2 {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #00FFFF !important;
+    border: 2px solid #000000;
+    border-radius: 6px;
+    margin: 0px;
+    padding: 10px;
+}
 .socialmediacontent-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
@@ -834,6 +851,19 @@ body.is-section .logo {
 /* CONTROL */
 .socialmediacontent-container { display: block; }
 .socialmediacontent-container-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
