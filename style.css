@@ -532,7 +532,7 @@ body.is-section .logo {
    RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
-    /* CONTENEDOR 1 — bisel exterior */
+    /* CONTENEDOR 1 */
     .home-container-1-mobile {
         position: relative;
         width: 90%;
@@ -546,8 +546,7 @@ body.is-section .logo {
         margin: 700px auto 40px auto;
         padding: 0px;
     }
-
-    /* CONTENEDOR 2 — borde principal */
+    /* CONTENEDOR 2 */
     .home-container-2-mobile {
         position: relative;
         width: 100%;
@@ -561,7 +560,6 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-
     /* BARRA DE VENTANA */
     .home-bar-mobile {
         display: flex;
@@ -590,8 +588,7 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-
-    /* CLOSE — bisel del botón */
+    /* CLOSE */
     .home-close-mobile {
         position: relative;
         display: flex;
@@ -610,14 +607,14 @@ body.is-section .logo {
         padding: 0;
         cursor: pointer;
     }
-   
-    /* BOTÓN CERRAR (CUADRADITO) */
+    /* BOTÓN */
     .home-button-mobile {
         position: relative;
-        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        height: 100%;
         box-sizing: border-box;
         background: #9c6bff !important;
         border-top:    1px solid #e6ccff;
