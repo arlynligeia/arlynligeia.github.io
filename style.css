@@ -595,7 +595,6 @@ body.is-section .logo {
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-
 /* CONTENEDOR 2 — borde principal */
 .home-notification-container-2 {
     position: relative;
@@ -610,7 +609,6 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-
 /* BARRA */
 .home-notification-bar {
     display: flex;
@@ -635,30 +633,35 @@ body.is-section .logo {
     line-height: 1.4;
     margin: 0;
 }
-
+.home-notification-title a {
+    color: #ff00a9 !important;
+    text-decoration: none;
+}
 /* CONTENIDO 1 — borde de la ventana */
 .home-notification-content-1 {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
     border: 3px solid #d0aaff;
-    border-top: none;   /* la unión solo lleva el borde de la barra */
+    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
 }
-
 /* CONTENIDO 2 — fondo del contenido */
 .home-notification-content-2 {
     width: 100%;
     box-sizing: border-box;
     background: #3f00a8 !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     border: none;
     border-radius: 0px;
     margin: 0px;
     padding: 20px;
 }
-
 /* TEXTO */
 .home-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -669,7 +672,6 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0 0 15px 0;
 }
-
 /* BOTÓN 1 — bisel del botón */
 .home-notification-button-1 {
     display: flex;
@@ -687,7 +689,6 @@ body.is-section .logo {
     padding: 0;
     cursor: pointer;
 }
-
 /* BOTÓN 2 — borde principal del botón */
 .home-notification-button-2 {
     display: flex;
@@ -705,12 +706,7 @@ body.is-section .logo {
     margin: 0;
     padding: 8px 20px;
     cursor: pointer;
-    transition: transform 0.3s ease;
 }
-.home-notification-button-2:hover {
-    transform: scale(1.05);
-}
-
 /* TEXTO DEL BOTÓN */
 .home-notification-stay {
     display: block;
@@ -721,9 +717,6 @@ body.is-section .logo {
     line-height: 1;
     cursor: pointer;
 }
-
-
-
 /* CONTROL */
 .home-container-1 { display: block; }
 .home-container-1-mobile { display: none; }
