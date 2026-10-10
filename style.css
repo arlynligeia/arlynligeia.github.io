@@ -525,6 +525,9 @@ body.is-section .logo {
 /* CONTROL */
 .home-container { display: block; }
 .home-container-mobile { display: none; }
+
+
+
 /* ======================================
    RESPONSIVE: HOME
 ====================================== */
@@ -540,21 +543,51 @@ body.is-section .logo {
         padding: 0px;
     }
     /* BARRA DE VENTANA */
-    .home-bar-mobile {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        background: #2a0070 !important;
-        border-top:    4px solid #ffffff;   /* luz máxima */
-        border-left:   4px solid #e6ccff;   /* luz alta */
-        border-right:  4px solid #d0aaff;   /* luz baja */
-        border-bottom: 4px solid #d0aaff;   /* luz baja */
-        border-radius: 0px;
-        margin: 0px;
-        padding: 5px 15px;
-    }
+.home-bar-mobile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #2a0070 !important;
+    border: 4px solid #d0aaff;   /* borde interno */
+    border-radius: 0px;
+    margin: 0px;
+    padding: 5px 15px;
+    z-index: 1;
+}
+/* BISEL MEDIO */
+.home-bar-mobile::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-top:    4px solid #e6ccff;
+    border-left:   4px solid #e6ccff;
+    border-right:  4px solid #b388ff;
+    border-bottom: 4px solid #b388ff;
+    pointer-events: none;
+    z-index: -1;
+}
+/* BISEL EXTERIOR */
+.home-bar-mobile::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-top:    4px solid #ffffff;
+    border-left:   4px solid #ffffff;
+    border-right:  4px solid #8a55f0;
+    border-bottom: 4px solid #8a55f0;
+    pointer-events: none;
+    z-index: -2;
+}
+
     .home-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -599,18 +632,47 @@ body.is-section .logo {
         cursor: pointer;
     }
     /* CONTENIDO */
-    .home-content-mobile {
-        width: 100%;
-        box-sizing: border-box;
-        background: #3f00a8 !important;
-        border-top: none;
-        border-left:   4px solid #e6ccff;   /* luz alta */
-        border-right:  4px solid #d0aaff;   /* luz baja */
-        border-bottom: 4px solid #b388ff;   /* sombra (más oscuro) */
-        border-radius: 0px;
-        margin: 0px;
-        padding: 20px;
-    }
+  .home-content-mobile {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: #3f00a8 !important;
+    border: 4px solid #d0aaff;   /* borde interno */
+    border-radius: 0px;
+    margin: 0px;
+    padding: 20px;
+    z-index: 1;
+}
+/* BISEL MEDIO */
+.home-content-mobile::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-top:    4px solid #e6ccff;
+    border-left:   4px solid #e6ccff;
+    border-right:  4px solid #b388ff;
+    border-bottom: 4px solid #b388ff;
+    pointer-events: none;
+    z-index: -1;
+}
+/* BISEL EXTERIOR */
+.home-content-mobile::after {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -12px;
+    right: -12px;
+    bottom: -12px;
+    border-top:    4px solid #ffffff;
+    border-left:   4px solid #ffffff;
+    border-right:  4px solid #8a55f0;
+    border-bottom: 4px solid #8a55f0;
+    pointer-events: none;
+    z-index: -2;
+}
     /* IMAGEN */
     .home-image-mobile {
         width: 100%;
@@ -664,6 +726,29 @@ body.is-section .logo {
     .home-container { display: none; }
     .home-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
