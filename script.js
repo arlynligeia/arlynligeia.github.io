@@ -269,18 +269,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* ======================================
-   SCRIPT: NOTIFICACIÓN MOBILE
+   SCRIPT: NOTIFICACIÓN HOME
 ====================================== */
     const closeBtn = document.getElementById('home-close-btn');
     const notification = document.getElementById('home-notification');
+    const notificationBtn = document.getElementById('home-notification-button');
 
+    // X → mostrar notificación
     closeBtn.addEventListener('click', () => {
         notification.classList.add('show');
+    });
 
-        // Se oculta sola después de 3 segundos
-        setTimeout(() => {
-            notification.classList.remove('show');
-        }, 3000);
+    // FINE. STAY. → ocultar notificación
+    notificationBtn.addEventListener('click', () => {
+        notification.classList.remove('show');
     });
 
 
