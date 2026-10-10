@@ -591,26 +591,6 @@ body.is-section .logo {
         text-decoration: none;
     }
 
-    /* BOTÓN CERRAR (CUADRADITO) */
-    .home-button-mobile {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 34px;
-        height: 34px;
-        box-sizing: border-box;
-        background: #9c6bff !important;
-        border-top:    1px solid #e6ccff;
-        border-left:   1px solid #e6ccff;
-        border-right:  1px solid #b388ff;
-        border-bottom: 1px solid #b388ff;
-        border-radius: 0px;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-    }
-
     /* CLOSE — bisel del botón */
     .home-close-mobile {
         position: relative;
@@ -630,7 +610,25 @@ body.is-section .logo {
         padding: 0;
         cursor: pointer;
     }
-
+   
+    /* BOTÓN CERRAR (CUADRADITO) */
+    .home-button-mobile {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background: #9c6bff !important;
+        border-top:    1px solid #e6ccff;
+        border-left:   1px solid #e6ccff;
+        border-right:  1px solid #b388ff;
+        border-bottom: 1px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
     /* X */
     .home-x-mobile {
         display: block;
@@ -643,6 +641,8 @@ body.is-section .logo {
         cursor: pointer;
     }
 
+
+    
     /* CONTENIDO */
     .home-content-mobile {
         width: 100%;
