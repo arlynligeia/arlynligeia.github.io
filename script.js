@@ -271,16 +271,19 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ======================================
    SCRIPT: NOTIFICACIÓN HOME
 ====================================== */
+      // Botón X del home (PC)
     const closeBtn = document.getElementById('home-close-btn');
-    const notification = document.getElementById('home-notification');
+
+    // Notificación
+    const notification = document.getElementById('home-notification-container-1');
     const notificationBtn = document.getElementById('home-notification-button');
 
-    // X → mostrar notificación
+    // Al hacer clic en la X → mostrar notificación
     closeBtn.addEventListener('click', () => {
         notification.classList.add('show');
     });
 
-    // FINE. STAY. → ocultar notificación
+    // Al hacer clic en STAY → ocultar notificación
     notificationBtn.addEventListener('click', () => {
         notification.classList.remove('show');
     });
