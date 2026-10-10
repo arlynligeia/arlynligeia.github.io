@@ -569,7 +569,8 @@ body.is-section .logo {
 /* ======================================
    NOTIFICACIÓN
 ====================================== */
-.home-notification {
+/* CONTENEDOR 1 — bisel exterior */
+.home-notification-container-1 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -579,7 +580,6 @@ body.is-section .logo {
     max-width: 400px;
     box-sizing: border-box;
     background: transparent !important;
-    /* BISEL EXTERIOR */
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
     border-right:  2px solid #8a55f0;
@@ -590,41 +590,111 @@ body.is-section .logo {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.home-notification.show {
+.home-notification-container-1.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
 
-/* INTERIOR — borde principal, igual que .home-container-2 */
-.home-notification-inner {
+/* CONTENEDOR 2 — borde principal */
+.home-notification-container-2 {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    background: #2a0070 !important;
+    background: transparent !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 25px;
+    padding: 0px;
 }
+
+/* BARRA */
+.home-notification-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #2a0070 !important;
+    border: 3px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 4px 12px;
+}
+.home-notification-title {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #ff00a9 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* CONTENIDO 1 — borde de la ventana */
+.home-notification-content-1 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 3px solid #d0aaff;
+    border-top: none;   /* la unión solo lleva el borde de la barra */
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CONTENIDO 2 — fondo del contenido */
+.home-notification-content-2 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #3f00a8 !important;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+
+/* TEXTO */
 .home-notification-text {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #00FF00 !important;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
-    margin: 0 0 10px 0;
+    margin: 0 0 15px 0;
 }
-/* BOTÓN DE LA NOTIFICACIÓN */
-.home-notification-button {
+
+/* BOTÓN 1 — bisel del botón */
+.home-notification-button-1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: fit-content;  
+    width: fit-content;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0 auto;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* BOTÓN 2 — borde principal del botón */
+.home-notification-button-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
     background: #9c6bff !important;
     border-top:    2px solid #e6ccff;
@@ -633,22 +703,27 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0;
-    padding: 10px 20px;
+    padding: 8px 20px;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
-.home-notification-button  {
+.home-notification-button-2:hover {
     transform: scale(1.05);
 }
-.home-notification-button-text {
+
+/* TEXTO DEL BOTÓN */
+.home-notification-stay {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
     cursor: pointer;
 }
+
+
+
 /* CONTROL */
 .home-container-1 { display: block; }
 .home-container-1-mobile { display: none; }
