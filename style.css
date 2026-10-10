@@ -547,21 +547,22 @@ body.is-section .logo {
         padding: 0px;
         z-index: 1;
     }
-    /* BISEL EXTERIOR */
+    /* BISEL EXTERIOR — pegado al borde principal (offset = grosor del borde = 2px) */
     .home-container-mobile::after {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border-top:    2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:  2px solid #8a55f0;
-    border-bottom: 2px solid #8a55f0;
-    pointer-events: none;
-    z-index: -1;
-}
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        pointer-events: none;
+        z-index: -1;
+    }
+
     /* BARRA DE VENTANA */
     .home-bar-mobile {
         display: flex;
@@ -612,14 +613,14 @@ body.is-section .logo {
         cursor: pointer;
         z-index: 1;
     }
-    /* BISEL EXTERIOR DEL BOTÓN — mismos colores que el bisel del contenedor */
+    /* BISEL EXTERIOR DEL BOTÓN — pegado al borde principal (offset = 2px) */
     .home-button-mobile::after {
         content: "";
         position: absolute;
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
         border-top:    2px solid #ffffff;
         border-left:   2px solid #ffffff;
         border-right:  2px solid #8a55f0;
@@ -627,7 +628,7 @@ body.is-section .logo {
         pointer-events: none;
         z-index: -1;
     }
-   
+
     .home-close-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -639,9 +640,6 @@ body.is-section .logo {
         cursor: pointer;
     }
 
-
-
-    
     /* CONTENIDO */
     .home-content-mobile {
         width: 100%;
@@ -708,7 +706,6 @@ body.is-section .logo {
     .home-container { display: none; }
     .home-container-mobile { display: block; }
 }
-
 
 
 
