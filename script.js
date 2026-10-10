@@ -268,8 +268,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
 /* ======================================
-   SCRIPT: NOTIFICACIÓN HOME
+   SCRIPT: NOTIFICACIÓN HOME - PC
 ====================================== */
       // Botón X del home (PC)
     const closeBtn = document.getElementById('home-close-btn');
@@ -287,6 +294,30 @@ document.addEventListener('DOMContentLoaded', function () {
     notificationBtn.addEventListener('click', () => {
         notification.classList.remove('show');
     });
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN HOME MOBILE
+====================================== */
+    // Botón X del home (Mobile)
+    const closeBtnMobile = document.getElementById('home-close-btn-mobile');
+
+    // Notificación Mobile
+    const notificationMobile = document.getElementById('home-notification-container-1-mobile');
+    const notificationBtnMobile = document.getElementById('home-notification-button-mobile');
+
+    // Al hacer clic en la X → mostrar notificación
+    closeBtnMobile.addEventListener('click', () => {
+        notificationMobile.classList.add('show');
+    });
+
+    // Al hacer clic en STAY → ocultar notificación
+    notificationBtnMobile.addEventListener('click', () => {
+        notificationMobile.classList.remove('show');
+    });
+
+
+
+
 
 
 
