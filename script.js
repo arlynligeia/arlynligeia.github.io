@@ -268,6 +268,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN MOBILE
+====================================== */
+    const closeBtn = document.getElementById('home-close-btn');
+    const notification = document.getElementById('home-notification');
+
+    closeBtn.addEventListener('click', () => {
+        notification.classList.add('show');
+
+        // Se oculta sola después de 3 segundos
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 3000);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
