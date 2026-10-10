@@ -591,23 +591,41 @@ body.is-section .logo {
         text-decoration: none;
     }
 
-    /* BOTÓN CERRAR (CUADRADITO) */
+    /* BOTÓN CERRAR (CUADRADITO) — mismos colores del contenedor + bisel */
     .home-button-mobile {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 35px;
         height: 35px;
         box-sizing: border-box;
-        background: #9c6bff !important;
-        border-top:    3px solid #ffffff;
-        border-left:   3px solid #e6ccff;
-        border-right:  3px solid #d0aaff;
-        border-bottom: 3px solid #b388ff;
+        background: transparent !important;
+        /* borde principal: mismos colores que .home-container-mobile */
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0;
         padding: 0;
         cursor: pointer;
+        z-index: 1;
+    }
+    /* BISEL EXTERIOR DEL BOTÓN — mismos colores que el bisel del contenedor */
+    .home-button-mobile::after {
+        content: "";
+        position: absolute;
+        top: -4px;
+        left: -4px;
+        right: -4px;
+        bottom: -4px;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        pointer-events: none;
+        z-index: -1;
     }
    
     .home-close-mobile {
