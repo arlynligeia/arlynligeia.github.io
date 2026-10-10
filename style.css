@@ -542,7 +542,7 @@ body.is-section .logo {
         margin: 500px auto 40px auto;
         padding: 0px;
     }
-    /* BARRA DE VENTANA */
+/* BARRA DE VENTANA */
 .home-bar-mobile {
     position: relative;
     display: flex;
@@ -557,37 +557,36 @@ body.is-section .logo {
     padding: 5px 15px;
     z-index: 1;
 }
-/* BISEL MEDIO */
+/* BISEL MEDIO (arriba, izq, der — NO abajo) */
 .home-bar-mobile::before {
     content: "";
     position: absolute;
     top: -8px;
     left: -8px;
     right: -8px;
-    bottom: -8px;
+    bottom: 0;
     border-top:    4px solid #e6ccff;
     border-left:   4px solid #e6ccff;
     border-right:  4px solid #b388ff;
-    border-bottom: 4px solid #b388ff;
+    border-bottom: none;
     pointer-events: none;
     z-index: -1;
 }
-/* BISEL EXTERIOR */
+/* BISEL EXTERIOR (arriba, izq, der — NO abajo) */
 .home-bar-mobile::after {
     content: "";
     position: absolute;
     top: -12px;
     left: -12px;
     right: -12px;
-    bottom: -12px;
+    bottom: 0;
     border-top:    4px solid #ffffff;
     border-left:   4px solid #ffffff;
     border-right:  4px solid #8a55f0;
-    border-bottom: 4px solid #8a55f0;
+    border-bottom: none;
     pointer-events: none;
     z-index: -2;
 }
-
     .home-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -631,48 +630,50 @@ body.is-section .logo {
         line-height: 1;
         cursor: pointer;
     }
-    /* CONTENIDO */
-  .home-content-mobile {
+/* CONTENIDO */
+.home-content-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     background: #3f00a8 !important;
     border: 4px solid #d0aaff;   /* borde interno */
+    border-top: none;            /* la unión solo lleva el borde de la barra */
     border-radius: 0px;
     margin: 0px;
     padding: 20px;
     z-index: 1;
 }
-/* BISEL MEDIO */
+/* BISEL MEDIO (abajo, izq, der — NO arriba) */
 .home-content-mobile::before {
     content: "";
     position: absolute;
-    top: -8px;
+    top: 0;
     left: -8px;
     right: -8px;
     bottom: -8px;
-    border-top:    4px solid #e6ccff;
+    border-top: none;
     border-left:   4px solid #e6ccff;
     border-right:  4px solid #b388ff;
     border-bottom: 4px solid #b388ff;
     pointer-events: none;
     z-index: -1;
 }
-/* BISEL EXTERIOR */
+/* BISEL EXTERIOR (abajo, izq, der — NO arriba) */
 .home-content-mobile::after {
     content: "";
     position: absolute;
-    top: -12px;
+    top: 0;
     left: -12px;
     right: -12px;
     bottom: -12px;
-    border-top:    4px solid #ffffff;
+    border-top: none;
     border-left:   4px solid #ffffff;
     border-right:  4px solid #8a55f0;
     border-bottom: 4px solid #8a55f0;
     pointer-events: none;
     z-index: -2;
 }
+
     /* IMAGEN */
     .home-image-mobile {
         width: 100%;
