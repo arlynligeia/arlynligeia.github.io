@@ -532,18 +532,20 @@ body.is-section .logo {
    RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
+    /* CONTENEDOR PRINCIPAL (transparente, con borde + bisel exterior) */
     .home-container-mobile {
         position: relative;
-        width: 100%;
+        width: 90%;
         box-sizing: border-box;
         background: transparent !important;
-        border-top:    4px solid #e6ccff;
-        border-left:   4px solid #e6ccff;
-        border-right:  4px solid #b388ff;
-        border-bottom: 4px solid #b388ff;
+        border-top:    4px solid #e6ccff;   /* borde principal: luz alta */
+        border-left:   4px solid #e6ccff;   /* borde principal: luz alta */
+        border-right:  4px solid #b388ff;   /* borde principal: sombra */
+        border-bottom: 4px solid #b388ff;   /* borde principal: sombra */
         border-radius: 0px;
         margin: 500px auto 40px auto;
         padding: 0px;
+        z-index: 1;
     }
     /* BISEL EXTERIOR */
     .home-container-mobile::after {
@@ -558,11 +560,9 @@ body.is-section .logo {
         border-right:  4px solid #8a55f0;
         border-bottom: 4px solid #8a55f0;
         pointer-events: none;
+        z-index: -1;
     }
 
-
-
-    
     /* BARRA DE VENTANA */
     .home-bar-mobile {
         display: flex;
