@@ -532,33 +532,34 @@ body.is-section .logo {
    RESPONSIVE: HOME
 ====================================== */
 @media (max-width: 768px) {
-    /* CONTENEDOR PRINCIPAL (transparente, con borde + bisel exterior) */
-    .home-container-mobile {
+    /* CONTENEDOR 1 — bisel exterior */
+    .home-container-1-mobile {
         position: relative;
         width: 90%;
         box-sizing: border-box;
         background: transparent !important;
-        border-top:    2px solid #e6ccff;   /* borde principal: luz alta */
-        border-left:   2px solid #e6ccff;   /* borde principal: luz alta */
-        border-right:  2px solid #b388ff;   /* borde principal: sombra */
-        border-bottom: 2px solid #b388ff;   /* borde principal: sombra */
-        border-radius: 0px;
-        margin: 700px auto 40px auto;
-        padding: 0px;
-    }
-    /* BISEL EXTERIOR — pegado al borde principal (offset = grosor del borde = 2px) */
-    .home-container-mobile::after {
-        content: "";
-        position: absolute;
-        top: -4px;
-        left: -4px;
-        right: -4px;
-        bottom: -4px;
         border-top:    2px solid #ffffff;
         border-left:   2px solid #ffffff;
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
-        pointer-events: none;
+        border-radius: 0px;
+        margin: 700px auto 40px auto;
+        padding: 0px;
+    }
+
+    /* CONTENEDOR 2 — borde principal */
+    .home-container-2-mobile {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
     }
 
     /* BARRA DE VENTANA */
@@ -590,7 +591,7 @@ body.is-section .logo {
         text-decoration: none;
     }
 
-    /* BOTÓN CERRAR (CUADRADITO) — mismos colores del contenedor + bisel */
+    /* BOTÓN CERRAR (CUADRADITO) */
     .home-button-mobile {
         position: relative;
         display: flex;
@@ -599,33 +600,39 @@ body.is-section .logo {
         width: 35px;
         height: 35px;
         box-sizing: border-box;
-        background: #9c6bff !important; 
-        /* borde principal: mismos colores que .home-container-mobile */
-        border-top:    1px solid #e6ccff;
-        border-left:   1px solid #e6ccff;
-        border-right:  1px solid #b388ff;
-        border-bottom: 1px solid #b388ff;
+        background: #9c6bff !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0;
         padding: 0;
         cursor: pointer;
     }
-    /* BISEL EXTERIOR DEL BOTÓN — pegado al borde principal (offset = 2px) */
-    .home-button-mobile::after {
-        content: "";
-        position: absolute;
-        top: -2px;
-        left: -2px;
-        right: -2px;
-        bottom: -2px;
-        border-top:    1px solid #ffffff;
-        border-left:   1px solid #ffffff;
-        border-right:  1px solid #8a55f0;
-        border-bottom: 1px solid #8a55f0;
-        pointer-events: none;
+
+    /* CLOSE — bisel del botón */
+    .home-close-mobile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
     }
 
-    .home-close-mobile {
+    /* X */
+    .home-x-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1.3rem;
@@ -636,8 +643,6 @@ body.is-section .logo {
         cursor: pointer;
     }
 
-
-    
     /* CONTENIDO */
     .home-content-mobile {
         width: 100%;
@@ -704,7 +709,6 @@ body.is-section .logo {
     .home-container { display: none; }
     .home-container-mobile { display: block; }
 }
-
 
 
 
