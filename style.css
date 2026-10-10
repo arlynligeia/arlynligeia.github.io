@@ -610,23 +610,21 @@ body.is-section .logo {
     margin: 0px;
     padding: 25px;
 }
-
 .home-notification-text {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: #00FF00 !important;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 0 10px 0;
 }
-
 /* BOTÓN DE LA NOTIFICACIÓN */
 .home-notification-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: fit-content;  
     box-sizing: border-box;
     background: #9c6bff !important;
     border-top:    2px solid #e6ccff;
@@ -634,14 +632,18 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 15px 0 0 0;
-    padding: 8px 15px;
+    margin: 0;
+    padding: 10px 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.home-notification-button  {
+    transform: scale(1.05);
 }
 .home-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -650,6 +652,13 @@ body.is-section .logo {
 /* CONTROL */
 .home-container-1 { display: block; }
 .home-container-1-mobile { display: none; }
+
+
+
+
+
+
+
 
 
 
