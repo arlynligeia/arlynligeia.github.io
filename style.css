@@ -1408,7 +1408,7 @@ body.is-section .logo {
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
-.socialmediacontent-notification-container-1 {
+.socialmediacontent-notification-1 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1428,12 +1428,12 @@ body.is-section .logo {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.socialmediacontent-notification-container-1.show {
+.socialmediacontent-notification-1.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-.socialmediacontent-notification-container-2 {
+.socialmediacontent-notification-2 {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -1574,6 +1574,11 @@ body.is-section .logo {
 .socialmediacontent-container-1-mobile { display: none; }
 .socialmediacontent-notification-bar-mobile { display: none; }
 .socialmediacontent-notification-content-2-mobile { display: none; }
+
+
+
+
+
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
