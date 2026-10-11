@@ -278,10 +278,10 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ======================================
    SCRIPT: NOTIFICACIÓN HOME - PC
 ====================================== */
-      // Botón X del home (PC)
+    // Botón X del home (PC)
     const closeBtn = document.getElementById('home-close-btn');
 
-    // Notificación
+    // Notificación PC
     const notification = document.getElementById('home-notification');
     const notificationBtn = document.getElementById('home-notification-button');
 
@@ -296,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 /* ======================================
-   SCRIPT: NOTIFICACIÓN HOME MOBILE
+   SCRIPT: NOTIFICACIÓN HOME - MOBILE
 ====================================== */
     // Botón X del home (Mobile)
     const closeBtnMobile = document.getElementById('home-close-btn-mobile');
