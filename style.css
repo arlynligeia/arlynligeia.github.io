@@ -414,7 +414,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 5px 15px;
+    padding: 10px;
 }
 .home-title {
     display: block;
@@ -463,13 +463,13 @@ body.is-section .logo {
     border-bottom: 1px solid #b388ff;
     border-radius: 0px;
     margin: 0;
-    padding: 0;
+    padding: 10px;
     cursor: pointer;
 }
 .home-close {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-decoration: none;
     text-transform: uppercase;
@@ -482,7 +482,7 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff;
-    border-top: none;   /* la unión solo lleva el borde de la barra */
+    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -569,7 +569,6 @@ body.is-section .logo {
 /* ======================================
    NOTIFICACIÓN
 ====================================== */
-/* CONTENEDOR 1 — bisel exterior */
 .home-notification-container-1 {
     position: fixed;
     top: 50%;
@@ -595,7 +594,6 @@ body.is-section .logo {
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-/* CONTENEDOR 2 — borde principal */
 .home-notification-container-2 {
     position: relative;
     width: 100%;
@@ -617,7 +615,7 @@ body.is-section .logo {
     width: 100%;
     box-sizing: border-box;
     background: #2a0070 !important;
-    border: 3px solid #d0aaff;
+    border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
     padding: 4px 12px;
@@ -637,12 +635,12 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-/* CONTENIDO 1 — borde de la ventana */
+/* CONTENIDO */
 .home-notification-content-1 {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
-    border: 3px solid #d0aaff;
+    border: 4px solid #d0aaff;
     border-top: none;
     border-radius: 0px;
     margin: 0px;
@@ -657,7 +655,6 @@ body.is-section .logo {
     border-left:   2px solid #8a55f0;
     border-right:  2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
-    border: none;
     border-radius: 0px;
     margin: 0px;
     padding: 20px;
@@ -672,7 +669,7 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0 0 15px 0;
 }
-/* BOTÓN 1 — bisel del botón */
+/* BOTÓN PERMANECER */
 .home-notification-button-1 {
     display: flex;
     justify-content: center;
@@ -689,7 +686,6 @@ body.is-section .logo {
     padding: 0;
     cursor: pointer;
 }
-/* BOTÓN 2 — borde principal del botón */
 .home-notification-button-2 {
     display: flex;
     justify-content: center;
@@ -697,17 +693,17 @@ body.is-section .logo {
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    background: #9c6bff !important;
+    background: #d0aaff!important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0;
-    padding: 8px 20px;
+    padding: 10px 20px;
     cursor: pointer;
 }
-/* TEXTO DEL BOTÓN */
+/* TEXTO*/
 .home-notification-stay {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -720,6 +716,13 @@ body.is-section .logo {
 /* CONTROL */
 .home-container-1 { display: block; }
 .home-container-1-mobile { display: none; }
+
+
+
+
+
+
+
 
 
 
