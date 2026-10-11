@@ -1064,6 +1064,8 @@ body.is-section .logo {
 
 
 
+
+
 /* ======================================
    SOCIAL MEDIA CONTENT - PC
 ====================================== */
@@ -1120,6 +1122,8 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
+
+
 /* BOTÓN CERRAR */
 .socialmediacontent-button-1 {
     display: flex;
@@ -1129,22 +1133,24 @@ body.is-section .logo {
     height: 40px;
     box-sizing: border-box;
     background: transparent !important;
-        border-top:    2px solid #ffffff;
-        border-left:   2px solid #ffffff;
-        border-right:  2px solid #8a55f0;
-        border-bottom: 2px solid #8a55f0;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
     margin: 0;
     padding: 0;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
-.socialmediacontent-button-1-mobile:hover {
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    transform: translateY(1px);
+
+/* Hover del contenedor exterior: invierte SUS bordes */
+.socialmediacontent-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
 }
+
 .socialmediacontent-button-2 {
     display: flex;
     width: 100%;
@@ -1153,41 +1159,40 @@ body.is-section .logo {
     justify-content: center;
     align-items: center;
     background: #d0aaff;
-        border-top:    2px solid #e6ccff;
-        border-left:   2px solid #e6ccff;
-        border-right:  2px solid #b388ff;
-        border-bottom: 2px solid #b388ff;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0;
     padding: 10px;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
+
+/* Hover del botón interior: invierte SUS bordes */
 .socialmediacontent-button-2:hover {
-    border-top:  2px solid #b388ff;
-    border-left: 2px solid #b388ff;
-    border-right:    2px solid #e6ccff;
-    border-bottom:   2px solid #e6ccff;
-    transform: translateY(1px);
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
 }
+
 .socialmediacontent-close {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
-        color: #2a0070 !important;
+    color: #2a0070 !important;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
     cursor: pointer;
-     transition: filter 0.15s ease;
+    transition: filter 0.15s ease;
 }
-.socialmediacontent-close {
+
+/* ✅ Ahora sí es :hover */
+.socialmediacontent-close:hover {
     filter: brightness(1.1);
 }
-
-
-
-
-
 /* CONTENIDO */
 .socialmediacontent-content-1 {
     width: 100%;
@@ -1311,14 +1316,16 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
+
 .socialmediacontent-button2-1:hover {
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
 }
+
 .socialmediacontent-button2-2 {
     display: flex;
     width: 100%;
@@ -1333,14 +1340,16 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
+
 .socialmediacontent-button2-2:hover {
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
 }
+
 .socialmediacontent-tiktok,
 .socialmediacontent-youtube {
     width: 100%;
@@ -1362,16 +1371,14 @@ body.is-section .logo {
     margin: 0px;
     padding: 10px 20px;
     cursor: pointer;
-     transition: filter 0.15s ease;
+    transition: filter 0.15s ease;
 }
-.socialmediacontent-tiktok-mobile:hover,
-.socialmediacontent-youtube-mobile:hover {
+
+.socialmediacontent-tiktok:hover,
+.socialmediacontent-youtube:hover {
     filter: brightness(1.1);
 }
-
-
-
-    
+   
 /* CAJAS DEL CUERPO */
 .socialmediacontent-box2-1 {
      display: flex;   
@@ -1411,6 +1418,7 @@ body.is-section .logo {
     text-decoration: none;
     text-align: center;
 }
+
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
@@ -1516,7 +1524,7 @@ body.is-section .logo {
 /* BOTÓN PERMANECER */
 .socialmediacontent-notification-button-1 {
     display: flex;
-     width: fit-content;
+    width: fit-content;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -1528,15 +1536,16 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0 auto;
     padding: 0;
-    transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
+
 .socialmediacontent-notification-button-1:hover {
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    transform: translateY(1px);
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
 }
+
 .socialmediacontent-notification-button-2 {
     display: flex;
     justify-content: center;
@@ -1552,15 +1561,16 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0;
     padding: 10px 20px;
-     transition: border-color 0.15s ease, transform 0.15s ease;
+    transition: border-color 0.15s ease;
 }
+
 .socialmediacontent-notification-button-2:hover {
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    transform: translateY(1px);
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
 }
+
 .socialmediacontent-notification-stay {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -1571,8 +1581,8 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.socialmediacontent-tiktok-mobile:hover,
-.socialmediacontent-youtube-mobile:hover {
+
+.socialmediacontent-notification-stay:hover {
     filter: brightness(1.1);
 }
 /* CONTROL */
