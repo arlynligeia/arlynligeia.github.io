@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById('home-close-btn');
 
     // Notificación
-    const notification = document.getElementById('home-notification-container-1');
+    const notification = document.getElementById('home-notification');
     const notificationBtn = document.getElementById('home-notification-button');
 
     // Al hacer clic en la X → mostrar notificación
@@ -302,7 +302,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile = document.getElementById('home-close-btn-mobile');
 
     // Notificación Mobile
-    const notificationMobile = document.getElementById('home-notification-container-1-mobile');
+    const notificationMobile = document.getElementById('home-notification-mobile');
     const notificationBtnMobile = document.getElementById('home-notification-button-mobile');
 
     // Al hacer clic en la X → mostrar notificación
