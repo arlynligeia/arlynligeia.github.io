@@ -2370,7 +2370,15 @@ body.is-section .logo {
 /* ======================================
    UNIVERSE - RESPONSIVE
 ====================================== */
-
+@media (min-width: 800px) and (max-width: 1024px) {
+.universe-container-1 {
+    width: 90%;
+}
+}
+@media (max-width: 834px) {
+.universe-title { font-size: 2.3rem; }
+.universe-text { font-size: 1.05rem; }
+}
 @media (max-width: 768px) {
     .universe-container-1-mobile {
         position: relative;
@@ -2700,7 +2708,14 @@ body.is-section .logo {
     .universe-notification-bar-mobile { display: block; }
     .universe-notification-content-2-mobile { display: block; }
 }
-
+@media (max-width: 360px) {
+.universe-title { font-size: 1.5rem; }
+.universe-text { font-size: 1rem; }
+}
+@media (max-width: 320px) {
+.universe-title { font-size: 1.3rem; }
+.universe-text { font-size: 0.8rem; }
+}
 
 
 
