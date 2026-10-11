@@ -321,6 +321,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn = document.getElementById('socialmediacontent-close-btn');
+    const notification = document.getElementById('socialmediacontent-notification');
+    const notificationBtn = document.getElementById('socialmediacontent-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile = document.getElementById('socialmediacontent-close-btn-mobile');
+    const notificationMobile = document.getElementById('socialmediacontent-notification-mobile');
+    const notificationBtnMobile = document.getElementById('socialmediacontent-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
 
 
 
