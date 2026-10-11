@@ -1574,15 +1574,10 @@ body.is-section .logo {
 .socialmediacontent-container-1-mobile { display: none; }
 .socialmediacontent-notification-bar-mobile { display: none; }
 .socialmediacontent-notification-content-2-mobile { display: none; }
-
-
-
-
-
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
-@media (min-width: 360px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .socialmediacontent-container-1-mobile {
         position: relative;
         width: 90%;
@@ -2013,7 +2008,7 @@ body.is-section .logo {
     .socialmediacontent-notification-content-2-mobile { display: block; }
 }
 
-@media (max-width: 359px) {
+@media (max-width: 360px) {
     .socialmediacontent-title-mobile { font-size: 1.5rem; }
     .socialmediacontent-text-mobile { font-size: 1rem; }
 }
