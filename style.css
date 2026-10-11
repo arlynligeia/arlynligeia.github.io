@@ -1521,6 +1521,10 @@ body.is-section .logo {
 .socialmediacontent-notification-content-2-mobile { display: none; }
 
 
+
+
+
+
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
@@ -1658,63 +1662,86 @@ body.is-section .logo {
         margin: 0px;
     }
 
-    /* BOTONES TIKTOK / YOUTUBE */
-    .socialmediacontent-button2-1-mobile {
-        width: fit-content;
-        box-sizing: border-box;
-        display: block;
-        align-items: center;
-        background: transparent !important;
-       border-top:    2px solid #ffffff;
-        border-left:   2px solid #ffffff;
-       border-right:  2px solid #8a55f0;
-        border-bottom: 2px solid #8a55f0;
-        border-radius: 0px;
-        margin: 0 0 10px 0;
-        padding: 0;
-    }
-    .socialmediacontent-button2-2-mobile {
-        width: fit-content;
-        box-sizing: border-box;
-        display: block;
-        align-items: center;
-        background: transparent !important;
-       border-top:    2px solid #e6ccff;
-       border-left:   2px solid #e6ccff;
-       border-right:  2px solid #b388ff;
-       border-bottom: 2px solid #b388ff;
-        border-radius: 0px;
-        margin: 0;
-        padding: 0;
-    }
-    .socialmediacontent-tiktok-mobile,
-    .socialmediacontent-youtube-mobile {
-        display: block;
-        width: auto;
-        box-sizing: border-box;
-        align-items: center;
-        background: #ff00a9 !important;
-        border: none;
-        border-radius: 0px;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1rem;
-        color: white !important;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: bold;
-        margin: 0;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-    }
-    .socialmediacontent-tiktok-mobile:hover,
-    .socialmediacontent-youtube-mobile:hover {
-        transform: scale(1.05);
-    }
 
 
+    
+    
+/* BOTONES TIKTOK / YOUTUBE */
+.socialmediacontent-button2-1-mobile {
+    display: block;
+    width: fit-content;
+    box-sizing: border-box;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0 auto 10px auto;
+    padding: 0;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
 
+.socialmediacontent-button2-1-mobile:hover {
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: translateY(1px);
+}
+
+.socialmediacontent-button2-2-mobile {
+    display: block;
+    width: fit-content;
+    box-sizing: border-box;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0 auto;
+    padding: 0;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.socialmediacontent-button2-2-mobile:hover {
+    border-top:    2px solid #b388ff;
+    border-left:   2px solid #b388ff;
+    border-right:  2px solid #e6ccff;
+    border-bottom: 2px solid #e6ccff;
+    transform: translateY(1px);
+}
+
+.socialmediacontent-tiktok-mobile,
+.socialmediacontent-youtube-mobile {
+    display: block;
+    width: auto;
+    box-sizing: border-box;
+    align-items: center;
+    background: #ff00a9 !important;
+    border: none;
+    border-radius: 0px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+
+.socialmediacontent-tiktok-mobile:hover,
+.socialmediacontent-youtube-mobile:hover {
+    filter: brightness(1.1);
+}
+   
 
     
     /* CAJAS */
@@ -1763,6 +1790,10 @@ body.is-section .logo {
         border-top: 3px solid #ff00a9 !important;
         margin: 0 0 10px 0;
     }  
+
+
+
+    
     /* ======================================
        NOTIFICACIÓN
     ====================================== */
@@ -1916,6 +1947,13 @@ body.is-section .logo {
     .socialmediacontent-notification-bar-mobile { display: block; }
     .socialmediacontent-notification-content-2-mobile { display: block; }
 }
+
+
+
+
+
+
+
 
 
 
