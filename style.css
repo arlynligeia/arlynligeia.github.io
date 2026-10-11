@@ -2009,12 +2009,17 @@ body.is-section .logo {
 }
 
 @media (max-width: 360px) {
-    .socialmediacontent-title-mobile { font-size: 1.3rem; }
-    .socialmediacontent-tiktok-mobile,
-    .socialmediacontent-youtube-mobile { font-size: 1rem; }
-    .socialmediacontent-text-mobile { font-size: 0.8rem; }
+    .socialmediacontent-title-mobile { font-size: 1.5rem; }
+    .socialmediacontent-text-mobile { font-size: 1rem; }
 }
 
+@media (max-width: 320px) {
+    .socialmediacontent-title-mobile { font-size: 1.3rem; }
+    .socialmediacontent-box-1-mobile { height: 35px; }    
+    .socialmediacontent-tiktok-mobile,
+    .socialmediacontent-youtube-mobile { font-size: 0.8rem; }
+    .socialmediacontent-text-mobile { font-size: 0.8rem; }
+}
 
 
 
