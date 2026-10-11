@@ -348,7 +348,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
 ====================================== */
@@ -371,7 +370,47 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN UNIVERSE - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('universe-close-btn');
+    const notification    = document.getElementById('universe-notification');
+    const notificationBtn = document.getElementById('universe-notification-button');
 
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN UNIVERSE - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('universe-close-btn-mobile');
+    const notificationMobile    = document.getElementById('universe-notification-mobile');
+    const notificationBtnMobile = document.getElementById('universe-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
