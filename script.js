@@ -324,12 +324,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn       = document.getElementById('socialmediacontent-close-btn');
-    const notification   = document.getElementById('socialmediacontent-notification');
+    const closeBtn        = document.getElementById('socialmediacontent-close-btn');
+    const notification    = document.getElementById('socialmediacontent-notification');
     const notificationBtn = document.getElementById('socialmediacontent-notification-button');
 
     if (closeBtn && notification && notificationBtn) {
@@ -350,9 +353,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile         = document.getElementById('socialmediacontent-close-btn-mobile');
-    const notificationMobile     = document.getElementById('socialmediacontent-notification-mobile');
-    const notificationBtnMobile  = document.getElementById('socialmediacontent-notification-button-mobile');
+    const closeBtnMobile        = document.getElementById('socialmediacontent-close-btn-mobile');
+    const notificationMobile    = document.getElementById('socialmediacontent-notification-mobile');
+    const notificationBtnMobile = document.getElementById('socialmediacontent-notification-button-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -366,7 +369,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 
 
 
