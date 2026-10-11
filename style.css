@@ -10,7 +10,7 @@ body {
 /* ======================================
    RESPONSIVE — FONDO
 ====================================== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     body {
         background-image: url("assets/ARLYN LIGEIA. Background MOBILE.png");
     }
@@ -119,7 +119,7 @@ body.is-section .menu-logo {
 /* ======================================
    RESPONSIVE — OCULTAR EN MOBILE
 ====================================== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .menu {
         display: none;
     }
@@ -132,7 +132,7 @@ body.is-section .menu-logo {
 .menu-mobile {
     display: none;
 }
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .menu-mobile {
         position: fixed;
         top: 0;
@@ -358,7 +358,7 @@ body.is-section .logo {
 /* ======================================
    RESPONSIVE — OCULTAR EN MOBILE
 ====================================== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .logo { display: none; }
 }
 
@@ -722,7 +722,7 @@ body.is-section .logo {
 /* ======================================
    RESPONSIVE: HOME
 ====================================== */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .home-container-1-mobile {
         position: relative;
         width: 90%;
@@ -1577,7 +1577,13 @@ body.is-section .logo {
 /* ======================================
    RESPONSIVE: SOCIAL MEDIA CONTENT
 ====================================== */
-@media (max-width: 1024px) {
+@media (min-width: 800px) and (max-width: 1024px) {
+.socialmediacontent-container-1 {
+    position: relative;
+    width: 90%;
+}
+}
+@media (max-width: 768px) {
     .socialmediacontent-container-1-mobile {
         position: relative;
         width: 90%;
@@ -1620,7 +1626,7 @@ body.is-section .logo {
     .socialmediacontent-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
-        font-size: 2.3rem;
+        font-size: 2rem;
         color: #ff00a9 !important;
         text-decoration: none;
         text-transform: uppercase;
