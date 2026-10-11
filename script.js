@@ -278,42 +278,45 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ======================================
    SCRIPT: NOTIFICACIÓN HOME - PC
 ====================================== */
-    // Botón X del home (PC)
+document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = document.getElementById('home-close-btn');
-
-    // Notificación PC
     const notification = document.getElementById('home-notification');
     const notificationBtn = document.getElementById('home-notification-button');
 
-    // Al hacer clic en la X → mostrar notificación
-    closeBtn.addEventListener('click', () => {
-        notification.classList.add('show');
-    });
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
 
-    // Al hacer clic en STAY → ocultar notificación
-    notificationBtn.addEventListener('click', () => {
-        notification.classList.remove('show');
-    });
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
 
 /* ======================================
    SCRIPT: NOTIFICACIÓN HOME - MOBILE
 ====================================== */
-    // Botón X del home (Mobile)
+document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile = document.getElementById('home-close-btn-mobile');
-
-    // Notificación Mobile
     const notificationMobile = document.getElementById('home-notification-mobile');
     const notificationBtnMobile = document.getElementById('home-notification-button-mobile');
 
-    // Al hacer clic en la X → mostrar notificación
-    closeBtnMobile.addEventListener('click', () => {
-        notificationMobile.classList.add('show');
-    });
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
 
-    // Al hacer clic en STAY → ocultar notificación
-    notificationBtnMobile.addEventListener('click', () => {
-        notificationMobile.classList.remove('show');
-    });
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
