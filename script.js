@@ -520,3 +520,156 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 })();
+
+
+
+
+
+
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN TERMS AND CONDITIONS - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('termsandconditions-close-btn');
+    const notification    = document.getElementById('termsandconditions-notification');
+    const notificationBtn = document.getElementById('termsandconditions-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN TERMS AND CONDITIONS - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('termsandconditions-close-btn-mobile');
+    const notificationMobile    = document.getElementById('termsandconditions-notification-mobile');
+    const notificationBtnMobile = document.getElementById('termsandconditions-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN PRIVACY POLICY - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('privacypolicy-close-btn');
+    const notification    = document.getElementById('privacypolicy-notification');
+    const notificationBtn = document.getElementById('privacypolicy-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN PRIVACY POLICY - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('privacypolicy-close-btn-mobile');
+    const notificationMobile    = document.getElementById('privacypolicy-notification-mobile');
+    const notificationBtnMobile = document.getElementById('privacypolicy-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN COOKIE POLICY - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('cookiepolicy-close-btn');
+    const notification    = document.getElementById('cookiepolicy-notification');
+    const notificationBtn = document.getElementById('cookiepolicy-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN COOKIE POLICY - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('cookiepolicy-close-btn-mobile');
+    const notificationMobile    = document.getElementById('cookiepolicy-notification-mobile');
+    const notificationBtnMobile = document.getElementById('cookiepolicy-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
