@@ -2729,53 +2729,48 @@ body.is-section .logo {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   BIOGRAPHY
+   BIOGRAPHY - PC
 ====================================== */
-.biography-container {
+.biography-container-1 {
     position: relative;
-    width: 800px;
-    background: #3f00a8 !important;
-    border: 3px solid #b388ff;
+    width: 850px;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px auto 50px auto;
-    padding: 30px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
 }
-.biography-container::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
+.biography-container-2 {
+    position: relative;
     width: 100%;
-    height: 90px;
-    background: #2a0070 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
     border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* BARRA */
+.biography-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a0070 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 15px;
 }
 .biography-title {
-    position: relative;
-    z-index: 2;
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
@@ -2784,11 +2779,95 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.6;
-    margin: 0 0 16px 0;
+    margin: 0;
 }
 .biography-title a {
     color: #ff00a9 !important;
     text-decoration: none;
+}
+/* BOTÓN CERRAR */
+.biography-button-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+    transition: border-color 0.15s ease;
+}
+.biography-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.biography-button-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #d0aaff;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0;
+    padding: 10px;
+    transition: border-color 0.15s ease;
+}
+.biography-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+.biography-close {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.biography-close:hover {
+    filter: brightness(1.1);
+}
+/* CONTENIDO */
+.biography-content-1 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.biography-content-2 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #3f00a8 !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 30px;
 }
 /* CONTENEDOR: COLUMNAS */
 .biography-columns {
@@ -2843,55 +2922,328 @@ body.is-section .logo {
     margin: 0px;
 }
 .biography-image img {
+    display: block;    
     width: 100%;
     height: auto;
-    display: block;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     border-radius: 0px;
 }
-/* CONTROL */
-.biography-container { display: block; }
-.biography-container-mobile { display: none; }
+/* ======================================
+   NOTIFICACIÓN - PC
+====================================== */
+.biography-notification-1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    padding: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.biography-notification-1.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+.biography-notification-2 {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* NOTIFICACIÓN - BARRA */
+.biography-notification-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #ff00a9 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 4px 12px;
+}
+.biography-notification-title {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0;
+}
+.biography-notification-title a {
+    color: #2a0070 !important;
+    text-decoration: none;
+}
+/* NOTIFICACIÓN - CONTENIDO */
+.biography-notification-content-1 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.biography-notification-content-2 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #00FFFF !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+/* NOTIFICACIÓN - TEXTO */
+.biography-notification-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: black !important;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+/* NOTIFICACIÓN - BOTÓN PERMANECER */
+.biography-notification-button-1 {
+    display: flex;
+    width: fit-content;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0 auto;
+    padding: 0;
+    transition: border-color 0.15s ease;
+}
+.biography-notification-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.biography-notification-button-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background: #d0aaff !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0;
+    padding: 10px 20px;
+    transition: border-color 0.15s ease;
+}
+.biography-notification-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+.biography-notification-stay {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: #2a0070 !important;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.biography-notification-stay:hover {
+    filter: brightness(1.1);
+}
+/* ======================================
+   CONTROL
+====================================== */
+.biography-container-1 { display: block; }
+.biography-content-2 { display: block; }
+.biography-container-1-mobile { display: none; }
+.biography-notification-bar-mobile { display: none; }
+.biography-notification-content-2-mobile { display: none; }
 /* ======================================
    MOVIL RESPONSIVE: BIOGRAPHY
 ====================================== */
 @media (max-width: 768px) {
-    .biography-container-mobile {
+ .biography-container-1-mobile {
         position: relative;
         width: 90%;
         box-sizing: border-box;
-        background: #3f00a8 !important;
-        border: 3px solid #b388ff;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 80px auto 40px auto;
-        padding: 20px;
+        margin: 40px auto 40px auto;
+        padding: 0px;
     }
-    .biography-container-mobile::before {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
+    .biography-container-2-mobile {
+        position: relative;
         width: 100%;
-        height: 100px;
-        background: #2a0070 !important;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
         border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* BARRA */
+    .biography-bar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: #2a0070 !important;
+        border: 4px solid #d0aaff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 10px;
     }
     .biography-title-mobile {
-        position: relative;
-        z-index: 2;
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 2rem;
         color: #ff00a9 !important;
         text-decoration: none;
         text-transform: uppercase;
-        text-align: center;
-        margin: 0 0 10px 0;
+        text-align: left;
+        line-height: 1.3;
+        margin: 0;
     }
     .biography-title-mobile a {
         color: #ff00a9 !important;
         text-decoration: none;
     }
+       /* BOTÓN CERRAR */
+    .biography-button-1-mobile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+        transition: border-color 0.15s ease;
+    }
+    .biography-button-1-mobile:hover {
+        border-top-color:    #8a55f0;
+        border-left-color:   #8a55f0;
+        border-right-color:  #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .biography-button-2-mobile {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: #d0aaff;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 10px;
+        transition: border-color 0.15s ease;
+    }
+    .biography-button-2-mobile:hover {
+        border-top-color:    #b388ff;
+        border-left-color:   #b388ff;
+        border-right-color:  #e6ccff;
+        border-bottom-color: #e6ccff;
+    }
+    .biography-close-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        transition: filter 0.15s ease;
+    }
+    .biography-close-mobile:hover {
+        filter: brightness(1.1);
+    }
+    /* CONTENIDO 1 */
+    .biography-content-1-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 4px solid #d0aaff;
+        border-top: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* CONTENIDO 2 */
+    .biography-content-2-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: #3f00a8 !important;
+        border-top:    2px solid #8a55f0;
+        border-left:   2px solid #8a55f0;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+    }    
     /* CONTENEDOR: IMAGEN */
     .biography-image-mobile {
         width: 100%;
@@ -2899,11 +3251,15 @@ body.is-section .logo {
         margin: 0 0 10px 0;
     }
     .biography-image-mobile img {
+               display: block;
         width: 100%;
         height: auto;
-        display: block;
+          border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
         border-radius: 0px;
-    }
+    }   
     /* CONTENEDOR: INFORMACIÓN */
     .biography-information-mobile {
         width: 100%;
@@ -2936,10 +3292,208 @@ body.is-section .logo {
     .biography-text-end-mobile {
         margin-bottom: 0px;
     }
+ /* ======================================
+       NOTIFICACIÓN
+    ====================================== */
+    .biography-notification-container-1-mobile {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        z-index: 9999;
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        padding: 0px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .biography-notification-container-1-mobile.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: auto;
+    }
+    .biography-notification-container-2-mobile {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* BARRA */
+    .biography-notification-bar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: #ff00a9 !important;
+        border: 4px solid #d0aaff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 4px 12px;
+    }
+    .biography-notification-title-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 1.4;
+        margin: 0;
+    }
+    .biography-notification-title-mobile a {
+        color: #2a0070 !important;
+        text-decoration: none;
+    }
+    /* CONTENIDO */
+    .biography-notification-content-1-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 4px solid #d0aaff;
+        border-top: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .biography-notification-content-2-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: #00FFFF !important;
+        border-top:    2px solid #8a55f0;
+        border-left:   2px solid #8a55f0;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+    }
+    /* TEXTO */
+    .biography-notification-text-mobile {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.8rem;
+        color: black !important;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0 0 15px 0;
+    }
+       /* BOTÓN PERMANECER */
+    .biography-notification-button-1-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0 auto;
+        padding: 0;
+        transition: border-color 0.15s ease;
+    }
+    .biography-notification-button-1-mobile:hover {
+        border-top-color:    #8a55f0;
+        border-left-color:   #8a55f0;
+        border-right-color:  #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .biography-notification-button-2-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: #9c6bff !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 10px 20px;
+        transition: border-color 0.15s ease;
+    }
+    .biography-notification-button-2-mobile:hover {
+        border-top-color:    #b388ff;
+        border-left-color:   #b388ff;
+        border-right-color:  #e6ccff;
+        border-bottom-color: #e6ccff;
+    }
+    .biography-notification-stay-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-transform: uppercase;
+        line-height: 1;
+        cursor: pointer;
+        transition: filter 0.15s ease;
+    }
+    .biography-notification-stay-mobile:hover {
+        filter: brightness(1.1);
+    }
     /* CONTROL */
-    .biography-container { display: none; }
-    .biography-container-mobile { display: block; }
+    .biography-container-1 { display: none; }
+    .biography-content-2 { display: none; }
+    .biography-container-1-mobile { display: block; }
+    .biography-notification-bar-mobile { display: block; }
+    .biography-notification-content-2-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
