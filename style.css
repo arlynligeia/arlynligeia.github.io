@@ -27,7 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 20px 40px;
+    padding: 20px 40px 0px 40px;
 }
 /* LOGO */
 .menu-logo {
@@ -1990,7 +1990,7 @@ body.is-section .logo {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        background: #9c6bff !important;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -2680,7 +2680,7 @@ body.is-section .logo {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        background: #9c6bff !important;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -3103,6 +3103,15 @@ body.is-section .logo {
 /* ======================================
    MOVIL RESPONSIVE: BIOGRAPHY
 ====================================== */
+@media (min-width: 800px) and (max-width: 1024px) {
+.biography-container-1 {
+    width: 90%;
+}
+}
+@media (max-width: 834px) {
+.biography-title { font-size: 2.3rem; }
+.biography-text { font-size: 1.05rem; }
+}
 @media (max-width: 768px) {
  .biography-container-1-mobile {
         position: relative;
@@ -3424,7 +3433,7 @@ body.is-section .logo {
         width: 100%;
         height: 100%;
         box-sizing: border-box;
-        background: #9c6bff !important;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -3459,6 +3468,14 @@ body.is-section .logo {
     .biography-container-1-mobile { display: block; }
     .biography-notification-bar-mobile { display: block; }
     .biography-notification-content-2-mobile { display: block; }
+}
+@media (max-width: 360px) {
+.biography-title-mobile { font-size: 1.5rem; }
+.biography-text-mobile { font-size: 1rem; }
+}
+@media (max-width: 320px) {
+.biography-title-mobile { font-size: 1.3rem; }
+.biography-text-mobile { font-size: 0.8rem; }
 }
 
 
