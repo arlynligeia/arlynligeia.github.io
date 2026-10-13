@@ -6448,6 +6448,14 @@ body.is-section .logo {
 }
 
 
+
+
+
+
+
+
+
+
 /* ======================================
    VALUES
 ====================================== */
@@ -6595,10 +6603,12 @@ body.is-section .logo {
     display: block;
     margin: 0px;
 }
+
+
 /* SUBTÍTULO */
 .values-subtitle-1 {
-    display: flex;
-    width: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -6608,12 +6618,12 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
     padding: 0px;
 }
 .values-subtitle-2 {
-    display: flex;
-    width: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -6624,10 +6634,10 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
 }
 .values-subtitle-2 span {
-    display: inline-block;
+    display: block;
     background: #ff00a9 !important;
     border: none;
     border-radius: 0px;
@@ -6638,9 +6648,18 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 10px 20px;
 }
+
+
+
+
+
+
+
+
+
 /* CAJAS */
 .values-box-1 {
     display: flex;
