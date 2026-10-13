@@ -6690,20 +6690,30 @@ body.is-section .logo {
     margin: 0px;
     padding: 20px;
 }
-.values-subtitle {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 2rem;
-    color: black !important;
-    text-decoration: none;
-    text-align: left;
-}
-.values-tex {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 1.25rem;
-    color: black !important;
-    text-decoration: none;
-    text-align: left;
-}
+    .values-subtitle {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.5rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.6;
+        margin: 0;
+    }
+    .values-text {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1.05rem;
+        color: black !important;
+        text-decoration: none;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0;
+    }
+
+
+
+
 .values-box-2 span {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
@@ -6723,6 +6733,10 @@ body.is-section .logo {
     border-top: 3px solid #ff00a9 !important;
     margin: 0 0 10px 0;
 }
+
+
+
+
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
