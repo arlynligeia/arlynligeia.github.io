@@ -456,9 +456,178 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN ABOUT ARLYN LIGEIA - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('aboutarlynligeia-close-btn');
+    const notification    = document.getElementById('aboutarlynligeia-notification');
+    const notificationBtn = document.getElementById('aboutarlynligeia-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN ABOUT ARLYN LIGEIA - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('aboutarlynligeia-close-btn-mobile');
+    const notificationMobile    = document.getElementById('aboutarlynligeia-notification-mobile');
+    const notificationBtnMobile = document.getElementById('aboutarlynligeia-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN PURPOSE - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('purpose-close-btn');
+    const notification    = document.getElementById('purpose-notification');
+    const notificationBtn = document.getElementById('purpose-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN PURPOSE - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('purpose-close-btn-mobile');
+    const notificationMobile    = document.getElementById('purpose-notification-mobile');
+    const notificationBtnMobile = document.getElementById('purpose-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN MISSION - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('mission-close-btn');
+    const notification    = document.getElementById('mission-notification');
+    const notificationBtn = document.getElementById('mission-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN MISSION - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('mission-close-btn-mobile');
+    const notificationMobile    = document.getElementById('mission-notification-mobile');
+    const notificationBtnMobile = document.getElementById('mission-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN VISION - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('vision-close-btn');
+    const notification    = document.getElementById('vision-notification');
+    const notificationBtn = document.getElementById('vision-notification-button');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN VISION - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('vision-close-btn-mobile');
+    const notificationMobile    = document.getElementById('vision-notification-mobile');
+    const notificationBtnMobile = document.getElementById('vision-notification-button-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
