@@ -6588,10 +6588,6 @@ body.is-section .logo {
     margin: 0px;
     padding: 30px;
 }
-
-
-
-
 /* INFORMACIÓN */
 .values-information {
     width: 100%;
@@ -6601,7 +6597,7 @@ body.is-section .logo {
 }
 /* SUBTÍTULO */
 .values-subtitle-1 {
-    display: block;
+    display: flex;
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
@@ -6616,8 +6612,9 @@ body.is-section .logo {
     padding: 0px;
 }
 .values-subtitle-2 {
-    display: block;
+    display: flex;
     width: 100%;
+    height: 40px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -6631,7 +6628,7 @@ body.is-section .logo {
     padding: 10px;
 }
 .values-subtitle-2 span {
-    display: block;
+    display: inline-block;
     background: #ff00a9 !important;
     border: none;
     border-radius: 0px;
@@ -6647,7 +6644,7 @@ body.is-section .logo {
 }
 /* CAJAS */
 .values-box-1 {
-    display: block;
+    display: flex;
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
@@ -6662,8 +6659,9 @@ body.is-section .logo {
     padding: 0px;
 }
 .values-box-2 {
-    display: block;
+    display: flex;
     width: 100%;
+    height: 40px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -6694,13 +6692,6 @@ body.is-section .logo {
     border-top: 3px solid #ff00a9 !important;
     margin: 0 0 10px 0;
 }
-
-
-
-
-
-
-
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
