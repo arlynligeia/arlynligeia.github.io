@@ -6596,16 +6596,9 @@ body.is-section .logo {
     margin: 0px;
     padding: 30px;
 }
-/* INFORMACIÓN */
-.values-information {
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-    margin: 0px;
-}
 /* CAJAS */
 .values-box-1 {
-    display: flex;
+    display: block;
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
@@ -6620,7 +6613,7 @@ body.is-section .logo {
     padding: 0px;
 }
 .values-box-2 {
-    display: flex;
+    display: block;
     width: 100%;
     box-sizing: border-box;
     justify-content: center;
@@ -6633,6 +6626,13 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 20px;
+}
+/* INFORMACIÓN */
+.values-information {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin: 0px;
 }
     .values-subtitle {
         display: block;
@@ -6654,6 +6654,10 @@ body.is-section .logo {
         line-height: 1.5;
         margin: 0;
     }
+
+
+
+
 
 /* ======================================
    NOTIFICACIÓN - PC
