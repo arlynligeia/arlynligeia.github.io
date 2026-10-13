@@ -280,9 +280,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN HOME - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn = document.getElementById('home-close-btn');
-    const notification = document.getElementById('home-notification');
-    const notificationBtn = document.getElementById('home-notification-button');
+    const closeBtn        = document.getElementById('home-button-close');
+    const notification    = document.getElementById('home-button-notification');
+    const notificationBtn = document.getElementById('home-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -296,15 +296,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN HOME - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile = document.getElementById('home-close-btn-mobile');
-    const notificationMobile = document.getElementById('home-notification-mobile');
-    const notificationBtnMobile = document.getElementById('home-notification-button-mobile');
+    const closeBtnMobile        = document.getElementById('home-button-close-mobile');
+    const notificationMobile    = document.getElementById('home-button-notification-mobile');
+    const notificationBtnMobile = document.getElementById('home-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
