@@ -960,7 +960,7 @@ body.is-section .logo {
   /* ======================================
        NOTIFICACIÓN
     ====================================== */
-    .home-notification-container-1-mobile {
+    .home-notification-1-mobile {
         position: fixed;
         top: 50%;
         left: 50%;
@@ -980,12 +980,12 @@ body.is-section .logo {
         pointer-events: none;
         transition: opacity 0.3s ease, transform 0.3s ease;
     }
-    .home-notification-container-1-mobile.show {
+    .home-notification-1-mobile.show {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
         pointer-events: auto;
     }
-    .home-notification-container-2-mobile {
+    .home-notification-2-mobile {
         position: relative;
         width: 100%;
         box-sizing: border-box;
@@ -1118,7 +1118,9 @@ body.is-section .logo {
     .home-notification-stay-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTROL */
+/* ======================================
+   CONTROL
+====================================== */
     .home-container-1 { display: none; }
     .home-content-2 { display: none; }
     .home-container-1-mobile { display: block; }
@@ -1133,9 +1135,6 @@ body.is-section .logo {
 .home-title-mobile { font-size: 1.3rem; }
 .home-text-mobile { font-size: 0.8rem; }
 }
-
-
-
 
 
 
