@@ -318,20 +318,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-
-
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('socialmediacontent-close-btn');
-    const notification    = document.getElementById('socialmediacontent-notification');
-    const notificationBtn = document.getElementById('socialmediacontent-notification-button');
+    const closeBtn        = document.getElementById('socialmediacontent-button-close');
+    const notification    = document.getElementById('socialmediacontent-button-notification');
+    const notificationBtn = document.getElementById('socialmediacontent-button-stay-button');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -350,9 +343,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('socialmediacontent-close-btn-mobile');
-    const notificationMobile    = document.getElementById('socialmediacontent-notification-mobile');
-    const notificationBtnMobile = document.getElementById('socialmediacontent-notification-button-mobile');
+    const closeBtnMobile        = document.getElementById('socialmediacontent-button-close-mobile');
+    const notificationMobile    = document.getElementById('socialmediacontent-button-notification-mobile');
+    const notificationBtnMobile = document.getElementById('socialmediacontent-button-stay-button-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -372,9 +365,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN UNIVERSE - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('universe-close-btn');
-    const notification    = document.getElementById('universe-notification');
-    const notificationBtn = document.getElementById('universe-notification-button');
+    const closeBtn        = document.getElementById('universe-button-close');
+    const notification    = document.getElementById('universe-button-notification');
+    const notificationBtn = document.getElementById('universe-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -393,9 +386,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN UNIVERSE - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('universe-close-btn-mobile');
-    const notificationMobile    = document.getElementById('universe-notification-mobile');
-    const notificationBtnMobile = document.getElementById('universe-notification-button-mobile');
+    const closeBtnMobile        = document.getElementById('universe-button-close-mobile');
+    const notificationMobile    = document.getElementById('universe-button-notification-mobile');
+    const notificationBtnMobile = document.getElementById('universe-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -409,6 +402,29 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
