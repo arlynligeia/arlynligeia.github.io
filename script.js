@@ -338,7 +338,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
 ====================================== */
@@ -381,7 +380,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN UNIVERSE - MOBILE
 ====================================== */
@@ -404,36 +402,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN BIOGRAPHY - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('biography-close-btn');
-    const notification    = document.getElementById('biography-notification');
-    const notificationBtn = document.getElementById('biography-notification-button');
+    const closeBtn        = document.getElementById('biography-button-close');
+    const notification    = document.getElementById('biography-button-notification');
+    const notificationBtn = document.getElementById('biography-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -447,14 +422,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN BIOGRAPHY - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('biography-close-btn-mobile');
-    const notificationMobile    = document.getElementById('biography-notification-mobile');
-    const notificationBtnMobile = document.getElementById('biography-notification-button-mobile');
+    const closeBtnMobile        = document.getElementById('biography-button-close-mobile');
+    const notificationMobile    = document.getElementById('biography-button-notification-mobile');
+    const notificationBtnMobile = document.getElementById('biography-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -468,6 +442,37 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
