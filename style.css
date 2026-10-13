@@ -1064,7 +1064,7 @@ body.is-section .logo {
 ====================================== */
 .collaborations-container-1 {
     position: relative;
-    width: 850px;
+    width: 500px;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
@@ -1107,13 +1107,19 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     line-height: 1.6;
     margin: 0;
 }
 .collaborations-title a {
     color: #ff00a9 !important;
     text-decoration: none;
+}
+/* INFORMACIÓN */
+.collaborations-information {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
 }
 .collaborations-text {
     font-family: 'Share Tech Mono', monospace;
@@ -1124,14 +1130,21 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0 0 10px 0;
 }
-.collaborations-text-end {
-    margin-bottom: 0px;
-}
 /* ======================================
    CONTROL
 ====================================== */
 .collaborations-container-1 { display: block; }
 .collaborations-container-1-mobile { display: none; }
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    COLLABORATIONS - RESPONSIVE
 ====================================== */
