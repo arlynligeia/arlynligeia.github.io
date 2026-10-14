@@ -7229,8 +7229,6 @@ body.is-section .logo {
 /* ======================================
    CREATIVE WORLDS - PC
 ====================================== */
-
-/* CONTENEDOR PRINCIPAL */
 .creativeworlds-framecontainer {
     position: relative;
     width: 1100px;
@@ -7279,13 +7277,13 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.6;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .creativeworlds-framecontainer-container-bar-title a {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-
 /* BOTÓN CERRAR */
 .creativeworlds-framecontainer-container-bar-framebutton {
     display: flex;
@@ -7300,8 +7298,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .creativeworlds-framecontainer-container-bar-framebutton:hover {
@@ -7323,7 +7321,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -7347,7 +7345,6 @@ body.is-section .logo {
 .creativeworlds-framecontainer-container-bar-framebutton-button-close:hover {
     filter: brightness(1.1);
 }
-
 /* CONTENIDO */
 .creativeworlds-framecontainer-container-framecontent {
     width: 100%;
@@ -7371,21 +7368,21 @@ body.is-section .logo {
     margin: 0px;
     padding: 30px;
 }
-/* CONTENEDOR: COLUMNAS 1 */
+
+
+/* COLUMNAS 1 */
 .creativeworlds-framecontainer-container-framecontent-content-columns {
     position: relative;
     z-index: 2;
     margin: 0 0 20px 0;
 }
-/* GRID DE 3 (COLUMNAS 1) */
+/* GRID DE 3 */
 .creativeworlds-framecontainer-container-framecontent-content-columns-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin: 0px;
 }
-
-
 /* COLUMNA 1 */
 .creativeworlds-framecontainer-container-framecontent-content-columns-grid-framebox {
     position: relative;
@@ -7470,7 +7467,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px auto;
+    margin: 0px auto 10px auto;
     padding: 0px;
     transition: border-color 0.15s ease;
 }
