@@ -7412,6 +7412,10 @@ body.is-section .logo {
     border: none;
     border-radius: 0px;
 }
+
+
+
+
 /* COLUMNAS 2 */
 .creativeworlds-columns-2 {
     position: relative;
@@ -7450,12 +7454,26 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
+.creativeworlds-socialmedia {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: #00FFFF !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 15px;
+}
 .creativeworlds-text-1 {
     display: block;
     width: 100%;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
-    color: #00FF00 !important;
+    color: black !important;
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
@@ -7465,21 +7483,11 @@ body.is-section .logo {
     display: block;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
-    color: #00FF00 !important;
+    color: black !important;
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
     margin: 0;
-}
-.creativeworlds-socialmedia {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin: 0px;
 }
 /* ICONOS REDES SOCIALES */
 .creativeworlds-socialmedia-icon {
