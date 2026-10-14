@@ -7453,13 +7453,14 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
 }
 .creativeworlds-socialmedia {
     position: relative;
     z-index: 1;
     display: flex;
     width: 100%;
+    box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -7501,6 +7502,10 @@ body.is-section .logo {
 .creativeworlds-socialmedia-icon:hover {
     transform: scale(1.2);
 }
+
+
+
+
 
 
 
