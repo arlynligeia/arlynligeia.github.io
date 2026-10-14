@@ -7333,6 +7333,9 @@ body.is-section .logo {
 .creativeworlds-close:hover {
     filter: brightness(1.1);
 }
+
+
+
 /* CONTENIDO */
 .creativeworlds-content-1 {
     width: 100%;
@@ -7387,7 +7390,7 @@ body.is-section .logo {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    background: #d0aaff;
+    background: #00FFFF !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
     border-right:  2px solid #b388ff;
@@ -7400,11 +7403,13 @@ body.is-section .logo {
 .creativeworlds-image {
     width: 100%;
     min-width: 0;
+    width: 180px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px;
-    padding: 10px 0 0 0;
+    padding: 0;
 }
 .creativeworlds-image img {
     display: block;
@@ -7413,12 +7418,14 @@ body.is-section .logo {
     object-fit: cover;
     border: none;
     border-radius: 0px;
-    margin: 0 auto;
+    margin: 0 0 10px 0;
 }
+
+
 /* BOTONES FILM / MUSIC / FASHION */
 .creativeworlds-button2-1 {
     display: flex;
-    width: 100%;
+    width: fit-content;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
