@@ -7397,29 +7397,29 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
 }
 /* IMAGEN */
 .creativeworlds-image {
     width: 100%;
-    min-width: 0;
-    width: 180px;
-    height: 180px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px;
-    padding: 0;
+    padding: 10px 0 0 0;
 }
 .creativeworlds-image img {
     display: block;
     width: 180px;
+    max-width: 100%;   /* ← CLAVE: nunca más ancha que su contenedor */
     height: 180px;
     object-fit: cover;
     border: none;
     border-radius: 0px;
-    margin: 0 0 10px 0;
+    margin: 0 auto;
 }
+
 
 
 /* BOTONES FILM / MUSIC / FASHION */
@@ -7435,7 +7435,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px;
+    margin: 0px auto;
     padding: 0px;
     transition: border-color 0.15s ease;
 }
