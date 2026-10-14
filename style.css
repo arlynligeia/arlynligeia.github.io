@@ -7571,7 +7571,7 @@ body.is-section .logo {
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
-    background: #00FFFF !important;
+    background: #2a0070 !important;
     border: 2px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
@@ -7673,7 +7673,7 @@ body.is-section .logo {
 .socialmediacontent-socialmedia-2 {
     width: 100%;
     box-sizing: border-box;
-    background: #3f00a8 !important;
+    background:  #00FFFF !important;
     border-top:    2px solid #8a55f0;
     border-left:   2px solid #8a55f0;
     border-right:  2px solid #ffffff;
@@ -7705,16 +7705,20 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0;
 }
-
-
-
-
-
 /* ICONOS REDES SOCIALES */
+.creativeworlds-socialmedia-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
 .creativeworlds-socialmedia-icon {
     width: 24px;
     height: 24px;
-    gap: 10px;
     color: #2a0070 !important;
     transition: all 0.3s ease;
 }
