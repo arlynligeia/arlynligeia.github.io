@@ -7565,6 +7565,8 @@ body.is-section .logo {
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    display: flex;            /* ← convierte el framebox en flex */
+    flex-direction: column;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
@@ -7572,13 +7574,14 @@ body.is-section .logo {
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
     margin: 0;
-    padding: 0px;
+    padding: 0px;    
 }
 .creativeworlds-framecontainer-container-framecontent-content-columns2-grid-framebox-box {
     position: relative;
     width: 100%;
-    height: 100%;
     box-sizing: border-box;
+    flex: 1 1 auto; /* ← ocupa el alto restante, sin 100% */
+    min-height: 0; /* ← evita desbordes por contenido */
     background: transparent !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
@@ -7588,6 +7591,9 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
+
+
+
 /* BARRA SOCIAL MEDIA */
 .creativeworlds-framecontainer-container-framecontent-content-columns2-grid-framebox-box-bar {
     display: flex;
@@ -8012,6 +8018,16 @@ body.is-section .logo {
 
 
  
+
+
+
+
+
+
+
+
+
+
 
 
 
