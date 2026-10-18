@@ -8032,23 +8032,27 @@ body.is-section .logo {
 
 
 
+
+
+
 /* ======================================
    CREATIVE WORLDS - MOBILE
 ====================================== */
+
+
 @media (max-width: 768px) {
 .creativeworlds-framecontainer-mobile {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    box-sizing: border-box;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 20px auto;
-    padding: 0px;
-    box-sizing: border-box;
+    margin: 80px auto 40px auto;
+    padding: 0px;    
 }
 .creativeworlds-framecontainer-container-mobile {
     position: relative;
@@ -8061,12 +8065,11 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 0px;
-}
-
+    padding: 0px;   
+}    
 /* BARRA */
 .creativeworlds-framecontainer-container-bar-mobile {
-    display: flex;
+    display: flex; 
     width: 100%;
     box-sizing: border-box;
     justify-content: space-between;
@@ -8075,32 +8078,33 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 10px;
-}
+    padding: 10px;   
+}   
 .creativeworlds-framecontainer-container-bar-title-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1.4rem;
+    font-size: 2rem;
     color: #ff00a9 !important;
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .creativeworlds-framecontainer-container-bar-title-mobile a {
     color: #ff00a9 !important;
     text-decoration: none;
-}
-/* BOTÓN CERRAR */
+}    
+/* BOTÓN - CERRAR */
 .creativeworlds-framecontainer-container-bar-framebutton-mobile {
+    position: relative;
     display: flex;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    box-sizing: border-box;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
@@ -8109,15 +8113,16 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .creativeworlds-framecontainer-container-bar-framebutton-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
-}
+}    
 .creativeworlds-framecontainer-container-bar-framebutton-button-mobile {
+    position: relative;
     display: flex;
     width: 100%;
     height: 100%;
@@ -8131,15 +8136,15 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
-    padding: 6px;
-    transition: border-color 0.15s ease;
+    padding: 10px;
+    transition: border-color 0.15s ease;   
 }
 .creativeworlds-framecontainer-container-bar-framebutton-button-mobile:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
-}
+}   
 .creativeworlds-framecontainer-container-bar-framebutton-button-close-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -8148,13 +8153,11 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
-    cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .creativeworlds-framecontainer-container-bar-framebutton-button-close-mobile:hover {
     filter: brightness(1.1);
-}
-
+}    
 /* CONTENIDO */
 .creativeworlds-framecontainer-container-framecontent-mobile {
     width: 100%;
@@ -8165,7 +8168,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-}
+}    
 .creativeworlds-framecontainer-container-framecontent-content-mobile {
     width: 100%;
     box-sizing: border-box;
@@ -8176,13 +8179,9 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* CAJAS 1, 2, 3 (imagen + botón + nota) */
+    padding: 25px;
+}    
+/* CAJAS - 1 / 2 / 3 */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-mobile {
     position: relative;
     width: 100%;
@@ -8200,7 +8199,7 @@ body.is-section .logo {
     position: relative;
     width: 100%;
     box-sizing: border-box;
-    background: #d0aaff !important;
+    background: transparent !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
     border-right:  2px solid #b388ff;
@@ -8208,18 +8207,17 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-}
+}    
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff !important;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-}
+}    
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-mobile {
     position: relative;
     width: 100%;
@@ -8232,30 +8230,28 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 15px;
-}
-
+}    
 /* IMAGEN */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-image-mobile {
+    display: flex;
     width: 100%;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 0 10px 0;
-    padding: 0;
+    padding: 0px;
 }
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-image-mobile img {
     display: block;
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
     height: auto;
     object-fit: cover;
     border: none;
     border-radius: 0px;
-    margin: 0 auto;
-}
-
-/* BOTONES FILM / MUSIC / FASHION */
+    margin: 0px auto;
+}   
+/* BOTONES - FILM / MUSIC / FASHION */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-mobile {
     display: flex;
     width: fit-content;
@@ -8271,7 +8267,7 @@ body.is-section .logo {
     margin: 0px auto 10px auto;
     padding: 0px;
     transition: border-color 0.15s ease;
-}
+}   
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
@@ -8303,10 +8299,10 @@ body.is-section .logo {
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-film-mobile,
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-music-mobile,
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-fashion-mobile {
+    display: flex;
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: #ff00a9 !important;
@@ -8328,9 +8324,8 @@ body.is-section .logo {
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-music-mobile:hover,
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-fashion-mobile:hover {
     filter: brightness(1.1);
-}
-
-/* NOTA */
+}   
+/* NOTA - FILM / FASHION / MUSIC */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-note-mobile {
     width: 100%;
     box-sizing: border-box;
@@ -8339,15 +8334,23 @@ body.is-section .logo {
 }
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-note-text-mobile {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: black !important;
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 
+
+
+
+
+
+
+    
 /* ======================================
    CAJAS 4 Y 5 (con barra + contenido)
 ====================================== */
@@ -8378,6 +8381,11 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
+
+
+
+
+    
 /* BOTÓN CERRAR DENTRO DE LAS BARRAS DE CAJA 4 Y 5 */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-mobile {
     display: flex;
@@ -8442,6 +8450,7 @@ body.is-section .logo {
     text-decoration: none;
 }
 
+    
 /* CONTENIDO CAJAS 4 Y 5 */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-mobile {
     position: relative;
@@ -8473,6 +8482,9 @@ body.is-section .logo {
     min-width: 0;
     margin: 0px;
 }
+
+
+    
 /* TEXTOS CAJAS 4 Y 5 */
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-subtitle-mobile,
 .creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-text-mobile {
