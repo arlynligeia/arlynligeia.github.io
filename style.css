@@ -8187,8 +8187,8 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 25px;
-}    
+    padding: 20px;
+} 
 /* CAJAS - 1 / 2 / 3 */
 .creativeworlds-box1-mobile {
     position: relative;
@@ -8200,8 +8200,12 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
     padding: 0px;
+}
+/* La última .creativeworlds-box1-mobile dentro del contenedor no lleva margen inferior */
+.creativeworlds-box1-mobile:last-child {
+    margin-bottom: 0px;
 }
 .creativeworlds-box2-mobile {
     position: relative;
@@ -8237,7 +8241,7 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 10px;
 }    
 /* IMAGEN */
 .creativeworlds-image-mobile {
@@ -8379,8 +8383,8 @@ body.is-section .logo {
 /* BOTÓN - CERRAR DENTRO DE CAJAS 4 / 5 */
 .creativeworlds-buttonclose1-2-mobile {
     display: flex;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
