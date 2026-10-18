@@ -8023,9 +8023,9 @@ body.is-section .logo {
 ====================================== */
 .creativeworlds-framecontainer { display: block; }
 .creativeworlds-framecontainer-container-framecontent-content { display: block; }
-.creativeworlds-framecontainer-mobile { display: none; }
-.creativeworlds-framecontainer-container-framenotification-notification-bar-mobile { display: none; }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-mobile { display: none; }
+.creativeworlds-container1-mobile { display: none; }
+.creativeworlds-notificationbar-mobile { display: none; }
+.creativeworlds-notificationcontent-mobile { display: none; }
 
 
 
@@ -8678,10 +8678,11 @@ body.is-section .logo {
 /* ======================================
    CONTROL DE VISIBILIDAD
 ====================================== */
+.creativeworlds-framecontainer { display: none; }
+.creativeworlds-framecontainer-container-framecontent-content { display: none; }
 .creativeworlds-container1-mobile { display: block; }
-.creativeworlds-container2-container-mobile { display: block; }
-.creativeworlds-notification1-mobile { display: block; }
-.creativeworlds-notification2-mobile { display: block; }
+.creativeworlds-notificationbar-mobile { display: block; }
+.creativeworlds-notificationcontent-mobile { display: block; }
 }
 @media (max-width: 360px) {
     .socialmediacontent-title-mobile { font-size: 1.5rem; }
