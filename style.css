@@ -8038,10 +8038,18 @@ body.is-section .logo {
 /* ======================================
    CREATIVE WORLDS - MOBILE
 ====================================== */
-
+@media (min-width: 800px) and (max-width: 1024px) {
+.socialmediacontent-container-1 {
+    position: relative;
+    width: 90%;
+}
+}
+@media (max-width: 834px) {
+.socialmediacontent-title { font-size: 2.3rem; }
+}
 
 @media (max-width: 768px) {
-.creativeworlds-framecontainer-mobile {
+.creativeworlds-container1-mobile {
     position: relative;
     width: 90%;
     box-sizing: border-box;
@@ -8054,7 +8062,7 @@ body.is-section .logo {
     margin: 80px auto 40px auto;
     padding: 0px;    
 }
-.creativeworlds-framecontainer-container-mobile {
+.creativeworlds-container2-container-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -8068,7 +8076,7 @@ body.is-section .logo {
     padding: 0px;   
 }    
 /* BARRA */
-.creativeworlds-framecontainer-container-bar-mobile {
+.creativeworlds-bar-mobile {
     display: flex; 
     width: 100%;
     box-sizing: border-box;
@@ -8080,7 +8088,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 10px;   
 }   
-.creativeworlds-framecontainer-container-bar-title-mobile {
+.creativeworlds-title-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 2rem;
@@ -8092,12 +8100,12 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;    
 }
-.creativeworlds-framecontainer-container-bar-title-mobile a {
+.creativeworlds-title-mobile a {
     color: #ff00a9 !important;
     text-decoration: none;
 }    
 /* BOTÓN - CERRAR */
-.creativeworlds-framecontainer-container-bar-framebutton-mobile {
+.creativeworlds-buttonclose1-mobile {
     position: relative;
     display: flex;
     width: 35px;
@@ -8115,13 +8123,13 @@ body.is-section .logo {
     padding: 0px;
     transition: border-color 0.15s ease;    
 }
-.creativeworlds-framecontainer-container-bar-framebutton-mobile:hover {
+.creativeworlds-buttonclose1-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }    
-.creativeworlds-framecontainer-container-bar-framebutton-button-mobile {
+.creativeworlds-buttonclose2-mobile {
     position: relative;
     display: flex;
     width: 100%;
@@ -8139,13 +8147,13 @@ body.is-section .logo {
     padding: 10px;
     transition: border-color 0.15s ease;   
 }
-.creativeworlds-framecontainer-container-bar-framebutton-button-mobile:hover {
+.creativeworlds-buttonclose2-mobile:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }   
-.creativeworlds-framecontainer-container-bar-framebutton-button-close-mobile {
+.creativeworlds-buttonclosetext-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
@@ -8155,11 +8163,11 @@ body.is-section .logo {
     line-height: 1;
     transition: filter 0.15s ease;    
 }
-.creativeworlds-framecontainer-container-bar-framebutton-button-close-mobile:hover {
+.creativeworlds-buttonclosetext-mobile:hover {
     filter: brightness(1.1);
 }    
 /* CONTENIDO */
-.creativeworlds-framecontainer-container-framecontent-mobile {
+.creativeworlds-content1-mobile {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -8169,7 +8177,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }    
-.creativeworlds-framecontainer-container-framecontent-content-mobile {
+.creativeworlds-content2-mobile {
     width: 100%;
     box-sizing: border-box;
     background: #3f00a8 !important;
@@ -8182,7 +8190,7 @@ body.is-section .logo {
     padding: 25px;
 }    
 /* CAJAS - 1 / 2 / 3 */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-mobile {
+.creativeworlds-box1-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -8195,7 +8203,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-mobile {
+.creativeworlds-box2-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -8208,7 +8216,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }    
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-mobile {
+.creativeworlds-box3-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -8218,7 +8226,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }    
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-mobile {
+.creativeworlds-box4-mobile {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -8232,7 +8240,7 @@ body.is-section .logo {
     padding: 15px;
 }    
 /* IMAGEN */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-image-mobile {
+.creativeworlds-image-mobile {
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -8241,7 +8249,7 @@ body.is-section .logo {
     margin: 0 0 10px 0;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-image-mobile img {
+.creativeworlds-image-mobile img {
     display: block;
     width: 100%;
     max-width: 100px;
@@ -8252,7 +8260,7 @@ body.is-section .logo {
     margin: 0px auto;
 }   
 /* BOTONES - FILM / MUSIC / FASHION */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-mobile {
+.creativeworlds-button1-mobile {
     display: flex;
     width: fit-content;
     box-sizing: border-box;
@@ -8268,13 +8276,13 @@ body.is-section .logo {
     padding: 0px;
     transition: border-color 0.15s ease;
 }   
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-mobile:hover {
+.creativeworlds-button1-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-mobile {
+.creativeworlds-button2-mobile {
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -8290,15 +8298,14 @@ body.is-section .logo {
     padding: 0px;
     transition: border-color 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-mobile:hover {
+.creativeworlds-button2-mobile:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-film-mobile,
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-music-mobile,
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-fashion-mobile {
+.creativeworlds-buttontex-mobile,
+.creativeworlds-buttontext-mobile {
     display: flex;
     width: 100%;
     height: 40px;
@@ -8320,19 +8327,18 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-film-mobile:hover,
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-music-mobile:hover,
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-framebutton-button-fashion-mobile:hover {
+.creativeworlds-buttontex-mobile:hover,
+.creativeworlds-buttontext-mobile:hover {
     filter: brightness(1.1);
 }   
 /* NOTA - FILM / FASHION / MUSIC */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-note-mobile {
+.creativeworlds-note-mobile {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-frameinformation-information-note-text-mobile {
+.creativeworlds-notetext-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.05rem;
     color: black !important;
@@ -8341,20 +8347,9 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0px;
     padding: 0px;
-}
-
-
-
-
-
-
-
-
-    
-/* ======================================
-   CAJAS 4 Y 5 (con barra + contenido)
-====================================== */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-mobile {
+}   
+/* CAJAS - 4 / 5 */    
+.creativeworlds-bar-2-mobile {
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -8365,8 +8360,8 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-}
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-title-mobile {
+}    
+.creativeworlds-title-2-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
@@ -8374,43 +8369,38 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1.3;
     margin: 0;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-title-mobile a {
+.creativeworlds-title-2-mobile a {
     color: #ff00a9 !important;
     text-decoration: none;
-}
-
-
-
-
-    
-/* BOTÓN CERRAR DENTRO DE LAS BARRAS DE CAJA 4 Y 5 */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-mobile {
+}    
+/* BOTÓN - CERRAR DENTRO DE CAJAS 4 / 5 */
+.creativeworlds-buttonclose1-2-mobile {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 20px;
     height: 20px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-mobile:hover {
+.creativeworlds-buttonclose1-2-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-button-mobile {
+.creativeworlds-buttonclose2-2-mobile {
     display: flex;
     width: 100%;
     height: 100%;
@@ -8423,17 +8413,17 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
-    padding: 10px;
+    margin: 0px;
+    padding: 5px;
     transition: border-color 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-button-mobile:hover {
+.creativeworlds-buttonclose2-2-mobile:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-button-close-mobile {
+.creativeworlds-buttonclosetext-2-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
@@ -8443,16 +8433,15 @@ body.is-section .logo {
     text-align: left;
     line-height: 1;
     cursor: pointer;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-bar-framebutton-button-close-mobile a {
+.creativeworlds-buttonclosetext-2-mobile a {
     color: #2a0070 !important;
     text-decoration: none;
-}
-
-    
-/* CONTENIDO CAJAS 4 Y 5 */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-mobile {
+}   
+/* CONTENIDO - CAJAS 4 / 5 */
+.creativeworlds-box3-2-mobile {
     position: relative;
     z-index: 1;
     width: 100%;
@@ -8464,7 +8453,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-mobile {
+.creativeworlds-box4-2-mobile {
     width: 100%;
     box-sizing: border-box;
     background: #00FFFF !important;
@@ -8474,24 +8463,21 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 10px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-mobile {
+.creativeworlds-information-mobile {
     width: 100%;
     box-sizing: border-box;
     min-width: 0;
     margin: 0px;
-}
-
-
-    
-/* TEXTOS CAJAS 4 Y 5 */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-subtitle-mobile,
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-text-mobile {
+}  
+/* TEXTOS - CAJAS 4 / 5 */
+.creativeworlds-subtitle-mobile,
+.creativeworlds-text-mobile {
     display: block;
     width: 100%;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: black !important;
     text-decoration: none;
     text-align: center;
@@ -8499,258 +8485,184 @@ body.is-section .logo {
     margin: 0 0 10px 0;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-subtitle-mobile {
+.creativeworlds-subtitle-mobile {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
     color: #2a0070 !important;
 }
-
 /* ICONOS REDES SOCIALES */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-icons-mobile {
+.creativeworlds-icons-mobile {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 100%;
     margin: 0px;
     padding: 0px;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-icons-mobile a {
+.creativeworlds-icons-mobile a {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 24px;
     width: 24px;
     height: 24px;
-    flex: 0 0 24px;
+    align-items: center;
+    justify-content: center;    
     line-height: 0;
     text-decoration: none;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-icons-icon-mobile {
+.creativeworlds-icon-mobile {
+    display: block;
+    flex: 0 0 24px;   
     width: 24px;
     height: 24px;
-    display: block;
-    flex: 0 0 24px;
-    color: #2a0070 !important;
+    color: #ff00a9 !important;
     transition: all 0.3s ease;
 }
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-information-icons-icon-mobile:hover {
+.creativeworlds-icon-mobile:hover {
     transform: scale(1.2);
-}
-
-/* BOTÓN CONTRIBUTE (CAJA 5) */
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-framebutton-mobile {
-    display: flex;
-    width: fit-content;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    background: transparent !important;
-    border-top:    2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:  2px solid #8a55f0;
-    border-bottom: 2px solid #8a55f0;
-    border-radius: 0px;
-    margin: 0px auto;
-    padding: 0px;
-    transition: border-color 0.15s ease;
-}
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-framebutton-mobile:hover {
-    border-top-color:    #8a55f0;
-    border-left-color:   #8a55f0;
-    border-right-color:  #ffffff;
-    border-bottom-color: #ffffff;
-}
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-framebutton-button-mobile {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    background: transparent !important;
-    border-top:    2px solid #e6ccff;
-    border-left:   2px solid #e6ccff;
-    border-right:  2px solid #b388ff;
-    border-bottom: 2px solid #b388ff;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
-    transition: border-color 0.15s ease;
-}
-.creativeworlds-framecontainer-container-framecontent-content-framebox-box-framecontent-content-framebutton-button-mobile:hover {
-    border-top-color:    #b388ff;
-    border-left-color:   #b388ff;
-    border-right-color:  #e6ccff;
-    border-bottom-color: #e6ccff;
-}
-.creativeworlds-framecontainer-container-framecontent-contentframebox-box-framecontent-content-framebutton-button-contribute-mobile {
-    width: 100%;
-    height: 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ff00a9 !important;
-    border: none;
-    border-radius: 0px;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    color: white !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: bold;
-    margin: 0px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: filter 0.15s ease;
-}
-.creativeworlds-framecontainer-container-framecontent-contentframebox-box-framecontent-content-framebutton-button-contribute-mobile:hover {
-    filter: brightness(1.1);
-}
-
-
+}  
 /* ======================================
    NOTIFICACIÓN - MOBILE
 ====================================== */
-.creativeworlds-framecontainer-container-framenotification-mobile {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    z-index: 9999;
-    width: 90%;
-    max-width: 400px;
-    box-sizing: border-box;
-    background: transparent !important;
-    border-top:    2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:  2px solid #8a55f0;
-    border-bottom: 2px solid #8a55f0;
-    border-radius: 0px;
-    padding: 0px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.creativeworlds-notification1-mobile {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        z-index: 9999;
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        padding: 0px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;    
 }
-.creativeworlds-framecontainer-container-framenotification-mobile.show {
+.creativeworlds-notification1-mobile.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-mobile {
-    position: relative;
-    width: 100%;
-    box-sizing: border-box;
-    background: transparent !important;
-    border-top:    2px solid #e6ccff;
-    border-left:   2px solid #e6ccff;
-    border-right:  2px solid #b388ff;
-    border-bottom: 2px solid #b388ff;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
+.creativeworlds-notification2-mobile {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-bar-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
-    background: #ff00a9 !important;
-    border: 4px solid #d0aaff;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 4px 12px;
+.creativeworlds-notificationbar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: #ff00a9 !important;
+        border: 4px solid #d0aaff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 4px 12px;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-bar-title-mobile {
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
-    color: #2a0070 !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: left;
-    line-height: 1.4;
-    margin: 0;
+.creativeworlds-notificationtitle-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 1.3;
+        margin: 0px;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-mobile {
-    width: 100%;
-    box-sizing: border-box;
-    background: transparent !important;
-    border: 4px solid #d0aaff;
-    border-top: none;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
+.creativeworlds-notificationcontent1-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 4px solid #d0aaff;
+        border-top: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-mobile {
-    width: 100%;
-    box-sizing: border-box;
-    background: #00FFFF !important;
-    border-top:    2px solid #8a55f0;
-    border-left:   2px solid #8a55f0;
-    border-right:  2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 20px;
+.creativeworlds-notificationcontent2-mobile {
+      width: 100%;
+        box-sizing: border-box;
+        background: #00FFFF !important;
+        border-top:    2px solid #8a55f0;
+        border-left:   2px solid #8a55f0;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 10px;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-text-mobile {
+.creativeworlds-notificationtext-mobile {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: black !important;
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-mobile {
-    display: flex;
-    width: fit-content;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    background: transparent !important;
-    border-top:    2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:  2px solid #8a55f0;
-    border-bottom: 2px solid #8a55f0;
-    border-radius: 0px;
-    margin: 0 auto;
-    padding: 0;
-    transition: border-color 0.15s ease;
+.creativeworlds-notificationbutton1-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0 auto;
+        padding: 0;
+        transition: border-color 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-mobile:hover {
+.creativeworlds-notificationbutton1-mobile:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-button-mobile {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    background: #d0aaff !important;
-    border-top:    2px solid #e6ccff;
-    border-left:   2px solid #e6ccff;
-    border-right:  2px solid #b388ff;
-    border-bottom: 2px solid #b388ff;
-    border-radius: 0px;
-    margin: 0;
-    padding: 10px 20px;
-    transition: border-color 0.15s ease;
+.creativeworlds-notificationbutton2-mobile {
+   display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        background: #d0aaff !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 10px 20px;
+        transition: border-color 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-button-mobile:hover {
+.creativeworlds-notificationbutton2-mobile:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-button-stay-mobile {
+.creativeworlds-notificationtext-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
@@ -8760,22 +8672,23 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-framebutton-button-stay-mobile:hover {
+.creativeworlds-notificationtext-mobile:hover {
     filter: brightness(1.1);
 }
-
-
 /* ======================================
    CONTROL DE VISIBILIDAD
 ====================================== */
-.creativeworlds-framecontainer { display: none; }
-.creativeworlds-framecontainer-container-framecontent-content { display: none; }
-.creativeworlds-framecontainer-mobile { display: block; }
-.creativeworlds-framecontainer-container-framenotification-notification-bar-mobile { display: block; }
-.creativeworlds-framecontainer-container-framenotification-notification-framecontent-content-mobile { display: block; }
+.creativeworlds-container1-mobile { display: block; }
+.creativeworlds-container2-container-mobile { display: block; }
+.creativeworlds-notification1-mobile { display: block; }
+.creativeworlds-notification2-mobile { display: block; }
 }
-
-
+@media (max-width: 360px) {
+    .socialmediacontent-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .socialmediacontent-title-mobile { font-size: 1.3rem; }
+}
 
 
 
