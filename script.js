@@ -659,6 +659,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN CREATIVE WORLDS - PC
 ====================================== */
@@ -683,7 +686,31 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+/* ======================================
+   SCRIPT: NOTIFICACIÓN CREATIVE WORLDS - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const notification    = document.getElementById('creativeworlds-notification');
+    const notificationBtn = document.getElementById('creativeworlds-button-stay');
 
+    /* Las 3 X del bloque CREATIVE WORLDS MOBILE
+       (barra principal + barra Caja 4 + barra Caja 5) */
+    const closeBtns = document.querySelectorAll('#creativeworlds-mobile [data-close="true"]');
+
+    if (notification && notificationBtn && closeBtns.length) {
+        // Al hacer clic en CUALQUIERA de las 3 X → mostrar notificación
+        closeBtns.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                notification.classList.add('show');
+            });
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+});
 
 
 
