@@ -690,9 +690,8 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN CREATIVE WORLDS - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const notification    = document.getElementById('creativeworlds-notification');
-    const notificationBtn = document.getElementById('creativeworlds-button-stay');
-
+    const notification    = document.getElementById('creativeworlds-notification-mobile');
+    const notificationBtn = document.getElementById('creativeworlds-button-stay-mobile');
     /* Las 3 X del bloque CREATIVE WORLDS MOBILE
        (barra principal + barra Caja 4 + barra Caja 5) */
     const closeBtns = document.querySelectorAll('#creativeworlds-mobile [data-close="true"]');
