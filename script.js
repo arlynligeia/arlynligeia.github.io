@@ -357,12 +357,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* ======================================
-   SCRIPT: NOTIFICACIÓN OTHER SOCIAL MEDIA - PC
+   SCRIPT: NOTIFICACIÓN ALL SOCIAL MEDIA - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('othersocialmedia-button-close');
-    const notification    = document.getElementById('othersocialmedia-notification');
-    const notificationBtn = document.getElementById('othersocialmedia-button-stay');
+    const closeBtn        = document.getElementById('allsocialmedia-button-close');
+    const notification    = document.getElementById('allsocialmedia-notification');
+    const notificationBtn = document.getElementById('allsocialmedia-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -378,12 +378,12 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /* ======================================
-   SCRIPT: NOTIFICACIÓN OTHER SOCIAL MEDIA - MOBILE
+   SCRIPT: NOTIFICACIÓN ALL SOCIAL MEDIA - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('othersocialmedia-button-close-mobile');
-    const notificationMobile    = document.getElementById('othersocialmedia-notification-mobile');
-    const notificationBtnMobile = document.getElementById('othersocialmedia-button-stay-mobile');
+    const closeBtnMobile        = document.getElementById('allsocialmedia-button-close-mobile');
+    const notificationMobile    = document.getElementById('allsocialmedia-notification-mobile');
+    const notificationBtnMobile = document.getElementById('allsocialmedia-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -397,7 +397,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 
 
 
