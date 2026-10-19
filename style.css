@@ -370,7 +370,173 @@ body.is-section .logo {
 /* ======================================
    HOME - PC
 ====================================== */
-.home-container1 {
+.home-container {
+    position: relative;
+    width: 800px;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.home-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.home-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.home-link {
+    display: block;
+    text-decoration: none;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+.home-folder {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: transparent !important;
+    border: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: border-color 0.15s ease, filter 0.15s ease;
+}
+.home-link:hover .home-folder {
+    border-color: #ffffff;
+    filter: brightness(1.2);
+}
+.home-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.home-container { display: block; }
+.home-container-mobile { display: none; }
+
+/* ======================================
+   HOME - MOBILE
+====================================== */
+@media (max-width: 768px) {
+.home-container {
+    position: relative;
+    width: 90%;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.home-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.home-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.home-link {
+    display: block;
+    text-decoration: none;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+}
+.home-folder {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background: transparent !important;
+    border: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: border-color 0.15s ease, filter 0.15s ease;
+}
+.home-link:hover .home-folder {
+    border-color: #ffffff;
+    filter: brightness(1.2);
+}
+.home-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.85rem;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.home-container { display: none; }
+.home-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   NEWSLETTER - PC
+====================================== */
+.newsletter-container1 {
     position: relative;
     width: 500px;
     background: transparent !important;
@@ -382,7 +548,7 @@ body.is-section .logo {
     margin: 50px auto 50px auto;
     padding: 0px;
 }
-.home-container2 {
+.newsletter-container2 {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -394,7 +560,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.home-container3 {
+.newsletter-container3 {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -403,7 +569,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.home-container4 {
+.newsletter-container4 {
     width: 100%;
     box-sizing: border-box;
     background: #3f00a8 !important;
@@ -416,7 +582,7 @@ body.is-section .logo {
     padding: 30px;
 }
 /* TÍTULO */
-.home-title {
+.newsletter-title {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
@@ -429,13 +595,13 @@ body.is-section .logo {
     padding: 0px;
 }
 /* INFORMACIÓN */
-.home-information {
+.newsletter-information {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
-.home-text {
+.newsletter-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: black !important;
@@ -446,7 +612,7 @@ body.is-section .logo {
     padding: 0px;
 }
 /* BOTÓN */
-.home-button1 {
+.newsletter-button1 {
     display: block;
     width: fit-content;
     box-sizing: border-box;
@@ -461,13 +627,13 @@ body.is-section .logo {
     padding: 0px;
     transition: border-color 0.15s ease;
 }
-.home-button1:hover {
+.newsletter-button1:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }
-.home-button2 {
+.newsletter-button2 {
     display: block;
     width: fit-content;
     box-sizing: border-box;
@@ -482,13 +648,13 @@ body.is-section .logo {
     padding: 0px;
     transition: border-color 0.15s ease;
 }
-.home-button2:hover {
+.newsletter-button2:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.home-buttontext {
+.newsletter-buttontext {
     display: block;
     width: auto;
     box-sizing: border-box;
@@ -508,17 +674,17 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.home-buttontext:hover {
+.newsletter-buttontext:hover {
     filter: brightness(1.1);
 }
 /* CONTROL */
-.home-container1 { display: block; }
-.home-container1-mobile { display: none; }
+.newsletter-container1 { display: block; }
+.newsletter-container1-mobile { display: none; }
 /* ======================================
-   HOME - MOBILE
+   NEWSLETTER - MOBILE
 ====================================== */
 @media (max-width: 768px) {
-    .home-container1-mobile {
+    .newsletter-container1-mobile {
         position: relative;
         width: 90%;
         background: transparent !important;
@@ -530,7 +696,7 @@ body.is-section .logo {
         margin: 700px auto 40px auto;
         padding: 0px;
     }
-    .home-container2-mobile {
+    .newsletter-container2-mobile {
         width: 100%;
         box-sizing: border-box;
         background: transparent !important;
@@ -542,7 +708,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    .home-container3-mobile {
+    .newsletter-container3-mobile {
         width: 100%;
         box-sizing: border-box;
         background: transparent !important;
@@ -551,7 +717,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    .home-container4-mobile {
+    .newsletter-container4-mobile {
         width: 100%;
         box-sizing: border-box;
         background: #3f00a8 !important;
@@ -564,7 +730,7 @@ body.is-section .logo {
         padding: 20px;
     }
     /* TÍTULO */
-    .home-title-mobile {
+    .newsletter-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 2rem;
@@ -577,13 +743,13 @@ body.is-section .logo {
         padding: 0px;
     }
     /* INFORMACIÓN */
-    .home-information-mobile {
+    .newsletter-information-mobile {
         width: 100%;
         box-sizing: border-box;
         margin: 0px 0px 10px 0px;
         padding: 0px;
     }
-    .home-text-mobile {
+    .newsletter-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1.05rem;
         color: black !important;
@@ -594,7 +760,7 @@ body.is-section .logo {
         padding: 0px;
     }
     /* BOTÓN */
-    .home-button1-mobile {
+    .newsletter-button1-mobile {
         display: block;
         width: fit-content;
         box-sizing: border-box;
@@ -609,13 +775,13 @@ body.is-section .logo {
         padding: 0px;
         transition: border-color 0.15s ease;
     }
-    .home-button1-mobile:hover {
+    .newsletter-button1-mobile:hover {
         border-top-color:    #8a55f0;
         border-left-color:   #8a55f0;
         border-right-color:  #ffffff;
         border-bottom-color: #ffffff;
     }
-    .home-button2-mobile {
+    .newsletter-button2-mobile {
         display: block;
         width: fit-content;
         box-sizing: border-box;
@@ -630,13 +796,13 @@ body.is-section .logo {
         padding: 0px;
         transition: border-color 0.15s ease;
     }
-    .home-button2-mobile:hover {
+    .newsletter-button2-mobile:hover {
         border-top-color:    #b388ff;
         border-left-color:   #b388ff;
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
-    .home-buttontext-mobile {
+    .newsletter-buttontext-mobile {
         display: block;
         width: auto;
         box-sizing: border-box;
@@ -656,20 +822,20 @@ body.is-section .logo {
         cursor: pointer;
         transition: filter 0.15s ease;
     }
-    .home-buttontext-mobile:hover {
+    .newsletter-buttontext-mobile:hover {
         filter: brightness(1.1);
     }
     /* CONTROL */
-    .home-container1 { display: none; }
-    .home-container1-mobile { display: block; }
+    .newsletter-container1 { display: none; }
+    .newsletter-container1-mobile { display: block; }
 }
 @media (max-width: 360px) {
-    .home-title-mobile { font-size: 1.5rem; }
-    .home-text-mobile { font-size: 1rem; }
+    .newsletter-title-mobile { font-size: 1.5rem; }
+    .newsletter-text-mobile { font-size: 1rem; }
 }
 @media (max-width: 320px) {
-    .home-title-mobile { font-size: 1.3rem; }
-    .home-text-mobile { font-size: 0.8rem; }
+    .newsletter-title-mobile { font-size: 1.3rem; }
+    .newsletter-text-mobile { font-size: 0.8rem; }
 }
 
 
