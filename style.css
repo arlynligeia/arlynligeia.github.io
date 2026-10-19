@@ -10357,9 +10357,9 @@ body.is-section .logo {
     align-items: center;
     gap: 30px;
     box-sizing: border-box;
-    background: #f3efe3;
+    background: #3f00a8 !important; 
     padding: 20px;    
-    border: 2px solid #8a8a94;
+    border: 4px solid #ffffff;
 }
 .workinprogress-image {
     display: flex;
@@ -10414,8 +10414,9 @@ body.is-section .logo {
     scrollbar-width: thin;
     scrollbar-color: #a0a0a8 #ffffff;
 }
+/* BARRA DE SCROLL */
 .workinprogress-content::-webkit-scrollbar {
-    width: 16px;
+    width: 28px;
 }
 .workinprogress-content::-webkit-scrollbar-track {
     background: #ffffff;
@@ -10424,7 +10425,7 @@ body.is-section .logo {
 .workinprogress-content::-webkit-scrollbar-thumb {
     background: #a0a0a8;
     border: 4px solid #ffffff;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 .workinprogress-content::-webkit-scrollbar-thumb:hover {
     background: #6b6b7a;
