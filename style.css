@@ -388,7 +388,7 @@ body.is-section .logo {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: flex-start;
-    gap: 30px;
+    gap: 10px;
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -396,13 +396,24 @@ body.is-section .logo {
     padding: 0px;
 }
 .home-icon {
+    position: relative;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    background: transparent !important;
+    justify-content: center;
+    width: 104px;
+    height: 100px;
+    box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    background: transparent;
+    border: 1px dotted transparent;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+.home-icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
 }
 .home-link {
     display: block;
@@ -410,6 +421,12 @@ body.is-section .logo {
     background: transparent !important;
     margin: 0px;
     padding: 0px;
+}
+/* Estira el enlace para que cubra todo el cuadro */
+.home-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
     cursor: pointer;
 }
 .home-folder {
@@ -455,6 +472,7 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
+    white-space: nowrap;
     margin: 8px 0px 0px 0px;
     padding: 0px;
 }
@@ -476,13 +494,13 @@ body.is-section .logo {
         padding: 0px;
         box-sizing: border-box;
     }
-    .home-icons-mobile {
+       .home-icons-mobile {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 10px;
         width: 100%;
         box-sizing: border-box;
         background: transparent !important;
@@ -490,13 +508,23 @@ body.is-section .logo {
         padding: 0px;
     }
     .home-icon-mobile {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-start;
-        background: transparent !important;
+        justify-content: center;
+        width: 160px;
+        height: 100px;
+        box-sizing: border-box;
         margin: 0px;
         padding: 0px;
+        background: transparent;
+        border: 1px dotted transparent;
+        transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .home-icon-mobile:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #ffffff;
     }
     .home-link-mobile {
         display: block;
@@ -504,6 +532,11 @@ body.is-section .logo {
         background: transparent !important;
         margin: 0px;
         padding: 0px;
+    }
+    .home-link-mobile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
         cursor: pointer;
     }
         .home-folder-mobile {
@@ -547,6 +580,7 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
+        white-space: nowrap;
         margin: 8px 0px 0px 0px;
         padding: 0px;
     }
