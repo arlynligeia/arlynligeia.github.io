@@ -483,6 +483,7 @@ body.is-section .logo {
 
 
 
+
 /* ======================================
    HOME - MOBILE
 ====================================== */
@@ -490,39 +491,39 @@ body.is-section .logo {
     .home-container-mobile {
         position: relative;
         width: 90%;
+        box-sizing: border-box;        
         background: transparent !important;
         border: none;
         border-radius: 0px;
-        margin: 50px auto 50px auto;
+        margin: 80px auto 40px auto;
         padding: 0px;
-        box-sizing: border-box;
     }
       .home-icons-mobile {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
+        width: 100%;
+        box-sizing: border-box;          
         justify-content: center;
         align-items: flex-end;
-        gap: 10px;
-        width: 100%;
-        box-sizing: border-box;
+        gap: 5px;
         background: transparent !important;
         margin: 0px;
         padding: 0px;
     }
     .home-icon-mobile {
         position: relative;
-        display: flex;
+        display: flex;       
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 110px;
+        width: 100px;
         height: 80px;
         box-sizing: border-box;
-        margin: 0px;
-        padding: 0px;
+        justify-content: center;       
+        align-items: center;
         background: transparent;
         border: 1px dotted transparent;
+        margin: 0px;
+        padding: 0px;
         transition: background 0.15s ease, border-color 0.15s ease;
     }
     .home-icon-mobile:hover {
@@ -531,8 +532,8 @@ body.is-section .logo {
     }
     .home-link-mobile {
         display: block;
-        text-decoration: none;
         background: transparent !important;
+        text-decoration: none;
         margin: 0px;
         padding: 0px;
     }
@@ -547,10 +548,10 @@ body.is-section .logo {
         position: relative;
         width: 64px;
         height: 48px;
+        background: #8a55f0;       
         margin: -6px -8px;
-        transform: scale(0.75);
-        background: #8a55f0;
         clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
+        transform: scale(0.75);
         transition: filter 0.15s ease;
     }
     .home-folder-mobile::before {
@@ -575,18 +576,17 @@ body.is-section .logo {
     .home-link-mobile:hover .home-folder-mobile {
         filter: brightness(1.2);
     }
-    
     .home-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         color: #ffffff !important;
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
         white-space: nowrap;
-        margin: 8px 0px 0px 0px;
+        margin: 5px 0px 0px 0px;
         padding: 0px;
     }
     /* CONTROL */
