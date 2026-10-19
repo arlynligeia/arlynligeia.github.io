@@ -356,7 +356,47 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN OTHER SOCIAL MEDIA - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('othersocialmedia-button-close');
+    const notification    = document.getElementById('othersocialmedia-notification');
+    const notificationBtn = document.getElementById('othersocialmedia-button-stay');
 
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN OTHER SOCIAL MEDIA - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('othersocialmedia-button-close-mobile');
+    const notificationMobile    = document.getElementById('othersocialmedia-notification-mobile');
+    const notificationBtnMobile = document.getElementById('othersocialmedia-button-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
