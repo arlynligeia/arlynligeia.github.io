@@ -710,7 +710,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.newsletter-buttontext {
+.newsletter-button-text {
     display: block;
     width: auto;
     box-sizing: border-box;
@@ -730,7 +730,7 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.newsletter-buttontext:hover {
+.newsletter-button-text:hover {
     filter: brightness(1.1);
 }
 /* CONTROL */
@@ -858,7 +858,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
-    .newsletter-buttontext-mobile {
+    .newsletter-button-text-mobile {
         display: block;
         width: auto;
         box-sizing: border-box;
@@ -878,7 +878,7 @@ body.is-section .logo {
         cursor: pointer;
         transition: filter 0.15s ease;
     }
-    .newsletter-buttontext-mobile:hover {
+    .newsletter-button-text-mobile:hover {
         filter: brightness(1.1);
     }
     /* CONTROL */
@@ -2183,17 +2183,6 @@ body.is-section .logo {
 .socialmediacontent-container-1-mobile { display: none; }
 .socialmediacontent-notification-bar-mobile { display: none; }
 .socialmediacontent-notification-4-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SOCIAL MEDIA CONTENT - RESPONSIVE
 ====================================== */
@@ -2314,7 +2303,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
-    .socialmediacontent-close-mobile {
+    .socialmediacontent-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
@@ -2324,11 +2313,11 @@ body.is-section .logo {
         line-height: 1;
         transition: filter 0.15s ease;
     }
-    .socialmediacontent-close-mobile:hover {
+    .socialmediacontent-button-text-mobile:hover {
         filter: brightness(1.1);
     }
     /* CONTENIDO 1 */
-    .socialmediacontent-content-1-mobile {
+    .socialmediacontent-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
         background: transparent !important;
@@ -2339,7 +2328,7 @@ body.is-section .logo {
         padding: 0px;
     }
     /* CONTENIDO 2 */
-    .socialmediacontent-content-2-mobile {
+    .socialmediacontent-container-4-mobile {
         width: 100%;
         box-sizing: border-box;
         background: #3f00a8 !important;
@@ -2353,9 +2342,9 @@ body.is-section .logo {
     }
     /* INFORMACIÓN */
     .socialmediacontent-information-mobile {
+        display: block;
         width: 100%;
         box-sizing: border-box;
-        display: block;
         margin: 0px;
     }
        /* BOTONES TIKTOK / YOUTUBE */
@@ -2401,8 +2390,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
-    .socialmediacontent-tiktok-mobile,
-    .socialmediacontent-youtube-mobile {
+    .socialmediacontent-button2-text-mobile {
         display: block;
         width: auto;
         box-sizing: border-box;
@@ -2422,8 +2410,7 @@ body.is-section .logo {
         cursor: pointer;
         transition: filter 0.15s ease;
     }
-    .socialmediacontent-tiktok-mobile:hover,
-    .socialmediacontent-youtube-mobile:hover {
+    .socialmediacontent-button2-text-mobile:hover {
         filter: brightness(1.1);
     }
     /* CAJAS */
@@ -2545,7 +2532,7 @@ body.is-section .logo {
         text-decoration: none;
     }
     /* CONTENIDO */
-    .socialmediacontent-notification-content-1-mobile {
+    .socialmediacontent-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
         background: transparent !important;
@@ -2555,7 +2542,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    .socialmediacontent-notification-content-2-mobile {
+    .socialmediacontent-notification-4-mobile {
         width: 100%;
         box-sizing: border-box;
         background: #00FFFF !important;
@@ -2567,6 +2554,12 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
+/* NOTIFICACIÓN - INFORMACIÓN */
+.upcomingrelease-notification-information-mobile {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+}    
     /* TEXTO */
     .socialmediacontent-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
@@ -2623,7 +2616,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
-    .socialmediacontent-notification-stay-mobile {
+    .socialmediacontent-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
@@ -2633,15 +2626,15 @@ body.is-section .logo {
         cursor: pointer;
         transition: filter 0.15s ease;
     }
-    .socialmediacontent-notification-stay-mobile:hover {
+    .socialmediacontent-notification-button-text-mobile:hover {
         filter: brightness(1.1);
     }
     /* CONTROL */
     .socialmediacontent-container-1 { display: none; }
-    .socialmediacontent-content-2 { display: none; }
+    .socialmediacontent-container-4 { display: none; }
     .socialmediacontent-container-1-mobile { display: block; }
     .socialmediacontent-notification-bar-mobile { display: block; }
-    .socialmediacontent-notification-content-2-mobile { display: block; }
+    .socialmediacontent-notification-4-mobile { display: block; }
 }
 @media (max-width: 360px) {
     .socialmediacontent-title-mobile { font-size: 1.5rem; }
