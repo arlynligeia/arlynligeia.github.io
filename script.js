@@ -768,7 +768,46 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN FILM - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('film-button-close');
+    const notification    = document.getElementById('film-notification');
+    const notificationBtn = document.getElementById('film-button-stay');
 
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ======================================
+   SCRIPT: NOTIFICACIÓN FILM - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('film-button-close-mobile');
+    const notificationMobile    = document.getElementById('film-notification-mobile');
+    const notificationBtnMobile = document.getElementById('film-button-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
