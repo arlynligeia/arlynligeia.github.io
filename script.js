@@ -270,22 +270,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-
-
 /* ======================================
-   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - PC
+   SCRIPT: NOTIFICACIÓN UPCOMINGRELEASE - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('socialmediacontent-button-close');
-    const notification    = document.getElementById('socialmediacontent-button-notification');
-    const notificationBtn = document.getElementById('socialmediacontent-button-stay-button');
+    const closeBtn        = document.getElementById('upcomingrelease-button-close');
+    const notification    = document.getElementById('upcomingrelease-notification');
+    const notificationBtn = document.getElementById('upcomingrelease-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -299,13 +290,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 /* ======================================
-   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
+   SCRIPT: NOTIFICACIÓN UPCOMINGRELEASE - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('socialmediacontent-button-close-mobile');
-    const notificationMobile    = document.getElementById('socialmediacontent-button-notification-mobile');
-    const notificationBtnMobile = document.getElementById('socialmediacontent-button-stay-button-mobile');
+    const closeBtnMobile        = document.getElementById('upcomingrelease-button-close-mobile');
+    const notificationMobile    = document.getElementById('upcomingrelease-notification-mobile');
+    const notificationBtnMobile = document.getElementById('upcomingrelease-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -319,6 +311,70 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('socialmediacontent-button-close');
+    const notification    = document.getElementById('socialmediacontent-notification');
+    const notificationBtn = document.getElementById('socialmediacontent-button-stay');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN SOCIAL MEDIA CONTENT - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('socialmediacontent-button-close-mobile');
+    const notificationMobile    = document.getElementById('socialmediacontent-notification-mobile');
+    const notificationBtnMobile = document.getElementById('socialmediacontent-button-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
