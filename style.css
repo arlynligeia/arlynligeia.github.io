@@ -10321,24 +10321,27 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 30px;
+    padding: 0px;
 }
+
+
 /* CONTENIDO CON SCROLL */
 .workinprogress-content {
+    height: 500px;
     box-sizing: border-box;
-    height: 540px;
-    padding: 20px;
+    padding: 30px;
+    background: #3f00a8 !important;    
     overflow-y: auto;
     overflow-x: hidden;
-    background: #f3efe3;
 }
 .workinprogress-heading {
     display: block;
-    margin: 0px 0px 16px 0px;
-    padding: 0px;
-    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: black !important;  
     font-weight: bold;
-    color: #0d0d4d;
+    margin: 0px 0px 15px 0px;
+    padding: 0px;   
 }
 /* LISTA */
 .workinprogress-list {
@@ -10354,17 +10357,17 @@ body.is-section .logo {
     align-items: center;
     gap: 30px;
     box-sizing: border-box;
-    padding: 16px 20px;
     background: #f3efe3;
-    border: 1px solid #8a8a94;
+    padding: 20px;    
+    border: 2px solid #8a8a94;
 }
 .workinprogress-image {
-    flex: 0 0 120px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 0 0 120px;
     width: 120px;
     height: 160px;
+    align-items: center;
+    justify-content: center;
     margin: 0px;
     padding: 0px;
 }
@@ -10386,7 +10389,7 @@ body.is-section .logo {
     display: block;
     font-family: 'Doto', sans-serif;
     font-size: 1.4rem;
-    color: black !important;
+    color: white !important;
 }
 .workinprogress-name {
     display: block;
@@ -10398,13 +10401,13 @@ body.is-section .logo {
     display: block;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
-    color: #0d0d4d;
+    color: black !important;
 }
 .workinprogress-stage {
     display: block;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
-    color: #0d0d4d;
+    color: black !important;
 }
 /* BARRA DE SCROLL */
 .workinprogress-content {
@@ -10426,6 +10429,9 @@ body.is-section .logo {
 .workinprogress-content::-webkit-scrollbar-thumb:hover {
     background: #6b6b7a;
 }
+
+
+
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
