@@ -434,7 +434,7 @@ body.is-section .logo {
     position: relative;
     width: 64px;
     height: 48px;
-    background: #000000;
+    background: #8a55f0;
     clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
     transition: filter 0.15s ease;
 }
@@ -443,7 +443,7 @@ body.is-section .logo {
     content: "";
     position: absolute;
     inset: 0;
-    background: #d8b400;
+    background: #b388ff;
     clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
 }
 /* Frente de la carpeta con el relieve */
@@ -455,9 +455,9 @@ body.is-section .logo {
     width: 60px;
     height: 32px;
     box-sizing: border-box;
-    background: #ffe45c;
-    border-top: 2px solid #000000;
-    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b08800;
+    background: #e6ccff;
+    border-top: 2px solid #8a55f0;
+    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
 }
 .home-link:hover .home-folder {
     filter: brightness(1.2);
@@ -480,6 +480,9 @@ body.is-section .logo {
 .home-container { display: block; }
 .home-container-mobile { display: none; }
 
+
+
+
 /* ======================================
    HOME - MOBILE
 ====================================== */
@@ -494,12 +497,12 @@ body.is-section .logo {
         padding: 0px;
         box-sizing: border-box;
     }
-       .home-icons-mobile {
+      .home-icons-mobile {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         gap: 10px;
         width: 100%;
         box-sizing: border-box;
@@ -513,8 +516,8 @@ body.is-section .logo {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 160px;
-        height: 100px;
+        width: 110px;
+        height: 80px;
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
@@ -539,12 +542,14 @@ body.is-section .logo {
         inset: 0;
         cursor: pointer;
     }
-        .home-folder-mobile {
+     .home-folder-mobile {
         display: block;
         position: relative;
         width: 64px;
         height: 48px;
-        background: #000000;
+        margin: -6px -8px;
+        transform: scale(0.75);
+        background: #8a55f0;
         clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
         transition: filter 0.15s ease;
     }
@@ -552,7 +557,7 @@ body.is-section .logo {
         content: "";
         position: absolute;
         inset: 0;
-        background: #d8b400;
+        background: #b388ff;
         clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
     }
     .home-folder-mobile::after {
@@ -563,9 +568,9 @@ body.is-section .logo {
         width: 60px;
         height: 32px;
         box-sizing: border-box;
-        background: #ffe45c;
-        border-top: 2px solid #000000;
-        box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b08800;
+        background: #e6ccff;
+        border-top: 2px solid #8a55f0;
+        box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
     }
     .home-link-mobile:hover .home-folder-mobile {
         filter: brightness(1.2);
@@ -574,7 +579,7 @@ body.is-section .logo {
     .home-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         color: #ffffff !important;
         text-decoration: none;
         text-transform: uppercase;
