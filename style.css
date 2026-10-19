@@ -416,43 +416,36 @@ body.is-section .logo {
     display: block;
     position: relative;
     width: 64px;
-    height: 52px;
-    background: transparent !important;
-    border: none;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
+    height: 48px;
+    background: #000000;
+    clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
     transition: filter 0.15s ease;
 }
-/* Pestaña de la carpeta */
+/* Parte de atrás de la carpeta (con la pestaña) */
 .home-folder::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 26px;
-    height: 10px;
-    background: #8a55f0;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    transition: background 0.15s ease;
+    inset: 0;
+    background: #d8b400;
+    clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
 }
-/* Cuerpo de la carpeta */
+/* Frente de la carpeta con el relieve */
 .home-folder::after {
     content: "";
     position: absolute;
-    top: 10px;
-    left: 0;
-    width: 64px;
-    height: 42px;
-    background: #8a55f0;
-    border-radius: 4px;
-    transition: background 0.15s ease;
+    top: 14px;
+    left: 2px;
+    width: 60px;
+    height: 32px;
+    box-sizing: border-box;
+    background: #ffe45c;
+    border-top: 2px solid #000000;
+    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b08800;
 }
-.home-link:hover .home-folder::before,
-.home-link:hover .home-folder::after {
-    background: #ffffff;
+.home-link:hover .home-folder {
+    filter: brightness(1.2);
 }
+
 .home-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -513,47 +506,38 @@ body.is-section .logo {
         padding: 0px;
         cursor: pointer;
     }
-    .home-folder-mobile {
+        .home-folder-mobile {
         display: block;
         position: relative;
         width: 64px;
-        height: 52px;
-        background: transparent !important;
-        border: none;
-        border-radius: 0px;
-        margin: 0px;
-        padding: 0px;
+        height: 48px;
+        background: #000000;
+        clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
         transition: filter 0.15s ease;
     }
-    /* Pestaña de la carpeta */
     .home-folder-mobile::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 26px;
-        height: 10px;
-        background: #8a55f0;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
-        transition: background 0.15s ease;
+        inset: 0;
+        background: #d8b400;
+        clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
     }
-    /* Cuerpo de la carpeta */
     .home-folder-mobile::after {
         content: "";
         position: absolute;
-        top: 10px;
-        left: 0;
-        width: 64px;
-        height: 42px;
-        background: #8a55f0;
-        border-radius: 4px;
-        transition: background 0.15s ease;
+        top: 14px;
+        left: 2px;
+        width: 60px;
+        height: 32px;
+        box-sizing: border-box;
+        background: #ffe45c;
+        border-top: 2px solid #000000;
+        box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b08800;
     }
-    .home-link-mobile:hover .home-folder-mobile::before,
-    .home-link-mobile:hover .home-folder-mobile::after {
-        background: #ffffff;
+    .home-link-mobile:hover .home-folder-mobile {
+        filter: brightness(1.2);
     }
+    
     .home-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
