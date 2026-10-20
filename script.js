@@ -773,8 +773,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('workinprogress-button-close');
-    const notification    = document.getElementById('Workinprogress-notification');
-    const notificationBtn = document.getElementById('Workinprogress-button-stay');
+    const notification    = document.getElementById('workinprogress-notification');
+    const notificationBtn = document.getElementById('workinprogress-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -788,13 +788,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('workinprogress-button-close-mobile');
-    const notificationMobile    = document.getElementById('Workinprogress-notification-mobile');
-    const notificationBtnMobile = document.getElementById('Workinprogress-button-stay-mobile');
+    const notificationMobile    = document.getElementById('workinprogress-notification-mobile');
+    const notificationBtnMobile = document.getElementById('workinprogress-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -808,6 +809,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
