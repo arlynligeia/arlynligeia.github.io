@@ -10170,12 +10170,6 @@ body.is-section .logo {
 .creativeworlds-notificationbar-mobile { display: block; }
 .creativeworlds-notificationcontent-mobile { display: block; }
 }
-@media (max-width: 360px) {
-    .socialmediacontent-title-mobile { font-size: 1.5rem; }
-}
-@media (max-width: 320px) {
-    .socialmediacontent-title-mobile { font-size: 1.3rem; }
-}
 
 
 
@@ -10541,7 +10535,6 @@ body.is-section .logo {
 .workinprogress-container-4::-webkit-scrollbar-thumb:hover {
     background: #b388ff;
 }
-
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
@@ -10717,10 +10710,6 @@ body.is-section .logo {
 
 .workinprogress-notification-1 { display: block; }
 .workinprogress-notification-1-mobile { display: none; }
-
-
-
-
 /* ======================================
    WORK IN PROGRESS - MOBILE
 ====================================== */
@@ -11217,6 +11206,9 @@ body.is-section .logo {
 }
 
 
+
+
+
 /* ======================================
    FILM - PC
 ====================================== */
@@ -11554,8 +11546,12 @@ body.is-section .logo {
 ====================================== */
 .film-container-1 { display: block; }
 .film-container-1-mobile { display: none; }
+
 .film-notification-1 { display: block; }
 .film-notification-1-mobile { display: none; }
+
+
+
 /* ======================================
    FILM - RESPONSIVE
 ====================================== */
@@ -11815,6 +11811,8 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
+
+    
     /* NOTIFICACIÓN - INFORMACIÓN */
     .film-notification-information-mobile {
         width: 100%;
@@ -11894,26 +11892,24 @@ body.is-section .logo {
     /* CONTROL */
     .film-container-1 { display: none; }
     .film-container-1-mobile { display: block; }
+    
     .film-notification-1 { display: none; }
     .film-notification-1-mobile { display: block; }
 }
-@media (max-width: 360px) {
-    .film-title-mobile { font-size: 1.5rem; }
-    .film-text-mobile { font-size: 1rem; }
+
+
+
+
+
+
+
+
+
+.main-section-mobile { display: none; }
+@media (max-width: 768px) {
+    .main-section { display: none; }
+    .main-section-mobile { display: block; }
 }
-@media (max-width: 320px) {
-    .film-title-mobile { font-size: 1.3rem; }
-    .film-text-mobile { font-size: 0.8rem; }
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -13005,6 +13001,9 @@ body.is-section .logo {
     .bemypatron-container { display: none; }
     .bemypatron-container-mobile { display: block; }
 }
+
+
+
 
 
 /* ======================================
