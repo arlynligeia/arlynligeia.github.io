@@ -15,10 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
             homeSection.style.display = 'block';
         }
 
-        document.querySelectorAll('[id^="home-"]').forEach(subsection => {
+
+
+       // CAMBIO PROVISIONAL
+        document.querySelectorAll('[id^="home-"]:not([id*="mobile"])').forEach(subsection => {
             subsection.style.display = 'block';
         });
 
+
+
+       
         // Quitar la clase is-section al volver a Home
         document.body.classList.remove('is-section');
     }
@@ -26,11 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
     // FUNCIÓN: NAVEGAR A UNA SECCIÓN
     function showOnlyOneSection(sectionId) {
         console.log('Mostrando SOLO:', sectionId);
-
+       
         document.querySelectorAll('.main-section, .subsection').forEach(section => {
             section.style.display = 'none';
         });
-
+      
         const mainSection = document.getElementById(sectionId);
         if (mainSection) {
             mainSection.style.display = 'block';
@@ -50,6 +56,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+
+
+
+   
     // FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
     function goToSubsection(subsectionId) {
         console.log('Yendo a subsección:', subsectionId);
