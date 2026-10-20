@@ -823,8 +823,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('film-button-close');
-    const notification    = document.getElementById('film-notification');
-    const notificationBtn = document.getElementById('film-button-stay');
+    const notification    = document.getElementById('notification-film');
+    const notificationBtn = document.getElementById('button-film-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -843,8 +843,8 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('film-button-close-mobile');
-    const notificationMobile    = document.getElementById('film-notification-mobile');
-    const notificationBtnMobile = document.getElementById('film-button-stay-mobile');
+    const notificationMobile    = document.getElementById('notification-film-mobile');
+    const notificationBtnMobile = document.getElementById('button-film-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
