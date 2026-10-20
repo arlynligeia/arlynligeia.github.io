@@ -768,6 +768,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - PC
 ====================================== */
@@ -788,7 +792,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - MOBILE
 ====================================== */
