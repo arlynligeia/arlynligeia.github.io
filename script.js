@@ -769,6 +769,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* ======================================
+   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('workinprogress-button-close');
+    const notification    = document.getElementById('Workinprogress-notification');
+    const notificationBtn = document.getElementById('Workinprogress-button-stay');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ======================================
+   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('workinprogress-button-close-mobile');
+    const notificationMobile    = document.getElementById('Workinprogress-notification-mobile');
+    const notificationBtnMobile = document.getElementById('Workinprogress-button-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+/* ======================================
    SCRIPT: NOTIFICACIÓN FILM - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
