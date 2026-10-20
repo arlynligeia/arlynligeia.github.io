@@ -10542,7 +10542,7 @@ body.is-section .logo {
 /* ======================================
    NOTIFICACIÓN - PC
 ====================================== */
-.Workinprogress-notification-1 {
+.workinprogress-notification-1 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -10562,12 +10562,12 @@ body.is-section .logo {
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.Workinprogress-notification-1.show {
+.workinprogress-notification-1.show {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
-.Workinprogress-notification-2 {
+.workinprogress-notification-2 {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -10581,7 +10581,7 @@ body.is-section .logo {
     padding: 0px;
 }
 /* NOTIFICACIÓN - BARRA */
-.Workinprogress-notification-bar {
+.workinprogress-notification-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -10593,7 +10593,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 4px 12px;
 }
-.Workinprogress-notification-title {
+.workinprogress-notification-title {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
@@ -10604,12 +10604,12 @@ body.is-section .logo {
     line-height: 1.4;
     margin: 0;
 }
-.Workinprogress-notification-title a {
+.workinprogress-notification-title a {
     color: #2a0070 !important;
     text-decoration: none;
 }
 /* NOTIFICACIÓN - CONTENIDO */
-.Workinprogressfilm-notification-3 {
+.workinprogress-notification-3 {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -10619,7 +10619,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.Workinprogress-notification-4 {
+.workinprogress-notification-4 {
     width: 100%;
     box-sizing: border-box;
     background: #00FFFF !important;
@@ -10632,13 +10632,13 @@ body.is-section .logo {
     padding: 20px;
 }
 /* NOTIFICACIÓN - INFORMACIÓN */
-.Workinprogress-notification-information {
+.workinprogress-notification-information {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
 }
 /* NOTIFICACIÓN - TEXTO */
-.Workinprogress-notification-text {
+.workinprogress-notification-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1rem;
     color: black !important;
@@ -10648,7 +10648,7 @@ body.is-section .logo {
     margin: 0 0 15px 0;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
-.Workinprogress-notification-button-1 {
+.workinprogress-notification-button-1 {
     display: flex;
     width: fit-content;
     box-sizing: border-box;
@@ -10664,13 +10664,13 @@ body.is-section .logo {
     padding: 0;
     transition: border-color 0.15s ease;
 }
-.Workinprogress-notification-button-1:hover {
+.workinprogress-notification-button-1:hover {
     border-top-color:    #8a55f0;
     border-left-color:   #8a55f0;
     border-right-color:  #ffffff;
     border-bottom-color: #ffffff;
 }
-.Workinprogress-notification-button-2 {
+.workinprogress-notification-button-2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10687,13 +10687,13 @@ body.is-section .logo {
     padding: 10px 20px;
     transition: border-color 0.15s ease;
 }
-.Workinprogress-notification-button-2:hover {
+.workinprogress-notification-button-2:hover {
     border-top-color:    #b388ff;
     border-left-color:   #b388ff;
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-.Workinprogress-notification-button-text {
+.workinprogress-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1rem;
@@ -10703,7 +10703,7 @@ body.is-section .logo {
     cursor: pointer;
     transition: filter 0.15s ease;
 }
-.Workinprogress-notification-button-text:hover {
+.workinprogress-notification-button-text:hover {
     filter: brightness(1.1);
 }
 /* ======================================
@@ -10712,9 +10712,8 @@ body.is-section .logo {
 .workinprogress-container-1 { display: block; }
 .workinprogress-container-1-mobile { display: none; }
 
-.Workinprogress-notification-1 { display: block; }
-.Workinprogress-notification-1-mobile { display: none; }
-
+.workinprogress-notification-1 { display: block; }
+.workinprogress-notification-1-mobile { display: none; }
 
 
 
@@ -11210,11 +11209,8 @@ body.is-section .logo {
     /* CONTROL */
     .workinprogress-container-1 { display: none; }
     .workinprogress-container-1-mobile { display: block; }
-    
-.Workinprogress-notification-1 { display: none; }
-.Workinprogress-notification-1-mobile { display: block; }
-
-    
+    .workinprogress-notification-1 { display: none; }
+    .workinprogress-notification-1-mobile { display: block; }
 }
 
 
@@ -11925,7 +11921,7 @@ body.is-section .logo {
     .film-container-1 { display: none; }
     .film-container-1-mobile { display: block; }
     .film-notification-1 { display: none; }
-    .film-notification-1 -mobile { display: block; }
+    .film-notification-1-mobile { display: block; }
 }
 @media (max-width: 360px) {
     .film-title-mobile { font-size: 1.5rem; }
