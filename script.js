@@ -14,17 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (homeSection) {
             homeSection.style.display = 'block';
         }
-
-
-
-       // CAMBIO PROVISIONAL
-        document.querySelectorAll('[id^="home-"]:not([id*="mobile"])').forEach(subsection => {
-            subsection.style.display = 'block';
-        });
-
-
-
        
+        document.querySelectorAll('[id^="home-"]').forEach(subsection => {
+           subsection.style.display = 'block';
+        });
+    
         // Quitar la clase is-section al volver a Home
         document.body.classList.remove('is-section');
     }
@@ -54,12 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 document.body.classList.add('is-section');
             }
         }
-    }
-
-
-
-
-   
+    }   
     // FUNCIÓN: NAVEGAR A UNA SUBSECCIÓN
     function goToSubsection(subsectionId) {
         console.log('Yendo a subsección:', subsectionId);
