@@ -1018,7 +1018,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* ---------- NOTIFICACIÓN CONTACT - PC ---------- */
-    const closeBtn        = document.getElementById('bemypatron-button-close');
+    const closeBtn        = document.getElementById('button-contact-close');
     const notification    = document.getElementById('notification-contact');
     const notificationBtn = document.getElementById('button-contact-stay');
 
@@ -1035,6 +1035,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 });
+
+
+
 
 
 
