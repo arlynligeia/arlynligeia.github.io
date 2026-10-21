@@ -14153,29 +14153,46 @@ body.is-section .logo {
 /* ======================================
    CONTACT
 ====================================== */
-.contact-container {
+.contact-container-1 {
     position: relative;
-    width: 550px;
-    background: #3f00a8 !important;
-    border: 3px solid #b388ff;
+    width: 850px;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px auto 50px auto;
-    padding: 30px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
 }
-.contact-container::before {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
+.contact-container-2 {
+    position: relative;
     width: 100%;
-    height: 90px;
-    background: #2a0070 !important;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
     border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
 }
+/* BARRA */
+.contact-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a0070 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 15px;
+}
+/* TÍTULO */
 .contact-title {
-    position: relative;
-    z-index: 2;
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 2.5rem;
@@ -14183,13 +14200,102 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
-    margin: 0 0 16px 0;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
 }
 .contact-title a {
     color: #ff00a9 !important;
     text-decoration: none;
 }
+/* BOTÓN - CERRAR */
+.contact-button-1 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+    transition: border-color 0.15s ease;
+}
+.contact-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.contact-button-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #d0aaff;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0;
+    padding: 10px;
+    transition: border-color 0.15s ease;
+}
+.contact-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+.contact-button-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.contact-button-text:hover {
+    filter: brightness(1.1);
+}
+/* CONTENIDO */
+.contact-container-3 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-container-4 {
+    width: 100%;
+    height: 550px;
+    box-sizing: border-box;
+    background: #3f00a8 !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 30px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 /* FORMULARIO */
 .contact-form {
     width: 100%;
@@ -14206,6 +14312,28 @@ body.is-section .logo {
     text-decoration: none;
     margin: 0 0 5px 0;
 }
+/* CAJAS */
+.contact-box {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-box:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
 /* CAJAS CON TEXTOS */
 .contact-input,
 .contact-textarea {
@@ -14213,8 +14341,11 @@ body.is-section .logo {
     height: 40px;
     box-sizing: border-box;
     background: #00FFFF !important;
-    border: 2px solid #000000;
-    border-radius: 6px;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;   
+    border-radius: 0px;
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: black !important;
@@ -14222,6 +14353,13 @@ body.is-section .logo {
     text-align: left;
     margin: 0 0 15px 0;
     padding: 10px;
+}
+.contact-input:hover,
+.contact-textarea:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
 }
 .contact-textarea {
     height: 150px;
@@ -14238,158 +14376,257 @@ body.is-section .logo {
 .contact-topic.is-visible {
     display: block !important;
 }
-/* BOTÓN */
-.contact-button {
+/* BOTÓN - SUMINT */
+.contact-button-1 {
+    display: flex;
     width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.contact-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.contact-button-2  {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.contact-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+.contact-button-text {
+    width: 100%;
+    height: 40px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    margin: 0px;
-}
-.contact-submit {
-    display: flex;
-    justify-content: center;
-    background: #ff1493 !important;
-    border: 2px solid #ffffff;
-    border-radius: 6px;
+    align-items: center;
+    background: #ff00a9 !important;
+    border: none;
+    border-radius: 0px;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: white !important;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     font-weight: bold;
     margin: 0px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: filter 0.15s ease;
 }
-.contact-submit:hover {
-    transform: scale(1.05);
+.contact-button-text:hover {
+    filter: brightness(1.1);
 }
-/* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-.contact-container { display: block; }
-.contact-container-mobile { display: none; }
 /* ======================================
-   MOVIL RESPONSIVE: CONTACT
+   NOTIFICACIÓN - PC
 ====================================== */
-@media (max-width: 768px) {
-    .contact-container-mobile {
-        position: relative;
-        width: 90%;
-        box-sizing: border-box;
-        background: #3f00a8 !important;
-        border: 3px solid #b388ff;
-        border-radius: 0px;
-        margin: 0px auto 40px auto;
-        padding: 20px;
-    }
-    .contact-container-mobile::before {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background: #2a0070 !important;
-        border-radius: 0px;
-    }
-    .contact-title-mobile {
-        position: relative;
-        z-index: 2;
-        display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 2rem;
-        color: #ff00a9 !important;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        margin: 0 0 10px 0;
-    }
-    .contact-title-mobile a {
-        color: #ff00a9 !important;
-        text-decoration: none;
-    }
-    /* FORMULARIO */
-    .contact-form-mobile {
-        width: 100%;
-        box-sizing: border-box;
-        display: block;
-        margin: 0px;
-    }
-    /* TEXTOS SOBRE LAS CAJAS */
-    .contact-label-mobile {
-        display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1rem;
-        color: #00FF00 !important;
-        text-decoration: none;
-        margin: 0 0 5px 0;
-    }
-    /* CAJAS CON TEXTOS */
-    .contact-input-mobile,
-    .contact-textarea-mobile {
-        width: 100%;
-        height: 40px;
-        box-sizing: border-box;
-        background: #00FFFF !important;
-        border: 2px solid #000000;
-        border-radius: 6px;
-        font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem;
-        color: black !important;
-        text-decoration: none;
-        text-align: left;
-        margin: 0 0 15px 0;
-        padding: 10px;
-    }
-    .contact-textarea-mobile {
-        height: 150px;
-        resize: vertical;
-        margin-bottom: 20px;
-    }
-    /* CASILLA TOPIC MOBILE */
-    .contact-topic-mobile {
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0px;
-        display: none !important;
-    }
-    .contact-topic-mobile.is-visible {
-        display: block !important;
-    }
-    /* BOTÓN */
-    .contact-button-mobile {
-        width: 100%;
-        box-sizing: border-box;
-        display: block;
-        text-align: center;
-        margin: 0px;
-    }
-    .contact-submit-mobile {
-        display: inline-block;
-        background-color: #ff1493 !important;
-        border: 2px solid #ffffff;
-        border-radius: 6px;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1rem;
-        color: white !important;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: bold;
-        text-align: center;
-        margin: 0px;
-        padding: 10px 20px;
-        cursor: pointer;
-        transition: transform 0.3s ease;
-    }
-    .contact-submit-mobile:hover {
-        transform: scale(1.05);
-    }
-    /* CONTROL DISPLAY ESCRITORIO/MÓVIL */
-    .contact-container { display: none; }
-    .contact-container-mobile { display: block; }
+.contact-notification-1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    padding: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
+.contact-notification-1.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+.contact-notification-2 {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* NOTIFICACIÓN - BARRA */
+.contact-notification-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff00a9 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 4px 12px;
+}
+/* NOTIFICACIÓN - TÍTULO */
+.contact-notification-title {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.3;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-notification-title a {
+    color: #2a0070 !important;
+    text-decoration: none;
+}
+/* NOTIFICACIÓN - CONTENIDO */
+.contact-notification-3 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.contact-notification-4 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #00FFFF !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+/* NOTIFICACIÓN - INFORMACIÓN */
+.contact-notification-information {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* NOTIFICACIÓN - TEXTO */
+.contact-notification-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: black !important;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+}
+/* NOTIFICACIÓN - BOTÓN PERMANECER */
+.contact-notification-button-1 {
+    display: flex;
+    width: fit-content;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px auto;
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.contact-notification-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.contact-notification-button-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #d0aaff !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 10px 20px;
+    transition: border-color 0.15s ease;
+}
+.contact-notification-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+.contact-notification-button-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    color: #2a0070 !important;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.contact-notification-button-text:hover {
+    filter: brightness(1.1);
+}
+/* ======================================
+   CONTROL
+====================================== */
+.contact-container-1 { display: block; }
+.contact-container-1-mobile { display: none; }
+
+.contact-notification-1 { display: block; }
+.contact-notification-1-mobile { display: none; }
+
+
+
 
 
 
