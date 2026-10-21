@@ -995,10 +995,12 @@ document.addEventListener('DOMContentLoaded', function () {
 /* ======================================
    CONTACT PC
 ====================================== */
-(function () {
-    const type = document.getElementById('contact-type');
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* ---------- FORMULARIO: MOSTRAR/OCULTAR TOPIC ---------- */
+    const type    = document.getElementById('contact-type');
     const wrapper = document.getElementById('contact-wrapper');
-    const topic = document.getElementById('contact-topic');
+    const topic   = document.getElementById('contact-topic');
 
     if (type && wrapper && topic) {
         type.addEventListener('change', function () {
@@ -1014,7 +1016,27 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-})();
+
+    /* ---------- NOTIFICACIÓN CONTACT - PC ---------- */
+    const closeBtn        = document.getElementById('bemypatron-button-close');
+    const notification    = document.getElementById('notification-contact');
+    const notificationBtn = document.getElementById('button-contact-stay');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+
+});
+
+
 
 /* ======================================
    CONTACT MOBILE
@@ -1039,6 +1061,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 })();
+
+
+
+
+
+
+
+
 
 
 
