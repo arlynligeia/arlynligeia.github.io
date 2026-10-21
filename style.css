@@ -14316,7 +14316,6 @@ body.is-section .logo {
 .contact-box {
     display: flex;
     width: 100%;
-    height: 40px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
@@ -14326,7 +14325,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px 0px 10px 0px;
+    margin: 0px 0px 20px 0px;
     padding: 0px;
 }
 .contact-box:hover {
@@ -14339,7 +14338,8 @@ body.is-section .logo {
 .contact-input,
 .contact-textarea {
     width: 100%;
-   box-sizing: border-box;
+    height: 40px;
+    box-sizing: border-box;
     background: #00FFFF !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
