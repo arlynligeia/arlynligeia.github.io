@@ -860,9 +860,88 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN MUSIC - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('music-button-close');
+    const notification    = document.getElementById('notification-music');
+    const notificationBtn = document.getElementById('button-music-stay');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ======================================
+   SCRIPT: NOTIFICACIÓN MUSIC - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('music-button-close-mobile');
+    const notificationMobile    = document.getElementById('notification-music-mobile');
+    const notificationBtnMobile = document.getElementById('button-music-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
+/* ======================================
+   SCRIPT: NOTIFICACIÓN FASHION - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('fashion-button-close');
+    const notification    = document.getElementById('notification-fashion');
+    const notificationBtn = document.getElementById('button-fashion-stay');
 
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ======================================
+   SCRIPT: NOTIFICACIÓN FASHION - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('fashion-button-close-mobile');
+    const notificationMobile    = document.getElementById('notification-fashion-mobile');
+    const notificationBtnMobile = document.getElementById('button-fashion-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
 
 
 
