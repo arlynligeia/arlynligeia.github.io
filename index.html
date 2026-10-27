@@ -3773,8 +3773,32 @@
 
 
 
+<!-- ===== BARRA FIJA ETHEREAL LOOP ===== -->
+<div class="ethereal-loop-bar" id="etherealLoopBar">
+    <span class="ethereal-loop-title">Ethereal Loop</span>
 
+    <button class="ethereal-loop-btn" id="etherealLoopToggle" type="button" aria-label="Reproducir / Pausar">
+        <svg class="ethereal-loop-icon" viewBox="0 0 24 24" id="etherealLoopPlayIcon">
+            <path fill="currentColor" d="M8 5v14l11-7z"/>
+        </svg>
+        <svg class="ethereal-loop-icon" viewBox="0 0 24 24" id="etherealLoopPauseIcon" style="display:none;">
+            <path fill="currentColor" d="M6 5h4v14H6zM14 5h4v14h-4z"/>
+        </svg>
+    </button>
 
+    <button class="ethereal-loop-btn" id="etherealLoopStop" type="button" aria-label="Detener">
+        <svg class="ethereal-loop-icon" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M6 6h12v12H6z"/>
+        </svg>
+    </button>
+
+    <audio id="etherealLoopAudio" loop preload="none">
+        <source src="assets/ethereal-loop-2026-10-26_2108.mp3" type="audio/mpeg">
+    </audio>
+</div>
+<!-- ===== FIN BARRA FIJA ETHEREAL LOOP ===== -->
+
+        
 
 
 
