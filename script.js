@@ -1080,6 +1080,88 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== BARRA FIJA ETHEREAL LOOP ===== */
+(function () {
+    const audio     = document.getElementById('etherealLoopAudio');
+    const toggle    = document.getElementById('etherealLoopToggle');
+    const stopBtn   = document.getElementById('etherealLoopStop');
+    const playIcon  = document.getElementById('etherealLoopPlayIcon');
+    const pauseIcon = document.getElementById('etherealLoopPauseIcon');
+
+    // Si no existe la barra en esta página, no hacemos nada
+    if (!audio || !toggle || !stopBtn) return;
+
+    // Volumen inicial (0.0 a 1.0) — ajústalo a tu gusto
+    audio.volume = 0.5;
+
+    // Play / Pause
+    toggle.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play().catch(err => console.warn('No se pudo reproducir:', err));
+        } else {
+            audio.pause();
+        }
+    });
+
+    // Stop (pausa y vuelve al inicio)
+    stopBtn.addEventListener('click', () => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+
+    // Cambiar icono según el estado
+    audio.addEventListener('play',  () => {
+        playIcon.style.display  = 'none';
+        pauseIcon.style.display = 'block';
+    });
+
+    audio.addEventListener('pause', () => {
+        playIcon.style.display  = 'block';
+        pauseIcon.style.display = 'none';
+    });
+
+    audio.addEventListener('ended', () => {
+        playIcon.style.display  = 'block';
+        pauseIcon.style.display = 'none';
+    });
+})();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN TERMS AND CONDITIONS - PC
 ====================================== */
