@@ -16693,6 +16693,84 @@ body.is-section .logo {
 
 
 
+/* ===== BARRA FIJA ETHEREAL LOOP ===== */
+.ethereal-loop-bar {
+    position: fixed;
+    right: 20px;              /* separación del borde derecho */
+    bottom: 20px;             /* separación del borde inferior */
+    z-index: 9999;            /* por encima de todo, incluido el footer */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 999px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    transition: opacity 0.3s ease;
+}
+
+.ethereal-loop-title {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.ethereal-loop-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.ethereal-loop-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.08);
+}
+
+.ethereal-loop-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* En móvil, que no estorbe: más pequeña y pegada */
+@media (max-width: 600px) {
+    .ethereal-loop-bar {
+        right: 10px;
+        bottom: 10px;
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    .ethereal-loop-title {
+        display: none; /* opcional: oculta el texto en pantallas muy pequeñas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
