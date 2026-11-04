@@ -13494,7 +13494,7 @@ body.is-section .logo {
 .store-text {
     display: block;
     font-family: 'Micro 5 Charted', sans-serif;
-    font-size: 7rem;
+    font-size: 10rem;
     font-weight: 400;
     color: #00FF00 !important;
     text-decoration: none;
@@ -13559,9 +13559,9 @@ body.is-section .logo {
     .store-text-mobile {
         display: block;
         font-family: 'Micro 5 Charted', sans-serif;
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 400;
-        color: #ffffff !important;
+        color: #00FF00 !important;
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
@@ -13571,7 +13571,7 @@ body.is-section .logo {
         white-space: nowrap;
         overflow: hidden;
         width: 100%;
-        border-right: 3px solid #ffffff;
+        border-right: 3px solid #00FF00;
         clip-path: inset(0 100% 0 0);
         animation:
             store-typing-mobile 3s steps(18, end) forwards,
@@ -13582,7 +13582,7 @@ body.is-section .logo {
         to   { clip-path: inset(0 0 0 0); }
     }
     @keyframes store-cursor-mobile {
-        0%, 50%   { border-right-color: #ffffff; }
+        0%, 50%   { border-right-color: #00FF00; }
         51%, 100% { border-right-color: transparent; }
     }
     /* CONTROL */
