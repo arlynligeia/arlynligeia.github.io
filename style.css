@@ -13488,13 +13488,14 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
+    overflow: hidden;
 }
 /* TEXTO */
 .store-text {
     display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3rem;
-    font-weight: bold;
+    font-family: 'Micro 5 Charted', sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
     color: #ffffff !important;
     text-decoration: none;
     text-transform: uppercase;
@@ -13502,10 +13503,26 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0px;
     padding: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid #ffffff;
+    width: 0;
+    animation:
+        store-typing 3s steps(18, end) forwards,
+        store-cursor 0.7s step-end infinite;
+}
+@keyframes store-typing {
+    from { width: 0; }
+    to   { width: 100%; }
+}
+@keyframes store-cursor {
+    0%, 50%   { border-right-color: #ffffff; }
+    51%, 100% { border-right-color: transparent; }
 }
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
+
 /* ======================================
    STORE - MOBILE
 ====================================== */
@@ -13529,13 +13546,14 @@ body.is-section .logo {
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
+        overflow: hidden;
     }
     /* TEXTO */
     .store-text-mobile {
         display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1.8rem;
-        font-weight: bold;
+        font-family: 'Micro 5 Charted', sans-serif;
+        font-size: 2.5rem;
+        font-weight: 400;
         color: #ffffff !important;
         text-decoration: none;
         text-transform: uppercase;
@@ -13543,11 +13561,32 @@ body.is-section .logo {
         line-height: 1.5;
         margin: 0px;
         padding: 0px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid #ffffff;
+        width: 0;
+        animation:
+            store-typing-mobile 3s steps(18, end) forwards,
+            store-cursor-mobile 0.7s step-end infinite;
+    }
+    @keyframes store-typing-mobile {
+        from { width: 0; }
+        to   { width: 100%; }
+    }
+    @keyframes store-cursor-mobile {
+        0%, 50%   { border-right-color: #ffffff; }
+        51%, 100% { border-right-color: transparent; }
     }
     /* CONTROL */
     .store-container { display: none; }
     .store-container-mobile { display: block; }
 }
+
+
+
+
+
+
 
 
 /* ======================================
@@ -13632,6 +13671,9 @@ body.is-section .logo {
     .store2-container { display: none; }
     .store2-container-mobile { display: block; }
 }
+
+
+
 
 /* ======================================
    STORES - PC
