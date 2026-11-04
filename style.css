@@ -13493,6 +13493,8 @@ body.is-section .logo {
 /* TEXTO */
 .store-text {
     display: block;
+    width: 100%;
+    border-right: 4px solid #00FF00;
     font-family: 'Micro 5 Charted', sans-serif;
     font-size: 10rem;
     font-weight: 400;
@@ -13504,11 +13506,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
     white-space: nowrap;
-    overflow: hidden;
-    /* El ancho ya NO se anima: queda fijo */
-    width: 100%;
-    /* Cursor parpadeante como borde derecho del bloque de texto */
-    border-right: 4px solid #00FF00;
+    overflow: hidden;  
     /* Revelado del texto por recorte, no por ancho */
     clip-path: inset(0 100% 0 0);
     animation:
@@ -13526,10 +13524,6 @@ body.is-section .logo {
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
-
-
-
-
 /* ======================================
    STORE - MOBILE
 ====================================== */
@@ -13558,6 +13552,8 @@ body.is-section .logo {
     /* TEXTO */
     .store-text-mobile {
         display: block;
+        width: 100%;
+        border-right: 3px solid #00FF00;
         font-family: 'Micro 5 Charted', sans-serif;
         font-size: 7rem;
         font-weight: 400;
@@ -13565,13 +13561,11 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
-        line-height: 0.5;
-        margin: 0px;
+        line-height: 1.5;
+        margin: 0px 0px 10px 0px;
         padding: 0px;
         white-space: nowrap;
-        overflow: hidden;
-        width: 100%;
-        border-right: 3px solid #00FF00;
+        overflow: hidden;       
         clip-path: inset(0 100% 0 0);
         animation:
             store-typing-mobile 3s steps(18, end) forwards,
@@ -13589,6 +13583,10 @@ body.is-section .logo {
     .store-container { display: none; }
     .store-container-mobile { display: block; }
 }
+
+
+
+
 
 
 
@@ -13626,7 +13624,7 @@ body.is-section .logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ffffff !important;
+    color:#00FF00 !important;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -13637,6 +13635,12 @@ body.is-section .logo {
 /* CONTROL */
 .store2-container { display: block; }
 .store2-container-mobile { display: none; }
+
+
+
+
+
+
 /* ======================================
    STORE2 - FILM - MUSIC - FASHION - ART - TECHNOLOGY - MOBILE
 ====================================== */
