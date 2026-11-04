@@ -13476,7 +13476,7 @@ body.is-section .logo {
     background: transparent !important;
     border: none;
     border-radius: 0px;
-    margin: 100px auto 30px auto;
+    margin: 50px auto 30px auto;
     padding: 0px;
 }
 /* INFORMACIÓN */
@@ -13569,6 +13569,9 @@ body.is-section .logo {
             store-typing-mobile 3s steps(18, end) forwards,
             store-cursor-mobile 0.7s step-end infinite;
     }
+  .store-text-mobile {
+      margin-bottom: 0px;
+   }  
     @keyframes store-typing-mobile {
         from { clip-path: inset(0 100% 0 0); }
         to   { clip-path: inset(0 0 0 0); }
@@ -13677,7 +13680,7 @@ body.is-section .logo {
     background: transparent !important;
     border: none;
     border-radius: 0px;
-    margin: 50px auto 50px auto;
+    margin: 0px auto 50px auto;
     padding: 0px;
 }
 .stores-icons {
@@ -13710,8 +13713,8 @@ body.is-section .logo {
     transition: background 0.15s ease, border-color 0.15s ease;
 }
 .stores-icon:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #ffffff;
+    background: rgba(0, 255, 255, 0.15);
+    border-color: #00FFFF;
 }
 .stores-link {
     display: block;
@@ -13732,7 +13735,7 @@ body.is-section .logo {
     position: relative;
     width: 64px;
     height: 48px;
-    background: #8a55f0;
+    background: #00B8B8;
     clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
     transition: filter 0.15s ease;
 }
@@ -13740,7 +13743,7 @@ body.is-section .logo {
     content: "";
     position: absolute;
     inset: 0;
-    background: #b388ff;
+    background: #00FFFF;
     clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
 }
 .stores-folder::after {
@@ -13751,9 +13754,9 @@ body.is-section .logo {
     width: 60px;
     height: 32px;
     box-sizing: border-box;
-    background: #e6ccff;
-    border-top: 2px solid #8a55f0;
-    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
+    background: #A8FFFF;
+    border-top: 2px solid #00B8B8;
+    box-shadow: inset 2px 2px 0 #FFFFFF, inset -2px -2px 0 #7FFFD4;
 }
 .stores-link:hover .stores-folder {
     filter: brightness(1.2);
@@ -13763,7 +13766,7 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.8rem;
-    color: #ffffff !important;
+    color: #00FFFF !important;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -13775,6 +13778,12 @@ body.is-section .logo {
 /* CONTROL */
 .stores-container { display: block; }
 .stores-container-mobile { display: none; }
+
+
+
+
+
+
 /* ======================================
    STORES - MOBILE
 ====================================== */
@@ -13786,7 +13795,7 @@ body.is-section .logo {
         background: transparent !important;
         border: none;
         border-radius: 0px;
-        margin: 80px auto 40px auto;
+        margin: 0px auto 40px auto;
         padding: 0px;
     }
     .stores-icons-mobile {
@@ -13884,6 +13893,16 @@ body.is-section .logo {
     .stores-container { display: none; }
     .stores-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
