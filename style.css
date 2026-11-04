@@ -13494,9 +13494,9 @@ body.is-section .logo {
 .store-text {
     display: block;
     font-family: 'Micro 5 Charted', sans-serif;
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 400;
-    color: #ffffff !important;
+    color: #00FF00 !important;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -13505,23 +13505,30 @@ body.is-section .logo {
     padding: 0px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 4px solid #ffffff;
-    width: 0;
+    /* El ancho ya NO se anima: queda fijo */
+    width: 100%;
+    /* Cursor parpadeante como borde derecho del bloque de texto */
+    border-right: 4px solid #00FF00;
+    /* Revelado del texto por recorte, no por ancho */
+    clip-path: inset(0 100% 0 0);
     animation:
         store-typing 3s steps(18, end) forwards,
         store-cursor 0.7s step-end infinite;
 }
 @keyframes store-typing {
-    from { width: 0; }
-    to   { width: 100%; }
+    from { clip-path: inset(0 100% 0 0); }
+    to   { clip-path: inset(0 0 0 0); }
 }
 @keyframes store-cursor {
-    0%, 50%   { border-right-color: #ffffff; }
+    0%, 50%   { border-right-color: #00FF00; }
     51%, 100% { border-right-color: transparent; }
 }
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
+
+
+
 
 /* ======================================
    STORE - MOBILE
@@ -13563,15 +13570,16 @@ body.is-section .logo {
         padding: 0px;
         white-space: nowrap;
         overflow: hidden;
+        width: 100%;
         border-right: 3px solid #ffffff;
-        width: 0;
+        clip-path: inset(0 100% 0 0);
         animation:
             store-typing-mobile 3s steps(18, end) forwards,
             store-cursor-mobile 0.7s step-end infinite;
     }
     @keyframes store-typing-mobile {
-        from { width: 0; }
-        to   { width: 100%; }
+        from { clip-path: inset(0 100% 0 0); }
+        to   { clip-path: inset(0 0 0 0); }
     }
     @keyframes store-cursor-mobile {
         0%, 50%   { border-right-color: #ffffff; }
