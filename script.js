@@ -992,15 +992,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
 /* ======================================
    CONTACT PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
 
     /* ---------- FORMULARIO: MOSTRAR/OCULTAR TOPIC ---------- */
-    const type    = document.getElementById('contact-type');
-    const wrapper = document.getElementById('contact-wrapper');
-    const topic   = document.getElementById('contact-topic');
+    const type    = document.getElementById('contact-type');    // <select id="contact-type">
+    const wrapper = document.getElementById('contact-wrapper'); // <div id="contact-wrapper" class="contact-topic">
+    const topic   = document.getElementById('contact-topic');   // <select id="contact-topic">
 
     if (type && wrapper && topic) {
         type.addEventListener('change', function () {
@@ -1018,9 +1019,53 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     /* ---------- NOTIFICACIÓN CONTACT - PC ---------- */
-    const closeBtn        = document.getElementById('button-contact-close');
-    const notification    = document.getElementById('notification-contact');
-    const notificationBtn = document.getElementById('button-contact-stay');
+    const closeBtn        = document.getElementById('button-contact-close');    // <div id="button-contact-close">
+    const notification    = document.getElementById('notification-contact');    // <div id="notification-contact">
+    const notificationBtn = document.getElementById('button-contact-stay');     // <div id="button-contact-stay">
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+
+});
+
+/* ======================================
+   CONTACT MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+
+    /* ---------- FORMULARIO: MOSTRAR/OCULTAR TOPIC ---------- */
+    const type    = document.getElementById('contact-type-mobile');    // <select id="contact-type-mobile">
+    const wrapper = document.getElementById('contact-wrapper-mobile'); // <div id="contact-wrapper-mobile" class="contact-topic-mobile">
+    const topic   = document.getElementById('contact-topic-mobile');   // <select id="contact-topic-mobile">
+
+    if (type && wrapper && topic) {
+        type.addEventListener('change', function () {
+            if (this.value === 'work') {
+                wrapper.classList.add('is-visible');
+                topic.setAttribute('required', 'required');
+                topic.removeAttribute('disabled');
+            } else {
+                wrapper.classList.remove('is-visible');
+                topic.removeAttribute('required');
+                topic.value = '';
+                topic.setAttribute('disabled', 'disabled');
+            }
+        });
+    }
+
+    /* ---------- NOTIFICACIÓN CONTACT - MOBILE ---------- */
+    const closeBtn        = document.getElementById('button-contact-close-mobile'); // <div id="button-contact-close-mobile">
+    const notification    = document.getElementById('notification-contact-mobile'); // <div id="notification-contact-mobile">
+    const notificationBtn = document.getElementById('button-contact-stay-mobile');  // <div id="button-contact-stay-mobile">
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -1041,29 +1086,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-/* ======================================
-   CONTACT MOBILE
-====================================== */
-(function () {
-    const type = document.getElementById('contact-type-mobile');
-    const wrapper = document.getElementById('contact-wrapper-mobile');
-    const topic = document.getElementById('contact-topic-mobile');
-
-    if (type && wrapper && topic) {
-        type.addEventListener('change', function () {
-            if (this.value === 'work') {
-                wrapper.classList.add('is-visible');
-                topic.setAttribute('required', 'required');
-                topic.removeAttribute('disabled');
-            } else {
-                wrapper.classList.remove('is-visible');
-                topic.removeAttribute('required');
-                topic.value = '';
-                topic.setAttribute('disabled', 'disabled');
-            }
-        });
-    }
-})();
 
 
 
