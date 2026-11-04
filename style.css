@@ -13455,6 +13455,429 @@ body.is-section .logo {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ======================================
+   STORE - PC
+====================================== */
+.store-container {
+    position: relative;
+    width: 800px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+}
+/* INFORMACIÓN */
+.store-information {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* TEXTO */
+.store-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.store-container { display: block; }
+.store-container-mobile { display: none; }
+/* ======================================
+   STORE - MOBILE
+====================================== */
+@media (max-width: 768px) {
+    .store-container-mobile {
+        position: relative;
+        width: 90%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 80px auto 40px auto;
+        padding: 0px;
+    }
+    /* INFORMACIÓN */
+    .store-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* TEXTO */
+    .store-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #ffffff !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* CONTROL */
+    .store-container { display: none; }
+    .store-container-mobile { display: block; }
+}
+
+
+/* ======================================
+   STORE2 - FILM - MUSIC - FASHION - ART - TECHNOLOGY - PC
+====================================== */
+.store2-container {
+    position: relative;
+    width: 800px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+}
+/* INFORMACIÓN */
+.store2-information {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* TEXTO */
+.store2-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.store2-container { display: block; }
+.store2-container-mobile { display: none; }
+/* ======================================
+   STORE2 - FILM - MUSIC - FASHION - ART - TECHNOLOGY - MOBILE
+====================================== */
+@media (max-width: 768px) {
+    .store2-container-mobile {
+        position: relative;
+        width: 90%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 80px auto 40px auto;
+        padding: 0px;
+    }
+    /* INFORMACIÓN */
+    .store2-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* TEXTO */
+    .store2-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #ffffff !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* CONTROL */
+    .store2-container { display: none; }
+    .store2-container-mobile { display: block; }
+}
+
+/* ======================================
+   STORES - PC
+====================================== */
+.stores-container {
+    position: relative;
+    width: 800px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+}
+.stores-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.stores-icon {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: 104px;
+    height: 104px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px dotted transparent;
+    margin: 0px;
+    padding: 0px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+.stores-icon:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+}
+.stores-link {
+    display: block;
+    background: transparent !important;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+.stores-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+/* DIBUJO DE CARPETA */
+.stores-folder {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 48px;
+    background: #8a55f0;
+    clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
+    transition: filter 0.15s ease;
+}
+.stores-folder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #b388ff;
+    clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
+}
+.stores-folder::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    width: 60px;
+    height: 32px;
+    box-sizing: border-box;
+    background: #e6ccff;
+    border-top: 2px solid #8a55f0;
+    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
+}
+.stores-link:hover .stores-folder {
+    filter: brightness(1.2);
+}
+/* TEXTO */
+.stores-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: #ffffff !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.stores-container { display: block; }
+.stores-container-mobile { display: none; }
+/* ======================================
+   STORES - MOBILE
+====================================== */
+@media (max-width: 768px) {
+    .stores-container-mobile {
+        position: relative;
+        width: 90%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 80px auto 40px auto;
+        padding: 0px;
+    }
+    .stores-icons-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 5px;
+        background: transparent !important;
+        margin: 0px;
+        padding: 0px;
+    }
+    .stores-icon-mobile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80px;
+        height: 80px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border: 1px dotted transparent;
+        margin: 0px;
+        padding: 0px;
+        transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .stores-icon-mobile:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border-color: #ffffff;
+    }
+    .stores-link-mobile {
+        display: block;
+        background: transparent !important;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .stores-link-mobile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer;
+    }
+    .stores-folder-mobile {
+        display: block;
+        position: relative;
+        width: 64px;
+        height: 48px;
+        background: #8a55f0;
+        margin: -6px -8px;
+        clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
+        transform: scale(0.75);
+        transition: filter 0.15s ease;
+    }
+    .stores-folder-mobile::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #b388ff;
+        clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
+    }
+    .stores-folder-mobile::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 2px;
+        width: 60px;
+        height: 32px;
+        box-sizing: border-box;
+        background: #e6ccff;
+        border-top: 2px solid #8a55f0;
+        box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
+    }
+    .stores-link-mobile:hover .stores-folder-mobile {
+        filter: brightness(1.2);
+    }
+    .stores-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.6rem;
+        color: #ffffff !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        white-space: nowrap;
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+    }
+    /* CONTROL */
+    .stores-container { display: none; }
+    .stores-container-mobile { display: block; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    BEMYPATRON - PC
 ====================================== */
