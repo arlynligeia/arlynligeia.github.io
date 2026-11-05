@@ -13478,8 +13478,8 @@ body.is-section .logo {
     margin: 50px auto 30px auto;
     padding: 0px;
 }
-/* INFORMACIÓN */
-.store-information {
+/* TÍTULO */
+.store-title {
     width: 100%;
     box-sizing: border-box;
     background: transparent !important;
@@ -13489,9 +13489,8 @@ body.is-section .logo {
     padding: 0px;
     overflow: hidden;
 }
-/* TEXTO */
-.store-text-1,
-.store-text-2 {
+.store-title-1,
+.store-title-2 {
     font-family: 'Combo', cursive;
     font-size: 6rem;
     color: white !important;
@@ -13501,7 +13500,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-.store-text-2 {
+.store-title-2 {
     font-size: 12rem;
     font-weight: bold;
     margin-bottom: 0px;
@@ -13513,9 +13512,61 @@ body.is-section .logo {
 .store-word-store {
     color: #ff00a9 !important;
 }
+
+
+/* ===== SEPARADOR CON ESTRELLA ===== */
+.al-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.6vw, 22px);
+    width: min(100%, 1200px);
+    margin: clamp(16px, 3vw, 36px) auto;
+}
+
+/* Líneas: celeste a la izquierda, fucsia a la derecha */
+.al-divider::before,
+.al-divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+.al-divider::before {
+    background: linear-gradient(90deg, transparent, #00ffff);
+    box-shadow: 0 0 8px rgba(0, 255, 255, .6);
+}
+.al-divider::after {
+    background: linear-gradient(90deg, #ff00a9, transparent);
+    box-shadow: 0 0 8px rgba(255, 0, 169, .6);
+}
+
+/* Estrella de 4 puntas con brillo */
+.al-divider__star {
+    position: relative;
+    flex: 0 0 auto;
+    width: clamp(22px, 2.6vw, 38px);
+    height: clamp(22px, 2.6vw, 38px);
+    filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
+}
+.al-divider__star::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
+}
+
+
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
+
+
+
+
+
+
 /* ======================================
    STORE - MOBILE
 ====================================== */
@@ -13569,6 +13620,25 @@ body.is-section .logo {
     .store-container { display: none; }
     .store-container-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
