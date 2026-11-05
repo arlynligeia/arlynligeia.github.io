@@ -13787,9 +13787,7 @@ body.is-section .logo {
     padding: 0px;
 }
 
-/* ======================================
-   STORE - BARRA DE CARGA INFINITA (SEGMENTOS)
-====================================== */
+/* STORE - BARRA DE CARGA INFINITA (SEGMENTOS) */
 .store-loading {
     position: relative;
     width: 800px;
@@ -13826,21 +13824,9 @@ body.is-section .logo {
     0%   { width: 0; }
     100% { width: 100%; }
 }
-
-
-
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
-
-
-
-
-
-
-
-
-
 
 /* ======================================
    STORE - MOBILE
@@ -13868,8 +13854,8 @@ body.is-section .logo {
         overflow: hidden;
     }
     /* TEXTO */
-    .store-text-1-mobile,
-    .store-text-2-mobile {
+    .store-title-1-mobile,
+    .store-title-2-mobile {
         font-family: 'Combo', cursive;
         font-size: 4rem;
         color: white !important;
@@ -13879,7 +13865,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    .store-text-2-mobile {
+    .store-title-2-mobile {
         font-size: 8rem;
         font-weight: bold;
         margin-bottom: 0px;
@@ -13891,6 +13877,109 @@ body.is-section .logo {
     .store-word-store-mobile {
         color: #ff00a9 !important;
     }
+    /* SEPARADOR */
+    .store-divider-mobile {
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin: 0px auto 10px auto;
+        padding: 0px;
+    }
+    .store-divider-mobile::before,
+    .store-divider-mobile::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        border-radius: 2px;
+    }
+    .store-divider-mobile::before {
+        background: linear-gradient(90deg, transparent, #00ffff);
+        box-shadow: 0 0 8px rgba(0, 255, 255, .6);
+    }
+    .store-divider-mobile::after {
+        background: linear-gradient(90deg, #ff00a9, transparent);
+        box-shadow: 0 0 8px rgba(255, 0, 169, .6);
+    }
+    /* ESTRELLA */
+    .store-star-mobile {
+        position: relative;
+        flex: 0 0 auto;
+        width: 35px;
+        height: 35px;
+        filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
+    }
+    .store-star-mobile::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #fff;
+        clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
+    }
+    /* INFORMACIÓN */
+    .store-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 0px 0px 20px 0px;
+        padding: 0px;
+    }
+    .store-text-mobile {
+        width: 100%;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #00FF00 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* STORE - BARRA DE CARGA INFINITA (SEGMENTOS) */
+    .store-loading-mobile {
+        position: relative;
+        width: 800px;
+        max-width: 100%;
+        height: 18px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 2px solid #00FF00;
+        border-radius: 0px;
+        margin: 0px auto 20px auto;
+        padding: 2px;
+        overflow: hidden;
+    }
+
+    .store-loading-bar-mobile {
+        position: absolute;
+        top: 2px;
+        left: 0;
+        width: 0;
+        height: calc(100% - 4px);
+        background-image: repeating-linear-gradient(
+            90deg,
+            #00FF00 0px,
+            #00FF00 8px,
+            transparent 8px,
+            transparent 12px
+        );
+        background-repeat: repeat;
+        background-size: 12px 100%;
+        animation: store-loading-fill 2s linear infinite;
+    }
+
+    @keyframes store-loading-fill {
+        0%   { width: 0; }
+        100% { width: 100%; }
+    }
+ 
     /* CONTROL */
     .store-container { display: none; }
     .store-container-mobile { display: block; }
@@ -14031,14 +14120,6 @@ body.is-section .logo {
 /* CONTROL */
 .stores-container { display: block; }
 .stores-container-mobile { display: none; }
-
-
-
-
-
-
-
-
 
 /* ======================================
    STORES - MOBILE
