@@ -371,6 +371,219 @@ body.is-section .logo {
 
 
 
+/* ===== MARCO FIJO DE CUADRADOS GLITCH — arlynligeia.com ===== */
+
+.al-frame {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;   /* no bloquea clics */
+  z-index: 9999;          /* siempre encima del contenido */
+}
+
+.al-frame__block {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  image-rendering: pixelated;
+}
+
+/* Arriba: columnas verticales fucsia + celeste */
+.al-frame__block--tl {
+  top: 0; left: 0;
+  box-shadow:
+    0px 0px 0 #ff00a9,
+    24px 0px 0 #00ffff,
+    0px 24px 0 #00ffff,
+    24px 24px 0 #ff00a9,
+    0px 48px 0 #ff00a9,
+    24px 72px 0 #00ffff,
+    48px 72px 0 #ff00a9,
+    0px 96px 0 #00ffff,
+    24px 96px 0 #ff00a9,
+    0px 120px 0 #ff00a9,
+    24px 120px 0 #00ffff,
+    24px 144px 0 #ff00a9,
+    0px 168px 0 #00ffff,
+    0px 192px 0 #ff00a9,
+    24px 192px 0 #00ffff,
+    0px 216px 0 #00ffff;
+  filter: drop-shadow(0 0 4px rgba(255,0,169,.55)) drop-shadow(0 0 4px rgba(0,255,255,.45));
+}
+.al-frame__block--tr {
+  top: 0; right: 0;
+  box-shadow:
+    0px 0px 0 #ff00a9,
+    -24px 0px 0 #00ffff,
+    0px 24px 0 #00ffff,
+    -24px 24px 0 #ff00a9,
+    0px 48px 0 #ff00a9,
+    -24px 72px 0 #00ffff,
+    -48px 72px 0 #ff00a9,
+    0px 96px 0 #00ffff,
+    -24px 96px 0 #ff00a9,
+    0px 120px 0 #ff00a9,
+    -24px 120px 0 #00ffff,
+    -24px 144px 0 #ff00a9,
+    0px 168px 0 #00ffff,
+    0px 192px 0 #ff00a9,
+    -24px 192px 0 #00ffff,
+    0px 216px 0 #00ffff;
+  filter: drop-shadow(0 0 4px rgba(255,0,169,.55)) drop-shadow(0 0 4px rgba(0,255,255,.45));
+}
+
+/* Abajo: filas horizontales verde + celeste */
+.al-frame__block--bl {
+  bottom: 0; left: 0;
+  box-shadow:
+    0px 0px 0 #00ff00,
+    24px 0px 0 #00ffff,
+    72px 0px 0 #00ffff,
+    96px 0px 0 #00ff00,
+    144px 0px 0 #00ffff,
+    192px 0px 0 #00ff00,
+    0px -24px 0 #00ffff,
+    24px -24px 0 #00ff00,
+    72px -24px 0 #00ff00,
+    96px -24px 0 #00ffff,
+    144px -24px 0 #00ff00,
+    192px -24px 0 #00ffff,
+    0px -48px 0 #00ff00,
+    48px -48px 0 #00ffff,
+    120px -48px 0 #00ff00,
+    216px -48px 0 #00ffff;
+  filter: drop-shadow(0 0 4px rgba(0,255,0,.55)) drop-shadow(0 0 4px rgba(0,255,255,.45));
+}
+.al-frame__block--br {
+  bottom: 0; right: 0;
+  box-shadow:
+    0px 0px 0 #00ff00,
+    -24px 0px 0 #00ffff,
+    -72px 0px 0 #00ffff,
+    -96px 0px 0 #00ff00,
+    -144px 0px 0 #00ffff,
+    -192px 0px 0 #00ff00,
+    0px -24px 0 #00ffff,
+    -24px -24px 0 #00ff00,
+    -72px -24px 0 #00ff00,
+    -96px -24px 0 #00ffff,
+    -144px -24px 0 #00ff00,
+    -192px -24px 0 #00ffff,
+    0px -48px 0 #00ff00,
+    -48px -48px 0 #00ffff,
+    -120px -48px 0 #00ff00,
+    -216px -48px 0 #00ffff;
+  filter: drop-shadow(0 0 4px rgba(0,255,0,.55)) drop-shadow(0 0 4px rgba(0,255,255,.45));
+}
+
+/* Móvil: un poco más pequeños */
+@media (max-width: 600px) {
+  .al-frame__block {
+    width: 9px;
+    height: 9px;
+  }
+  .al-frame__block--tl {
+    box-shadow:
+      0px 0px 0 #ff00a9,
+      9px 0px 0 #00ffff,
+      0px 9px 0 #00ffff,
+      9px 9px 0 #ff00a9,
+      0px 18px 0 #ff00a9,
+      9px 27px 0 #00ffff,
+      18px 27px 0 #ff00a9,
+      0px 36px 0 #00ffff,
+      9px 36px 0 #ff00a9,
+      0px 45px 0 #ff00a9,
+      9px 45px 0 #00ffff,
+      9px 54px 0 #ff00a9,
+      0px 63px 0 #00ffff,
+      0px 72px 0 #ff00a9,
+      9px 72px 0 #00ffff,
+      0px 81px 0 #00ffff;
+  }
+  .al-frame__block--tr {
+    box-shadow:
+      0px 0px 0 #ff00a9,
+      -9px 0px 0 #00ffff,
+      0px 9px 0 #00ffff,
+      -9px 9px 0 #ff00a9,
+      0px 18px 0 #ff00a9,
+      -9px 27px 0 #00ffff,
+      -18px 27px 0 #ff00a9,
+      0px 36px 0 #00ffff,
+      -9px 36px 0 #ff00a9,
+      0px 45px 0 #ff00a9,
+      -9px 45px 0 #00ffff,
+      -9px 54px 0 #ff00a9,
+      0px 63px 0 #00ffff,
+      0px 72px 0 #ff00a9,
+      -9px 72px 0 #00ffff,
+      0px 81px 0 #00ffff;
+  }
+  .al-frame__block--bl {
+    box-shadow:
+      0px 0px 0 #00ff00,
+      9px 0px 0 #00ffff,
+      27px 0px 0 #00ffff,
+      36px 0px 0 #00ff00,
+      54px 0px 0 #00ffff,
+      72px 0px 0 #00ff00,
+      0px -9px 0 #00ffff,
+      9px -9px 0 #00ff00,
+      27px -9px 0 #00ff00,
+      36px -9px 0 #00ffff,
+      54px -9px 0 #00ff00,
+      72px -9px 0 #00ffff,
+      0px -18px 0 #00ff00,
+      18px -18px 0 #00ffff,
+      45px -18px 0 #00ff00,
+      81px -18px 0 #00ffff;
+  }
+  .al-frame__block--br {
+    box-shadow:
+      0px 0px 0 #00ff00,
+      -9px 0px 0 #00ffff,
+      -27px 0px 0 #00ffff,
+      -36px 0px 0 #00ff00,
+      -54px 0px 0 #00ffff,
+      -72px 0px 0 #00ff00,
+      0px -9px 0 #00ffff,
+      -9px -9px 0 #00ff00,
+      -27px -9px 0 #00ff00,
+      -36px -9px 0 #00ffff,
+      -54px -9px 0 #00ff00,
+      -72px -9px 0 #00ffff,
+      0px -18px 0 #00ff00,
+      -18px -18px 0 #00ffff,
+      -45px -18px 0 #00ff00,
+      -81px -18px 0 #00ffff;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ======================================
    HOME - PC
