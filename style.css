@@ -13505,57 +13505,48 @@ body.is-section .logo {
     font-weight: bold;
     margin-bottom: 0px;
 }
-/* PALABRAS CON COLOR */
 .store-word-the {
     color: #00FFFF !important;
 }
 .store-word-store {
     color: #ff00a9 !important;
 }
-
-
-
-/* ======================================
-   SEPARADOR CON ESTRELLA
-====================================== */
-.al-divider {
+/* SEPARADOR */
+.store-divider {
     display: flex;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;    
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 15px; 
     margin: 0px auto 20px auto;
     padding: 0px;
 }
-
-/* LÍNEAS: celeste a la izquierda, fucsia a la derecha */
-.al-divider::before,
-.al-divider::after {
+.store-divider::before,
+.store-divider::after {
     content: "";
     flex: 1;
-    height: 2px;                 /* GROSOR de la línea */
+    height: 2px;
     border-radius: 2px;
 }
-.al-divider::before {
+.store-divider::before {
     background: linear-gradient(90deg, transparent, #00ffff);
     box-shadow: 0 0 8px rgba(0, 255, 255, .6);
 }
-.al-divider::after {
+.store-divider::after {
     background: linear-gradient(90deg, #ff00a9, transparent);
     box-shadow: 0 0 8px rgba(255, 0, 169, .6);
 }
-
 /* ESTRELLA */
-.al-divider__star {
+.store-star {
     position: relative;
     flex: 0 0 auto;
-    width: 32px;                 /* TAMAÑO de la estrella */
-    height: 32px;                /* TAMAÑO de la estrella */
+    width: 35px;
+    height: 35px;
     filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
 }
-.al-divider__star::before {
+.store-star::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -13563,10 +13554,34 @@ body.is-section .logo {
     clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
 }
 
+/* INFORMACIÓN */
+.store2-information {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.store2-text {
+    width: 100%;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00FF00 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
 
 /* CONTROL */
 .store-container { display: block; }
 .store-container-mobile { display: none; }
+
+
 
 
 
@@ -13646,119 +13661,6 @@ body.is-section .logo {
 
 
 
-
-/* ======================================
-   STORE2 - FILM - MUSIC - FASHION - ART - TECHNOLOGY - PC
-====================================== */
-.store2-container {
-    position: relative;
-    width: 800px;
-    box-sizing: border-box;
-    background: transparent !important;
-    border: none;
-    border-radius: 0px;
-    margin: 0px auto 30px auto;
-    padding: 0px;
-}
-
-/* INFORMACIÓN */
-.store2-information {
-    width: 100%;
-    box-sizing: border-box;
-    background: transparent !important;
-    border: none;
-    border-radius: 0px;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-}
-
-/* TEXTO */
-.store2-text {
-    display: block;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #00FF00 !important;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid #00FF00;
-    /* El ancho queda fijo: NO se anima */
-    width: 100%;
-    /* Se revela el texto recortándolo, sin mover el layout */
-    clip-path: inset(0 100% 0 0);
-    animation:
-        store2-typing 4s steps(30, end) infinite,
-        store2-cursor 0.7s step-end infinite;
-}
-
-@keyframes store2-typing {
-    0%   { clip-path: inset(0 100% 0 0); }
-    50%  { clip-path: inset(0 0 0 0); }
-    90%  { clip-path: inset(0 0 0 0); }
-    100% { clip-path: inset(0 100% 0 0); }
-}
-
-@keyframes store2-cursor {
-    0%, 50%   { border-right-color: #00FF00; }
-    51%, 100% { border-right-color: transparent; }
-}
-
-/* CONTROL */
-.store2-container { display: block; }
-.store2-container-mobile { display: none; }
-
-
-
-
-
-/* ======================================
-   STORE2 - FILM - MUSIC - FASHION - ART - TECHNOLOGY - MOBILE
-====================================== */
-@media (max-width: 768px) {
-    .store2-container-mobile {
-        position: relative;
-        width: 90%;
-        box-sizing: border-box;
-        background: transparent !important;
-        border: none;
-        border-radius: 0px;
-        margin: 0px auto 20px auto;
-        padding: 0px;
-    }
-    /* INFORMACIÓN */
-    .store2-information-mobile {
-        width: 100%;
-        box-sizing: border-box;
-        background: transparent !important;
-        border: none;
-        border-radius: 0px;
-        margin: 0px;
-        padding: 0px;
-    }
-    /* TEXTO */
-    .store2-text-mobile {
-        display: block;
-        font-family: 'Orbitron', sans-serif;
-        font-size: 1rem;
-        font-weight: bold;
-        color: #00FF00 !important;
-        text-decoration: none;
-        text-transform: uppercase;
-        text-align: center;
-        line-height: 1.5;
-        margin: 0px;
-        padding: 0px;
-    }
-    /* CONTROL */
-    .store2-container { display: none; }
-    .store2-container-mobile { display: block; }
-}
 
 
 
@@ -13875,6 +13777,8 @@ body.is-section .logo {
 /* CONTROL */
 .stores-container { display: block; }
 .stores-container-mobile { display: none; }
+
+
 
 
 
