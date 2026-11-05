@@ -13584,6 +13584,7 @@ body.is-section .logo {
     margin: 0px auto 30px auto;
     padding: 0px;
 }
+
 /* INFORMACIÓN */
 .store2-information {
     width: 100%;
@@ -13595,10 +13596,11 @@ body.is-section .logo {
     padding: 0px;
     overflow: hidden;
 }
+
 /* TEXTO */
 .store2-text {
-    display: inline-block;
-    font-family: 'Micro 5 Charted', sans-serif;
+    display: block;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: #00FF00 !important;
@@ -13610,17 +13612,22 @@ body.is-section .logo {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid #00FF00;
-    width: 0;
+    /* El ancho queda fijo: NO se anima */
+    width: 100%;
+    /* Se revela el texto recortándolo, sin mover el layout */
+    clip-path: inset(0 100% 0 0);
     animation:
         store2-typing 4s steps(30, end) infinite,
         store2-cursor 0.7s step-end infinite;
 }
+
 @keyframes store2-typing {
-    0%   { width: 0; }
-    50%  { width: 100%; }
-    90%  { width: 100%; }
-    100% { width: 0; }
+    0%   { clip-path: inset(0 100% 0 0); }
+    50%  { clip-path: inset(0 0 0 0); }
+    90%  { clip-path: inset(0 0 0 0); }
+    100% { clip-path: inset(0 100% 0 0); }
 }
+
 @keyframes store2-cursor {
     0%, 50%   { border-right-color: #00FF00; }
     51%, 100% { border-right-color: transparent; }
@@ -13629,7 +13636,6 @@ body.is-section .logo {
 /* CONTROL */
 .store2-container { display: block; }
 .store2-container-mobile { display: none; }
-
 
 
 
