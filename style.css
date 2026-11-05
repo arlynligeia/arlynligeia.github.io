@@ -13576,12 +13576,10 @@ body.is-section .logo {
     padding: 0px;
 }
 
-/* ======================================
-   STORE - BARRA DE CARGA INFINITA
-====================================== */
+/* STORE - BARRA DE CARGA INFINITA (SEGMENTOS) */
 .store-loading {
     position: relative;
-    width: 100%;
+    width: 800px;
     height: 18px;
     box-sizing: border-box;
     background: transparent !important;
@@ -13595,16 +13593,24 @@ body.is-section .logo {
 .store-loading-bar {
     position: absolute;
     top: 2px;
-    left: -40%;
-    width: 40%;
+    left: 0;
+    width: 100%;
     height: calc(100% - 4px);
-    background: #00FF00;
-    animation: store-loading-move 1.2s linear infinite;
+    background-image: repeating-linear-gradient(
+        90deg,
+        #00FF00 0px,
+        #00FF00 8px,
+        transparent 8px,
+        transparent 12px
+    );
+    background-repeat: repeat;
+    background-size: 12px 100%;
+    animation: store-loading-move 0.8s linear infinite;
 }
 
 @keyframes store-loading-move {
-    0%   { left: -40%; }
-    100% { left: 100%; }
+    0%   { background-position: 0 0; }
+    100% { background-position: 12px 0; }
 }
 
 
