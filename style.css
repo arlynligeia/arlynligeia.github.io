@@ -13520,16 +13520,13 @@ body.is-section .logo {
 ====================================== */
 .al-divider {
     display: flex;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;    
     align-items: center;
     justify-content: center;
-    box-sizing: border-box;
-    width: 100%;                 /* ANCHO: 100% = todo el contenedor */
-    max-width: 1200px;           /* ANCHO MÁXIMO */
-    gap: 15px;                   /* ESPACIO entre las líneas y la estrella */
-    margin-top: 20px;            /* MARGEN ARRIBA (separación con el título) */
-    margin-bottom: 20px;         /* MARGEN ABAJO (separación con lo que sigue) */
-    margin-left: auto;           /* deja el separador centrado */
-    margin-right: auto;          /* deja el separador centrado */
+    gap: 15px; 
+    margin: 0px auto 20px auto;
     padding: 0px;
 }
 
