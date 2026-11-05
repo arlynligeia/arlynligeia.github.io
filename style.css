@@ -1884,6 +1884,7 @@ body.is-section .logo {
 
 
 
+
 /* ======================================
    LET'S WORK TOGETHER - PC
 ====================================== */
@@ -2014,7 +2015,9 @@ body.is-section .logo {
     padding: 0px;
 }
 .letsworktogether-container-4 {
+    position: relative;          /* ← referencia para la imagen y el texto */
     width: 100%;
+    min-height: auto;           /* ← alto del bloque (ajústalo a tu gusto) */
     box-sizing: border-box;
     background: #3f00a8 !important;
     border-top:    2px solid #8a55f0;
@@ -2023,12 +2026,17 @@ body.is-section .logo {
     border-bottom: 2px solid #ffffff;
     border-radius: 0px;
     margin: 0px;
-    padding: 30px;
+    padding: 0px;
+    overflow: hidden;
 }
 
-/* IMAGEN */
+
+/* IMAGEN (fondo) */
 .letsworktogether-image {
+    position: absolute;          /* ← ocupa todo el contenedor */
+    inset: 0;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
     background: transparent !important;
     border: none;
@@ -2036,29 +2044,38 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
     overflow: hidden;
+    z-index: 1;
 }
 .letsworktogether-image img {
     display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: 100%;
+    object-fit: cover;           /* ← cubre sin deformar */
     border: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
 }
 
-/* INFORMACIÓN */
+/* INFORMACIÓN (encima de la imagen) */
 .letsworktogether-information {
+    position: relative;          /* ← encima de la imagen */
+    z-index: 2;
     width: 100%;
+    min-height: auto;           /* ← mismo alto que el contenedor */
     box-sizing: border-box;
-    margin: 0px 0px 10px 0px;
-    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    padding: 40px;               /* ← aire interno */
+    background: rgba(0, 0, 0, 0.45); /* ← capa oscura opcional para legibilidad */
 }
 /* TÍTULO */
 .letsworktogether-subtitle-1 {
     display: block;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Combo', cursive;
     font-size: 2.5rem;
     color: #2a0070 !important;
     text-decoration: none;
@@ -2090,7 +2107,6 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-
 /* BOTÓN */
 .letsworktogether-button2-1 {
     display: block;
@@ -2157,6 +2173,7 @@ body.is-section .logo {
 .letsworktogether-button2-text:hover {
     filter: brightness(1.1);
 }
+
 
 /* ======================================
    NOTIFICACIÓN - PC
@@ -2335,6 +2352,12 @@ body.is-section .logo {
 
 .letsworktogether-notification-1 { display: block; }
 .letsworktogether-notification-1-mobile { display: none; }
+
+
+
+
+
+
 
 
 
