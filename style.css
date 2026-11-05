@@ -626,8 +626,8 @@ body.is-section .logo {
     transition: background 0.15s ease, border-color 0.15s ease;
 }
 .home-icon:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #ffffff;
+    background: rgba(0, 255, 255, 0.15);
+    border-color: #00FFFF;
 }
 .home-link {
     display: block;
@@ -648,7 +648,7 @@ body.is-section .logo {
     position: relative;
     width: 64px;
     height: 48px;
-    background: #8a55f0;
+    background: #00B8B8;
     clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
     transition: filter 0.15s ease;
 }
@@ -656,7 +656,7 @@ body.is-section .logo {
     content: "";
     position: absolute;
     inset: 0;
-    background: #b388ff;
+    background: #00FFFF;
     clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
 }
 .home-folder::after {
@@ -667,9 +667,9 @@ body.is-section .logo {
     width: 60px;
     height: 32px;
     box-sizing: border-box;
-    background: #e6ccff;
-    border-top: 2px solid #8a55f0;
-    box-shadow: inset 2px 2px 0 #ffffff, inset -2px -2px 0 #b388ff;
+    background: #A8FFFF;
+    border-top: 2px solid #00B8B8;
+    box-shadow: inset 2px 2px 0 #FFFFFF, inset -2px -2px 0 #7FFFD4;
 }
 .home-link:hover .home-folder {
     filter: brightness(1.2);
@@ -679,7 +679,7 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.8rem;
-    color: #ffffff !important;
+    color: #00FFFF !important;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
@@ -800,7 +800,6 @@ body.is-section .logo {
     .home-container { display: none; }
     .home-container-mobile { display: block; }
 }
-
 
 
 
