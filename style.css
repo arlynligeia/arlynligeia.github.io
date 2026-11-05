@@ -2030,7 +2030,6 @@ body.is-section .logo {
     overflow: hidden;
 }
 
-
 /* IMAGEN (fondo) */
 .letsworktogether-image {
     position: absolute;          /* ← ocupa todo el contenedor */
@@ -2057,21 +2056,38 @@ body.is-section .logo {
     padding: 0px;
 }
 
-/* INFORMACIÓN (encima de la imagen) */
-.letsworktogether-information {
-    position: relative;          /* ← encima de la imagen */
+
+
+/* COLUMNAS (ENCIMA DE LA IMAGEN) */
+.upcomingrelease-columns {
+    position: relative;
     z-index: 2;
     width: 100%;
-    min-height: auto;           /* ← mismo alto que el contenedor */
+    min-height: auto;        /* ← mismo alto que container-4 para centrar el grid */
     box-sizing: border-box;
     display: flex;
-    flex-direction: column;
+    align-items: center;      /* centra el grid verticalmente */
     justify-content: center;
-    align-items: center;
-    margin: 0px;
-    padding: 40px;               /* ← aire interno */
-    background: rgba(0, 0, 0, 0.45); /* ← capa oscura opcional para legibilidad */
+    margin: 20px;
+    padding: 0px;
 }
+/* GRID DE 2 */
+.upcomingrelease-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* INFORMACIÓN (dentro del grid, ya encima por herencia de la columna) */
+.letsworktogether-information {
+    width: 100%;
+    min-width: 0;
+    margin: 0px;
+}
+
 /* TÍTULO */
 .letsworktogether-subtitle-1 {
     display: block;
@@ -2838,7 +2854,7 @@ body.is-section .logo {
     padding: 20px;
 }
 /* NOTIFICACIÓN - INFORMACIÓN */
-.upcomingrelease-notification-information {
+.socialmediacontent-notification-information {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
