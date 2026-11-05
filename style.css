@@ -13515,22 +13515,30 @@ body.is-section .logo {
 
 
 
-/* ===== SEPARADOR CON ESTRELLA ===== */
+/* ======================================
+   SEPARADOR CON ESTRELLA
+====================================== */
 .al-divider {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(10px, 1.6vw, 22px);
-    width: min(100%, 1200px);
-    margin: clamp(16px, 3vw, 36px) auto;
+    box-sizing: border-box;
+    width: 100%;                 /* ANCHO: 100% = todo el contenedor */
+    max-width: 1200px;           /* ANCHO MÁXIMO */
+    gap: 15px;                   /* ESPACIO entre las líneas y la estrella */
+    margin-top: 20px;            /* MARGEN ARRIBA (separación con el título) */
+    margin-bottom: 20px;         /* MARGEN ABAJO (separación con lo que sigue) */
+    margin-left: auto;           /* deja el separador centrado */
+    margin-right: auto;          /* deja el separador centrado */
+    padding: 0px;
 }
 
-/* Líneas: celeste a la izquierda, fucsia a la derecha */
+/* LÍNEAS: celeste a la izquierda, fucsia a la derecha */
 .al-divider::before,
 .al-divider::after {
     content: "";
     flex: 1;
-    height: 2px;
+    height: 2px;                 /* GROSOR de la línea */
     border-radius: 2px;
 }
 .al-divider::before {
@@ -13542,12 +13550,12 @@ body.is-section .logo {
     box-shadow: 0 0 8px rgba(255, 0, 169, .6);
 }
 
-/* Estrella de 4 puntas con brillo */
+/* ESTRELLA */
 .al-divider__star {
     position: relative;
     flex: 0 0 auto;
-    width: clamp(22px, 2.6vw, 38px);
-    height: clamp(22px, 2.6vw, 38px);
+    width: 32px;                 /* TAMAÑO de la estrella */
+    height: 32px;                /* TAMAÑO de la estrella */
     filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
 }
 .al-divider__star::before {
@@ -13557,7 +13565,6 @@ body.is-section .logo {
     background: #fff;
     clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
 }
-
 
 
 /* CONTROL */
