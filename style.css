@@ -2031,19 +2031,21 @@ body.is-section .logo {
     padding: 30px;
     overflow: hidden;
 }
-/* CONTENEDOR: COLUMNAS */
+
+/* ======================================
+   COLUMNAS 1 (GRID DE 2)
+====================================== */
 .letsworktogether-columns {
     position: relative;
     z-index: 2;
 }
-/* CONTENEDOR: GRID DE 2 */
 .letsworktogether-grid {
     display: grid;
     grid-template-columns: calc(40% - 10px) calc(60% - 10px);
     gap: 20px;
     margin: 0px 0px 20px 0px;
 }
-/* CONTENEDOR: IMAGEN */
+/* IMAGEN */
 .letsworktogether-image {
     width: 100%;
     box-sizing: border-box;
@@ -2068,7 +2070,7 @@ body.is-section .logo {
     min-width: 0;
     margin: 0px;
 }
-/* TÍTULO */
+/* TÍTULOS */
 .letsworktogether-subtitle-1 {
     display: block;
     font-family: 'Combo', cursive;
@@ -2109,7 +2111,6 @@ body.is-section .logo {
     margin: 0px 0px 10px 0px;
     padding: 0px;
 }
-
 /* BOTÓN */
 .letsworktogether-button2-1 {
     display: block;
@@ -2177,7 +2178,118 @@ body.is-section .logo {
     filter: brightness(1.1);
 }
 
+/* ======================================
+   SEPARADOR
+====================================== */
+.letsworktogether-divider {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0px auto 10px auto;
+    padding: 0px;
+}
+.letsworktogether-divider::before,
+.letsworktogether-divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+.letsworktogether-divider::before {
+    background: linear-gradient(90deg, transparent, #00ffff);
+    box-shadow: 0 0 8px rgba(0, 255, 255, .6);
+}
+.letsworktogether-divider::after {
+    background: linear-gradient(90deg, #ff00a9, transparent);
+    box-shadow: 0 0 8px rgba(255, 0, 169, .6);
+}
+/* ESTRELLA */
+.letsworktogether-star {
+    position: relative;
+    flex: 0 0 auto;
+    width: 35px;
+    height: 35px;
+    filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
+}
+.letsworktogether-star::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
+}
 
+/* ======================================
+   COLUMNAS 2 (GRID DE 3)
+====================================== */
+.letsworktogether-columns2 {
+    position: relative;
+    z-index: 2;
+}
+.letsworktogether-columns2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 0px 0px 20px 0px;
+}
+.letsworktogether-columns2-column {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0px;
+}
+.letsworktogether-columns2-image {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0px;
+}
+.letsworktogether-columns2-image img {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+}
+.letsworktogether-columns2-information {
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
+    margin: 0px;
+}
+.letsworktogether-columns2-subtitle {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
+.letsworktogether-columns2-text {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+}
 
 /* ======================================
    VENTANA (COLLABORATIONS STATS)
@@ -2337,60 +2449,11 @@ body.is-section .logo {
     margin: 0px;
     padding: 15px;
 }
-
-
-/* SEPARADOR */
-.letsworktogether-divider {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;    
-    justify-content: center;
-    align-items: center;
-    gap: 15px; 
-    margin: 0px auto 10px auto;
-    padding: 0px;
-}
-.letsworktogether-divider::before,
-.letsworktogether-divider::after {
-    content: "";
-    flex: 1;
-    height: 2px;
-    border-radius: 2px;
-}
-.letsworktogether-divider::before {
-    background: linear-gradient(90deg, transparent, #00ffff);
-    box-shadow: 0 0 8px rgba(0, 255, 255, .6);
-}
-.letsworktogether-divider::after {
-    background: linear-gradient(90deg, #ff00a9, transparent);
-    box-shadow: 0 0 8px rgba(255, 0, 169, .6);
-}
-/* ESTRELLA */
-.letsworktogether-star {
-    position: relative;
-    flex: 0 0 auto;
-    width: 35px;
-    height: 35px;
-    filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
-}
-.letsworktogether-star::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: #fff;
-    clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
-}
-
-
-
-
 /* COLUMNAS VENTANA */
 .letsworktogether-window-columns {
     position: relative;
     z-index: 2;
 }
-/* GRID DE 2 (COLUMNAS 2) */
 .letsworktogether-window-grid {
     display: grid;
     grid-template-columns: calc(22% - 15px) calc(22% - 15px) calc(22% - 15px) calc(34% - 15px);
@@ -2402,7 +2465,7 @@ body.is-section .logo {
     box-sizing: border-box;
     min-width: 0;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
     border-right: 2px solid #2a0070;
     text-align: center;
     margin: 0px;
@@ -2412,8 +2475,6 @@ body.is-section .logo {
     border-right: none;
     padding-right: 0px;
 }
-
-
 /* TEXTOS VENTANA */
 .letsworktogether-window-text-1 {
     width: 100%;
@@ -2437,12 +2498,11 @@ body.is-section .logo {
     font-weight: bold;
     color: #2a0070 !important;
     text-transform: uppercase;
-    text-transform: uppercase;
     text-decoration: none;
     text-align: center;
     line-height: 1;
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
 }
 .letsworktogether-window-text-3 {
     font-family: 'Orbitron', sans-serif;
@@ -2454,7 +2514,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1;
     margin: 0px;
-    padding: 0px;   
+    padding: 0px;
 }
 .letsworktogether-window-text-4,
 .letsworktogether-window-text-5 {
@@ -2466,18 +2526,11 @@ body.is-section .logo {
     text-align: center;
     line-height: 1;
     margin: 0px;
-    padding: 0px;     
+    padding: 0px;
 }
 .letsworktogether-window-text-5 {
     color: #ff00a9 !important;
 }
-
-
-
-
-
-
-
 
 /* ======================================
    NOTIFICACIÓN - PC
@@ -2670,6 +2723,7 @@ body.is-section .logo {
 .letsworktogether-container-1-mobile { display: none; }
 .letsworktogether-notification-1 { display: block; }
 .letsworktogether-notification-1-mobile { display: none; }
+
 
 
 
