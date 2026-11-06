@@ -2038,7 +2038,7 @@ body.is-section .logo {
 /* CONTENEDOR: GRID DE 2 */
 .letsworktogether-grid {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: calc(40% - 10px) calc(60% - 10px);
     gap: 20px;
     margin: 0px;
 }
