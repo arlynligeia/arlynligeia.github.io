@@ -2339,6 +2339,52 @@ body.is-section .logo {
 }
 
 
+/* SEPARADOR */
+.letsworktogether-divider {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;    
+    justify-content: center;
+    align-items: center;
+    gap: 15px; 
+    margin: 0px auto 10px auto;
+    padding: 0px;
+}
+.letsworktogether-divider::before,
+.letsworktogether-divider::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+}
+.letsworktogether-divider::before {
+    background: linear-gradient(90deg, transparent, #00ffff);
+    box-shadow: 0 0 8px rgba(0, 255, 255, .6);
+}
+.letsworktogether-divider::after {
+    background: linear-gradient(90deg, #ff00a9, transparent);
+    box-shadow: 0 0 8px rgba(255, 0, 169, .6);
+}
+/* ESTRELLA */
+.letsworktogether-star {
+    position: relative;
+    flex: 0 0 auto;
+    width: 35px;
+    height: 35px;
+    filter: drop-shadow(0 0 6px #00ffff) drop-shadow(0 0 10px #ff00a9);
+}
+.letsworktogether-star::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    clip-path: polygon(50% 0%, 59% 41%, 100% 50%, 59% 59%, 50% 100%, 41% 59%, 0% 50%, 41% 41%);
+}
+
+
+
+
 /* COLUMNAS VENTANA */
 .letsworktogether-window-columns {
     position: relative;
