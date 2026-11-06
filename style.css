@@ -2077,7 +2077,7 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px;
 }
 .letsworktogether-subtitle-2 {
@@ -2089,7 +2089,7 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     line-height: 1;
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px;
 }
 .letsworktogether-word-lets {
@@ -2105,9 +2105,10 @@ body.is-section .logo {
     text-decoration: none;
     text-align: center;
     line-height: 1.5;
-    margin: 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px;
 }
+
 /* BOTÓN */
 .letsworktogether-button2-1 {
     display: block;
@@ -2120,7 +2121,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 20px auto 0px auto;
+    margin: 0px auto 0px auto;
     padding: 0px;
     transition: border-color 0.15s ease;
 }
@@ -2353,11 +2354,16 @@ body.is-section .logo {
     min-width: 0;
     margin: 0px;
     border-right: 2px solid #2a0070;
-    padding-right: 15px;
+    padding-right: 10px;
 }
-.letsworktogether-window-information:last-child {
+.letsworktogether-window-information:nth-child(4) {
     border-right: none;
-    padding-right: 0;
+    padding-right: 0px;
+}
+.letsworktogether-window-information:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 
@@ -2373,7 +2379,7 @@ body.is-section .logo {
     color: black !important;
     text-decoration: none;
     text-align: center;
-    line-height: 1.5;
+    line-height: 1;
     margin: 0 0 10px 0;
     padding: 0px;
 }
@@ -2382,7 +2388,7 @@ body.is-section .logo {
     font-size: 2rem;
     font-weight: bold; 
     color: #2a0070 !important;
-    text-transform: uppercase;   
+    text-transform: uppercase;
 }
 .letsworktogether-window-text-3 {
     font-family: 'Share Tech Mono', monospace;
