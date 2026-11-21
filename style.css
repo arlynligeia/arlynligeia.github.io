@@ -17595,6 +17595,7 @@ body.is-section .logo {
 /* ======================================
    CONTACT
 ====================================== */
+/* CONTENEDOR */
 .contact-container-1 {
     position: relative;
     width: 600px;
@@ -17697,6 +17698,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN CERRAR - TEXTO */
 .contact-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -17711,7 +17713,7 @@ body.is-section .logo {
 .contact-button-text:hover {
     filter: brightness(1.1);
 }
-/* CONTENIDO */
+/* CONTENEDOR */
 .contact-container-3 {
     width: 100%;
     box-sizing: border-box;
@@ -17805,10 +17807,10 @@ body.is-section .logo {
 }
 /* CASILLA TOPIC */
 .contact-topic {
+    display: none !important;
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
-    display: none !important;
 }
 .contact-topic.is-visible {
     display: block !important;
@@ -17856,6 +17858,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTONES TIKTOK / YOUTUBE - TEXTO */
 .contact-button2-text {
     display: block;
     width: auto;
@@ -17871,7 +17874,7 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
-    margin: 0;
+    margin: 0px;
     padding: 10px 20px;
     cursor: pointer;
     transition: filter 0.15s ease;
@@ -17879,9 +17882,7 @@ body.is-section .logo {
 .contact-button2-text:hover {
     filter: brightness(1.1);
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .contact-notification-1 {
     position: fixed;
     top: 50%;
@@ -17950,7 +17951,7 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .contact-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -18036,10 +18037,11 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
 .contact-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -18054,13 +18056,18 @@ body.is-section .logo {
 ====================================== */
 .contact-container-1 { display: block; }
 .contact-container-1-mobile { display: none; }
-
 .contact-notification-1 { display: block; }
 .contact-notification-1-mobile { display: none; }
+.contact-notification-bar { display: block; }
+.contact-notification-bar-mobile { display: none; }
+.contact-notification-information { display: block; }
+.contact-notification-information-mobile { display: none; }
+.contact-notification-button-2 { display: block; }
+.contact-notification-button-2-mobile { display: none; }
 /* ======================================
-   CONTACT - MOBILE
+   CONTACT - RESPONSIVE
 ====================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 /* CONTENEDOR */
 .contact-container-1-mobile {
     position: relative;
@@ -18164,6 +18171,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTTON CERRAR - TEXTO */
 .contact-button-text-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -18178,7 +18186,7 @@ body.is-section .logo {
 .contact-button-text-mobile:hover {
     filter: brightness(1.1);
 }
-/* CONTENIDO */
+/* CONTENEDOR */
 .contact-container-3-mobile {
     width: 100%;
     box-sizing: border-box;
@@ -18252,7 +18260,7 @@ body.is-section .logo {
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: black !important;
     text-decoration: none;
     text-align: left;
@@ -18346,9 +18354,7 @@ body.is-section .logo {
 .contact-button2-text-mobile:hover {
     filter: brightness(1.1);
 }   
-/* ======================================
-   NOTIFICACIÓN - MOBILE
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .contact-notification-1-mobile {
     position: fixed;
     top: 50%;
@@ -18387,7 +18393,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-/* BARRA */
+/* NOTIFICACIÓN - BARRA */
 .contact-notification-bar-mobile {
     display: flex;
     justify-content: space-between;
@@ -18400,6 +18406,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 4px 12px;
 }
+/* NOTIFICACIÓN - TÍTULO */
 .contact-notification-title-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -18415,7 +18422,7 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .contact-notification-3-mobile {
     width: 100%;
     box-sizing: border-box;
@@ -18444,7 +18451,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
 }
-/* TEXTO */
+/* NOTIFICACIÓN - TEXTO */
 .contact-notification-text-mobile {
     font-family: 'Share Tech Mono', monospace;
     font-size: 0.8rem;
@@ -18454,7 +18461,7 @@ body.is-section .logo {
     line-height: 1.5;
     margin: 0 0 15px 0;
 }
-/* BOTÓN PERMANECER */
+/* NOTIFICACIÓN - BOTÓN PERMANECER */
 .contact-notification-button-1-mobile {
     display: flex;
     justify-content: center;
@@ -18500,6 +18507,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
 .contact-notification-button-text-mobile {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -18518,27 +18526,22 @@ body.is-section .logo {
 ====================================== */
 .contact-container-1 { display: none; }
 .contact-container-1-mobile { display: block; }
-
 .contact-notification-1 { display: none; }
 .contact-notification-1-mobile { display: block; }
+.contact-notification-bar { display: none; }
+.contact-notification-bar-mobile { display: block; }
+.contact-notification-information { display: none; }
+.contact-notification-information-mobile { display: block; }
+.contact-notification-button-2 { display: none; }
+.contact-notification-button-2-mobile { display: block; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 360px) {
+    .contact-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .contact-title-mobile { font-size: 1.3rem; }
+    .contact-text-mobile { font-size: 0.8rem; }
+}
 
 
 /* ======================================
