@@ -1188,9 +1188,9 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN TERMS AND CONDITIONS - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('termsandconditions-close-btn');
+    const closeBtn        = document.getElementById('termsandconditions-button-close');
     const notification    = document.getElementById('termsandconditions-notification');
-    const notificationBtn = document.getElementById('termsandconditions-notification-button');
+    const notificationBtn = document.getElementById('termsandconditions-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -1204,14 +1204,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN TERMS AND CONDITIONS - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('termsandconditions-close-btn-mobile');
+    const closeBtnMobile        = document.getElementById('termsandconditions-button-close-mobile');
     const notificationMobile    = document.getElementById('termsandconditions-notification-mobile');
-    const notificationBtnMobile = document.getElementById('termsandconditions-notification-button-mobile');
+    const notificationBtnMobile = document.getElementById('termsandconditions-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -1225,15 +1224,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 
 
 /* ======================================
    SCRIPT: NOTIFICACIÓN PRIVACY POLICY - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('privacypolicy-close-btn');
+    const closeBtn        = document.getElementById('privacypolicy-button-close');
     const notification    = document.getElementById('privacypolicy-notification');
-    const notificationBtn = document.getElementById('privacypolicy-notification-button');
+    const notificationBtn = document.getElementById('privacypolicy-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -1247,14 +1247,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN PRIVACY POLICY - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('privacypolicy-close-btn-mobile');
+    const closeBtnMobile        = document.getElementById('privacypolicy-button-close-mobile');
     const notificationMobile    = document.getElementById('privacypolicy-notification-mobile');
-    const notificationBtnMobile = document.getElementById('privacypolicy-notification-button-mobile');
+    const notificationBtnMobile = document.getElementById('privacypolicy-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -1268,15 +1267,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
 
 
 /* ======================================
    SCRIPT: NOTIFICACIÓN COOKIE POLICY - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('cookiepolicy-close-btn');
+    const closeBtn        = document.getElementById('cookiepolicy-button-close');
     const notification    = document.getElementById('cookiepolicy-notification');
-    const notificationBtn = document.getElementById('cookiepolicy-notification-button');
+    const notificationBtn = document.getElementById('cookiepolicy-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
@@ -1290,14 +1290,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
 /* ======================================
    SCRIPT: NOTIFICACIÓN COOKIE POLICY - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('cookiepolicy-close-btn-mobile');
+    const closeBtnMobile        = document.getElementById('cookiepolicy-button-close-mobile');
     const notificationMobile    = document.getElementById('cookiepolicy-notification-mobile');
-    const notificationBtnMobile = document.getElementById('cookiepolicy-notification-button-mobile');
+    const notificationBtnMobile = document.getElementById('cookiepolicy-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
@@ -1311,21 +1310,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
