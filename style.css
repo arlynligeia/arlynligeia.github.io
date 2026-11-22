@@ -14084,9 +14084,24 @@ body.is-section .logo {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    FILM - PC
 ====================================== */
+/* CONTENEDOR */
 .film-container-1 {
     position: relative;
     width: 850px;
@@ -14134,7 +14149,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0px;
     padding: 0px;
 }
@@ -14142,7 +14157,7 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-/* BOTÓN - CERRAR */
+/* BOTÓN CERRAR */
 .film-button-1 {
     display: flex;
     width: 40px;
@@ -14156,8 +14171,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .film-button-1:hover {
@@ -14179,7 +14194,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -14189,6 +14204,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN CERRAR - TEXTO */
 .film-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -14203,7 +14219,7 @@ body.is-section .logo {
 .film-button-text:hover {
     filter: brightness(1.1);
 }
-/* CONTENIDO */
+/* CONTENEDOR */
 .film-container-3 {
     width: 100%;
     box-sizing: border-box;
@@ -14233,6 +14249,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
+/* TEXTO */
 .film-text,
 .film-text-end {
     font-family: 'Share Tech Mono', monospace;
@@ -14242,13 +14259,12 @@ body.is-section .logo {
     text-align: left;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 .film-text-end {
     margin-bottom: 0px;
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .film-notification-1 {
     position: fixed;
     top: 50%;
@@ -14309,7 +14325,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 0px;
     padding: 0px;
 }
@@ -14317,7 +14333,7 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .film-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -14346,7 +14362,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
+    }
 /* NOTIFICACIÓN - TEXTO */
 .film-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -14356,6 +14372,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .film-notification-button-1 {
@@ -14403,10 +14420,11 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
 .film-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -14421,13 +14439,19 @@ body.is-section .logo {
 ====================================== */
 .film-container-1 { display: block; }
 .film-container-1-mobile { display: none; }
-
 .film-notification-1 { display: block; }
 .film-notification-1-mobile { display: none; }
+.film-notification-bar { display: block; }
+.film-notification-bar-mobile { display: none; }
+.film-notification-information { display: block; }
+.film-notification-information-mobile { display: none; }
+.film-notification-button-2 { display: block; }
+.film-notification-button-2-mobile { display: none; }
 /* ======================================
    FILM - RESPONSIVE
 ====================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    /* CONTENEDOR */
     .film-container-1-mobile {
         position: relative;
         width: 90%;
@@ -14484,7 +14508,7 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-    /* BOTÓN - CERRAR */
+    /* BOTÓN CERRAR */
     .film-button-1-mobile {
         position: relative;
         display: flex;
@@ -14499,8 +14523,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .film-button-1-mobile:hover {
@@ -14523,7 +14547,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
         transition: border-color 0.15s ease;
     }
@@ -14533,6 +14557,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN CERRAR - TEXTO */
     .film-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -14546,7 +14571,7 @@ body.is-section .logo {
     .film-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTENIDO */
+    /* CONTENEDOR */
     .film-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -14576,22 +14601,22 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
+    /* TEXTO */
     .film-text-mobile,
     .film-text-end-mobile {
         font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
         line-height: 1.5;
         text-align: left;
         margin: 0 0 10px 0;
+        padding: 0px;
     }
     .film-text-end-mobile {
         margin-bottom: 0px;
-    }
-    /* ======================================
-       NOTIFICACIÓN
-    ====================================== */
+    }  
+    /* NOTIFICACIÓN - CONTENEDOR */
     .film-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -14633,10 +14658,10 @@ body.is-section .logo {
     /* NOTIFICACIÓN - BARRA */
     .film-notification-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #ff00a9 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -14652,15 +14677,14 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
-        margin: 0px;
-        padding: 0px;
+        line-height: 1.4;
+        margin: 0;
     }
     .film-notification-title-mobile a {
         color: #2a0070 !important;
         text-decoration: none;
     }
-    /* CONTENIDO */
+    /* NOTIFICACIÓN - CONTENEDOR */
     .film-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -14682,15 +14706,15 @@ body.is-section .logo {
         border-radius: 0px;
         margin: 0px;
         padding: 20px;
-    }   
+    }
     /* NOTIFICACIÓN - INFORMACIÓN */
     .film-notification-information-mobile {
         width: 100%;
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-    }
-    /* TEXTO */
+    } 
+    /* NOTIFICACIÓN - TEXTO */
     .film-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 0.8rem;
@@ -14698,9 +14722,10 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 10px 0;
+        margin: 0 0 15px 0;
+        padding: 0px;
     }
-    /* BOTÓN - PERMANECER */
+    /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .film-notification-button-1-mobile {
         display: flex;
         width: fit-content;
@@ -14746,6 +14771,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* NOTIFICACIÓN - BOTÓN PERMANECER -TEXTO */
     .film-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -14759,18 +14785,33 @@ body.is-section .logo {
     .film-notification-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTROL */
-    .film-container-1 { display: none; }
-    .film-container-1-mobile { display: block; }
-    
-    .film-notification-1 { display: none; }
-    .film-notification-1-mobile { display: block; }
+/* ======================================
+   CONTROL
+====================================== */
+.film-container-1 { display: none; }
+.film-container-1-mobile { display: block; }
+.film-notification-1 { display: none; }
+.film-notification-1-mobile { display: block; }
+.film-notification-bar { display: none; }
+.film-notification-bar-mobile { display: block; }
+.film-notification-information { display: none; }
+.film-notification-information-mobile { display: block; }
+.film-notification-button-2 { display: none; }
+.film-notification-button-2-mobile { display: block; }
+}
+@media (max-width: 360px) {
+    .film-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .film-title-mobile { font-size: 1.3rem; }
+    .film-text-mobile { font-size: 0.8rem; }
 }
 
 
 /* ======================================
    MUSIC - PC
 ====================================== */
+/* CONTENEDOR */
 .music-container-1 {
     position: relative;
     width: 850px;
@@ -14818,7 +14859,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0px;
     padding: 0px;
 }
@@ -14826,7 +14867,7 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-/* BOTÓN - CERRAR */
+/* BOTÓN CERRAR */
 .music-button-1 {
     display: flex;
     width: 40px;
@@ -14840,8 +14881,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .music-button-1:hover {
@@ -14863,7 +14904,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -14873,6 +14914,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN CERRAR - TEXTO */
 .music-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -14887,7 +14929,7 @@ body.is-section .logo {
 .music-button-text:hover {
     filter: brightness(1.1);
 }
-/* CONTENIDO */
+/* CONTENEDOR */
 .music-container-3 {
     width: 100%;
     box-sizing: border-box;
@@ -14917,6 +14959,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
+/* TEXTO */
 .music-text,
 .music-text-end {
     font-family: 'Share Tech Mono', monospace;
@@ -14926,13 +14969,12 @@ body.is-section .logo {
     text-align: left;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 .music-text-end {
     margin-bottom: 0px;
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .music-notification-1 {
     position: fixed;
     top: 50%;
@@ -14993,7 +15035,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 0px;
     padding: 0px;
 }
@@ -15001,7 +15043,7 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .music-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -15030,7 +15072,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
+    }
 /* NOTIFICACIÓN - TEXTO */
 .music-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -15040,6 +15082,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .music-notification-button-1 {
@@ -15087,10 +15130,11 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
 .music-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -15105,16 +15149,19 @@ body.is-section .logo {
 ====================================== */
 .music-container-1 { display: block; }
 .music-container-1-mobile { display: none; }
-
 .music-notification-1 { display: block; }
 .music-notification-1-mobile { display: none; }
-
-
-
+.music-notification-bar { display: block; }
+.music-notification-bar-mobile { display: none; }
+.music-notification-information { display: block; }
+.music-notification-information-mobile { display: none; }
+.music-notification-button-2 { display: block; }
+.music-notification-button-2-mobile { display: none; }
 /* ======================================
    MUSIC - RESPONSIVE
 ====================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    /* CONTENEDOR */
     .music-container-1-mobile {
         position: relative;
         width: 90%;
@@ -15171,7 +15218,7 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-    /* BOTÓN - CERRAR */
+    /* BOTÓN CERRAR */
     .music-button-1-mobile {
         position: relative;
         display: flex;
@@ -15186,8 +15233,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .music-button-1-mobile:hover {
@@ -15210,7 +15257,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
         transition: border-color 0.15s ease;
     }
@@ -15220,6 +15267,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN CERRAR - TEXTO */
     .music-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -15233,7 +15281,7 @@ body.is-section .logo {
     .music-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTENIDO */
+    /* CONTENEDOR */
     .music-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -15263,22 +15311,22 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
+    /* TEXTO */
     .music-text-mobile,
     .music-text-end-mobile {
         font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
         line-height: 1.5;
         text-align: left;
         margin: 0 0 10px 0;
+        padding: 0px;
     }
     .music-text-end-mobile {
         margin-bottom: 0px;
-    }
-    /* ======================================
-       NOTIFICACIÓN
-    ====================================== */
+    }  
+    /* NOTIFICACIÓN - CONTENEDOR */
     .music-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -15320,10 +15368,10 @@ body.is-section .logo {
     /* NOTIFICACIÓN - BARRA */
     .music-notification-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #ff00a9 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -15339,15 +15387,14 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
-        margin: 0px;
-        padding: 0px;
+        line-height: 1.4;
+        margin: 0;
     }
     .music-notification-title-mobile a {
         color: #2a0070 !important;
         text-decoration: none;
     }
-    /* CONTENIDO */
+    /* NOTIFICACIÓN - CONTENEDOR */
     .music-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -15370,16 +15417,14 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
-
-    
     /* NOTIFICACIÓN - INFORMACIÓN */
     .music-notification-information-mobile {
         width: 100%;
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-    }
-    /* TEXTO */
+    } 
+    /* NOTIFICACIÓN - TEXTO */
     .music-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 0.8rem;
@@ -15387,9 +15432,10 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 10px 0;
+        margin: 0 0 15px 0;
+        padding: 0px;
     }
-    /* BOTÓN - PERMANECER */
+    /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .music-notification-button-1-mobile {
         display: flex;
         width: fit-content;
@@ -15435,6 +15481,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* NOTIFICACIÓN - BOTÓN PERMANECER -TEXTO */
     .music-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -15448,18 +15495,33 @@ body.is-section .logo {
     .music-notification-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTROL */
-    .music-container-1 { display: none; }
-    .music-container-1-mobile { display: block; }
-    
-    .music-notification-1 { display: none; }
-    .music-notification-1-mobile { display: block; }
+/* ======================================
+   CONTROL
+====================================== */
+.music-container-1 { display: none; }
+.music-container-1-mobile { display: block; }
+.music-notification-1 { display: none; }
+.music-notification-1-mobile { display: block; }
+.music-notification-bar { display: none; }
+.music-notification-bar-mobile { display: block; }
+.music-notification-information { display: none; }
+.music-notification-information-mobile { display: block; }
+.music-notification-button-2 { display: none; }
+.music-notification-button-2-mobile { display: block; }
+}
+@media (max-width: 360px) {
+    .music-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .music-title-mobile { font-size: 1.3rem; }
+    .music-text-mobile { font-size: 0.8rem; }
 }
 
 
 /* ======================================
    FASHION - PC
 ====================================== */
+/* CONTENEDOR */
 .fashion-container-1 {
     position: relative;
     width: 850px;
@@ -15507,7 +15569,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1.6;
     margin: 0px;
     padding: 0px;
 }
@@ -15515,7 +15577,7 @@ body.is-section .logo {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-/* BOTÓN - CERRAR */
+/* BOTÓN CERRAR */
 .fashion-button-1 {
     display: flex;
     width: 40px;
@@ -15529,8 +15591,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .fashion-button-1:hover {
@@ -15552,7 +15614,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -15562,6 +15624,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN CERRAR - TEXTO */
 .fashion-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -15576,7 +15639,7 @@ body.is-section .logo {
 .fashion-button-text:hover {
     filter: brightness(1.1);
 }
-/* CONTENIDO */
+/* CONTENEDOR */
 .fashion-container-3 {
     width: 100%;
     box-sizing: border-box;
@@ -15606,6 +15669,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
+/* TEXTO */
 .fashion-text,
 .fashion-text-end {
     font-family: 'Share Tech Mono', monospace;
@@ -15615,13 +15679,12 @@ body.is-section .logo {
     text-align: left;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 .fashion-text-end {
     margin-bottom: 0px;
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .fashion-notification-1 {
     position: fixed;
     top: 50%;
@@ -15682,7 +15745,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.3;
+    line-height: 1.4;
     margin: 0px;
     padding: 0px;
 }
@@ -15690,7 +15753,7 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .fashion-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -15719,7 +15782,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-}
+    }
 /* NOTIFICACIÓN - TEXTO */
 .fashion-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -15729,6 +15792,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 10px 0;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .fashion-notification-button-1 {
@@ -15776,10 +15840,11 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
 .fashion-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -15794,13 +15859,19 @@ body.is-section .logo {
 ====================================== */
 .fashion-container-1 { display: block; }
 .fashion-container-1-mobile { display: none; }
-
 .fashion-notification-1 { display: block; }
 .fashion-notification-1-mobile { display: none; }
+.fashion-notification-bar { display: block; }
+.fashion-notification-bar-mobile { display: none; }
+.fashion-notification-information { display: block; }
+.fashion-notification-information-mobile { display: none; }
+.fashion-notification-button-2 { display: block; }
+.fashion-notification-button-2-mobile { display: none; }
 /* ======================================
    FASHION - RESPONSIVE
 ====================================== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    /* CONTENEDOR */
     .fashion-container-1-mobile {
         position: relative;
         width: 90%;
@@ -15857,7 +15928,7 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-    /* BOTÓN - CERRAR */
+    /* BOTÓN CERRAR */
     .fashion-button-1-mobile {
         position: relative;
         display: flex;
@@ -15872,8 +15943,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .fashion-button-1-mobile:hover {
@@ -15896,7 +15967,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
         transition: border-color 0.15s ease;
     }
@@ -15906,6 +15977,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN CERRAR - TEXTO */
     .fashion-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -15919,7 +15991,7 @@ body.is-section .logo {
     .fashion-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTENIDO */
+    /* CONTENEDOR */
     .fashion-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -15949,22 +16021,22 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
+    /* TEXTO */
     .fashion-text-mobile,
     .fashion-text-end-mobile {
         font-family: 'Share Tech Mono', monospace;
-        font-size: 1rem;
+        font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
         line-height: 1.5;
         text-align: left;
         margin: 0 0 10px 0;
+        padding: 0px;
     }
     .fashion-text-end-mobile {
         margin-bottom: 0px;
-    }
-    /* ======================================
-       NOTIFICACIÓN
-    ====================================== */
+    }  
+    /* NOTIFICACIÓN - CONTENEDOR */
     .fashion-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -16006,10 +16078,10 @@ body.is-section .logo {
     /* NOTIFICACIÓN - BARRA */
     .fashion-notification-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #ff00a9 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -16025,15 +16097,14 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
-        margin: 0px;
-        padding: 0px;
+        line-height: 1.4;
+        margin: 0;
     }
     .fashion-notification-title-mobile a {
         color: #2a0070 !important;
         text-decoration: none;
     }
-    /* CONTENIDO */
+    /* NOTIFICACIÓN - CONTENEDOR */
     .fashion-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -16056,16 +16127,14 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
-
-    
     /* NOTIFICACIÓN - INFORMACIÓN */
     .fashion-notification-information-mobile {
         width: 100%;
         box-sizing: border-box;
         margin: 0px;
         padding: 0px;
-    }
-    /* TEXTO */
+    } 
+    /* NOTIFICACIÓN - TEXTO */
     .fashion-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 0.8rem;
@@ -16073,9 +16142,10 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 10px 0;
+        margin: 0 0 15px 0;
+        padding: 0px;
     }
-    /* BOTÓN - PERMANECER */
+    /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .fashion-notification-button-1-mobile {
         display: flex;
         width: fit-content;
@@ -16121,6 +16191,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* NOTIFICACIÓN - BOTÓN PERMANECER -TEXTO */
     .fashion-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -16134,23 +16205,737 @@ body.is-section .logo {
     .fashion-notification-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTROL */
-    .fashion-container-1 { display: none; }
-    .fashion-container-1-mobile { display: block; }
-    
-    .fashion-notification-1 { display: none; }
-    .fashion-notification-1-mobile { display: block; }
+/* ======================================
+   CONTROL
+====================================== */
+.fashion-container-1 { display: none; }
+.fashion-container-1-mobile { display: block; }
+.fashion-notification-1 { display: none; }
+.fashion-notification-1-mobile { display: block; }
+.fashion-notification-bar { display: none; }
+.fashion-notification-bar-mobile { display: block; }
+.fashion-notification-information { display: none; }
+.fashion-notification-information-mobile { display: block; }
+.fashion-notification-button-2 { display: none; }
+.fashion-notification-button-2-mobile { display: block; }
+}
+@media (max-width: 360px) {
+    .fashion-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .fashion-title-mobile { font-size: 1.3rem; }
+    .fashion-text-mobile { font-size: 0.8rem; }
 }
 
 
-
-
-
-
-
-
-
-
+/* ======================================
+   JEWELRY - PC
+====================================== */
+/* CONTENEDOR */
+.jewelry-container-1 {
+    position: relative;
+    width: 850px;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+}
+.jewelry-container-2 {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* BARRA */
+.jewelry-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #2a0070 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 15px;
+}
+/* TÍTULO */
+.jewelry-title {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    color: #ff00a9 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.6;
+    margin: 0px;
+    padding: 0px;
+}
+.jewelry-title a {
+    color: #ff00a9 !important;
+    text-decoration: none;
+}
+/* BOTÓN CERRAR */
+.jewelry-button-1 {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.jewelry-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.jewelry-button-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #d0aaff;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 10px;
+    transition: border-color 0.15s ease;
+}
+.jewelry-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+/* BOTÓN CERRAR - TEXTO */
+.jewelry-button-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.jewelry-button-text:hover {
+    filter: brightness(1.1);
+}
+/* CONTENEDOR */
+.jewelry-container-3 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.jewelry-container-4 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #3f00a8 !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 30px;
+}
+/* INFORMACIÓN */
+.jewelry-information {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+/* TEXTO */
+.jewelry-text,
+.jewelry-text-end {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.25rem;
+    color: #00FF00 !important;
+    text-decoration: none;
+    text-align: left;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+.jewelry-text-end {
+    margin-bottom: 0px;
+}
+/* NOTIFICACIÓN - CONTENEDOR */
+.jewelry-notification-1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    z-index: 9999;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    padding: 0px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.jewelry-notification-1.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+.jewelry-notification-2 {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+/* NOTIFICACIÓN - BARRA */
+.jewelry-notification-bar {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff00a9 !important;
+    border: 4px solid #d0aaff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 4px 12px;
+}
+/* NOTIFICACIÓN - TÍTULO */
+.jewelry-notification-title {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: left;
+    line-height: 1.4;
+    margin: 0px;
+    padding: 0px;
+}
+.jewelry-notification-title a {
+    color: #2a0070 !important;
+    text-decoration: none;
+}
+/* NOTIFICACIÓN - CONTENEDOR */
+.jewelry-notification-3 {
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent !important;
+    border: 4px solid #d0aaff;
+    border-top: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.jewelry-notification-4 {
+    width: 100%;
+    box-sizing: border-box;
+    background: #00FFFF !important;
+    border-top:    2px solid #8a55f0;
+    border-left:   2px solid #8a55f0;
+    border-right:  2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 20px;
+}
+/* NOTIFICACIÓN - INFORMACIÓN */
+.jewelry-notification-information {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    }
+/* NOTIFICACIÓN - TEXTO */
+.jewelry-notification-text {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1rem;
+    color: black !important;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    margin: 0 0 10px 0;
+    padding: 0px;
+}
+/* NOTIFICACIÓN - BOTÓN PERMANECER */
+.jewelry-notification-button-1 {
+    display: flex;
+    width: fit-content;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px auto;
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.jewelry-notification-button-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.jewelry-notification-button-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    background: #d0aaff !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 10px 20px;
+    transition: border-color 0.15s ease;
+}
+.jewelry-notification-button-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXTO */
+.jewelry-notification-button-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    color: #2a0070 !important;
+    text-transform: uppercase;
+    line-height: 1;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.jewelry-notification-button-text:hover {
+    filter: brightness(1.1);
+}
+/* ======================================
+   CONTROL
+====================================== */
+.jewelry-container-1 { display: block; }
+.jewelry-container-1-mobile { display: none; }
+.jewelry-notification-1 { display: block; }
+.jewelry-notification-1-mobile { display: none; }
+.jewelry-notification-bar { display: block; }
+.jewelry-notification-bar-mobile { display: none; }
+.jewelry-notification-information { display: block; }
+.jewelry-notification-information-mobile { display: none; }
+.jewelry-notification-button-2 { display: block; }
+.jewelry-notification-button-2-mobile { display: none; }
+/* ======================================
+   JEWELRY - RESPONSIVE
+====================================== */
+@media (max-width: 600px) {
+    /* CONTENEDOR */
+    .jewelry-container-1-mobile {
+        position: relative;
+        width: 90%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 80px auto 40px auto;
+        padding: 0px;
+    }
+    .jewelry-container-2-mobile {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* BARRA */
+    .jewelry-bar-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: #2a0070 !important;
+        border: 4px solid #d0aaff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 10px;
+    }
+    /* TÍTULO */
+    .jewelry-title-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 2rem;
+        color: #ff00a9 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 1.3;
+        margin: 0px;
+        padding: 0px;
+    }
+    .jewelry-title-mobile a {
+        color: #ff00a9 !important;
+        text-decoration: none;
+    }
+    /* BOTÓN CERRAR */
+    .jewelry-button-1-mobile {
+        position: relative;
+        display: flex;
+        width: 35px;
+        height: 35px;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+        transition: border-color 0.15s ease;
+    }
+    .jewelry-button-1-mobile:hover {
+        border-top-color:    #8a55f0;
+        border-left-color:   #8a55f0;
+        border-right-color:  #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .jewelry-button-2-mobile {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background: #d0aaff;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 10px;
+        transition: border-color 0.15s ease;
+    }
+    .jewelry-button-2-mobile:hover {
+        border-top-color:    #b388ff;
+        border-left-color:   #b388ff;
+        border-right-color:  #e6ccff;
+        border-bottom-color: #e6ccff;
+    }
+    /* BOTÓN CERRAR - TEXTO */
+    .jewelry-button-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 1;
+        transition: filter 0.15s ease;
+    }
+    .jewelry-button-text-mobile:hover {
+        filter: brightness(1.1);
+    }
+    /* CONTENEDOR */
+    .jewelry-container-3-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 4px solid #d0aaff;
+        border-top: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .jewelry-container-4-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: #3f00a8 !important;
+        border-top:    2px solid #8a55f0;
+        border-left:   2px solid #8a55f0;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+    }
+    /* INFORMACIÓN */
+    .jewelry-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* TEXTO */
+    .jewelry-text-mobile,
+    .jewelry-text-end-mobile {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 1.05rem;
+        color: #00FF00 !important;
+        text-decoration: none;
+        line-height: 1.5;
+        text-align: left;
+        margin: 0 0 10px 0;
+        padding: 0px;
+    }
+    .jewelry-text-end-mobile {
+        margin-bottom: 0px;
+    }  
+    /* NOTIFICACIÓN - CONTENEDOR */
+    .jewelry-notification-1-mobile {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        z-index: 9999;
+        width: 90%;
+        max-width: 400px;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        padding: 0px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .jewelry-notification-1-mobile.show {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        pointer-events: auto;
+    }
+    .jewelry-notification-2-mobile {
+        position: relative;
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* NOTIFICACIÓN - BARRA */
+    .jewelry-notification-bar-mobile {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
+        background: #ff00a9 !important;
+        border: 4px solid #d0aaff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 4px 12px;
+    }
+    /* NOTIFICACIÓN - TÍTULO */
+    .jewelry-notification-title-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 1.4;
+        margin: 0;
+    }
+    .jewelry-notification-title-mobile a {
+        color: #2a0070 !important;
+        text-decoration: none;
+    }
+    /* NOTIFICACIÓN - CONTENEDOR */
+    .jewelry-notification-3-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: transparent !important;
+        border: 4px solid #d0aaff;
+        border-top: none;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+    .jewelry-notification-4-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        background: #00FFFF !important;
+        border-top:    2px solid #8a55f0;
+        border-left:   2px solid #8a55f0;
+        border-right:  2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 20px;
+    }
+    /* NOTIFICACIÓN - INFORMACIÓN */
+    .jewelry-notification-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    } 
+    /* NOTIFICACIÓN - TEXTO */
+    .jewelry-notification-text-mobile {
+        font-family: 'Share Tech Mono', monospace;
+        font-size: 0.8rem;
+        color: black !important;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        margin: 0 0 15px 0;
+        padding: 0px;
+    }
+    /* NOTIFICACIÓN - BOTÓN PERMANECER */
+    .jewelry-notification-button-1-mobile {
+        display: flex;
+        width: fit-content;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background: transparent !important;
+        border-top:    2px solid #ffffff;
+        border-left:   2px solid #ffffff;
+        border-right:  2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0 auto;
+        padding: 0;
+        transition: border-color 0.15s ease;
+    }
+    .jewelry-notification-button-1-mobile:hover {
+        border-top-color:    #8a55f0;
+        border-left-color:   #8a55f0;
+        border-right-color:  #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .jewelry-notification-button-2-mobile {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
+        background: #d0aaff !important;
+        border-top:    2px solid #e6ccff;
+        border-left:   2px solid #e6ccff;
+        border-right:  2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0;
+        padding: 10px 20px;
+        transition: border-color 0.15s ease;
+    }
+    .jewelry-notification-button-2-mobile:hover {
+        border-top-color:    #b388ff;
+        border-left-color:   #b388ff;
+        border-right-color:  #e6ccff;
+        border-bottom-color: #e6ccff;
+    }
+    /* NOTIFICACIÓN - BOTÓN PERMANECER -TEXTO */
+    .jewelry-notification-button-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        color: #2a0070 !important;
+        text-transform: uppercase;
+        line-height: 1;
+        cursor: pointer;
+        transition: filter 0.15s ease;
+    }
+    .jewelry-notification-button-text-mobile:hover {
+        filter: brightness(1.1);
+    }
+/* ======================================
+   CONTROL
+====================================== */
+.jewelry-container-1 { display: none; }
+.jewelry-container-1-mobile { display: block; }
+.jewelry-notification-1 { display: none; }
+.jewelry-notification-1-mobile { display: block; }
+.jewelry-notification-bar { display: none; }
+.jewelry-notification-bar-mobile { display: block; }
+.jewelry-notification-information { display: none; }
+.jewelry-notification-information-mobile { display: block; }
+.jewelry-notification-button-2 { display: none; }
+.jewelry-notification-button-2-mobile { display: block; }
+}
+@media (max-width: 360px) {
+    .jewelry-title-mobile { font-size: 1.5rem; }
+}
+@media (max-width: 320px) {
+    .jewelry-title-mobile { font-size: 1.3rem; }
+    .jewelry-text-mobile { font-size: 0.8rem; }
+}
 
 
 /* ======================================
