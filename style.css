@@ -12780,7 +12780,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff !important;
-    border-top: none !important;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -13052,7 +13051,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: #000000 !important;
     border: 4px solid #FF8A8A;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -13079,7 +13077,7 @@ body.is-section .logo {
 /* NOTIFICACIÓN - TEXTO */
 .creativeworlds-notification-text {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 1.05rem;
+    font-size: 1rem;
     color: #FF0033 !important;
     text-transform: uppercase;
     text-align: center;
@@ -13158,11 +13156,6 @@ body.is-section .logo {
 .creativeworlds-notification-information-mobile { display: none; }
 .creativeworlds-notification-button-2 { display: block; }
 .creativeworlds-notification-button-2-mobile { display: none; }
-
-
-
-
-
 /* ======================================
    CREATIVE WORLDS - MOBILE
 ====================================== */
@@ -13296,7 +13289,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff !important;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -13551,7 +13543,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: #000000 !important;
         border: 4px solid #FF8A8A;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -13655,25 +13646,13 @@ body.is-section .logo {
     .creativeworlds-notification-button-2 { display: none; }
     .creativeworlds-notification-button-2-mobile { display: block; }
 }
+@media (max-width: 360px) {
+    .creativeworlds-title-mobile { font-size: 1.5rem; }
+}
 @media (max-width: 320px) {
     .creativeworlds-title-mobile { font-size: 1.3rem; }
     .creativeworlds-text-mobile { font-size: 0.8rem; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ======================================
@@ -13782,7 +13761,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-/* BOTÓN CERRAR - TEXTO */
+/* BOTÓN - CERRAR - TEXTO */
 .film-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -13803,7 +13782,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -13917,7 +13895,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -13940,7 +13917,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    }
+}
 /* NOTIFICACIÓN - TEXTO */
 .film-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -14004,6 +13981,7 @@ body.is-section .logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
     cursor: pointer;
@@ -14155,7 +14133,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -14268,7 +14245,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -14492,7 +14468,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
-/* BOTÓN CERRAR - TEXTO */
+/* BOTÓN - CERRAR - TEXTO */
 .music-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -14513,7 +14489,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -14627,7 +14602,6 @@ body.is-section .logo {
     box-sizing: border-box;
     background: transparent !important;
     border: 4px solid #d0aaff;
-    border-top: none;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
@@ -14650,7 +14624,7 @@ body.is-section .logo {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    }
+}
 /* NOTIFICACIÓN - TEXTO */
 .music-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -14714,6 +14688,7 @@ body.is-section .logo {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
     cursor: pointer;
@@ -14865,7 +14840,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -14978,7 +14952,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -15094,26 +15067,6 @@ body.is-section .logo {
     .music-title-mobile { font-size: 1.3rem; }
     .music-text-mobile { font-size: 0.8rem; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ======================================
