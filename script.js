@@ -818,46 +818,59 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN FILM - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('film-button-close');
-    const notification    = document.getElementById('notification-film');
-    const notificationBtn = document.getElementById('button-film-stay');
+    const notification    = document.getElementById('film-notification');
+    const notificationBtn = document.getElementById('film-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             notification.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
+        notificationBtn.addEventListener('click', () => {
             notification.classList.remove('show');
         });
     }
 });
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN FILM - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('film-button-close-mobile');
-    const notificationMobile    = document.getElementById('notification-film-mobile');
-    const notificationBtnMobile = document.getElementById('button-film-stay-mobile');
+    const notificationMobile    = document.getElementById('film-notification-mobile');
+    const notificationBtnMobile = document.getElementById('film-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtnMobile.addEventListener('click', function () {
+        closeBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtnMobile.addEventListener('click', function () {
+        notificationBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.remove('show');
         });
     }
 });
+
 
 
 /* ======================================
@@ -865,17 +878,17 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('music-button-close');
-    const notification    = document.getElementById('notification-music');
-    const notificationBtn = document.getElementById('button-music-stay');
+    const notification    = document.getElementById('music-notification');
+    const notificationBtn = document.getElementById('music-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             notification.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
+        notificationBtn.addEventListener('click', () => {
             notification.classList.remove('show');
         });
     }
@@ -885,21 +898,22 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('music-button-close-mobile');
-    const notificationMobile    = document.getElementById('notification-music-mobile');
-    const notificationBtnMobile = document.getElementById('button-music-stay-mobile');
+    const notificationMobile    = document.getElementById('music-notification-mobile');
+    const notificationBtnMobile = document.getElementById('music-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtnMobile.addEventListener('click', function () {
+        closeBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtnMobile.addEventListener('click', function () {
+        notificationBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.remove('show');
         });
     }
 });
+
 
 
 /* ======================================
@@ -907,17 +921,17 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('fashion-button-close');
-    const notification    = document.getElementById('notification-fashion');
-    const notificationBtn = document.getElementById('button-fashion-stay');
+    const notification    = document.getElementById('fashion-notification');
+    const notificationBtn = document.getElementById('fashion-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             notification.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
+        notificationBtn.addEventListener('click', () => {
             notification.classList.remove('show');
         });
     }
@@ -927,69 +941,64 @@ document.addEventListener('DOMContentLoaded', function () {
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('fashion-button-close-mobile');
-    const notificationMobile    = document.getElementById('notification-fashion-mobile');
-    const notificationBtnMobile = document.getElementById('button-fashion-stay-mobile');
+    const notificationMobile    = document.getElementById('fashion-notification-mobile');
+    const notificationBtnMobile = document.getElementById('fashion-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtnMobile.addEventListener('click', function () {
+        closeBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtnMobile.addEventListener('click', function () {
+        notificationBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.remove('show');
         });
     }
 });
 
 
+
 /* ======================================
-   SCRIPT: NOTIFICACIÓN BEMYPATRON - PC
+   SCRIPT: NOTIFICACIÓN BE MY PATRON - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtn        = document.getElementById('bemypatron-button-close');
-    const notification    = document.getElementById('notification-bemypatron');
-    const notificationBtn = document.getElementById('button-bemypatron-stay');
+    const notification    = document.getElementById('bemypatron-notification');
+    const notificationBtn = document.getElementById('bemypatron-button-stay');
 
     if (closeBtn && notification && notificationBtn) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             notification.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
+        notificationBtn.addEventListener('click', () => {
             notification.classList.remove('show');
         });
     }
 });
 /* ======================================
-   SCRIPT: NOTIFICACIÓN BEMYPATRON - MOBILE
+   SCRIPT: NOTIFICACIÓN BE MY PATRON - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
     const closeBtnMobile        = document.getElementById('bemypatron-button-close-mobile');
-    const notificationMobile    = document.getElementById('notification-bemypatron-mobile');
-    const notificationBtnMobile = document.getElementById('button-bemypatron-stay-mobile');
+    const notificationMobile    = document.getElementById('bemypatron-notification-mobile');
+    const notificationBtnMobile = document.getElementById('bemypatron-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtnMobile.addEventListener('click', function () {
+        closeBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtnMobile.addEventListener('click', function () {
+        notificationBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.remove('show');
         });
     }
 });
-
-
-
-
-
-
 
 
 
@@ -997,12 +1006,10 @@ document.addEventListener('DOMContentLoaded', function () {
    CONTACT PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-
     /* ---------- FORMULARIO: MOSTRAR/OCULTAR TOPIC ---------- */
     const type    = document.getElementById('contact-type');    // <select id="contact-type">
     const wrapper = document.getElementById('contact-wrapper'); // <div id="contact-wrapper" class="contact-topic">
     const topic   = document.getElementById('contact-topic');   // <select id="contact-topic">
-
     if (type && wrapper && topic) {
         type.addEventListener('change', function () {
             if (this.value === 'work') {
@@ -1017,7 +1024,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
     /* ---------- NOTIFICACIÓN CONTACT - PC ---------- */
     const closeBtn        = document.getElementById('button-contact-close');    // <div id="button-contact-close">
     const notification    = document.getElementById('notification-contact');    // <div id="notification-contact">
@@ -1028,20 +1034,16 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBtn.addEventListener('click', function () {
             notification.classList.add('show');
         });
-
         // Al hacer clic en STAY → ocultar notificación
         notificationBtn.addEventListener('click', function () {
             notification.classList.remove('show');
         });
     }
-
 });
-
 /* ======================================
    CONTACT MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-
     /* ---------- FORMULARIO: MOSTRAR/OCULTAR TOPIC ---------- */
     const type    = document.getElementById('contact-type-mobile');    // <select id="contact-type-mobile">
     const wrapper = document.getElementById('contact-wrapper-mobile'); // <div id="contact-wrapper-mobile" class="contact-topic-mobile">
@@ -1061,7 +1063,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
-
     /* ---------- NOTIFICACIÓN CONTACT - MOBILE ---------- */
     const closeBtn        = document.getElementById('button-contact-close-mobile'); // <div id="button-contact-close-mobile">
     const notification    = document.getElementById('notification-contact-mobile'); // <div id="notification-contact-mobile">
@@ -1072,115 +1073,12 @@ document.addEventListener('DOMContentLoaded', function () {
         closeBtn.addEventListener('click', function () {
             notification.classList.add('show');
         });
-
         // Al hacer clic en STAY → ocultar notificación
         notificationBtn.addEventListener('click', function () {
             notification.classList.remove('show');
         });
     }
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ===== BARRA FIJA ETHEREAL LOOP ===== */
-(function () {
-    const audio     = document.getElementById('etherealLoopAudio');
-    const toggle    = document.getElementById('etherealLoopToggle');
-    const stopBtn   = document.getElementById('etherealLoopStop');
-    const playIcon  = document.getElementById('etherealLoopPlayIcon');
-    const pauseIcon = document.getElementById('etherealLoopPauseIcon');
-
-    // Si no existe la barra en esta página, no hacemos nada
-    if (!audio || !toggle || !stopBtn) return;
-
-    // Volumen inicial (0.0 a 1.0) — ajústalo a tu gusto
-    audio.volume = 0.5;
-
-    // Play / Pause
-    toggle.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play().catch(err => console.warn('No se pudo reproducir:', err));
-        } else {
-            audio.pause();
-        }
-    });
-
-    // Stop (pausa y vuelve al inicio)
-    stopBtn.addEventListener('click', () => {
-        audio.pause();
-        audio.currentTime = 0;
-    });
-
-    // Cambiar icono según el estado
-    audio.addEventListener('play',  () => {
-        playIcon.style.display  = 'none';
-        pauseIcon.style.display = 'block';
-    });
-
-    audio.addEventListener('pause', () => {
-        playIcon.style.display  = 'block';
-        pauseIcon.style.display = 'none';
-    });
-
-    audio.addEventListener('ended', () => {
-        playIcon.style.display  = 'block';
-        pauseIcon.style.display = 'none';
-    });
-})();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1310,3 +1208,54 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+/* ======================================
+   BARRA FIJA ETHEREAL LOOP
+====================================== */
+(function () {
+    const audio     = document.getElementById('etherealLoopAudio');
+    const toggle    = document.getElementById('etherealLoopToggle');
+    const stopBtn   = document.getElementById('etherealLoopStop');
+    const playIcon  = document.getElementById('etherealLoopPlayIcon');
+    const pauseIcon = document.getElementById('etherealLoopPauseIcon');
+
+    // Si no existe la barra en esta página, no hacemos nada
+    if (!audio || !toggle || !stopBtn) return;
+
+    // Volumen inicial (0.0 a 1.0) — ajústalo a tu gusto
+    audio.volume = 0.5;
+
+    // Play / Pause
+    toggle.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play().catch(err => console.warn('No se pudo reproducir:', err));
+        } else {
+            audio.pause();
+        }
+    });
+
+    // Stop (pausa y vuelve al inicio)
+    stopBtn.addEventListener('click', () => {
+        audio.pause();
+        audio.currentTime = 0;
+    });
+
+    // Cambiar icono según el estado
+    audio.addEventListener('play',  () => {
+        playIcon.style.display  = 'none';
+        pauseIcon.style.display = 'block';
+    });
+
+    audio.addEventListener('pause', () => {
+        playIcon.style.display  = 'block';
+        pauseIcon.style.display = 'none';
+    });
+
+    audio.addEventListener('ended', () => {
+        playIcon.style.display  = 'block';
+        pauseIcon.style.display = 'none';
+    });
+})();
+
