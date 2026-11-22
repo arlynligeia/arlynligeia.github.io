@@ -13073,6 +13073,13 @@ body.is-section .logo {
     margin: 0px;
     padding: 20px;
 }
+/* NOTIFICACIÓN - INFORMACIÓN */
+.creativeworlds-notification-information {
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 0 15px 0;
+    padding: 0px;
+}
 /* NOTIFICACIÓN - TEXTO */
 .creativeworlds-notification-text {
     font-family: 'Share Tech Mono', monospace;
@@ -13155,7 +13162,6 @@ body.is-section .logo {
 .creativeworlds-notification-information-mobile { display: none; }
 .creativeworlds-notification-button-2 { display: block; }
 .creativeworlds-notification-button-2-mobile { display: none; }
-
 
 
 
@@ -13347,6 +13353,7 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff !important;
+        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -13355,19 +13362,27 @@ body.is-section .logo {
         position: relative;
         width: 100%;
         box-sizing: border-box;
-        background: #2a0070 !important;
+        background: #00FFFF !important;
         border-top:    2px solid #8a55f0;
         border-left:   2px solid #8a55f0;
         border-right:  2px solid #ffffff;
         border-bottom: 2px solid #ffffff;
         border-radius: 0px;
         margin: 0px;
-        padding: 10px;
+        padding: 15px;
+    }
+    /* CAJA LIGEIA - FONDO NEGRO (MOBILE) */
+    .creativeworlds-box-4-mobile.creativeworlds-box-ligeia-mobile {
+        background: #000000 !important;
+    }
+    .creativeworlds-box-4-mobile.creativeworlds-box-ligeia-mobile .creativeworlds-note-text-mobile {
+        color: #ffffff !important;
     }
     /* IMAGEN */
     .creativeworlds-box-image-mobile {
         display: flex;
         width: 100%;
+        height: 110px;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
@@ -13376,15 +13391,15 @@ body.is-section .logo {
     }
     .creativeworlds-box-image-mobile img {
         display: block;
-        width: 100%;
-        max-width: 100px;
-        height: auto;
-        object-fit: cover;
+        height: 100px;
+        width: auto;
+        max-width: 100%;
+        object-fit: contain;
         border: none;
         border-radius: 0px;
         margin: 0px auto;
     }
-    /* BOTONES FASHION / JEWELRY / ART */
+    /* BOTONES FILM / MUSIC / FASHION / JEWELRY / TECHNOLOGY / LIGEIA */
     .creativeworlds-box-button-1-mobile {
         display: flex;
         width: fit-content;
@@ -13464,7 +13479,7 @@ body.is-section .logo {
     .creativeworlds-note-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1.05rem;
-        color: #ff00a9 !important;
+        color: black !important;
         text-decoration: none;
         text-align: center;
         line-height: 1.5;
@@ -13557,6 +13572,12 @@ body.is-section .logo {
         margin: 0px;
         padding: 10px;
     }
+    .creativeworlds-notification-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 0 10px 0;
+        padding: 0px;
+    }
     .creativeworlds-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 0.8rem;
@@ -13564,7 +13585,7 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 10px 0;
+        margin: 0;
     }
     .creativeworlds-notification-button-1-mobile {
         display: flex;
@@ -13628,21 +13649,20 @@ body.is-section .logo {
        CONTROL DE VISIBILIDAD
     ====================================== */
     .creativeworlds-container-1 { display: none; }
-.creativeworlds-container-1-mobile { display: block; }
-.creativeworlds-notification-1 { display: none; }
-.creativeworlds-notification-1-mobile { display: block; }
-.creativeworlds-notification-bar { display: none; }
-.creativeworlds-notification-bar-mobile { display: block; }
-.creativeworlds-notification-information { display: none; }
-.creativeworlds-notification-information-mobile { display: block; }
-.creativeworlds-notification-button-2 { display: none; }
-.creativeworlds-notification-button-2-mobile { display: block; }
+    .creativeworlds-container-1-mobile { display: block; }
+    .creativeworlds-notification-1 { display: none; }
+    .creativeworlds-notification-1-mobile { display: block; }
+    .creativeworlds-notification-bar { display: none; }
+    .creativeworlds-notification-bar-mobile { display: block; }
+    .creativeworlds-notification-information { display: none; }
+    .creativeworlds-notification-information-mobile { display: block; }
+    .creativeworlds-notification-button-2 { display: none; }
+    .creativeworlds-notification-button-2-mobile { display: block; }
 }
 @media (max-width: 320px) {
     .creativeworlds-title-mobile { font-size: 1.3rem; }
     .creativeworlds-text-mobile { font-size: 0.8rem; }
 }
-
 
 
 
