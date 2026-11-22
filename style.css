@@ -17420,16 +17420,223 @@ body.is-section .logo {
 }
 
 
-
-
-
-
-
-
-
-
-
-
+/* ======================================
+   CROWDFUNDING - PC
+====================================== */
+.crowdfunding-container {
+    position: relative;
+    width: 800px;
+    box-sizing: border-box;    
+    background: transparent !important;
+    border: none;
+    border-radius: 0px;
+    margin: 50px auto 50px auto;
+    padding: 0px;
+}
+.crowdfunding-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;    
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    background: transparent !important;
+    margin: 0px;
+    padding: 0px;
+}
+.crowdfunding-icon {
+    position: relative;
+    display: flex;    
+    flex: 0 0 auto;
+    flex-direction: column;
+    width: 104px;
+    height: 104px;
+    box-sizing: border-box;  
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 1px dotted transparent;
+    margin: 0px;
+    padding: 0px;
+    transition: background 0.15s ease, border-color 0.15s ease;
+}
+.crowdfunding-icon:hover {
+    background: rgba(0, 255, 255, 0.15);
+    border-color: #00FFFF;
+}
+.crowdfunding-link {
+    display: block;
+    background: transparent !important;    
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+.crowdfunding-link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+/* DIBUJO DE CARPETA */
+.crowdfunding-folder {
+    display: block;
+    position: relative;
+    width: 64px;
+    height: 48px;
+    background: #00B8B8;
+    clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
+    transition: filter 0.15s ease;
+}
+.crowdfunding-folder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00FFFF;
+    clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
+}
+.crowdfunding-folder::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 2px;
+    width: 60px;
+    height: 32px;
+    box-sizing: border-box;
+    background: #A8FFFF;
+    border-top: 2px solid #00B8B8;
+    box-shadow: inset 2px 2px 0 #FFFFFF, inset -2px -2px 0 #7FFFD4;
+}
+.crowdfunding-link:hover .crowdfunding-folder {
+    filter: brightness(1.2);
+}
+/* TEXTO */
+.crowdfunding-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    color: #00FFFF !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.5;
+    white-space: nowrap;
+    margin: 8px 0px 0px 0px;
+    padding: 0px;
+}
+/* CONTROL */
+.crowdfunding-container { display: block; }
+.crowdfunding-container-mobile { display: none; }
+/* ======================================
+   CROWDFUNDING - MOBILE
+====================================== */
+@media (max-width: 768px) {
+    .crowdfunding-container-mobile {
+        position: relative;
+        width: 90%;
+        box-sizing: border-box;        
+        background: transparent !important;
+        border: none;
+        border-radius: 0px;
+        margin: 80px auto 40px auto;
+        padding: 0px;
+    }
+      .crowdfunding-icons-mobile {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        box-sizing: border-box;          
+        justify-content: center;
+        align-items: flex-end;
+        gap: 5px;
+        background: transparent !important;
+        margin: 0px;
+        padding: 0px;
+    }
+    .crowdfunding-icon-mobile {
+        position: relative;
+        display: flex;       
+        flex-direction: column;
+        width: 80px;
+        height: 80px;
+        box-sizing: border-box;
+        justify-content: center;       
+        align-items: center;
+        background: transparent;
+        border: 1px dotted transparent;
+        margin: 0px;
+        padding: 0px;
+        transition: background 0.15s ease, border-color 0.15s ease;
+    }
+    .crowdfunding-icon-mobile:hover {
+        background: rgba(0, 255, 255, 0.15);
+        border-color: #00FFFF;
+    }
+    .crowdfunding-link-mobile {
+        display: block;
+        background: transparent !important;
+        text-decoration: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .crowdfunding-link-mobile::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        cursor: pointer;
+    }
+     .crowdfunding-folder-mobile {
+        display: block;
+        position: relative;
+        width: 64px;
+        height: 48px;
+        background: #00B8B8;       
+        margin: -6px -8px;
+        clip-path: polygon(0 4px, 4px 0, 24px 0, 28px 4px, 60px 4px, 64px 8px, 64px 48px, 0 48px);
+        transform: scale(0.75);
+        transition: filter 0.15s ease;
+    }
+    .crowdfunding-folder-mobile::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #00FFFF;
+        clip-path: polygon(2px 5px, 4px 2px, 23px 2px, 27px 6px, 59px 6px, 62px 9px, 62px 46px, 2px 46px);
+    }
+    .crowdfunding-folder-mobile::after {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 2px;
+        width: 60px;
+        height: 32px;
+        box-sizing: border-box;
+        background: #A8FFFF;
+        border-top: 2px solid #00B8B8;
+        box-shadow: inset 2px 2px 0 #FFFFFF, inset -2px -2px 0 #7FFFD4;
+    }
+    .crowdfunding-link-mobile:hover .crowdfunding-folder-mobile {
+        filter: brightness(1.2);
+    }
+    .crowdfunding-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 0.6rem;
+        color: #00FFFF !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1.5;
+        white-space: nowrap;
+        margin: 5px 0px 0px 0px;
+        padding: 0px;
+    }
+    /* CONTROL */
+    .crowdfunding-container { display: none; }
+    .crowdfunding-container-mobile { display: block; }
+}
 
 
 /* ======================================
