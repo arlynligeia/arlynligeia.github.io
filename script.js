@@ -717,26 +717,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN CREATIVE WORLDS - PC
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const notification    = document.getElementById('creativeworlds-button-notification');
+    const closeBtn        = document.querySelector('.creativeworlds-button-1[data-close="true"]');
+    const notification    = document.getElementById('creativeworlds-notification');
     const notificationBtn = document.getElementById('creativeworlds-button-stay');
 
-    /* Las 3 X del bloque CREATIVE WORLDS (barra principal + barra columna 1 + barra columna 2) */
-    const closeBtns = document.querySelectorAll('#creativeworlds [data-close="true"]');
-
-    if (notification && notificationBtn && closeBtns.length) {
-        // Al hacer clic en CUALQUIERA de las 3 X → mostrar notificación
-        closeBtns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                notification.classList.add('show');
-            });
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
+        notificationBtn.addEventListener('click', () => {
             notification.classList.remove('show');
         });
     }
@@ -745,87 +748,22 @@ document.addEventListener('DOMContentLoaded', function () {
    SCRIPT: NOTIFICACIÓN CREATIVE WORLDS - MOBILE
 ====================================== */
 document.addEventListener('DOMContentLoaded', function () {
-    const notification    = document.getElementById('creativeworlds-notification-mobile');
-    const notificationBtn = document.getElementById('creativeworlds-button-stay-mobile');
-    /* Las 3 X del bloque CREATIVE WORLDS MOBILE
-       (barra principal + barra Caja 4 + barra Caja 5) */
-    const closeBtns = document.querySelectorAll('#creativeworlds-mobile [data-close="true"]');
-
-    if (notification && notificationBtn && closeBtns.length) {
-        // Al hacer clic en CUALQUIERA de las 3 X → mostrar notificación
-        closeBtns.forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                notification.classList.add('show');
-            });
-        });
-
-        // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
-            notification.classList.remove('show');
-        });
-    }
-});
-
-
-
-
-
-
-/* ======================================
-   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - PC
-====================================== */
-document.addEventListener('DOMContentLoaded', function () {
-    const closeBtn        = document.getElementById('workinprogress-button-close');
-    const notification    = document.getElementById('workinprogress-notification');
-    const notificationBtn = document.getElementById('workinprogress-button-stay');
-
-    if (closeBtn && notification && notificationBtn) {
-        // Al hacer clic en la X → mostrar notificación
-        closeBtn.addEventListener('click', function () {
-            notification.classList.add('show');
-        });
-
-        // Al hacer clic en STAY → ocultar notificación
-        notificationBtn.addEventListener('click', function () {
-            notification.classList.remove('show');
-        });
-    }
-});
-/* ======================================
-   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - MOBILE
-====================================== */
-document.addEventListener('DOMContentLoaded', function () {
-    const closeBtnMobile        = document.getElementById('workinprogress-button-close-mobile');
-    const notificationMobile    = document.getElementById('workinprogress-notification-mobile');
-    const notificationBtnMobile = document.getElementById('workinprogress-button-stay-mobile');
+    const closeBtnMobile        = document.querySelector('.creativeworlds-button-1-mobile[data-close="true"]');
+    const notificationMobile    = document.getElementById('creativeworlds-notification-mobile');
+    const notificationBtnMobile = document.getElementById('creativeworlds-button-stay-mobile');
 
     if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
         // Al hacer clic en la X → mostrar notificación
-        closeBtnMobile.addEventListener('click', function () {
+        closeBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.add('show');
         });
 
         // Al hacer clic en STAY → ocultar notificación
-        notificationBtnMobile.addEventListener('click', function () {
+        notificationBtnMobile.addEventListener('click', () => {
             notificationMobile.classList.remove('show');
         });
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -952,6 +890,49 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Al hacer clic en STAY → ocultar notificación
         notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+
+/* ======================================
+   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - PC
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('workinprogress-button-close');
+    const notification    = document.getElementById('workinprogress-notification');
+    const notificationBtn = document.getElementById('workinprogress-button-stay');
+
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', function () {
+            notification.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', function () {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ======================================
+   SCRIPT: NOTIFICACIÓN WORK IN PROGRESS - MOBILE
+====================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('workinprogress-button-close-mobile');
+    const notificationMobile    = document.getElementById('workinprogress-notification-mobile');
+    const notificationBtnMobile = document.getElementById('workinprogress-button-stay-mobile');
+
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', function () {
+            notificationMobile.classList.add('show');
+        });
+
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', function () {
             notificationMobile.classList.remove('show');
         });
     }
