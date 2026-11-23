@@ -2695,9 +2695,12 @@ body.is-section .logo {
 .letsworktogether-notification-button-2-mobile { display: none; }
 .letsworktogether-window-notification-1 { display: block; }
 .letsworktogether-window-notification-1-mobile { display: none; }
-
-
-
+.letsworktogether-window-notification-bar { display: block; }
+.letsworktogether-window-notification-bar-mobile { display: none; }
+.letsworktogether-window-notification-information { display: block; }
+.letsworktogether-window-notification-information-mobile { display: none; }
+.letsworktogether-window-notification-button-2 { display: block; }
+.letsworktogether-window-notification-button-2-mobile { display: none; }
 /* ======================================
    LET'S WORK TOGETHER - MOBILE
 ====================================== */
@@ -3357,6 +3360,9 @@ body.is-section .logo {
         transform: translate(-50%, -50%) scale(1);
         pointer-events: auto;
     }
+    .letsworktogether-window-notification-1-mobile {
+        z-index: 2147483647;
+    }
     .letsworktogether-notification-2-mobile,
     .letsworktogether-window-notification-2-mobile {
         position: relative;
@@ -3524,8 +3530,15 @@ body.is-section .logo {
     .letsworktogether-notification-information-mobile { display: block; }
     .letsworktogether-notification-button-2 { display: none; }
     .letsworktogether-notification-button-2-mobile { display: block; }
-    .letsworktogether-window-notification-1 { display: none; }
-    .letsworktogether-window-notification-1-mobile { display: block; }
+    
+.letsworktogether-window-notification-1 { display: none; }
+.letsworktogether-window-notification-1-mobile { display: block; }
+.letsworktogether-window-notification-bar { display: none; }
+.letsworktogether-window-notification-bar-mobile { display: block; }
+.letsworktogether-window-notification-information { display: none; }
+.letsworktogether-window-notification-information-mobile { display: block; }
+.letsworktogether-window-notification-button-2 { display: none; }
+.letsworktogether-window-notification-button-2-mobile { display: block; }
 }
 @media (max-width: 360px) {
     .contact-title-mobile { font-size: 1.5rem; }
