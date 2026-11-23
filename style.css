@@ -1812,7 +1812,6 @@ body.is-section .logo {
 }
 @media (max-width: 360px) {
     .collaborations-title-mobile { font-size: 1.5rem; }
-    .collaborations-text-mobile { font-size: 1rem; }
 }
 @media (max-width: 320px) {
     .collaborations-title-mobile { font-size: 1.3rem; }
@@ -2693,6 +2692,7 @@ body.is-section .logo {
 .letsworktogether-notification-information-mobile { display: none; }
 .letsworktogether-notification-button-2 { display: block; }
 .letsworktogether-notification-button-2-mobile { display: none; }
+
 .letsworktogether-window-notification-1 { display: block; }
 .letsworktogether-window-notification-1-mobile { display: none; }
 .letsworktogether-window-notification-bar { display: block; }
@@ -3530,16 +3530,15 @@ body.is-section .logo {
     .letsworktogether-notification-information-mobile { display: block; }
     .letsworktogether-notification-button-2 { display: none; }
     .letsworktogether-notification-button-2-mobile { display: block; }
-    
-.letsworktogether-window-notification-1 { display: none; }
-.letsworktogether-window-notification-1-mobile { display: block; }
-.letsworktogether-window-notification-bar { display: none; }
-.letsworktogether-window-notification-bar-mobile { display: block; }
-.letsworktogether-window-notification-information { display: none; }
-.letsworktogether-window-notification-information-mobile { display: block; }
-.letsworktogether-window-notification-button-2 { display: none; }
-.letsworktogether-window-notification-button-2-mobile { display: block; }
-}
+    .letsworktogether-window-notification-1 { display: none; }
+    .letsworktogether-window-notification-1-mobile { display: block; }
+    .letsworktogether-window-notification-bar { display: none; }
+    .letsworktogether-window-notification-bar-mobile { display: block; }
+    .letsworktogether-window-notification-information { display: none; }
+    .letsworktogether-window-notification-information-mobile { display: block; }
+    .letsworktogether-window-notification-button-2 { display: none; }
+    .letsworktogether-window-notification-button-2-mobile { display: block; }    
+    }
 @media (max-width: 360px) {
     .contact-title-mobile { font-size: 1.5rem; }
 }
@@ -3549,33 +3548,10 @@ body.is-section .logo {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    SOCIAL MEDIA CONTENT - PC
 ====================================== */
+/* CONTENEDOR */
 .socialmediacontent-container-1 {
     position: relative;
     width: 850px;
@@ -3624,28 +3600,29 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.6;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .socialmediacontent-title a {
     color: #ff00a9 !important;
     text-decoration: none;
 }
-/* BOTÓN - CLOSE */
+/* BOTÓN - CERRAR */
 .socialmediacontent-button-1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40px;
     height: 40px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .socialmediacontent-button-1:hover {
@@ -3667,7 +3644,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -3677,6 +3654,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN - CERRAR - TEXT */
 .socialmediacontent-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -3685,6 +3663,8 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -3719,6 +3699,7 @@ body.is-section .logo {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
 }
 .socialmediacontent-wrapper {
     width: 100%;
@@ -3743,6 +3724,7 @@ body.is-section .logo {
 .socialmediacontent-head {
     width: 100%;
     margin: 0px;
+    padding: 0px;
 }
 .socialmediacontent-row {
     vertical-align: middle;
@@ -3784,6 +3766,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 10px;
 }
+/* ENCABEZADOS - SUBTITULOS */
 .socialmediacontent-subtitle {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
@@ -3798,6 +3781,7 @@ body.is-section .logo {
 .socialmediacontent-body {
     width: 100%;
     margin: 0px;
+    padding: 0px;
 }
 /* BOTONES - TIKTOK / YOUTUBE */
 .socialmediacontent-button2-1 {
@@ -3844,12 +3828,13 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTONES - TIKTOK / YOUTUBE - TEXT */
 .socialmediacontent-tiktok,
 .socialmediacontent-youtube {
+    display: flex;
     width: 100%;
     height: 40px;
     box-sizing: border-box;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: #ff00a9 !important;
@@ -3903,16 +3888,17 @@ body.is-section .logo {
     margin: 0px;
     padding: 10px;
 }
+/* CAJAS - TEXTO */
 .socialmediacontent-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: black !important;
     text-decoration: none;
     text-align: center;
+    margin: 0px;
+    padding: 0px;
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - CONTENEDOR */
 .socialmediacontent-notification-1 {
     position: fixed;
     top: 50%;
@@ -3928,6 +3914,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
+    margin: 0px; 
     padding: 0px;
     opacity: 0;
     pointer-events: none;
@@ -3954,10 +3941,10 @@ body.is-section .logo {
 /* NOTIFICACIÓN - BARRA */
 .socialmediacontent-notification-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
     background: #ff00a9 !important;
     border: 4px solid #d0aaff;
     border-radius: 0px;
@@ -3974,13 +3961,14 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.4;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .socialmediacontent-notification-title a {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .socialmediacontent-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -4008,6 +3996,7 @@ body.is-section .logo {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - TEXTO */
 .socialmediacontent-notification-text {
@@ -4018,6 +4007,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 15px 0;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .socialmediacontent-notification-button-1 {
@@ -4032,8 +4022,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0px auto;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .socialmediacontent-notification-button-1:hover {
@@ -4055,7 +4045,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px 20px;
     transition: border-color 0.15s ease;
 }
@@ -4065,6 +4055,8 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXT */
 .socialmediacontent-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -4082,10 +4074,15 @@ body.is-section .logo {
    CONTROL
 ====================================== */
 .socialmediacontent-container-1 { display: block; }
-.socialmediacontent-container-4 { display: block; }
 .socialmediacontent-container-1-mobile { display: none; }
+.socialmediacontent-notification-1 { display: block; }
+.socialmediacontent-notification-1-mobile { display: none; }
+.socialmediacontent-notification-bar { display: block; }
 .socialmediacontent-notification-bar-mobile { display: none; }
-.socialmediacontent-notification-4-mobile { display: none; }
+.socialmediacontent-notification-information { display: block; }
+.socialmediacontent-notification-information-mobile { display: none; }
+.socialmediacontent-notification-button-2 { display: block; }
+.socialmediacontent-notification-button-2-mobile { display: none; }
 /* ======================================
    SOCIAL MEDIA CONTENT - RESPONSIVE
 ====================================== */
@@ -4095,14 +4092,8 @@ body.is-section .logo {
     width: 90%;
 }
 }
-@media (max-width: 834px) {
-.socialmediacontent-title { font-size: 2.3rem; }
-.socialmediacontent-subtitle { font-size: 1rem; }   
-.socialmediacontent-tiktok,
-.socialmediacontent-youtube { font-size: 1rem; }
-.socialmediacontent-text { font-size: 1.05rem; }
-}
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    /* CONTENEDOR */
     .socialmediacontent-container-1-mobile {
         position: relative;
         width: 90%;
@@ -4132,16 +4123,17 @@ body.is-section .logo {
     /* BARRA */
     .socialmediacontent-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
         padding: 10px;
     }
+    /* TÍTULO */ 
     .socialmediacontent-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -4157,23 +4149,23 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-        /* BOTÓN CERRAR */
+    /* BOTÓN CERRAR */
     .socialmediacontent-button-1-mobile {
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
         width: 35px;
         height: 35px;
         box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
         border-left:   2px solid #ffffff;
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .socialmediacontent-button-1-mobile:hover {
@@ -4185,18 +4177,18 @@ body.is-section .logo {
     .socialmediacontent-button-2-mobile {
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
         height: 100%;
         box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
         background: #d0aaff;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
         transition: border-color 0.15s ease;
     }
@@ -4206,6 +4198,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN - CERRAR - TEXT */
     .socialmediacontent-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -4213,13 +4206,15 @@ body.is-section .logo {
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        margin: 0px;
+        padding: 10px;
         line-height: 1;
         transition: filter 0.15s ease;
     }
     .socialmediacontent-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTENIDO 1 */
+    /* CONTENEDOR */
     .socialmediacontent-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -4230,7 +4225,6 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    /* CONTENIDO 2 */
     .socialmediacontent-container-4-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -4249,8 +4243,9 @@ body.is-section .logo {
         width: 100%;
         box-sizing: border-box;
         margin: 0px;
+        padding: 0px;
     }
-       /* BOTONES TIKTOK / YOUTUBE */
+    /* BOTONES TIKTOK / YOUTUBE */
     .socialmediacontent-button2-1-mobile {
         display: block;
         width: fit-content;
@@ -4262,8 +4257,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto 10px auto;
-        padding: 0;
+        margin: 0px auto 10px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .socialmediacontent-button2-1-mobile:hover {
@@ -4293,6 +4288,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTONES TIKTOK / YOUTUBE - TEXT */
     .socialmediacontent-button2-text-mobile {
         display: block;
         width: auto;
@@ -4308,7 +4304,7 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         font-weight: bold;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         cursor: pointer;
         transition: filter 0.15s ease;
@@ -4347,7 +4343,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
     }
     /* TEXTO */
@@ -4357,6 +4353,8 @@ body.is-section .logo {
         color: black !important;
         text-decoration: none;
         text-align: center;
+        margin: 0px;
+        padding: 10px;
     }
     /* DIVISOR */
     .socialmediacontent-divider-mobile {
@@ -4365,9 +4363,7 @@ body.is-section .logo {
         border-top: 3px solid #ff00a9 !important;
         margin: 0 0 10px 0;
     }
-    /* ======================================
-       NOTIFICACIÓN - MOBILE
-    ====================================== */
+    /* NOTIFICACIÓN - CONTENEDOR */
     .socialmediacontent-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -4383,6 +4379,7 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
+        margin: 0px;
         padding: 0px;
         opacity: 0;
         pointer-events: none;
@@ -4409,16 +4406,17 @@ body.is-section .logo {
     /* BARRA */
     .socialmediacontent-notification-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #ff00a9 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
         padding: 4px 12px;
     }
+    /* TÍTULO */
     .socialmediacontent-notification-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -4428,13 +4426,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: left;
         line-height: 1.4;
-        margin: 0;
+        margin: 0px;
+        padding: 0px;
     }
     .socialmediacontent-notification-title-mobile a {
         color: #2a0070 !important;
         text-decoration: none;
     }
-    /* CONTENIDO */
+    /* CONTENEDOR */
     .socialmediacontent-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -4457,12 +4456,13 @@ body.is-section .logo {
         margin: 0px;
         padding: 20px;
     }
-/* NOTIFICACIÓN - INFORMACIÓN */
-.upcomingrelease-notification-information-mobile {
-    width: 100%;
-    box-sizing: border-box;
-    margin: 0px;
-}    
+    /* NOTIFICACIÓN - INFORMACIÓN */
+    .upcomingrelease-notification-information-mobile {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }    
     /* TEXTO */
     .socialmediacontent-notification-text-mobile {
         font-family: 'Share Tech Mono', monospace;
@@ -4472,22 +4472,23 @@ body.is-section .logo {
         text-align: center;
         line-height: 1.5;
         margin: 0 0 15px 0;
+        padding: 0px;
     }
-       /* BOTÓN PERMANECER */
+    /* BOTÓN - PERMANECER */
     .socialmediacontent-notification-button-1-mobile {
         display: flex;
-        justify-content: center;
-        align-items: center;
         width: fit-content;
         box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
         border-left:   2px solid #ffffff;
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .socialmediacontent-notification-button-1-mobile:hover {
@@ -4509,7 +4510,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -4519,6 +4520,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN - PERMANECER - TEXT */
     .socialmediacontent-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -4526,18 +4528,27 @@ body.is-section .logo {
         color: #2a0070 !important;
         text-transform: uppercase;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;       
         cursor: pointer;
         transition: filter 0.15s ease;
     }
     .socialmediacontent-notification-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTROL */
+    /* ======================================
+       CONTROL
+    ====================================== */    
     .socialmediacontent-container-1 { display: none; }
-    .socialmediacontent-container-4 { display: none; }
     .socialmediacontent-container-1-mobile { display: block; }
+    .socialmediacontent-notification-1 { display: none; }
+    .socialmediacontent-notification-1-mobile { display: block; }
+    .socialmediacontent-notification-bar { display: none; }
     .socialmediacontent-notification-bar-mobile { display: block; }
-    .socialmediacontent-notification-4-mobile { display: block; }
+    .socialmediacontent-notification-information { display: none; }
+    .socialmediacontent-notification-information-mobile { display: block; }
+    .socialmediacontent-notification-button-2 { display: none; }
+    .socialmediacontent-notification-button-2-mobile { display: block; }
 }
 @media (max-width: 360px) {
     .socialmediacontent-title-mobile { font-size: 1.5rem; }
@@ -4627,6 +4638,7 @@ body.is-section .logo {
     margin: 0px 0px 10px 0px;
     padding: 0px;
 }
+/* TEXTO */
 .newsletter-text {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
@@ -4637,7 +4649,7 @@ body.is-section .logo {
     margin: 0px;
     padding: 0px;
 }
-/* BOTÓN */
+/* BOTÓN LET´S WORK TOGETHER */
 .newsletter-button-1 {
     display: block;
     width: fit-content;
@@ -4680,6 +4692,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN LET´S WORK TOGETHER - TEXT */
 .newsletter-button-text {
     display: block;
     width: auto;
@@ -4775,6 +4788,7 @@ body.is-section .logo {
         margin: 0px 0px 10px 0px;
         padding: 0px;
     }
+     /* TEXTO */
     .newsletter-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1.05rem;
@@ -4785,7 +4799,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 0px;
     }
-    /* BOTÓN */
+    /* BOTÓN LET´S WORK TOGETHER */
     .newsletter-button-1-mobile {
         display: block;
         width: fit-content;
@@ -4828,6 +4842,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN LET´S WORK TOGETHER - TEXT */
     .newsletter-button-text-mobile {
         display: block;
         width: auto;
@@ -4857,12 +4872,32 @@ body.is-section .logo {
 }
 @media (max-width: 360px) {
     .newsletter-title-mobile { font-size: 1.5rem; }
-    .newsletter-text-mobile { font-size: 1rem; }
 }
 @media (max-width: 320px) {
     .newsletter-title-mobile { font-size: 1.3rem; }
     .newsletter-text-mobile { font-size: 0.8rem; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
