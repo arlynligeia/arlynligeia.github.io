@@ -4060,7 +4060,7 @@ body.is-section .logo {
 .socialmediacontent-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
@@ -4879,30 +4879,10 @@ body.is-section .logo {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    ALL SOCIAL MEDIA - PC
 ====================================== */
+/* CONTENEDOR */
 .allsocialmedia-container-1 {
     position: relative;
     width: 600px;
@@ -4950,7 +4930,8 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.6;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .allsocialmedia-title a {
     color: #ff00a9 !important;
@@ -4959,19 +4940,19 @@ body.is-section .logo {
 /* BOTÓN - CERRAR */
 .allsocialmedia-button-1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 40px;
     height: 40px;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
     border-left:   2px solid #ffffff;
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .allsocialmedia-button-1:hover {
@@ -4993,7 +4974,7 @@ body.is-section .logo {
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: border-color 0.15s ease;
 }
@@ -5003,6 +4984,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* BOTÓN - CERRAR - TEXT */
 .allsocialmedia-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -5011,6 +4993,8 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -5074,6 +5058,7 @@ body.is-section .logo {
     background: rgba(0, 255, 255, 0.15);
     border-color: #00FFFF;
 }
+/* LINK */
 .allsocialmedia-link {
     display: block;
     background: transparent !important;
@@ -5133,9 +5118,7 @@ body.is-section .logo {
     margin: 8px 0px 0px 0px;
     padding: 0px;
 }
-/* ======================================
-   NOTIFICACIÓN - PC
-====================================== */
+/* NOTIFICACIÓN - PC */
 .allsocialmedia-notification-1 {
     position: fixed;
     top: 50%;
@@ -5151,6 +5134,7 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
+    margin: 0px;
     padding: 0px;
     opacity: 0;
     pointer-events: none;
@@ -5196,13 +5180,14 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: left;
     line-height: 1.4;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .allsocialmedia-notification-title a {
     color: #2a0070 !important;
     text-decoration: none;
 }
-/* NOTIFICACIÓN - CONTENIDO */
+/* NOTIFICACIÓN - CONTENEDOR */
 .allsocialmedia-notification-3 {
     width: 100%;
     box-sizing: border-box;
@@ -5230,6 +5215,7 @@ body.is-section .logo {
     width: 100%;
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - TEXTO */
 .allsocialmedia-notification-text {
@@ -5240,6 +5226,7 @@ body.is-section .logo {
     text-align: center;
     line-height: 1.5;
     margin: 0 0 15px 0;
+    padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .allsocialmedia-notification-button-1 {
@@ -5254,8 +5241,8 @@ body.is-section .logo {
     border-right:  2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0 auto;
-    padding: 0;
+    margin: 0px auto;
+    padding: 0px;
     transition: border-color 0.15s ease;
 }
 .allsocialmedia-notification-button-1:hover {
@@ -5266,18 +5253,18 @@ body.is-section .logo {
 }
 .allsocialmedia-notification-button-2 {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
     border-left:   2px solid #e6ccff;
     border-right:  2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
-    margin: 0;
+    margin: 0px;
     padding: 10px 20px;
     transition: border-color 0.15s ease;
 }
@@ -5287,6 +5274,7 @@ body.is-section .logo {
     border-right-color:  #e6ccff;
     border-bottom-color: #e6ccff;
 }
+/* NOTIFICACIÓN - BOTÓN PERMANECER - TEXT */
 .allsocialmedia-notification-button-text {
     display: block;
     font-family: 'Orbitron', sans-serif;
@@ -5294,6 +5282,8 @@ body.is-section .logo {
     color: #2a0070 !important;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -5307,9 +5297,16 @@ body.is-section .logo {
 .allsocialmedia-container-1-mobile { display: none; }
 .allsocialmedia-notification-1 { display: block; }
 .allsocialmedia-notification-1-mobile { display: none; }
+.allsocialmedia-notification-bar { display: block; }
+.allsocialmedia-notification-bar-mobile { display: none; }
+.allsocialmedia-notification-information { display: block; }
+.allsocialmedia-notification-information-mobile { display: none; }
+.allsocialmedia-notification-button-2 { display: block; }
+.allsocialmedia-notification-button-2-mobile { display: none; }
 /* ======================================
    RESPONSIVE: ALL SOCIAL MEDIA
 ====================================== */
+/* CONTENEDOR */
 @media (max-width: 768px) {
     .allsocialmedia-container-1-mobile {
         position: relative;
@@ -5350,6 +5347,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 10px;
     }
+    /* TÍTULO */ 
     .allsocialmedia-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -5365,23 +5363,23 @@ body.is-section .logo {
         color: #ff00a9 !important;
         text-decoration: none;
     }
-    /* BOTÓN CERRAR */
+    /* BOTÓN - CERRAR */
     .allsocialmedia-button-1-mobile {
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
         width: 35px;
         height: 35px;
         box-sizing: border-box;
+        justify-content: center;
+        align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
         border-left:   2px solid #ffffff;
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0;
-        padding: 0;
+        margin: 0px;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .allsocialmedia-button-1-mobile:hover {
@@ -5404,7 +5402,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px;
         transition: border-color 0.15s ease;
     }
@@ -5414,6 +5412,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+      /* BOTÓN - CERRAR - TEXT */
     .allsocialmedia-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -5422,12 +5421,14 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;
         transition: filter 0.15s ease;
     }
     .allsocialmedia-button-text-mobile:hover {
         filter: brightness(1.1);
     }
-    /* CONTENIDO */
+    /* CONTENEDOR */
     .allsocialmedia-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -5486,6 +5487,7 @@ body.is-section .logo {
         background: rgba(0, 255, 255, 0.15);
         border-color: #00FFFF;
     }
+    /* LINK */
     .allsocialmedia-link-mobile {
         display: block;
         background: transparent !important;
@@ -5547,9 +5549,7 @@ body.is-section .logo {
         margin: 5px 0px 0px 0px;
         padding: 0px;
     }
-    /* ======================================
-       NOTIFICACIÓN - MOBILE
-    ====================================== */
+    /* NOTIFICACIÓN - MOBILE */
     .allsocialmedia-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -5565,6 +5565,7 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
+        margin: 0px;
         padding: 0px;
         opacity: 0;
         pointer-events: none;
@@ -5601,6 +5602,7 @@ body.is-section .logo {
         margin: 0px;
         padding: 4px 12px;
     }
+    /* NOTIFICACIÓN - TÍTULO */
     .allsocialmedia-notification-title-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -5610,7 +5612,8 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: left;
         line-height: 1.4;
-        margin: 0;
+        margin: 0px;
+        padding: 0px;
     }
     .allsocialmedia-notification-title-mobile a {
         color: #2a0070 !important;
@@ -5644,6 +5647,7 @@ body.is-section .logo {
         width: 100%;
         box-sizing: border-box;
         margin: 0px;
+        padding: 0px;
     }
     /* NOTIFICACIÓN - TEXTO */
     .allsocialmedia-notification-text-mobile {
@@ -5654,8 +5658,9 @@ body.is-section .logo {
         text-align: center;
         line-height: 1.5;
         margin: 0 0 15px 0;
+        padding: 0px;
     }
-    /* BOTÓN PERMANECER */
+    /* BOTÓN - PERMANECER */
     .allsocialmedia-notification-button-1-mobile {
         display: flex;
         justify-content: center;
@@ -5668,8 +5673,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .allsocialmedia-notification-button-1-mobile:hover {
@@ -5691,7 +5696,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -5701,6 +5706,7 @@ body.is-section .logo {
         border-right-color:  #e6ccff;
         border-bottom-color: #e6ccff;
     }
+    /* BOTÓN - PERMANECER - TEXT */
     .allsocialmedia-notification-button-text-mobile {
         display: block;
         font-family: 'Orbitron', sans-serif;
@@ -5717,11 +5723,37 @@ body.is-section .logo {
     /* ======================================
        CONTROL
     ====================================== */
-    .allsocialmedia-container-1 { display: none; }
-    .allsocialmedia-container-1-mobile { display: block; }
-    .allsocialmedia-notification-1 { display: none; }
-    .allsocialmedia-notification-1-mobile { display: block; }
+.allsocialmedia-container-1 { display: none; }
+.allsocialmedia-container-1-mobile { display: block; }
+.allsocialmedia-notification-1 { display: none; }
+.allsocialmedia-notification-1-mobile { display: block; }
+.allsocialmedia-notification-bar { display: none; }
+.allsocialmedia-notification-bar-mobile { display: block; }
+.allsocialmedia-notification-information { display: none; }
+.allsocialmedia-notification-information-mobile { display: block; }
+.allsocialmedia-notification-button-2 { display: none; }
+.allsocialmedia-notification-button-2-mobile { display: block; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
