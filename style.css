@@ -1531,7 +1531,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
@@ -6446,22 +6445,10 @@ body.is-section .logo {
 .universe-notification-information-mobile { display: none; }
 .universe-notification-button-2 { display: block; }
 .universe-notification-button-2-mobile { display: none; }
-
-
-
-
-
-
-
-
-
-
-
 /* ======================================
-   UNIVERSE - RESPONSIVE
+   RESPONSIVE: UNIVERSE
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .universe-container-1-mobile {
         position: relative;
         width: 90%;
@@ -6486,15 +6473,15 @@ body.is-section .logo {
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .universe-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -6510,9 +6497,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .universe-title-mobile a {
         color: #ff00a9 !important;
@@ -6551,7 +6538,7 @@ body.is-section .logo {
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -6572,10 +6559,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .universe-button-text-mobile:hover {
@@ -6617,10 +6608,10 @@ body.is-section .logo {
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
     .universe-text-end-mobile {
         margin-bottom: 0px;
@@ -6675,7 +6666,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .universe-notification-title-mobile {
@@ -6686,8 +6677,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .universe-notification-title-mobile a {
         color: #2a0070 !important;
@@ -6730,15 +6722,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .universe-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -6746,8 +6737,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .universe-notification-button-1-mobile:hover {
@@ -6757,11 +6748,9 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .universe-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -6769,7 +6758,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -6784,9 +6773,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
@@ -7502,7 +7496,6 @@ body.is-section .logo {
         box-sizing: border-box;
         background: transparent !important;
         border: 4px solid #d0aaff;
-        border-top: none;
         border-radius: 0px;
         margin: 0px;
         padding: 0px;
