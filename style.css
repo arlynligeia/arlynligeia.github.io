@@ -919,7 +919,7 @@ body.is-section .logo {
     text-decoration: none;
     text-align: left;
     line-height: 1.5;
-    margin: 0px;
+    margin: 0px 0px 10px 0px;
     padding: 0px;
     word-break: break-word;
     overflow-wrap: break-word;
@@ -931,19 +931,19 @@ body.is-section .logo {
     box-sizing: border-box;
     align-items: center;
     background: transparent !important;
-    border-top:    2px solid #ffffff;
-    border-left:   2px solid #ffffff;
-    border-right:  2px solid #8a55f0;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #8a55f0;
     border-bottom: 2px solid #8a55f0;
     border-radius: 0px;
-    margin: 0px auto;  
+    margin: 0px auto;
     padding: 0px;
     transition: border-color 0.15s ease;
 }
 .upcomingrelease-button-watch-1:hover {
-    border-top-color:    #8a55f0;
-    border-left-color:   #8a55f0;
-    border-right-color:  #ffffff;
+    border-top-color: #8a55f0;
+    border-left-color: #8a55f0;
+    border-right-color: #ffffff;
     border-bottom-color: #ffffff;
 }
 .upcomingrelease-button-watch-2 {
@@ -952,9 +952,9 @@ body.is-section .logo {
     box-sizing: border-box;
     align-items: center;
     background: #ff00a9 !important;
-    border-top:    2px solid #e6ccff;
-    border-left:   2px solid #e6ccff;
-    border-right:  2px solid #b388ff;
+    border-top: 2px solid #e6ccff;
+    border-left: 2px solid #e6ccff;
+    border-right: 2px solid #b388ff;
     border-bottom: 2px solid #b388ff;
     border-radius: 0px;
     margin: 0px;
@@ -962,9 +962,9 @@ body.is-section .logo {
     transition: border-color 0.15s ease;
 }
 .upcomingrelease-button-watch-2:hover {
-    border-top-color:    #b388ff;
-    border-left-color:   #b388ff;
-    border-right-color:  #e6ccff;
+    border-top-color: #b388ff;
+    border-left-color: #b388ff;
+    border-right-color: #e6ccff;
     border-bottom-color: #e6ccff;
 }
 /* BOTÓN VER AHORA - TEXT */
@@ -1158,6 +1158,7 @@ body.is-section .logo {
 .upcomingrelease-notification-button-text:hover {
     filter: brightness(1.1);
 }
+
 /* ======================================
    CONTROL
 ====================================== */
@@ -1171,6 +1172,7 @@ body.is-section .logo {
 .upcomingrelease-notification-information-mobile { display: none; }
 .upcomingrelease-notification-button-2 { display: block; }
 .upcomingrelease-notification-button-2-mobile { display: none; }
+
 /* ======================================
    RESPONSIVE: UPCOMINGRELEASE
 ====================================== */
@@ -1297,7 +1299,7 @@ body.is-section .logo {
     }
     .upcomingrelease-button-text-mobile:hover {
         filter: brightness(1.1);
-    }  
+    }
     /* CONTENEDOR */
     .upcomingrelease-container-3-mobile {
         width: 100%;
@@ -1375,7 +1377,7 @@ body.is-section .logo {
     .upcomingrelease-subtitle-3-mobile {
         margin-bottom: 10px;
         padding: 0px;
-    }  
+    }
     /* TEXT */
     .upcomingrelease-text-mobile {
         font-family: 'Share Tech Mono', monospace;
@@ -1384,9 +1386,71 @@ body.is-section .logo {
         text-decoration: none;
         text-align: left;
         line-height: 1.5;
+        margin: 0px 0px 10px 0px;
+        padding: 0px;
+    }
+    /* BOTÓN VER AHORA */
+    .upcomingrelease-button-watch-1-mobile {
+        display: block;
+        width: fit-content;
+        box-sizing: border-box;
+        align-items: center;
+        background: transparent !important;
+        border-top: 2px solid #ffffff;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #8a55f0;
+        border-bottom: 2px solid #8a55f0;
+        border-radius: 0px;
+        margin: 0px auto;
+        padding: 0px;
+        transition: border-color 0.15s ease;
+    }
+    .upcomingrelease-button-watch-1-mobile:hover {
+        border-top-color: #8a55f0;
+        border-left-color: #8a55f0;
+        border-right-color: #ffffff;
+        border-bottom-color: #ffffff;
+    }
+    .upcomingrelease-button-watch-2-mobile {
+        display: block;
+        width: fit-content;
+        box-sizing: border-box;
+        align-items: center;
+        background: #ff00a9 !important;
+        border-top: 2px solid #e6ccff;
+        border-left: 2px solid #e6ccff;
+        border-right: 2px solid #b388ff;
+        border-bottom: 2px solid #b388ff;
+        border-radius: 0px;
+        margin: 0px;
+        padding: 10px 20px;
+        transition: border-color 0.15s ease;
+    }
+    .upcomingrelease-button-watch-2-mobile:hover {
+        border-top-color: #b388ff;
+        border-left-color: #b388ff;
+        border-right-color: #e6ccff;
+        border-bottom-color: #e6ccff;
+    }
+    /* BOTÓN VER AHORA - TEXT */
+    .upcomingrelease-button-watch-text-mobile {
+        display: block;
+        font-family: 'Orbitron', sans-serif;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 1;
         margin: 0px;
         padding: 0px;
-    }   
+        cursor: pointer;
+        transition: filter 0.15s ease;
+    }
+    .upcomingrelease-button-watch-text:hover {
+        filter: brightness(1.1);
+    }
     /* NOTIFICACIÓN - CONTENEDOR */
     .upcomingrelease-notification-1-mobile {
         position: fixed;
@@ -1497,7 +1561,7 @@ body.is-section .logo {
         line-height: 1.5;
         margin: 0 0 10px 0;
         padding: 0px;
-    }   
+    }
     /* NOTIFICACIÓN - BOTÓN - PERMANECER */
     .upcomingrelease-notification-button-1-mobile {
         display: block;
@@ -1559,7 +1623,7 @@ body.is-section .logo {
     }
     .upcomingrelease-notification-button-text-mobile:hover {
         filter: brightness(1.1);
-    }   
+    }
     /* ======================================
        CONTROL
     ====================================== */
@@ -1581,7 +1645,6 @@ body.is-section .logo {
     .upcomingrelease-title-mobile { font-size: 1.3rem; }
     .upcomingrelease-text-mobile { font-size: 0.8rem; }
 }
-
 
 
 
