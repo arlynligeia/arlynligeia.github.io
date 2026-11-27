@@ -1,5 +1,5 @@
 body {
-    background-image: url("assets/AL SITIO WEB. 10 Background PC.png");
+    background-image: url("assets/AL WS. 11 - 2026 Background PC.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@ body {
 ====================================== */
 @media (max-width: 768px) {
     body {
-        background-image: url("assets/AL SITIO WEB. 11 Background MOBILE.png");
+        background-image: url("assets/AL WS. 12 - Background Mobile.png");
     }
 }
 
@@ -474,6 +474,12 @@ body.is-section .logo {
 }
 
 
+
+
+
+
+
+
 /* ======================================
    HOME - PC
 ====================================== */
@@ -693,16 +699,9 @@ body.is-section .logo {
 }
 
 
-
-
-
-
-
-
 /* ======================================
    UPCOMINGRELEASE - PC
 ====================================== */
-/* CONTENEDOR */
 .upcomingrelease-container-1 {
     position: relative;
     width: 850px;
@@ -739,7 +738,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;
 }
 /* TÍTULO */
 .upcomingrelease-title {
@@ -750,7 +749,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -789,7 +788,7 @@ body.is-section .logo {
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
-    background: #d0aaff;
+    background: #d0aaff !important;
     border-top: 2px solid #e6ccff;
     border-left: 2px solid #e6ccff;
     border-right: 2px solid #b388ff;
@@ -810,9 +809,11 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
     margin: 0px;
     padding: 0px;
@@ -890,11 +891,12 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1;
     margin: 0 0 10px 0;
     padding: 0px;
 }
-.upcomingrelease-subtitle-2 {
+.upcomingrelease-subtitle-2,
+.upcomingrelease-subtitle-3 {
     display: block;
     font-family: 'Doto', sans-serif;
     font-size: 1.4rem;
@@ -902,9 +904,12 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
+    line-height: 1;
+    margin: 0 0 5px 0;
     padding: 0px;
+}
+.upcomingrelease-subtitle-3 {
+    margin-bottom: 10px;
 }
 /* COLUMNA 2 - TEXT */
 .upcomingrelease-text {
@@ -918,6 +923,68 @@ body.is-section .logo {
     padding: 0px;
     word-break: break-word;
     overflow-wrap: break-word;
+}
+/* BOTÓN VER AHORA */
+.upcomingrelease-button-watch-1 {
+    display: block;
+    width: fit-content;
+    box-sizing: border-box;
+    align-items: center;
+    background: transparent !important;
+    border-top:    2px solid #ffffff;
+    border-left:   2px solid #ffffff;
+    border-right:  2px solid #8a55f0;
+    border-bottom: 2px solid #8a55f0;
+    border-radius: 0px;
+    margin: 0px auto;  
+    padding: 0px;
+    transition: border-color 0.15s ease;
+}
+.upcomingrelease-button-watch-1:hover {
+    border-top-color:    #8a55f0;
+    border-left-color:   #8a55f0;
+    border-right-color:  #ffffff;
+    border-bottom-color: #ffffff;
+}
+.upcomingrelease-button-watch-2 {
+    display: block;
+    width: fit-content;
+    box-sizing: border-box;
+    align-items: center;
+    background: #ff00a9 !important;
+    border-top:    2px solid #e6ccff;
+    border-left:   2px solid #e6ccff;
+    border-right:  2px solid #b388ff;
+    border-bottom: 2px solid #b388ff;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 10px 20px;
+    transition: border-color 0.15s ease;
+}
+.upcomingrelease-button-watch-2:hover {
+    border-top-color:    #b388ff;
+    border-left-color:   #b388ff;
+    border-right-color:  #e6ccff;
+    border-bottom-color: #e6ccff;
+}
+/* BOTÓN VER AHORA - TEXT */
+.upcomingrelease-button-watch-text {
+    display: block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white !important;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+}
+.upcomingrelease-button-watch-text:hover {
+    filter: brightness(1.1);
 }
 /* NOTIFICACIÓN - CONTENEDOR */
 .upcomingrelease-notification-1 {
@@ -970,7 +1037,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .upcomingrelease-notification-title {
@@ -981,7 +1048,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -1026,15 +1093,14 @@ body.is-section .logo {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
     padding: 0px;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .upcomingrelease-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top: 2px solid #ffffff;
@@ -1053,11 +1119,9 @@ body.is-section .logo {
     border-bottom-color: #ffffff;
 }
 .upcomingrelease-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top: 2px solid #e6ccff;
@@ -1080,8 +1144,11 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
     margin: 0px;
     padding: 0px;
@@ -1108,7 +1175,6 @@ body.is-section .logo {
    RESPONSIVE: UPCOMINGRELEASE
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .upcomingrelease-container-1-mobile {
         position: relative;
         width: 90%;
@@ -1138,10 +1204,10 @@ body.is-section .logo {
     /* BARRA */
     .upcomingrelease-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -1157,7 +1223,7 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
         padding: 0px;
     }
@@ -1219,9 +1285,11 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
         margin: 0px;
         padding: 0px;
@@ -1229,8 +1297,8 @@ body.is-section .logo {
     }
     .upcomingrelease-button-text-mobile:hover {
         filter: brightness(1.1);
-    }
-    /* CONTENIDO */
+    }  
+    /* CONTENEDOR */
     .upcomingrelease-container-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -1260,9 +1328,9 @@ body.is-section .logo {
         padding: 0px;
     }
     .upcomingrelease-image-mobile img {
+        display: block;
         width: 100%;
         height: auto;
-        display: block;
         border-top: 2px solid #8a55f0;
         border-left: 2px solid #8a55f0;
         border-right: 2px solid #ffffff;
@@ -1287,34 +1355,39 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
-        line-height: 1.5;
+        line-height: 1;
         margin: 0 0 10px 0;
         padding: 0px;
     }
-    .upcomingrelease-subtitle-2-mobile {
+    .upcomingrelease-subtitle-2-mobile,
+    .upcomingrelease-subtitle-3-mobile {
         display: block;
         font-family: 'Doto', sans-serif;
         font-size: 1.2rem;
-        color: #ffffff !important;
+        color: white !important;
         text-decoration: none;
         text-transform: uppercase;
         text-align: center;
-        line-height: 1.5;
-        margin: 0 0 10px 0;
+        line-height: 1;
+        margin: 0 0 5px 0;
         padding: 0px;
     }
+    .upcomingrelease-subtitle-3-mobile {
+        margin-bottom: 10px;
+        padding: 0px;
+    }  
     /* TEXT */
     .upcomingrelease-text-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0px;
         padding: 0px;
-    }
-    /* NOTIFICACIÓN */
+    }   
+    /* NOTIFICACIÓN - CONTENEDOR */
     .upcomingrelease-notification-1-mobile {
         position: fixed;
         top: 50%;
@@ -1365,7 +1438,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .upcomingrelease-notification-title-mobile {
@@ -1376,7 +1449,7 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
+        line-height: 1;
         margin: 0px;
         padding: 0px;
     }
@@ -1384,7 +1457,7 @@ body.is-section .logo {
         color: #2a0070 !important;
         text-decoration: none;
     }
-    /* NOTIFICACIÓN - CONTENIDO */
+    /* NOTIFICACIÓN - CONTENEDOR */
     .upcomingrelease-notification-3-mobile {
         width: 100%;
         box-sizing: border-box;
@@ -1422,16 +1495,15 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
-    }
+    }   
     /* NOTIFICACIÓN - BOTÓN - PERMANECER */
     .upcomingrelease-notification-button-1-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
+        align-items: center;
         background: transparent !important;
         border-top: 2px solid #ffffff;
         border-left: 2px solid #ffffff;
@@ -1449,12 +1521,10 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .upcomingrelease-notification-button-2-mobile {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
+        align-items: center;
         background: #d0aaff !important;
         border-top: 2px solid #e6ccff;
         border-left: 2px solid #e6ccff;
@@ -1476,8 +1546,11 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
         margin: 0px;
         padding: 0px;
@@ -1486,7 +1559,7 @@ body.is-section .logo {
     }
     .upcomingrelease-notification-button-text-mobile:hover {
         filter: brightness(1.1);
-    }
+    }   
     /* ======================================
        CONTROL
     ====================================== */
@@ -1508,6 +1581,26 @@ body.is-section .logo {
     .upcomingrelease-title-mobile { font-size: 1.3rem; }
     .upcomingrelease-text-mobile { font-size: 0.8rem; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ======================================
