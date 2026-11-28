@@ -10638,7 +10638,7 @@ text-align: right;
     margin: 0px 0px 20px 0px;
     padding: 0px;
 }
-.values-box-1:last-of-type {
+.values-box-1:nth-last-child(1 of .values-box-1) {
     margin-bottom: 0px;
 }
 .values-box-2 {
@@ -11058,9 +11058,9 @@ text-align: right;
         margin: 0 0 20px;
         padding: 0px;
     }
-    .values-box-1-mobile:last-of-type {
-        margin-bottom: 0px;
-    }
+.values-box-1-mobile:nth-last-child(1 of .values-box-1-mobile) {
+    margin-bottom: 0px;
+}
     .values-box-2-mobile {
         display: block;
         width: 100%;
