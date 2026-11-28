@@ -18316,7 +18316,6 @@ text-align: right;
 /* ======================================
    BE MY PATRON - PC
 ====================================== */
-/* CONTENEDOR */
 .bemypatron-container-1 {
     position: relative;
     width: 850px;
@@ -18353,7 +18352,7 @@ text-align: right;
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;   
 }
 /* TÍTULO */
 .bemypatron-title {
@@ -18364,9 +18363,9 @@ text-align: right;
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .bemypatron-title a {
     color: #ff00a9 !important;
@@ -18388,7 +18387,7 @@ text-align: right;
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .bemypatron-button-1:hover {
     border-top-color:    #8a55f0;
@@ -18411,7 +18410,7 @@ text-align: right;
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .bemypatron-button-2:hover {
     border-top-color:    #b388ff;
@@ -18428,8 +18427,10 @@ text-align: right;
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .bemypatron-button-text:hover {
     filter: brightness(1.1);
@@ -18465,7 +18466,8 @@ text-align: right;
 }
 /* TEXTO */
 .bemypatron-text,
-.bemypatron-text-end {
+.bemypatron-text-end,
+.bemypatron-text-end-2 {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: #00FF00 !important;
@@ -18475,7 +18477,11 @@ text-align: right;
     margin: 0 0 10px 0;
     padding: 0px;
 }
-.bemypatron-text-end {
+.bemypatron-text-end,
+.bemypatron-text-end-2 {
+    text-align: right;
+}    
+.bemypatron-text-end-2 {
     margin-bottom: 0px;
 }
 /* NOTIFICACIÓN - CONTENEDOR */
@@ -18497,7 +18503,7 @@ text-align: right;
     padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;    
 }
 .bemypatron-notification-1.show {
     opacity: 1;
@@ -18528,7 +18534,7 @@ text-align: right;
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .bemypatron-notification-title {
@@ -18539,7 +18545,7 @@ text-align: right;
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -18589,10 +18595,9 @@ text-align: right;
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .bemypatron-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
@@ -18611,11 +18616,9 @@ text-align: right;
     border-bottom-color: #ffffff;
 }
 .bemypatron-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
@@ -18638,9 +18641,14 @@ text-align: right;
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -18661,10 +18669,9 @@ text-align: right;
 .bemypatron-notification-button-2 { display: block; }
 .bemypatron-notification-button-2-mobile { display: none; }
 /* ======================================
-   BE MY PATRON - RESPONSIVE
+   RESPONSIVE: BE MY PATRON
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .bemypatron-container-1-mobile {
         position: relative;
         width: 90%;
@@ -18689,15 +18696,15 @@ text-align: right;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .bemypatron-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -18713,9 +18720,9 @@ text-align: right;
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .bemypatron-title-mobile a {
         color: #ff00a9 !important;
@@ -18754,7 +18761,7 @@ text-align: right;
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -18775,10 +18782,14 @@ text-align: right;
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .bemypatron-button-text-mobile:hover {
@@ -18815,17 +18826,22 @@ text-align: right;
     }
     /* TEXTO */
     .bemypatron-text-mobile,
-    .bemypatron-text-end-mobile {
+    .bemypatron-text-end-mobile,
+    .bemypatron-text-end-2-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
-    .bemypatron-text-end-mobile {
+    .bemypatron-text-end-mobile,
+    .bemypatron-text-end-2-mobile {
+        text-align: right;
+    }   
+    .bemypatron-text-end-2-mobile {
         margin-bottom: 0px;
     }  
     /* NOTIFICACIÓN - CONTENEDOR */
@@ -18878,7 +18894,7 @@ text-align: right;
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .bemypatron-notification-title-mobile {
@@ -18889,8 +18905,9 @@ text-align: right;
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .bemypatron-notification-title-mobile a {
         color: #2a0070 !important;
@@ -18933,15 +18950,14 @@ text-align: right;
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .bemypatron-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -18949,8 +18965,8 @@ text-align: right;
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .bemypatron-notification-button-1-mobile:hover {
@@ -18960,11 +18976,9 @@ text-align: right;
         border-bottom-color: #ffffff;
     }
     .bemypatron-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -18972,7 +18986,7 @@ text-align: right;
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -18987,9 +19001,14 @@ text-align: right;
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
