@@ -6248,7 +6248,8 @@ body.is-section .logo {
 }
 /* TEXTO */
 .universe-text,
-.universe-text-end {
+.universe-text-end,
+.universe-text-end-2 {
     font-family: 'Share Tech Mono', monospace;
     font-size: 1.25rem;
     color: #00FF00 !important;
@@ -6258,7 +6259,11 @@ body.is-section .logo {
     margin: 0 0 10px 0;
     padding: 0px;
 }
-.universe-text-end {
+.universe-text-end,
+.universe-text-end-2 {
+text-align: right;
+}    
+.universe-text-end-2 {
     margin-bottom: 0px;
 }
 /* NOTIFICACIÓN - CONTENEDOR */
@@ -6603,7 +6608,8 @@ body.is-section .logo {
     }
     /* TEXTO */
     .universe-text-mobile,
-    .universe-text-end-mobile {
+    .universe-text-end-mobile,
+    .universe-text-end-2-mobile {
         font-family: 'Share Tech Mono', monospace;
         font-size: 1.05rem;
         color: #00FF00 !important;
@@ -6613,7 +6619,11 @@ body.is-section .logo {
         margin: 0 0 10px 0;
         padding: 0px;      
     }
-    .universe-text-end-mobile {
+    .universe-text-end-mobile,
+    .universe-text-end-2-mobile {
+        text-align: right;
+    }   
+    .universe-text-end-2-mobile {
         margin-bottom: 0px;
     }  
     /* NOTIFICACIÓN - CONTENEDOR */
@@ -6808,15 +6818,6 @@ body.is-section .logo {
     .universe-title-mobile { font-size: 1.3rem; }
     .universe-text-mobile { font-size: 0.8rem; }
 }
-
-
-
-
-
-
-
-
-
 
 
 /* ======================================
@@ -7231,7 +7232,7 @@ body.is-section .logo {
         border-right: 2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 40px auto 40px auto;
+        margin: 80px auto 40px auto;
         padding: 0px;
     }
     .biography-container-2-mobile {
@@ -7615,20 +7616,9 @@ body.is-section .logo {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /* ======================================
    ABOUT ARLYN LIGEIA - PC
 ====================================== */
-/* CONTENEDOR */
 .aboutarlynligeia-container-1 {
     position: relative;
     width: 850px;
@@ -7665,7 +7655,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;   
 }
 /* TÍTULO */
 .aboutarlynligeia-title {
@@ -7676,9 +7666,9 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .aboutarlynligeia-title a {
     color: #ff00a9 !important;
@@ -7700,7 +7690,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .aboutarlynligeia-button-1:hover {
     border-top-color:    #8a55f0;
@@ -7723,7 +7713,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .aboutarlynligeia-button-2:hover {
     border-top-color:    #b388ff;
@@ -7740,8 +7730,10 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .aboutarlynligeia-button-text:hover {
     filter: brightness(1.1);
@@ -7809,7 +7801,7 @@ body.is-section .logo {
     padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;    
 }
 .aboutarlynligeia-notification-1.show {
     opacity: 1;
@@ -7840,7 +7832,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .aboutarlynligeia-notification-title {
@@ -7851,7 +7843,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -7901,10 +7893,9 @@ body.is-section .logo {
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .aboutarlynligeia-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
@@ -7923,11 +7914,9 @@ body.is-section .logo {
     border-bottom-color: #ffffff;
 }
 .aboutarlynligeia-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
@@ -7950,9 +7939,14 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -7973,10 +7967,9 @@ body.is-section .logo {
 .aboutarlynligeia-notification-button-2 { display: block; }
 .aboutarlynligeia-notification-button-2-mobile { display: none; }
 /* ======================================
-   ABOUT ARLYN LIGEIA - RESPONSIVE
+   RESPONSIVE: ABOUT ARLYN LIGEIA
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .aboutarlynligeia-container-1-mobile {
         position: relative;
         width: 90%;
@@ -8001,15 +7994,15 @@ body.is-section .logo {
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .aboutarlynligeia-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -8025,9 +8018,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .aboutarlynligeia-title-mobile a {
         color: #ff00a9 !important;
@@ -8066,7 +8059,7 @@ body.is-section .logo {
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -8087,10 +8080,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .aboutarlynligeia-button-text-mobile:hover {
@@ -8132,10 +8129,10 @@ body.is-section .logo {
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
     .aboutarlynligeia-text-end-mobile {
         margin-bottom: 0px;
@@ -8190,7 +8187,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .aboutarlynligeia-notification-title-mobile {
@@ -8201,8 +8198,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .aboutarlynligeia-notification-title-mobile a {
         color: #2a0070 !important;
@@ -8245,15 +8243,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .aboutarlynligeia-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -8261,8 +8258,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .aboutarlynligeia-notification-button-1-mobile:hover {
@@ -8272,11 +8269,9 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .aboutarlynligeia-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -8284,7 +8279,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -8299,9 +8294,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
@@ -8334,7 +8334,6 @@ body.is-section .logo {
 /* ======================================
    PURPOSE - PC
 ====================================== */
-/* CONTENEDOR */
 .purpose-container-1 {
     position: relative;
     width: 850px;
@@ -8371,7 +8370,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;   
 }
 /* TÍTULO */
 .purpose-title {
@@ -8382,9 +8381,9 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .purpose-title a {
     color: #ff00a9 !important;
@@ -8406,7 +8405,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .purpose-button-1:hover {
     border-top-color:    #8a55f0;
@@ -8429,7 +8428,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .purpose-button-2:hover {
     border-top-color:    #b388ff;
@@ -8446,8 +8445,10 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .purpose-button-text:hover {
     filter: brightness(1.1);
@@ -8515,7 +8516,7 @@ body.is-section .logo {
     padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;    
 }
 .purpose-notification-1.show {
     opacity: 1;
@@ -8546,7 +8547,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .purpose-notification-title {
@@ -8557,7 +8558,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -8607,10 +8608,9 @@ body.is-section .logo {
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .purpose-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
@@ -8629,11 +8629,9 @@ body.is-section .logo {
     border-bottom-color: #ffffff;
 }
 .purpose-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
@@ -8656,9 +8654,14 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -8679,10 +8682,9 @@ body.is-section .logo {
 .purpose-notification-button-2 { display: block; }
 .purpose-notification-button-2-mobile { display: none; }
 /* ======================================
-   PURPOSE - RESPONSIVE
+   RESPONSIVE: PURPOSE
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .purpose-container-1-mobile {
         position: relative;
         width: 90%;
@@ -8707,15 +8709,15 @@ body.is-section .logo {
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .purpose-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -8731,9 +8733,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .purpose-title-mobile a {
         color: #ff00a9 !important;
@@ -8772,7 +8774,7 @@ body.is-section .logo {
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -8793,10 +8795,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .purpose-button-text-mobile:hover {
@@ -8838,10 +8844,10 @@ body.is-section .logo {
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
     .purpose-text-end-mobile {
         margin-bottom: 0px;
@@ -8896,7 +8902,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .purpose-notification-title-mobile {
@@ -8907,8 +8913,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .purpose-notification-title-mobile a {
         color: #2a0070 !important;
@@ -8951,15 +8958,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .purpose-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -8967,8 +8973,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .purpose-notification-button-1-mobile:hover {
@@ -8978,11 +8984,9 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .purpose-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -8990,7 +8994,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -9005,9 +9009,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
@@ -9040,7 +9049,6 @@ body.is-section .logo {
 /* ======================================
    MISSION - PC
 ====================================== */
-/* CONTENEDOR */
 .mission-container-1 {
     position: relative;
     width: 850px;
@@ -9077,7 +9085,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;   
 }
 /* TÍTULO */
 .mission-title {
@@ -9088,9 +9096,9 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .mission-title a {
     color: #ff00a9 !important;
@@ -9112,7 +9120,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .mission-button-1:hover {
     border-top-color:    #8a55f0;
@@ -9135,7 +9143,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .mission-button-2:hover {
     border-top-color:    #b388ff;
@@ -9152,8 +9160,10 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .mission-button-text:hover {
     filter: brightness(1.1);
@@ -9221,7 +9231,7 @@ body.is-section .logo {
     padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;    
 }
 .mission-notification-1.show {
     opacity: 1;
@@ -9252,7 +9262,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .mission-notification-title {
@@ -9263,7 +9273,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -9313,10 +9323,9 @@ body.is-section .logo {
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .mission-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
@@ -9335,11 +9344,9 @@ body.is-section .logo {
     border-bottom-color: #ffffff;
 }
 .mission-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
@@ -9362,9 +9369,14 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -9385,10 +9397,9 @@ body.is-section .logo {
 .mission-notification-button-2 { display: block; }
 .mission-notification-button-2-mobile { display: none; }
 /* ======================================
-   MISSION - RESPONSIVE
+   RESPONSIVE: MISSION
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .mission-container-1-mobile {
         position: relative;
         width: 90%;
@@ -9413,15 +9424,15 @@ body.is-section .logo {
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .mission-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -9437,9 +9448,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .mission-title-mobile a {
         color: #ff00a9 !important;
@@ -9478,7 +9489,7 @@ body.is-section .logo {
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -9499,10 +9510,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .mission-button-text-mobile:hover {
@@ -9544,10 +9559,10 @@ body.is-section .logo {
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
     .mission-text-end-mobile {
         margin-bottom: 0px;
@@ -9602,7 +9617,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .mission-notification-title-mobile {
@@ -9613,8 +9628,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .mission-notification-title-mobile a {
         color: #2a0070 !important;
@@ -9657,15 +9673,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .mission-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -9673,8 +9688,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .mission-notification-button-1-mobile:hover {
@@ -9684,11 +9699,9 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .mission-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -9696,7 +9709,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -9711,9 +9724,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
@@ -9746,7 +9764,6 @@ body.is-section .logo {
 /* ======================================
    VISION - PC
 ====================================== */
-/* CONTENEDOR */
 .vision-container-1 {
     position: relative;
     width: 850px;
@@ -9783,7 +9800,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 15px;
+    padding: 20px;   
 }
 /* TÍTULO */
 .vision-title {
@@ -9794,9 +9811,9 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.6;
+    line-height: 1;
     margin: 0px;
-    padding: 0px;
+    padding: 0px;    
 }
 .vision-title a {
     color: #ff00a9 !important;
@@ -9818,7 +9835,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 0px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .vision-button-1:hover {
     border-top-color:    #8a55f0;
@@ -9841,7 +9858,7 @@ body.is-section .logo {
     border-radius: 0px;
     margin: 0px;
     padding: 10px;
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease;    
 }
 .vision-button-2:hover {
     border-top-color:    #b388ff;
@@ -9858,8 +9875,10 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
-    transition: filter 0.15s ease;
+    transition: filter 0.15s ease;    
 }
 .vision-button-text:hover {
     filter: brightness(1.1);
@@ -9927,7 +9946,7 @@ body.is-section .logo {
     padding: 0px;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;    
 }
 .vision-notification-1.show {
     opacity: 1;
@@ -9958,7 +9977,7 @@ body.is-section .logo {
     border: 4px solid #d0aaff;
     border-radius: 0px;
     margin: 0px;
-    padding: 4px 12px;
+    padding: 10px;
 }
 /* NOTIFICACIÓN - TÍTULO */
 .vision-notification-title {
@@ -9969,7 +9988,7 @@ body.is-section .logo {
     text-decoration: none;
     text-transform: uppercase;
     text-align: left;
-    line-height: 1.4;
+    line-height: 1;
     margin: 0px;
     padding: 0px;
 }
@@ -10019,10 +10038,9 @@ body.is-section .logo {
 }
 /* NOTIFICACIÓN - BOTÓN PERMANECER */
 .vision-notification-button-1 {
-    display: flex;
+    display: block;
     width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: transparent !important;
     border-top:    2px solid #ffffff;
@@ -10041,11 +10059,9 @@ body.is-section .logo {
     border-bottom-color: #ffffff;
 }
 .vision-notification-button-2 {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display: block;
+    width: fit-content;
     box-sizing: border-box;
-    justify-content: center;
     align-items: center;
     background: #d0aaff !important;
     border-top:    2px solid #e6ccff;
@@ -10068,9 +10084,14 @@ body.is-section .logo {
     display: block;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.2rem;
+    font-weight: bold;
     color: #2a0070 !important;
+    text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     line-height: 1;
+    margin: 0px;
+    padding: 0px;    
     cursor: pointer;
     transition: filter 0.15s ease;
 }
@@ -10091,10 +10112,9 @@ body.is-section .logo {
 .vision-notification-button-2 { display: block; }
 .vision-notification-button-2-mobile { display: none; }
 /* ======================================
-   VISION - RESPONSIVE
+   RESPONSIVE: VISION
 ====================================== */
 @media (max-width: 600px) {
-    /* CONTENEDOR */
     .vision-container-1-mobile {
         position: relative;
         width: 90%;
@@ -10119,15 +10139,15 @@ body.is-section .logo {
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;       
     }
     /* BARRA */
     .vision-bar-mobile {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
         width: 100%;
         box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
         background: #2a0070 !important;
         border: 4px solid #d0aaff;
         border-radius: 0px;
@@ -10143,9 +10163,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.3;
+        line-height: 1;
         margin: 0px;
-        padding: 0px;
+        padding: 0px;        
     }
     .vision-title-mobile a {
         color: #ff00a9 !important;
@@ -10184,7 +10204,7 @@ body.is-section .logo {
         box-sizing: border-box;
         justify-content: center;
         align-items: center;
-        background: #d0aaff;
+        background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
         border-left:   2px solid #e6ccff;
         border-right:  2px solid #b388ff;
@@ -10205,10 +10225,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;
         color: #2a0070 !important;
         text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         transition: filter 0.15s ease;
     }
     .vision-button-text-mobile:hover {
@@ -10250,10 +10274,10 @@ body.is-section .logo {
         font-size: 1.05rem;
         color: #00FF00 !important;
         text-decoration: none;
-        line-height: 1.5;
         text-align: left;
+        line-height: 1.5;
         margin: 0 0 10px 0;
-        padding: 0px;
+        padding: 0px;      
     }
     .vision-text-end-mobile {
         margin-bottom: 0px;
@@ -10308,7 +10332,7 @@ body.is-section .logo {
         border: 4px solid #d0aaff;
         border-radius: 0px;
         margin: 0px;
-        padding: 4px 12px;
+        padding: 10px;
     }
     /* NOTIFICACIÓN - TÍTULO */
     .vision-notification-title-mobile {
@@ -10319,8 +10343,9 @@ body.is-section .logo {
         text-decoration: none;
         text-transform: uppercase;
         text-align: left;
-        line-height: 1.4;
-        margin: 0;
+        line-height: 1;
+        margin: 0px;
+        padding: 0px;
     }
     .vision-notification-title-mobile a {
         color: #2a0070 !important;
@@ -10363,15 +10388,14 @@ body.is-section .logo {
         text-transform: uppercase;
         text-align: center;
         line-height: 1.5;
-        margin: 0 0 15px 0;
+        margin: 0 0 10px 0;
         padding: 0px;
     }
     /* NOTIFICACIÓN - BOTÓN PERMANECER */
     .vision-notification-button-1-mobile {
-        display: flex;
+        display: block;
         width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: transparent !important;
         border-top:    2px solid #ffffff;
@@ -10379,8 +10403,8 @@ body.is-section .logo {
         border-right:  2px solid #8a55f0;
         border-bottom: 2px solid #8a55f0;
         border-radius: 0px;
-        margin: 0 auto;
-        padding: 0;
+        margin: 0px auto;
+        padding: 0px;
         transition: border-color 0.15s ease;
     }
     .vision-notification-button-1-mobile:hover {
@@ -10390,11 +10414,9 @@ body.is-section .logo {
         border-bottom-color: #ffffff;
     }
     .vision-notification-button-2-mobile {
-        display: flex;
-        width: 100%;
-        height: 100%;
+        display: block;
+        width: fit-content;
         box-sizing: border-box;
-        justify-content: center;
         align-items: center;
         background: #d0aaff !important;
         border-top:    2px solid #e6ccff;
@@ -10402,7 +10424,7 @@ body.is-section .logo {
         border-right:  2px solid #b388ff;
         border-bottom: 2px solid #b388ff;
         border-radius: 0px;
-        margin: 0;
+        margin: 0px;
         padding: 10px 20px;
         transition: border-color 0.15s ease;
     }
@@ -10417,9 +10439,14 @@ body.is-section .logo {
         display: block;
         font-family: 'Orbitron', sans-serif;
         font-size: 1rem;
+        font-weight: bold;     
         color: #2a0070 !important;
+        text-decoration: none;
         text-transform: uppercase;
+        text-align: center;
         line-height: 1;
+        margin: 0px;
+        padding: 0px;        
         cursor: pointer;
         transition: filter 0.15s ease;
     }
@@ -10447,7 +10474,6 @@ body.is-section .logo {
     .vision-title-mobile { font-size: 1.3rem; }
     .vision-text-mobile { font-size: 0.8rem; }
 }
-
 
 
 
