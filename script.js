@@ -425,6 +425,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ======================================
    SCRIPT: NOTIFICACIÓN UNIVERSE - PC
 ====================================== */
@@ -500,8 +515,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
-
-
 
 
 
@@ -713,6 +726,60 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+
+
+
+
+
+
+/* ===========================================
+   SCRIPT: NOTIFICACIÓN BRAND STRUCTURE - PC
+=========================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtn        = document.getElementById('brandstructure-button-close');
+    const notification    = document.getElementById('brandstructure-button-notification');
+    const notificationBtn = document.getElementById('brandstructure-button-stay');
+    if (closeBtn && notification && notificationBtn) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtn.addEventListener('click', () => {
+            notification.classList.add('show');
+        });
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtn.addEventListener('click', () => {
+            notification.classList.remove('show');
+        });
+    }
+});
+/* ===============================================
+   SCRIPT: NOTIFICACIÓN BRAND STRUCTURE - MOBILE
+=============================================== */
+document.addEventListener('DOMContentLoaded', function () {
+    const closeBtnMobile        = document.getElementById('brandstructure-button-close-mobile');
+    const notificationMobile    = document.getElementById('brandstructure-button-notification-mobile');
+    const notificationBtnMobile = document.getElementById('brandstructure-button-stay-mobile');
+    if (closeBtnMobile && notificationMobile && notificationBtnMobile) {
+        // Al hacer clic en la X → mostrar notificación
+        closeBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.add('show');
+        });
+        // Al hacer clic en STAY → ocultar notificación
+        notificationBtnMobile.addEventListener('click', () => {
+            notificationMobile.classList.remove('show');
+        });
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
